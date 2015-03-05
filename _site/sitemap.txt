@@ -17,5 +17,5 @@ http://username.github.io/applications/qgis
 http://username.github.io/data%20wrangling/data-wrangling
 http://username.github.io/data%20wrangling/functions
 http://username.github.io/data%20collection/data-collection
-http://username.github.io/intro/intro
 http://username.github.io/intro/what
+http://username.github.io/intro/intro

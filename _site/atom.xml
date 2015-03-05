@@ -4,7 +4,7 @@
  <title>Jekyll Bootstrap</title>
  <link href="http://username.github.io/" rel="self"/>
  <link href="http://username.github.io"/>
- <updated>2015-03-05T09:46:21-07:00</updated>
+ <updated>2015-03-05T10:10:33-07:00</updated>
  <id>http://username.github.io</id>
  <author>
    <name>Name Lastname</name>
@@ -822,9 +822,30 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
  </entry>
  
  <entry>
+   <title>Is Spatial Special?</title>
+   <link href="http://username.github.io/intro/what"/>
+   <updated>2000-12-30T00:00:00-07:00</updated>
+   <id>http://username.github.io/intro/what</id>
+   <content type="html">&lt;h1 id=&quot;is-spatial-special&quot;&gt;Is Spatial Special?&lt;/h1&gt;
+
+&lt;p&gt;There has been discussions about the nature of spatial data and whether or not there is anything special about it. Since the OGC agreed on the Simple Features for SQL specification in 1999, spatial data can be stored alongside other data types as another column in a table. However, we can see a lot of GIS professionals evangelizing the difference between spatial data and &lt;em&gt;regular data&lt;/em&gt;. &lt;/p&gt;
+
+&lt;h3 id=&quot;do-they-have-a-point&quot;&gt;Do they have a point?&lt;/h3&gt;
+
+&lt;p&gt;There are definitely a few elements that set spatial data apart from other data types. &lt;/p&gt;
+
+&lt;h4 id=&quot;sorting-and-indexing&quot;&gt;Sorting and Indexing&lt;/h4&gt;
+
+&lt;p&gt;Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type. &lt;/p&gt;
+
+&lt;p&gt;Sorting spatial data poses an interesting problem. Do you sort from North to south? West to East? What happens if you are sorting lines or polygons that overlap?&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Spatial Data</title>
    <link href="http://username.github.io/intro/intro"/>
-   <updated>2000-12-31T00:00:00-07:00</updated>
+   <updated>2000-12-29T00:00:00-07:00</updated>
    <id>http://username.github.io/intro/intro</id>
    <content type="html">&lt;h1 id=&quot;intro-to-spatial-data&quot;&gt;Intro to Spatial Data&lt;/h1&gt;
 &lt;p&gt;Spatial data is created as simply as adding a column of geographical location to your table. There are two types of spatial data: vector and raster.&lt;/p&gt;
@@ -942,15 +963,6 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
   &lt;li&gt;GeoJSON: Encodes points, lines, and polygons (and collections of those) along with information about them using JSON (JavaScript Object Notation). This format is popular for web maps.&lt;/li&gt;
   &lt;li&gt;Database: There are various databases that, with extensions, can hold geographic objects. Some notable examples are PostgreSQL with PostGIS, and SQLite with the SpatiaLite extension. It is important to look into the level of spatial support within a database before performing any analysis. For example, MySQL&#39;s spatial extension has geometry support, but the geometries are all defined by bounding boxes rather than the true geometry.&lt;/li&gt;
 &lt;/ul&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>What</title>
-   <link href="http://username.github.io/intro/what"/>
-   <updated>2000-12-30T00:00:00-07:00</updated>
-   <id>http://username.github.io/intro/what</id>
-   <content type="html">&lt;h1 id=&quot;what-is-this&quot;&gt;What is this?&lt;/h1&gt;
 </content>
  </entry>
  
