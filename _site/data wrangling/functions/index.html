@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>QGIS</title>
+    <title>General Functions</title>
     
     <meta name="author" content="Name Lastname">
 
@@ -130,7 +130,7 @@
       <div class="container">
         
 <div class="page-header">
-  <h1>QGIS <small>Supporting tagline</small></h1>
+  <h1>General Functions <small>Supporting tagline</small></h1>
 </div>
 
 <div class="row post-full">
@@ -202,7 +202,7 @@
     
       
       	
-      	<li><a href="/data%20wrangling/functions">General Functions</a></li>
+      	<li class="active"><a href="/data%20wrangling/functions" class="active">General Functions</a></li>
       	
       
     
@@ -222,7 +222,7 @@
     
       
       	
-      	<li class="active"><a href="/applications/qgis" class="active">QGIS</a></li>
+      	<li><a href="/applications/qgis">QGIS</a></li>
       	
       
     
@@ -326,73 +326,57 @@
     <div class="date">
     </div>
     <div class="content">
-      <h1 id="qgis-a-titleby-useranitagraser-on-qgis-wiki-useranitagraser-httpwwwqgisorgwikifileqgislogopng-cc-by-sa-30-httpcreativecommonsorglicensesby-sa30-via-wikimedia-commons-hrefhttpcommonswikimediaorgwikifile3aqgislogopngimg-width128-altqgis-logo-srcuploadwikimediaorgwikipediacommonsthumb771qgislogopng128px-qgislogopnga">QGIS <a title="By User:Anitagraser on QGIS Wiki, User:Anitagraser (http://www.qgis.org/wiki/File:QGis_Logo.png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AQGis_Logo.png"><img width="128" alt="QGis Logo" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/128px-QGis_Logo.png" /></a></h1>
+      <h1 id="general-spatial-functions">General Spatial Functions</h1>
 
-<h3 id="add-content-about-qgis">Add content about QGIS</h3>
-<p>This section will be covering graphical user interface basics of each QGIS and Panoply.</p>
+<h4 id="vector-functions">Vector Functions</h4>
 
-<h3 id="exlpore-qgis">Exlpore QGIS:</h3>
-
-<p>For a more thorough explanation of QGIS, <a href="http://docs.qgis.org/2.6/en/docs/user_manual/" target="new">see the QGIS User Guide here</a>.</p>
-
-<h4 id="the-basics">The Basics</h4>
-
-<p><img src="../../images/qgis-gui.png" alt="QGIS GUI" /></p>
-
-<ol>
-  <li>
-    <h5 id="menu-bar">Menu Bar</h5>
-    <p>Hover over menu bar to see options and tools: ‘Layer’ allows adding or removing layers, set coordinate reference systems (CRS), project CRS, etc; ‘Vector’ and ‘Raster’ show options for processing tools; etc.</p>
+<ul>
+  <li>Join - This will merge features from one layer to another by either a spatial proximity, query or intersection. Some spatial joins include:
+    <ul>
+      <li>Join school attendance ratings to census blocks</li>
+      <li>Join income demographic data to store locations</li>
+    </ul>
   </li>
-  <li>
-    <h5 id="toolbar">Toolbar</h5>
-    <p>New Project, Open, Save, Save As. Also, Pan, Zoom, etc.</p>
+  <li>Intersect - Instersect extracts overlapping features from two layers. This is a spatial form of the SQL inner join. Examples of intersections:
+    <ul>
+      <li>All rivers within washington state boundary</li>
+      <li>Residential areas with past landslide</li>
+    </ul>
   </li>
-  <li>
-    <h5 id="add-data">Add Data</h5>
-    <p>Used to add data/layers. Top two, Add Vector Layer and Add Raster Layer. Six subsequent options require a database connection. You may also add a delimited text layer or create a new shapefile.</p>
+  <li>Union - Merges the two datasets spatial extents(logical AND). This comes in handy when aggregating datasets from that may border each other or occur in different extents.  Examples:
+    <ul>
+      <li>Merging census data for two states in a single layer (Useful for studying phenomena that do not respect political boundaries)</li>
+      <li>Merging state boundaries for Canada, U.S. and Mexico into a North American dataset (GADM makes this a breeze)</li>
+    </ul>
   </li>
-  <li>
-    <h5 id="layer-list-map-legend">Layer List (map legend)</h5>
-    <p>Shows all layers in current project. These may be turned on or off with the respective checkbox.</p>
+  <li>Disjoint - Extracts the areas only held by one layer or another and excludes overlapping areas(logical OR).
+    <ul>
+      <li>WHY IS THIS USEFUL?</li>
+    </ul>
   </li>
-  <li>
-    <h5 id="map-view">Map View</h5>
-    <p>Displays active layers in Layers List. </p>
+  <li>Buffer - This will create an output holding areas covered by a designated radius of the layer’s features. This allows you to analyze phenomena by proximity.
+    <ul>
+      <li>Instagram posts vs distance to local eatery</li>
+      <li>Tweets vs proximity to sporting event</li>
+    </ul>
   </li>
-  <li>
-    <h5 id="status-bar">Status Bar</h5>
-    <p>Shows current position in map coordinates. Icon to the left of the coordinates toggles extents and mouse position display. Set scale, toggle map rendering, current coordinate reference system (CRS), open CRS settings.</p>
+  <li>Convex Hull - This creates the smallest polygon containing a given set of features
+    <ul>
+      <li>Bounding boxes, circles</li>
+      <li>Collision detection</li>
+    </ul>
   </li>
-  <li>
-    <h5 id="processing-toolbox">Processing Toolbox</h5>
-    <p>Search for tools. </p>
-  </li>
-</ol>
+</ul>
 
-<p><br /></p>
-
-<h4 id="configure-your-workspace">Configure your workspace</h4>
-
-<h5 id="project-properties">Project properties</h5>
-
-<p><img src="../../images/project-properties.jpg" alt="QGIS Project Properties" /></p>
-
-<p>Menu Bar &gt; Project &gt; Project Properties. </p>
-
-<p>From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection. </p>
-
-<h5 id="activate-necessary-providers">Activate necessary providers</h5>
-
-<p><img src="../../images/providers-config.jpg" alt="Activate Providers" /></p>
-
-<p>Menu Bar &gt; Processing &gt; Options and configuration &gt; Providers &gt; GDAL/ORG &gt; Activate (be sure it’s checked to enable).</p>
-
-<h5 id="open-additional-tools">Open additional tools</h5>
-
-<p><img src="../../images/additional-tools.jpg" alt="Additional Tools" /></p>
-
-<p>Menu Bar &gt; Processing &gt; (desired tool).</p>
+<h4 id="raster-functions">Raster Functions</h4>
+<ul>
+  <li>Slope - This function will calculate a slope surface given a raster holding an elevation model</li>
+  <li>Aspect - This outputs a surface holding values 0-360 referencing the azimuth of the given surface</li>
+  <li>Raster Calculator - Performs a designated mathematical equation on all values within a raster. This can also be used to combine/difference rasters.</li>
+  <li>Interpolation - Useful for resurfacing a dataset. This can also be used to create a continuous surface from a point dataset.</li>
+  <li>Zonal Statistics -</li>
+  <li>Reclassify - Useful for creating discrete value categories from continous values(e.g.float data) also useful for creating presence absence datasets.</li>
+</ul>
 
     </div>
 
@@ -405,8 +389,8 @@
 
   
      
-    	<li><a href="/categories.html#applications-ref">
-    		applications <span>1</span>
+    	<li><a href="/categories.html#data wrangling-ref">
+    		data wrangling <span>2</span>
     	</a></li>
     
   
@@ -424,11 +408,7 @@
 
   
      
-    	<li><a href="/tags.html#applications-ref">applications <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#qgis-ref">qgis <span>2</span></a></li>
-     
-    	<li><a href="/tags.html#quantumgis-ref">quantumgis <span>1</span></a></li>
+    	<li><a href="/tags.html#spatial functions-ref">spatial functions <span>1</span></a></li>
     
   
 
@@ -441,10 +421,10 @@
     <!--
     <ul class="pagination">
     
-      <li class="prev"><a href="/data%20wrangling/data-wrangling" title="Data Wrangling">&laquo; Previous</a></li>
+      <li class="prev"><a href="/data%20collection/data-collection" title="Data Collection">&laquo; Previous</a></li>
     
     
-      <li class="next"><a href="/data%20analysis/netcdf" title="NetCDF">Next &raquo;</a></li>
+      <li class="next"><a href="/data%20wrangling/data-wrangling" title="Data Wrangling">Next &raquo;</a></li>
     
     </ul>
     <hr>

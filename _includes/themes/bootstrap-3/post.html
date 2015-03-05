@@ -3,37 +3,47 @@
 </div>
 
 <div class="row post-full">
-  <div class="col-xs-12">
+  <div class="col-xs-2 post-left-nav">
+{% for category in site.categories %} 
+  <h3 id="{{ category[0] }}-ref">{{ category[0] | join: "/" | capitalize }}</h3>
+  <ul>
+    {% assign pages_list = category[1] %}  
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
+
+  </div>
+  <div class="col-xs-10">
     <div class="date">
     </div>
     <div class="content">
       {{ content }}
     </div>
 
-  {% unless page.categories == empty %}
+  <!--{% unless page.categories == empty %}
     <ul class="tag_box inline">
       <li><i class="glyphicon glyphicon-open"></i></li>
       {% assign categories_list = page.categories %}
       {% include JB/categories_list %}
     </ul>
   {% endunless %}  
-
-  {% unless page.tags == empty %}
+  -->
+  <!--{% unless page.tags == empty %}
     <ul class="tag_box inline">
       <li><i class="glyphicon glyphicon-tags"></i></li>
       {% assign tags_list = page.tags %}
       {% include JB/tags_list %}
     </ul>
   {% endunless %}  
-  
+  -->
     <hr>
+    <!--
     <ul class="pagination">
     {% if page.previous %}
       <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
     {% else %}
       <li class="prev disabled"><a>&larr; Previous</a></li>
     {% endif %}
-      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
     {% if page.next %}
       <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
     {% else %}
@@ -41,6 +51,6 @@
     {% endif %}
     </ul>
     <hr>
-    {% include JB/comments %}
+    -->
   </div>
 </div>

@@ -1,3 +1,16 @@
+/* bootcamp styles */
+.post-left-nav {
+  border-right: 1px solid #eee;
+}
+.post-left-nav ul {
+  margin-left: -32px;
+}
+.post-left-nav li {
+  list-style-type: none;
+  font-size: 1.3em;
+}
+
+
 /* Custom container */
 
 /* Replaced with normal container and standard footer */

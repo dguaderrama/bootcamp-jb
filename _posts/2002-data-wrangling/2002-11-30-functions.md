@@ -1,6 +1,7 @@
 ---
+title: "General Functions"
 layout: post
-category : General Spatial Functions
+category : Data Wrangling
 tagline: "Supporting tagline"
 tags : [spatial functions]
 ---

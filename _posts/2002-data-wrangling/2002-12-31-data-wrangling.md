@@ -1,4 +1,5 @@
 ---
+title: "Data Wrangling"
 layout: post
 category : Data Wrangling
 tagline: "Supporting tagline"

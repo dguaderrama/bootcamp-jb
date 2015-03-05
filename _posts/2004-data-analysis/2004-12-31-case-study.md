@@ -1,6 +1,7 @@
 ---
+title: "Case Study"
 layout: post
-category : Data Analysis
+category : "Data Analysis"
 tagline: "Supporting tagline"
 tags : [data analysis]
 ---

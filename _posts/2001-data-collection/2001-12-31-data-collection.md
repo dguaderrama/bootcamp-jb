@@ -1,4 +1,5 @@
 ---
+title: "Data Collection"
 layout: post
 category : Data Collection
 tagline: "Supporting tagline"
