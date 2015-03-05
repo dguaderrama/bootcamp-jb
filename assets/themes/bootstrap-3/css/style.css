@@ -9,7 +9,12 @@
   list-style-type: none;
   font-size: 1.3em;
 }
-
+.post-left-nav a {
+  color: #999;
+}
+.post-left-nav h3 {
+  color: #666;
+}
 
 /* Custom container */
 
@@ -31,7 +36,7 @@ h1, h2, h3, h4 {
   color: #f22430;
 }
 #footer {
-  background-color: #fdcd60;
+  background-color: #777796;
 }
 
 
