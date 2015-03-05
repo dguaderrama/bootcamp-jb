@@ -3,10 +3,10 @@
 <channel>
         <title>Spatial Data Bootcamp</title>
         <description>Spatial Data Bootcamp - Nathan Casler</description>
-        <link>http://username.github.io</link>
-        <link>http://username.github.io</link>
-        <lastBuildDate>2015-03-05T10:45:03-07:00</lastBuildDate>
-        <pubDate>2015-03-05T10:45:03-07:00</pubDate>
+        <link>http://192.81.135.13/bootcamp</link>
+        <link>http://192.81.135.13/bootcamp</link>
+        <lastBuildDate>2015-03-05T11:51:31-07:00</lastBuildDate>
+        <pubDate>2015-03-05T11:51:31-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -22,8 +22,8 @@
 &lt;/ul&gt;
 
 </description>
-                <link>http://username.github.io/things%20to%20come/future</link>
-                <guid>http://username.github.io/things%20to%20come/future</guid>
+                <link>http://192.81.135.13/bootcamp/things%20to%20come/future</link>
+                <guid>http://192.81.135.13/bootcamp/things%20to%20come/future</guid>
                 <pubDate>2007-12-31T00:00:00-07:00</pubDate>
         </item>
 
@@ -31,8 +31,8 @@
                 <title>Distribution</title>
                 <description>&lt;h1 id=&quot;data-distribution&quot;&gt;Data Distribution&lt;/h1&gt;
 </description>
-                <link>http://username.github.io/distribution/distribution</link>
-                <guid>http://username.github.io/distribution/distribution</guid>
+                <link>http://192.81.135.13/bootcamp/distribution/distribution</link>
+                <guid>http://192.81.135.13/bootcamp/distribution/distribution</guid>
                 <pubDate>2006-12-31T00:00:00-07:00</pubDate>
         </item>
 
@@ -54,8 +54,8 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 </description>
-                <link>http://username.github.io/cartography/cartography</link>
-                <guid>http://username.github.io/cartography/cartography</guid>
+                <link>http://192.81.135.13/bootcamp/cartography/cartography</link>
+                <guid>http://192.81.135.13/bootcamp/cartography/cartography</guid>
                 <pubDate>2005-12-31T00:00:00-07:00</pubDate>
         </item>
 
@@ -286,8 +286,8 @@
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-                <link>http://username.github.io/data%20analysis/case-study</link>
-                <guid>http://username.github.io/data%20analysis/case-study</guid>
+                <link>http://192.81.135.13/bootcamp/data%20analysis/case-study</link>
+                <guid>http://192.81.135.13/bootcamp/data%20analysis/case-study</guid>
                 <pubDate>2004-12-31T00:00:00-07:00</pubDate>
         </item>
 
@@ -478,8 +478,8 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-                <link>http://username.github.io/data%20analysis/netcdf</link>
-                <guid>http://username.github.io/data%20analysis/netcdf</guid>
+                <link>http://192.81.135.13/bootcamp/data%20analysis/netcdf</link>
+                <guid>http://192.81.135.13/bootcamp/data%20analysis/netcdf</guid>
                 <pubDate>2004-12-30T00:00:00-07:00</pubDate>
         </item>
 
@@ -553,8 +553,8 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;Menu Bar &amp;gt; Processing &amp;gt; (desired tool).&lt;/p&gt;
 </description>
-                <link>http://username.github.io/applications/qgis</link>
-                <guid>http://username.github.io/applications/qgis</guid>
+                <link>http://192.81.135.13/bootcamp/applications/qgis</link>
+                <guid>http://192.81.135.13/bootcamp/applications/qgis</guid>
                 <pubDate>2003-12-31T00:00:00-07:00</pubDate>
         </item>
 
@@ -618,8 +618,8 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 &lt;p&gt;There are several other libraries(&lt;a href=&quot;http://geos.osgeo.org&quot;&gt;GEOS&lt;/a&gt;,&lt;a href=&quot;http://grass.osgeo.org&quot;&gt;Grass GIS&lt;/a&gt;), languages(&lt;a href=&quot;http://www.gnu.org/software/bash&quot;&gt;Bash&lt;/a&gt;,&lt;a href=&quot;http://www.python.org&quot;&gt;Python&lt;/a&gt;, &lt;a href=&quot;http://cplusplus.com&quot;&gt;C++&lt;/a&gt;) useful for manipulating spatial datasets, which are outside our current scope. We can cover these at a later time.&lt;/p&gt;
 
 </description>
-                <link>http://username.github.io/data%20wrangling/data-wrangling</link>
-                <guid>http://username.github.io/data%20wrangling/data-wrangling</guid>
+                <link>http://192.81.135.13/bootcamp/data%20wrangling/data-wrangling</link>
+                <guid>http://192.81.135.13/bootcamp/data%20wrangling/data-wrangling</guid>
                 <pubDate>2002-12-31T00:00:00-07:00</pubDate>
         </item>
 
@@ -677,8 +677,8 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;Reclassify - Useful for creating discrete value categories from continous values(e.g.float data) also useful for creating presence absence datasets.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-                <link>http://username.github.io/data%20wrangling/functions</link>
-                <guid>http://username.github.io/data%20wrangling/functions</guid>
+                <link>http://192.81.135.13/bootcamp/data%20wrangling/functions</link>
+                <guid>http://192.81.135.13/bootcamp/data%20wrangling/functions</guid>
                 <pubDate>2002-11-30T00:00:00-07:00</pubDate>
         </item>
 
@@ -814,8 +814,8 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-                <link>http://username.github.io/data%20collection/data-collection</link>
-                <guid>http://username.github.io/data%20collection/data-collection</guid>
+                <link>http://192.81.135.13/bootcamp/data%20collection/data-collection</link>
+                <guid>http://192.81.135.13/bootcamp/data%20collection/data-collection</guid>
                 <pubDate>2001-12-31T00:00:00-07:00</pubDate>
         </item>
 
@@ -835,8 +835,8 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;p&gt;Sorting spatial data poses an interesting problem. Do you sort from North to south? West to East? What happens if you are sorting lines or polygons that overlap?&lt;/p&gt;
 </description>
-                <link>http://username.github.io/intro/what</link>
-                <guid>http://username.github.io/intro/what</guid>
+                <link>http://192.81.135.13/bootcamp/intro/what</link>
+                <guid>http://192.81.135.13/bootcamp/intro/what</guid>
                 <pubDate>2000-12-30T00:00:00-07:00</pubDate>
         </item>
 
@@ -959,8 +959,8 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
   &lt;li&gt;Database: There are various databases that, with extensions, can hold geographic objects. Some notable examples are PostgreSQL with PostGIS, and SQLite with the SpatiaLite extension. It is important to look into the level of spatial support within a database before performing any analysis. For example, MySQL&#39;s spatial extension has geometry support, but the geometries are all defined by bounding boxes rather than the true geometry.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-                <link>http://username.github.io/intro/intro</link>
-                <guid>http://username.github.io/intro/intro</guid>
+                <link>http://192.81.135.13/bootcamp/intro/intro</link>
+                <guid>http://192.81.135.13/bootcamp/intro/intro</guid>
                 <pubDate>2000-12-29T00:00:00-07:00</pubDate>
         </item>
 

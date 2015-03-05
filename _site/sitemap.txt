@@ -1,19 +1,19 @@
 
-http://username.github.io/about.html
-http://username.github.io/atom.xml
-http://username.github.io/categories.html
-http://username.github.io/index.html
-http://username.github.io/rss.xml
-http://username.github.io/sitemap.txt
+http://192.81.135.13/bootcamp/about.html
+http://192.81.135.13/bootcamp/atom.xml
+http://192.81.135.13/bootcamp/categories.html
+http://192.81.135.13/bootcamp/index.html
+http://192.81.135.13/bootcamp/rss.xml
+http://192.81.135.13/bootcamp/sitemap.txt
 
-http://username.github.io/things%20to%20come/future
-http://username.github.io/distribution/distribution
-http://username.github.io/cartography/cartography
-http://username.github.io/data%20analysis/case-study
-http://username.github.io/data%20analysis/netcdf
-http://username.github.io/applications/qgis
-http://username.github.io/data%20wrangling/data-wrangling
-http://username.github.io/data%20wrangling/functions
-http://username.github.io/data%20collection/data-collection
-http://username.github.io/intro/what
-http://username.github.io/intro/intro
+http://192.81.135.13/bootcamp/things%20to%20come/future
+http://192.81.135.13/bootcamp/distribution/distribution
+http://192.81.135.13/bootcamp/cartography/cartography
+http://192.81.135.13/bootcamp/data%20analysis/case-study
+http://192.81.135.13/bootcamp/data%20analysis/netcdf
+http://192.81.135.13/bootcamp/applications/qgis
+http://192.81.135.13/bootcamp/data%20wrangling/data-wrangling
+http://192.81.135.13/bootcamp/data%20wrangling/functions
+http://192.81.135.13/bootcamp/data%20collection/data-collection
+http://192.81.135.13/bootcamp/intro/what
+http://192.81.135.13/bootcamp/intro/intro

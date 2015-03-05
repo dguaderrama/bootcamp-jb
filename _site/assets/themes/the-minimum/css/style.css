@@ -43,6 +43,17 @@ Using Golden ratio section (Caliculated via http://j.mp/sB6oxM):
 12.000	0.75	92.308  * Minimum font size
 Vertical Rhythm is caluculated via http://j.mp/sUvKuN
 
+/*bootcamp custom */
+.sticky-left-nav {
+  position: fixed;
+  z-index: 20;
+}
+.sticky-left-nav h4 {
+  margin: 0px !important;
+}
+.sticky-left-nav ul {
+  margin: 0px !important;
+}
 No styleguide reference.
 */
 h1,
@@ -407,6 +418,7 @@ pre {
   padding-top: 1.625em;
   padding-bottom: 1.625em;
   position: relative;
+  z-index: 40;
 }
 .unit-article .unit-foot a:link {
   color: #fafafa;
@@ -507,10 +519,12 @@ pre {
 ----------------------------------------------- */
 .the-footer {
   background-color: #1a1a1a;
-  background-color: rgba(21, 25, 25, 0.8);
+  background-color: rgba(21, 25, 25, 1);
   color: #fafafa;
   color: rgba(250, 250, 250, 0.8);
   padding-bottom: 1.625em;
+  z-index: 40;
+  position: relative;
 }
 .the-footer a:link {
   color: #99cc99;
