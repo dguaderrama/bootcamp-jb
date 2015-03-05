@@ -1,0 +1,1683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Jekyll Bootstrap</title>
+ <link href="http://username.github.io/" rel="self"/>
+ <link href="http://username.github.io"/>
+ <updated>2015-03-04T22:06:11-07:00</updated>
+ <id>http://username.github.io</id>
+ <author>
+   <name>Name Lastname</name>
+   <email>blah@email.test</email>
+ </author>
+
+ 
+ <entry>
+   <title>Jekyll Introduction</title>
+   <link href="http://username.github.io/lessons/jekyll-introduction"/>
+   <updated>2011-12-29T00:00:00-07:00</updated>
+   <id>http://username.github.io/lessons/jekyll-introduction</id>
+   <content type="html">
+&lt;p&gt;This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
+Directly following the intro we’ll learn exactly &lt;em&gt;how&lt;/em&gt; Jekyll does what it does.&lt;/p&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;h3 id=&quot;what-is-jekyll&quot;&gt;What is Jekyll?&lt;/h3&gt;
+
+&lt;p&gt;Jekyll is a parsing engine bundled as a ruby gem used to build static websites from
+dynamic components such as templates, partials, liquid code, markdown, etc. Jekyll is known as “a simple, blog aware, static site generator”.&lt;/p&gt;
+
+&lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
+
+&lt;p&gt;This website is created with Jekyll. &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Sites&quot;&gt;Other Jekyll websites&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-does-jekyll-do&quot;&gt;What does Jekyll Do?&lt;/h3&gt;
+
+&lt;p&gt;Jekyll is a ruby gem you install on your local system.
+Once there you can call &lt;code&gt;jekyll --server&lt;/code&gt; on a directory and provided that directory
+is setup in a way jekyll expects, it will do magic stuff like parse markdown/textile files,
+compute categories, tags, permalinks, and construct your pages from layout templates and partials.&lt;/p&gt;
+
+&lt;p&gt;Once parsed, Jekyll stores the result in a self-contained static &lt;code&gt;_site&lt;/code&gt; folder.
+The intention here is that you can serve all contents in this folder statically from a plain static web-server.&lt;/p&gt;
+
+&lt;p&gt;You can think of Jekyll as a normalish dynamic blog but rather than parsing content, templates, and tags
+on each request, Jekyll does this once &lt;em&gt;beforehand&lt;/em&gt; and caches the &lt;em&gt;entire website&lt;/em&gt; in a folder for serving statically.&lt;/p&gt;
+
+&lt;h3 id=&quot;jekyll-is-not-blogging-software&quot;&gt;Jekyll is Not Blogging Software&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Jekyll is a parsing engine.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Jekyll does not come with any content nor does it have any templates or design elements.
+This is a common source of confusion when getting started.
+Jekyll does not come with anything you actually use or see on your website - you have to make it.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-should-i-care&quot;&gt;Why Should I Care?&lt;/h3&gt;
+
+&lt;p&gt;Jekyll is very minimalistic and very efficient.
+The most important thing to realize about Jekyll is that it creates a static representation of your website requiring only a static web-server.
+Traditional dynamic blogs like Wordpress require a database and server-side code.
+Heavily trafficked dynamic blogs must employ a caching layer that ultimately performs the same job Jekyll sets out to do; serve static content.&lt;/p&gt;
+
+&lt;p&gt;Therefore if you like to keep things simple and you prefer the command-line over an admin panel UI then give Jekyll a try.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Developers like Jekyll because we can write content like we write code:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ability to write content in markdown or textile in your favorite text-editor.&lt;/li&gt;
+  &lt;li&gt;Ability to write and preview your content via localhost.&lt;/li&gt;
+  &lt;li&gt;No internet connection required.&lt;/li&gt;
+  &lt;li&gt;Ability to publish via git.&lt;/li&gt;
+  &lt;li&gt;Ability to host your blog on a static web-server.&lt;/li&gt;
+  &lt;li&gt;Ability to host freely on GitHub Pages.&lt;/li&gt;
+  &lt;li&gt;No database required.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;how-jekyll-works&quot;&gt;How Jekyll Works&lt;/h1&gt;
+
+&lt;p&gt;The following is a complete but concise outline of exactly how Jekyll works.&lt;/p&gt;
+
+&lt;p&gt;Be aware that core concepts are introduced in rapid succession without code examples.
+This information is not intended to specifically teach you how to do anything, rather it
+is intended to give you the &lt;em&gt;full picture&lt;/em&gt; relative to what is going on in Jekyll-world.&lt;/p&gt;
+
+&lt;p&gt;Learning these core concepts should help you avoid common frustrations and ultimately
+help you better understand the code examples contained throughout Jekyll-Bootstrap.&lt;/p&gt;
+
+&lt;h2 id=&quot;initial-setup&quot;&gt;Initial Setup&lt;/h2&gt;
+
+&lt;p&gt;After &lt;a href=&quot;/index.html#start-now&quot;&gt;installing jekyll&lt;/a&gt; you’ll need to format your website directory in a way jekyll expects.
+Jekyll-bootstrap conveniently provides the base directory format.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-jekyll-application-base-format&quot;&gt;The Jekyll Application Base Format&lt;/h3&gt;
+
+&lt;p&gt;Jekyll expects your website directory to be laid out like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+|-- _config.yml
+|-- _includes
+|-- _layouts
+|   |-- default.html
+|   |-- post.html
+|-- _posts
+|   |-- 2011-10-25-open-source-is-good.markdown
+|   |-- 2011-04-26-hello-world.markdown
+|-- _site
+|-- index.html
+|-- assets
+    |-- css
+        |-- style.css
+    |-- javascripts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_config.yml&lt;/strong&gt;
+  Stores configuration data.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_includes&lt;/strong&gt;
+  This folder is for partial views.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_layouts&lt;/strong&gt;
+  This folder is for the main templates your content will be inserted into.
+  You can have different layouts for different pages or page sections.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_posts&lt;/strong&gt;
+  This folder contains your dynamic content/posts.
+  the naming format is required to be &lt;code&gt;@YEAR-MONTH-DATE-title.MARKUP@&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_site&lt;/strong&gt;
+  This is where the generated site will be placed once Jekyll is done transforming it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;assets&lt;/strong&gt;
+  This folder is not part of the standard jekyll structure.
+  The assets folder represents &lt;em&gt;any generic&lt;/em&gt; folder you happen to create in your root directory.
+  Directories and files not properly formatted for jekyll will be left untouched for you to serve normally.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(read more: &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Usage&quot;&gt;https://github.com/mojombo/jekyll/wiki/Usage&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h3 id=&quot;jekyll-configuration&quot;&gt;Jekyll Configuration&lt;/h3&gt;
+
+&lt;p&gt;Jekyll supports various configuration options that are fully outlined here:
+(&lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Configuration&quot;&gt;https://github.com/mojombo/jekyll/wiki/Configuration&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h2 id=&quot;content-in-jekyll&quot;&gt;Content in Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Content in Jekyll is either a post or a page.
+These content “objects” get inserted into one or more templates to build the final output for its respective static-page.&lt;/p&gt;
+
+&lt;h3 id=&quot;posts-and-pages&quot;&gt;Posts and Pages&lt;/h3&gt;
+
+&lt;p&gt;Both posts and pages should be written in markdown, textile, or HTML and may also contain Liquid templating syntax.
+Both posts and pages can have meta-data assigned on a per-page basis such as title, url path, as well as arbitrary custom meta-data.&lt;/p&gt;
+
+&lt;h3 id=&quot;working-with-posts&quot;&gt;Working With Posts&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Creating a Post&lt;/strong&gt;
+Posts are created by properly formatting a file and placing it the &lt;code&gt;_posts&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Formatting&lt;/strong&gt;
+A post must have a valid filename in the form &lt;code&gt;YEAR-MONTH-DATE-title.MARKUP&lt;/code&gt; and be placed in the &lt;code&gt;_posts&lt;/code&gt; directory.
+If the data format is invalid Jekyll will not recognize the file as a post. The date and title are automatically parsed from the filename of the post file.
+Additionally, each file must have &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML Front-Matter&lt;/a&gt; prepended to its content.
+YAML Front-Matter is a valid YAML syntax specifying meta-data for the given file.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Order&lt;/strong&gt;
+Ordering is an important part of Jekyll but it is hard to specify a custom ordering strategy.
+Only reverse chronological and chronological ordering is supported in Jekyll.&lt;/p&gt;
+
+&lt;p&gt;Since the date is hard-coded into the filename format, to change the order, you must change the dates in the filenames.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tags&lt;/strong&gt;
+Posts can have tags associated with them as part of their meta-data.
+Tags may be placed on posts by providing them in the post’s YAML front matter.
+You have access to the post-specific tags in the templates. These tags also get added to the sitewide collection.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Categories&lt;/strong&gt;
+Posts may be categorized by providing one or more categories in the YAML front matter.
+Categories offer more significance over tags in that they can be reflected in the URL path to the given post.
+Note categories in Jekyll work in a specific way.
+If you define more than one category you are defining a category hierarchy “set”.
+Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+title :  Hello World
+categories : [lessons, beginner]
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This defines the category hierarchy “lessons/beginner”. Note this is &lt;em&gt;one category&lt;/em&gt; node in Jekyll.
+You won’t find “lessons” and “beginner” as two separate categories unless you define them elsewhere as singular categories.&lt;/p&gt;
+
+&lt;h3 id=&quot;working-with-pages&quot;&gt;Working With Pages&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Creating a Page&lt;/strong&gt;
+Pages are created by properly formatting a file and placing it anywhere in the root directory or subdirectories that do &lt;em&gt;not&lt;/em&gt; start with an underscore.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Formatting&lt;/strong&gt;
+In order to register as a Jekyll page the file must contain &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML Front-Matter&lt;/a&gt;.
+Registering a page means 1) that Jekyll will process the page and 2) that the page object will be available in the &lt;code&gt;site.pages&lt;/code&gt; array for inclusion into your templates.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Categories and Tags&lt;/strong&gt;
+Pages do not compute categories nor tags so defining them will have no effect.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sub-Directories&lt;/strong&gt;
+If pages are defined in sub-directories, the path to the page will be reflected in the url.
+Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+|-- people
+    |-- bob
+        |-- essay.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This page will be available at &lt;code&gt;http://yourdomain.com/people/bob/essay.html&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Recommended Pages&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;index.html&lt;/strong&gt;
+You will always want to define the root index.html page as this will display on your root URL.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;404.html&lt;/strong&gt;
+Create a root 404.html page and GitHub Pages will serve it as your 404 response.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;sitemap.html&lt;/strong&gt;
+Generating a sitemap is good practice for SEO.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;about.html&lt;/strong&gt;
+A nice about page is easy to do and gives the human perspective to your website.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;templates-in-jekyll&quot;&gt;Templates in Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Templates are used to contain a page’s or post’s content.
+All templates have access to a global site object variable: &lt;code&gt;site&lt;/code&gt; as well as a page object variable: &lt;code&gt;page&lt;/code&gt;.
+The site variable holds all accessible content and metadata relative to the site.
+The page variable holds accessible data for the given page or post being rendered at that point.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Create a Template&lt;/strong&gt;
+Templates are created by properly formatting a file and placing it in the &lt;code&gt;_layouts&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Formatting&lt;/strong&gt;
+Templates should be coded in HTML and contain YAML Front Matter.
+All templates can contain Liquid code to work with your site’s data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rending Page/Post Content in a Template&lt;/strong&gt;
+There is a special variable in all templates named : &lt;code&gt;content&lt;/code&gt;.
+The &lt;code&gt;content&lt;/code&gt; variable holds the page/post content including any sub-template content previously defined.
+Render the content variable wherever you want your main content to be injected into your template:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+&amp;lt;body&amp;gt;
+  &amp;lt;div id=&quot;sidebar&quot;&amp;gt; ... &amp;lt;/div&amp;gt;
+  &amp;lt;div id=&quot;main&quot;&amp;gt;
+    &amp;#123;{content}&amp;#125;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+...&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;sub-templates&quot;&gt;Sub-Templates&lt;/h3&gt;
+
+&lt;p&gt;Sub-templates are exactly templates with the only difference being they
+define another “root” layout/template within their YAML Front Matter.
+This essentially means a template will render inside of another template.&lt;/p&gt;
+
+&lt;h3 id=&quot;includes&quot;&gt;Includes&lt;/h3&gt;
+&lt;p&gt;In Jekyll you can define include files by placing them in the &lt;code&gt;_includes&lt;/code&gt; folder.
+Includes are NOT templates, rather they are just code snippets that get included into templates.
+In this way, you can treat the code inside includes as if it was native to the parent template.&lt;/p&gt;
+
+&lt;p&gt;Any valid template code may be used in includes.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-liquid-for-templating&quot;&gt;Using Liquid for Templating&lt;/h2&gt;
+
+&lt;p&gt;Templating is perhaps the most confusing and frustrating part of Jekyll.
+This is mainly due to the fact that Jekyll templates must use the Liquid Templating Language.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-liquid&quot;&gt;What is Liquid?&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Shopify/liquid&quot;&gt;Liquid&lt;/a&gt; is a secure templating language developed by &lt;a href=&quot;http://shopify.com&quot;&gt;Shopify&lt;/a&gt;.
+Liquid is designed for end-users to be able to execute logic within template files
+without imposing any security risk on the hosting server.&lt;/p&gt;
+
+&lt;p&gt;Jekyll uses Liquid to generate the post content within the final page layout structure and as the primary interface for working with
+your site and post/page data.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-do-we-have-to-use-liquid&quot;&gt;Why Do We Have to Use Liquid?&lt;/h3&gt;
+
+&lt;p&gt;GitHub uses Jekyll to power &lt;a href=&quot;http://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.
+GitHub cannot afford to run arbitrary code on their servers so they lock developers down via Liquid.&lt;/p&gt;
+
+&lt;h3 id=&quot;liquid-is-not-programmer-friendly&quot;&gt;Liquid is Not Programmer-Friendly.&lt;/h3&gt;
+
+&lt;p&gt;The short story is liquid is not real code and its not intended to execute real code.
+The point being you can’t do jackshit in liquid that hasn’t been allowed explicitly by the implementation.
+What’s more you can only access data-structures that have been explicitly passed to the template.&lt;/p&gt;
+
+&lt;p&gt;In Jekyll’s case it is not possible to alter what is passed to Liquid without hacking the gem or running custom plugins.
+Both of which cannot be supported by GitHub Pages.&lt;/p&gt;
+
+&lt;p&gt;As a programmer - this is very frustrating.&lt;/p&gt;
+
+&lt;p&gt;But rather than look a gift horse in the mouth we are going to
+suck it up and view it as an opportunity to work around limitations and adopt client-side solutions when possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;
+My personal stance is to not invest time trying to hack liquid. It’s really unnecessary
+&lt;em&gt;from a programmer’s&lt;/em&gt; perspective. That is to say if you have the ability to run custom plugins (i.e. run arbitrary ruby code)
+you are better off sticking with ruby. Toward that end I’ve built &lt;a href=&quot;http://github.com/plusjade/mustache-with-jekyll&quot;&gt;Mustache-with-Jekyll&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;static-assets&quot;&gt;Static Assets&lt;/h2&gt;
+
+&lt;p&gt;Static assets are any file in the root or non-underscored subfolders that are not pages.
+That is they have no valid YAML Front Matter and are thus not treated as Jekyll Pages.&lt;/p&gt;
+
+&lt;p&gt;Static assets should be used for images, css, and javascript files.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-jekyll-parses-files&quot;&gt;How Jekyll Parses Files&lt;/h2&gt;
+
+&lt;p&gt;Remember Jekyll is a processing engine. There are two main types of parsing in Jekyll.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Content parsing.&lt;/strong&gt;
+  This is done with textile or markdown.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Template parsing.&lt;/strong&gt;
+This is done with the liquid templating language.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And thus there are two main types of file formats needed for this parsing.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Post and Page files.&lt;/strong&gt;
+All content in Jekyll is either a post or a page so valid posts and pages are parsed with markdown or textile.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Template files.&lt;/strong&gt;
+  These files go in &lt;code&gt;_layouts&lt;/code&gt; folder and contain your blogs &lt;strong&gt;templates&lt;/strong&gt;. They should be made in HTML with the help of Liquid syntax.
+  Since include files are simply injected into templates they are essentially parsed as if they were native to the template.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Arbitrary files and folders.&lt;/strong&gt;
+Files that &lt;em&gt;are not&lt;/em&gt; valid pages are treated as static content and pass through
+Jekyll untouched and reside on your blog in the exact structure and format they originally existed in.&lt;/p&gt;
+
+&lt;h3 id=&quot;formatting-files-for-parsing&quot;&gt;Formatting Files for Parsing.&lt;/h3&gt;
+
+&lt;p&gt;We’ve outlined the need for valid formatting using &lt;strong&gt;YAML Front Matter&lt;/strong&gt;.
+Templates, posts, and pages all need to provide valid YAML Front Matter even if the Matter is empty.
+This is the only way Jekyll knows you want the file processed.&lt;/p&gt;
+
+&lt;p&gt;YAML Front Matter must be prepended to the top of template/post/page files:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+layout: post
+category : pages
+tags : [how-to, jekyll]
+---
+
+... contents ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Three hyphens on a new line start the Front-Matter block and three hyphens on a new line end the block.
+The data inside the block must be valid YAML.&lt;/p&gt;
+
+&lt;p&gt;Configuration parameters for YAML Front-Matter is outlined here:
+&lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;A comprehensive explanation of YAML Front Matter&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;defining-layouts-for-posts-and-templates-parsing&quot;&gt;Defining Layouts for Posts and Templates Parsing.&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;layout&lt;/code&gt; parameter in the YAML Front Matter defines the template file for which the given post or template should be injected into.
+If a template file specifies its own layout, it is effectively being used as a &lt;code&gt;sub-template.&lt;/code&gt;
+That is to say loading a post file into a template file that refers to another template file with work in the way you’d expect; as a nested sub-template.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-jekyll-generates-the-final-static-files&quot;&gt;How Jekyll Generates the Final Static Files.&lt;/h2&gt;
+
+&lt;p&gt;Ultimately, Jekyll’s job is to generate a static representation of your website.
+The following is an outline of how that’s done:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Jekyll collects data.&lt;/strong&gt;
+  Jekyll scans the posts directory and collects all posts files as post objects. It then scans the layout assets and collects those and finally scans other directories in search of pages.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Jekyll computes data.&lt;/strong&gt;
+  Jekyll takes these objects, computes metadata (permalinks, tags, categories, titles, dates) from them and constructs one
+  big &lt;code&gt;site&lt;/code&gt; object that holds all the posts, pages, layouts, and respective metadata.
+  At this stage your site is one big computed ruby object.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Jekyll liquifies posts and templates.&lt;/strong&gt;
+  Next jekyll loops through each post file and converts (through markdown or textile) and &lt;strong&gt;liquifies&lt;/strong&gt; the post inside of its respective layout(s).
+  Once the post is parsed and liquified inside the the proper layout structure, the layout itself is “liquified”.
+ &lt;strong&gt;Liquification&lt;/strong&gt; is defined as follows: Jekyll initiates a Liquid template, and passes a simpler hash representation of the ruby site object as well as a simpler
+  hash representation of the ruby post object. These simplified data structures are what you have access to in the templates.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Jekyll generates output.&lt;/strong&gt;
+ Finally the liquid templates are “rendered”, thereby processing any liquid syntax provided in the templates
+ and saving the final, static representation of the file.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Notes.&lt;/strong&gt;
+Because Jekyll computes the entire site in one fell swoop, each template is given access to
+a global &lt;code&gt;site&lt;/code&gt; hash that contains useful data. It is this data that you’ll iterate through and format
+using the Liquid tags and filters in order to render it onto a given page.&lt;/p&gt;
+
+&lt;p&gt;Remember, in Jekyll you are an end-user. Your API has only two components:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The manner in which you setup your directory.&lt;/li&gt;
+  &lt;li&gt;The liquid syntax and variables passed into the liquid templates.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;All the data objects available to you in the templates via Liquid are outlined in the &lt;strong&gt;API Section&lt;/strong&gt; of Jekyll-Bootstrap.
+You can also read the original documentation here: &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Template-Data&quot;&gt;https://github.com/mojombo/jekyll/wiki/Template-Data&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I hope this paints a clearer picture of what Jekyll is doing and why it works the way it does.
+As noted, our main programming constraint is the fact that our API is limited to what is accessible via Liquid and Liquid only.&lt;/p&gt;
+
+&lt;p&gt;Jekyll-bootstrap is intended to provide helper methods and strategies aimed at making it more intuitive and easier to work with Jekyll =)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Thank you&lt;/strong&gt; for reading this far.&lt;/p&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h2&gt;
+
+&lt;p&gt;Please take a look at []()
+or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Future</title>
+   <link href="http://username.github.io/things%20to%20come/future"/>
+   <updated>2007-12-31T00:00:00-07:00</updated>
+   <id>http://username.github.io/things%20to%20come/future</id>
+   <content type="html">&lt;h1 id=&quot;things-to-come&quot;&gt;Things to Come&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Animations (D3)&lt;/li&gt;
+  &lt;li&gt;Dynamic Maps&lt;/li&gt;
+  &lt;li&gt;Geolocation/Tracking&lt;/li&gt;
+  &lt;li&gt;3D (three.js/Cesium)&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Distribution</title>
+   <link href="http://username.github.io/distribution/distribution"/>
+   <updated>2006-12-31T00:00:00-07:00</updated>
+   <id>http://username.github.io/distribution/distribution</id>
+   <content type="html">&lt;h1 id=&quot;data-distribution&quot;&gt;Data Distribution&lt;/h1&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Cartography</title>
+   <link href="http://username.github.io/cartography/cartography"/>
+   <updated>2005-12-31T00:00:00-07:00</updated>
+   <id>http://username.github.io/cartography/cartography</id>
+   <content type="html">&lt;h1 id=&quot;cartography--visualisation&quot;&gt;Cartography &amp;amp; Visualisation&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Best practices, sites like ColorBrewer&lt;/li&gt;
+  &lt;li&gt;QGIS&lt;/li&gt;
+  &lt;li&gt;Panoply&lt;/li&gt;
+  &lt;li&gt;MapBox Suite&lt;/li&gt;
+  &lt;li&gt;Mapbox.js
+    &lt;ul&gt;
+      &lt;li&gt;Leaflet.js&lt;/li&gt;
+      &lt;li&gt;OpenLayers.js&lt;/li&gt;
+      &lt;li&gt;D3.js&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Case Study</title>
+   <link href="http://username.github.io/data%20analysis/case-study"/>
+   <updated>2004-12-31T00:00:00-07:00</updated>
+   <id>http://username.github.io/data%20analysis/case-study</id>
+   <content type="html">&lt;h1 id=&quot;case-study&quot;&gt;Case Study&lt;/h1&gt;
+
+&lt;h2 id=&quot;landslide-susceptibility-model&quot;&gt;Landslide Susceptibility Model&lt;/h2&gt;
+
+&lt;p&gt;This case study has been chosed to demonstrate the concepts being highlighted by the bootcamp. We have chosen a landslide susceptibility analysis due to the diversity of inputs and a general curiousity into the methodology. The study area has been chosen in response to the Oso Mudslide&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; which took place in Washington State on March 22nd, 2014. The methodology for this analysis is based off of work done by the California Geological Survey in Conjunction with the USGS&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;project-definition&quot;&gt;Project Definition&lt;/h3&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Location: Washington State &lt;/dt&gt;
+  &lt;dt&gt;Bounding Coordinates: (-125.3424, 44.9408), (-115.8, 49.779)&lt;/dt&gt;
+  &lt;dt&gt;Resolution: 1 km&lt;/dt&gt;
+  &lt;dt&gt;Projection: Washington State Plane South (US ft) &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/dt&gt;
+  &lt;dd&gt;EPSG:2927&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h3 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h3&gt;
+
+&lt;p&gt;Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets. &lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Input Layer&lt;/th&gt;
+      &lt;th&gt;    &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Data Source&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;DEM&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;GTopo30&lt;sup id=&quot;fnref:3:1&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Geology&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Washington Dept. of Natural Resources&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Land cover&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Washington Dept. of Fish &amp;amp; Wildlife&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Landslide Inventory&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Washington Dept. of Natural Resources&lt;sup id=&quot;fnref:5:1&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Daily Precipitation&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Earth System Research Laboratory(NOAA)&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The DEM can be downloaded from ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140m90.tar.gz&lt;/p&gt;
+
+&lt;p&gt;tar -zxvf w140m90.tar.gz&lt;/p&gt;
+
+&lt;h3 id=&quot;data-wrangling&quot;&gt;Data Wrangling&lt;/h3&gt;
+
+&lt;p&gt;SEE DATA PREP&lt;/p&gt;
+
+&lt;h3 id=&quot;data-analysis&quot;&gt;Data Analysis&lt;/h3&gt;
+
+&lt;p&gt;Reclassify inputs:&lt;/p&gt;
+
+&lt;h4 id=&quot;slope&quot;&gt;Slope&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
+      &lt;th&gt;    &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Slope&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3-5°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5-10°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10-15°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;15-20°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;20-30°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;30-40°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40°&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;susceptibility&quot;&gt;Susceptibility&lt;/h4&gt;
+
+&lt;p&gt;We will have to do some raster calculations to create the output data set. The classifications are taken from the California study&lt;sup id=&quot;fnref:2:1&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and are as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/landslide-key.png&quot; alt=&quot;landslide-key&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;precipitation&quot;&gt;Precipitation&lt;/h4&gt;
+
+&lt;p&gt;Now that we have created the landslide susceptibility layer, we can make use the Average Annual Precipitation layer to check the susceptible areas against the areas receiving the most annual rain.&lt;/p&gt;
+
+&lt;p&gt;Convert millimeters to inches&lt;/p&gt;
+
+&lt;p&gt;Raster calculator: precip = precip * 0.0394&lt;/p&gt;
+
+&lt;p&gt;Check THIS STEP AGAINST REFERENCES&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
+      &lt;th&gt;    &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Precipitation&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5-10 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10-15 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;15-30 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;30-45 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;45-60 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;60-75 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;75-90 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 90 in&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;visualization&quot;&gt;Visualization&lt;/h3&gt;
+
+&lt;p&gt;Now that the output datasets have been created, we can work on making our results presentable.&lt;/p&gt;
+
+&lt;p&gt;Go to Cartography &amp;amp; Visualization…&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;http://www.usgs.gov/blogs/features/usgs_top_story/landslide-in-washington-state &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;http://www.conservation.ca.gov/cgs/information/publications/Documents/MS58.pdf &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:2:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;http://www.spatialreference.org/ref/epsg/2927 &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:3:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:5:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;http://wdfw.wa.gov/conservation/gap/land_cover_data.html &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot;&gt;
+      &lt;p&gt;http://www.esrl.noaa.gov/thredds/catalog/Datasets/cpc_us_precip/catalog.xml#Datasets/cpc_us_precip/RT &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Netcdf</title>
+   <link href="http://username.github.io/data%20analysis/netcdf"/>
+   <updated>2004-12-30T00:00:00-07:00</updated>
+   <id>http://username.github.io/data%20analysis/netcdf</id>
+   <content type="html">&lt;h1 id=&quot;network-common-data-form-netcdf&quot;&gt;Network Common Data Form (netCDF)&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../images/netcdf1_sm.png&quot; alt=&quot;netcdf-logo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate. &lt;/p&gt;
+
+&lt;p&gt;NetCDF is a set of software libraries and describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF was developed at &lt;a href=&quot;http://unidata.ucar.edu&quot;&gt;Unidata&lt;/a&gt;. Unidata provides data and software tools for use in geoscience education and research. Unidata is part of the University Corporation for Atmospheric Research(&lt;a href=&quot;http://ucar.edu&quot;&gt;UCAR&lt;/a&gt;) Community Programs(&lt;a href=&quot;http://www.uop.ucar.edu&quot;&gt;UCP&lt;/a&gt;).&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;NetCDF data is accessible via a series of language APIs: C, C++, Fortran77/90, Java, NCL, Objective-C, Perl, Python, R, Tcl/Tk, and Visual Basic&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../images/netcdf-structure.png&quot; alt=&quot;netcdf-architecture&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;NetCDF data is also accessible via a series of applications including: Panoply, nco, IDV, GrADS, FERRET and various others. For the full listing of applications, &lt;a href=&quot;http://www.unidata.ucar.edu/software/netcdf/software.html&quot;&gt;look here.&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;With the help of a THREDDS Data Server, large netCDF datasets are easily accessible and discoverable through a client application or through HTTP.&lt;/p&gt;
+
+&lt;p&gt;The multidimensional nature of netCDF data makes storage of complex data such as temperature and humidity simple. Also, since netCDF allows for multivariate storage, several variables can be subsets, ensembled and explored simultaneously. An issue can be the process of creating a usable dataset from netCDF data. This can be due to the sensor-based nature of netCDF, which is a primary dataset (i.e. daily precipitation sums). In order to get the proper dataset, it often requires researchers to subset, and ensemble values over a dimension. Ensembled data sets could be seasonal datasets, climatologies, or long-term averages. &lt;/p&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;h2 id=&quot;procedure&quot;&gt;Procedure&lt;/h2&gt;
+
+&lt;p&gt;For our case study, we created an annual average for precipitation between 2007-2014. &lt;/p&gt;
+
+&lt;p&gt;We had to first locate the datasets from http://eslr.noaa.gov/psd/thredds/dodsC/Datasets/cpc_us_precip/RT&lt;/p&gt;
+
+&lt;p&gt;This brought us 9 years of datasets. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../images/daily-precip.png&quot; alt=&quot;daily-precip&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;subsetting-data&quot;&gt;Subsetting data&lt;/h4&gt;
+
+&lt;p&gt;These datasets were then subsetted to our bounding box with the following command:&lt;/p&gt;
+
+&lt;h5 id=&quot;netcdf-kitchen-sink&quot;&gt;netCDF Kitchen Sink&lt;/h5&gt;
+
+&lt;p&gt;The nickname ‘kitchen sink’ is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option ‘-d’&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ncks -O -d lon,234.0,244.0 -d lat,44.0,50.0 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc subset.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In the above command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testing.&lt;/p&gt;
+
+&lt;h4 id=&quot;removing-bad-values&quot;&gt;Removing bad values&lt;/h4&gt;
+&lt;p&gt;If you look at the metadata for the subsetted file, you can see that the ‘precip’ variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25° x .25°(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library. &lt;/p&gt;
+
+&lt;h5 id=&quot;netcdf-arithmetic-processor&quot;&gt;netCDF Arithmetic Processor&lt;/h5&gt;
+
+&lt;p&gt;The netCDF Arithmetic Processor(ncap2) was written to perform arbitrary algebraic transformation of data and archive the results as easily as possible&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. Instructions for ncap2 can be contained in an MCP script file or delivered inline with the ‘-s’ flag. One of ncap2’s most powerful features is its ability to define new variables in terms of existing variables.&lt;/p&gt;
+
+&lt;p&gt;The ncap2 command we will be using is:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ncap2 -O -s &lt;span class=&quot;s1&quot;&gt;&amp;#39;where(precip &amp;lt; 0.0 || precip &amp;gt; 10000) precip=0;&amp;#39;&lt;/span&gt; subset.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc narm.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In the above command, we use the inline script flag ‘-s’ to specify that the cell value should be set to 0 if it is less than 0 or greater than 10,000. Once again, we include the overwrite flag ‘-O’ for scripting purposes.&lt;/p&gt;
+
+&lt;h4 id=&quot;summing-yearly-precipitation&quot;&gt;Summing yearly precipitation&lt;/h4&gt;
+&lt;p&gt;Since our analysis is looking at patterns of precipitation over time, rather than the amount of rain accumulated during a particular day, we will have create an ensemble dataset with the sum of precipitation for a given year. We will be using the NetCDF Record Averager to sum our precipitation values over the time dimension.&lt;/p&gt;
+
+&lt;h5 id=&quot;netcdf-record-averager&quot;&gt;netCDF Record Averager&lt;/h5&gt;
+
+&lt;p&gt;The netCDF Record Averager averages record variables across an abitrary number of input-files. ncra will apply a given operation to the all the cell values across a given dimension.&lt;sup id=&quot;fnref:4:1&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;The ncra command we will be using is:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ncra -O --op-typ&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ttl -d &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;,,,1 -v precip narm.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc annual.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In the above command, the ‘-v precip’ flag defines the variable ncra will operate on. The ‘–op-type=ttl’ flag indicates that we want ncra to calculate the sum of records while the ‘-d’ flag indicates that we are summing the values across the time dimension. Once again we include the overwrite flag ‘-O’ for scripting purposes.&lt;/p&gt;
+
+&lt;h4 id=&quot;regridding-netcdf-files&quot;&gt;Regridding netCDF files&lt;/h4&gt;
+
+&lt;p&gt;The next step we will take is to scale our precipitation raster to match the resolution and extent of the other inputs. There is no turn-key solution for regridding netCDF datasets, so we had to create a script from some existing NCL examples.&lt;/p&gt;
+
+&lt;h5 id=&quot;ncar-command-language&quot;&gt;NCAR Command Language&lt;/h5&gt;
+
+&lt;p&gt;The NCAR Command Language (NCL), a product of the Computational and Information Systems Laboratory at the National Center for Atmospheric Research(NCAR) and sponsored by the National Science Foundation,  is a free interpreted language designed specifically for data analysis and visualization. NCL supports netCDF 3/4, GRIB 1/2, HDF 4/5, HDF-EOS 2/5, shapefile, ASCII and binary formats[^5]. NCL gives users fine-grained access to netCDF datasets, their dimensions, variable and attributes.  Another benefit of NCL is the amount of working examples available online and the quality of language documentation. The NCL variable model is based on the netCDF variable model which makes handling netCDF data naturally.&lt;/p&gt;
+
+&lt;p&gt;The script we used for the regridding can be found in the Resources page.&lt;/p&gt;
+
+&lt;h4 id=&quot;averaging-annual-values&quot;&gt;Averaging annual values&lt;/h4&gt;
+
+&lt;p&gt;Once we have regridded the data, we have to create an average of the annual precipitation totals. We will use the netCDF Ensemble Statistics(nces)Utility to create the average annual dataset.&lt;/p&gt;
+
+&lt;h5 id=&quot;netcdf-ensemble-statistics&quot;&gt;netCDF Ensemble Statistics&lt;/h5&gt;
+
+&lt;p&gt;netCDF Ensemble Statistics performs gridpoint statistics on variables across an arbitray number(an ensemble) of input files and/or input groups within each file. nces is distinct from ncra which performs statistics only over the record dimension(s)(e.g. time) and weights each record in each record dimension evenly&lt;sup id=&quot;fnref:4:2&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;The nces command we will be using is:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;nces -O -n 8,2,1 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OUTPUTDIR&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/regrid.2007.nc avg_annual.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The above command uses the loop flag ‘-n 8,2,1’ which uses the following syntax -n &lt;em&gt;file_number,digit_number,numeric_increment&lt;/em&gt; where &lt;em&gt;file_number&lt;/em&gt; is the number of files, &lt;em&gt;digit_number&lt;/em&gt; is the fixed number of numeric digits comprising the &lt;em&gt;numeric_suffix&lt;/em&gt; and &lt;em&gt;numeric_increment&lt;/em&gt; is the constant, integer-valued difference between the &lt;em&gt;numeric_suffix&lt;/em&gt; of any two files[^6].&lt;/p&gt;
+
+&lt;h4 id=&quot;converting-to-geotiff&quot;&gt;Converting to GeoTiff&lt;/h4&gt;
+
+&lt;p&gt;In order for us to combine our new averaged annual precipitation layer with our other landslide susceptibility inputs, we will have to define the lat/lon extent of our data and project our data into EPSG:2927. This can be done using a simple R script. Our R Script will require a few libraries&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;raster&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ncdf4&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;rgdal&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once our libraries have loaded we can set the input directory to the folder holding our precipitation layer and load it as a raster.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;kp&quot;&gt;setwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;path/to/files&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+r &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; raster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;avg_annual.nc&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;#get netCDF extent&lt;/span&gt;
+oldExt &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; extent&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;r&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# set new netCDF extent by subtracting 360 from X coordinates&lt;/span&gt;
+xMin &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; oldExt&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;360&lt;/span&gt;
+xMax &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; oldExt&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;360&lt;/span&gt;
+yMin &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; oldExt&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+yMax &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; oldExt&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# create extent object&lt;/span&gt;
+geoExt &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; extent&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;xMin&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; xMax&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; yMin&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; yMax&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+r &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; setExtent&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;r&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; geoExt&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; keepres&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that the extent is properly set, we will set the new projection and projected extent information&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;newProj &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;+proj=lcc +lat_1=47.33333333333334 +lat_2=45.83333333333334 +lat_0=45.33333333333334 +lon_0=-120.5 +x_0=500000.0001016001 +y_0=0 +ellps=GRS80 +to_meter=0.3048006096012192 +no_defs&amp;#39;&lt;/span&gt; 
+xMinPrj &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;548554.658&lt;/span&gt;
+xMaxPrj &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2558498.351&lt;/span&gt;
+yMinPrj &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;77271.774&lt;/span&gt;
+yMaxPrj &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1366159.434&lt;/span&gt;
+
+xRes &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;
+yRes &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;
+
+newRaster &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; raster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;xmn&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;xMinPrj&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; xmx&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;xMaxPrj&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; ymn&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;yMinPrj&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; ymx&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;yMaxPrj&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; crs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;newProj&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; res&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+newR &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; projectRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;r&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; newRaster&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Finished projecting raster&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;kp&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+fileout &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;testRout.tif&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;paste0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Writing new Raster to &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fileout&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; filename&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fileout&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;GTiff&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; options&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;COMPRESS=ZIP&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; overwrite&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Finished outputting raster. Exiting...&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;panoply-introduction&quot;&gt;Panoply Introduction&lt;/h1&gt;
+
+&lt;h3 id=&quot;what-is-panoply&quot;&gt;What is Panoply&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Panoply is a a cross-platform application that plots geo-gridded and other arrays from netCDF, HDF, GRIB, and other datasets&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.”&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Panoply allows users to slice and plot geo-gridded arrays from multi-dimensional variables. Panoply also allows users to explore remote THREDDS and OPeNDAP catalogs. Multi-dimensional datasets can be plotted with the following dimensions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Latitude-Longitude&lt;/li&gt;
+  &lt;li&gt;Latitude-vertical&lt;/li&gt;
+  &lt;li&gt;Longitude-vertical&lt;/li&gt;
+  &lt;li&gt;Time-vertical&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Panoply can also export plots and animations.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../images/panoply-ex.png&quot; alt=&quot;panoply-ex&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[^In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo5]: The NCAR Command Language (Version 6.In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo2.1) [Software]. (2014). Boulder, Colorado: UCAR/NCAR/CISL/VETS. http://dx.doi.org/10.5065/D6WD3XH5
+[^6]: http://nco.sourceforge.net/nco.html#Specifying-Input-Files&lt;/p&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;https://www.unidata.ucar.edu/software/netcdf/docs &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;http://nco.sourceforge.net/nco.html &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:4:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:4:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;http://stderr.org/doc/nco/html/ncap2-netCDF-Arithmetic-Processor.html &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;http://www.giss.nasa.gov/tools/panoply &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Qgis</title>
+   <link href="http://username.github.io/applications/qgis"/>
+   <updated>2003-12-31T00:00:00-07:00</updated>
+   <id>http://username.github.io/applications/qgis</id>
+   <content type="html">&lt;h1 id=&quot;qgis-a-titleby-useranitagraser-on-qgis-wiki-useranitagraser-httpwwwqgisorgwikifileqgislogopng-cc-by-sa-30-httpcreativecommonsorglicensesby-sa30-via-wikimedia-commons-hrefhttpcommonswikimediaorgwikifile3aqgislogopngimg-width128-altqgis-logo-srcuploadwikimediaorgwikipediacommonsthumb771qgislogopng128px-qgislogopnga&quot;&gt;QGIS &lt;a title=&quot;By User:Anitagraser on QGIS Wiki, User:Anitagraser (http://www.qgis.org/wiki/File:QGis_Logo.png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AQGis_Logo.png&quot;&gt;&lt;img width=&quot;128&quot; alt=&quot;QGis Logo&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/128px-QGis_Logo.png&quot; /&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h3 id=&quot;add-content-about-qgis&quot;&gt;Add content about QGIS&lt;/h3&gt;
+&lt;p&gt;This section will be covering graphical user interface basics of each QGIS and Panoply.&lt;/p&gt;
+
+&lt;h3 id=&quot;exlpore-qgis&quot;&gt;Exlpore QGIS:&lt;/h3&gt;
+
+&lt;p&gt;For a more thorough explanation of QGIS, &lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/user_manual/&quot; target=&quot;new&quot;&gt;see the QGIS User Guide here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-basics&quot;&gt;The Basics&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../images/qgis-gui.png&quot; alt=&quot;QGIS GUI&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;menu-bar&quot;&gt;Menu Bar&lt;/h5&gt;
+    &lt;p&gt;Hover over menu bar to see options and tools: ‘Layer’ allows adding or removing layers, set coordinate reference systems (CRS), project CRS, etc; ‘Vector’ and ‘Raster’ show options for processing tools; etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;toolbar&quot;&gt;Toolbar&lt;/h5&gt;
+    &lt;p&gt;New Project, Open, Save, Save As. Also, Pan, Zoom, etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;add-data&quot;&gt;Add Data&lt;/h5&gt;
+    &lt;p&gt;Used to add data/layers. Top two, Add Vector Layer and Add Raster Layer. Six subsequent options require a database connection. You may also add a delimited text layer or create a new shapefile.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;layer-list-map-legend&quot;&gt;Layer List (map legend)&lt;/h5&gt;
+    &lt;p&gt;Shows all layers in current project. These may be turned on or off with the respective checkbox.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;map-view&quot;&gt;Map View&lt;/h5&gt;
+    &lt;p&gt;Displays active layers in Layers List. &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;status-bar&quot;&gt;Status Bar&lt;/h5&gt;
+    &lt;p&gt;Shows current position in map coordinates. Icon to the left of the coordinates toggles extents and mouse position display. Set scale, toggle map rendering, current coordinate reference system (CRS), open CRS settings.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;processing-toolbox&quot;&gt;Processing Toolbox&lt;/h5&gt;
+    &lt;p&gt;Search for tools. &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;configure-your-workspace&quot;&gt;Configure your workspace&lt;/h4&gt;
+
+&lt;h5 id=&quot;project-properties&quot;&gt;Project properties&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../images/project-properties.jpg&quot; alt=&quot;QGIS Project Properties&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties. &lt;/p&gt;
+
+&lt;p&gt;From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection. &lt;/p&gt;
+
+&lt;h5 id=&quot;activate-necessary-providers&quot;&gt;Activate necessary providers&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../images/providers-config.jpg&quot; alt=&quot;Activate Providers&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Menu Bar &amp;gt; Processing &amp;gt; Options and configuration &amp;gt; Providers &amp;gt; GDAL/ORG &amp;gt; Activate (be sure it’s checked to enable).&lt;/p&gt;
+
+&lt;h5 id=&quot;open-additional-tools&quot;&gt;Open additional tools&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../images/additional-tools.jpg&quot; alt=&quot;Additional Tools&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Menu Bar &amp;gt; Processing &amp;gt; (desired tool).&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Data Collection</title>
+   <link href="http://username.github.io/data%20collection/data-collection"/>
+   <updated>2001-12-31T00:00:00-07:00</updated>
+   <id>http://username.github.io/data%20collection/data-collection</id>
+   <content type="html">&lt;h1 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h1&gt;
+
+&lt;h3 id=&quot;credible-data-sources&quot;&gt;Credible Data Sources&lt;/h3&gt;
+
+&lt;p&gt;Not all spatial data is created equal, but there is a host of quality spatial data out there if you know where to look. 
+Some elements to look at when evaluating the quality of a data product are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Normalization - Do similar datasets have similar formats?&lt;/li&gt;
+  &lt;li&gt;Accessibility - How can you access the data?&lt;/li&gt;
+  &lt;li&gt;Accountability - Is the organization considered an authority of this type of data?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;here-are-a-few-data-sources-to-check-if-you-are-looking-for-some-spatial-data&quot;&gt;Here are a few data sources to check if you are looking for some spatial data:&lt;/h4&gt;
+
+&lt;h4 id=&quot;global-administrative-areas-gadmhttpwwwgadmorg&quot;&gt;&lt;a href=&quot;http://www.gadm.org&quot;&gt;Global Administrative Areas (GADM)&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.gadm.org/img/gadm2_adm1_low.png&quot; alt=&quot;GADMN database of Global Administrative Areas&quot;&gt;&lt;img src=&quot;http://www.gadm.org/img/gadm2_adm1_high.png&quot; width=&quot;250px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;“GADM is a spatial database of the location of the world’s administrative areas (or administrative boundaries) for use in GIS and similar software. Administrative areas in this database are countries and lower level subdivisions such as provinces,departmens bibhag, bundeslander,etc… GADM describes where these administrative areas are and for each area it provides some attributes, such as the name and variant names&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.”&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;united-states-geological-survey-usgshttpwwwusgsgov&quot;&gt;&lt;a href=&quot;http://www.usgs.gov&quot;&gt;United States Geological Survey (USGS)&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://commons.wikimedia.org/wiki/File:USGS_logo.png#mediaviewer/File:USGS_logo.png&quot;&gt;&lt;img alt=&quot;USGS logo.png&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/0/08/USGS_logo.png&quot; height=&quot;81&quot; width=&quot;220&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The USGS has had a long history in mapping, and has provided quality topographic data since maps were hand-drawn. The USGS can provided detailed data delimited by Quadrangle or larger extents through FTP or their EarthExplorer portal. Some notable products include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ned.usgs.gov&quot;&gt;National Elevation Dataset&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://online.wr.usgs.gov/ngpo/doq&quot;&gt;Digital Orthophotography&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nhd.usgs.gov&quot;&gt;National Hydrography Dataset&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;national-aeronautics-and-space-administration-nasahttpwwwnasagov&quot;&gt;&lt;a href=&quot;http://www.nasa.gov&quot;&gt;National Aeronautics and Space Administration (NASA)&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;a title=&quot;By National Aeronautics and Space Administration [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ANASA_logo.svg&quot;&gt;&lt;img width=&quot;128&quot; alt=&quot;NASA logo&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/128px-NASA_logo.svg.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;NASA is the go-to for remotely sensed data due to their history as a leader in satellite data and continued growth in data products offerings. Some useful data products are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gmao.gsfc.nasa.gov/merra&quot;&gt;Modern-era Retrospective Analysis for Research and Applications (MERRA)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://modis/gsfc.nasa.gov&quot;&gt;Moderate Resolution Imaging Spectoradiometer (MODIS)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://landsat.usgs.gov/landsat8.php&quot;&gt;Landsat-8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gcmd.gsfc.nasa.gov&quot;&gt;Global Change Master Directory&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;national-oceanic-and-atmospheric-administration-noaahttpwwwnoaagov&quot;&gt;&lt;a href=&quot;http://www.noaa.gov&quot;&gt;National Oceanic and Atmospheric Administration (NOAA)&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://commons.wikimedia.org/wiki/File:NOAA.png#mediaviewer/File:NOAA.png&quot;&gt;&lt;img alt=&quot;NOAA.png&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/3/3a/NOAA.png&quot; height=&quot;145&quot; width=&quot;145&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;NOAA provides a variety of data products for weather and climate. NOAA has an extensive Thredds catalog of climate data available at http://www.esrl.noaa.gov/psd/thredds/calatlog/Datasets/catalog.xml using the OPeNDAP protocol.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cpc.ncep.noaa.gov&quot;&gt;Climate Prediction Center&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;us-census-bureauhttpwwwcensusgov&quot;&gt;&lt;a href=&quot;http://www.census.gov&quot;&gt;U.S Census Bureau&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://commons.wikimedia.org/wiki/File:Census_Bureau_seal.svg#mediaviewer/File:Census_Bureau_seal.svg&quot;&gt;&lt;img alt=&quot;Census Bureau seal.svg&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/6/6b/Census_Bureau_seal.svg&quot; height=&quot;145&quot; width=&quot;145&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The U.S. Census is the authority on national demographic data and creates standardized datasets for the nation on both census tract and block level.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;dl&gt;
+      &lt;dt&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger.html&quot;&gt;Topologically Integrated Geographic Encoding and Referencing (TIGER) Products&lt;/a&gt; &lt;/dt&gt;
+      &lt;dd&gt;TIGER products are spatial extracts from the Census Bureau’s MAF/TIGER database containing features such as roads, railroads, rivers, as well as legal and statistical geographic areas. The Census Bureau offers (these products) in several file types&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.”&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;local-and-regional-governments&quot;&gt;Local and regional governments&lt;/h4&gt;
+&lt;p&gt;Most states maintain repositories of spatial data characteristic or pertinent to their scope. Some organizations to look for would be state geologic surveys, natural resource departments, city and county governments.&lt;/p&gt;
+
+&lt;h3 id=&quot;consumable-services&quot;&gt;Consumable Services&lt;/h3&gt;
+
+&lt;p&gt;There is a variety of methods to access spatial data. The most obvious one is downloading a dataset to local machine. This can be the easiest option if the dataset is small enough to download quickly, and the data repository is easy to find. If this is not the case, there are several other options available:&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;&lt;a href=&quot;http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1&quot;&gt;Web Feature Service (WFS)&lt;/a&gt; - Useful for modifying features in remote datasets&lt;/dt&gt;
+  &lt;dd&gt;The WFS represents a change in the way geographic information is created, modified, and exchanged on the Internet. Rather than sharing geographic information at the file level using the File Transfer Protocol(FTP), the WFS offers direct fine-grained access to geographic information at the feature and feature property level. Web features services allow clients to only retrieve or modify the data they are seeking, rather than retrieving a file that contains the data they are seeking and possibly much more&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
+&lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
+  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wms&quot;&gt;Web Map Service (WMS)&lt;/a&gt; - Useful for visualizing remote datasets &lt;/dt&gt;
+  &lt;dd&gt;The Web Map Service Interface Standard provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. The WMS response will return one or more geo-registered map images (JPEG, PNG, etc) to be display in a browser application&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.
+&lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
+  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wps&quot;&gt;Web Processing Service (WPS)&lt;/a&gt; - Utilizes remote resources for computation&lt;/dt&gt;
+  &lt;dd&gt;THe WPS Standard provides rule for standardizing inputs and outputs for geospatial processing services, such as polygon overlay. The standard also defines how a client can request the execution of a process and how the output of the process is handled&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;. 
+&lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
+  &lt;dt&gt;&lt;a href=&quot;http://www.opendap.org&quot;&gt;OPeNDAP&lt;/a&gt;&lt;/dt&gt;
+  &lt;dd&gt;OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations. &lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;A few examples of these applications are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://giss.nasa.gov/tools/panoply&quot;&gt;Panoply&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://unidata.usr.edu/software/idv&quot;&gt;Integrated Data Viewer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.iges.org/grads&quot;&gt;GrADS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;http://www.gadm.org  &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;http://www.census.gov/geo/maps-data/data/tiger.html &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1 &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;http://www.opengeospatial.org/standards/wms &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;http://www.opengeospatial.org/standards/wps &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;http://www.opendap.org &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Intro</title>
+   <link href="http://username.github.io/intro/intro"/>
+   <updated>2000-12-31T00:00:00-07:00</updated>
+   <id>http://username.github.io/intro/intro</id>
+   <content type="html">&lt;h1 id=&quot;intro-to-spatial-data&quot;&gt;Intro to Spatial Data&lt;/h1&gt;
+&lt;p&gt;Spatial data is created as simply as adding a column of geographical location to your table. There are two types of spatial data: vector and raster.&lt;/p&gt;
+
+&lt;h2 id=&quot;vectora-namevectora&quot;&gt;Vector&lt;a name=&quot;vector&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Vector data contains features (features are usually points, lines or polygons) which represent things in the real world. For example, a vector data file might include a river represented by a line. Now that whole line can contain information about the river (as opposed to defining that information pixel by pixel). For data which is associated with categorical data or entities like countries, mountains, roads, etc. vector data is the way to go.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title=&quot;By Wegmann (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ARaster_vector_tikz.png&quot;&gt;&lt;img width=&quot;450&quot; alt=&quot;Raster vector tikz&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Raster_vector_tikz.png/512px-Raster_vector_tikz.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;raster&quot;&gt;Raster&lt;/h2&gt;
+
+&lt;p&gt;Raster data is most recognizable as a satellite image. Satellite images are, simply put, pictures of the earth from space. Just like the pictures you can take with a hand-held digital camera, the information is in the pixels. Each pixel has a number value that translates into a color. Raster data is good for investigating what is happening on earth in real time, or for data which is continuous.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a title=&quot;By Ldecola (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AThe_use_of_a_raster_data_structure_to_summarize_a_point_pattern.gif&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;The use of a raster data structure to summarize a point pattern&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/b/b7/The_use_of_a_raster_data_structure_to_summarize_a_point_pattern.gif/512px-The_use_of_a_raster_data_structure_to_summarize_a_point_pattern.gif&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;projections-a-nameprojectionsa&quot;&gt;Projections &lt;a name=&quot;projections&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Projections characterize spatial data by setting coordinate reference systems for each data set.&lt;/p&gt;
+
+&lt;p&gt;Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
+ will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth&#39;s image onto a plane. &lt;/p&gt;
+
+&lt;h4 id=&quot;projections-can-come-in-a-variety-of-forms&quot;&gt;Projections can come in a variety of forms:&lt;/h4&gt;
+
+&lt;h5 id=&quot;conic&quot;&gt;Conic&lt;/h5&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://commons.wikimedia.org/wiki/File:Usgs_map_lambert_conformal_conic.PNG#mediaviewer/File:Usgs_map_lambert_conformal_conic.PNG&quot;&gt;&lt;img alt=&quot;Usgs map lambert conformal conic.PNG&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/6/62/Usgs_map_lambert_conformal_conic.PNG&quot; /&gt;&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;azimuthal&quot;&gt;Azimuthal&lt;/h5&gt;
+
+&lt;p&gt;&lt;a title=&quot;By User:Quadell, re-coloring US Government USGS image. [Public domain or Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AUsgs_map_azimuthal_equidistant.PNG&quot;&gt;&lt;img alt=&quot;Usgs map azimuthal equidistant&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/6/64/Usgs_map_azimuthal_equidistant.PNG&quot; /&gt;&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;cylindrical&quot;&gt;Cylindrical&lt;/h5&gt;
+
+&lt;p&gt;&lt;a title=&quot;By Ciphers (Own work) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AMercator_projection_ar.png&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;Mercator projection ar&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Mercator_projection_ar.png/512px-Mercator_projection_ar.png&quot; /&gt;&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;sinusoidal&quot;&gt;Sinusoidal&lt;/h5&gt;
+
+&lt;p&gt;&lt;a title=&quot;By Ciphers (Own work) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ASinusoidal_projection_ar.png&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;Sinusoidal projection ar&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/1/12/Sinusoidal_projection_ar.png/512px-Sinusoidal_projection_ar.png&quot; /&gt;&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;polyhedral&quot;&gt;Polyhedral&lt;/h5&gt;
+
+&lt;p&gt;&lt;a title=&quot;By Chris Rywalt (POVRay) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ADymaxion_2003_animation_small1.gif&quot;&gt;&lt;img width=&quot;256&quot; alt=&quot;Dymaxion 2003 animation small1&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/b/bb/Dymaxion_2003_animation_small1.gif&quot; /&gt;&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;each-of-these-projections-also-has-a-property&quot;&gt;Each of these projections also has a property:&lt;/h4&gt;
+
+&lt;h5 id=&quot;conformal&quot;&gt;Conformal&lt;/h5&gt;
+
+&lt;p&gt;[image of conformal]&lt;/p&gt;
+
+&lt;h5 id=&quot;equal-area&quot;&gt;Equal Area&lt;/h5&gt;
+&lt;p&gt;[image of equal area]&lt;/p&gt;
+
+&lt;h5 id=&quot;compromise&quot;&gt;Compromise&lt;/h5&gt;
+&lt;p&gt;[image of compromise]&lt;/p&gt;
+
+&lt;h5 id=&quot;equidistant&quot;&gt;Equidistant&lt;/h5&gt;
+&lt;p&gt;[image of equidistant]&lt;/p&gt;
+
+&lt;h5 id=&quot;gnomonic&quot;&gt;Gnomonic&lt;/h5&gt;
+&lt;p&gt;[image of gnomonic]&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.gdal.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;../images/gdalinfo.png&quot; alt=&quot;Using GDAL to check projection&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;../images/spatialreference.png&quot; alt=&quot;SpatialReference.org: EPSG:4326&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Since there are a few thousand different projections, with their own area of interest, it is likely that you will come upon datasets with different projection in your project. The easiest way to resolve projection disputes is to decide on the projection for your project before gathering data and save the proj4 string assigned to the projection. This string will allow you to project your datasets to the proper coordinate reference system.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;table style=&quot;margin: 0px 25px;&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;h5&gt;EPSG:4326 (WGS84)&lt;/h5&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;br /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;td&gt;&lt;h5&gt;Custom proj4&lt;/h5&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;+proj=lcc +lat_1=45.89893890000052 +lat_2=47.69601440000037 +lat_0=46.8 +lon_0=2.33722917 +x_0=600000 +y_0=200000 +a=6378249.145 +b=6356514.96582849 +pm=2.337229167 +units=m +no_defs&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;NOTE: When reprojecting a raster, you should also resample your raster to ensure that the cells have the same width and height. The cells will distort in the new projection and most GIS software will refuse to read a raster with irregular cells.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;common-data-formats&quot;&gt;Common Data Formats&lt;/h2&gt;
+&lt;p&gt;The goal of your project will ultimately define whether you use raster or vector data. Here are some common data formats you may encounter:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Shapefile: Stores point, line, and polygon data. This file type is actually made up of a collection of files with the following endings: These are mandatory: .shp, .shx, .dbf There are many others which are optional, including the important .prj file that describes the projection information for that data.&lt;/li&gt;
+  &lt;li&gt;GeoTIFF: A standard that allows embedding geographic information in a TIFF file.&lt;/li&gt;
+  &lt;li&gt;NetCDF: A multidimensional data format that allows for multiple variables covering 1 or more dimensions.&lt;/li&gt;
+  &lt;li&gt;Arcinfo/Ascii grid: Proprietary format by Esri&lt;/li&gt;
+  &lt;li&gt;Geodatabase: Esri proprietary spatial database. Very easy to load data into, not so easy to extract.&lt;/li&gt;
+  &lt;li&gt;GeoJSON: Encodes points, lines, and polygons (and collections of those) along with information about them using JSON (JavaScript Object Notation). This format is popular for web maps.&lt;/li&gt;
+  &lt;li&gt;Database: There are various databases that, with extensions, can hold geographic objects. Some notable examples are PostgreSQL with PostGIS, and SQLite with the SpatiaLite extension. It is important to look into the level of spatial support within a database before performing any analysis. For example, MySQL&#39;s spatial extension has geometry support, but the geometries are all defined by bounding boxes rather than the true geometry.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;anchor&quot;&gt;This is anchor. e.g., mydomain.com/bootcamp/intro#anchor&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>What</title>
+   <link href="http://username.github.io/intro/what"/>
+   <updated>2000-12-30T00:00:00-07:00</updated>
+   <id>http://username.github.io/intro/what</id>
+   <content type="html">&lt;h1 id=&quot;what-is-this&quot;&gt;What is this?&lt;/h1&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Sample</title>
+   <link href="http://username.github.io/lessons/sample"/>
+   <updated>2000-01-01T00:00:00-07:00</updated>
+   <id>http://username.github.io/lessons/sample</id>
+   <content type="html">
+&lt;p&gt;This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
+Directly following the intro we’ll learn exactly &lt;em&gt;how&lt;/em&gt; Jekyll does what it does.&lt;/p&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;h3 id=&quot;what-is-jekyll&quot;&gt;What is Jekyll?&lt;/h3&gt;
+
+&lt;p&gt;Jekyll is a parsing engine bundled as a ruby gem used to build static websites from
+dynamic components such as templates, partials, liquid code, markdown, etc. Jekyll is known as “a simple, blog aware, static site generator”.&lt;/p&gt;
+
+&lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
+
+&lt;p&gt;This website is created with Jekyll. &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Sites&quot;&gt;Other Jekyll websites&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-does-jekyll-do&quot;&gt;What does Jekyll Do?&lt;/h3&gt;
+
+&lt;p&gt;Jekyll is a ruby gem you install on your local system.
+Once there you can call &lt;code&gt;jekyll --server&lt;/code&gt; on a directory and provided that directory
+is setup in a way jekyll expects, it will do magic stuff like parse markdown/textile files,
+compute categories, tags, permalinks, and construct your pages from layout templates and partials.&lt;/p&gt;
+
+&lt;p&gt;Once parsed, Jekyll stores the result in a self-contained static &lt;code&gt;_site&lt;/code&gt; folder.
+The intention here is that you can serve all contents in this folder statically from a plain static web-server.&lt;/p&gt;
+
+&lt;p&gt;You can think of Jekyll as a normalish dynamic blog but rather than parsing content, templates, and tags
+on each request, Jekyll does this once &lt;em&gt;beforehand&lt;/em&gt; and caches the &lt;em&gt;entire website&lt;/em&gt; in a folder for serving statically.&lt;/p&gt;
+
+&lt;h3 id=&quot;jekyll-is-not-blogging-software&quot;&gt;Jekyll is Not Blogging Software&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Jekyll is a parsing engine.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Jekyll does not come with any content nor does it have any templates or design elements.
+This is a common source of confusion when getting started.
+Jekyll does not come with anything you actually use or see on your website - you have to make it.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-should-i-care&quot;&gt;Why Should I Care?&lt;/h3&gt;
+
+&lt;p&gt;Jekyll is very minimalistic and very efficient.
+The most important thing to realize about Jekyll is that it creates a static representation of your website requiring only a static web-server.
+Traditional dynamic blogs like Wordpress require a database and server-side code.
+Heavily trafficked dynamic blogs must employ a caching layer that ultimately performs the same job Jekyll sets out to do; serve static content.&lt;/p&gt;
+
+&lt;p&gt;Therefore if you like to keep things simple and you prefer the command-line over an admin panel UI then give Jekyll a try.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Developers like Jekyll because we can write content like we write code:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ability to write content in markdown or textile in your favorite text-editor.&lt;/li&gt;
+  &lt;li&gt;Ability to write and preview your content via localhost.&lt;/li&gt;
+  &lt;li&gt;No internet connection required.&lt;/li&gt;
+  &lt;li&gt;Ability to publish via git.&lt;/li&gt;
+  &lt;li&gt;Ability to host your blog on a static web-server.&lt;/li&gt;
+  &lt;li&gt;Ability to host freely on GitHub Pages.&lt;/li&gt;
+  &lt;li&gt;No database required.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;how-jekyll-works&quot;&gt;How Jekyll Works&lt;/h1&gt;
+
+&lt;p&gt;The following is a complete but concise outline of exactly how Jekyll works.&lt;/p&gt;
+
+&lt;p&gt;Be aware that core concepts are introduced in rapid succession without code examples.
+This information is not intended to specifically teach you how to do anything, rather it
+is intended to give you the &lt;em&gt;full picture&lt;/em&gt; relative to what is going on in Jekyll-world.&lt;/p&gt;
+
+&lt;p&gt;Learning these core concepts should help you avoid common frustrations and ultimately
+help you better understand the code examples contained throughout Jekyll-Bootstrap.&lt;/p&gt;
+
+&lt;h2 id=&quot;initial-setup&quot;&gt;Initial Setup&lt;/h2&gt;
+
+&lt;p&gt;After &lt;a href=&quot;/index.html#start-now&quot;&gt;installing jekyll&lt;/a&gt; you’ll need to format your website directory in a way jekyll expects.
+Jekyll-bootstrap conveniently provides the base directory format.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-jekyll-application-base-format&quot;&gt;The Jekyll Application Base Format&lt;/h3&gt;
+
+&lt;p&gt;Jekyll expects your website directory to be laid out like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+|-- _config.yml
+|-- _includes
+|-- _layouts
+|   |-- default.html
+|   |-- post.html
+|-- _posts
+|   |-- 2011-10-25-open-source-is-good.markdown
+|   |-- 2011-04-26-hello-world.markdown
+|-- _site
+|-- index.html
+|-- assets
+    |-- css
+        |-- style.css
+    |-- javascripts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_config.yml&lt;/strong&gt;
+  Stores configuration data.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_includes&lt;/strong&gt;
+  This folder is for partial views.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_layouts&lt;/strong&gt;
+  This folder is for the main templates your content will be inserted into.
+  You can have different layouts for different pages or page sections.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_posts&lt;/strong&gt;
+  This folder contains your dynamic content/posts.
+  the naming format is required to be &lt;code&gt;@YEAR-MONTH-DATE-title.MARKUP@&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;_site&lt;/strong&gt;
+  This is where the generated site will be placed once Jekyll is done transforming it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;assets&lt;/strong&gt;
+  This folder is not part of the standard jekyll structure.
+  The assets folder represents &lt;em&gt;any generic&lt;/em&gt; folder you happen to create in your root directory.
+  Directories and files not properly formatted for jekyll will be left untouched for you to serve normally.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(read more: &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Usage&quot;&gt;https://github.com/mojombo/jekyll/wiki/Usage&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h3 id=&quot;jekyll-configuration&quot;&gt;Jekyll Configuration&lt;/h3&gt;
+
+&lt;p&gt;Jekyll supports various configuration options that are fully outlined here:
+(&lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Configuration&quot;&gt;https://github.com/mojombo/jekyll/wiki/Configuration&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h2 id=&quot;content-in-jekyll&quot;&gt;Content in Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Content in Jekyll is either a post or a page.
+These content “objects” get inserted into one or more templates to build the final output for its respective static-page.&lt;/p&gt;
+
+&lt;h3 id=&quot;posts-and-pages&quot;&gt;Posts and Pages&lt;/h3&gt;
+
+&lt;p&gt;Both posts and pages should be written in markdown, textile, or HTML and may also contain Liquid templating syntax.
+Both posts and pages can have meta-data assigned on a per-page basis such as title, url path, as well as arbitrary custom meta-data.&lt;/p&gt;
+
+&lt;h3 id=&quot;working-with-posts&quot;&gt;Working With Posts&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Creating a Post&lt;/strong&gt;
+Posts are created by properly formatting a file and placing it the &lt;code&gt;_posts&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Formatting&lt;/strong&gt;
+A post must have a valid filename in the form &lt;code&gt;YEAR-MONTH-DATE-title.MARKUP&lt;/code&gt; and be placed in the &lt;code&gt;_posts&lt;/code&gt; directory.
+If the data format is invalid Jekyll will not recognize the file as a post. The date and title are automatically parsed from the filename of the post file.
+Additionally, each file must have &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML Front-Matter&lt;/a&gt; prepended to its content.
+YAML Front-Matter is a valid YAML syntax specifying meta-data for the given file.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Order&lt;/strong&gt;
+Ordering is an important part of Jekyll but it is hard to specify a custom ordering strategy.
+Only reverse chronological and chronological ordering is supported in Jekyll.&lt;/p&gt;
+
+&lt;p&gt;Since the date is hard-coded into the filename format, to change the order, you must change the dates in the filenames.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tags&lt;/strong&gt;
+Posts can have tags associated with them as part of their meta-data.
+Tags may be placed on posts by providing them in the post’s YAML front matter.
+You have access to the post-specific tags in the templates. These tags also get added to the sitewide collection.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Categories&lt;/strong&gt;
+Posts may be categorized by providing one or more categories in the YAML front matter.
+Categories offer more significance over tags in that they can be reflected in the URL path to the given post.
+Note categories in Jekyll work in a specific way.
+If you define more than one category you are defining a category hierarchy “set”.
+Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+title :  Hello World
+categories : [lessons, beginner]
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This defines the category hierarchy “lessons/beginner”. Note this is &lt;em&gt;one category&lt;/em&gt; node in Jekyll.
+You won’t find “lessons” and “beginner” as two separate categories unless you define them elsewhere as singular categories.&lt;/p&gt;
+
+&lt;h3 id=&quot;working-with-pages&quot;&gt;Working With Pages&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Creating a Page&lt;/strong&gt;
+Pages are created by properly formatting a file and placing it anywhere in the root directory or subdirectories that do &lt;em&gt;not&lt;/em&gt; start with an underscore.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Formatting&lt;/strong&gt;
+In order to register as a Jekyll page the file must contain &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML Front-Matter&lt;/a&gt;.
+Registering a page means 1) that Jekyll will process the page and 2) that the page object will be available in the &lt;code&gt;site.pages&lt;/code&gt; array for inclusion into your templates.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Categories and Tags&lt;/strong&gt;
+Pages do not compute categories nor tags so defining them will have no effect.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sub-Directories&lt;/strong&gt;
+If pages are defined in sub-directories, the path to the page will be reflected in the url.
+Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+|-- people
+    |-- bob
+        |-- essay.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This page will be available at &lt;code&gt;http://yourdomain.com/people/bob/essay.html&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Recommended Pages&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;index.html&lt;/strong&gt;
+You will always want to define the root index.html page as this will display on your root URL.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;404.html&lt;/strong&gt;
+Create a root 404.html page and GitHub Pages will serve it as your 404 response.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;sitemap.html&lt;/strong&gt;
+Generating a sitemap is good practice for SEO.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;about.html&lt;/strong&gt;
+A nice about page is easy to do and gives the human perspective to your website.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;templates-in-jekyll&quot;&gt;Templates in Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Templates are used to contain a page’s or post’s content.
+All templates have access to a global site object variable: &lt;code&gt;site&lt;/code&gt; as well as a page object variable: &lt;code&gt;page&lt;/code&gt;.
+The site variable holds all accessible content and metadata relative to the site.
+The page variable holds accessible data for the given page or post being rendered at that point.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Create a Template&lt;/strong&gt;
+Templates are created by properly formatting a file and placing it in the &lt;code&gt;_layouts&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Formatting&lt;/strong&gt;
+Templates should be coded in HTML and contain YAML Front Matter.
+All templates can contain Liquid code to work with your site’s data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rending Page/Post Content in a Template&lt;/strong&gt;
+There is a special variable in all templates named : &lt;code&gt;content&lt;/code&gt;.
+The &lt;code&gt;content&lt;/code&gt; variable holds the page/post content including any sub-template content previously defined.
+Render the content variable wherever you want your main content to be injected into your template:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+&amp;lt;body&amp;gt;
+  &amp;lt;div id=&quot;sidebar&quot;&amp;gt; ... &amp;lt;/div&amp;gt;
+  &amp;lt;div id=&quot;main&quot;&amp;gt;
+    &amp;#123;{content}&amp;#125;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+...&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;sub-templates&quot;&gt;Sub-Templates&lt;/h3&gt;
+
+&lt;p&gt;Sub-templates are exactly templates with the only difference being they
+define another “root” layout/template within their YAML Front Matter.
+This essentially means a template will render inside of another template.&lt;/p&gt;
+
+&lt;h3 id=&quot;includes&quot;&gt;Includes&lt;/h3&gt;
+&lt;p&gt;In Jekyll you can define include files by placing them in the &lt;code&gt;_includes&lt;/code&gt; folder.
+Includes are NOT templates, rather they are just code snippets that get included into templates.
+In this way, you can treat the code inside includes as if it was native to the parent template.&lt;/p&gt;
+
+&lt;p&gt;Any valid template code may be used in includes.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-liquid-for-templating&quot;&gt;Using Liquid for Templating&lt;/h2&gt;
+
+&lt;p&gt;Templating is perhaps the most confusing and frustrating part of Jekyll.
+This is mainly due to the fact that Jekyll templates must use the Liquid Templating Language.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-liquid&quot;&gt;What is Liquid?&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Shopify/liquid&quot;&gt;Liquid&lt;/a&gt; is a secure templating language developed by &lt;a href=&quot;http://shopify.com&quot;&gt;Shopify&lt;/a&gt;.
+Liquid is designed for end-users to be able to execute logic within template files
+without imposing any security risk on the hosting server.&lt;/p&gt;
+
+&lt;p&gt;Jekyll uses Liquid to generate the post content within the final page layout structure and as the primary interface for working with
+your site and post/page data.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-do-we-have-to-use-liquid&quot;&gt;Why Do We Have to Use Liquid?&lt;/h3&gt;
+
+&lt;p&gt;GitHub uses Jekyll to power &lt;a href=&quot;http://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.
+GitHub cannot afford to run arbitrary code on their servers so they lock developers down via Liquid.&lt;/p&gt;
+
+&lt;h3 id=&quot;liquid-is-not-programmer-friendly&quot;&gt;Liquid is Not Programmer-Friendly.&lt;/h3&gt;
+
+&lt;p&gt;The short story is liquid is not real code and its not intended to execute real code.
+The point being you can’t do jackshit in liquid that hasn’t been allowed explicitly by the implementation.
+What’s more you can only access data-structures that have been explicitly passed to the template.&lt;/p&gt;
+
+&lt;p&gt;In Jekyll’s case it is not possible to alter what is passed to Liquid without hacking the gem or running custom plugins.
+Both of which cannot be supported by GitHub Pages.&lt;/p&gt;
+
+&lt;p&gt;As a programmer - this is very frustrating.&lt;/p&gt;
+
+&lt;p&gt;But rather than look a gift horse in the mouth we are going to
+suck it up and view it as an opportunity to work around limitations and adopt client-side solutions when possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;
+My personal stance is to not invest time trying to hack liquid. It’s really unnecessary
+&lt;em&gt;from a programmer’s&lt;/em&gt; perspective. That is to say if you have the ability to run custom plugins (i.e. run arbitrary ruby code)
+you are better off sticking with ruby. Toward that end I’ve built &lt;a href=&quot;http://github.com/plusjade/mustache-with-jekyll&quot;&gt;Mustache-with-Jekyll&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;static-assets&quot;&gt;Static Assets&lt;/h2&gt;
+
+&lt;p&gt;Static assets are any file in the root or non-underscored subfolders that are not pages.
+That is they have no valid YAML Front Matter and are thus not treated as Jekyll Pages.&lt;/p&gt;
+
+&lt;p&gt;Static assets should be used for images, css, and javascript files.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-jekyll-parses-files&quot;&gt;How Jekyll Parses Files&lt;/h2&gt;
+
+&lt;p&gt;Remember Jekyll is a processing engine. There are two main types of parsing in Jekyll.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Content parsing.&lt;/strong&gt;
+  This is done with textile or markdown.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Template parsing.&lt;/strong&gt;
+This is done with the liquid templating language.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And thus there are two main types of file formats needed for this parsing.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Post and Page files.&lt;/strong&gt;
+All content in Jekyll is either a post or a page so valid posts and pages are parsed with markdown or textile.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Template files.&lt;/strong&gt;
+  These files go in &lt;code&gt;_layouts&lt;/code&gt; folder and contain your blogs &lt;strong&gt;templates&lt;/strong&gt;. They should be made in HTML with the help of Liquid syntax.
+  Since include files are simply injected into templates they are essentially parsed as if they were native to the template.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Arbitrary files and folders.&lt;/strong&gt;
+Files that &lt;em&gt;are not&lt;/em&gt; valid pages are treated as static content and pass through
+Jekyll untouched and reside on your blog in the exact structure and format they originally existed in.&lt;/p&gt;
+
+&lt;h3 id=&quot;formatting-files-for-parsing&quot;&gt;Formatting Files for Parsing.&lt;/h3&gt;
+
+&lt;p&gt;We’ve outlined the need for valid formatting using &lt;strong&gt;YAML Front Matter&lt;/strong&gt;.
+Templates, posts, and pages all need to provide valid YAML Front Matter even if the Matter is empty.
+This is the only way Jekyll knows you want the file processed.&lt;/p&gt;
+
+&lt;p&gt;YAML Front Matter must be prepended to the top of template/post/page files:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+layout: post
+category : pages
+tags : [how-to, jekyll]
+---
+
+... contents ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Three hyphens on a new line start the Front-Matter block and three hyphens on a new line end the block.
+The data inside the block must be valid YAML.&lt;/p&gt;
+
+&lt;p&gt;Configuration parameters for YAML Front-Matter is outlined here:
+&lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;A comprehensive explanation of YAML Front Matter&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;defining-layouts-for-posts-and-templates-parsing&quot;&gt;Defining Layouts for Posts and Templates Parsing.&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;layout&lt;/code&gt; parameter in the YAML Front Matter defines the template file for which the given post or template should be injected into.
+If a template file specifies its own layout, it is effectively being used as a &lt;code&gt;sub-template.&lt;/code&gt;
+That is to say loading a post file into a template file that refers to another template file with work in the way you’d expect; as a nested sub-template.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-jekyll-generates-the-final-static-files&quot;&gt;How Jekyll Generates the Final Static Files.&lt;/h2&gt;
+
+&lt;p&gt;Ultimately, Jekyll’s job is to generate a static representation of your website.
+The following is an outline of how that’s done:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Jekyll collects data.&lt;/strong&gt;
+  Jekyll scans the posts directory and collects all posts files as post objects. It then scans the layout assets and collects those and finally scans other directories in search of pages.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Jekyll computes data.&lt;/strong&gt;
+  Jekyll takes these objects, computes metadata (permalinks, tags, categories, titles, dates) from them and constructs one
+  big &lt;code&gt;site&lt;/code&gt; object that holds all the posts, pages, layouts, and respective metadata.
+  At this stage your site is one big computed ruby object.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Jekyll liquifies posts and templates.&lt;/strong&gt;
+  Next jekyll loops through each post file and converts (through markdown or textile) and &lt;strong&gt;liquifies&lt;/strong&gt; the post inside of its respective layout(s).
+  Once the post is parsed and liquified inside the the proper layout structure, the layout itself is “liquified”.
+ &lt;strong&gt;Liquification&lt;/strong&gt; is defined as follows: Jekyll initiates a Liquid template, and passes a simpler hash representation of the ruby site object as well as a simpler
+  hash representation of the ruby post object. These simplified data structures are what you have access to in the templates.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Jekyll generates output.&lt;/strong&gt;
+ Finally the liquid templates are “rendered”, thereby processing any liquid syntax provided in the templates
+ and saving the final, static representation of the file.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Notes.&lt;/strong&gt;
+Because Jekyll computes the entire site in one fell swoop, each template is given access to
+a global &lt;code&gt;site&lt;/code&gt; hash that contains useful data. It is this data that you’ll iterate through and format
+using the Liquid tags and filters in order to render it onto a given page.&lt;/p&gt;
+
+&lt;p&gt;Remember, in Jekyll you are an end-user. Your API has only two components:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The manner in which you setup your directory.&lt;/li&gt;
+  &lt;li&gt;The liquid syntax and variables passed into the liquid templates.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;All the data objects available to you in the templates via Liquid are outlined in the &lt;strong&gt;API Section&lt;/strong&gt; of Jekyll-Bootstrap.
+You can also read the original documentation here: &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Template-Data&quot;&gt;https://github.com/mojombo/jekyll/wiki/Template-Data&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I hope this paints a clearer picture of what Jekyll is doing and why it works the way it does.
+As noted, our main programming constraint is the fact that our API is limited to what is accessible via Liquid and Liquid only.&lt;/p&gt;
+
+&lt;p&gt;Jekyll-bootstrap is intended to provide helper methods and strategies aimed at making it more intuitive and easier to work with Jekyll =)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Thank you&lt;/strong&gt; for reading this far.&lt;/p&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h2&gt;
+
+&lt;p&gt;Please take a look at []()
+or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

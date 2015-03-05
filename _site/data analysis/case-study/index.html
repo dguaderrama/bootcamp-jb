@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Case Study</title>
+    
+    <meta name="author" content="Name Lastname">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap styles -->
+    <link href="/assets/themes/bootstrap-3/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link href="/assets/themes/bootstrap-3/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Sticky Footer -->
+    <link href="/assets/themes/bootstrap-3/bootstrap/css/bs-sticky-footer.css" rel="stylesheet">
+    
+    <!-- Custom styles -->
+    <link href="/assets/themes/bootstrap-3/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!-- Update these with your own images
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div id="wrap">
+      <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jb-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Jekyll Bootstrap</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="jb-navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/about.html">About</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div class="container">
+        
+<div class="page-header">
+  <h1>Case Study <small>Supporting tagline</small></h1>
+</div>
+
+<div class="row post-full">
+  <div class="col-xs-12">
+    <div class="date">
+    </div>
+    <div class="content">
+      <h1 id="case-study">Case Study</h1>
+
+<h2 id="landslide-susceptibility-model">Landslide Susceptibility Model</h2>
+
+<p>This case study has been chosed to demonstrate the concepts being highlighted by the bootcamp. We have chosen a landslide susceptibility analysis due to the diversity of inputs and a general curiousity into the methodology. The study area has been chosen in response to the Oso Mudslide<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> which took place in Washington State on March 22nd, 2014. The methodology for this analysis is based off of work done by the California Geological Survey in Conjunction with the USGS<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.</p>
+
+<h3 id="project-definition">Project Definition</h3>
+
+<dl>
+  <dt>Location: Washington State </dt>
+  <dt>Bounding Coordinates: (-125.3424, 44.9408), (-115.8, 49.779)</dt>
+  <dt>Resolution: 1 km</dt>
+  <dt>Projection: Washington State Plane South (US ft) <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></dt>
+  <dd>EPSG:2927</dd>
+</dl>
+
+<h3 id="data-collection">Data Collection</h3>
+
+<p>Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets. </p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Input Layer</th>
+      <th>    </th>
+      <th style="text-align: center">Data Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">DEM</td>
+      <td> </td>
+      <td style="text-align: center">GTopo30<sup id="fnref:3:1"><a href="#fn:3" class="footnote">3</a></sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Geology</td>
+      <td> </td>
+      <td style="text-align: center">Washington Dept. of Natural Resources<sup id="fnref:5"><a href="#fn:5" class="footnote">4</a></sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Land cover</td>
+      <td> </td>
+      <td style="text-align: center">Washington Dept. of Fish &amp; Wildlife<sup id="fnref:6"><a href="#fn:6" class="footnote">5</a></sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Landslide Inventory</td>
+      <td> </td>
+      <td style="text-align: center">Washington Dept. of Natural Resources<sup id="fnref:5:1"><a href="#fn:5" class="footnote">4</a></sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Daily Precipitation</td>
+      <td> </td>
+      <td style="text-align: center">Earth System Research Laboratory(NOAA)<sup id="fnref:7"><a href="#fn:7" class="footnote">6</a></sup></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The DEM can be downloaded from ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140m90.tar.gz</p>
+
+<p>tar -zxvf w140m90.tar.gz</p>
+
+<h3 id="data-wrangling">Data Wrangling</h3>
+
+<p>SEE DATA PREP</p>
+
+<h3 id="data-analysis">Data Analysis</h3>
+
+<p>Reclassify inputs:</p>
+
+<h4 id="slope">Slope</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Category</th>
+      <th>    </th>
+      <th style="text-align: center">Slope</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td> </td>
+      <td style="text-align: center">&lt; 3°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td> </td>
+      <td style="text-align: center">3-5°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td> </td>
+      <td style="text-align: center">5-10°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td> </td>
+      <td style="text-align: center">10-15°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td> </td>
+      <td style="text-align: center">15-20°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td> </td>
+      <td style="text-align: center">20-30°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7</td>
+      <td> </td>
+      <td style="text-align: center">30-40°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8</td>
+      <td> </td>
+      <td style="text-align: center">&gt; 40°</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="susceptibility">Susceptibility</h4>
+
+<p>We will have to do some raster calculations to create the output data set. The classifications are taken from the California study<sup id="fnref:2:1"><a href="#fn:2" class="footnote">2</a></sup> and are as follows:</p>
+
+<p><img src="../images/landslide-key.png" alt="landslide-key" /></p>
+
+<h4 id="precipitation">Precipitation</h4>
+
+<p>Now that we have created the landslide susceptibility layer, we can make use the Average Annual Precipitation layer to check the susceptible areas against the areas receiving the most annual rain.</p>
+
+<p>Convert millimeters to inches</p>
+
+<p>Raster calculator: precip = precip * 0.0394</p>
+
+<p>Check THIS STEP AGAINST REFERENCES</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Category</th>
+      <th>    </th>
+      <th style="text-align: center">Precipitation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td> </td>
+      <td style="text-align: center">5-10 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td> </td>
+      <td style="text-align: center">10-15 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td> </td>
+      <td style="text-align: center">15-30 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td> </td>
+      <td style="text-align: center">30-45 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td> </td>
+      <td style="text-align: center">45-60 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td> </td>
+      <td style="text-align: center">60-75 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7</td>
+      <td> </td>
+      <td style="text-align: center">75-90 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8</td>
+      <td> </td>
+      <td style="text-align: center">&gt; 90 in</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="visualization">Visualization</h3>
+
+<p>Now that the output datasets have been created, we can work on making our results presentable.</p>
+
+<p>Go to Cartography &amp; Visualization…</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>http://www.usgs.gov/blogs/features/usgs_top_story/landslide-in-washington-state <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>http://www.conservation.ca.gov/cgs/information/publications/Documents/MS58.pdf <a href="#fnref:2" class="reversefootnote">&#8617;</a> <a href="#fnref:2:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:3">
+      <p>http://www.spatialreference.org/ref/epsg/2927 <a href="#fnref:3" class="reversefootnote">&#8617;</a> <a href="#fnref:3:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:5">
+      <p>http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx <a href="#fnref:5" class="reversefootnote">&#8617;</a> <a href="#fnref:5:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:6">
+      <p>http://wdfw.wa.gov/conservation/gap/land_cover_data.html <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:7">
+      <p>http://www.esrl.noaa.gov/thredds/catalog/Datasets/cpc_us_precip/catalog.xml#Datasets/cpc_us_precip/RT <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#data analysis-ref">
+    		data analysis <span>2</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#data analysis-ref">data analysis <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  
+    <hr>
+    <ul class="pagination">
+    
+      <li class="prev"><a href="/data%20analysis/netcdf" title="Netcdf">&laquo; Previous</a></li>
+    
+      <li><a href="/archive.html">Archive</a></li>
+    
+      <li class="next"><a href="/cartography/cartography" title="Cartography">Next &raquo;</a></li>
+    
+    </ul>
+    <hr>
+    
+  </div>
+</div>
+
+
+      </div>
+
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p>&copy; 2015 Name Lastname
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </div>
+    </div>
+
+    
+
+
+    <!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/assets/themes/bootstrap-3/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
