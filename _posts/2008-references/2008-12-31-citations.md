@@ -1,8 +1,7 @@
 ---
-layout: content
-title: Resources
-permalink: "/resources/"
-weight: 100
+layout: post
+title: Citations
+category: References
 ---
 
 # Resources

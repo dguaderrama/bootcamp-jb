@@ -12,7 +12,7 @@
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   	
-	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
+	<link href='/bootcamp/assets//themes/the-minimum/css/style.css' rel="stylesheet" media="all">
 	<link href="http://feeds.feedburner.com/" rel="alternate" title="Is Spatial Special?" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 	
@@ -232,6 +232,37 @@
       
       	
       	<li><a href="/bootcamp/things%20to%20come/future">Future</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="references-ref">References</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/scripts">Scripts</a></li>
       	
       
     
@@ -494,6 +525,38 @@
 
 
                   </ul>
+                 
+                  <h4 id="references-ref">References</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/scripts">Scripts</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
                 
                   </ul>
                 </li>
@@ -718,25 +781,123 @@
 
 
   </ul>
+ 
+  <h4 id="references-ref">References</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/scripts">Scripts</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
 
 
     </div>
     -->
 			<div class="bd">
 				<div class="entry-content">
-					<h1 id="is-spatial-special">Is Spatial Special?</h1>
+					
+<h1 id="is-spatial-special">Is Spatial Special?</h1>
 
 <p>There has been discussions about the nature of spatial data and whether or not there is anything special about it. Since the OGC agreed on the Simple Features for SQL specification in 1999, spatial data can be stored alongside other data types as another column in a table. However, we can see a lot of GIS professionals evangelizing the difference between spatial data and <em>regular data</em>. </p>
 
-<h3 id="do-they-have-a-point">Do they have a point?</h3>
+<h2 id="do-they-have-a-point">Do they have a point?</h2>
 
-<p>There are definitely a few elements that set spatial data apart from other data types. </p>
+<p>There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of forms.</p>
 
-<h4 id="sorting-and-indexing">Sorting and Indexing</h4>
+<h3 id="spatial-data-types">1. Spatial Data Types</h3>
+
+<p>The OGC decided on a set of Spatial data types or geometry objects in the Simple Features for SQL specification<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+
+<p class="center"><img src="/bootcamp//assets//images/geometryObjectModel.png" alt="geomObjModel" /></p>
+
+<ul>
+  <li>
+    <p>Point</p>
+  </li>
+  <li>
+    <p>LineString</p>
+  </li>
+  <li>
+    <p>Polygon</p>
+  </li>
+  <li>
+    <p>Surface</p>
+  </li>
+  <li>
+    <p>Geometry Collection</p>
+  </li>
+</ul>
+
+<h3 id="sorting-and-indexes">2. Sorting and Indexes</h3>
 
 <p>Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type. </p>
 
 <p>Sorting spatial data poses an interesting problem. Do you sort from North to south? West to East? What happens if you are sorting lines or polygons that overlap?</p>
+
+<h5 id="indexing-by-proximity">Indexing by Proximity</h5>
+
+<p>The R-Tree index was proposed by Antoine Guttman in 1984.</p>
+
+<p>In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features. </p>
+
+<p><a title="By Skinkie, w:en:Radim Baca (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AR-tree.svg"><img width="512" alt="R-tree" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/R-tree.svg/512px-R-tree.svg.png" /></a></p>
+
+<h3 id="dimensions">3. Dimensions</h3>
+
+<p>Spatial Data requires at least 2 dimensions X and Y, which are traditionally held in Longitude, and Latitude. Spatial data can also require elevation(Z) and temporal (t) dimensions depending on the data. These dimension require novel methods for measure relationships between objects in multiple dimensions.</p>
+
+<h3 id="dependence">4. Dependence</h3>
+
+<blockquote>
+  <p>“Everything is related to everything else, but near things are more related than distant things” - Waldo Tobler</p>
+</blockquote>
+
+<p>Tobler’s First law of Geography is the fundamental basis of Spatial Analysis. </p>
+
+<p>This spatial dependence required the study of spatial effects and their influence on statistical studies.</p>
+
+<blockquote>
+  <p>Spatial econometrics deals with methodological concerns that follow from the explicit consideration of <em>spatial effects</em>, such as spatial autocorrelation and spatial heterogeneity.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></p>
+</blockquote>
+
+<p>Spatial autocorrelation can be seen in clustering of values in a specific region, and the change of density in a larger extent.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="http://portal.opengeospatial.org/files/?artifact_id=829">OpenGIS Simple Features Implementation Specification for SQL</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Guttman, A. (1984). “R-Trees: A Dynamic Index Structure for Spatial Searching”. <em>Proceedings of the 1984 ACM SIGMOD international conference of Management of data - SIGMOD ‘84.</em> p. 47 doi:10.1145/602259.602266. ISBN 0897911288. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Luc Anselin, Spatial Econometrics, 1999 <a href="https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf">https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
 
           <!--

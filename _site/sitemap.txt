@@ -6,6 +6,8 @@ http://104.237.129.71/bootcamp/index.html
 http://104.237.129.71/bootcamp/rss.xml
 http://104.237.129.71/bootcamp/sitemap.txt
 
+http://104.237.129.71/bootcamp/references/citations
+http://104.237.129.71/bootcamp/references/scripts
 http://104.237.129.71/bootcamp/things%20to%20come/future
 http://104.237.129.71/bootcamp/distribution/distribution
 http://104.237.129.71/bootcamp/cartography/cartography

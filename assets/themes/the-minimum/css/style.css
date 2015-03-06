@@ -47,6 +47,13 @@ Vertical Rhythm is caluculated via http://j.mp/sUvKuN
 .hentry {
   margin-left: 6em;
 }
+
+.center img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 @media screen and (max-width: 1007px) {
   .hentry {
     margin-left: 15em;

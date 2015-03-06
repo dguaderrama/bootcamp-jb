@@ -5,8 +5,11 @@ tagline: tagline
 ---
 {% include JB/setup %}
 
-### This is index.md
+### Welcome to the Spatial Data Bootcamp
 
-## Click something to the left of me
 
-#### This is the song that doesn't end, yes it goes on and on my friend. Some people started singing without knowing what it was, and they'll continue singing because this is the song that dosen't end yes it goes on and on my friend. Some people started singing without knowing what it was, and they'll continue singing because this is the song that dosen't end yes it goes on and on my friend. Some people started singing without knowing what it was, and they'll continue singing because this is the song that dosen't endyes it goes on and on my friend. Some people started singing without knowing what it was, and they'll continue singing because this is the song that dosen't end
+#### This documentation is created to provides fundamental data on what spatial data is, where to find it, how to manipulate it along with some exercises. To begin, check out some of the links to the left.
+
+### This project is made possible by:
+
+![iplant-logo]({{site.baseurl}}{{ASSET_PATH}}/images/iplant_logo_300.jpg)

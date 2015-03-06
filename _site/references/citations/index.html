@@ -7,13 +7,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Spatial Data</title>
+	<title>Citations</title>
 	<meta name="author" content="Nathan Casler">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   	
 	<link href='/bootcamp/assets//themes/the-minimum/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/" rel="alternate" title="Spatial Data" type="application/atom+xml">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Citations" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 	
 	<!-- Latest compiled and minified CSS -->
@@ -54,7 +54,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/intro/intro" class="active">Spatial Data</a></li>
+      	<li><a href="/bootcamp/intro/intro">Spatial Data</a></li>
       	
       
     
@@ -254,7 +254,7 @@
     
       
       	
-      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	<li class="active"><a href="/bootcamp/references/citations" class="active">Citations</a></li>
       	
       
     
@@ -303,7 +303,7 @@
 			<header>
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-						<h1 class="h2 entry-title">Spatial Data</h1>
+						<h1 class="h2 entry-title">Citations</h1>
             <div class="dropdown-nav">
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -331,7 +331,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/intro/intro" class="active">Spatial Data</a></li>
+      	<li><a href="/bootcamp/intro/intro">Spatial Data</a></li>
       	
       
     
@@ -539,7 +539,7 @@
     
       
       	
-      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	<li class="active"><a href="/bootcamp/references/citations" class="active">Citations</a></li>
       	
       
     
@@ -594,7 +594,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/intro/intro" class="active">Spatial Data</a></li>
+      	<li><a href="/bootcamp/intro/intro">Spatial Data</a></li>
       	
       
     
@@ -794,7 +794,7 @@
     
       
       	
-      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	<li class="active"><a href="/bootcamp/references/citations" class="active">Citations</a></li>
       	
       
     
@@ -818,133 +818,34 @@
     -->
 			<div class="bd">
 				<div class="entry-content">
-					
-<h1 id="intro-to-spatial-data">Intro to Spatial Data</h1>
-<p>Spatial data is created as simply as adding a column of geographical location to your table. There are two types of spatial data: vector and raster.</p>
-
-<h2 id="vectora-namevectora">Vector<a name="vector"></a></h2>
-
-<p>Vector data contains features (features are usually points, lines or polygons) which represent things in the real world. For example, a vector data file might include a river represented by a line. Now that whole line can contain information about the river (as opposed to defining that information pixel by pixel). For data which is associated with categorical data or entities like countries, mountains, roads, etc. vector data is the way to go.</p>
-
-<p><a title="By Wegmann (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ARaster_vector_tikz.png"><img width="450" alt="Raster vector tikz" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Raster_vector_tikz.png/512px-Raster_vector_tikz.png" /></a></p>
-
-<p><br /></p>
-
-<h2 id="raster">Raster</h2>
-
-<p>Raster data is most recognizable as a satellite image. Satellite images are, simply put, pictures of the earth from space. Just like the pictures you can take with a hand-held digital camera, the information is in the pixels. Each pixel has a number value that translates into a color. Raster data is good for investigating what is happening on earth in real time, or for data which is continuous.<br /><br /></p>
-
-<p><a title="By Ldecola (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AThe_use_of_a_raster_data_structure_to_summarize_a_point_pattern.gif"><img width="512" alt="The use of a raster data structure to summarize a point pattern" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b7/The_use_of_a_raster_data_structure_to_summarize_a_point_pattern.gif/512px-The_use_of_a_raster_data_structure_to_summarize_a_point_pattern.gif" /></a></p>
-
-<p><br /></p>
-
-<h2 id="projections-a-nameprojectionsa">Projections <a name="projections"></a></h2>
-<p>Projections characterize spatial data by setting coordinate reference systems for each data set.</p>
-
-<p>Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
- will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth's image onto a plane. </p>
-
-<h4 id="projections-can-come-in-a-variety-of-forms">Projections can come in a variety of forms:</h4>
-
-<h5 id="conic">Conic</h5>
-
-<p><a href="http://commons.wikimedia.org/wiki/File:Usgs_map_lambert_conformal_conic.PNG#mediaviewer/File:Usgs_map_lambert_conformal_conic.PNG"><img alt="Usgs map lambert conformal conic.PNG" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Usgs_map_lambert_conformal_conic.PNG" /></a>
-<br /><br /></p>
-
-<h5 id="azimuthal">Azimuthal</h5>
-
-<p><a title="By User:Quadell, re-coloring US Government USGS image. [Public domain or Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AUsgs_map_azimuthal_equidistant.PNG"><img alt="Usgs map azimuthal equidistant" src="http://upload.wikimedia.org/wikipedia/commons/6/64/Usgs_map_azimuthal_equidistant.PNG" /></a>
-<br /><br /></p>
-
-<h5 id="cylindrical">Cylindrical</h5>
-
-<p><a title="By Ciphers (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AMercator_projection_ar.png"><img width="512" alt="Mercator projection ar" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Mercator_projection_ar.png/512px-Mercator_projection_ar.png" /></a>
-<br /><br /></p>
-
-<h5 id="sinusoidal">Sinusoidal</h5>
-
-<p><a title="By Ciphers (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ASinusoidal_projection_ar.png"><img width="512" alt="Sinusoidal projection ar" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/12/Sinusoidal_projection_ar.png/512px-Sinusoidal_projection_ar.png" /></a>
-<br /><br /></p>
-
-<h5 id="polyhedral">Polyhedral</h5>
-
-<p><a title="By Chris Rywalt (POVRay) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ADymaxion_2003_animation_small1.gif"><img width="256" alt="Dymaxion 2003 animation small1" src="//upload.wikimedia.org/wikipedia/commons/b/bb/Dymaxion_2003_animation_small1.gif" /></a>
-<br /><br /></p>
-
-<h4 id="each-of-these-projections-also-has-a-property">Each of these projections also has a property:</h4>
-
-<h5 id="conformal">Conformal</h5>
-
-<p>[image of conformal]</p>
-
-<h5 id="equal-area">Equal Area</h5>
-<p>[image of equal area]</p>
-
-<h5 id="compromise">Compromise</h5>
-<p>[image of compromise]</p>
-
-<h5 id="equidistant">Equidistant</h5>
-<p>[image of equidistant]</p>
-
-<h5 id="gnomonic">Gnomonic</h5>
-<p>[image of gnomonic]</p>
-
-<p><br /></p>
-
-<p>It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis. </p>
-
-<p><a href="http://www.gdal.org" target="new"><img src="/bootcamp/assets/images/gdalinfo.png" alt="Using GDAL to check projection" /></a></p>
-
-<p><a href="http://spatialreference.org" target="new">SpatialReference.org</a> is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings. </p>
-
-<p><a href="http://spatialreference.org" target="new"><img src="/bootcamp/assets/images/spatialreference.png" alt="SpatialReference.org: EPSG:4326" /></a></p>
-
-<p>Since there are a few thousand different projections, with their own area of interest, it is likely that you will come upon datasets with different projection in your project. The easiest way to resolve projection disputes is to decide on the projection for your project before gathering data and save the proj4 string assigned to the projection. This string will allow you to project your datasets to the proper coordinate reference system.<br /><br /></p>
-
-<table style="margin: 0px 25px;">
-<tr>
-<td><h5>EPSG:4326 (WGS84)</h5></td>
-</tr>
-<tr>
-<td><code>+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</code></td>
-</tr>
-<tr>
-<td><br /></td>
-</tr>
-<td><h5>Custom proj4</h5></td>
-<tr>
-<td><code>+proj=lcc +lat_1=45.89893890000052 +lat_2=47.69601440000037 +lat_0=46.8 +lon_0=2.33722917 +x_0=600000 +y_0=200000 +a=6378249.145 +b=6356514.96582849 +pm=2.337229167 +units=m +no_defs</code></td>
-</tr>
-</table>
-
-<p><br /></p>
-
-<p><em>NOTE: When reprojecting a raster, you should also resample your raster to ensure that the cells have the same width and height. The cells will distort in the new projection and most GIS software will refuse to read a raster with irregular cells.</em></p>
-
-<p><br /></p>
-
-<h2 id="common-data-formats">Common Data Formats</h2>
-<p>The goal of your project will ultimately define whether you use raster or vector data. Here are some common data formats you may encounter:</p>
+					<h1 id="resources">Resources</h1>
 
 <ul>
-  <li>Shapefile: Stores point, line, and polygon data. This file type is actually made up of a collection of files with the following endings: These are mandatory: .shp, .shx, .dbf There are many others which are optional, including the important .prj file that describes the projection information for that data.</li>
-  <li>GeoTIFF: A standard that allows embedding geographic information in a TIFF file.</li>
-  <li>NetCDF: A multidimensional data format that allows for multiple variables covering 1 or more dimensions.</li>
-  <li>Arcinfo/Ascii grid: Proprietary format by Esri</li>
-  <li>Geodatabase: Esri proprietary spatial database. Very easy to load data into, not so easy to extract.</li>
-  <li>GeoJSON: Encodes points, lines, and polygons (and collections of those) along with information about them using JSON (JavaScript Object Notation). This format is popular for web maps.</li>
-  <li>Database: There are various databases that, with extensions, can hold geographic objects. Some notable examples are PostgreSQL with PostGIS, and SQLite with the SpatiaLite extension. It is important to look into the level of spatial support within a database before performing any analysis. For example, MySQL's spatial extension has geometry support, but the geometries are all defined by bounding boxes rather than the true geometry.</li>
+  <li><a href="http://docs.qgis.org/2.6/en/docs/user_manual/">Documentation for QGIS 2.6 - User’s Guide</a><a name="qgis"></a></li>
+  <li><a href="http://www.gadm.org/">Global Administrative Areas - boundaries without limits</a></li>
+  <li><a href="http://www.usgs.gov">Unites States Geological Survey</a></li>
+  <li><a href="http://gmao.gsfc.nasa.gov/merra/">Modern-era Retrospective Analysis for Research and Applications</a></li>
+  <li><a href="http://www.nasa.gov/">National Aeronautics and Space Administration</a></li>
+  <li><a href="http://www.noaa.gov/">National Oceanic and Atmospheric Administration</a></li>
+  <li><a href="http://www.opendap.org/">Open-source Project for a Network Data Access Protocol</a></li>
+  <li><a href="http://www.unidata.ucar.edu/software/netcdf/">Network Common Data Format</a></li>
+  <li><a href="http://geojson.org/">GeoJSON</a></li>
+  <li><a href="http://postgis.net/">PostGIS</a></li>
+  <li><a href="http://www.gdal.org/">Geospatial Data Abstraction Library/OGR Simple Features Library</a></li>
+  <li><a href="http://spatialreference.org/">SpatialReference.org</a></li>
+  <li><a href="http://www.postgresql.org/">PostgreSQL</a></li>
 </ul>
+
 
 
           <!--
 					<div class="meta">
 						<p class="date-publish">
 							Published: 
-							<date class="date-pub" title="2000-12-29T00:00:00-07:00" datetime="2000-12-29T00:00:00-07:00" pubdate>
+							<date class="date-pub" title="2008-12-31T00:00:00-07:00" datetime="2008-12-31T00:00:00-07:00" pubdate>
 							<span class="month"><abbr>December</abbr></span>
-							<span class="day">29</span>
-							<span class="year">2000</span>
+							<span class="day">31</span>
+							<span class="year">2008</span>
 							</date>
 						</p>
 						<ul class="list-category list-linear">
@@ -955,8 +856,8 @@
 
   
      
-    	<li><a href="/categories.html#intro-ref">
-    		intro <span>2</span>
+    	<li><a href="/categories.html#references-ref">
+    		references <span>2</span>
     	</a></li>
     
   
@@ -970,10 +871,6 @@
 
 
   
-     
-    	<li><a href="/tags.html#intro-ref">intro <span>2</span></a></li>
-     
-    	<li><a href="/tags.html#spatial data-ref">spatial data <span>2</span></a></li>
     
   
 
@@ -1002,9 +899,9 @@
 					<nav class="pagination">
 						<ul>
 							
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/references/scripts" title="View Scripts">&laquo; Scripts</a></li>
 							
 							
-              <li class="next"><a class="internal" rel="next"  href="/bootcamp/intro/what" title="View Is Spatial Special?">Is Spatial Special? &raquo;</a></li>
 							
 						</ul>
 					</nav>
@@ -1052,7 +949,7 @@
 		};
 	load('//platform.twitter.com/widgets.js', 'tweetjs');
 	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
-	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/intro/intro" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/references/citations" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
 	}(document, 'script'));
 </script>
 <script>

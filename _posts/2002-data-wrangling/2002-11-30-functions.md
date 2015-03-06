@@ -8,8 +8,40 @@ tags : [spatial functions]
 
 # General Spatial Functions
 
+#### Spatial Queries
+
+Spatial queries differ from typical SQL queries in that they account for the spatial relationships between geometry data types.
+
+These relationships include:
+
+* Distance 
+  : Returns the distance between two geometries
+
+* Equals
+  : Returns true if the given geometries represent the same geometry
+
+* Disjoint
+  : Returns true if the two geometries do not spatially intersect
+
+* Intersects
+  : Returns true if the given geometries intersect
+
+* Touches
+  : Returns true if the given geometries have at least one point in common, but their interiors do not intersect
+
+* Crosses
+  : Returns true if the given geometries share some but not all interior points
+
+* Overlaps
+  : True if the given geometries share space but are not completely contained by each other.
+
+* Contains
+  : True if no points of geometry B lie in the exterior of A  and at least one point of the interior of B lies in the interior of A.
+
 
 ####Vector Functions
+
+
 
 
 

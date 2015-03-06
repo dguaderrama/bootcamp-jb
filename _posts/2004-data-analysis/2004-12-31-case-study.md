@@ -6,6 +6,8 @@ tagline: "Supporting tagline"
 tags : [data analysis]
 ---
 
+{% include JB/setup %}
+
 # Case Study
 
 ## Landslide Susceptibility Model
@@ -63,7 +65,7 @@ Reclassify inputs:
 
 We will have to do some raster calculations to create the output data set. The classifications are taken from the California study[^2] and are as follows:
 
-![landslide-key](../images/landslide-key.png)
+![landslide-key]({{site.baseurl}}{{ASSET_PATH}}images/landslide-key.png)
 
 
 

@@ -5,10 +5,347 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-03-05T21:12:06-07:00</lastBuildDate>
-        <pubDate>2015-03-05T21:12:06-07:00</pubDate>
+        <lastBuildDate>2015-03-06T16:42:06-07:00</lastBuildDate>
+        <pubDate>2015-03-06T16:42:06-07:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Citations</title>
+                <description>&lt;h1 id=&quot;resources&quot;&gt;Resources&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/user_manual/&quot;&gt;Documentation for QGIS 2.6 - User’s Guide&lt;/a&gt;&lt;a name=&quot;qgis&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.gadm.org/&quot;&gt;Global Administrative Areas - boundaries without limits&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.usgs.gov&quot;&gt;Unites States Geological Survey&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gmao.gsfc.nasa.gov/merra/&quot;&gt;Modern-era Retrospective Analysis for Research and Applications&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.nasa.gov/&quot;&gt;National Aeronautics and Space Administration&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.noaa.gov/&quot;&gt;National Oceanic and Atmospheric Administration&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.opendap.org/&quot;&gt;Open-source Project for a Network Data Access Protocol&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.unidata.ucar.edu/software/netcdf/&quot;&gt;Network Common Data Format&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://geojson.org/&quot;&gt;GeoJSON&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://postgis.net/&quot;&gt;PostGIS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.gdal.org/&quot;&gt;Geospatial Data Abstraction Library/OGR Simple Features Library&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://spatialreference.org/&quot;&gt;SpatialReference.org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.postgresql.org/&quot;&gt;PostgreSQL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+                <link>http://104.237.129.71/bootcamp/references/citations</link>
+                <guid>http://104.237.129.71/bootcamp/references/citations</guid>
+                <pubDate>2008-12-31T00:00:00-07:00</pubDate>
+        </item>
+
+        <item>
+                <title>Scripts</title>
+                <description>&lt;h1 id=&quot;script-reference&quot;&gt;Script Reference&lt;/h1&gt;
+
+&lt;h3 id=&quot;bash-script-to-subset-and-ensemble-annual-average-precipitation-data-from-daily-accumulation&quot;&gt;Bash script to subset, and ensemble annual average precipitation data from daily accumulation.&lt;/h3&gt;
+
+&lt;h4 id=&quot;climatologysh&quot;&gt;&lt;em&gt;climatology.sh&lt;/em&gt;&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#***************************************************&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#     CALC YEARLY ANNUAL AVERAGES FROM DAILY DATA&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#***************************************************&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#** Check that there was an output directory supplied&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$# &lt;/span&gt;-eq &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Usage: ./climatology.sh output_directory&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;1
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+
+
+&lt;span class=&quot;nv&quot;&gt;OUTDIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; -d &lt;span class=&quot;nv&quot;&gt;$OUTDIR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; 
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Creating folder for temporary files&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;TMPDIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OUTDIR&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/tmp
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; ! -d &lt;span class=&quot;nv&quot;&gt;$TMPDIR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+    mkdir &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TMPDIR&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#Clear log file &lt;/span&gt;
+&amp;gt; log.txt
+
+&lt;span class=&quot;nv&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;http://www.esrl.noaa.gov/psd/thredds/dodsC/Datasets/cpc_us_precip/RT/precip.V1.0&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; createPrecip&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; year in &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;2007..2014&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$year&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#Clip the input to (-125.4,44.0),(-115.0,50.0)&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;tmpSubset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TMPDIR&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/subset.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Subsetting precipitation data to study area to ${tmpSubset}&amp;quot;&lt;/span&gt;
+  ncks -O -d lon,234.0,244.0 -d lat,44.0,50.0 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tmpSubset&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt; 
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Finished subsetting the data, setting min/max and null values&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ncdump -h -v precip &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tmpSubset&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+  
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Finished subsetting ${tmpSubset}, removing Null values...&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;tmpNaRm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TMPDIR&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/narm.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc
+  ncap2 -O -s &lt;span class=&quot;s1&quot;&gt;&amp;#39;where(precip &amp;lt; 0.0 || precip &amp;gt; 10000 ) precip=0;&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tmpSubset&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tmpNaRm&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+
+
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Finished subsetting ${tmpNaRm}, summarizing the daily precipitation data...&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#Summarize the daily precipitation data for the last 7 years&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;tmpAnnual&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TMPDIR&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/annual.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc
+  ncra -O --op_typ&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ttl -d &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;,,,1 -v precip &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tmpNaRm&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tmpAnnual&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Regridding ${tmpAnnual} to 1km resolution&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;#Regrid the annual data to 1km&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;tmpRegrid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TMPDIR&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/regrid.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc
+  &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;FILE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tmpAnnual&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;export  &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OUTFILE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${tmpRegrid}&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OUTDIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${TMPDIR}&amp;quot;&lt;/span&gt;
+  ncl regrid.ncl
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Finished regridding ${tmpRegrid}&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;avgAnnual&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TMPDIR&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/avg_annual.nc
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Averaging annuals precipitation to ${avgAnnual}&amp;quot;&lt;/span&gt;
+nces -O -n 8,2,1 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TMPDIR&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/regrid.2007.nc &lt;span class=&quot;nv&quot;&gt;$avgAnnual&lt;/span&gt;
+
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+createPrecip &amp;gt; log.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;script-to-convert-netcdf-to-a-projected-geotiff&quot;&gt;Script to convert netCDF to a projected GeoTiff&lt;/h3&gt;
+
+&lt;h4 id=&quot;ncf2gtfr&quot;&gt;&lt;em&gt;ncf2gtf.r&lt;/em&gt;&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;################################################&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;##     This R script will take open a &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;##     netcdf-4 file and output it to a geotiff&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;##     &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#################################################&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;raster&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ncdf4&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;rgdal&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;kp&quot;&gt;setwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;/home/ncasler/bootcamp/nco/tmp&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+r &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; raster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;avg_annual.nc&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+oldExt &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; extent&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;r&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;c1&quot;&gt;#Subtract 360 from the x coordinates&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# will make coordinates lat/lon friendly&lt;/span&gt;
+xMin &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; oldExt&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;360&lt;/span&gt;
+xMax &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; oldExt&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;360&lt;/span&gt;
+yMin &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; oldExt&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+yMax &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; oldExt&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+geoExt &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; extent&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;xMin&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; xMax&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; yMin&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; yMax&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+r &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; setExtent&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;r&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; geoExt&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; keepres&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+newProj &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;+proj=lcc +lat_1=47.33333333333334 +lat_2=45.83333333333334 +lat_0=45.33333333333334 +lon_0=-120.5 +x_0=500000.0001016001 +y_0=0 +ellps=GRS80 +to_meter=0.3048006096012192 +no_defs&amp;#39;&lt;/span&gt; 
+xMinPrj &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;548554.658&lt;/span&gt;
+xMaxPrj &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2558498.351&lt;/span&gt;
+yMinPrj &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;77271.774&lt;/span&gt;
+yMaxPrj &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1366159.434&lt;/span&gt;
+
+xRes &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;
+yRes &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;
+
+newRaster &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; raster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;xmn&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;xMinPrj&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; xmx&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;xMaxPrj&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; ymn&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;yMinPrj&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; ymx&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;yMaxPrj&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; crs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;newProj&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; res&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+newR &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; projectRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;r&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; newRaster&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Finished projecting raster&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;kp&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+fileout &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;testRout.tif&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;paste0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Writing new Raster to &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fileout&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; filename&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fileout&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;GTiff&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; options&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;COMPRESS=ZIP&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; overwrite&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Finished outputting raster. Exiting...&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;netcdf-regridding-script-written-in-ncar-command-language&quot;&gt;NetCDF Regridding Script written in NCAR Command Language&lt;/h3&gt;
+
+&lt;h4 id=&quot;regridncl&quot;&gt;&lt;em&gt;regrid.ncl&lt;/em&gt;&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;***********************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; This script will read &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; netcdf precipitation files
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;***********************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; Load the necessary scripts
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;***********************************************&lt;/span&gt;
+load &lt;span class=&quot;s&quot;&gt;&amp;quot;$NCARG_NCARG/nclscripts/csm/gsn_code.ncl&amp;quot;&lt;/span&gt;
+load &lt;span class=&quot;s&quot;&gt;&amp;quot;$NCARG_NCARG/nclscripts/csm/gsn_csm.ncl&amp;quot;&lt;/span&gt;
+load &lt;span class=&quot;s&quot;&gt;&amp;quot;$NCARG_NCARG/nclscripts/csm/contributed.ncl&amp;quot;&lt;/span&gt;
+load &lt;span class=&quot;s&quot;&gt;&amp;quot;$NCARG_NCARG/nclscripts/csm/shea_util.ncl&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;***********************************************&lt;/span&gt;
+begin
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;***********************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; Read &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; the netCDF &lt;span class=&quot;kp&quot;&gt;file&lt;/span&gt;
+
+  
+
+  fn &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; getenv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;FILE&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Input file is &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; fn&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  fileout &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; getenv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;OUTFILE&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Output file is &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; fileout&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+  fi &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; addfile&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fn&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+  setfileoption&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;nc&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Format&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;NetCDF4Classic&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;***********************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; Read &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; original dimensions
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;***********************************************&lt;/span&gt;
+  time &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; fi&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;time
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   Remove the time dimension from the precip variable&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;dimension order is time&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;lon&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;lat&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  precip &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; fi&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;precip&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Precip max = &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;precip&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Precip min = &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;precip&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+ 
+ &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; Read &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; the latitude and longitude dimensions
+  lat &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; fi&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;lat
+  lon &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; fi&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;lon
+  printVarSummary&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;precip&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**********************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; Create new dimension definitions
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**********************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;Set new extent
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*********************************************&lt;/span&gt;
+
+  newXMin &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;360&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;125.0463254981687271&lt;/span&gt;
+  newYMin &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;45.4641026583566514&lt;/span&gt;
+  newXMax &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;360&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;116.6757915137716282&lt;/span&gt;
+  newYMax &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;49.0780358101814755&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**********************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; Create new dimensions
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**********************************************&lt;/span&gt;
+  newlat &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; fspan&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newYMin&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;newYMax&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1312&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  newlon &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; fspan&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newXMin&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;newXMax&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2088&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  newlat&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;units &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;degrees_north&amp;quot;&lt;/span&gt;
+  newlat&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;long_name &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Latitude&amp;quot;&lt;/span&gt;
+  newlat&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;actual_range &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;newXMin&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; newXMax&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  newlat&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;standard_name &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;latitude&amp;quot;&lt;/span&gt;
+  newlat&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;axis &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Y&amp;quot;&lt;/span&gt;
+
+  newlon&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;units &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;degrees_east&amp;quot;&lt;/span&gt;
+  newlon&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;long_name &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Longitude&amp;quot;&lt;/span&gt;
+  newlon&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;actual_range &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;newYMin&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; newYMax&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  newlon&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;standard_name &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;longitude&amp;quot;&lt;/span&gt;
+  newlon&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;axis &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;X&amp;quot;&lt;/span&gt;
+
+
+  newprecip &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; linint2&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fi&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;lon&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;fi&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;lat&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;precip&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;False&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;newlon&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;newlat&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;****************************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; Change all missing values to &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;****************************************************&lt;/span&gt;
+  printVarSummary&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newprecip&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;NewPrecip Max: &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newprecip&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;NewPrecip Min: &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newprecip&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  newprecip&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;lat&amp;quot;&lt;/span&gt;
+  newprecip&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;lon&amp;quot;&lt;/span&gt;
+  newprecip&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;lat &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; newlat
+  newprecip&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;lon &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; newlon
+  newprecip&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;valid_range &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newprecip&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newprecip&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  newprecip&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;long_name &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Average Annual Precipitation 2007-2014&amp;quot;&lt;/span&gt;
+  newprecip&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;units &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;mm&amp;quot;&lt;/span&gt;
+  newprecip&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;var_desc &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Precipitation&amp;quot;&lt;/span&gt;
+  newprecip&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;level_desc &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Surface&amp;quot;&lt;/span&gt;
+  newprecip&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;statistic &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Average Annual Accumulation&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*************************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; Settings &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt; output &lt;span class=&quot;kp&quot;&gt;file&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;************************************************&lt;/span&gt;
+
+  nlat &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; dimsizes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newlat&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;           &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; get dimension sizes
+  nlon &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; dimsizes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newlon&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  &lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;File out is: &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;fileout&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/bin/rm -f &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; fileout&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; remove &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;exists&lt;/span&gt;
+  fout &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; addfile&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fileout&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; open output &lt;span class=&quot;kp&quot;&gt;file&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;************************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; explicitly declare file definition mode. Improve efficiency
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;************************************************&lt;/span&gt;
+  setfileoption&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fout&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;DefineMode&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;True&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;************************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; create global attributes of the output &lt;span class=&quot;kp&quot;&gt;file&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;************************************************&lt;/span&gt;
+  fAtt                &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; True        &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;assign file &lt;span class=&quot;kp&quot;&gt;attributes&lt;/span&gt;
+  fAtt&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;title          &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Interpolated Annual Precipitation&amp;quot;&lt;/span&gt;
+  fAtt&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;source_file    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; fn
+  fAtt&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;Conventions    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;COARDS&amp;quot;&lt;/span&gt;
+  fAtt&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;description    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Interpolated annual Precipitation&amp;quot;&lt;/span&gt;
+  fAtt&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;creation_date  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; systemfunc  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  fileattdef&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; fout&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fAtt &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;          &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; copy file &lt;span class=&quot;kp&quot;&gt;attributes&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*************************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; predefine the coordinate variables and their dimensionality
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; Note&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; to get an UNLIMITED record dimension&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; we set the dimensionality
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; to &lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;or the actual size&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; and set the dimension name to True.
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*************************************************&lt;/span&gt;
+  dimNames  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;lat&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;lon&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  dimSizes  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; nlat&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; nlon&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  dimUnlim  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; False&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; False&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  filedimdef&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fout&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;dimNames&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;dimSizes&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;dimUnlim&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*************************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; Predefine the dimensionality of the variables to be written out
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*************************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; Here we are using NCL functions to facilitate defining
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; each variable&lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;s dimension name(s) and type.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; The following could be replaced with explicit&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; user&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;defined dimension
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; names different from those associated with the variable &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; memory
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; Say&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; PS&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;time&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;lat&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;lon&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; the NCL script. They could be redefined &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt; the file via&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; filevardef&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fout&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;PS&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;typeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;PS&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;TIME&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;latitude&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;longitude&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*************************************************&lt;/span&gt;
+
+  filevardef&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fout&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;lat&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;typeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;lat&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; getvardims&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;lat&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  filevardef&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fout&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;lon&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;typeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;lon&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; getvardims&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;lon&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  filevardef&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fout&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;precip&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;typeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newprecip&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; getvardims&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newprecip&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*************************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; Copy attributes associated with each variable to the &lt;span class=&quot;kp&quot;&gt;file&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; All attributes associated with each variable will be copied.
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*************************************************&lt;/span&gt;
+  filevarattdef&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fout&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;precip&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;newprecip&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;      &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; copy newprecip &lt;span class=&quot;kp&quot;&gt;attributes&lt;/span&gt;
+  filevarattdef&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fout&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;lat&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; newlat&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;           &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; copy lat &lt;span class=&quot;kp&quot;&gt;attributes&lt;/span&gt;
+  filevarattdef&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fout&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;lon&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; newlon&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;           &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; copy lon &lt;span class=&quot;kp&quot;&gt;attributes&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*************************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; explicitly exit file definition mode. &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;NOT REQUIRED&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*************************************************&lt;/span&gt;
+  setfileoption&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fout&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;DefineMode&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; False&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*************************************************&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; output only the data values since the dimensionality and such have
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; been predefined. The &lt;span class=&quot;s&quot;&gt;&amp;quot;(/&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/)&amp;quot;&lt;/span&gt; syntax tells NCL to only output the
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; data values to the predefined locations on the &lt;span class=&quot;kp&quot;&gt;file&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**************************************************&lt;/span&gt;
+  fout&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;lat     &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;newlat&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  fout&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;lon     &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;newlon&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  fout&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;precip  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;newprecip&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fout&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+                <link>http://104.237.129.71/bootcamp/references/scripts</link>
+                <guid>http://104.237.129.71/bootcamp/references/scripts</guid>
+                <pubDate>2008-12-29T00:00:00-07:00</pubDate>
+        </item>
 
         <item>
                 <title>Future</title>
@@ -61,7 +398,8 @@
 
         <item>
                 <title>Case Study</title>
-                <description>&lt;h1 id=&quot;case-study&quot;&gt;Case Study&lt;/h1&gt;
+                <description>
+&lt;h1 id=&quot;case-study&quot;&gt;Case Study&lt;/h1&gt;
 
 &lt;h2 id=&quot;landslide-susceptibility-model&quot;&gt;Landslide Susceptibility Model&lt;/h2&gt;
 
@@ -188,7 +526,7 @@
 
 &lt;p&gt;We will have to do some raster calculations to create the output data set. The classifications are taken from the California study&lt;sup id=&quot;fnref:2:1&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and are as follows:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/landslide-key.png&quot; alt=&quot;landslide-key&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/landslide-key.png&quot; alt=&quot;landslide-key&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;precipitation&quot;&gt;Precipitation&lt;/h4&gt;
 
@@ -293,9 +631,10 @@
 
         <item>
                 <title>NetCDF</title>
-                <description>&lt;h1 id=&quot;network-common-data-form-netcdf&quot;&gt;Network Common Data Form (netCDF)&lt;/h1&gt;
+                <description>
+&lt;h1 id=&quot;network-common-data-form-netcdf&quot;&gt;Network Common Data Form (netCDF)&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../images/netcdf1_sm.png&quot; alt=&quot;netcdf-logo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/netcdf1_sm.png&quot; alt=&quot;netcdf-logo&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate. &lt;/p&gt;
 
@@ -303,7 +642,7 @@
 
 &lt;p&gt;NetCDF data is accessible via a series of language APIs: C, C++, Fortran77/90, Java, NCL, Objective-C, Perl, Python, R, Tcl/Tk, and Visual Basic&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../images/netcdf-structure.png&quot; alt=&quot;netcdf-architecture&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/netcdf-structure.png&quot; alt=&quot;netcdf-architecture&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;NetCDF data is also accessible via a series of applications including: Panoply, nco, IDV, GrADS, FERRET and various others. For the full listing of applications, &lt;a href=&quot;http://www.unidata.ucar.edu/software/netcdf/software.html&quot;&gt;look here.&lt;/a&gt;.&lt;/p&gt;
 
@@ -317,11 +656,11 @@
 
 &lt;p&gt;For our case study, we created an annual average for precipitation between 2007-2014. &lt;/p&gt;
 
-&lt;p&gt;We had to first locate the datasets from http://eslr.noaa.gov/psd/thredds/dodsC/Datasets/cpc_us_precip/RT&lt;/p&gt;
+&lt;p&gt;We had to first locate the datasets from http://esrl.noaa.gov/psd/thredds/dodsC/Datasets/cpc_us_precip/RT&lt;/p&gt;
 
 &lt;p&gt;This brought us 9 years of datasets. &lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../images/daily-precip.png&quot; alt=&quot;daily-precip&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/daily-precip.png&quot; alt=&quot;daily-precip&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;subsetting-data&quot;&gt;Subsetting data&lt;/h4&gt;
 
@@ -457,7 +796,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;Panoply can also export plots and animations.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../images/panoply-ex.png&quot; alt=&quot;panoply-ex&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/panoply-ex.png&quot; alt=&quot;panoply-ex&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;[^In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo5]: The NCAR Command Language (Version 6.In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo2.1) [Software]. (2014). Boulder, Colorado: UCAR/NCAR/CISL/VETS. http://dx.doi.org/10.5065/D6WD3XH5
 [^6]: http://nco.sourceforge.net/nco.html#Specifying-Input-Files&lt;/p&gt;
@@ -485,7 +824,8 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
         <item>
                 <title>QGIS</title>
-                <description>&lt;h1 id=&quot;qgis-a-titleby-useranitagraser-on-qgis-wiki-useranitagraser-httpwwwqgisorgwikifileqgislogopng-cc-by-sa-30-httpcreativecommonsorglicensesby-sa30-via-wikimedia-commons-hrefhttpcommonswikimediaorgwikifile3aqgislogopngimg-width128-altqgis-logo-srcuploadwikimediaorgwikipediacommonsthumb771qgislogopng128px-qgislogopnga&quot;&gt;QGIS &lt;a title=&quot;By User:Anitagraser on QGIS Wiki, User:Anitagraser (http://www.qgis.org/wiki/File:QGis_Logo.png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AQGis_Logo.png&quot;&gt;&lt;img width=&quot;128&quot; alt=&quot;QGis Logo&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/128px-QGis_Logo.png&quot; /&gt;&lt;/a&gt;&lt;/h1&gt;
+                <description>
+&lt;h1 id=&quot;qgis-a-titleby-useranitagraser-on-qgis-wiki-useranitagraser-httpwwwqgisorgwikifileqgislogopng-cc-by-sa-30-httpcreativecommonsorglicensesby-sa30-via-wikimedia-commons-hrefhttpcommonswikimediaorgwikifile3aqgislogopngimg-width128-altqgis-logo-srcuploadwikimediaorgwikipediacommonsthumb771qgislogopng128px-qgislogopnga&quot;&gt;QGIS &lt;a title=&quot;By User:Anitagraser on QGIS Wiki, User:Anitagraser (http://www.qgis.org/wiki/File:QGis_Logo.png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AQGis_Logo.png&quot;&gt;&lt;img width=&quot;128&quot; alt=&quot;QGis Logo&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/128px-QGis_Logo.png&quot; /&gt;&lt;/a&gt;&lt;/h1&gt;
 
 &lt;h3 id=&quot;add-content-about-qgis&quot;&gt;Add content about QGIS&lt;/h3&gt;
 &lt;p&gt;This section will be covering graphical user interface basics of each QGIS and Panoply.&lt;/p&gt;
@@ -496,7 +836,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h4 id=&quot;the-basics&quot;&gt;The Basics&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../images/qgis-gui.png&quot; alt=&quot;QGIS GUI&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/qgis-gui.png&quot; alt=&quot;QGIS GUI&quot; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -535,7 +875,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h5 id=&quot;project-properties&quot;&gt;Project properties&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../images/project-properties.jpg&quot; alt=&quot;QGIS Project Properties&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/project-properties.jpg&quot; alt=&quot;QGIS Project Properties&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties. &lt;/p&gt;
 
@@ -543,13 +883,13 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h5 id=&quot;activate-necessary-providers&quot;&gt;Activate necessary providers&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../images/providers-config.jpg&quot; alt=&quot;Activate Providers&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/providers-config.jpg&quot; alt=&quot;Activate Providers&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Menu Bar &amp;gt; Processing &amp;gt; Options and configuration &amp;gt; Providers &amp;gt; GDAL/ORG &amp;gt; Activate (be sure it’s checked to enable).&lt;/p&gt;
 
 &lt;h5 id=&quot;open-additional-tools&quot;&gt;Open additional tools&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../images/additional-tools.jpg&quot; alt=&quot;Additional Tools&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/additional-tools.jpg&quot; alt=&quot;Additional Tools&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Menu Bar &amp;gt; Processing &amp;gt; (desired tool).&lt;/p&gt;
 </description>
@@ -626,6 +966,63 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
         <item>
                 <title>General Functions</title>
                 <description>&lt;h1 id=&quot;general-spatial-functions&quot;&gt;General Spatial Functions&lt;/h1&gt;
+
+&lt;h4 id=&quot;spatial-queries&quot;&gt;Spatial Queries&lt;/h4&gt;
+
+&lt;p&gt;Spatial queries differ from typical SQL queries in that they account for the spatial relationships between geometry data types.&lt;/p&gt;
+
+&lt;p&gt;These relationships include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;dl&gt;
+      &lt;dt&gt;Distance &lt;/dt&gt;
+      &lt;dd&gt;Returns the distance between two geometries&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;dl&gt;
+      &lt;dt&gt;Equals&lt;/dt&gt;
+      &lt;dd&gt;Returns true if the given geometries represent the same geometry&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;dl&gt;
+      &lt;dt&gt;Disjoint&lt;/dt&gt;
+      &lt;dd&gt;Returns true if the two geometries do not spatially intersect&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;dl&gt;
+      &lt;dt&gt;Intersects&lt;/dt&gt;
+      &lt;dd&gt;Returns true if the given geometries intersect&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;dl&gt;
+      &lt;dt&gt;Touches&lt;/dt&gt;
+      &lt;dd&gt;Returns true if the given geometries have at least one point in common, but their interiors do not intersect&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;dl&gt;
+      &lt;dt&gt;Crosses&lt;/dt&gt;
+      &lt;dd&gt;Returns true if the given geometries share some but not all interior points&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;dl&gt;
+      &lt;dt&gt;Overlaps&lt;/dt&gt;
+      &lt;dd&gt;True if the given geometries share space but are not completely contained by each other.&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;dl&gt;
+      &lt;dt&gt;Contains&lt;/dt&gt;
+      &lt;dd&gt;True if no points of geometry B lie in the exterior of A  and at least one point of the interior of B lies in the interior of A.&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;vector-functions&quot;&gt;Vector Functions&lt;/h4&gt;
 
@@ -821,19 +1218,86 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
         <item>
                 <title>Is Spatial Special?</title>
-                <description>&lt;h1 id=&quot;is-spatial-special&quot;&gt;Is Spatial Special?&lt;/h1&gt;
+                <description>
+&lt;h1 id=&quot;is-spatial-special&quot;&gt;Is Spatial Special?&lt;/h1&gt;
 
 &lt;p&gt;There has been discussions about the nature of spatial data and whether or not there is anything special about it. Since the OGC agreed on the Simple Features for SQL specification in 1999, spatial data can be stored alongside other data types as another column in a table. However, we can see a lot of GIS professionals evangelizing the difference between spatial data and &lt;em&gt;regular data&lt;/em&gt;. &lt;/p&gt;
 
-&lt;h3 id=&quot;do-they-have-a-point&quot;&gt;Do they have a point?&lt;/h3&gt;
+&lt;h2 id=&quot;do-they-have-a-point&quot;&gt;Do they have a point?&lt;/h2&gt;
 
-&lt;p&gt;There are definitely a few elements that set spatial data apart from other data types. &lt;/p&gt;
+&lt;p&gt;There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of forms.&lt;/p&gt;
 
-&lt;h4 id=&quot;sorting-and-indexing&quot;&gt;Sorting and Indexing&lt;/h4&gt;
+&lt;h3 id=&quot;spatial-data-types&quot;&gt;1. Spatial Data Types&lt;/h3&gt;
+
+&lt;p&gt;The OGC decided on a set of Spatial data types or geometry objects in the Simple Features for SQL specification&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/bootcamp//assets//images/geometryObjectModel.png&quot; alt=&quot;geomObjModel&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Point&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;LineString&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Polygon&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Surface&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Geometry Collection&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;sorting-and-indexes&quot;&gt;2. Sorting and Indexes&lt;/h3&gt;
 
 &lt;p&gt;Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type. &lt;/p&gt;
 
 &lt;p&gt;Sorting spatial data poses an interesting problem. Do you sort from North to south? West to East? What happens if you are sorting lines or polygons that overlap?&lt;/p&gt;
+
+&lt;h5 id=&quot;indexing-by-proximity&quot;&gt;Indexing by Proximity&lt;/h5&gt;
+
+&lt;p&gt;The R-Tree index was proposed by Antoine Guttman in 1984.&lt;/p&gt;
+
+&lt;p&gt;In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features. &lt;/p&gt;
+
+&lt;p&gt;&lt;a title=&quot;By Skinkie, w:en:Radim Baca (Own work) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AR-tree.svg&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;R-tree&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/R-tree.svg/512px-R-tree.svg.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;dimensions&quot;&gt;3. Dimensions&lt;/h3&gt;
+
+&lt;p&gt;Spatial Data requires at least 2 dimensions X and Y, which are traditionally held in Longitude, and Latitude. Spatial data can also require elevation(Z) and temporal (t) dimensions depending on the data. These dimension require novel methods for measure relationships between objects in multiple dimensions.&lt;/p&gt;
+
+&lt;h3 id=&quot;dependence&quot;&gt;4. Dependence&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Everything is related to everything else, but near things are more related than distant things” - Waldo Tobler&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Tobler’s First law of Geography is the fundamental basis of Spatial Analysis. &lt;/p&gt;
+
+&lt;p&gt;This spatial dependence required the study of spatial effects and their influence on statistical studies.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Spatial econometrics deals with methodological concerns that follow from the explicit consideration of &lt;em&gt;spatial effects&lt;/em&gt;, such as spatial autocorrelation and spatial heterogeneity.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Spatial autocorrelation can be seen in clustering of values in a specific region, and the change of density in a larger extent.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://portal.opengeospatial.org/files/?artifact_id=829&quot;&gt;OpenGIS Simple Features Implementation Specification for SQL&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Guttman, A. (1984). “R-Trees: A Dynamic Index Structure for Spatial Searching”. &lt;em&gt;Proceedings of the 1984 ACM SIGMOD international conference of Management of data - SIGMOD ‘84.&lt;/em&gt; p. 47 doi:10.1145/602259.602266. ISBN 0897911288. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;Luc Anselin, Spatial Econometrics, 1999 &lt;a href=&quot;https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf&quot;&gt;https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
                 <link>http://104.237.129.71/bootcamp/intro/what</link>
                 <guid>http://104.237.129.71/bootcamp/intro/what</guid>
@@ -842,7 +1306,8 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
         <item>
                 <title>Spatial Data</title>
-                <description>&lt;h1 id=&quot;intro-to-spatial-data&quot;&gt;Intro to Spatial Data&lt;/h1&gt;
+                <description>
+&lt;h1 id=&quot;intro-to-spatial-data&quot;&gt;Intro to Spatial Data&lt;/h1&gt;
 &lt;p&gt;Spatial data is created as simply as adding a column of geographical location to your table. There are two types of spatial data: vector and raster.&lt;/p&gt;
 
 &lt;h2 id=&quot;vectora-namevectora&quot;&gt;Vector&lt;a name=&quot;vector&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -916,11 +1381,11 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis. &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.gdal.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;../images/gdalinfo.png&quot; alt=&quot;Using GDAL to check projection&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.gdal.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/gdalinfo.png&quot; alt=&quot;Using GDAL to check projection&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings. &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;../images/spatialreference.png&quot; alt=&quot;SpatialReference.org: EPSG:4326&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/spatialreference.png&quot; alt=&quot;SpatialReference.org: EPSG:4326&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Since there are a few thousand different projections, with their own area of interest, it is likely that you will come upon datasets with different projection in your project. The easiest way to resolve projection disputes is to decide on the projection for your project before gathering data and save the proj4 string assigned to the projection. This string will allow you to project your datasets to the proper coordinate reference system.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
