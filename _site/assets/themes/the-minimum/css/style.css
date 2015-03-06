@@ -44,16 +44,51 @@ Using Golden ratio section (Caliculated via http://j.mp/sB6oxM):
 Vertical Rhythm is caluculated via http://j.mp/sUvKuN
 
 /*bootcamp custom */
+.hentry {
+  margin-left: 6em;
+}
+@media screen and (max-width: 1007px) {
+  .hentry {
+    margin-left: 15em;
+  }
+}
+@media screen and (max-width: 1007px) {
+  .hentry {
+    margin-left: 15em;
+  }
+}
+@media screen and (max-width: 846px) {
+  .the-header {
+    margin-left: 3em;
+  }
+  .entry-title {
+    margin-left: 1em;
+  }
+  .bd {
+    margin-left: 2em;
+  }
+}
+@media screen and (max-width: 637px) {
+  .unit-inner .unit-foot-inner {
+    margin-left: 7em !important;
+    width: 100% !important;
+  }
+
+}
+.page {
+  width: 100% !important;
+}
+
 .sticky-left-nav {
   position: fixed;
   z-index: 50;
   height: 100%;
   background: url("/assets/themes/the-minimum/skin/100-90-5-monochrome.png") repeat scroll 0px 0px #383838;
-  width: 16%;
+  width: 20%;
   color: white;
 }
 .sticky-left-nav-inner {
-  padding: 1em;
+  padding: 3em;
 }
 .sticky-left-nav h4 {
   margin: 0px !important;
@@ -73,6 +108,21 @@ Vertical Rhythm is caluculated via http://j.mp/sUvKuN
   text-decoration: underline !important;
   color: #bada55 !important;
 }
+@media screen and (max-width: 1189px) {
+  .sticky-left-nav {
+    width: 218px;
+  }
+  .sticky-left-nav-inner {
+    padding: 25px;
+  }
+}
+.dropdown-nav {
+  visibility: hidden;
+}
+.dropdown-nav li {
+  list-style-type: none;
+}
+
 No styleguide reference.
 */
 h1,
@@ -584,9 +634,6 @@ pre {
 .logo {
   margin-top: 1.625em !important;
 }
-.hentry {
-  margin-left: 6em;
-}
 .unit-article .unit-head-inner,
 .unit-article .entry-content,
 .unit-article .misc-content,
@@ -610,7 +657,7 @@ pre {
   width: 15em;
  // margin-left: auto;
  // margin-right: auto;
- margin-left: 12em;
+ margin-left: 15em;
 }
 /*
  	IE
@@ -697,9 +744,18 @@ pre {
 /*
 	Smartphone
 */
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 100px) and (max-width: 767px) {
   img {
     max-width: 100%;
+  }
+  .sticky-left-nav {
+    display:none;
+  }
+  .hentry {
+    margin: 0px;
+  }
+  .dropdown-nav {
+    visibility: visible !important;
   }
 }
 /*
@@ -790,7 +846,7 @@ pre {
     float: right;
   }
   .the-footer .unit-foot {
-    width: 43.125em;
+    width: 22em;
   }
 }
 /*
@@ -857,7 +913,8 @@ pre {
     width: 43.125em;
   }
   .unit-article .unit-foot-inner {
-    width: 88.125em;
+    width: 80em;
+    margin-left: 17em;
   }
   .unit-article .unit-foot .pagination {
     width: 54.375em;

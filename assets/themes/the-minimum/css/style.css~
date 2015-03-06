@@ -5,6 +5,12 @@
 @import "syntaxhighlighter.css";
 
 @import "helper.css";
+@import "bootstrap/css/bootstrap.css";
+@import "bootstrap/css/bootstrap.css.map";
+@import "bootstrap/css/bootstrap.min.css";
+@import "bootstrap/css/bootstrap-theme.css";
+@import "bootstrap/css/bootstrap-theme.css.map";
+@import "bootstrap/css/bootstrap-theme.min.css";
 /*
 Frameless			<http://framelessgrid.com/>
 by Joni Korpi 		<http://jonikorpi.com/>
@@ -44,51 +50,16 @@ Using Golden ratio section (Caliculated via http://j.mp/sB6oxM):
 Vertical Rhythm is caluculated via http://j.mp/sUvKuN
 
 /*bootcamp custom */
-.hentry {
-  margin-left: 6em;
-}
-@media screen and (max-width: 1007px) {
-  .hentry {
-    margin-left: 15em;
-  }
-}
-@media screen and (max-width: 1007px) {
-  .hentry {
-    margin-left: 15em;
-  }
-}
-@media screen and (max-width: 846px) {
-  .the-header {
-    margin-left: 3em;
-  }
-  .entry-title {
-    margin-left: 1em;
-  }
-  .bd {
-    margin-left: 2em;
-  }
-}
-@media screen and (max-width: 637px) {
-  .unit-inner .unit-foot-inner {
-    margin-left: 7em !important;
-    width: 100% !important;
-  }
-
-}
-.page {
-  width: 100% !important;
-}
-
 .sticky-left-nav {
   position: fixed;
   z-index: 50;
   height: 100%;
   background: url("/assets/themes/the-minimum/skin/100-90-5-monochrome.png") repeat scroll 0px 0px #383838;
-  width: 20%;
+  width: 16%;
   color: white;
 }
 .sticky-left-nav-inner {
-  padding: 3em;
+  padding: 1em;
 }
 .sticky-left-nav h4 {
   margin: 0px !important;
@@ -108,19 +79,20 @@ Vertical Rhythm is caluculated via http://j.mp/sUvKuN
   text-decoration: underline !important;
   color: #bada55 !important;
 }
-@media screen and (max-width: 1189px) {
-  .sticky-left-nav {
-    width: 218px;
-  }
+@media screen and (max-width: 1400px) {
   .sticky-left-nav-inner {
-    padding: 25px;
+    padding: 1.5em;
   }
 }
-.dropdown-nav {
-  visibility: hidden;
+@media screen and (max-width: 1600px) {
+  .sticky-left-nav-inner {
+    padding: 2.5em;
+  }
 }
-.dropdown-nav li {
-  list-style-type: none;
+@media screen and (max-width: 1850) {
+  .sticky-left-nav-inner {
+    padding: 3.5em;
+  }
 }
 
 No styleguide reference.
@@ -634,6 +606,9 @@ pre {
 .logo {
   margin-top: 1.625em !important;
 }
+.hentry {
+  margin-left: 6em;
+}
 .unit-article .unit-head-inner,
 .unit-article .entry-content,
 .unit-article .misc-content,
@@ -657,7 +632,7 @@ pre {
   width: 15em;
  // margin-left: auto;
  // margin-right: auto;
- margin-left: 15em;
+ margin-left: 12em;
 }
 /*
  	IE
@@ -754,9 +729,6 @@ pre {
   .hentry {
     margin: 0px;
   }
-  .dropdown-nav {
-    visibility: visible !important;
-  }
 }
 /*
 	Wide Smartphone
@@ -846,7 +818,7 @@ pre {
     float: right;
   }
   .the-footer .unit-foot {
-    width: 22em;
+    width: 43.125em;
   }
 }
 /*
