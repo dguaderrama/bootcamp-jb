@@ -52,11 +52,6 @@ Vertical Rhythm is caluculated via http://j.mp/sUvKuN
     margin-left: 15em;
   }
 }
-@media screen and (max-width: 1007px) {
-  .hentry {
-    margin-left: 15em;
-  }
-}
 @media screen and (max-width: 846px) {
   .the-header {
     margin-left: 3em;
@@ -67,13 +62,6 @@ Vertical Rhythm is caluculated via http://j.mp/sUvKuN
   .bd {
     margin-left: 2em;
   }
-}
-@media screen and (max-width: 637px) {
-  .unit-inner .unit-foot-inner {
-    margin-left: 7em !important;
-    width: 100% !important;
-  }
-
 }
 .page {
   width: 100% !important;
@@ -654,7 +642,7 @@ pre {
   margin-bottom: 1.625em;
 }
 .the-footer .unit-foot {
-  width: 15em;
+//  width: 15em;
  // margin-left: auto;
  // margin-right: auto;
  margin-left: 15em;
@@ -811,21 +799,33 @@ pre {
     width: 26.25em;
   }
   .the-footer .unit-foot {
-    width: 26.25em;
+    width: 17em;
   }
 }
+@media screen and (max-width: 430px) {
+  .the-footer .unit-foot {
+    margin-left: 4em;
+  }
+}
+@media screen and (max-width: 837px) {
+  .unit-inner .unit-foot-inner {
+    width: 250px;
+  }
+}
+
+
 /*
 	Tablet
 */
 @media only screen and (min-width: 768px) {
   .the-header .unit-inner {
-    width: 43.125em;
+    width: 35.125em;
   }
   .unit-article .unit-head-inner,
   .unit-article .entry-content,
   .unit-article .misc-content,
   .unit-article .unit-foot-inner {
-    width: 43.125em;
+    width: 35.125em;
   }
   .unit-article .unit-head-inner .meta {
     margin-bottom: 0;
@@ -834,10 +834,10 @@ pre {
     float: right;
   }
   .layout-page .unit-body .unit-body-inner {
-    width: 43.125em;
+    width: 35.125em;
   }
   .layout-page .unit-body .article-list {
-    width: 43.125em;
+    width: 35.125em;
   }
   .layout-page .unit-body .article-list .meta {
     margin-bottom: 0;
