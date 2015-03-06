@@ -1,3 +1,4 @@
+
 <article class="unit-article layout-page">
 	<div class="unit-inner unit-article-inner">
 		<div class="content">
@@ -8,6 +9,18 @@
 					</div><!-- unit-inner -->
 				</div><!-- unit-head -->
 			</header>
+
+      <!--
+      <div class="col-md-2 sticky-left-nav">
+{% for category in site.categories %} 
+  <h4 id="{{ category[0] }}-ref">{{ category[0] | join: "/" | capitalize }}</h4>
+  <ul>
+    {% assign pages_list = category[1] %}  
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
+    </div>
+    -->
 
 			<div class="bd">
 				<div class="entry-content">

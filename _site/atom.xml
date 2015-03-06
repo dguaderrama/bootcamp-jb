@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Spatial Data Bootcamp</title>
- <link href="http://192.81.135.13/bootcamp/" rel="self"/>
- <link href="http://192.81.135.13/bootcamp"/>
- <updated>2015-03-05T11:51:31-07:00</updated>
- <id>http://192.81.135.13/bootcamp</id>
+ <link href="http://104.237.129.71/bootcamp/" rel="self"/>
+ <link href="http://104.237.129.71/bootcamp"/>
+ <updated>2015-03-05T17:06:31-07:00</updated>
+ <id>http://104.237.129.71/bootcamp</id>
  <author>
    <name>Nathan Casler</name>
    <email>ncasler@email.arizona.edu</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Future</title>
-   <link href="http://192.81.135.13/bootcamp/things%20to%20come/future"/>
+   <link href="http://104.237.129.71/bootcamp/things%20to%20come/future"/>
    <updated>2007-12-31T00:00:00-07:00</updated>
-   <id>http://192.81.135.13/bootcamp/things%20to%20come/future</id>
+   <id>http://104.237.129.71/bootcamp/things%20to%20come/future</id>
    <content type="html">&lt;h1 id=&quot;things-to-come&quot;&gt;Things to Come&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -31,18 +31,18 @@
  
  <entry>
    <title>Distribution</title>
-   <link href="http://192.81.135.13/bootcamp/distribution/distribution"/>
+   <link href="http://104.237.129.71/bootcamp/distribution/distribution"/>
    <updated>2006-12-31T00:00:00-07:00</updated>
-   <id>http://192.81.135.13/bootcamp/distribution/distribution</id>
+   <id>http://104.237.129.71/bootcamp/distribution/distribution</id>
    <content type="html">&lt;h1 id=&quot;data-distribution&quot;&gt;Data Distribution&lt;/h1&gt;
 </content>
  </entry>
  
  <entry>
    <title>Cartography</title>
-   <link href="http://192.81.135.13/bootcamp/cartography/cartography"/>
+   <link href="http://104.237.129.71/bootcamp/cartography/cartography"/>
    <updated>2005-12-31T00:00:00-07:00</updated>
-   <id>http://192.81.135.13/bootcamp/cartography/cartography</id>
+   <id>http://104.237.129.71/bootcamp/cartography/cartography</id>
    <content type="html">&lt;h1 id=&quot;cartography--visualisation&quot;&gt;Cartography &amp;amp; Visualisation&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -63,9 +63,9 @@
  
  <entry>
    <title>Case Study</title>
-   <link href="http://192.81.135.13/bootcamp/data%20analysis/case-study"/>
+   <link href="http://104.237.129.71/bootcamp/data%20analysis/case-study"/>
    <updated>2004-12-31T00:00:00-07:00</updated>
-   <id>http://192.81.135.13/bootcamp/data%20analysis/case-study</id>
+   <id>http://104.237.129.71/bootcamp/data%20analysis/case-study</id>
    <content type="html">&lt;h1 id=&quot;case-study&quot;&gt;Case Study&lt;/h1&gt;
 
 &lt;h2 id=&quot;landslide-susceptibility-model&quot;&gt;Landslide Susceptibility Model&lt;/h2&gt;
@@ -295,9 +295,9 @@
  
  <entry>
    <title>NetCDF</title>
-   <link href="http://192.81.135.13/bootcamp/data%20analysis/netcdf"/>
+   <link href="http://104.237.129.71/bootcamp/data%20analysis/netcdf"/>
    <updated>2004-12-30T00:00:00-07:00</updated>
-   <id>http://192.81.135.13/bootcamp/data%20analysis/netcdf</id>
+   <id>http://104.237.129.71/bootcamp/data%20analysis/netcdf</id>
    <content type="html">&lt;h1 id=&quot;network-common-data-form-netcdf&quot;&gt;Network Common Data Form (netCDF)&lt;/h1&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../images/netcdf1_sm.png&quot; alt=&quot;netcdf-logo&quot; /&gt;&lt;/p&gt;
@@ -487,9 +487,9 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
  
  <entry>
    <title>QGIS</title>
-   <link href="http://192.81.135.13/bootcamp/applications/qgis"/>
+   <link href="http://104.237.129.71/bootcamp/applications/qgis"/>
    <updated>2003-12-31T00:00:00-07:00</updated>
-   <id>http://192.81.135.13/bootcamp/applications/qgis</id>
+   <id>http://104.237.129.71/bootcamp/applications/qgis</id>
    <content type="html">&lt;h1 id=&quot;qgis-a-titleby-useranitagraser-on-qgis-wiki-useranitagraser-httpwwwqgisorgwikifileqgislogopng-cc-by-sa-30-httpcreativecommonsorglicensesby-sa30-via-wikimedia-commons-hrefhttpcommonswikimediaorgwikifile3aqgislogopngimg-width128-altqgis-logo-srcuploadwikimediaorgwikipediacommonsthumb771qgislogopng128px-qgislogopnga&quot;&gt;QGIS &lt;a title=&quot;By User:Anitagraser on QGIS Wiki, User:Anitagraser (http://www.qgis.org/wiki/File:QGis_Logo.png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AQGis_Logo.png&quot;&gt;&lt;img width=&quot;128&quot; alt=&quot;QGis Logo&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/128px-QGis_Logo.png&quot; /&gt;&lt;/a&gt;&lt;/h1&gt;
 
 &lt;h3 id=&quot;add-content-about-qgis&quot;&gt;Add content about QGIS&lt;/h3&gt;
@@ -562,9 +562,9 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
  
  <entry>
    <title>Data Wrangling</title>
-   <link href="http://192.81.135.13/bootcamp/data%20wrangling/data-wrangling"/>
+   <link href="http://104.237.129.71/bootcamp/data%20wrangling/data-wrangling"/>
    <updated>2002-12-31T00:00:00-07:00</updated>
-   <id>http://192.81.135.13/bootcamp/data%20wrangling/data-wrangling</id>
+   <id>http://104.237.129.71/bootcamp/data%20wrangling/data-wrangling</id>
    <content type="html">&lt;h1 id=&quot;data-wrangling&quot;&gt;Data Wrangling&lt;/h1&gt;
 
 &lt;p&gt;Data manipulation can be a simple endeavour if the data inputs come in the same or compatible formats. Data sources will usually have a specific format they use for their data which can make it easy to use work with their datasets. Unfortunately, when we gather data from various sources, we are usually given several different formats to data to deal with. Data wrangling is the process of manipulating and reformatting disparate data sources into compatible datasets. Data wrangling makes proper analysis/modeling possible. There are several methods common to spatial data wrangling some of which are:&lt;/p&gt;
@@ -627,9 +627,9 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
  
  <entry>
    <title>General Functions</title>
-   <link href="http://192.81.135.13/bootcamp/data%20wrangling/functions"/>
+   <link href="http://104.237.129.71/bootcamp/data%20wrangling/functions"/>
    <updated>2002-11-30T00:00:00-07:00</updated>
-   <id>http://192.81.135.13/bootcamp/data%20wrangling/functions</id>
+   <id>http://104.237.129.71/bootcamp/data%20wrangling/functions</id>
    <content type="html">&lt;h1 id=&quot;general-spatial-functions&quot;&gt;General Spatial Functions&lt;/h1&gt;
 
 &lt;h4 id=&quot;vector-functions&quot;&gt;Vector Functions&lt;/h4&gt;
@@ -686,9 +686,9 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
  
  <entry>
    <title>Data Collection</title>
-   <link href="http://192.81.135.13/bootcamp/data%20collection/data-collection"/>
+   <link href="http://104.237.129.71/bootcamp/data%20collection/data-collection"/>
    <updated>2001-12-31T00:00:00-07:00</updated>
-   <id>http://192.81.135.13/bootcamp/data%20collection/data-collection</id>
+   <id>http://104.237.129.71/bootcamp/data%20collection/data-collection</id>
    <content type="html">&lt;h1 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h1&gt;
 
 &lt;h3 id=&quot;credible-data-sources&quot;&gt;Credible Data Sources&lt;/h3&gt;
@@ -823,9 +823,9 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
  
  <entry>
    <title>Is Spatial Special?</title>
-   <link href="http://192.81.135.13/bootcamp/intro/what"/>
+   <link href="http://104.237.129.71/bootcamp/intro/what"/>
    <updated>2000-12-30T00:00:00-07:00</updated>
-   <id>http://192.81.135.13/bootcamp/intro/what</id>
+   <id>http://104.237.129.71/bootcamp/intro/what</id>
    <content type="html">&lt;h1 id=&quot;is-spatial-special&quot;&gt;Is Spatial Special?&lt;/h1&gt;
 
 &lt;p&gt;There has been discussions about the nature of spatial data and whether or not there is anything special about it. Since the OGC agreed on the Simple Features for SQL specification in 1999, spatial data can be stored alongside other data types as another column in a table. However, we can see a lot of GIS professionals evangelizing the difference between spatial data and &lt;em&gt;regular data&lt;/em&gt;. &lt;/p&gt;
@@ -844,9 +844,9 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
  
  <entry>
    <title>Spatial Data</title>
-   <link href="http://192.81.135.13/bootcamp/intro/intro"/>
+   <link href="http://104.237.129.71/bootcamp/intro/intro"/>
    <updated>2000-12-29T00:00:00-07:00</updated>
-   <id>http://192.81.135.13/bootcamp/intro/intro</id>
+   <id>http://104.237.129.71/bootcamp/intro/intro</id>
    <content type="html">&lt;h1 id=&quot;intro-to-spatial-data&quot;&gt;Intro to Spatial Data&lt;/h1&gt;
 &lt;p&gt;Spatial data is created as simply as adding a column of geographical location to your table. There are two types of spatial data: vector and raster.&lt;/p&gt;
 
