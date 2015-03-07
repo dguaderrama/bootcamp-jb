@@ -5,8 +5,8 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-03-06T16:42:06-07:00</lastBuildDate>
-        <pubDate>2015-03-06T16:42:06-07:00</pubDate>
+        <lastBuildDate>2015-03-06T19:57:49-07:00</lastBuildDate>
+        <pubDate>2015-03-06T19:57:49-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -526,7 +526,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;We will have to do some raster calculations to create the output data set. The classifications are taken from the California study&lt;sup id=&quot;fnref:2:1&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and are as follows:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/landslide-key.png&quot; alt=&quot;landslide-key&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/landslide-key.png&quot; alt=&quot;landslide-key&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;precipitation&quot;&gt;Precipitation&lt;/h4&gt;
 
@@ -634,7 +634,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
                 <description>
 &lt;h1 id=&quot;network-common-data-form-netcdf&quot;&gt;Network Common Data Form (netCDF)&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/netcdf1_sm.png&quot; alt=&quot;netcdf-logo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/netcdf1_sm.png&quot; alt=&quot;netcdf-logo&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate. &lt;/p&gt;
 
@@ -642,7 +642,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;NetCDF data is accessible via a series of language APIs: C, C++, Fortran77/90, Java, NCL, Objective-C, Perl, Python, R, Tcl/Tk, and Visual Basic&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/netcdf-structure.png&quot; alt=&quot;netcdf-architecture&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/netcdf-structure.png&quot; alt=&quot;netcdf-architecture&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;NetCDF data is also accessible via a series of applications including: Panoply, nco, IDV, GrADS, FERRET and various others. For the full listing of applications, &lt;a href=&quot;http://www.unidata.ucar.edu/software/netcdf/software.html&quot;&gt;look here.&lt;/a&gt;.&lt;/p&gt;
 
@@ -660,7 +660,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This brought us 9 years of datasets. &lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/daily-precip.png&quot; alt=&quot;daily-precip&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/daily-precip.png&quot; alt=&quot;daily-precip&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;subsetting-data&quot;&gt;Subsetting data&lt;/h4&gt;
 
@@ -796,7 +796,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;Panoply can also export plots and animations.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/panoply-ex.png&quot; alt=&quot;panoply-ex&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/panoply-ex.png&quot; alt=&quot;panoply-ex&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;[^In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo5]: The NCAR Command Language (Version 6.In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo2.1) [Software]. (2014). Boulder, Colorado: UCAR/NCAR/CISL/VETS. http://dx.doi.org/10.5065/D6WD3XH5
 [^6]: http://nco.sourceforge.net/nco.html#Specifying-Input-Files&lt;/p&gt;
@@ -836,7 +836,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h4 id=&quot;the-basics&quot;&gt;The Basics&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/qgis-gui.png&quot; alt=&quot;QGIS GUI&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/qgis-gui.png&quot; alt=&quot;QGIS GUI&quot; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -875,7 +875,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h5 id=&quot;project-properties&quot;&gt;Project properties&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/project-properties.jpg&quot; alt=&quot;QGIS Project Properties&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/project-properties.jpg&quot; alt=&quot;QGIS Project Properties&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties. &lt;/p&gt;
 
@@ -883,13 +883,13 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h5 id=&quot;activate-necessary-providers&quot;&gt;Activate necessary providers&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/providers-config.jpg&quot; alt=&quot;Activate Providers&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/providers-config.jpg&quot; alt=&quot;Activate Providers&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Menu Bar &amp;gt; Processing &amp;gt; Options and configuration &amp;gt; Providers &amp;gt; GDAL/ORG &amp;gt; Activate (be sure it’s checked to enable).&lt;/p&gt;
 
 &lt;h5 id=&quot;open-additional-tools&quot;&gt;Open additional tools&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/additional-tools.jpg&quot; alt=&quot;Additional Tools&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/additional-tools.jpg&quot; alt=&quot;Additional Tools&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Menu Bar &amp;gt; Processing &amp;gt; (desired tool).&lt;/p&gt;
 </description>
@@ -1231,7 +1231,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;p&gt;The OGC decided on a set of Spatial data types or geometry objects in the Simple Features for SQL specification&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
-&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/bootcamp//assets//images/geometryObjectModel.png&quot; alt=&quot;geomObjModel&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/bootcamp//assets/images/geometryObjectModel.png&quot; alt=&quot;geomObjModel&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -1381,11 +1381,11 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis. &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.gdal.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/gdalinfo.png&quot; alt=&quot;Using GDAL to check projection&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.gdal.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assetsimages/gdalinfo.png&quot; alt=&quot;Using GDAL to check projection&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings. &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/spatialreference.png&quot; alt=&quot;SpatialReference.org: EPSG:4326&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assetsimages/spatialreference.png&quot; alt=&quot;SpatialReference.org: EPSG:4326&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Since there are a few thousand different projections, with their own area of interest, it is likely that you will come upon datasets with different projection in your project. The easiest way to resolve projection disputes is to decide on the projection for your project before gathering data and save the proj4 string assigned to the projection. This string will allow you to project your datasets to the proper coordinate reference system.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
