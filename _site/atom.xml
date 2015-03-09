@@ -4,7 +4,7 @@
  <title>Spatial Data Bootcamp</title>
  <link href="http://104.237.129.71/bootcamp/" rel="self"/>
  <link href="http://104.237.129.71/bootcamp"/>
- <updated>2015-03-06T19:57:49-07:00</updated>
+ <updated>2015-03-09T12:23:24-07:00</updated>
  <id>http://104.237.129.71/bootcamp</id>
  <author>
    <name>Nathan Casler</name>
@@ -444,11 +444,6 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Washington Dept. of Natural Resources&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Land cover&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Washington Dept. of Fish &amp;amp; Wildlife&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Landslide Inventory&lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Washington Dept. of Natural Resources&lt;sup id=&quot;fnref:5:1&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
@@ -456,7 +451,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Daily Precipitation&lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Earth System Research Laboratory(NOAA)&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Earth System Research Laboratory(NOAA)&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -467,7 +462,93 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;data-wrangling&quot;&gt;Data Wrangling&lt;/h3&gt;
 
-&lt;p&gt;SEE DATA PREP&lt;/p&gt;
+&lt;p&gt;Open Quantum GIS&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Set project projection to EPSG:2927
+    &lt;ul&gt;
+      &lt;li&gt;In the top navbar go Project &amp;gt; Project Properties
+  &lt;img src=&quot;/bootcamp/assets/images/qgis-project-properties.png&quot; alt=&quot;project-properties&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Select CRS in the Left menu&lt;/li&gt;
+      &lt;li&gt;Check &lt;em&gt;Enable On-the-fly CRS transformation&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Select &lt;em&gt;NAD83(HARN)/Washington South(ftUS) EPSG:2927&lt;/em&gt; from the List of Projections
+  &lt;img src=&quot;/bootcamp/assets/images/qgis-projection.png&quot; alt=&quot;projection&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add the US States shapefile
+    &lt;ul&gt;
+      &lt;li&gt;Select &lt;em&gt;Add Vector Layer&lt;/em&gt; in the left toolbar&lt;/li&gt;
+      &lt;li&gt;Browse to the USA_adm1.shp layer from the iPlant Data Store
+  &lt;img src=&quot;/bootcamp/assets/images/usa-states.png&quot; alt=&quot;USA_states&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Create a layer for the state of Washington
+    &lt;ul&gt;
+      &lt;li&gt;In the top toolbar, select &lt;em&gt;Select Single Feature&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Click on the state of Washing to select it
+  &lt;img src=&quot;/bootcamp/assets/images/washington-selected.png&quot; alt=&quot;washington-selected&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Right click on the USA_adm1 layer and select &lt;em&gt;Save Selection As…&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Format: ESRI Shapefile&lt;/li&gt;
+      &lt;li&gt;Save as: washington.shp&lt;/li&gt;
+      &lt;li&gt;Encoding: UTF-8&lt;/li&gt;
+      &lt;li&gt;CRS: 
+        &lt;ul&gt;
+          &lt;li&gt;Project CRS&lt;/li&gt;
+          &lt;li&gt;Browse &amp;gt; &lt;em&gt;NAD83(HARN)/Washington South (ftUS) EPSG:2927&lt;/em&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/save-washington.png&quot; alt=&quot;save-washington&quot; /&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Load the new washington layer
+    &lt;ul&gt;
+      &lt;li&gt;Select &lt;em&gt;Add Vector Layer&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Browse to the new washington layer and click &lt;em&gt;Open&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Remove the USA_adm1 layer from the project 
+    &lt;ul&gt;
+      &lt;li&gt;Right click the layer in the table of contents&lt;/li&gt;
+      &lt;li&gt;Select &lt;em&gt;Remove&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add the DEM layer from the iPlant data store
+    &lt;ul&gt;
+      &lt;li&gt;In the left toolbar, select &lt;em&gt;Add Raster Layer&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Select &lt;em&gt;source_files/W140N90.DEM&lt;/em&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/dem-load.png&quot; alt=&quot;dem-load&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Clip the dem to the shapefile
+    &lt;ul&gt;
+      &lt;li&gt;In the top menu, select Raster &amp;gt; Extraction &amp;gt; Clipper&lt;/li&gt;
+      &lt;li&gt;In the window, set the following options:&lt;/li&gt;
+      &lt;li&gt;Input file: W140N90&lt;/li&gt;
+      &lt;li&gt;Output file: dem-washington.tif&lt;/li&gt;
+      &lt;li&gt;No data value: 0&lt;/li&gt;
+      &lt;li&gt;Clipping Mode: Mask layer &amp;gt; washington&lt;/li&gt;
+      &lt;li&gt;Load into canvas when finished
+  &lt;img src=&quot;/bootcamp/assets/images/dem-washington.png&quot; alt=&quot;dem-washington&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Remove the W140N90 layer
+  &lt;img src=&quot;/bootcamp/assets/images/dem-washington-display.png&quot; alt=&quot;dem-washington-display&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Create a slope surface
+    &lt;ul&gt;
+      &lt;li&gt;Input file: dem-washington&lt;/li&gt;
+      &lt;li&gt;Output file: slope-washington.tif&lt;/li&gt;
+      &lt;li&gt;Mode: Slope&lt;/li&gt;
+      &lt;li&gt;Scale: 111120.0&lt;/li&gt;
+      &lt;li&gt;Load into canvas when finished
+  &lt;img src=&quot;/bootcamp/assets/images/create-slope.png&quot; alt=&quot;create-slope&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;create-binary-landslide-raster&quot;&gt;Create binary landslide raster&lt;/h4&gt;
+
+&lt;p&gt;From the iPlant Data Store, download the landslide-inventory.shp
+SEE DATA PREP&lt;/p&gt;
 
 &lt;h3 id=&quot;data-analysis&quot;&gt;Data Analysis&lt;/h3&gt;
 
@@ -531,7 +612,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;We will have to do some raster calculations to create the output data set. The classifications are taken from the California study&lt;sup id=&quot;fnref:2:1&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and are as follows:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/landslide-key.png&quot; alt=&quot;landslide-key&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/landslide-key.png&quot; alt=&quot;landslide-key&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;precipitation&quot;&gt;Precipitation&lt;/h4&gt;
 
@@ -620,9 +701,6 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     &lt;li id=&quot;fn:5&quot;&gt;
       &lt;p&gt;http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:5:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
-    &lt;li id=&quot;fn:6&quot;&gt;
-      &lt;p&gt;http://wdfw.wa.gov/conservation/gap/land_cover_data.html &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
     &lt;li id=&quot;fn:7&quot;&gt;
       &lt;p&gt;http://www.esrl.noaa.gov/thredds/catalog/Datasets/cpc_us_precip/catalog.xml#Datasets/cpc_us_precip/RT &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
@@ -639,7 +717,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
    <content type="html">
 &lt;h1 id=&quot;network-common-data-form-netcdf&quot;&gt;Network Common Data Form (netCDF)&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/netcdf1_sm.png&quot; alt=&quot;netcdf-logo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/netcdf1_sm.png&quot; alt=&quot;netcdf-logo&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate. &lt;/p&gt;
 
@@ -647,7 +725,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;NetCDF data is accessible via a series of language APIs: C, C++, Fortran77/90, Java, NCL, Objective-C, Perl, Python, R, Tcl/Tk, and Visual Basic&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/netcdf-structure.png&quot; alt=&quot;netcdf-architecture&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/netcdf-structure.png&quot; alt=&quot;netcdf-architecture&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;NetCDF data is also accessible via a series of applications including: Panoply, nco, IDV, GrADS, FERRET and various others. For the full listing of applications, &lt;a href=&quot;http://www.unidata.ucar.edu/software/netcdf/software.html&quot;&gt;look here.&lt;/a&gt;.&lt;/p&gt;
 
@@ -665,7 +743,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This brought us 9 years of datasets. &lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/daily-precip.png&quot; alt=&quot;daily-precip&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/daily-precip.png&quot; alt=&quot;daily-precip&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;subsetting-data&quot;&gt;Subsetting data&lt;/h4&gt;
 

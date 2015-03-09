@@ -859,11 +859,6 @@
       <td style="text-align: center">Washington Dept. of Natural Resources<sup id="fnref:5"><a href="#fn:5" class="footnote">4</a></sup></td>
     </tr>
     <tr>
-      <td style="text-align: center">Land cover</td>
-      <td> </td>
-      <td style="text-align: center">Washington Dept. of Fish &amp; Wildlife<sup id="fnref:6"><a href="#fn:6" class="footnote">5</a></sup></td>
-    </tr>
-    <tr>
       <td style="text-align: center">Landslide Inventory</td>
       <td> </td>
       <td style="text-align: center">Washington Dept. of Natural Resources<sup id="fnref:5:1"><a href="#fn:5" class="footnote">4</a></sup></td>
@@ -871,7 +866,7 @@
     <tr>
       <td style="text-align: center">Daily Precipitation</td>
       <td> </td>
-      <td style="text-align: center">Earth System Research Laboratory(NOAA)<sup id="fnref:7"><a href="#fn:7" class="footnote">6</a></sup></td>
+      <td style="text-align: center">Earth System Research Laboratory(NOAA)<sup id="fnref:7"><a href="#fn:7" class="footnote">5</a></sup></td>
     </tr>
   </tbody>
 </table>
@@ -882,7 +877,93 @@
 
 <h3 id="data-wrangling">Data Wrangling</h3>
 
-<p>SEE DATA PREP</p>
+<p>Open Quantum GIS</p>
+
+<ol>
+  <li>Set project projection to EPSG:2927
+    <ul>
+      <li>In the top navbar go Project &gt; Project Properties
+  <img src="/bootcamp/assets/images/qgis-project-properties.png" alt="project-properties" /></li>
+      <li>Select CRS in the Left menu</li>
+      <li>Check <em>Enable On-the-fly CRS transformation</em></li>
+      <li>Select <em>NAD83(HARN)/Washington South(ftUS) EPSG:2927</em> from the List of Projections
+  <img src="/bootcamp/assets/images/qgis-projection.png" alt="projection" /></li>
+    </ul>
+  </li>
+  <li>Add the US States shapefile
+    <ul>
+      <li>Select <em>Add Vector Layer</em> in the left toolbar</li>
+      <li>Browse to the USA_adm1.shp layer from the iPlant Data Store
+  <img src="/bootcamp/assets/images/usa-states.png" alt="USA_states" /></li>
+    </ul>
+  </li>
+  <li>Create a layer for the state of Washington
+    <ul>
+      <li>In the top toolbar, select <em>Select Single Feature</em></li>
+      <li>Click on the state of Washing to select it
+  <img src="/bootcamp/assets/images/washington-selected.png" alt="washington-selected" /></li>
+      <li>Right click on the USA_adm1 layer and select <em>Save Selection As…</em></li>
+      <li>Format: ESRI Shapefile</li>
+      <li>Save as: washington.shp</li>
+      <li>Encoding: UTF-8</li>
+      <li>CRS: 
+        <ul>
+          <li>Project CRS</li>
+          <li>Browse &gt; <em>NAD83(HARN)/Washington South (ftUS) EPSG:2927</em>
+  <img src="/bootcamp/assets/images/save-washington.png" alt="save-washington" /></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Load the new washington layer
+    <ul>
+      <li>Select <em>Add Vector Layer</em></li>
+      <li>Browse to the new washington layer and click <em>Open</em></li>
+    </ul>
+  </li>
+  <li>Remove the USA_adm1 layer from the project 
+    <ul>
+      <li>Right click the layer in the table of contents</li>
+      <li>Select <em>Remove</em></li>
+    </ul>
+  </li>
+  <li>Add the DEM layer from the iPlant data store
+    <ul>
+      <li>In the left toolbar, select <em>Add Raster Layer</em></li>
+      <li>Select <em>source_files/W140N90.DEM</em>
+  <img src="/bootcamp/assets/images/dem-load.png" alt="dem-load" /></li>
+    </ul>
+  </li>
+  <li>Clip the dem to the shapefile
+    <ul>
+      <li>In the top menu, select Raster &gt; Extraction &gt; Clipper</li>
+      <li>In the window, set the following options:</li>
+      <li>Input file: W140N90</li>
+      <li>Output file: dem-washington.tif</li>
+      <li>No data value: 0</li>
+      <li>Clipping Mode: Mask layer &gt; washington</li>
+      <li>Load into canvas when finished
+  <img src="/bootcamp/assets/images/dem-washington.png" alt="dem-washington" /></li>
+    </ul>
+  </li>
+  <li>Remove the W140N90 layer
+  <img src="/bootcamp/assets/images/dem-washington-display.png" alt="dem-washington-display" /></li>
+  <li>Create a slope surface
+    <ul>
+      <li>Input file: dem-washington</li>
+      <li>Output file: slope-washington.tif</li>
+      <li>Mode: Slope</li>
+      <li>Scale: 111120.0</li>
+      <li>Load into canvas when finished
+  <img src="/bootcamp/assets/images/create-slope.png" alt="create-slope" /></li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="create-binary-landslide-raster">Create binary landslide raster</h4>
+
+<p>From the iPlant Data Store, download the landslide-inventory.shp
+SEE DATA PREP</p>
 
 <h3 id="data-analysis">Data Analysis</h3>
 
@@ -946,7 +1027,7 @@
 
 <p>We will have to do some raster calculations to create the output data set. The classifications are taken from the California study<sup id="fnref:2:1"><a href="#fn:2" class="footnote">2</a></sup> and are as follows:</p>
 
-<p><img src="/bootcamp/assetsimages/landslide-key.png" alt="landslide-key" /></p>
+<p><img src="/bootcamp/assets/images/landslide-key.png" alt="landslide-key" /></p>
 
 <h4 id="precipitation">Precipitation</h4>
 
@@ -1034,9 +1115,6 @@
     </li>
     <li id="fn:5">
       <p>http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx <a href="#fnref:5" class="reversefootnote">&#8617;</a> <a href="#fnref:5:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
-    </li>
-    <li id="fn:6">
-      <p>http://wdfw.wa.gov/conservation/gap/land_cover_data.html <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:7">
       <p>http://www.esrl.noaa.gov/thredds/catalog/Datasets/cpc_us_precip/catalog.xml#Datasets/cpc_us_precip/RT <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>

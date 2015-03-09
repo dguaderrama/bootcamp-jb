@@ -30,7 +30,6 @@ Data types: Landslides are discrete phenomena that should be represented using v
 |:--------------------:|-|:-----------------------------------------:|
 | DEM                  || GTopo30[^3]                               |
 | Geology              || Washington Dept. of Natural Resources[^5] |
-| Land cover           || Washington Dept. of Fish & Wildlife[^6]   |
 | Landslide Inventory  || Washington Dept. of Natural Resources[^5] |
 | Daily Precipitation  || Earth System Research Laboratory(NOAA)[^7]| 
 
@@ -41,6 +40,65 @@ tar -zxvf w140m90.tar.gz
 
 ### Data Wrangling
 
+Open Quantum GIS
+
+1. Set project projection to EPSG:2927
+  * In the top navbar go Project > Project Properties
+  ![project-properties]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-project-properties.png)
+  * Select CRS in the Left menu
+  * Check *Enable On-the-fly CRS transformation*
+  * Select *NAD83(HARN)/Washington South(ftUS) EPSG:2927* from the List of Projections
+  ![projection]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-projection.png)
+2. Add the US States shapefile
+  * Select *Add Vector Layer* in the left toolbar
+  * Browse to the USA_adm1.shp layer from the iPlant Data Store
+  ![USA_states]({{site.baseurl}}{{ASSET_PATH}}/images/usa-states.png)
+3. Create a layer for the state of Washington
+  * In the top toolbar, select *Select Single Feature*
+  * Click on the state of Washing to select it
+  ![washington-selected]({{site.baseurl}}{{ASSET_PATH}}/images/washington-selected.png)
+  * Right click on the USA_adm1 layer and select *Save Selection As...*
+      - Format: ESRI Shapefile
+      - Save as: washington.shp
+      - Encoding: UTF-8
+      - CRS: 
+          + Project CRS
+          + Browse > *NAD83(HARN)/Washington South (ftUS) EPSG:2927*
+  ![save-washington]({{site.baseurl}}{{ASSET_PATH}}/images/save-washington.png)
+4. Load the new washington layer
+  * Select *Add Vector Layer*
+  * Browse to the new washington layer and click *Open*
+5. Remove the USA_adm1 layer from the project 
+  * Right click the layer in the table of contents
+  * Select *Remove*
+6. Add the DEM layer from the iPlant data store
+  * In the left toolbar, select *Add Raster Layer*
+  * Select *source_files/W140N90.DEM*
+  ![dem-load]({{site.baseurl}}{{ASSET_PATH}}/images/dem-load.png)
+7. Clip the dem to the shapefile
+  * In the top menu, select Raster > Extraction > Clipper
+  * In the window, set the following options:
+    + Input file: W140N90
+    + Output file: dem-washington.tif
+    + No data value: 0
+    + Clipping Mode: Mask layer > washington
+    + Load into canvas when finished
+  ![dem-washington]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington.png)
+8. Remove the W140N90 layer
+  ![dem-washington-display]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington-display.png)
+9. Create a slope surface
+  * Input file: dem-washington
+  * Output file: slope-washington.tif
+  * Mode: Slope
+  * Scale: 111120.0
+  * Load into canvas when finished
+  ![create-slope]({{site.baseurl}}{{ASSET_PATH}}/images/create-slope.png)
+
+
+
+#### Create binary landslide raster
+
+From the iPlant Data Store, download the landslide-inventory.shp
 SEE DATA PREP
 
 ### Data Analysis
@@ -65,7 +123,7 @@ Reclassify inputs:
 
 We will have to do some raster calculations to create the output data set. The classifications are taken from the California study[^2] and are as follows:
 
-![landslide-key]({{site.baseurl}}{{ASSET_PATH}}images/landslide-key.png)
+![landslide-key]({{site.baseurl}}{{ASSET_PATH}}/images/landslide-key.png)
 
 
 
