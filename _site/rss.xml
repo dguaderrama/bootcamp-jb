@@ -5,8 +5,8 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-03-09T12:23:24-07:00</lastBuildDate>
-        <pubDate>2015-03-09T12:23:24-07:00</pubDate>
+        <lastBuildDate>2015-03-09T16:59:23-07:00</lastBuildDate>
+        <pubDate>2015-03-09T16:59:23-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -514,11 +514,23 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;img src=&quot;/bootcamp/assets/images/dem-load.png&quot; alt=&quot;dem-load&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;Project the dem to EPSG:2927
+    &lt;ul&gt;
+      &lt;li&gt;In the top menu, go to Raster &amp;gt; Projections &amp;gt; Warp (Reproject)&lt;/li&gt;
+      &lt;li&gt;Use the following options&lt;/li&gt;
+      &lt;li&gt;Input File: &lt;em&gt;W140N90&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Output File: &lt;em&gt;secondary_files/dem-project.tif&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Source SRS: &lt;em&gt;EPSG:4326&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Resampling Method: &lt;em&gt;Near&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;No data values: &lt;em&gt;0&lt;/em&gt;
+ &lt;img src=&quot;/bootcamp/assets/images/project-dem.png&quot; alt=&quot;project-dem&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;Clip the dem to the shapefile
     &lt;ul&gt;
       &lt;li&gt;In the top menu, select Raster &amp;gt; Extraction &amp;gt; Clipper&lt;/li&gt;
       &lt;li&gt;In the window, set the following options:&lt;/li&gt;
-      &lt;li&gt;Input file: W140N90&lt;/li&gt;
+      &lt;li&gt;Input file: dem-project.tif&lt;/li&gt;
       &lt;li&gt;Output file: dem-washington.tif&lt;/li&gt;
       &lt;li&gt;No data value: 0&lt;/li&gt;
       &lt;li&gt;Clipping Mode: Mask layer &amp;gt; washington&lt;/li&gt;
@@ -533,17 +545,12 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       &lt;li&gt;Input file: dem-washington&lt;/li&gt;
       &lt;li&gt;Output file: slope-washington.tif&lt;/li&gt;
       &lt;li&gt;Mode: Slope&lt;/li&gt;
-      &lt;li&gt;Scale: 111120.0&lt;/li&gt;
+      &lt;li&gt;Scale: 0.30&lt;/li&gt;
       &lt;li&gt;Load into canvas when finished
   &lt;img src=&quot;/bootcamp/assets/images/create-slope.png&quot; alt=&quot;create-slope&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h4 id=&quot;create-binary-landslide-raster&quot;&gt;Create binary landslide raster&lt;/h4&gt;
-
-&lt;p&gt;From the iPlant Data Store, download the landslide-inventory.shp
-SEE DATA PREP&lt;/p&gt;
 
 &lt;h3 id=&quot;data-analysis&quot;&gt;Data Analysis&lt;/h3&gt;
 
@@ -602,6 +609,31 @@ SEE DATA PREP&lt;/p&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;p&gt;In order to reclass our slope layer into something useful, we will use the grass &lt;em&gt;r.reclass&lt;/em&gt; tool&lt;/p&gt;
+
+&lt;p&gt;The r.reclass tool reads text files which define the classification rules(rule files). For this example, our rule fill will have the following contents:&lt;/p&gt;
+
+&lt;h5 id=&quot;slope-ruletxt&quot;&gt;&lt;em&gt;slope-rule.txt&lt;/em&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;0 thru 2.99 = 1
+3 thru 4.99 = 2
+5 thru 9.99 = 3
+10 thru 14.99 = 4
+15 thru 19.99 = 5
+20 thru 29.99 = 6 
+30 thru 39.99 = 7
+40 thru 90 = 8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once we have created the slope rule file. We can select the r.reclass tool from the Processing Toolbox.&lt;/p&gt;
+
+&lt;p&gt;In the processing toolbox, select &lt;em&gt;GRASS commands&lt;/em&gt; &amp;gt; &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &amp;gt; &lt;em&gt;r.reclass&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We will use the following settings for the reclassify tool:
+  * Input Raster: &lt;em&gt;slope-washington&lt;/em&gt;
+  * File containing reclass rules: &lt;em&gt;slope-rules.txt&lt;/em&gt;
+  * Output raster layer: &lt;em&gt;slope-reclass.tif&lt;/em&gt; (NOTE: select &lt;em&gt;Save to file…&lt;/em&gt; or else QGIS will not create a permanent output)
+  &lt;img src=&quot;/bootcamp/assets/images/slope-reclass.png&quot; alt=&quot;slope-reclass&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;susceptibility&quot;&gt;Susceptibility&lt;/h4&gt;
 

@@ -75,31 +75,37 @@ Open Quantum GIS
   * In the left toolbar, select *Add Raster Layer*
   * Select *source_files/W140N90.DEM*
   ![dem-load]({{site.baseurl}}{{ASSET_PATH}}/images/dem-load.png)
-7. Clip the dem to the shapefile
+7. Project the dem to EPSG:2927
+  * In the top menu, go to Raster > Projections > Warp (Reproject)
+  * Use the following options
+    + Input File: *W140N90*
+    + Output File: *secondary_files/dem-project.tif*
+    + Source SRS: *EPSG:4326*
+    + Resampling Method: *Near*
+    + No data values: *0*
+    ![project-dem]({{site.baseurl}}{{ASSET_PATH}}/images/project-dem.png)
+8. Clip the dem to the shapefile
   * In the top menu, select Raster > Extraction > Clipper
   * In the window, set the following options:
-    + Input file: W140N90
+    + Input file: dem-project.tif
     + Output file: dem-washington.tif
     + No data value: 0
     + Clipping Mode: Mask layer > washington
     + Load into canvas when finished
   ![dem-washington]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington.png)
-8. Remove the W140N90 layer
+9. Remove the W140N90 layer
   ![dem-washington-display]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington-display.png)
-9. Create a slope surface
+10. Create a slope surface
   * Input file: dem-washington
   * Output file: slope-washington.tif
   * Mode: Slope
-  * Scale: 111120.0
+  * Scale: 0.30
   * Load into canvas when finished
   ![create-slope]({{site.baseurl}}{{ASSET_PATH}}/images/create-slope.png)
 
 
 
-#### Create binary landslide raster
 
-From the iPlant Data Store, download the landslide-inventory.shp
-SEE DATA PREP
 
 ### Data Analysis
 
@@ -117,6 +123,32 @@ Reclassify inputs:
 | 6 || 20-30&deg; |
 | 7 || 30-40&deg; |
 | 8 || > 40&deg;  |
+
+In order to reclass our slope layer into something useful, we will use the grass *r.reclass* tool
+
+The r.reclass tool reads text files which define the classification rules(rule files). For this example, our rule fill will have the following contents:
+
+#####*slope-rule.txt*
+~~~ 
+0 thru 2.99 = 1
+3 thru 4.99 = 2
+5 thru 9.99 = 3
+10 thru 14.99 = 4
+15 thru 19.99 = 5
+20 thru 29.99 = 6 
+30 thru 39.99 = 7
+40 thru 90 = 8
+~~~
+
+Once we have created the slope rule file. We can select the r.reclass tool from the Processing Toolbox.
+
+In the processing toolbox, select *GRASS commands* > *Raster* > > *r.reclass*
+
+We will use the following settings for the reclassify tool:
+  * Input Raster: *slope-washington*
+  * File containing reclass rules: *slope-rules.txt*
+  * Output raster layer: *slope-reclass.tif* (NOTE: select *Save to file...* or else QGIS will not create a permanent output)
+  ![slope-reclass]({{site.baseurl}}{{ASSET_PATH}}/images/slope-reclass.png)
 
 
 ####Susceptibility
@@ -152,6 +184,7 @@ Check THIS STEP AGAINST REFERENCES
 |   6      || 60-75 in |
 |   7      || 75-90 in |
 |   8      || > 90 in  |
+
 
 ### Visualization
 
