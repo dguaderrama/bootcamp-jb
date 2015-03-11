@@ -5,8 +5,8 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-03-09T16:59:23-07:00</lastBuildDate>
-        <pubDate>2015-03-09T16:59:23-07:00</pubDate>
+        <lastBuildDate>2015-03-10T17:33:31-07:00</lastBuildDate>
+        <pubDate>2015-03-10T17:33:31-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -417,7 +417,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h3&gt;
 
-&lt;p&gt;Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets. &lt;/p&gt;
+&lt;p&gt;Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -486,7 +486,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       &lt;li&gt;Format: ESRI Shapefile&lt;/li&gt;
       &lt;li&gt;Save as: washington.shp&lt;/li&gt;
       &lt;li&gt;Encoding: UTF-8&lt;/li&gt;
-      &lt;li&gt;CRS: 
+      &lt;li&gt;CRS:
         &lt;ul&gt;
           &lt;li&gt;Project CRS&lt;/li&gt;
           &lt;li&gt;Browse &amp;gt; &lt;em&gt;NAD83(HARN)/Washington South (ftUS) EPSG:2927&lt;/em&gt;
@@ -501,7 +501,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       &lt;li&gt;Browse to the new washington layer and click &lt;em&gt;Open&lt;/em&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Remove the USA_adm1 layer from the project 
+  &lt;li&gt;Remove the USA_adm1 layer from the project
     &lt;ul&gt;
       &lt;li&gt;Right click the layer in the table of contents&lt;/li&gt;
       &lt;li&gt;Select &lt;em&gt;Remove&lt;/em&gt;&lt;/li&gt;
@@ -746,7 +746,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/netcdf1_sm.png&quot; alt=&quot;netcdf-logo&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate. &lt;/p&gt;
+&lt;p&gt;NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate.&lt;/p&gt;
 
 &lt;p&gt;NetCDF is a set of software libraries and describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF was developed at &lt;a href=&quot;http://unidata.ucar.edu&quot;&gt;Unidata&lt;/a&gt;. Unidata provides data and software tools for use in geoscience education and research. Unidata is part of the University Corporation for Atmospheric Research(&lt;a href=&quot;http://ucar.edu&quot;&gt;UCAR&lt;/a&gt;) Community Programs(&lt;a href=&quot;http://www.uop.ucar.edu&quot;&gt;UCP&lt;/a&gt;).&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
@@ -758,17 +758,17 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;With the help of a THREDDS Data Server, large netCDF datasets are easily accessible and discoverable through a client application or through HTTP.&lt;/p&gt;
 
-&lt;p&gt;The multidimensional nature of netCDF data makes storage of complex data such as temperature and humidity simple. Also, since netCDF allows for multivariate storage, several variables can be subsets, ensembled and explored simultaneously. An issue can be the process of creating a usable dataset from netCDF data. This can be due to the sensor-based nature of netCDF, which is a primary dataset (i.e. daily precipitation sums). In order to get the proper dataset, it often requires researchers to subset, and ensemble values over a dimension. Ensembled data sets could be seasonal datasets, climatologies, or long-term averages. &lt;/p&gt;
+&lt;p&gt;The multidimensional nature of netCDF data makes storage of complex data such as temperature and humidity simple. Also, since netCDF allows for multivariate storage, several variables can be subsets, ensembled and explored simultaneously. An issue can be the process of creating a usable dataset from netCDF data. This can be due to the sensor-based nature of netCDF, which is a primary dataset (i.e. daily precipitation sums). In order to get the proper dataset, it often requires researchers to subset, and ensemble values over a dimension. Ensembled data sets could be seasonal datasets, climatologies, or long-term averages.&lt;/p&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
 &lt;h2 id=&quot;procedure&quot;&gt;Procedure&lt;/h2&gt;
 
-&lt;p&gt;For our case study, we created an annual average for precipitation between 2007-2014. &lt;/p&gt;
+&lt;p&gt;For our case study, we created an annual average for precipitation between 2007-2014.&lt;/p&gt;
 
 &lt;p&gt;We had to first locate the datasets from http://esrl.noaa.gov/psd/thredds/dodsC/Datasets/cpc_us_precip/RT&lt;/p&gt;
 
-&lt;p&gt;This brought us 9 years of datasets. &lt;/p&gt;
+&lt;p&gt;This brought us 9 years of datasets.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/daily-precip.png&quot; alt=&quot;daily-precip&quot; /&gt;&lt;/p&gt;
 
@@ -778,14 +778,14 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&quot;netcdf-kitchen-sink&quot;&gt;netCDF Kitchen Sink&lt;/h5&gt;
 
-&lt;p&gt;The nickname ‘kitchen sink’ is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option ‘-d’&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions. &lt;/p&gt;
+&lt;p&gt;The nickname ‘kitchen sink’ is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option ‘-d’&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ncks -O -d lon,234.0,244.0 -d lat,44.0,50.0 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc subset.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In the above command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testing.&lt;/p&gt;
 
 &lt;h4 id=&quot;removing-bad-values&quot;&gt;Removing bad values&lt;/h4&gt;
-&lt;p&gt;If you look at the metadata for the subsetted file, you can see that the ‘precip’ variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25° x .25°(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library. &lt;/p&gt;
+&lt;p&gt;If you look at the metadata for the subsetted file, you can see that the ‘precip’ variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25° x .25°(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library.&lt;/p&gt;
 
 &lt;h5 id=&quot;netcdf-arithmetic-processor&quot;&gt;netCDF Arithmetic Processor&lt;/h5&gt;
 
@@ -935,10 +935,30 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
         <item>
                 <title>QGIS</title>
                 <description>
-&lt;h1 id=&quot;qgis-a-titleby-useranitagraser-on-qgis-wiki-useranitagraser-httpwwwqgisorgwikifileqgislogopng-cc-by-sa-30-httpcreativecommonsorglicensesby-sa30-via-wikimedia-commons-hrefhttpcommonswikimediaorgwikifile3aqgislogopngimg-width128-altqgis-logo-srcuploadwikimediaorgwikipediacommonsthumb771qgislogopng128px-qgislogopnga&quot;&gt;QGIS &lt;a title=&quot;By User:Anitagraser on QGIS Wiki, User:Anitagraser (http://www.qgis.org/wiki/File:QGis_Logo.png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AQGis_Logo.png&quot;&gt;&lt;img width=&quot;128&quot; alt=&quot;QGis Logo&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/128px-QGis_Logo.png&quot; /&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;This is a note:&lt;br /&gt; 
+some ideas for QGIS tutorials:&lt;br /&gt;
+&lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/training_manual/introduction/preparation.html&quot;&gt;http://docs.qgis.org/2.6/en/docs/training_manual/introduction/preparation.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h3 id=&quot;add-content-about-qgis&quot;&gt;Add content about QGIS&lt;/h3&gt;
-&lt;p&gt;This section will be covering graphical user interface basics of each QGIS and Panoply.&lt;/p&gt;
+&lt;h1 id=&quot;qgis&quot;&gt;QGIS&lt;/h1&gt;
+
+&lt;p&gt;&lt;a title=&quot;By User:Anitagraser on QGIS Wiki, User:Anitagraser (http://www.qgis.org/wiki/File:QGis_Logo.png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AQGis_Logo.png&quot;&gt;&lt;img width=&quot;128&quot; alt=&quot;QGis Logo&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/128px-QGis_Logo.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-qgis&quot;&gt;What is QGIS?&lt;/h3&gt;
+&lt;p&gt;Straight from the horse’s mouth:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;QGIS is the best GIS tool in the free and open-source software (FOSS) community.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;QGIS is a user friendly Open Source Geographic Information System (GIS) licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www2.qgis.org/en/site/forusers/download.html&quot;&gt;Here’s a link to download QGIS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;exlpore-qgis&quot;&gt;Exlpore QGIS:&lt;/h3&gt;
 
@@ -946,38 +966,56 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h4 id=&quot;the-basics&quot;&gt;The Basics&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/qgis-gui.png&quot; alt=&quot;QGIS GUI&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/qgis-gui.png&quot; alt=&quot;QGIS GUI&quot; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
     &lt;h5 id=&quot;menu-bar&quot;&gt;Menu Bar&lt;/h5&gt;
-    &lt;p&gt;Hover over menu bar to see options and tools: ‘Layer’ allows adding or removing layers, set coordinate reference systems (CRS), project CRS, etc; ‘Vector’ and ‘Raster’ show options for processing tools; etc.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h5 id=&quot;toolbar&quot;&gt;Toolbar&lt;/h5&gt;
-    &lt;p&gt;New Project, Open, Save, Save As. Also, Pan, Zoom, etc.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h5 id=&quot;add-data&quot;&gt;Add Data&lt;/h5&gt;
-    &lt;p&gt;Used to add data/layers. Top two, Add Vector Layer and Add Raster Layer. Six subsequent options require a database connection. You may also add a delimited text layer or create a new shapefile.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h5 id=&quot;layer-list-map-legend&quot;&gt;Layer List (map legend)&lt;/h5&gt;
-    &lt;p&gt;Shows all layers in current project. These may be turned on or off with the respective checkbox.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h5 id=&quot;map-view&quot;&gt;Map View&lt;/h5&gt;
-    &lt;p&gt;Displays active layers in Layers List. &lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h5 id=&quot;status-bar&quot;&gt;Status Bar&lt;/h5&gt;
-    &lt;p&gt;Shows current position in map coordinates. Icon to the left of the coordinates toggles extents and mouse position display. Set scale, toggle map rendering, current coordinate reference system (CRS), open CRS settings.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h5 id=&quot;processing-toolbox&quot;&gt;Processing Toolbox&lt;/h5&gt;
-    &lt;p&gt;Search for tools. &lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;p&gt;The menu bar provides access to QGIS features. In Linux systems, hover over to view menu bar options (haven’t checked other systems). The QGIS version is displayed while not hovering over the menu bar (linux systems).&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;toolbar&quot;&gt;Toolbar&lt;/h5&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The toolbar provides access to most standard QGIS functions. Go to &lt;em&gt;Menu Bar &amp;gt; View &amp;gt; Toolbars&lt;/em&gt; to activate or deactivate toolbars. Hover over tools to view the description and puropose.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;map-legend&quot;&gt;Map Legend&lt;/h5&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The map legend is a list of all layers in the project. Each layer can be turned on or off with the layer’s checkbox.  It’s possible to group layers.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;map-view&quot;&gt;Map View&lt;/h5&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The map view displays the active layers in the map project. You can set the map view extent by right-clicking on a layer and selecting &lt;em&gt;Zoom to layer extent&lt;/em&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;status-bar&quot;&gt;Status Bar&lt;/h5&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The status bar displays current position in map coordiantes (e.g., meters or decimal degrees) as the mouse pointer moves across the map view. To the left of the coordinate display is the button gor toggling extents and mouse position display. To the right of the map coordinates is the scale, which may be set to one of the predefined zoom extends of 1:500 to 1:1,000,000. This scale setting will adjust as you zoom or pan throught the map view. Options for map rendering are to the right of the current map scale setting. To the far right is the current CRS for the map project.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;processing-toolbox&quot;&gt;Processing Toolbox&lt;/h5&gt;
+    &lt;p&gt;The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Toolbox&lt;/em&gt;. This helpful tool allows searching by keyword for the geoalgorithm from each of the active processing roviders.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -985,23 +1023,177 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h5 id=&quot;project-properties&quot;&gt;Project properties&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/project-properties.jpg&quot; alt=&quot;QGIS Project Properties&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/project-properties.jpg&quot; alt=&quot;QGIS Project Properties&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties. &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection. &lt;/p&gt;
+&lt;p&gt;From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection.&lt;/p&gt;
 
 &lt;h5 id=&quot;activate-necessary-providers&quot;&gt;Activate necessary providers&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/providers-config.jpg&quot; alt=&quot;Activate Providers&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/providers-config.jpg&quot; alt=&quot;Activate Providers&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Menu Bar &amp;gt; Processing &amp;gt; Options and configuration &amp;gt; Providers &amp;gt; GDAL/ORG &amp;gt; Activate (be sure it’s checked to enable).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Options and configuration &amp;gt; Providers &amp;gt; $PROVIDER &amp;gt; Activate (be sure it’s checked)&lt;/em&gt;&lt;/p&gt;
 
-&lt;h5 id=&quot;open-additional-tools&quot;&gt;Open additional tools&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/user_manual/processing_algs/index.html?highlight=providers&quot;&gt;See the complete list of processing providers and algorithms here&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/additional-tools.jpg&quot; alt=&quot;Additional Tools&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;Menu Bar &amp;gt; Processing &amp;gt; (desired tool).&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;working-with-project-projections&quot;&gt;Working with Project Projections&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;QGIS allows users to define a global and project-wide CRS (coordinate reference system) for layers without a pre-defined CRS. It also allows the user to define custom coordinate reference systems and supports on-the-fly (OTF) projection of vector and raster layers. All of these features allow the user to display layers with different CRSs and have them overlay properly.&lt;sup id=&quot;fnref:2:1&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/bootcamp/intro/spatial-data&quot;&gt;Intro to Spatial Data&lt;/a&gt; for more detailed info on projections.&lt;/p&gt;
+
+&lt;p&gt;Each new project starts with the global default projection, EPSG:4326 - WGS 84 (&lt;code&gt;proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs&lt;/code&gt;). This can be changed at &lt;em&gt;Menu Bar &amp;gt; Settings &amp;gt; Options &amp;gt; CRS &amp;gt; Default CRS for new projects&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, this is not the same as changing the project projection. You may define the project projection from &lt;em&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties &amp;gt; CRS&lt;/em&gt;. Also keep in mind, the CRS of a new project will change to the CRS of the first layer added to the project.&lt;/p&gt;
+
+&lt;p&gt;‘On the fly’ CRS transformation is not enabled by the default QGIS installation.&lt;/p&gt;
+
+&lt;h3 id=&quot;general-spatial-functions&quot;&gt;General Spatial Functions&lt;/h3&gt;
+&lt;p&gt;Below are general spatial functions performed in QGIS. Notice that while performing functions the GDAL command is dispalyed in the function window.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;this is a note:&lt;br /&gt; 
+QGIS Module: Vector Analysis&lt;br /&gt;
+&lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/training_manual/vector_analysis/index.html&quot;&gt;http://docs.qgis.org/2.6/en/docs/training_manual/vector_analysis/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;this is another note:&lt;br /&gt;
+discuss meta data???&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;reclassify-and-rasterize-vector&quot;&gt;Reclassify and rasterize vector&lt;/h4&gt;
+
+&lt;p&gt;What this module covers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;importing vector layers&lt;/li&gt;
+  &lt;li&gt;adding a column to vector data&lt;/li&gt;
+  &lt;li&gt;reclassifying vector data&lt;/li&gt;
+  &lt;li&gt;rasterizing vector data&lt;/li&gt;
+  &lt;li&gt;product will be used in Vector Analysis&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Prepare geology layer with geo_type (just an example) of soft, medium, hard, mass-wasting&lt;/p&gt;
+
+&lt;p&gt;Steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add field ‘rock_strenght’&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Reclassify as follows:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;soft = 1&lt;/li&gt;
+  &lt;li&gt;medium = 2&lt;/li&gt;
+  &lt;li&gt;hard = 3&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;mass-wasting = 1&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;rasterize geology layer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;vector-analysis&quot;&gt;Vector Analysis&lt;/h4&gt;
+
+&lt;p&gt;What this module covers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;buffer on polylines&lt;/li&gt;
+  &lt;li&gt;intersecting vector layers&lt;/li&gt;
+  &lt;li&gt;joining census data to vector layer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Research question: Where are high-risk landslide/mass-wasting areas near (select region).&lt;/p&gt;
+
+&lt;p&gt;High-risk area =&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;fo further than 50m from city boundaries&lt;/li&gt;
+  &lt;li&gt;within 100m of fault lines&lt;/li&gt;
+  &lt;li&gt;within 50m of rivers/streams&lt;/li&gt;
+  &lt;li&gt;within soft geologic areas&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;buffer fault lines and rivers/streams&lt;/li&gt;
+  &lt;li&gt;merge buffered fault lines with rivers/streams&lt;/li&gt;
+  &lt;li&gt;join some data to something (census?)&lt;/li&gt;
+  &lt;li&gt;intersect buffered-merged-joined data with reclassified-rasterized geology layer&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;product will be used in Raster Analysis&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Intersect&lt;/li&gt;
+  &lt;li&gt;Join&lt;/li&gt;
+  &lt;li&gt;Merge&lt;/li&gt;
+  &lt;li&gt;Buffer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;raster-analysis&quot;&gt;Raster Analysis&lt;/h4&gt;
+
+&lt;p&gt;What this module covers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;DEM Terrain analysis (slope, aspect)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Research question/objective: complete locating high-risk landslide/mass-wasting areas near (select region)&lt;/p&gt;
+
+&lt;p&gt;High-risk slope:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;numbers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;High-risk aspect:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;numbers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;calc slope and aspect&lt;/li&gt;
+  &lt;li&gt;raster calc (add) product from Vector Analysis with slope and aspect&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Raster Statistics:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;histogram&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;zonal stats&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Calculate slope and aspect&lt;/li&gt;
+  &lt;li&gt;Raster Calculator&lt;/li&gt;
+  &lt;li&gt;Interpolation&lt;/li&gt;
+  &lt;li&gt;Zonal Statistics&lt;/li&gt;
+  &lt;li&gt;Reclassify (covered in Reclassify and rasterize vector)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/user_manual/introduction/qgis_gui.html#label-toolbars&quot;&gt;http://docs.qgis.org/2.6/en/docs/user_manual/introduction/qgis_gui.html#label-toolbars&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:2:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
                 <link>http://104.237.129.71/bootcamp/applications/qgis</link>
                 <guid>http://104.237.129.71/bootcamp/applications/qgis</guid>
@@ -1086,7 +1278,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 &lt;ul&gt;
   &lt;li&gt;
     &lt;dl&gt;
-      &lt;dt&gt;Distance &lt;/dt&gt;
+      &lt;dt&gt;Distance&lt;/dt&gt;
       &lt;dd&gt;Returns the distance between two geometries&lt;/dd&gt;
     &lt;/dl&gt;
   &lt;/li&gt;
@@ -1175,6 +1367,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;raster-functions&quot;&gt;Raster Functions&lt;/h4&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Slope - This function will calculate a slope surface given a raster holding an elevation model&lt;/li&gt;
   &lt;li&gt;Aspect - This outputs a surface holding values 0-360 referencing the azimuth of the given surface&lt;/li&gt;
@@ -1261,7 +1454,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;ul&gt;
   &lt;li&gt;
     &lt;dl&gt;
-      &lt;dt&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger.html&quot;&gt;Topologically Integrated Geographic Encoding and Referencing (TIGER) Products&lt;/a&gt; &lt;/dt&gt;
+      &lt;dt&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger.html&quot;&gt;Topologically Integrated Geographic Encoding and Referencing (TIGER) Products&lt;/a&gt;&lt;/dt&gt;
       &lt;dd&gt;TIGER products are spatial extracts from the Census Bureau’s MAF/TIGER database containing features such as roads, railroads, rivers, as well as legal and statistical geographic areas. The Census Bureau offers (these products) in several file types&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.”&lt;/dd&gt;
     &lt;/dl&gt;
   &lt;/li&gt;
@@ -1280,14 +1473,14 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
   &lt;dt&gt;&lt;a href=&quot;http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1&quot;&gt;Web Feature Service (WFS)&lt;/a&gt; - Useful for modifying features in remote datasets&lt;/dt&gt;
   &lt;dd&gt;The WFS represents a change in the way geographic information is created, modified, and exchanged on the Internet. Rather than sharing geographic information at the file level using the File Transfer Protocol(FTP), the WFS offers direct fine-grained access to geographic information at the feature and feature property level. Web features services allow clients to only retrieve or modify the data they are seeking, rather than retrieving a file that contains the data they are seeking and possibly much more&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
-  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wms&quot;&gt;Web Map Service (WMS)&lt;/a&gt; - Useful for visualizing remote datasets &lt;/dt&gt;
+  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wms&quot;&gt;Web Map Service (WMS)&lt;/a&gt; - Useful for visualizing remote datasets&lt;/dt&gt;
   &lt;dd&gt;The Web Map Service Interface Standard provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. The WMS response will return one or more geo-registered map images (JPEG, PNG, etc) to be display in a browser application&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
   &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wps&quot;&gt;Web Processing Service (WPS)&lt;/a&gt; - Utilizes remote resources for computation&lt;/dt&gt;
   &lt;dd&gt;THe WPS Standard provides rule for standardizing inputs and outputs for geospatial processing services, such as polygon overlay. The standard also defines how a client can request the execution of a process and how the output of the process is handled&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;. 
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
   &lt;dt&gt;&lt;a href=&quot;http://www.opendap.org&quot;&gt;OPeNDAP&lt;/a&gt;&lt;/dt&gt;
-  &lt;dd&gt;OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations. &lt;/dd&gt;
+  &lt;dd&gt;OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations.&lt;/dd&gt;
 &lt;/dl&gt;
 
 &lt;p&gt;A few examples of these applications are:&lt;/p&gt;
@@ -1301,7 +1494,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;http://www.gadm.org  &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;http://www.gadm.org &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
       &lt;p&gt;http://www.census.gov/geo/maps-data/data/tiger.html &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
@@ -1331,7 +1524,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
                 <description>
 &lt;h1 id=&quot;is-spatial-special&quot;&gt;Is Spatial Special?&lt;/h1&gt;
 
-&lt;p&gt;There has been discussions about the nature of spatial data and whether or not there is anything special about it. Since the OGC agreed on the Simple Features for SQL specification in 1999, spatial data can be stored alongside other data types as another column in a table. However, we can see a lot of GIS professionals evangelizing the difference between spatial data and &lt;em&gt;regular data&lt;/em&gt;. &lt;/p&gt;
+&lt;p&gt;There has been discussions about the nature of spatial data and whether or not there is anything special about it. Since the OGC agreed on the Simple Features for SQL specification in 1999, spatial data can be stored alongside other data types as another column in a table. However, we can see a lot of GIS professionals evangelizing the difference between spatial data and &lt;em&gt;regular data&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;do-they-have-a-point&quot;&gt;Do they have a point?&lt;/h2&gt;
 
@@ -1363,7 +1556,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;h3 id=&quot;sorting-and-indexes&quot;&gt;2. Sorting and Indexes&lt;/h3&gt;
 
-&lt;p&gt;Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type. &lt;/p&gt;
+&lt;p&gt;Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type.&lt;/p&gt;
 
 &lt;p&gt;Sorting spatial data poses an interesting problem. Do you sort from North to south? West to East? What happens if you are sorting lines or polygons that overlap?&lt;/p&gt;
 
@@ -1371,7 +1564,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;p&gt;The R-Tree index was proposed by Antoine Guttman in 1984.&lt;/p&gt;
 
-&lt;p&gt;In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features. &lt;/p&gt;
+&lt;p&gt;In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features.&lt;/p&gt;
 
 &lt;p&gt;&lt;a title=&quot;By Skinkie, w:en:Radim Baca (Own work) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AR-tree.svg&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;R-tree&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/R-tree.svg/512px-R-tree.svg.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -1385,7 +1578,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
   &lt;p&gt;“Everything is related to everything else, but near things are more related than distant things” - Waldo Tobler&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Tobler’s First law of Geography is the fundamental basis of Spatial Analysis. &lt;/p&gt;
+&lt;p&gt;Tobler’s First law of Geography is the fundamental basis of Spatial Analysis.&lt;/p&gt;
 
 &lt;p&gt;This spatial dependence required the study of spatial effects and their influence on statistical studies.&lt;/p&gt;
 
@@ -1440,7 +1633,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;p&gt;Projections characterize spatial data by setting coordinate reference systems for each data set.&lt;/p&gt;
 
 &lt;p&gt;Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
- will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth&#39;s image onto a plane. &lt;/p&gt;
+ will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth&#39;s image onto a plane.&lt;/p&gt;
 
 &lt;h4 id=&quot;projections-can-come-in-a-variety-of-forms&quot;&gt;Projections can come in a variety of forms:&lt;/h4&gt;
 
@@ -1489,11 +1682,11 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis. &lt;/p&gt;
+&lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.gdal.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assetsimages/gdalinfo.png&quot; alt=&quot;Using GDAL to check projection&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assetsimages/spatialreference.png&quot; alt=&quot;SpatialReference.org: EPSG:4326&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
