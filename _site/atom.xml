@@ -4,7 +4,7 @@
  <title>Spatial Data Bootcamp</title>
  <link href="http://104.237.129.71/bootcamp/" rel="self"/>
  <link href="http://104.237.129.71/bootcamp"/>
- <updated>2015-03-10T17:33:31-07:00</updated>
+ <updated>2015-03-11T18:20:59-07:00</updated>
  <id>http://104.237.129.71/bootcamp</id>
  <author>
    <name>Nathan Casler</name>
@@ -946,6 +946,11 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 &lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/training_manual/introduction/preparation.html&quot;&gt;http://docs.qgis.org/2.6/en/docs/training_manual/introduction/preparation.html&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;this is another note:&lt;br /&gt;
+discuss meta data?&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;h1 id=&quot;qgis&quot;&gt;QGIS&lt;/h1&gt;
 
 &lt;p&gt;&lt;a title=&quot;By User:Anitagraser on QGIS Wiki, User:Anitagraser (http://www.qgis.org/wiki/File:QGis_Logo.png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AQGis_Logo.png&quot;&gt;&lt;img width=&quot;128&quot; alt=&quot;QGis Logo&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/128px-QGis_Logo.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -979,7 +984,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;The menu bar provides access to QGIS features. In Linux systems, hover over to view menu bar options (haven’t checked other systems). The QGIS version is displayed while not hovering over the menu bar (linux systems).&lt;/p&gt;
+&lt;p&gt;The menu bar provides access to QGIS features. In Linux systems, hover over to view menu bar options (haven’t checked other systems). The QGIS version is displayed while not hovering over the menu bar (linux systems). Most common features or tools are accessable through the toolbar icons which will be the prefered method throughout this QGIS introduction.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -1060,49 +1065,192 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 
 &lt;p&gt;‘On the fly’ CRS transformation is not enabled by the default QGIS installation.&lt;/p&gt;
 
+&lt;h3 id=&quot;supported-data-formats&quot;&gt;Supported Data Formats&lt;/h3&gt;
+
+&lt;p&gt;QGIS support a multitude of data types from simple shapefiles to database tables to Web Feature Service layers. Sticking to the basics, below are quick descriptions of vector and raster data.&lt;/p&gt;
+
+&lt;h4 id=&quot;vector&quot;&gt;Vector&lt;/h4&gt;
+
+&lt;p&gt;QGIS uses the GDAL OGR library to read and write vector data formats, such as the most commonly known ESRI shapefile. GRASS vector and PostreSQL support is provided by a native QGIS provider plugin&lt;sup id=&quot;fnref:2:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. &lt;a href=&quot;http://www.gdal.org/ogr_formats.html&quot;&gt;Here is the complete list of OGR vector formats&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Vector data is added to the project by simply clicking on the Add Vector Layer tool:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/add-vector.png&quot; alt=&quot;Add vector in QGIS&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;View vector attribute table by right clicking on the layer and clicking Open Attribute Table. From here you can sort data, show selected features, show features visible on map, show edited and new features, filter by column, or query data with and advanced filter.&lt;/p&gt;
+
+&lt;p&gt;Attribute data can be edited by enabling and edit session with the Toggle Editing Mode icon (top left).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;note:&lt;br /&gt;
+add simple lesson here?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;raster&quot;&gt;Raster&lt;/h4&gt;
+
+&lt;p&gt;QGIS uses the GDAL library to read and write raster data formats while GRASS raster support is provided by a native QGIS provider plugin&lt;sup id=&quot;fnref:2:3&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. &lt;a href=&quot;http://www.gdal.org/formats_list.html&quot;&gt;Here is the complete list of GDAL raster formats&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Similar to adding vector data, click on the Add Raster Layer tool:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/add-raster.png&quot; alt=&quot;Add raster in QGIS&quot; /&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;general-spatial-functions&quot;&gt;General Spatial Functions&lt;/h3&gt;
-&lt;p&gt;Below are general spatial functions performed in QGIS. Notice that while performing functions the GDAL command is dispalyed in the function window.&lt;/p&gt;
+
+&lt;p&gt;Spatial functions are accessable through &lt;em&gt;Menu Bar &amp;gt; Vector/Raster&lt;/em&gt;. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;this is a note:&lt;br /&gt; 
-QGIS Module: Vector Analysis&lt;br /&gt;
-&lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/training_manual/vector_analysis/index.html&quot;&gt;http://docs.qgis.org/2.6/en/docs/training_manual/vector_analysis/index.html&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;this is a note:
+do we add simple raster and vector operations here, or save it for lessons?&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;h3 id=&quot;composing-maps-for-printnon-web-based&quot;&gt;Composing Maps (for print/non-web-based)&lt;/h3&gt;
+
+&lt;p&gt;This method is ideal for exporting your work for a research paper, admiring your work, and such. Developing a web map for dissimenating your data is a bit more involved and is discussed in the &lt;a href=&quot;/bootcamp/visualization/leaflet&quot;&gt;Publish Your Data to a Web Mapi/LeafletJS&lt;/a&gt; section. Also, to export data with styles see &lt;a href=&quot;this-is-not-a-link&quot;&gt;This section link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Begin by opening the Print Composer:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/compose-map.png&quot; alt=&quot;Create new Print Composer workspace&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;this is another note:&lt;br /&gt;
-discuss meta data???&lt;/p&gt;
+  &lt;p&gt;this is a note:&lt;br /&gt;
+this is just and idea for lessons&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&quot;reclassify-and-rasterize-vector&quot;&gt;Reclassify and rasterize vector&lt;/h4&gt;
+&lt;h3 id=&quot;lessons&quot;&gt;Lessons&lt;/h3&gt;
+
+&lt;p&gt;Lessons are intended for learning basic spatial functions with QGIS. Each lesson is a prerequisite for the subsequent lesson. For best results, start from beginning to end from collecting data throught visualizing the final product. However, data will be prepared and available if you wish to jump through lessons without completing the former.&lt;/p&gt;
+
+&lt;p&gt;DISCLAIMER: Data provided here have been reclassified/modified to fit the needs of the lessons and should not be used in any scientific analysis. Original data sources and researh articles are available if you feel the need to pursue your dreams of performing a landslide susceptibility analysis. &lt;a href=&quot;/bootcamp/references/citations&quot;&gt;Original data and research articles are located here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Scenario:&lt;/p&gt;
+
+&lt;p&gt;You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h4&gt;
+
+&lt;p&gt;What this lesson covers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;downloading data&lt;/li&gt;
+  &lt;li&gt;downloading meta data&lt;/li&gt;
+  &lt;li&gt;file storage/project directory (keep your data directories clean)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;download data with meta data (DEM &amp;amp; washingon boundary data with meta data)&lt;/li&gt;
+  &lt;li&gt;prepare project directory&lt;/li&gt;
+  &lt;li&gt;data will be used in Data Prep&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;data-prep&quot;&gt;Data Prep&lt;/h4&gt;
+
+&lt;p&gt;What this lesson covers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;reprojecting data&lt;/li&gt;
+  &lt;li&gt;clipping data extents&lt;/li&gt;
+  &lt;li&gt;importing data (raster and vector)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;import DEM of northwest US&lt;/li&gt;
+  &lt;li&gt;import washington boundary shapefile&lt;/li&gt;
+  &lt;li&gt;clip DEM to washington boundary&lt;/li&gt;
+  &lt;li&gt;data will be used in Reclassify and Rasterize Vector&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;reclassify-and-rasterize-vector&quot;&gt;Reclassify and Rasterize Vector&lt;/h4&gt;
 
 &lt;p&gt;What this module covers:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;importing vector layers&lt;/li&gt;
-  &lt;li&gt;adding a column to vector data&lt;/li&gt;
-  &lt;li&gt;reclassifying vector data&lt;/li&gt;
+  &lt;li&gt;editing vector data attributes&lt;/li&gt;
+  &lt;li&gt;(re)classifying vector data&lt;/li&gt;
   &lt;li&gt;rasterizing vector data&lt;/li&gt;
-  &lt;li&gt;product will be used in Vector Analysis&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Prepare geology layer with geo_type (just an example) of soft, medium, hard, mass-wasting&lt;/p&gt;
 
 &lt;p&gt;Steps:&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Add field ‘rock_strenght’&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Reclassify as follows:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Import wa_geology.shp:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Open QGIS, Add Vector Layer, and navigate to wa_geology.shp.&lt;/em&gt;&lt;br /&gt;
+ &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-01.png&quot; alt=&quot;QGIS: Add geology vector layer into map view&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;soft = 1&lt;/li&gt;
-  &lt;li&gt;medium = 2&lt;/li&gt;
-  &lt;li&gt;hard = 3&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;mass-wasting = 1&lt;/p&gt;
+  &lt;li&gt;Open field calculator in Attribute Table:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Right-click wa_geology in Layers List &amp;gt; Open Attribute Table &amp;gt; Toggle editing mode (top left)&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;While in edit mode, &lt;em&gt;Open field calculator (top right)&lt;/em&gt;&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-03.png&quot; alt=&quot;QGIS: Open field calcultor&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;rasterize geology layer&lt;/li&gt;
-&lt;/ul&gt;
+  &lt;li&gt;Add and calculate new field:
+    &lt;ul&gt;
+      &lt;li&gt;Match your Field Calculator window to the one below for creating a new field ‘strength’ with a range of values of 0-3. Be sure to match it exactly as it’s displayed: double-quotes are recognized as a column whereas single-quotes are recongnized as column values. Save your changes once finished.
+    Expression:
+    case
+    when “rock_type” = ‘soft’ then 1
+    when “rock_type” = ‘medium’ then 2
+    when “rock_type” = ‘hard’ then 3
+    else 0
+    done
+   &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-04.png&quot; alt=&quot;QGIS: Add and calculate new field&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Style wa_geology.shp:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Right-click on wa_geology.shp in layer list &amp;gt; Properties &amp;gt; Style&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Change style type from &lt;em&gt;Single Symbol&lt;/em&gt; to &lt;em&gt;Categorized&lt;/em&gt;.&lt;/li&gt;
+      &lt;li&gt;Categorize by &lt;em&gt;strength&lt;/em&gt; and click &lt;em&gt;Classify&lt;/em&gt; to add classes.&lt;/li&gt;
+      &lt;li&gt;Match your colors with the example below or get fancy with your own styling.&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-07.png&quot; alt=&quot;QGIS: Style shapefile&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rasterize wa_geology.shp:
+    &lt;ul&gt;
+      &lt;li&gt;GDAL’s rasterize is a prefered method. This can be accessed through &lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Conversion &amp;gt; Rasterize (Vector to raster)&lt;/em&gt;. Notice how the parameters have been diabled in the example below. There’s a specific reason for this. Complete the parameter inputs: &lt;em&gt;Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000&lt;/em&gt;. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Click the edit icon (pencil) locate near the block of code&lt;/em&gt;. This enables you to add those non-QGIS parameters.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Add the line of code &lt;code&gt;-at -a_nodata 0&lt;/code&gt;&lt;/em&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;-at&lt;/em&gt;: Enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;-a_nodata $value&lt;/em&gt;: Assign a specified nodata value to output bands - this prevents pixels with no data from being written into the output raster.&lt;sup id=&quot;fnref:3:1&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.gdal.org/gdal_rasterize.html&quot;&gt;Here’s a link to the gdal_rasterize parameters&lt;/a&gt;.&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-11-2.png&quot; alt=&quot;QGIS: Rasterize - Vector to raster&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Style the new wa_geology.tif:
+    &lt;ul&gt;
+      &lt;li&gt;Open wa_geology.tif style properties. HINT: See step 4.&lt;/li&gt;
+      &lt;li&gt;For &lt;em&gt;Render type&lt;/em&gt;, select &lt;em&gt;Singleband pseudocolor&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;On the right select: &lt;em&gt;Load min/max values: Min/max; Extend: Actual (slower); then Load&lt;/em&gt;. This loads actual values into the classification. QGIS Approximates values by defautl.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Change Mode to Equal Interval with 3 classes&lt;/em&gt;. Remember, we only have three rock strength classes: soft, medium, hard. Change your color map if you’d like. The color maps are not stored into the raster, so the raster will load with the defaul color map (black to white) each time its opened in a new project.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Click Classify&lt;/em&gt;. Apply and OK.&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-13.png&quot; alt=&quot;QGIS: Style raster&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster.&lt;/p&gt;
+
+&lt;p&gt;Keep this reclassified and rasterized vector, it’ll be used in the next lesson.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1115,7 +1263,7 @@ discuss meta data???&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;buffer on polylines&lt;/li&gt;
   &lt;li&gt;intersecting vector layers&lt;/li&gt;
-  &lt;li&gt;joining census data to vector layer&lt;/li&gt;
+  &lt;li&gt;join some data?&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Research question: Where are high-risk landslide/mass-wasting areas near (select region).&lt;/p&gt;
@@ -1136,13 +1284,7 @@ discuss meta data???&lt;/p&gt;
   &lt;li&gt;merge buffered fault lines with rivers/streams&lt;/li&gt;
   &lt;li&gt;join some data to something (census?)&lt;/li&gt;
   &lt;li&gt;intersect buffered-merged-joined data with reclassified-rasterized geology layer&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;product will be used in Raster Analysis&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Intersect&lt;/li&gt;
-  &lt;li&gt;Join&lt;/li&gt;
-  &lt;li&gt;Merge&lt;/li&gt;
-  &lt;li&gt;Buffer&lt;/li&gt;
+  &lt;li&gt;data will be used in Raster Analysis&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -1154,7 +1296,9 @@ discuss meta data???&lt;/p&gt;
 &lt;p&gt;What this module covers:&lt;/p&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;importing raster data&lt;/li&gt;
   &lt;li&gt;DEM Terrain analysis (slope, aspect)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;need something for interpolation&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Research question/objective: complete locating high-risk landslide/mass-wasting areas near (select region)&lt;/p&gt;
@@ -1176,26 +1320,51 @@ discuss meta data???&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;calc slope and aspect&lt;/li&gt;
   &lt;li&gt;raster calc (add) product from Vector Analysis with slope and aspect&lt;/li&gt;
+  &lt;li&gt;data will be used in Cartography/Visualization&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Raster Statistics:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;histogram&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;zonal stats&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Calculate slope and aspect&lt;/li&gt;
-  &lt;li&gt;Raster Calculator&lt;/li&gt;
-  &lt;li&gt;Interpolation&lt;/li&gt;
-  &lt;li&gt;Zonal Statistics&lt;/li&gt;
-  &lt;li&gt;Reclassify (covered in Reclassify and rasterize vector)&lt;/li&gt;
+  &lt;li&gt;zonal stats&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;cartography-print-based&quot;&gt;Cartography (print-based)&lt;/h4&gt;
+
+&lt;p&gt;What this lesson covers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;making a map in QGIS (not a web map)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;visualization-web-based&quot;&gt;Visualization (web-based)&lt;/h4&gt;
+
+&lt;p&gt;What this lesson covers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;exporting data in web formats&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;do something with leaflet&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;do something with serving data&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;References:&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/user_manual/introduction/qgis_gui.html#label-toolbars&quot;&gt;http://docs.qgis.org/2.6/en/docs/user_manual/introduction/qgis_gui.html#label-toolbars&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:2:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/index.html&quot;&gt;http://docs.qgis.org/2.6/en/docs/index.html&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:2:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:2:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:2:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://www.gdal.org/gdal_rasterize.html&quot;&gt;http://www.gdal.org/gdal_rasterize.html&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:3:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;

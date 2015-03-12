@@ -49,13 +49,12 @@ Vertical Rhythm is caluculated via http://j.mp/sUvKuN
 }
 
 .center img {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+//  margin-left: auto;
+//  margin-right: auto;
+//  display: block;
 }
-//.entry-content img {
-//  width: 50%;
-//  height: auto;
+.entry-content img {
+  max-width: 100%;
 }
 .bd .entry-content, .unit-article .unit-head-inner, .unit-article .unit-foot-inner, .unit-article .misc-content  {
   max-width: 850px;
@@ -441,11 +440,6 @@ pre {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-}
-.unit-article img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 .unit-article img.left {
   margin-right: 16px;
