@@ -48,16 +48,19 @@ Vertical Rhythm is caluculated via http://j.mp/sUvKuN
   margin-left: 6em;
 }
 
-.unit-article img {
- // margin-left: auto;
- // margin-right: auto;
- // display: block;
- max-width: 100%;
+.center img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 //.entry-content img {
 //  width: 50%;
 //  height: auto;
 }
+.bd .entry-content, .unit-article .unit-head-inner, .unit-article .unit-foot-inner, .unit-article .misc-content  {
+  max-width: 850px;
+}
+
 @media screen and (max-width: 1007px) {
   .hentry {
     margin-left: 15em;
@@ -439,11 +442,11 @@ pre {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-//.unit-article img {
-//  display: block;
-//  margin-left: auto;
-//  margin-right: auto;
-//}
+.unit-article img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .unit-article img.left {
   margin-right: 16px;
 }
@@ -641,7 +644,8 @@ pre {
 .unit-article .unit-head-inner,
 .unit-article .entry-content,
 .unit-article .misc-content,
-.unit-article .unit-foot-inner {
+.unit-article .unit-foot-inner,
+.unit-article .unit-head-inner {
   //width: 15em;
   width: 93%;
   margin-left: auto;
@@ -778,7 +782,7 @@ pre {
   .the-header .nav-global {
     margin-top: 1.625em;
     letter-spacing: -0.31em;
-    *letter-spacing: normal;
+    letter-spacing: normal;
     word-spacing: -0.43em;
     list-style: none;
     padding-left: 0;
@@ -840,12 +844,12 @@ pre {
 //    width: 35.125em;
     width: 94%;
   }
-  .unit-article .unit-head-inner,
+ // .unit-article .unit-head-inner,
   .unit-article .entry-content,
   .unit-article .misc-content,
   .unit-article .unit-foot-inner {
 //    width: 50.125em;
-    width: 94%;
+    width: 89%;
   }
   .unit-article .unit-head-inner .meta {
     margin-bottom: 0;
@@ -898,7 +902,7 @@ pre {
   .hentry {
     margin-left: 16em;
   }
-  .unit-article .entry-content {
+  .unit-article .entry-content, .unit-article .unit-head-inner, .unit-article .unit-foot-inner, .unit-article .misc-content {
     width: 89%;
   }
 }
@@ -928,7 +932,7 @@ pre {
     width: 26.25em;
     float: right;
   }
-  .unit-article .unit-head-inner,
+  //.unit-article .unit-head-inner,
 //  .unit-article .entry-content,
   .unit-article .misc-content,
   .unit-article .unit-foot-inner {
@@ -993,9 +997,12 @@ pre {
   .the-header .nav-global {
     width: 25.125em;
   }
-  .unit-article .unit-head-inner, .unit-article .entry-content, .unit-article .misc-content {
+  .unit-article .entry-content, .unit-article .unit-head-inner, .unit-article .unit-foot-inner, .unit-article .misc-content  {
     width: 91%;
-    margin-left: 4em;
+    margin-left: 20%;
+  }
+  .unit-article .unit-head-inner, .unit-article .misc-content  {
+  //  padding-left: 17%;
   }
   .unit-article .unit-foot-inner {
     width: 61em;
