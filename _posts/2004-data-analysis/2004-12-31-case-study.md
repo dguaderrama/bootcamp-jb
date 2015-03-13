@@ -43,19 +43,33 @@ tar -zxvf w140m90.tar.gz
 Open Quantum GIS
 
 1. Set project projection to EPSG:2927
+  
+  Before starting any project in a GIS program, you should first set the project projection to make sure your data comes in with the same extent. 
+  If you don't set the project's projection, the program will use the projection of the first layer added or EPSG:4326.
+ 
+  You can set the projection with the following steps:
+
   * In the top navbar go Project > Project Properties
   ![project-properties]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-project-properties.png)
   * Select CRS in the Left menu
   * Check *Enable On-the-fly CRS transformation*
   * Select *NAD83(HARN)/Washington South(ftUS) EPSG:2927* from the List of Projections
+
   ![projection]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-projection.png)
+
 2. Add the US States shapefile
+  
+  Since our project is directed at the state of Washington. We should extract the Washington state boundary for our study. The GADM[^7] project provides high-quality boundary data on country,state and county levels. We can use the US-state level dataset to get the Washington boundary.
+ 
+
   * Select *Add Vector Layer* in the left toolbar
   * Browse to the USA_adm1.shp layer from the iPlant Data Store
   ![USA_states]({{site.baseurl}}{{ASSET_PATH}}/images/usa-states.png)
+
 3. Create a layer for the state of Washington
+  
   * In the top toolbar, select *Select Single Feature*
-  * Click on the state of Washing to select it
+  * Click on the state of Washington to select it
   ![washington-selected]({{site.baseurl}}{{ASSET_PATH}}/images/washington-selected.png)
   * Right click on the USA_adm1 layer and select *Save Selection As...*
       - Format: ESRI Shapefile
@@ -66,12 +80,22 @@ Open Quantum GIS
           + Browse > *NAD83(HARN)/Washington South (ftUS) EPSG:2927*
   ![save-washington]({{site.baseurl}}{{ASSET_PATH}}/images/save-washington.png)
 4. Load the new washington layer
+
   * Select *Add Vector Layer*
   * Browse to the new washington layer and click *Open*
 5. Remove the USA_adm1 layer from the project 
+
+  Now that we have the Washington layer, we can get rid of the U.S. layer. 
+
   * Right click the layer in the table of contents
   * Select *Remove*
 6. Add the DEM layer from the iPlant data store
+
+  DEMs or *Digital Elevation Models* are very useful for establishing topological context in a map. DEMs generally come as a raster dataset that consists of elevation values.
+  There are several different byproducts that can be created from DEMs.
+
+  This DEM was taken from the GTOPO30 satellite data.
+
   * In the left toolbar, select *Add Raster Layer*
   * Select *source_files/W140N90.DEM*
   ![dem-load]({{site.baseurl}}{{ASSET_PATH}}/images/dem-load.png)
@@ -92,18 +116,32 @@ Open Quantum GIS
     + No data value: 0
     + Clipping Mode: Mask layer > washington
     + Load into canvas when finished
+
   ![dem-washington]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington.png)
 9. Remove the W140N90 layer
   ![dem-washington-display]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington-display.png)
-10. Create a slope surface
+10. Create a slope surface 
+  In the top menu, select Raster > Analysis > DEM
   * Input file: dem-washington
   * Output file: slope-washington.tif
   * Mode: Slope
   * Scale: 0.30
   * Load into canvas when finished
+
   ![create-slope]({{site.baseurl}}{{ASSET_PATH}}/images/create-slope.png)
 
+11. Create a hillshade layer
+  In the top menu, select Raster > Analysis > DEM
+  * Input file: dem-washington
+  * Output file: hillshade-washington.tif
+  * Mode: Hillshade
+  * Z factor: 1.0
+  * Scale: 0.30
+  * Azimuth of light: 315.0
+  * Altitude of light: 45.0
+  * Load into canvas when finished
 
+  ![hillshade-calc]({{site.baseurl}}{{ASSET_PATH}}/images/hillshade-calc.png)
 
 
 
@@ -157,6 +195,35 @@ We will have to do some raster calculations to create the output data set. The c
 
 ![landslide-key]({{site.baseurl}}{{ASSET_PATH}}/images/landslide-key.png)
 
+Since we need to cross reference these categories, we need to create a raster which represents each unique combination of the slope and rock strength classes. A method to create unique combinations is to promote the rock strength categories a decimal place. This would make the rock classes: 10,20, and 30.
+
+To create these new classes, we can load the source_files/geo_coded.tif, and secondary_files/slope_reclass.tif
+
+In the top menu, select *Raster* > *Raster Calculator*
+
+Our raster calculator expression will be: 
+
+("geo_coded@1" * 10) + "slope-reclass@1"
+
+Output layer: slope-geo-sect.tif
+
+![raster-calc]({{site.baseurl}}{{ASSET_PATH}}/images/raster-calc.png)
+
+
+We can apply the landslide susceptibility classification using r.reclass and the following rule file:
+
+*landslide-rule.txt*
+
+~~~
+11 12 13 21 31 = 0
+14 = 3
+22 23 = 5
+15 = 6
+16 32 33 = 7
+17 18 24 = 8
+25 thru 28 34 = 9
+35 thru 38 = 10
+~~~
 
 
 ####Precipitation
