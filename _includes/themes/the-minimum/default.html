@@ -10,7 +10,7 @@
 	<meta name="author" content="{{ site.author.name }}">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  	
+  <script src='{{site.baseurl}}{{ASSET_PATH}}/js/bootcamp.js'></script>  	
 	<link href='{{site.baseurl}}{{ ASSET_PATH }}/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
 	<link href="http://feeds.feedburner.com/{{ site.author.feedbaname }}" rel="alternate" title="{{ page.title }}" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
@@ -27,20 +27,8 @@
 </head>
 <body>
 
-<!-- sticky left navigation -->
-<div class="sticky-left-nav">
-  <div class="sticky-left-nav-inner">
-    <h3>Contents</h3>
-    {% include JB/setup %}
-  {% for category in site.categories %} 
-  <h4 id="{{ category[0] }}-ref">{{ category[0] | join: "/" | capitalize }}</h4>
-  <ul>
-    {% assign pages_list = category[1] %}  
-    {% include JB/pages_list %}
-  </ul>
-{% endfor %}
-  </div>  
-</div>
+<div class="page-container">
+
 
 <!-- post (.md) content -->
 <div id="page" class="hentry">
@@ -87,6 +75,7 @@
 		</div><!-- unit-foot -->
 	</footer>
 </div><!-- page -->
+</div><!-- page-container -->
 <script>
 	(function(d, s) {
 		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {

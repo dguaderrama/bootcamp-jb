@@ -5,79 +5,63 @@
 @import "syntaxhighlighter.css";
 
 @import "helper.css";
-/*
-Frameless			<http://framelessgrid.com/>
-by Joni Korpi 		<http://jonikorpi.com/>
-licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
 
-No styleguide reference.
-*/
-/*
-Font families
-
-No styleguide reference.
-*/
-/*
-Base font size should be larger than 16px.
-Calculation should be done via  http://j.mp/rNg5uA
-
-No styleguide reference.
-*/
 body {
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, "MS PGothic", Osaka, Sans-Serif;
   font-size: 1em;
   line-height: 1.625em;
 }
-/*
-Font size setting
-Using Golden ratio section (Caliculated via http://j.mp/sB6oxM):
-109.657	6.854	843.515 * h1
-82.241	5.14	632.623
-67.773	4.236	521.331
-50.829	3.177	390.992
-41.887	2.618	322.208 * h2
-31.415	1.963	241.654
-25.888	1.618	199.138 * h3
-19.416	1.214	149.354 * h4
-16.000	1	    123.077 * Base font size
-12.000	0.75	92.308  * Minimum font size
-Vertical Rhythm is caluculated via http://j.mp/sUvKuN
 
-/*bootcamp custom */
-.hentry {
-  margin-left: 6em;
+/* background images */
+/* !important allow you to keep a standard color background for .unit-article header when the page(class) does not have a background image */
+.qgis {
+  background: url(/bootcamp/assets/images/bg-1.png) !important;
+  background-position: center center !important;
 }
 
-.center img {
-//  margin-left: auto;
-//  margin-right: auto;
-//  display: block;
+/* navbar-nav */
+.navbar-nav {
+  background-color: rgba(0,0,0,0.6);
 }
-.entry-content img {
-  max-width: 100%;
-}
-.bd .entry-content, .unit-article .unit-head-inner, .unit-article .unit-foot-inner, .unit-article .misc-content  {
-  max-width: 850px;
+.navbar-nav > li > a {
+  color: white;
 }
 
-@media screen and (max-width: 1007px) {
-  .hentry {
-    margin-left: 15em;
-  }
+/* sticky nav -- jquery -- */
+#sticky.stick {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  border-radius: 0 0 0.5em 0.5em;
 }
-@media screen and (max-width: 846px) {
-  .the-header {
-    margin-left: 3em;
-  }
-  .entry-title {
-    margin-left: 1em;
-  }
-  .bd {
-    margin-left: 2em;
-  }
+.sticky-left-nav { 
+  margin-left: 12%;
 }
+.sticky-left-nav {
+  height: 100%;
+  width: 12.5%;
+  float: left;
+}
+.sticky-left-nav-inner {
+}
+.sticky-left-nav h4 {
+  margin: 0px !important;
+}
+.sticky-left-nav ul {
+  margin: 0px !important;
+}
+.sticky-left-nav li {
+  list-style-type: none;
+}
+.sticky-left-nav a:hover {
+  text-decoration: underline !important;
+  color: #bada55 !important;
+}
+
+/* dropdown nav */
+
 .dropdown-nav {
-  width: 98% !important;
+  width: 94%;
 }
 .dropdown-nav ul {
   padding-right: 30px;
@@ -86,51 +70,93 @@ Vertical Rhythm is caluculated via http://j.mp/sUvKuN
 .dropdown-nav li {
   padding-left: 30px;
 }
-.sticky-left-nav {
-  position: fixed;
-  z-index: 50;
-  height: 100%;
-  background: url("/assets/themes/the-minimum/skin/100-90-5-monochrome.png") repeat scroll 0px 0px #383838;
-  color: white;
-}
-.sticky-left-nav-inner {
-  padding: 3em;
-}
-.sticky-left-nav h4 {
-  margin: 0px !important;
-  color: white;
-}
-.sticky-left-nav ul {
-  margin: 0px !important;
-}
-.sticky-left-nav li {
-  color: white;
-  list-style-type: none;
-}
-.sticky-left-nav a {
-  color: white !important;
-}
-.sticky-left-nav a:hover {
-  text-decoration: underline !important;
-  color: #bada55 !important;
-}
-@media screen and (max-width: 1189px) {
-  .sticky-left-nav {
-    width: 218px;
-  }
-  .sticky-left-nav-inner {
-    padding: 25px;
-  }
-}
-.dropdown-nav {
-  display:none;
+.unit-article .entry-content {
+  width: 55%;
 }
 .dropdown-nav li {
   list-style-type: none;
 }
 
-No styleguide reference.
-*/
+/* header */
+.the-header .logo {
+  float: left;
+}
+.the-header .nav-global {
+  float: right;
+}
+.the-header .nav-global .home:after {
+  margin-left: 16px;
+  content: "/";
+}
+.the-header .nav-global li {
+  display: inline-block;
+  display: inline;
+  zoom: 1;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-right: 16px;
+  word-spacing: normal;
+  vertical-align: middle;
+}
+.the-header .nav-global li:last-child {
+  margin-right: 0;
+}
+
+.nav-global li {
+  display: inline;
+}
+
+/* entry content */
+
+blockquote a {
+  word-wrap: break-word;
+}
+.entry-content img {
+  max-width: 100%;
+}
+.unit-article .entry-content {
+  margin-left: 32%;
+}
+.unit-inner .entry-title {
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.the-footer .unit-foot-inner,
+.entry-content .unit-foot-inner {
+  width: 55%;
+  margin-left: 32%;
+}
+.misc-content {
+  min-height: 40px;
+  margin-right: 5%;
+}
+.misc-content .social {
+  float: right;
+}
+.unit-foot {
+  z-index: 10;
+}
+.unit-foot-inner .gotop {
+  float: right;
+}
+
+/* footer */
+.gotop {
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.licence {
+  float: right;
+  margin: -45px;
+}
+
+
+/* the-minimum template styling */
+
 h1,
 h2,
 h3,
@@ -216,10 +242,6 @@ No styleguide reference.
 @cyan:      #2aa198;
 @green:     #859900;
 
-*/
-/* Junction Font
- * http://www.theleagueofmoveabletype.com/
- * Using for Logo and headers
 */
 @font-face {
   font-family: 'junctionregularRegular';
@@ -320,8 +342,8 @@ pre {
   background-position: 0 0;
   background-color: #BADA55;
   margin-bottom: 1.625em;
-  padding-top: 1.625em;
-  padding-bottom: 1.625em;
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 .unit-article header h1 {
   color: #2d2d2d;
@@ -485,10 +507,9 @@ pre {
 .unit-article .unit-foot {
   background: url('/assets/themes/the-minimum/skin/100-90-5-monochrome.png') repeat 0 0 #4d4d4d;
   color: #fafafa;
-  padding-top: 1.625em;
-  padding-bottom: 1.625em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   position: relative;
-  z-index: 40;
 }
 .unit-article .unit-foot a:link {
   color: #fafafa;
@@ -506,7 +527,7 @@ pre {
   display: inline;
 }
 .unit-article .unit-foot .gotop {
-  margin-bottom: 0;
+//  margin-bottom: 0;
 }
 /* post & page */
 .layout-page .tag_box {
@@ -593,8 +614,6 @@ pre {
   color: #fafafa;
   color: rgba(250, 250, 250, 0.8);
   padding-bottom: 1.625em;
-  z-index: 40;
-  position: relative;
 }
 .the-footer a:link {
   color: #99cc99;
@@ -622,8 +641,8 @@ pre {
   margin-bottom: 0;
 }
 .the-header .unit-inner {
-  width: 15em;
-//  margin-top: 1.625em;
+  width: 75%;
+  margin-top: 1.625em;
   margin-bottom: 1.625em;
   margin-left: auto;
   margin-right: auto;
@@ -632,280 +651,73 @@ pre {
   font-size: 32px;
   line-height: 42px;
 }
-.logo {
-  margin-top: 1.625em !important;
-}
 .unit-article .unit-head-inner,
-.unit-article .entry-content,
-.unit-article .misc-content,
+//.unit-article .misc-content,
 .unit-article .unit-foot-inner,
 .unit-article .unit-head-inner {
-  //width: 15em;
-  width: 93%;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 10;
 }
-.unit-article .unit-head-inner .meta {
-  margin-bottom: 1.625em;
-}
-.layout-page .unit-body .unit-body-inner {
-  width: 15em;
-  margin-left: auto;
-  margin-right: auto;
-}
-.layout-page .unit-body .article-list .meta {
-  margin-bottom: 1.625em;
-}
-.the-footer .unit-foot {
-//  width: 15em;
- // margin-left: auto;
- // margin-right: auto;
- margin-left: 15em;
-}
-/*
- 	IE
-*/
-.ie .the-header .unit-inner {
-  width: 60em;
-  margin-top: 1.625em;
-  margin-bottom: 1.625em;
-  margin-left: auto;
-  margin-right: auto;
-}
-.ie .the-header .logo {
-  width: 26.25em;
-  float: left;
-}
-.ie .the-header .nav-global {
-  margin-top: 50px;
-  text-align: right;
-  width: 26.25em;
-  float: right;
-}
-.ie .unit-article .unit-head-inner,
-.ie .unit-article .entry-content,
-.ie .unit-article .misc-content,
-.ie .unit-article .unit-foot-inner {
-  width: 60em;
-  margin-left: auto;
-  margin-right: auto;
-}
-.ie .unit-article .unit-head-inner h1,
-.ie .unit-article .entry-content h1,
-.ie .unit-article .misc-content h1,
-.ie .unit-article .unit-head-inner h2,
-.ie .unit-article .entry-content h2,
-.ie .unit-article .misc-content h2,
-.ie .unit-article .unit-head-inner h3,
-.ie .unit-article .entry-content h3,
-.ie .unit-article .misc-content h3,
-.ie .unit-article .unit-head-inner h4,
-.ie .unit-article .entry-content h4,
-.ie .unit-article .misc-content h4,
-.ie .unit-article .unit-head-inner h5,
-.ie .unit-article .entry-content h5,
-.ie .unit-article .misc-content h5,
-.ie .unit-article .unit-head-inner p,
-.ie .unit-article .entry-content p,
-.ie .unit-article .misc-content p,
-.ie .unit-article .unit-head-inner ul,
-.ie .unit-article .entry-content ul,
-.ie .unit-article .misc-content ul,
-.ie .unit-article .unit-head-inner ol,
-.ie .unit-article .entry-content ol,
-.ie .unit-article .misc-content ol,
-.ie .unit-article .unit-head-inner dl,
-.ie .unit-article .entry-content dl,
-.ie .unit-article .misc-content dl,
-.ie .unit-article .unit-head-inner blockquote,
-.ie .unit-article .entry-content blockquote,
-.ie .unit-article .misc-content blockquote {
-  margin-right: 210px;
-}
-.ie .unit-article .unit-head-inner .meta {
-  width: 20.625em;
-  float: right;
-}
-.ie .layout-page .unit-body .unit-body-inner {
-  width: 43.125em;
-  margin-left: auto;
-  margin-right: auto;
-}
-.ie .layout-page .unit-body .article-list {
-  width: 43.125em;
-}
-.ie .layout-page .unit-body .article-list .meta {
-  width: 20.625em;
-  float: right;
-}
-.ie .the-footer .unit-foot {
-  width: 60em;
-//  margin-left: auto;
-//  margin-right: auto;
-  margin-left: 12em;
-}
+
+/* responsive styling */
+
 /*
 	Smartphone
 */
 @media only screen and (min-width: 100px) and (max-width: 767px) {
-  img {
-    max-width: 100%;
-  }
-  .sticky-left-nav {
-    display:none;
-  }
-  .hentry {
-    margin: 0px;
-  }
-  .dropdown-nav {
-    display: block;
-  }
 }
+
 /*
 	Wide Smartphone
 */
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 630px) {
+  .sticky-left-nav {
+    display: none;
+  }  
+  .unit-article .entry-content,
+  .unit-inner .entry-title,
+  .the-footer .unit-foot-inner,
+  .entry-content .unit-foot-inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
   .the-header .unit-inner {
-    width: 26.25em;
-  }
-  .the-header .logo a {
-    font-size: 42px;
-    line-height: 52px;
-    letter-spacing: -1px;
-  }
-  .the-header .nav-global {
-    margin-top: 1.625em;
-    letter-spacing: -0.31em;
-    letter-spacing: normal;
-    word-spacing: -0.43em;
-    list-style: none;
-    padding-left: 0;
-  }
-  .the-header .nav-global .home:after {
-    margin-left: 16px;
-    content: "/";
   }
   .the-header .nav-global li {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    line-height: normal;
-    letter-spacing: normal;
-    margin-right: 16px;
-    word-spacing: normal;
-    vertical-align: middle;
+    display: inherit;
   }
-  .the-header .nav-global li:last-child {
-    margin-right: 0;
+  .the-header .nav-global {
+    float: left;
   }
-  .unit-article .unit-head-inner,
-  .unit-article .entry-content,
-  .unit-article .misc-content,
-  .unit-article .unit-foot-inner {
-  //  width: 26.25em;
-    width: 95%;
+  .the-header .nav-global .home:after {
+   content: none;
   }
-  .unit-article .unit-foot .gotop {
-    margin-top: 1.625em;
-  }
-  .layout-page .unit-body .unit-body-inner {
-    width: 26.25em;
-  }
-  .layout-page .unit-body .article-list {
-    width: 26.25em;
-  }
-  .the-footer .unit-foot {
-    width: 17em;
+  .licence {
+    margin: 0px !important;
+    float: left;
   }
 }
-@media screen and (max-width: 430px) {
-  .the-footer .unit-foot {
-    margin-left: 4em;
-  }
-}
-@media screen and (max-width: 837px) {
-  .unit-inner .unit-foot-inner {
-    width: 280px;
-  }
-}
-
 
 /*
 	Tablet
 */
-@media only screen and (min-width: 768px) {
-  .the-header .unit-inner {
-//    width: 35.125em;
-    width: 94%;
-  }
- // .unit-article .unit-head-inner,
+@media only screen and (max-width: 965px) {
+.sticky-left-nav {
+    display: none;
+  }  
   .unit-article .entry-content,
-  .unit-article .misc-content,
-  .unit-article .unit-foot-inner {
-//    width: 50.125em;
-    width: 89%;
+  .unit-inner .entry-title,
+  .the-footer .unit-foot-inner,
+  .entry-content .unit-foot-inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
-  .unit-article .unit-head-inner .meta {
-    margin-bottom: 0;
-    text-align: right;
-    width: 20.625em;
-    float: right;
-  }
-  .layout-page .unit-body .unit-body-inner {
-    width: 35.125em;
-  }
-  .layout-page .unit-body .article-list {
-    width: 35.125em;
-  }
-  .layout-page .unit-body .article-list .meta {
-    margin-bottom: 0;
-    text-align: right;
-    width: 20.625em;
-    float: right;
-  }
-  .the-footer .unit-foot {
-    width: 22em;
-  }
-}
-
-@media only screen and (min-width: 780px) {
-  .hentry {
-    margin-left: 15em;
-  }
-  .unit-article .entry-content {
-    width: 92%;
-  }
-}
-@media only screen and (min-width: 900px) {
-  .hentry {
-    margin-left: 15em;
-  }
-  .unit-article .entry-content {
-    width: 89%;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .hentry {
-    margin-left: 15em;
-  }
-  .unit-article .entry-content {
-    width: 89%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .hentry {
-    margin-left: 16em;
-  }
-  .unit-article .entry-content, .unit-article .unit-head-inner, .unit-article .unit-foot-inner, .unit-article .misc-content {
-    width: 89%;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .hentry {
-    margin-left: 14em;
-  }
-  .unit-article .entry-content {
-    width: 91%;
+  .licence {
+    margin: -45px 0px 0px 0px;
   }
 }
 
@@ -913,126 +725,11 @@ pre {
 	Not that old computer layout 
 */
 @media only screen and (min-width: 1280px) {
-  .the-header .unit-inner {
-    width: 60em;
-  }
-  .the-header .logo {
-    width: 31.25em;
-    float: left;
-  }
-  .the-header .nav-global {
-    margin-top: 21px;
-    text-align: right;
-    width: 26.25em;
-    float: right;
-  }
-  //.unit-article .unit-head-inner,
-//  .unit-article .entry-content,
-  .unit-article .misc-content,
-  .unit-article .unit-foot-inner {
-    width: 56.125em;
-  }
-  .unit-article .unit-foot .pagination {
-    float: left;
-    width: 37.5em;
-  }
-  .unit-article .unit-foot .gotop {
-    float: right;
-    margin-top: 0;
-    text-align: right;
-    width: 20.625em;
-  }
-  .layout-page .unit-body .unit-body-inner {
-    width: 43.125em;
-  }
-  .layout-page .unit-body .article-list {
-    width: 43.125em;
-  }
-  .layout-page .unit-body .article-list .meta {
-    width: 20.625em;
-  }
-  .the-footer .unit-foot {
-    width: 59em;
-  }
 }
+
 /*
 	Huge-screen layout 
 */
-/*@media and (min-width: 1647px) {
-  .the-head .unit-inner {
-    margin-left: 24em;
-  }
-}
-*/
-@media only screen and (max-height: 700px) {
-  .sticky-left-nav h4 {
-    font-size: inherit;
-  }
-  .sticky-left-nav li {
-    font-size: inherit;
-  }
-
-}
-@media only screen and (min-width: 967px) {
-  .sticky-left-nav-inner {
-    padding: 2.6em;
-  }
+@media and (min-width: 1647px) {
 }
 
-@media only screen and (min-width: 1347px) {
-  
-  .the-header .unit-inner {
-    width: 83%;
-    margin-left: 8em;
-  }
-  .the-header .logo {
-    width: 39.125em;
-  }
-  .the-header .nav-global {
-    width: 25.125em;
-  }
-  .unit-article .entry-content, .unit-article .unit-head-inner, .unit-article .unit-foot-inner, .unit-article .misc-content  {
-    width: 91%;
-    margin-left: 20%;
-  }
-  .unit-article .unit-head-inner, .unit-article .misc-content  {
-  //  padding-left: 17%;
-  }
-  .unit-article .unit-foot-inner {
-    width: 61em;
-//    margin-left: 17em;
-  }
-  .unit-article .unit-foot .pagination {
-    width: 54.375em;
-  }
-  .unit-article .unit-foot .gotop {
-    padding-right: 47px;
-    width: 9.375em;
-  }
-  .layout-page .unit-body .unit-body-inner {
-    width: 43.125em;
-  }
-  .layout-page .unit-body .article-list {
-    width: 43.125em;
-  }
-  .layout-page .unit-body .article-list .meta {
-    width: 20.625em;
-  }
-  .the-footer .unit-foot {
-    width: 75.125em;
-    margin-left: 0px;
-  }
-  .the-footer .unit-inner h1,
-  .the-footer .unit-inner h2,
-  .the-footer .unit-inner h3,
-  .the-footer .unit-inner h4,
-  .the-footer .unit-inner h5,
-  .the-footer .unit-inner p,
-  .the-footer .unit-inner ul,
-  .the-footer .unit-inner ol,
-  .the-footer .unit-inner dl,
-  .the-footer .unit-inner blockquote {
-    margin-left: 360px;
-    margin-right: 360px;
-  }
-}

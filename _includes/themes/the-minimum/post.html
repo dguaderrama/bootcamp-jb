@@ -1,10 +1,3 @@
-<article class="unit-article layout-post">
-	<div class="unit-inner unit-article-inner">
-		<div class="content">
-			<header>
-				<div class="unit-head">
-					<div class="unit-inner unit-head-inner">
-						<h1 class="h2 entry-title">{{ page.title }}</h1>
             <div class="dropdown-nav">
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -23,7 +16,15 @@
 
               </ul>
 
-            </div>
+            </div><!-- dropdown nav -->
+<article class="unit-article layout-post">
+	<div class="unit-inner unit-article-inner">
+		<div class="content">
+			<header id="content-header">
+				<div class="unit-head">
+					<div class="unit-inner unit-head-inner">
+						<h1 class="h2 entry-title">{{ page.title }}</h1>
+
 
 
 					</div><!-- unit-inner -->
@@ -44,8 +45,28 @@
     </div>
     -->
 			<div class="bd">
-				<div class="entry-content">
-					{{ content }}
+
+        <!-- holding -->
+        <!-- sticky left navigation -->
+<div id="sticky-anchor" class="sticky-left-nav">
+  <div id="sticky" class="sticky-left-nav-inner">
+    <h3>Contents</h3>
+    {% include JB/setup %}
+  {% for category in site.categories %} 
+  <h4 id="{{ category[0] }}-ref">{{ category[0] | join: "/" | capitalize }}</h4>
+  <ul>
+    {% assign pages_list = category[1] %}  
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
+  </div>  
+  <div class="clear"></div>
+</div> <!--left-nav -->
+
+
+
+<div class="entry-content">
+  {{ content }}
 
           <!--
 					<div class="meta">

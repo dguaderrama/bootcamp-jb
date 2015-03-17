@@ -11,7 +11,7 @@
 	<meta name="author" content="Nathan Casler">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  	
+  <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
 	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
 	<link href="http://feeds.feedburner.com/" rel="alternate" title="General Functions" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
@@ -28,253 +28,8 @@
 </head>
 <body>
 
-<!-- sticky left navigation -->
-<div class="sticky-left-nav">
-  <div class="sticky-left-nav-inner">
-    <h3>Contents</h3>
-    
-   
-  <h4 id="intro-ref">Intro</h4>
-  <ul>
-      
-    
+<div class="page-container">
 
-
-
-
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/intro/intro">Spatial Data</a></li>
-      	
-      
-    
-  
-
-
-
-
-  </ul>
- 
-  <h4 id="data collection-ref">Data collection</h4>
-  <ul>
-      
-    
-
-
-
-
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/data%20collection/data-collection">Data Collection</a></li>
-      	
-      
-    
-  
-
-
-
-
-  </ul>
- 
-  <h4 id="data wrangling-ref">Data wrangling</h4>
-  <ul>
-      
-    
-
-
-
-
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/data%20wrangling/data-wrangling">Data Wrangling</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li class="active"><a href="/bootcamp/data%20wrangling/functions" class="active">General Functions</a></li>
-      	
-      
-    
-  
-
-
-
-
-  </ul>
- 
-  <h4 id="applications-ref">Applications</h4>
-  <ul>
-      
-    
-
-
-
-
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/applications/qgis">QGIS</a></li>
-      	
-      
-    
-  
-
-
-
-
-  </ul>
- 
-  <h4 id="data analysis-ref">Data analysis</h4>
-  <ul>
-      
-    
-
-
-
-
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Case Study</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/data%20analysis/netcdf">NetCDF</a></li>
-      	
-      
-    
-  
-
-
-
-
-  </ul>
- 
-  <h4 id="cartography-ref">Cartography</h4>
-  <ul>
-      
-    
-
-
-
-
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
-      	
-      
-    
-  
-
-
-
-
-  </ul>
- 
-  <h4 id="distribution-ref">Distribution</h4>
-  <ul>
-      
-    
-
-
-
-
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/distribution/distribution">Distribution</a></li>
-      	
-      
-    
-  
-
-
-
-
-  </ul>
- 
-  <h4 id="things to come-ref">Things to come</h4>
-  <ul>
-      
-    
-
-
-
-
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/things%20to%20come/future">Future</a></li>
-      	
-      
-    
-  
-
-
-
-
-  </ul>
- 
-  <h4 id="references-ref">References</h4>
-  <ul>
-      
-    
-
-
-
-
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/references/citations">Citations</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/references/scripts">Scripts</a></li>
-      	
-      
-    
-  
-
-
-
-
-  </ul>
-
-  </div>  
-</div>
 
 <!-- post (.md) content -->
 <div id="page" class="hentry">
@@ -297,13 +52,6 @@
 			<div class="unit-inner unit-body-inner">
 				<div class="entry-content">
 					
-<article class="unit-article layout-post">
-	<div class="unit-inner unit-article-inner">
-		<div class="content">
-			<header>
-				<div class="unit-head">
-					<div class="unit-inner unit-head-inner">
-						<h1 class="h2 entry-title">General Functions</h1>
             <div class="dropdown-nav">
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -563,7 +311,15 @@
 
               </ul>
 
-            </div>
+            </div><!-- dropdown nav -->
+<article class="unit-article layout-post">
+	<div class="unit-inner unit-article-inner">
+		<div class="content">
+			<header id="content-header">
+				<div class="unit-head">
+					<div class="unit-inner unit-head-inner">
+						<h1 class="h2 entry-title">General Functions</h1>
+
 
 
 					</div><!-- unit-inner -->
@@ -817,8 +573,261 @@
     </div>
     -->
 			<div class="bd">
-				<div class="entry-content">
-					<h1 id="general-spatial-functions">General Spatial Functions</h1>
+
+        <!-- holding -->
+        <!-- sticky left navigation -->
+<div id="sticky-anchor" class="sticky-left-nav">
+  <div id="sticky" class="sticky-left-nav-inner">
+    <h3>Contents</h3>
+    
+   
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/intro">Spatial Data</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data collection-ref">Data collection</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/data-collection">Data Collection</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data wrangling-ref">Data wrangling</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-wrangling">Data Wrangling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/data%20wrangling/functions" class="active">General Functions</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="applications-ref">Applications</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/qgis">QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data analysis-ref">Data analysis</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/case-study">Case Study</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/netcdf">NetCDF</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="cartography-ref">Cartography</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="distribution-ref">Distribution</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/distribution">Distribution</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="things to come-ref">Things to come</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/things%20to%20come/future">Future</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="references-ref">References</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/scripts">Scripts</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+
+  </div>  
+  <div class="clear"></div>
+</div> <!--left-nav -->
+
+
+
+<div class="entry-content">
+  <h1 id="general-spatial-functions">General Spatial Functions</h1>
 
 <h4 id="spatial-queries">Spatial Queries</h4>
 
@@ -1037,6 +1046,7 @@
 		</div><!-- unit-foot -->
 	</footer>
 </div><!-- page -->
+</div><!-- page-container -->
 <script>
 	(function(d, s) {
 		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
