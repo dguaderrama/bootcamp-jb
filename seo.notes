@@ -1,0 +1,20 @@
+#
+#  Just some notes on SEO
+#
+# 
+#
+#
+
+Link back to websites whenever possible, e.g.,whenever stating EPSG:4326, this should be a link back to the EPSG WGS 84 page at www.spatialreference.org
+
+Alt-tags should be written for all images.
+
+Image naming conventions should include something descriptive, e.g., a QGIS image should be named something like 'qgis-$somethingHere.png'
+
+Context of the website increases SEO; be descriptive when possible.
+
+When tracking clicks (site analytics), use tags (#thisiswherehastagscamefrom). This may be best used in a campaign, e.g., a facebook campaign <a href="baseurl/spatial-data#facebook">Check out Spatia Data!</a>
+
+meta data (<head>meta data here</head>) is good, but does not increase SEO. 
+
+don't use meta keywords. use meta descriptions- these are the snippets google uses when indexing for the search engine. a snippet is what twitter uses- it's only 140 characters long..

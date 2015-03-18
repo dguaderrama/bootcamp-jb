@@ -868,47 +868,27 @@ discuss meta data?</p>
 
 <ol>
   <li>
-    <h5 id="menu-bar">Menu Bar</h5>
+    <h5 id="menu-bar"><strong>Menu Bar</strong></h5>
+    <p>The menu bar provides access to QGIS features. In Linux systems, hover over to view menu bar options (haven’t checked other systems). The QGIS version is displayed while not hovering over the menu bar (linux systems). Most common features or tools are accessable through the toolbar icons which will be the prefered method throughout this QGIS introduction.</p>
   </li>
-</ol>
-
-<p>The menu bar provides access to QGIS features. In Linux systems, hover over to view menu bar options (haven’t checked other systems). The QGIS version is displayed while not hovering over the menu bar (linux systems). Most common features or tools are accessable through the toolbar icons which will be the prefered method throughout this QGIS introduction.</p>
-
-<ol>
   <li>
-    <h5 id="toolbar">Toolbar</h5>
+    <h5 id="toolbar"><strong>Toolbar</strong></h5>
+    <p>The toolbar provides access to most standard QGIS functions. Go to <em>Menu Bar &gt; View &gt; Toolbars</em> to activate or deactivate toolbars. Hover over tools to view the description and puropose.</p>
   </li>
-</ol>
-
-<p>The toolbar provides access to most standard QGIS functions. Go to <em>Menu Bar &gt; View &gt; Toolbars</em> to activate or deactivate toolbars. Hover over tools to view the description and puropose.</p>
-
-<ol>
   <li>
-    <h5 id="map-legend">Map Legend</h5>
+    <h5 id="map-legend"><strong>Map Legend</strong></h5>
+    <p>The map legend is a list of all layers in the project. Each layer can be turned on or off with the layer’s checkbox.  It’s possible to group layers.</p>
   </li>
-</ol>
-
-<p>The map legend is a list of all layers in the project. Each layer can be turned on or off with the layer’s checkbox.  It’s possible to group layers.</p>
-
-<ol>
   <li>
-    <h5 id="map-view">Map View</h5>
+    <h5 id="map-view"><strong>Map View</strong></h5>
+    <p>The map view displays the active layers in the map project. You can set the map view extent by right-clicking on a layer and selecting <em>Zoom to layer extent</em></p>
   </li>
-</ol>
-
-<p>The map view displays the active layers in the map project. You can set the map view extent by right-clicking on a layer and selecting <em>Zoom to layer extent</em></p>
-
-<ol>
   <li>
-    <h5 id="status-bar">Status Bar</h5>
+    <h5 id="status-bar"><strong>Status Bar</strong></h5>
+    <p>The status bar displays current position in map coordiantes (e.g., meters or decimal degrees) as the mouse pointer moves across the map view. To the left of the coordinate display is the button gor toggling extents and mouse position display. To the right of the map coordinates is the scale, which may be set to one of the predefined zoom extends of 1:500 to 1:1,000,000. This scale setting will adjust as you zoom or pan throught the map view. Options for map rendering are to the right of the current map scale setting. To the far right is the current CRS for the map project.</p>
   </li>
-</ol>
-
-<p>The status bar displays current position in map coordiantes (e.g., meters or decimal degrees) as the mouse pointer moves across the map view. To the left of the coordinate display is the button gor toggling extents and mouse position display. To the right of the map coordinates is the scale, which may be set to one of the predefined zoom extends of 1:500 to 1:1,000,000. This scale setting will adjust as you zoom or pan throught the map view. Options for map rendering are to the right of the current map scale setting. To the far right is the current CRS for the map project.</p>
-
-<ol>
   <li>
-    <h5 id="processing-toolbox">Processing Toolbox</h5>
+    <h5 id="processing-toolbox"><strong>Processing Toolbox</strong></h5>
     <p>The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Processing &gt; Toolbox</em>. This helpful tool allows searching by keyword for the geoalgorithm from each of the active processing roviders.<sup id="fnref:2"><a href="#fn:2" class="footnote">1</a></sup></p>
   </li>
 </ol>
@@ -947,7 +927,7 @@ discuss meta data?</p>
 
 <p>See <a href="/bootcamp/intro/spatial-data">Intro to Spatial Data</a> for more detailed info on projections.</p>
 
-<p>Each new project starts with the global default projection, EPSG:4326 - WGS 84 (<code>proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</code>). This can be changed at <em>Menu Bar &gt; Settings &gt; Options &gt; CRS &gt; Default CRS for new projects</em>.</p>
+<p>Each new project starts with the global default projection, <a href="http://www.spatialreference.org/epsg/wgs-84/">EPSG:4326 - WGS 84</a> (<code>proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</code>). This can be changed at <em>Menu Bar &gt; Settings &gt; Options &gt; CRS &gt; Default CRS for new projects</em>.</p>
 
 <p>However, this is not the same as changing the project projection. You may define the project projection from <em>Menu Bar &gt; Project &gt; Project Properties &gt; CRS</em>. Also keep in mind, the CRS of a new project will change to the CRS of the first layer added to the project.</p>
 
@@ -1028,6 +1008,13 @@ this is just and idea for lessons</p>
   <li>file storage/project directory (keep your data directories clean)</li>
 </ul>
 
+<p>Data sources:</p>
+
+<ul>
+  <li>US Census - American Fact Finder (real estate): http://factfinder.census.gov/</li>
+  <li>US Census - TIGER/Line (shapefiles and geodatabases): http://www.census.gov/geo/maps-data/data/tiger-line.html</li>
+</ul>
+
 <p>Steps: </p>
 
 <ul>
@@ -1049,6 +1036,11 @@ this is just and idea for lessons</p>
   <li>clipping data extents</li>
   <li>importing data (raster and vector)</li>
 </ul>
+
+<p>Download, examine, and prepare DEM for landslide susceptibility analysis.</p>
+
+<p>Data:
+ * gtopo30 DEM - northwest america</p>
 
 <p>Steps:</p>
 
@@ -1074,6 +1066,9 @@ this is just and idea for lessons</p>
 </ul>
 
 <p>Prepare geology layer with geo_type (just an example) of soft, medium, hard, mass-wasting</p>
+
+<p>Data:
+ * washington state geology shapefile</p>
 
 <p>Steps: </p>
 
@@ -1151,10 +1146,14 @@ this is just and idea for lessons</p>
 <ul>
   <li>buffer on polylines</li>
   <li>intersecting vector layers</li>
-  <li>join some data?</li>
+  <li>join census housing (home values) to census tracts (shapefile)</li>
 </ul>
 
 <p>Research question: Where are high-risk landslide/mass-wasting areas near (select region).</p>
+
+<p>Data: 
+ * Census housing data
+ * Census tract shapefile</p>
 
 <p>High-risk area =</p>
 
@@ -1167,13 +1166,22 @@ this is just and idea for lessons</p>
 
 <p>Steps: </p>
 
-<ul>
+<ol>
   <li>buffer fault lines and rivers/streams</li>
   <li>merge buffered fault lines with rivers/streams</li>
-  <li>join some data to something (census?)</li>
+  <li>join census housing data (.csv) to census tracts (shapefile)
+    <ul>
+      <li>Import census tracts</li>
+      <li>Reproject census tract shapefile: <a href="http://spatialreference.org/ref/epsg/2927/">EPSG:2927</a></li>
+      <li>Import census housing data</li>
+      <li>Use Toolbox to search for ‘join attribute table’</li>
+      <li>Select parameters</li>
+      <li>Check output - confirm housing data is joined to tracts.</li>
+    </ul>
+  </li>
   <li>intersect buffered-merged-joined data with reclassified-rasterized geology layer</li>
   <li>data will be used in Raster Analysis</li>
-</ul>
+</ol>
 
 <hr />
 

@@ -16,7 +16,8 @@ body {
 /* !important allow you to keep a standard color background for .unit-article header when the page(class) does not have a background image */
 .qgis {
   background: url(/bootcamp/assets/images/bg-1.png) !important;
-  background-position: center center !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
 }
 
 /* navbar-nav */
@@ -26,14 +27,23 @@ body {
 .navbar-nav > li > a {
   color: white;
 }
-
+.nav > li > a:focus, .nav > li > a:hover {
+  background-color: inherit !important;
+}
 /* sticky nav -- jquery -- */
 #sticky.stick {
-  position: fixed;
+  /* uncomment this line to make the left nav column stick when scrolling. and see notes below */
+//  position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 11;
   border-radius: 0 0 0.5em 0.5em;
+  background-color: white;
 }
+/* also, uncomment this to give the body a min-height so the footer doesn't cover the left nav */
+.unit-article .entry-content {
+ // min-height: 555px;
+}
+
 .sticky-left-nav { 
   margin-left: 12%;
 }
@@ -43,6 +53,7 @@ body {
   float: left;
 }
 .sticky-left-nav-inner {
+  padding: 0px 20px 20px 20px;
 }
 .sticky-left-nav h4 {
   margin: 0px !important;
@@ -59,16 +70,19 @@ body {
 }
 
 /* dropdown nav */
-
+/* most of these are overwriting default bootstrap styles */
 .dropdown-nav {
-  width: 94%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
-.dropdown-nav ul {
-  padding-right: 30px;
-  padding-left: 30px;
+.navbar-right {
+  margin-right: 40px !important;
+  width: 230px;
 }
-.dropdown-nav li {
-  padding-left: 30px;
+.dropdown-toggle {
+  width: 230px;
+  text-align: center;
 }
 .unit-article .entry-content {
   width: 55%;
@@ -76,7 +90,20 @@ body {
 .dropdown-nav li {
   list-style-type: none;
 }
-
+.dropdown-menu {
+  min-width: 230px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dropdown-menu {
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+}
+.dropdown-menu ul {
+  border-bottom: 1px solid green;
+  margin-bottom: 3px;
+  padding-bottom: 15px;
+}
 /* header */
 .the-header .logo {
   float: left;
@@ -406,7 +433,7 @@ pre {
   margin-right: 0;
 }
 .unit-article ul, .unit-article ol, .unit-article dl {
-  padding-left: 0;
+  //padding-left: 0;
 }
 .unit-article ul {
   list-style: square;
@@ -719,6 +746,19 @@ pre {
   .licence {
     margin: -45px 0px 0px 0px;
   }
+  .dropdown-nav {
+    width: 100%;
+  }
+  .navbar-right {
+    width: 100%;
+    margin: 0px !important;
+  }
+  .dropdown-toggle {
+    width: 100%;
+  }
+  .dropdown {
+    width: 100%;
+  }
 }
 
 /*
@@ -732,4 +772,8 @@ pre {
 */
 @media and (min-width: 1647px) {
 }
-
+@media only screen and (max-height: 520px) {
+  #sticky.stick {
+    position: absolute;
+  }
+}
