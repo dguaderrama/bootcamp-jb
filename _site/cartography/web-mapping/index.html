@@ -7,13 +7,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Is Spatial Special?</title>
+	<title>Web Mapping</title>
 	<meta name="author" content="Nathan Casler">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
 	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/" rel="alternate" title="Is Spatial Special?" type="application/atom+xml">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Web Mapping" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 	
 	<!-- Latest compiled and minified CSS -->
@@ -71,7 +71,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/intro/what" class="active">Is Spatial Special?</a></li>
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
       	
       
     
@@ -231,7 +231,7 @@
     
       
       	
-      	<li><a href="/bootcamp/cartography/web-mapping">Web Mapping</a></li>
+      	<li class="active"><a href="/bootcamp/cartography/web-mapping" class="active">Web Mapping</a></li>
       	
       
     
@@ -334,7 +334,7 @@
 			<header id="content-header">
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-						<h1 class="h2 entry-title">Is Spatial Special?</h1>
+						<h1 class="h2 entry-title">Web Mapping</h1>
 
 
 
@@ -358,7 +358,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/intro/what" class="active">Is Spatial Special?</a></li>
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
       	
       
     
@@ -513,7 +513,7 @@
     
       
       	
-      	<li><a href="/bootcamp/cartography/web-mapping">Web Mapping</a></li>
+      	<li class="active"><a href="/bootcamp/cartography/web-mapping" class="active">Web Mapping</a></li>
       	
       
     
@@ -625,7 +625,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/intro/what" class="active">Is Spatial Special?</a></li>
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
       	
       
     
@@ -780,7 +780,7 @@
     
       
       	
-      	<li><a href="/bootcamp/cartography/web-mapping">Web Mapping</a></li>
+      	<li class="active"><a href="/bootcamp/cartography/web-mapping" class="active">Web Mapping</a></li>
       	
       
     
@@ -875,96 +875,53 @@
 
 
 <div class="entry-content">
-  
-<h1 id="is-spatial-special">Is Spatial Special?</h1>
+  <h2 id="understanding-web-mapping">Understanding web mapping</h2>
 
-<p>There has been discussions about the nature of spatial data and whether or not there is anything special about it. Since the OGC agreed on the Simple Features for SQL specification in 1999, spatial data can be stored alongside other data types as another column in a table. However, we can see a lot of GIS professionals evangelizing the difference between spatial data and <em>regular data</em>. </p>
+<h2 id="web-map-frameworks">Web map frameworks</h2>
 
-<h2 id="do-they-have-a-point">Do they have a point?</h2>
+<h3 id="leafletjs">Leaflet.js</h3>
 
-<p>There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of forms.</p>
-
-<h3 id="spatial-data-types">1. Spatial Data Types</h3>
-
-<p>The OGC decided on a set of Spatial data types or geometry objects in the Simple Features for SQL specification<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
-
-<p class="center"><img src="/bootcamp//assets/images/geometryObjectModel.png" alt="geomObjModel" /></p>
-
-<ul>
-  <li>
-    <p>Point</p>
-  </li>
-  <li>
-    <p>LineString</p>
-  </li>
-  <li>
-    <p>Polygon</p>
-  </li>
-  <li>
-    <p>Surface</p>
-  </li>
-  <li>
-    <p>Geometry Collection</p>
-  </li>
-</ul>
-
-<h3 id="sorting-and-indexes">2. Sorting and Indexes</h3>
-
-<p>Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type. </p>
-
-<p>Sorting spatial data poses an interesting problem. Do you sort from North to south? West to East? What happens if you are sorting lines or polygons that overlap?</p>
-
-<h5 id="indexing-by-proximity">Indexing by Proximity</h5>
-
-<p>The R-Tree index was proposed by Antoine Guttman in 1984.</p>
-
-<p>In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features. </p>
-
-<p><a title="By Skinkie, w:en:Radim Baca (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AR-tree.svg"><img width="512" alt="R-tree" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/R-tree.svg/512px-R-tree.svg.png" /></a></p>
-
-<h3 id="dimensions">3. Dimensions</h3>
-
-<p>Spatial Data requires at least 2 dimensions X and Y, which are traditionally held in Longitude, and Latitude. Spatial data can also require elevation(Z) and temporal (t) dimensions depending on the data. These dimension require novel methods for measure relationships between objects in multiple dimensions.</p>
-
-<h3 id="dependence">4. Dependence</h3>
+<p><a href="http://leafletjs.com/">Leaflet.js</a> is a light-weight open-source JavaScript library. This is the ‘easiest’ framework to develop.</p>
 
 <blockquote>
-  <p>“Everything is related to everything else, but near things are more related than distant things” - Waldo Tobler</p>
+  <p>Leaflet is a modern open-source JavaScript library for mobile-friendly interactive maps. It is developed by Vladimir Agafonkin with a team of dedicated contributors. Weighing just about 33 KB of JS, it has all the features most developers ever need for online maps.</p>
 </blockquote>
 
-<p>Tobler’s First law of Geography is the fundamental basis of Spatial Analysis. </p>
+<iframe class="leaflet" src="http://leafletjs.com/examples/choropleth-example.html" frameborder="0"></iframe>
 
-<p>This spatial dependence required the study of spatial effects and their influence on statistical studies.</p>
+<h3 id="openlayes-3">OpenLayes 3</h3>
 
-<blockquote>
-  <p>Spatial econometrics deals with methodological concerns that follow from the explicit consideration of <em>spatial effects</em>, such as spatial autocorrelation and spatial heterogeneity.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></p>
-</blockquote>
+<p>OpenLayers is an open-source JavaScript library.</p>
 
-<p>Spatial autocorrelation can be seen in clustering of values in a specific region, and the change of density in a larger extent.</p>
+<iframe class="openlayers" src="http://openlayers.org/en/v3.2.1/examples/earthquake-clusters.html" frameborder="0"></iframe>
 
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p><a href="http://portal.opengeospatial.org/files/?artifact_id=829">OpenGIS Simple Features Implementation Specification for SQL</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:2">
-      <p>Guttman, A. (1984). “R-Trees: A Dynamic Index Structure for Spatial Searching”. <em>Proceedings of the 1984 ACM SIGMOD international conference of Management of data - SIGMOD ‘84.</em> p. 47 doi:10.1145/602259.602266. ISBN 0897911288. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:3">
-      <p>Luc Anselin, Spatial Econometrics, 1999 <a href="https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf">https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
+<p><a href="http://openlayers.org/en/v3.3.0/examples/">Here are OpenLayers 3 examples</a></p>
+
+<h3 id="d3js">D3.js</h3>
+
+<p><a href="http://d3js.org/">D3</a> is an excellent tool for visualizing spatial data, but flexes its muscles with non-spatial data. </p>
+
+<p>Spatial Data</p>
+
+<iframe class="d3" src="http://bl.ocks.org/mbostock/raw/4060606/" frameborder="0"></iframe>
+
+<p><a href="http://bl.ocks.org/mbostock/raw/4060606/">Choropleth explained here</a></p>
+
+<p>Non-spatial data</p>
+
+<iframe class="d3" src="http://bl.ocks.org/mbostock/raw/4062045/" frameborder="0"></iframe>
+
+<p><a href="http://bl.ocks.org/mbostock/4062045">Force-Directed Graph explained here</a></p>
 
 
           <!--
 					<div class="meta">
 						<p class="date-publish">
 							Published: 
-							<date class="date-pub" title="2000-12-30T00:00:00-07:00" datetime="2000-12-30T00:00:00-07:00" pubdate>
+							<date class="date-pub" title="2005-12-20T00:00:00-07:00" datetime="2005-12-20T00:00:00-07:00" pubdate>
 							<span class="month"><abbr>December</abbr></span>
-							<span class="day">30</span>
-							<span class="year">2000</span>
+							<span class="day">20</span>
+							<span class="year">2005</span>
 							</date>
 						</p>
 						<ul class="list-category list-linear">
@@ -975,8 +932,8 @@
 
   
      
-    	<li><a href="/categories.html#intro-ref">
-    		intro <span>2</span>
+    	<li><a href="/categories.html#cartography-ref">
+    		cartography <span>2</span>
     	</a></li>
     
   
@@ -991,9 +948,15 @@
 
   
      
-    	<li><a href="/tags.html#intro-ref">intro <span>2</span></a></li>
+    	<li><a href="/tags.html#cartography-ref">cartography <span>1</span></a></li>
      
-    	<li><a href="/tags.html#spatial data-ref">spatial data <span>2</span></a></li>
+    	<li><a href="/tags.html#web map-ref">web map <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#leaflet-ref">leaflet <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#openlayers-ref">openlayers <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#d3-ref">d3 <span>1</span></a></li>
     
   
 
@@ -1022,13 +985,13 @@
 					<nav class="pagination">
 						<ul>
 							
-              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/intro/intro" title="View Spatial Data">&laquo; Spatial Data</a></li>
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/data%20analysis/case-study" title="View Case Study">&laquo; Case Study</a></li>
 							
 							
 							<li class="pipe"> | </li>
 							
 							
-              <li class="next"><a class="internal" rel="next"  href="/bootcamp/data%20collection/credible-sources" title="View Credible Data Sources">Credible Data Sources &raquo;</a></li>
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/cartography/cartography" title="View Cartography">Cartography &raquo;</a></li>
 							
 						</ul>
 					</nav>
@@ -1077,7 +1040,7 @@
 		};
 	load('//platform.twitter.com/widgets.js', 'tweetjs');
 	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
-	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/intro/what" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/cartography/web-mapping" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
 	}(document, 'script'));
 </script>
 <script>

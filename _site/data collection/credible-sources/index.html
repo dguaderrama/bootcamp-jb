@@ -7,13 +7,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Is Spatial Special?</title>
+	<title>Credible Data Sources</title>
 	<meta name="author" content="Nathan Casler">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
 	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/" rel="alternate" title="Is Spatial Special?" type="application/atom+xml">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Credible Data Sources" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 	
 	<!-- Latest compiled and minified CSS -->
@@ -71,7 +71,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/intro/what" class="active">Is Spatial Special?</a></li>
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
       	
       
     
@@ -111,7 +111,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
+      	<li class="active"><a href="/bootcamp/data%20collection/credible-sources" class="active">Credible Data Sources</a></li>
       	
       
     
@@ -334,7 +334,7 @@
 			<header id="content-header">
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-						<h1 class="h2 entry-title">Is Spatial Special?</h1>
+						<h1 class="h2 entry-title">Credible Data Sources</h1>
 
 
 
@@ -358,7 +358,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/intro/what" class="active">Is Spatial Special?</a></li>
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
       	
       
     
@@ -397,7 +397,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
+      	<li class="active"><a href="/bootcamp/data%20collection/credible-sources" class="active">Credible Data Sources</a></li>
       	
       
     
@@ -625,7 +625,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/intro/what" class="active">Is Spatial Special?</a></li>
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
       	
       
     
@@ -664,7 +664,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
+      	<li class="active"><a href="/bootcamp/data%20collection/credible-sources" class="active">Credible Data Sources</a></li>
       	
       
     
@@ -875,83 +875,132 @@
 
 
 <div class="entry-content">
-  
-<h1 id="is-spatial-special">Is Spatial Special?</h1>
+  <h1 id="data-collection">Data Collection</h1>
 
-<p>There has been discussions about the nature of spatial data and whether or not there is anything special about it. Since the OGC agreed on the Simple Features for SQL specification in 1999, spatial data can be stored alongside other data types as another column in a table. However, we can see a lot of GIS professionals evangelizing the difference between spatial data and <em>regular data</em>. </p>
+<h3 id="credible-data-sources">Credible Data Sources</h3>
 
-<h2 id="do-they-have-a-point">Do they have a point?</h2>
+<p>Not all spatial data is created equal, but there is a host of quality spatial data out there if you know where to look. 
+Some elements to look at when evaluating the quality of a data product are:</p>
 
-<p>There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of forms.</p>
+<ul>
+  <li>Normalization - Do similar datasets have similar formats?</li>
+  <li>Accessibility - How can you access the data?</li>
+  <li>Accountability - Is the organization considered an authority of this type of data?</li>
+</ul>
 
-<h3 id="spatial-data-types">1. Spatial Data Types</h3>
+<p><br /></p>
 
-<p>The OGC decided on a set of Spatial data types or geometry objects in the Simple Features for SQL specification<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+<h4 id="here-are-a-few-data-sources-to-check-if-you-are-looking-for-some-spatial-data">Here are a few data sources to check if you are looking for some spatial data:</h4>
 
-<p class="center"><img src="/bootcamp//assets/images/geometryObjectModel.png" alt="geomObjModel" /></p>
+<h4 id="global-administrative-areas-gadmhttpwwwgadmorg"><a href="http://www.gadm.org">Global Administrative Areas (GADM)</a></h4>
+<p><a href="http://www.gadm.org/img/gadm2_adm1_low.png" alt="GADMN database of Global Administrative Areas"><img src="http://www.gadm.org/img/gadm2_adm1_high.png" width="250px" /></a></p>
+
+<p>“GADM is a spatial database of the location of the world’s administrative areas (or administrative boundaries) for use in GIS and similar software. Administrative areas in this database are countries and lower level subdivisions such as provinces,departmens bibhag, bundeslander,etc… GADM describes where these administrative areas are and for each area it provides some attributes, such as the name and variant names<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.”</p>
+
+<p><br /></p>
+
+<h4 id="united-states-geological-survey-usgshttpwwwusgsgov"><a href="http://www.usgs.gov">United States Geological Survey (USGS)</a></h4>
+<p><a href="http://commons.wikimedia.org/wiki/File:USGS_logo.png#mediaviewer/File:USGS_logo.png"><img alt="USGS logo.png" src="http://upload.wikimedia.org/wikipedia/commons/0/08/USGS_logo.png" height="81" width="220" /></a></p>
+
+<p>The USGS has had a long history in mapping, and has provided quality topographic data since maps were hand-drawn. The USGS can provided detailed data delimited by Quadrangle or larger extents through FTP or their EarthExplorer portal. Some notable products include:</p>
+
+<ul>
+  <li><a href="http://ned.usgs.gov">National Elevation Dataset</a></li>
+  <li><a href="http://online.wr.usgs.gov/ngpo/doq">Digital Orthophotography</a></li>
+  <li><a href="http://nhd.usgs.gov">National Hydrography Dataset</a></li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="national-aeronautics-and-space-administration-nasahttpwwwnasagov"><a href="http://www.nasa.gov">National Aeronautics and Space Administration (NASA)</a></h4>
+<p><a title="By National Aeronautics and Space Administration [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ANASA_logo.svg"><img width="128" alt="NASA logo" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/128px-NASA_logo.svg.png" /></a></p>
+
+<p>NASA is the go-to for remotely sensed data due to their history as a leader in satellite data and continued growth in data products offerings. Some useful data products are:</p>
+
+<ul>
+  <li><a href="http://gmao.gsfc.nasa.gov/merra">Modern-era Retrospective Analysis for Research and Applications (MERRA)</a></li>
+  <li><a href="http://modis/gsfc.nasa.gov">Moderate Resolution Imaging Spectoradiometer (MODIS)</a></li>
+  <li><a href="http://landsat.usgs.gov/landsat8.php">Landsat-8</a></li>
+  <li><a href="http://gcmd.gsfc.nasa.gov">Global Change Master Directory</a></li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="national-oceanic-and-atmospheric-administration-noaahttpwwwnoaagov"><a href="http://www.noaa.gov">National Oceanic and Atmospheric Administration (NOAA)</a></h4>
+<p><a href="http://commons.wikimedia.org/wiki/File:NOAA.png#mediaviewer/File:NOAA.png"><img alt="NOAA.png" src="http://upload.wikimedia.org/wikipedia/commons/3/3a/NOAA.png" height="145" width="145" /></a></p>
+
+<p>NOAA provides a variety of data products for weather and climate. NOAA has an extensive Thredds catalog of climate data available at http://www.esrl.noaa.gov/psd/thredds/calatlog/Datasets/catalog.xml using the OPeNDAP protocol.</p>
+
+<ul>
+  <li><a href="http://www.cpc.ncep.noaa.gov">Climate Prediction Center</a></li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="us-census-bureauhttpwwwcensusgov"><a href="http://www.census.gov">U.S Census Bureau</a></h4>
+<p><a href="http://commons.wikimedia.org/wiki/File:Census_Bureau_seal.svg#mediaviewer/File:Census_Bureau_seal.svg"><img alt="Census Bureau seal.svg" src="http://upload.wikimedia.org/wikipedia/commons/6/6b/Census_Bureau_seal.svg" height="145" width="145" /></a></p>
+
+<p>The U.S. Census is the authority on national demographic data and creates standardized datasets for the nation on both census tract and block level.</p>
 
 <ul>
   <li>
-    <p>Point</p>
-  </li>
-  <li>
-    <p>LineString</p>
-  </li>
-  <li>
-    <p>Polygon</p>
-  </li>
-  <li>
-    <p>Surface</p>
-  </li>
-  <li>
-    <p>Geometry Collection</p>
+    <dl>
+      <dt><a href="http://www.census.gov/geo/maps-data/data/tiger.html">Topologically Integrated Geographic Encoding and Referencing (TIGER) Products</a> </dt>
+      <dd>TIGER products are spatial extracts from the Census Bureau’s MAF/TIGER database containing features such as roads, railroads, rivers, as well as legal and statistical geographic areas. The Census Bureau offers (these products) in several file types<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.”</dd>
+    </dl>
   </li>
 </ul>
 
-<h3 id="sorting-and-indexes">2. Sorting and Indexes</h3>
+<p><br /></p>
 
-<p>Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type. </p>
+<h4 id="local-and-regional-governments">Local and regional governments</h4>
+<p>Most states maintain repositories of spatial data characteristic or pertinent to their scope. Some organizations to look for would be state geologic surveys, natural resource departments, city and county governments.</p>
 
-<p>Sorting spatial data poses an interesting problem. Do you sort from North to south? West to East? What happens if you are sorting lines or polygons that overlap?</p>
+<h3 id="consumable-services">Consumable Services</h3>
 
-<h5 id="indexing-by-proximity">Indexing by Proximity</h5>
+<p>There is a variety of methods to access spatial data. The most obvious one is downloading a dataset to local machine. This can be the easiest option if the dataset is small enough to download quickly, and the data repository is easy to find. If this is not the case, there are several other options available:</p>
 
-<p>The R-Tree index was proposed by Antoine Guttman in 1984.</p>
+<dl>
+  <dt><a href="http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1">Web Feature Service (WFS)</a> - Useful for modifying features in remote datasets</dt>
+  <dd>The WFS represents a change in the way geographic information is created, modified, and exchanged on the Internet. Rather than sharing geographic information at the file level using the File Transfer Protocol(FTP), the WFS offers direct fine-grained access to geographic information at the feature and feature property level. Web features services allow clients to only retrieve or modify the data they are seeking, rather than retrieving a file that contains the data they are seeking and possibly much more<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.
+<br /><br /></dd>
+  <dt><a href="http://www.opengeospatial.org/standards/wms">Web Map Service (WMS)</a> - Useful for visualizing remote datasets </dt>
+  <dd>The Web Map Service Interface Standard provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. The WMS response will return one or more geo-registered map images (JPEG, PNG, etc) to be display in a browser application<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>.
+<br /><br /></dd>
+  <dt><a href="http://www.opengeospatial.org/standards/wps">Web Processing Service (WPS)</a> - Utilizes remote resources for computation</dt>
+  <dd>THe WPS Standard provides rule for standardizing inputs and outputs for geospatial processing services, such as polygon overlay. The standard also defines how a client can request the execution of a process and how the output of the process is handled<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>. 
+<br /><br /></dd>
+  <dt><a href="http://www.opendap.org">OPeNDAP</a></dt>
+  <dd>OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet<sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup>. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations. </dd>
+</dl>
 
-<p>In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features. </p>
+<p>A few examples of these applications are:</p>
 
-<p><a title="By Skinkie, w:en:Radim Baca (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AR-tree.svg"><img width="512" alt="R-tree" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/R-tree.svg/512px-R-tree.svg.png" /></a></p>
-
-<h3 id="dimensions">3. Dimensions</h3>
-
-<p>Spatial Data requires at least 2 dimensions X and Y, which are traditionally held in Longitude, and Latitude. Spatial data can also require elevation(Z) and temporal (t) dimensions depending on the data. These dimension require novel methods for measure relationships between objects in multiple dimensions.</p>
-
-<h3 id="dependence">4. Dependence</h3>
-
-<blockquote>
-  <p>“Everything is related to everything else, but near things are more related than distant things” - Waldo Tobler</p>
-</blockquote>
-
-<p>Tobler’s First law of Geography is the fundamental basis of Spatial Analysis. </p>
-
-<p>This spatial dependence required the study of spatial effects and their influence on statistical studies.</p>
-
-<blockquote>
-  <p>Spatial econometrics deals with methodological concerns that follow from the explicit consideration of <em>spatial effects</em>, such as spatial autocorrelation and spatial heterogeneity.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></p>
-</blockquote>
-
-<p>Spatial autocorrelation can be seen in clustering of values in a specific region, and the change of density in a larger extent.</p>
+<ul>
+  <li><a href="http://giss.nasa.gov/tools/panoply">Panoply</a></li>
+  <li><a href="http://unidata.usr.edu/software/idv">Integrated Data Viewer</a></li>
+  <li><a href="http://www.iges.org/grads">GrADS</a></li>
+</ul>
 
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p><a href="http://portal.opengeospatial.org/files/?artifact_id=829">OpenGIS Simple Features Implementation Specification for SQL</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>http://www.gadm.org  <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:2">
-      <p>Guttman, A. (1984). “R-Trees: A Dynamic Index Structure for Spatial Searching”. <em>Proceedings of the 1984 ACM SIGMOD international conference of Management of data - SIGMOD ‘84.</em> p. 47 doi:10.1145/602259.602266. ISBN 0897911288. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+      <p>http://www.census.gov/geo/maps-data/data/tiger.html <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:3">
-      <p>Luc Anselin, Spatial Econometrics, 1999 <a href="https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf">https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+      <p>http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1 <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>http://www.opengeospatial.org/standards/wms <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>http://www.opengeospatial.org/standards/wps <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>http://www.opendap.org <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -961,10 +1010,10 @@
 					<div class="meta">
 						<p class="date-publish">
 							Published: 
-							<date class="date-pub" title="2000-12-30T00:00:00-07:00" datetime="2000-12-30T00:00:00-07:00" pubdate>
+							<date class="date-pub" title="2001-12-20T00:00:00-07:00" datetime="2001-12-20T00:00:00-07:00" pubdate>
 							<span class="month"><abbr>December</abbr></span>
-							<span class="day">30</span>
-							<span class="year">2000</span>
+							<span class="day">20</span>
+							<span class="year">2001</span>
 							</date>
 						</p>
 						<ul class="list-category list-linear">
@@ -975,8 +1024,8 @@
 
   
      
-    	<li><a href="/categories.html#intro-ref">
-    		intro <span>2</span>
+    	<li><a href="/categories.html#data collection-ref">
+    		data collection <span>2</span>
     	</a></li>
     
   
@@ -991,9 +1040,9 @@
 
   
      
-    	<li><a href="/tags.html#intro-ref">intro <span>2</span></a></li>
+    	<li><a href="/tags.html#data collection-ref">data collection <span>2</span></a></li>
      
-    	<li><a href="/tags.html#spatial data-ref">spatial data <span>2</span></a></li>
+    	<li><a href="/tags.html#data sources-ref">data sources <span>1</span></a></li>
     
   
 
@@ -1022,13 +1071,13 @@
 					<nav class="pagination">
 						<ul>
 							
-              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/intro/intro" title="View Spatial Data">&laquo; Spatial Data</a></li>
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/intro/what" title="View Is Spatial Special?">&laquo; Is Spatial Special?</a></li>
 							
 							
 							<li class="pipe"> | </li>
 							
 							
-              <li class="next"><a class="internal" rel="next"  href="/bootcamp/data%20collection/credible-sources" title="View Credible Data Sources">Credible Data Sources &raquo;</a></li>
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/data%20collection/metadata" title="View Metadata">Metadata &raquo;</a></li>
 							
 						</ul>
 					</nav>
@@ -1077,7 +1126,7 @@
 		};
 	load('//platform.twitter.com/widgets.js', 'tweetjs');
 	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
-	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/intro/what" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/data%20collection/credible-sources" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
 	}(document, 'script'));
 </script>
 <script>

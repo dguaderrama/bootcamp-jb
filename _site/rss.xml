@@ -5,8 +5,8 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-03-18T13:27:56-07:00</lastBuildDate>
-        <pubDate>2015-03-18T13:27:56-07:00</pubDate>
+        <lastBuildDate>2015-03-19T16:19:42-07:00</lastBuildDate>
+        <pubDate>2015-03-19T16:19:42-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -394,6 +394,51 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
                 <link>http://104.237.129.71/bootcamp/cartography/cartography</link>
                 <guid>http://104.237.129.71/bootcamp/cartography/cartography</guid>
                 <pubDate>2005-12-31T00:00:00-07:00</pubDate>
+        </item>
+
+        <item>
+                <title>Web Mapping</title>
+                <description>&lt;h2 id=&quot;understanding-web-mapping&quot;&gt;Understanding web mapping&lt;/h2&gt;
+
+&lt;h2 id=&quot;web-map-frameworks&quot;&gt;Web map frameworks&lt;/h2&gt;
+
+&lt;h3 id=&quot;leafletjs&quot;&gt;Leaflet.js&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://leafletjs.com/&quot;&gt;Leaflet.js&lt;/a&gt; is a light-weight open-source JavaScript library. This is the ‘easiest’ framework to develop.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Leaflet is a modern open-source JavaScript library for mobile-friendly interactive maps. It is developed by Vladimir Agafonkin with a team of dedicated contributors. Weighing just about 33 KB of JS, it has all the features most developers ever need for online maps.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;iframe class=&quot;leaflet&quot; src=&quot;http://leafletjs.com/examples/choropleth-example.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;openlayes-3&quot;&gt;OpenLayes 3&lt;/h3&gt;
+
+&lt;p&gt;OpenLayers is an open-source JavaScript library.&lt;/p&gt;
+
+&lt;iframe class=&quot;openlayers&quot; src=&quot;http://openlayers.org/en/v3.2.1/examples/earthquake-clusters.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://openlayers.org/en/v3.3.0/examples/&quot;&gt;Here are OpenLayers 3 examples&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;d3js&quot;&gt;D3.js&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://d3js.org/&quot;&gt;D3&lt;/a&gt; is an excellent tool for visualizing spatial data, but flexes its muscles with non-spatial data. &lt;/p&gt;
+
+&lt;p&gt;Spatial Data&lt;/p&gt;
+
+&lt;iframe class=&quot;d3&quot; src=&quot;http://bl.ocks.org/mbostock/raw/4060606/&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bl.ocks.org/mbostock/raw/4060606/&quot;&gt;Choropleth explained here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Non-spatial data&lt;/p&gt;
+
+&lt;iframe class=&quot;d3&quot; src=&quot;http://bl.ocks.org/mbostock/raw/4062045/&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bl.ocks.org/mbostock/4062045&quot;&gt;Force-Directed Graph explained here&lt;/a&gt;&lt;/p&gt;
+</description>
+                <link>http://104.237.129.71/bootcamp/cartography/web-mapping</link>
+                <guid>http://104.237.129.71/bootcamp/cartography/web-mapping</guid>
+                <pubDate>2005-12-20T00:00:00-07:00</pubDate>
         </item>
 
         <item>
@@ -1023,11 +1068,6 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 &lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/training_manual/introduction/preparation.html&quot;&gt;http://docs.qgis.org/2.6/en/docs/training_manual/introduction/preparation.html&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;this is another note:&lt;br /&gt;
-discuss meta data?&lt;/p&gt;
-&lt;/blockquote&gt;
-
 &lt;h1 id=&quot;qgis&quot;&gt;QGIS&lt;/h1&gt;
 
 &lt;p&gt;&lt;a title=&quot;By User:Anitagraser on QGIS Wiki, User:Anitagraser (http://www.qgis.org/wiki/File:QGis_Logo.png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AQGis_Logo.png&quot;&gt;&lt;img width=&quot;128&quot; alt=&quot;QGis Logo&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/128px-QGis_Logo.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -1138,11 +1178,6 @@ discuss meta data?&lt;/p&gt;
 
 &lt;p&gt;Attribute data can be edited by enabling and edit session with the Toggle Editing Mode icon (top left).&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;note:&lt;br /&gt;
-add simple lesson here?&lt;/p&gt;
-&lt;/blockquote&gt;
-
 &lt;h4 id=&quot;raster&quot;&gt;Raster&lt;/h4&gt;
 
 &lt;p&gt;QGIS uses the GDAL library to read and write raster data formats while GRASS raster support is provided by a native QGIS provider plugin&lt;sup id=&quot;fnref:2:3&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. &lt;a href=&quot;http://www.gdal.org/formats_list.html&quot;&gt;Here is the complete list of GDAL raster formats&lt;/a&gt;.&lt;/p&gt;
@@ -1155,11 +1190,6 @@ add simple lesson here?&lt;/p&gt;
 
 &lt;p&gt;Spatial functions are accessable through &lt;em&gt;Menu Bar &amp;gt; Vector/Raster&lt;/em&gt;. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy. &lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;this is a note:
-do we add simple raster and vector operations here, or save it for lessons?&lt;/p&gt;
-&lt;/blockquote&gt;
-
 &lt;h3 id=&quot;composing-maps-for-printnon-web-based&quot;&gt;Composing Maps (for print/non-web-based)&lt;/h3&gt;
 
 &lt;p&gt;This method is ideal for exporting your work for a research paper, admiring your work, and such. Developing a web map for dissimenating your data is a bit more involved and is discussed in the &lt;a href=&quot;/bootcamp/visualization/leaflet&quot;&gt;Publish Your Data to a Web Mapi/LeafletJS&lt;/a&gt; section. Also, to export data with styles see &lt;a href=&quot;this-is-not-a-link&quot;&gt;This section link&lt;/a&gt;.&lt;/p&gt;
@@ -1167,11 +1197,6 @@ do we add simple raster and vector operations here, or save it for lessons?&lt;/
 &lt;p&gt;Begin by opening the Print Composer: &lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/compose-map.png&quot; alt=&quot;Create new Print Composer workspace&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;this is a note:&lt;br /&gt;
-this is just and idea for lessons&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;h3 id=&quot;lessons&quot;&gt;Lessons&lt;/h3&gt;
 
@@ -1200,8 +1225,8 @@ this is just and idea for lessons&lt;/p&gt;
 &lt;p&gt;Data sources:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;US Census - American Fact Finder (real estate): http://factfinder.census.gov/&lt;/li&gt;
-  &lt;li&gt;US Census - TIGER/Line (shapefiles and geodatabases): http://www.census.gov/geo/maps-data/data/tiger-line.html&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://factfinder.census.gov/&quot;&gt;US Census - American Fact Finder (real estate)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger-line.html&quot;&gt;US Census - TIGER/Line (shapefiles and geodatabases)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Steps: &lt;/p&gt;
@@ -1301,7 +1326,7 @@ this is just and idea for lessons&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;GDAL’s rasterize is a prefered method. This can be accessed through &lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Conversion &amp;gt; Rasterize (Vector to raster)&lt;/em&gt;. Notice how the parameters have been diabled in the example below. There’s a specific reason for this. Complete the parameter inputs: &lt;em&gt;Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000&lt;/em&gt;. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Click the edit icon (pencil) locate near the block of code&lt;/em&gt;. This enables you to add those non-QGIS parameters.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Add the line of code &lt;code&gt;-at -a_nodata 0&lt;/code&gt;&lt;/em&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt;. &lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Add the line of code&lt;/em&gt; &lt;code&gt;-at -a_nodata 0&lt;/code&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt;. &lt;/li&gt;
       &lt;li&gt;&lt;em&gt;-at&lt;/em&gt;: Enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;-a_nodata $value&lt;/em&gt;: Assign a specified nodata value to output bands - this prevents pixels with no data from being written into the output raster.&lt;sup id=&quot;fnref:3:1&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://www.gdal.org/gdal_rasterize.html&quot;&gt;Here’s a link to the gdal_rasterize parameters&lt;/a&gt;.&lt;br /&gt;
@@ -1338,16 +1363,21 @@ this is just and idea for lessons&lt;/p&gt;
   &lt;li&gt;join census housing (home values) to census tracts (shapefile)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Research question: Where are high-risk landslide/mass-wasting areas near (select region).&lt;/p&gt;
+&lt;p&gt;Objective: Quantify and extract home values within high-risk landslide/mass-wasting areas.&lt;/p&gt;
 
-&lt;p&gt;Data: 
- * Census housing data
- * Census tract shapefile&lt;/p&gt;
+&lt;p&gt;Data: &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Census housing data&lt;/li&gt;
+  &lt;li&gt;Census tract shapefile&lt;/li&gt;
+  &lt;li&gt;streams and rivers &lt;a href=&quot;http://www.ecy.wa.gov/services/gis/data/inlandWaters/sma/sma-streams-adopt.htm&quot;&gt;meta data &amp;amp; data download&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://earthquake.usgs.gov/hazards/qfaults&quot;&gt;Quaternary Faults data and meta data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx&quot;&gt;Seismogenic Features -  NEED GDAL filegb driver&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;High-risk area =&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;fo further than 50m from city boundaries&lt;/li&gt;
   &lt;li&gt;within 100m of fault lines&lt;/li&gt;
   &lt;li&gt;within 50m of rivers/streams&lt;/li&gt;
   &lt;li&gt;within soft geologic areas&lt;/li&gt;
@@ -1356,6 +1386,12 @@ this is just and idea for lessons&lt;/p&gt;
 &lt;p&gt;Steps: &lt;/p&gt;
 
 &lt;ol&gt;
+  &lt;li&gt;Import vector data and configure workspace/projecton:
+    &lt;ul&gt;
+      &lt;li&gt;rivers.shp&lt;/li&gt;
+      &lt;li&gt;faults.shp&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;buffer fault lines and rivers/streams&lt;/li&gt;
   &lt;li&gt;merge buffered fault lines with rivers/streams&lt;/li&gt;
   &lt;li&gt;join census housing data (.csv) to census tracts (shapefile)
@@ -1368,6 +1404,7 @@ this is just and idea for lessons&lt;/p&gt;
       &lt;li&gt;Check output - confirm housing data is joined to tracts.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;normalize housing data - tract house count X median tract house value = total tract home value.&lt;/li&gt;
   &lt;li&gt;intersect buffered-merged-joined data with reclassified-rasterized geology layer&lt;/li&gt;
   &lt;li&gt;data will be used in Raster Analysis&lt;/li&gt;
 &lt;/ol&gt;
@@ -1642,7 +1679,47 @@ this is just and idea for lessons&lt;/p&gt;
         </item>
 
         <item>
-                <title>Data Collection</title>
+                <title>Metadata</title>
+                <description>&lt;h2 id=&quot;understanding-the-data-youve-just-gathered&quot;&gt;Understanding the data you’ve just gathered&lt;/h2&gt;
+
+&lt;p&gt;Metadata is a powerful source of data used in all areas of science and technology. This data (should) explain eveything about the data you’ve just gathered; how it was collected, accuracy of the data, who and when it was collected, etc. Good metadata adds more credibility to the data. Having an understanding of the importance of meta data will help you produce well documented data about data.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-importance-of-spatial-data-metadata&quot;&gt;The importance of spatial data metadata&lt;/h3&gt;
+
+&lt;p&gt;Spatial data without metadata isn’t useless but it doesn’t help you get too far. &lt;/p&gt;
+
+&lt;h3 id=&quot;viewing-metadata-in-qgis&quot;&gt;Viewing metadata in QGIS&lt;/h3&gt;
+
+&lt;p&gt;Below are some meta data properties you are able to view in QGIS:&lt;/p&gt;
+
+&lt;p&gt;View Metadata in QGIS &lt;em&gt;Right-click layer &amp;gt; Properties &amp;gt; Metadata&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;General: &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Storage type&lt;/li&gt;
+  &lt;li&gt;Description of provider&lt;/li&gt;
+  &lt;li&gt;Layer source&lt;/li&gt;
+  &lt;li&gt;Geometry type&lt;/li&gt;
+  &lt;li&gt;Number of features in layer&lt;/li&gt;
+  &lt;li&gt;Editing capabilities&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Extend: &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;(xMin, yMin), (xMax,yMax)&lt;/li&gt;
+  &lt;li&gt;Spatial Reference System&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+                <link>http://104.237.129.71/bootcamp/data%20collection/metadata</link>
+                <guid>http://104.237.129.71/bootcamp/data%20collection/metadata</guid>
+                <pubDate>2001-12-31T00:00:00-07:00</pubDate>
+        </item>
+
+        <item>
+                <title>Credible Data Sources</title>
                 <description>&lt;h1 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h1&gt;
 
 &lt;h3 id=&quot;credible-data-sources&quot;&gt;Credible Data Sources&lt;/h3&gt;
@@ -1773,9 +1850,9 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-                <link>http://104.237.129.71/bootcamp/data%20collection/data-collection</link>
-                <guid>http://104.237.129.71/bootcamp/data%20collection/data-collection</guid>
-                <pubDate>2001-12-31T00:00:00-07:00</pubDate>
+                <link>http://104.237.129.71/bootcamp/data%20collection/credible-sources</link>
+                <guid>http://104.237.129.71/bootcamp/data%20collection/credible-sources</guid>
+                <pubDate>2001-12-20T00:00:00-07:00</pubDate>
         </item>
 
         <item>

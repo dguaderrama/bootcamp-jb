@@ -1,5 +1,5 @@
 ---
-title: "Data Collection"
+title: "Credible Data Sources"
 layout: post
 category : Data Collection
 tagline: "Supporting tagline"

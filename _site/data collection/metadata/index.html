@@ -7,13 +7,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Data Collection</title>
+	<title>Metadata</title>
 	<meta name="author" content="Nathan Casler">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
 	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/" rel="alternate" title="Data Collection" type="application/atom+xml">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Metadata" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 	
 	<!-- Latest compiled and minified CSS -->
@@ -103,7 +103,15 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/data%20collection/data-collection" class="active">Data Collection</a></li>
+      	<li class="active"><a href="/bootcamp/data%20collection/metadata" class="active">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
       	
       
     
@@ -220,6 +228,14 @@
       
     
   
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
 
 
 
@@ -318,7 +334,7 @@
 			<header id="content-header">
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-						<h1 class="h2 entry-title">Data Collection</h1>
+						<h1 class="h2 entry-title">Metadata</h1>
 
 
 
@@ -373,7 +389,15 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/data%20collection/data-collection" class="active">Data Collection</a></li>
+      	<li class="active"><a href="/bootcamp/data%20collection/metadata" class="active">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
       	
       
     
@@ -482,6 +506,14 @@
       
       	
       	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/web-mapping">Web Mapping</a></li>
       	
       
     
@@ -624,7 +656,15 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/data%20collection/data-collection" class="active">Data Collection</a></li>
+      	<li class="active"><a href="/bootcamp/data%20collection/metadata" class="active">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
       	
       
     
@@ -737,6 +777,14 @@
       
     
   
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
 
 
 
@@ -827,135 +875,38 @@
 
 
 <div class="entry-content">
-  <h1 id="data-collection">Data Collection</h1>
+  <h2 id="understanding-the-data-youve-just-gathered">Understanding the data you’ve just gathered</h2>
 
-<h3 id="credible-data-sources">Credible Data Sources</h3>
+<p>Metadata is a powerful source of data used in all areas of science and technology. This data (should) explain eveything about the data you’ve just gathered; how it was collected, accuracy of the data, who and when it was collected, etc. Good metadata adds more credibility to the data. Having an understanding of the importance of meta data will help you produce well documented data about data.</p>
 
-<p>Not all spatial data is created equal, but there is a host of quality spatial data out there if you know where to look. 
-Some elements to look at when evaluating the quality of a data product are:</p>
+<h3 id="the-importance-of-spatial-data-metadata">The importance of spatial data metadata</h3>
 
-<ul>
-  <li>Normalization - Do similar datasets have similar formats?</li>
-  <li>Accessibility - How can you access the data?</li>
-  <li>Accountability - Is the organization considered an authority of this type of data?</li>
-</ul>
+<p>Spatial data without metadata isn’t useless but it doesn’t help you get too far. </p>
 
-<p><br /></p>
+<h3 id="viewing-metadata-in-qgis">Viewing metadata in QGIS</h3>
 
-<h4 id="here-are-a-few-data-sources-to-check-if-you-are-looking-for-some-spatial-data">Here are a few data sources to check if you are looking for some spatial data:</h4>
+<p>Below are some meta data properties you are able to view in QGIS:</p>
 
-<h4 id="global-administrative-areas-gadmhttpwwwgadmorg"><a href="http://www.gadm.org">Global Administrative Areas (GADM)</a></h4>
-<p><a href="http://www.gadm.org/img/gadm2_adm1_low.png" alt="GADMN database of Global Administrative Areas"><img src="http://www.gadm.org/img/gadm2_adm1_high.png" width="250px" /></a></p>
+<p>View Metadata in QGIS <em>Right-click layer &gt; Properties &gt; Metadata</em></p>
 
-<p>“GADM is a spatial database of the location of the world’s administrative areas (or administrative boundaries) for use in GIS and similar software. Administrative areas in this database are countries and lower level subdivisions such as provinces,departmens bibhag, bundeslander,etc… GADM describes where these administrative areas are and for each area it provides some attributes, such as the name and variant names<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.”</p>
-
-<p><br /></p>
-
-<h4 id="united-states-geological-survey-usgshttpwwwusgsgov"><a href="http://www.usgs.gov">United States Geological Survey (USGS)</a></h4>
-<p><a href="http://commons.wikimedia.org/wiki/File:USGS_logo.png#mediaviewer/File:USGS_logo.png"><img alt="USGS logo.png" src="http://upload.wikimedia.org/wikipedia/commons/0/08/USGS_logo.png" height="81" width="220" /></a></p>
-
-<p>The USGS has had a long history in mapping, and has provided quality topographic data since maps were hand-drawn. The USGS can provided detailed data delimited by Quadrangle or larger extents through FTP or their EarthExplorer portal. Some notable products include:</p>
+<p>General: </p>
 
 <ul>
-  <li><a href="http://ned.usgs.gov">National Elevation Dataset</a></li>
-  <li><a href="http://online.wr.usgs.gov/ngpo/doq">Digital Orthophotography</a></li>
-  <li><a href="http://nhd.usgs.gov">National Hydrography Dataset</a></li>
+  <li>Storage type</li>
+  <li>Description of provider</li>
+  <li>Layer source</li>
+  <li>Geometry type</li>
+  <li>Number of features in layer</li>
+  <li>Editing capabilities</li>
 </ul>
 
-<p><br /></p>
-
-<h4 id="national-aeronautics-and-space-administration-nasahttpwwwnasagov"><a href="http://www.nasa.gov">National Aeronautics and Space Administration (NASA)</a></h4>
-<p><a title="By National Aeronautics and Space Administration [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ANASA_logo.svg"><img width="128" alt="NASA logo" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/128px-NASA_logo.svg.png" /></a></p>
-
-<p>NASA is the go-to for remotely sensed data due to their history as a leader in satellite data and continued growth in data products offerings. Some useful data products are:</p>
+<p>Extend: </p>
 
 <ul>
-  <li><a href="http://gmao.gsfc.nasa.gov/merra">Modern-era Retrospective Analysis for Research and Applications (MERRA)</a></li>
-  <li><a href="http://modis/gsfc.nasa.gov">Moderate Resolution Imaging Spectoradiometer (MODIS)</a></li>
-  <li><a href="http://landsat.usgs.gov/landsat8.php">Landsat-8</a></li>
-  <li><a href="http://gcmd.gsfc.nasa.gov">Global Change Master Directory</a></li>
+  <li>(xMin, yMin), (xMax,yMax)</li>
+  <li>Spatial Reference System</li>
 </ul>
 
-<p><br /></p>
-
-<h4 id="national-oceanic-and-atmospheric-administration-noaahttpwwwnoaagov"><a href="http://www.noaa.gov">National Oceanic and Atmospheric Administration (NOAA)</a></h4>
-<p><a href="http://commons.wikimedia.org/wiki/File:NOAA.png#mediaviewer/File:NOAA.png"><img alt="NOAA.png" src="http://upload.wikimedia.org/wikipedia/commons/3/3a/NOAA.png" height="145" width="145" /></a></p>
-
-<p>NOAA provides a variety of data products for weather and climate. NOAA has an extensive Thredds catalog of climate data available at http://www.esrl.noaa.gov/psd/thredds/calatlog/Datasets/catalog.xml using the OPeNDAP protocol.</p>
-
-<ul>
-  <li><a href="http://www.cpc.ncep.noaa.gov">Climate Prediction Center</a></li>
-</ul>
-
-<p><br /></p>
-
-<h4 id="us-census-bureauhttpwwwcensusgov"><a href="http://www.census.gov">U.S Census Bureau</a></h4>
-<p><a href="http://commons.wikimedia.org/wiki/File:Census_Bureau_seal.svg#mediaviewer/File:Census_Bureau_seal.svg"><img alt="Census Bureau seal.svg" src="http://upload.wikimedia.org/wikipedia/commons/6/6b/Census_Bureau_seal.svg" height="145" width="145" /></a></p>
-
-<p>The U.S. Census is the authority on national demographic data and creates standardized datasets for the nation on both census tract and block level.</p>
-
-<ul>
-  <li>
-    <dl>
-      <dt><a href="http://www.census.gov/geo/maps-data/data/tiger.html">Topologically Integrated Geographic Encoding and Referencing (TIGER) Products</a> </dt>
-      <dd>TIGER products are spatial extracts from the Census Bureau’s MAF/TIGER database containing features such as roads, railroads, rivers, as well as legal and statistical geographic areas. The Census Bureau offers (these products) in several file types<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.”</dd>
-    </dl>
-  </li>
-</ul>
-
-<p><br /></p>
-
-<h4 id="local-and-regional-governments">Local and regional governments</h4>
-<p>Most states maintain repositories of spatial data characteristic or pertinent to their scope. Some organizations to look for would be state geologic surveys, natural resource departments, city and county governments.</p>
-
-<h3 id="consumable-services">Consumable Services</h3>
-
-<p>There is a variety of methods to access spatial data. The most obvious one is downloading a dataset to local machine. This can be the easiest option if the dataset is small enough to download quickly, and the data repository is easy to find. If this is not the case, there are several other options available:</p>
-
-<dl>
-  <dt><a href="http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1">Web Feature Service (WFS)</a> - Useful for modifying features in remote datasets</dt>
-  <dd>The WFS represents a change in the way geographic information is created, modified, and exchanged on the Internet. Rather than sharing geographic information at the file level using the File Transfer Protocol(FTP), the WFS offers direct fine-grained access to geographic information at the feature and feature property level. Web features services allow clients to only retrieve or modify the data they are seeking, rather than retrieving a file that contains the data they are seeking and possibly much more<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.
-<br /><br /></dd>
-  <dt><a href="http://www.opengeospatial.org/standards/wms">Web Map Service (WMS)</a> - Useful for visualizing remote datasets </dt>
-  <dd>The Web Map Service Interface Standard provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. The WMS response will return one or more geo-registered map images (JPEG, PNG, etc) to be display in a browser application<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>.
-<br /><br /></dd>
-  <dt><a href="http://www.opengeospatial.org/standards/wps">Web Processing Service (WPS)</a> - Utilizes remote resources for computation</dt>
-  <dd>THe WPS Standard provides rule for standardizing inputs and outputs for geospatial processing services, such as polygon overlay. The standard also defines how a client can request the execution of a process and how the output of the process is handled<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>. 
-<br /><br /></dd>
-  <dt><a href="http://www.opendap.org">OPeNDAP</a></dt>
-  <dd>OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet<sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup>. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations. </dd>
-</dl>
-
-<p>A few examples of these applications are:</p>
-
-<ul>
-  <li><a href="http://giss.nasa.gov/tools/panoply">Panoply</a></li>
-  <li><a href="http://unidata.usr.edu/software/idv">Integrated Data Viewer</a></li>
-  <li><a href="http://www.iges.org/grads">GrADS</a></li>
-</ul>
-
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p>http://www.gadm.org  <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:2">
-      <p>http://www.census.gov/geo/maps-data/data/tiger.html <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:3">
-      <p>http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1 <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:4">
-      <p>http://www.opengeospatial.org/standards/wms <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:5">
-      <p>http://www.opengeospatial.org/standards/wps <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:6">
-      <p>http://www.opendap.org <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
 
 
           <!--
@@ -977,7 +928,7 @@ Some elements to look at when evaluating the quality of a data product are:</p>
   
      
     	<li><a href="/categories.html#data collection-ref">
-    		data collection <span>1</span>
+    		data collection <span>2</span>
     	</a></li>
     
   
@@ -992,9 +943,9 @@ Some elements to look at when evaluating the quality of a data product are:</p>
 
   
      
-    	<li><a href="/tags.html#data collection-ref">data collection <span>1</span></a></li>
+    	<li><a href="/tags.html#data collection-ref">data collection <span>2</span></a></li>
      
-    	<li><a href="/tags.html#data sources-ref">data sources <span>1</span></a></li>
+    	<li><a href="/tags.html#metadata-ref">metadata <span>1</span></a></li>
     
   
 
@@ -1023,7 +974,7 @@ Some elements to look at when evaluating the quality of a data product are:</p>
 					<nav class="pagination">
 						<ul>
 							
-              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/intro/what" title="View Is Spatial Special?">&laquo; Is Spatial Special?</a></li>
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/data%20collection/credible-sources" title="View Credible Data Sources">&laquo; Credible Data Sources</a></li>
 							
 							
 							<li class="pipe"> | </li>
@@ -1062,7 +1013,7 @@ Some elements to look at when evaluating the quality of a data product are:</p>
 				</div><!-- misc -->
 				<p class="licence">
         <!--					Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>-->
-					Powered by coffee and <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
 				</p>
 			</div><!-- unit-foot-inner -->
 		</div><!-- unit-foot -->
@@ -1078,7 +1029,7 @@ Some elements to look at when evaluating the quality of a data product are:</p>
 		};
 	load('//platform.twitter.com/widgets.js', 'tweetjs');
 	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
-	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/data%20collection/data-collection" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/data%20collection/metadata" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
 	}(document, 'script'));
 </script>
 <script>

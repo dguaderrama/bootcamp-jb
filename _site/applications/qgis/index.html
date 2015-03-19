@@ -103,7 +103,15 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20collection/data-collection">Data Collection</a></li>
+      	<li><a href="/bootcamp/data%20collection/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
       	
       
     
@@ -216,6 +224,14 @@
       
       	
       	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/web-mapping">Web Mapping</a></li>
       	
       
     
@@ -373,7 +389,15 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20collection/data-collection">Data Collection</a></li>
+      	<li><a href="/bootcamp/data%20collection/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
       	
       
     
@@ -482,6 +506,14 @@
       
       	
       	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/web-mapping">Web Mapping</a></li>
       	
       
     
@@ -624,7 +656,15 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20collection/data-collection">Data Collection</a></li>
+      	<li><a href="/bootcamp/data%20collection/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
       	
       
     
@@ -737,6 +777,14 @@
       
     
   
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
 
 
 
@@ -832,11 +880,6 @@
   <p>This is a note:<br /> 
 some ideas for QGIS tutorials:<br />
 <a href="http://docs.qgis.org/2.6/en/docs/training_manual/introduction/preparation.html">http://docs.qgis.org/2.6/en/docs/training_manual/introduction/preparation.html</a></p>
-</blockquote>
-
-<blockquote>
-  <p>this is another note:<br />
-discuss meta data?</p>
 </blockquote>
 
 <h1 id="qgis">QGIS</h1>
@@ -949,11 +992,6 @@ discuss meta data?</p>
 
 <p>Attribute data can be edited by enabling and edit session with the Toggle Editing Mode icon (top left).</p>
 
-<blockquote>
-  <p>note:<br />
-add simple lesson here?</p>
-</blockquote>
-
 <h4 id="raster">Raster</h4>
 
 <p>QGIS uses the GDAL library to read and write raster data formats while GRASS raster support is provided by a native QGIS provider plugin<sup id="fnref:2:3"><a href="#fn:2" class="footnote">1</a></sup>. <a href="http://www.gdal.org/formats_list.html">Here is the complete list of GDAL raster formats</a>.</p>
@@ -966,11 +1004,6 @@ add simple lesson here?</p>
 
 <p>Spatial functions are accessable through <em>Menu Bar &gt; Vector/Raster</em>. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy. </p>
 
-<blockquote>
-  <p>this is a note:
-do we add simple raster and vector operations here, or save it for lessons?</p>
-</blockquote>
-
 <h3 id="composing-maps-for-printnon-web-based">Composing Maps (for print/non-web-based)</h3>
 
 <p>This method is ideal for exporting your work for a research paper, admiring your work, and such. Developing a web map for dissimenating your data is a bit more involved and is discussed in the <a href="/bootcamp/visualization/leaflet">Publish Your Data to a Web Mapi/LeafletJS</a> section. Also, to export data with styles see <a href="this-is-not-a-link">This section link</a>.</p>
@@ -978,11 +1011,6 @@ do we add simple raster and vector operations here, or save it for lessons?</p>
 <p>Begin by opening the Print Composer: </p>
 
 <p><img src="/bootcamp/assets/images/compose-map.png" alt="Create new Print Composer workspace" /></p>
-
-<blockquote>
-  <p>this is a note:<br />
-this is just and idea for lessons</p>
-</blockquote>
 
 <h3 id="lessons">Lessons</h3>
 
@@ -1011,8 +1039,8 @@ this is just and idea for lessons</p>
 <p>Data sources:</p>
 
 <ul>
-  <li>US Census - American Fact Finder (real estate): http://factfinder.census.gov/</li>
-  <li>US Census - TIGER/Line (shapefiles and geodatabases): http://www.census.gov/geo/maps-data/data/tiger-line.html</li>
+  <li><a href="http://factfinder.census.gov/">US Census - American Fact Finder (real estate)</a></li>
+  <li><a href="http://www.census.gov/geo/maps-data/data/tiger-line.html">US Census - TIGER/Line (shapefiles and geodatabases)</a></li>
 </ul>
 
 <p>Steps: </p>
@@ -1112,7 +1140,7 @@ this is just and idea for lessons</p>
     <ul>
       <li>GDAL’s rasterize is a prefered method. This can be accessed through <em>Menu Bar &gt; Raster &gt; Conversion &gt; Rasterize (Vector to raster)</em>. Notice how the parameters have been diabled in the example below. There’s a specific reason for this. Complete the parameter inputs: <em>Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000</em>. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.</li>
       <li><em>Click the edit icon (pencil) locate near the block of code</em>. This enables you to add those non-QGIS parameters.</li>
-      <li><em>Add the line of code <code>-at -a_nodata 0</code></em> just after <code>gdal_rasterize</code>. </li>
+      <li><em>Add the line of code</em> <code>-at -a_nodata 0</code> just after <code>gdal_rasterize</code>. </li>
       <li><em>-at</em>: Enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.<sup id="fnref:3"><a href="#fn:3" class="footnote">2</a></sup></li>
       <li><em>-a_nodata $value</em>: Assign a specified nodata value to output bands - this prevents pixels with no data from being written into the output raster.<sup id="fnref:3:1"><a href="#fn:3" class="footnote">2</a></sup></li>
       <li><a href="http://www.gdal.org/gdal_rasterize.html">Here’s a link to the gdal_rasterize parameters</a>.<br />
@@ -1149,16 +1177,21 @@ this is just and idea for lessons</p>
   <li>join census housing (home values) to census tracts (shapefile)</li>
 </ul>
 
-<p>Research question: Where are high-risk landslide/mass-wasting areas near (select region).</p>
+<p>Objective: Quantify and extract home values within high-risk landslide/mass-wasting areas.</p>
 
-<p>Data: 
- * Census housing data
- * Census tract shapefile</p>
+<p>Data: </p>
+
+<ul>
+  <li>Census housing data</li>
+  <li>Census tract shapefile</li>
+  <li>streams and rivers <a href="http://www.ecy.wa.gov/services/gis/data/inlandWaters/sma/sma-streams-adopt.htm">meta data &amp; data download</a></li>
+  <li><a href="http://earthquake.usgs.gov/hazards/qfaults">Quaternary Faults data and meta data</a></li>
+  <li><a href="http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx">Seismogenic Features -  NEED GDAL filegb driver</a></li>
+</ul>
 
 <p>High-risk area =</p>
 
 <ul>
-  <li>fo further than 50m from city boundaries</li>
   <li>within 100m of fault lines</li>
   <li>within 50m of rivers/streams</li>
   <li>within soft geologic areas</li>
@@ -1167,6 +1200,12 @@ this is just and idea for lessons</p>
 <p>Steps: </p>
 
 <ol>
+  <li>Import vector data and configure workspace/projecton:
+    <ul>
+      <li>rivers.shp</li>
+      <li>faults.shp</li>
+    </ul>
+  </li>
   <li>buffer fault lines and rivers/streams</li>
   <li>merge buffered fault lines with rivers/streams</li>
   <li>join census housing data (.csv) to census tracts (shapefile)
@@ -1179,6 +1218,7 @@ this is just and idea for lessons</p>
       <li>Check output - confirm housing data is joined to tracts.</li>
     </ul>
   </li>
+  <li>normalize housing data - tract house count X median tract house value = total tract home value.</li>
   <li>intersect buffered-merged-joined data with reclassified-rasterized geology layer</li>
   <li>data will be used in Raster Analysis</li>
 </ol>
@@ -1372,7 +1412,7 @@ this is just and idea for lessons</p>
 				</div><!-- misc -->
 				<p class="licence">
         <!--					Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>-->
-					Powered by coffee and <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
 				</p>
 			</div><!-- unit-foot-inner -->
 		</div><!-- unit-foot -->
