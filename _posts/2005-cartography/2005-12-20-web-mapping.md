@@ -2,9 +2,11 @@
 title: "Web Mapping"
 layout: post
 category : Cartography
-tagline: "interactive web mapping"
+tagline: "interactive web maps"
 tags : [cartography, web map, leaflet, openlayers, d3]
 ---
+
+{% include JB/setup %}
 
 ## Understanding web mapping
 
@@ -14,13 +16,16 @@ tags : [cartography, web map, leaflet, openlayers, d3]
 
 ### Leaflet.js
 
-[Leaflet.js](http://leafletjs.com/) is a light-weight open-source JavaScript library. This is the 'easiest' framework to develop.
+[Leaflet.js](http://leafletjs.com/) is a light-weight open-source JavaScript library. This is the 'easiest' framework to use for developing web maps.
 
 > Leaflet is a modern open-source JavaScript library for mobile-friendly interactive maps. It is developed by Vladimir Agafonkin with a team of dedicated contributors. Weighing just about 33 KB of JS, it has all the features most developers ever need for online maps.
 
 <iframe class="leaflet" src="http://leafletjs.com/examples/choropleth-example.html" frameborder="0"></iframe>
 
-### OpenLayes 3
+
+[Here's a list of tile map service (TMS) providers](http://leaflet-extras.github.io/leaflet-providers/preview/). Nearly all TMS providers are free for personal use.
+
+### OpenLayers 3
 
 OpenLayers is an open-source JavaScript library.
 
@@ -43,3 +48,21 @@ Non-spatial data
 <iframe class="d3" src="http://bl.ocks.org/mbostock/raw/4062045/" frameborder="0"></iframe>
 
 [Force-Directed Graph explained here](http://bl.ocks.org/mbostock/4062045)
+
+
+## Leaflet.js basic tutorials
+
+Read below for basic Leaflet.js tutorials. Most of the code can be 'easily' figured out by reading the parameters already set. Basic knowledge of HTML and CSS are a plus, and basics of JavaScript will help you develop interactive maps. 
+
+[View the Leaflet.js API here](http://leafletjs.com/reference.html)
+
+### qgis2leaf
+
+A simple user-friendly method of creating a basic Leaflet with a layer through QGIS. [See the GitHub repository here](https://github.com/geolicious/qgis2leaf).
+
+1. Open QGIS and install qgis2leaf plugin:
+  * <em>Menu Bar > Plugins > Manage and Install PLugins > Search 'qgis2leaf'</em>
+1. Add vector layer. 
+  * NOTE: vector data is stored as points (with lines connecting lines, polylines, and polygons). The output of a 90MB shapefile to [GeoJSON](http://geojson.org/) is nearly 300MB (this will vary, however). Understanding your data beforehand will help you in the long run. See [Data Wrangling]({{site.baseurl}}/data wrangling/data-wrangling/) 
+
+

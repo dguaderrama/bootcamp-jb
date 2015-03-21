@@ -5,8 +5,8 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-03-19T16:19:42-07:00</lastBuildDate>
-        <pubDate>2015-03-19T16:19:42-07:00</pubDate>
+        <lastBuildDate>2015-03-20T17:14:30-07:00</lastBuildDate>
+        <pubDate>2015-03-20T17:14:30-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -398,13 +398,14 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
         <item>
                 <title>Web Mapping</title>
-                <description>&lt;h2 id=&quot;understanding-web-mapping&quot;&gt;Understanding web mapping&lt;/h2&gt;
+                <description>
+&lt;h2 id=&quot;understanding-web-mapping&quot;&gt;Understanding web mapping&lt;/h2&gt;
 
 &lt;h2 id=&quot;web-map-frameworks&quot;&gt;Web map frameworks&lt;/h2&gt;
 
 &lt;h3 id=&quot;leafletjs&quot;&gt;Leaflet.js&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://leafletjs.com/&quot;&gt;Leaflet.js&lt;/a&gt; is a light-weight open-source JavaScript library. This is the ‘easiest’ framework to develop.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://leafletjs.com/&quot;&gt;Leaflet.js&lt;/a&gt; is a light-weight open-source JavaScript library. This is the ‘easiest’ framework to use for developing web maps.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Leaflet is a modern open-source JavaScript library for mobile-friendly interactive maps. It is developed by Vladimir Agafonkin with a team of dedicated contributors. Weighing just about 33 KB of JS, it has all the features most developers ever need for online maps.&lt;/p&gt;
@@ -412,7 +413,9 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;iframe class=&quot;leaflet&quot; src=&quot;http://leafletjs.com/examples/choropleth-example.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
-&lt;h3 id=&quot;openlayes-3&quot;&gt;OpenLayes 3&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://leaflet-extras.github.io/leaflet-providers/preview/&quot;&gt;Here’s a list of tile map service (TMS) providers&lt;/a&gt;. Nearly all TMS providers are free for personal use.&lt;/p&gt;
+
+&lt;h3 id=&quot;openlayers-3&quot;&gt;OpenLayers 3&lt;/h3&gt;
 
 &lt;p&gt;OpenLayers is an open-source JavaScript library.&lt;/p&gt;
 
@@ -435,6 +438,30 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;iframe class=&quot;d3&quot; src=&quot;http://bl.ocks.org/mbostock/raw/4062045/&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://bl.ocks.org/mbostock/4062045&quot;&gt;Force-Directed Graph explained here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;leafletjs-basic-tutorials&quot;&gt;Leaflet.js basic tutorials&lt;/h2&gt;
+
+&lt;p&gt;Read below for basic Leaflet.js tutorials. Most of the code can be ‘easily’ figured out by reading the parameters already set. Basic knowledge of HTML and CSS are a plus, and basics of JavaScript will help you develop interactive maps. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://leafletjs.com/reference.html&quot;&gt;View the Leaflet.js API here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;qgis2leaf&quot;&gt;qgis2leaf&lt;/h3&gt;
+
+&lt;p&gt;A simple user-friendly method of creating a basic Leaflet with a layer through QGIS. &lt;a href=&quot;https://github.com/geolicious/qgis2leaf&quot;&gt;See the GitHub repository here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open QGIS and install qgis2leaf plugin:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Plugins &amp;gt; Manage and Install PLugins &amp;gt; Search ‘qgis2leaf’&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add vector layer. 
+    &lt;ul&gt;
+      &lt;li&gt;NOTE: vector data is stored as points (with lines connecting lines, polylines, and polygons). The output of a 90MB shapefile to &lt;a href=&quot;http://geojson.org/&quot;&gt;GeoJSON&lt;/a&gt; is nearly 300MB (this will vary, however). Understanding your data beforehand will help you in the long run. See &lt;a href=&quot;/bootcamp/data wrangling/data-wrangling/&quot;&gt;Data Wrangling&lt;/a&gt; &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
 </description>
                 <link>http://104.237.129.71/bootcamp/cartography/web-mapping</link>
                 <guid>http://104.237.129.71/bootcamp/cartography/web-mapping</guid>

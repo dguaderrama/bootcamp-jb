@@ -875,13 +875,14 @@
 
 
 <div class="entry-content">
-  <h2 id="understanding-web-mapping">Understanding web mapping</h2>
+  
+<h2 id="understanding-web-mapping">Understanding web mapping</h2>
 
 <h2 id="web-map-frameworks">Web map frameworks</h2>
 
 <h3 id="leafletjs">Leaflet.js</h3>
 
-<p><a href="http://leafletjs.com/">Leaflet.js</a> is a light-weight open-source JavaScript library. This is the ‘easiest’ framework to develop.</p>
+<p><a href="http://leafletjs.com/">Leaflet.js</a> is a light-weight open-source JavaScript library. This is the ‘easiest’ framework to use for developing web maps.</p>
 
 <blockquote>
   <p>Leaflet is a modern open-source JavaScript library for mobile-friendly interactive maps. It is developed by Vladimir Agafonkin with a team of dedicated contributors. Weighing just about 33 KB of JS, it has all the features most developers ever need for online maps.</p>
@@ -889,7 +890,9 @@
 
 <iframe class="leaflet" src="http://leafletjs.com/examples/choropleth-example.html" frameborder="0"></iframe>
 
-<h3 id="openlayes-3">OpenLayes 3</h3>
+<p><a href="http://leaflet-extras.github.io/leaflet-providers/preview/">Here’s a list of tile map service (TMS) providers</a>. Nearly all TMS providers are free for personal use.</p>
+
+<h3 id="openlayers-3">OpenLayers 3</h3>
 
 <p>OpenLayers is an open-source JavaScript library.</p>
 
@@ -912,6 +915,30 @@
 <iframe class="d3" src="http://bl.ocks.org/mbostock/raw/4062045/" frameborder="0"></iframe>
 
 <p><a href="http://bl.ocks.org/mbostock/4062045">Force-Directed Graph explained here</a></p>
+
+<h2 id="leafletjs-basic-tutorials">Leaflet.js basic tutorials</h2>
+
+<p>Read below for basic Leaflet.js tutorials. Most of the code can be ‘easily’ figured out by reading the parameters already set. Basic knowledge of HTML and CSS are a plus, and basics of JavaScript will help you develop interactive maps. </p>
+
+<p><a href="http://leafletjs.com/reference.html">View the Leaflet.js API here</a></p>
+
+<h3 id="qgis2leaf">qgis2leaf</h3>
+
+<p>A simple user-friendly method of creating a basic Leaflet with a layer through QGIS. <a href="https://github.com/geolicious/qgis2leaf">See the GitHub repository here</a>.</p>
+
+<ol>
+  <li>Open QGIS and install qgis2leaf plugin:
+    <ul>
+      <li><em>Menu Bar &gt; Plugins &gt; Manage and Install PLugins &gt; Search ‘qgis2leaf’</em></li>
+    </ul>
+  </li>
+  <li>Add vector layer. 
+    <ul>
+      <li>NOTE: vector data is stored as points (with lines connecting lines, polylines, and polygons). The output of a 90MB shapefile to <a href="http://geojson.org/">GeoJSON</a> is nearly 300MB (this will vary, however). Understanding your data beforehand will help you in the long run. See <a href="/bootcamp/data wrangling/data-wrangling/">Data Wrangling</a> </li>
+    </ul>
+  </li>
+</ol>
+
 
 
           <!--
