@@ -5,8 +5,8 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-03-20T17:14:30-07:00</lastBuildDate>
-        <pubDate>2015-03-20T17:14:30-07:00</pubDate>
+        <lastBuildDate>2015-03-22T16:11:12-07:00</lastBuildDate>
+        <pubDate>2015-03-22T16:11:12-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -405,7 +405,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;leafletjs&quot;&gt;Leaflet.js&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://leafletjs.com/&quot;&gt;Leaflet.js&lt;/a&gt; is a light-weight open-source JavaScript library. This is the ‘easiest’ framework to use for developing web maps.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://leafletjs.com/&quot;&gt;Leaflet.js&lt;/a&gt; is a light-weight open-source JavaScript library. This is the &amp;#8216;easiest&amp;#8217; framework to use for developing web maps.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Leaflet is a modern open-source JavaScript library for mobile-friendly interactive maps. It is developed by Vladimir Agafonkin with a team of dedicated contributors. Weighing just about 33 KB of JS, it has all the features most developers ever need for online maps.&lt;/p&gt;
@@ -413,7 +413,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;iframe class=&quot;leaflet&quot; src=&quot;http://leafletjs.com/examples/choropleth-example.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://leaflet-extras.github.io/leaflet-providers/preview/&quot;&gt;Here’s a list of tile map service (TMS) providers&lt;/a&gt;. Nearly all TMS providers are free for personal use.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://leaflet-extras.github.io/leaflet-providers/preview/&quot;&gt;Here&amp;#8217;s a list of tile map service (TMS) providers&lt;/a&gt;. Nearly all TMS providers are free for personal use.&lt;/p&gt;
 
 &lt;h3 id=&quot;openlayers-3&quot;&gt;OpenLayers 3&lt;/h3&gt;
 
@@ -425,7 +425,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;d3js&quot;&gt;D3.js&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://d3js.org/&quot;&gt;D3&lt;/a&gt; is an excellent tool for visualizing spatial data, but flexes its muscles with non-spatial data. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://d3js.org/&quot;&gt;D3&lt;/a&gt; is an excellent tool for visualizing spatial data, but flexes its muscles with non-spatial data.&lt;/p&gt;
 
 &lt;p&gt;Spatial Data&lt;/p&gt;
 
@@ -441,7 +441,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;leafletjs-basic-tutorials&quot;&gt;Leaflet.js basic tutorials&lt;/h2&gt;
 
-&lt;p&gt;Read below for basic Leaflet.js tutorials. Most of the code can be ‘easily’ figured out by reading the parameters already set. Basic knowledge of HTML and CSS are a plus, and basics of JavaScript will help you develop interactive maps. &lt;/p&gt;
+&lt;p&gt;Read below for basic Leaflet.js tutorials. Most of the code can be &amp;#8216;easily&amp;#8217; figured out by reading the parameters already set. Basic knowledge of HTML and CSS are a plus, and basics of JavaScript will help you develop interactive maps.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://leafletjs.com/reference.html&quot;&gt;View the Leaflet.js API here&lt;/a&gt;&lt;/p&gt;
 
@@ -452,12 +452,12 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ol&gt;
   &lt;li&gt;Open QGIS and install qgis2leaf plugin:
     &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Plugins &amp;gt; Manage and Install PLugins &amp;gt; Search ‘qgis2leaf’&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Plugins &amp;gt; Manage and Install PLugins &amp;gt; Search &amp;#8216;qgis2leaf&amp;#8217;&lt;/em&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Add vector layer. 
+  &lt;li&gt;Add vector layer.
     &lt;ul&gt;
-      &lt;li&gt;NOTE: vector data is stored as points (with lines connecting lines, polylines, and polygons). The output of a 90MB shapefile to &lt;a href=&quot;http://geojson.org/&quot;&gt;GeoJSON&lt;/a&gt; is nearly 300MB (this will vary, however). Understanding your data beforehand will help you in the long run. See &lt;a href=&quot;/bootcamp/data wrangling/data-wrangling/&quot;&gt;Data Wrangling&lt;/a&gt; &lt;/li&gt;
+      &lt;li&gt;NOTE: vector data is stored as points (with lines connecting lines, polylines, and polygons). The output of a 90MB shapefile to &lt;a href=&quot;http://geojson.org/&quot;&gt;GeoJSON&lt;/a&gt; is nearly 300MB (this will vary, however). Understanding your data beforehand will help you in the long run. See &lt;a href=&quot;/bootcamp/data wrangling/data-wrangling/&quot;&gt;Data Wrangling&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
@@ -489,35 +489,35 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h3&gt;
 
-&lt;p&gt;Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets. &lt;/p&gt;
+&lt;p&gt;Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Input Layer&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
+      &lt;th&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Data Source&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;DEM&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;GTopo30&lt;sup id=&quot;fnref:3:1&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Geology&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Washington Dept. of Natural Resources&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Landslide Inventory&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Washington Dept. of Natural Resources&lt;sup id=&quot;fnref:5:1&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Daily Precipitation&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Earth System Research Laboratory(NOAA)&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -536,7 +536,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Before starting any project in a GIS program, you should first set the project projection to make sure your data comes in with the same extent. 
-  If you don’t set the project’s projection, the program will use the projection of the first layer added or EPSG:4326.&lt;/p&gt;
+  If you don&amp;#8217;t set the project&amp;#8217;s projection, the program will use the projection of the first layer added or EPSG:4326.&lt;/p&gt;
 
 &lt;p&gt;You can set the projection with the following steps:&lt;/p&gt;
 
@@ -570,12 +570,12 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;li&gt;In the top toolbar, select &lt;em&gt;Select Single Feature&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;Click on the state of Washington to select it
   &lt;img src=&quot;/bootcamp/assets/images/washington-selected.png&quot; alt=&quot;washington-selected&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Right click on the USA_adm1 layer and select &lt;em&gt;Save Selection As…&lt;/em&gt;
+  &lt;li&gt;Right click on the USA_adm1 layer and select &lt;em&gt;Save Selection As&amp;#8230;&lt;/em&gt;
     &lt;ul&gt;
       &lt;li&gt;Format: ESRI Shapefile&lt;/li&gt;
       &lt;li&gt;Save as: washington.shp&lt;/li&gt;
       &lt;li&gt;Encoding: UTF-8&lt;/li&gt;
-      &lt;li&gt;CRS: 
+      &lt;li&gt;CRS:
         &lt;ul&gt;
           &lt;li&gt;Project CRS&lt;/li&gt;
           &lt;li&gt;Browse &amp;gt; &lt;em&gt;NAD83(HARN)/Washington South (ftUS) EPSG:2927&lt;/em&gt;
@@ -591,12 +591,12 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;li&gt;Select &lt;em&gt;Add Vector Layer&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;Browse to the new washington layer and click &lt;em&gt;Open&lt;/em&gt;
     &lt;ol&gt;
-      &lt;li&gt;Remove the USA_adm1 layer from the project &lt;/li&gt;
+      &lt;li&gt;Remove the USA_adm1 layer from the project&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Now that we have the Washington layer, we can get rid of the U.S. layer. &lt;/p&gt;
+&lt;p&gt;Now that we have the Washington layer, we can get rid of the U.S. layer.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Right click the layer in the table of contents&lt;/li&gt;
@@ -688,50 +688,50 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
+      &lt;th&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Slope&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3-5°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3-5&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5-10°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5-10&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10-15°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10-15&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15-20°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;15-20&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;20-30°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;20-30&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;30-40°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;30-40&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -758,7 +758,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;We will use the following settings for the reclassify tool:
   * Input Raster: &lt;em&gt;slope-washington&lt;/em&gt;
   * File containing reclass rules: &lt;em&gt;slope-rules.txt&lt;/em&gt;
-  * Output raster layer: &lt;em&gt;slope-reclass.tif&lt;/em&gt; (NOTE: select &lt;em&gt;Save to file…&lt;/em&gt; or else QGIS will not create a permanent output)
+  * Output raster layer: &lt;em&gt;slope-reclass.tif&lt;/em&gt; (NOTE: select &lt;em&gt;Save to file&amp;#8230;&lt;/em&gt; or else QGIS will not create a permanent output)
   &lt;img src=&quot;/bootcamp/assets/images/slope-reclass.png&quot; alt=&quot;slope-reclass&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;susceptibility&quot;&gt;Susceptibility&lt;/h4&gt;
@@ -773,9 +773,9 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Our raster calculator expression will be: &lt;/p&gt;
+&lt;p&gt;Our raster calculator expression will be:&lt;/p&gt;
 
-&lt;p&gt;(“geo_coded@1” * 10) + “slope-reclass@1”&lt;/p&gt;
+&lt;p&gt;(&amp;#8220;geo_coded@1&amp;#8221; * 10) + &amp;#8220;slope-reclass@1&amp;#8221;&lt;/p&gt;
 
 &lt;p&gt;Output layer: slope-geo-sect.tif&lt;/p&gt;
 
@@ -809,54 +809,54 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
+      &lt;th&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Precipitation&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;#160;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;5-10 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;10-15 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;15-30 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;30-45 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;45-60 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;60-75 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;75-90 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 90 in&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -866,7 +866,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now that the output datasets have been created, we can work on making our results presentable.&lt;/p&gt;
 
-&lt;p&gt;Go to Cartography &amp;amp; Visualization…&lt;/p&gt;
+&lt;p&gt;Go to Cartography &amp;amp; Visualization&amp;#8230;&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
@@ -900,7 +900,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/netcdf1_sm.png&quot; alt=&quot;netcdf-logo&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate. &lt;/p&gt;
+&lt;p&gt;NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate.&lt;/p&gt;
 
 &lt;p&gt;NetCDF is a set of software libraries and describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF was developed at &lt;a href=&quot;http://unidata.ucar.edu&quot;&gt;Unidata&lt;/a&gt;. Unidata provides data and software tools for use in geoscience education and research. Unidata is part of the University Corporation for Atmospheric Research(&lt;a href=&quot;http://ucar.edu&quot;&gt;UCAR&lt;/a&gt;) Community Programs(&lt;a href=&quot;http://www.uop.ucar.edu&quot;&gt;UCP&lt;/a&gt;).&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
@@ -912,17 +912,17 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;With the help of a THREDDS Data Server, large netCDF datasets are easily accessible and discoverable through a client application or through HTTP.&lt;/p&gt;
 
-&lt;p&gt;The multidimensional nature of netCDF data makes storage of complex data such as temperature and humidity simple. Also, since netCDF allows for multivariate storage, several variables can be subsets, ensembled and explored simultaneously. An issue can be the process of creating a usable dataset from netCDF data. This can be due to the sensor-based nature of netCDF, which is a primary dataset (i.e. daily precipitation sums). In order to get the proper dataset, it often requires researchers to subset, and ensemble values over a dimension. Ensembled data sets could be seasonal datasets, climatologies, or long-term averages. &lt;/p&gt;
+&lt;p&gt;The multidimensional nature of netCDF data makes storage of complex data such as temperature and humidity simple. Also, since netCDF allows for multivariate storage, several variables can be subsets, ensembled and explored simultaneously. An issue can be the process of creating a usable dataset from netCDF data. This can be due to the sensor-based nature of netCDF, which is a primary dataset (i.e. daily precipitation sums). In order to get the proper dataset, it often requires researchers to subset, and ensemble values over a dimension. Ensembled data sets could be seasonal datasets, climatologies, or long-term averages.&lt;/p&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
 &lt;h2 id=&quot;procedure&quot;&gt;Procedure&lt;/h2&gt;
 
-&lt;p&gt;For our case study, we created an annual average for precipitation between 2007-2014. &lt;/p&gt;
+&lt;p&gt;For our case study, we created an annual average for precipitation between 2007-2014.&lt;/p&gt;
 
 &lt;p&gt;We had to first locate the datasets from http://esrl.noaa.gov/psd/thredds/dodsC/Datasets/cpc_us_precip/RT&lt;/p&gt;
 
-&lt;p&gt;This brought us 9 years of datasets. &lt;/p&gt;
+&lt;p&gt;This brought us 9 years of datasets.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/daily-precip.png&quot; alt=&quot;daily-precip&quot; /&gt;&lt;/p&gt;
 
@@ -932,24 +932,24 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&quot;netcdf-kitchen-sink&quot;&gt;netCDF Kitchen Sink&lt;/h5&gt;
 
-&lt;p&gt;The nickname ‘kitchen sink’ is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option ‘-d’&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions. &lt;/p&gt;
+&lt;p&gt;The nickname &amp;#8216;kitchen sink&amp;#8217; is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option &amp;#8216;-d&amp;#8217;&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ncks -O -d lon,234.0,244.0 -d lat,44.0,50.0 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc subset.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;In the above command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testing.&lt;/p&gt;
+&lt;p&gt;In the above command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The &amp;#8216;-O&amp;#8217; option specifies that the command will overwrite the output file if it already exists, which is helpful for script testing.&lt;/p&gt;
 
 &lt;h4 id=&quot;removing-bad-values&quot;&gt;Removing bad values&lt;/h4&gt;
-&lt;p&gt;If you look at the metadata for the subsetted file, you can see that the ‘precip’ variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25° x .25°(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library. &lt;/p&gt;
+&lt;p&gt;If you look at the metadata for the subsetted file, you can see that the &amp;#8216;precip&amp;#8217; variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25&amp;deg; x .25&amp;deg;(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library.&lt;/p&gt;
 
 &lt;h5 id=&quot;netcdf-arithmetic-processor&quot;&gt;netCDF Arithmetic Processor&lt;/h5&gt;
 
-&lt;p&gt;The netCDF Arithmetic Processor(ncap2) was written to perform arbitrary algebraic transformation of data and archive the results as easily as possible&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. Instructions for ncap2 can be contained in an MCP script file or delivered inline with the ‘-s’ flag. One of ncap2’s most powerful features is its ability to define new variables in terms of existing variables.&lt;/p&gt;
+&lt;p&gt;The netCDF Arithmetic Processor(ncap2) was written to perform arbitrary algebraic transformation of data and archive the results as easily as possible&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. Instructions for ncap2 can be contained in an MCP script file or delivered inline with the &amp;#8216;-s&amp;#8217; flag. One of ncap2&amp;#8217;s most powerful features is its ability to define new variables in terms of existing variables.&lt;/p&gt;
 
 &lt;p&gt;The ncap2 command we will be using is:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ncap2 -O -s &lt;span class=&quot;s1&quot;&gt;&amp;#39;where(precip &amp;lt; 0.0 || precip &amp;gt; 10000) precip=0;&amp;#39;&lt;/span&gt; subset.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc narm.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;In the above command, we use the inline script flag ‘-s’ to specify that the cell value should be set to 0 if it is less than 0 or greater than 10,000. Once again, we include the overwrite flag ‘-O’ for scripting purposes.&lt;/p&gt;
+&lt;p&gt;In the above command, we use the inline script flag &amp;#8216;-s&amp;#8217; to specify that the cell value should be set to 0 if it is less than 0 or greater than 10,000. Once again, we include the overwrite flag &amp;#8216;-O&amp;#8217; for scripting purposes.&lt;/p&gt;
 
 &lt;h4 id=&quot;summing-yearly-precipitation&quot;&gt;Summing yearly precipitation&lt;/h4&gt;
 &lt;p&gt;Since our analysis is looking at patterns of precipitation over time, rather than the amount of rain accumulated during a particular day, we will have create an ensemble dataset with the sum of precipitation for a given year. We will be using the NetCDF Record Averager to sum our precipitation values over the time dimension.&lt;/p&gt;
@@ -962,7 +962,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ncra -O --op-typ&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ttl -d &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;,,,1 -v precip narm.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc annual.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;In the above command, the ‘-v precip’ flag defines the variable ncra will operate on. The ‘–op-type=ttl’ flag indicates that we want ncra to calculate the sum of records while the ‘-d’ flag indicates that we are summing the values across the time dimension. Once again we include the overwrite flag ‘-O’ for scripting purposes.&lt;/p&gt;
+&lt;p&gt;In the above command, the &amp;#8216;-v precip&amp;#8217; flag defines the variable ncra will operate on. The &amp;#8216;&amp;#8211;op-type=ttl&amp;#8217; flag indicates that we want ncra to calculate the sum of records while the &amp;#8216;-d&amp;#8217; flag indicates that we are summing the values across the time dimension. Once again we include the overwrite flag &amp;#8216;-O&amp;#8217; for scripting purposes.&lt;/p&gt;
 
 &lt;h4 id=&quot;regridding-netcdf-files&quot;&gt;Regridding netCDF files&lt;/h4&gt;
 
@@ -986,7 +986,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;nces -O -n 8,2,1 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OUTPUTDIR&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/regrid.2007.nc avg_annual.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;The above command uses the loop flag ‘-n 8,2,1’ which uses the following syntax -n &lt;em&gt;file_number,digit_number,numeric_increment&lt;/em&gt; where &lt;em&gt;file_number&lt;/em&gt; is the number of files, &lt;em&gt;digit_number&lt;/em&gt; is the fixed number of numeric digits comprising the &lt;em&gt;numeric_suffix&lt;/em&gt; and &lt;em&gt;numeric_increment&lt;/em&gt; is the constant, integer-valued difference between the &lt;em&gt;numeric_suffix&lt;/em&gt; of any two files[^6].&lt;/p&gt;
+&lt;p&gt;The above command uses the loop flag &amp;#8216;-n 8,2,1&amp;#8217; which uses the following syntax -n &lt;em&gt;file_number,digit_number,numeric_increment&lt;/em&gt; where &lt;em&gt;file_number&lt;/em&gt; is the number of files, &lt;em&gt;digit_number&lt;/em&gt; is the fixed number of numeric digits comprising the &lt;em&gt;numeric_suffix&lt;/em&gt; and &lt;em&gt;numeric_increment&lt;/em&gt; is the constant, integer-valued difference between the &lt;em&gt;numeric_suffix&lt;/em&gt; of any two files[^6].&lt;/p&gt;
 
 &lt;h4 id=&quot;converting-to-geotiff&quot;&gt;Converting to GeoTiff&lt;/h4&gt;
 
@@ -1045,7 +1045,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 &lt;h3 id=&quot;what-is-panoply&quot;&gt;What is Panoply&lt;/h3&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;“Panoply is a a cross-platform application that plots geo-gridded and other arrays from netCDF, HDF, GRIB, and other datasets&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.”&lt;/p&gt;
+  &lt;p&gt;&amp;#8220;Panoply is a a cross-platform application that plots geo-gridded and other arrays from netCDF, HDF, GRIB, and other datasets&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&amp;#8221;&lt;/p&gt;
 
 &lt;/blockquote&gt;
 
@@ -1062,7 +1062,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assetsimages/panoply-ex.png&quot; alt=&quot;panoply-ex&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;[^In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo5]: The NCAR Command Language (Version 6.In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo2.1) [Software]. (2014). Boulder, Colorado: UCAR/NCAR/CISL/VETS. http://dx.doi.org/10.5065/D6WD3XH5
+&lt;p&gt;[^In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The &amp;#8216;-O&amp;#8217; option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo5]: The NCAR Command Language (Version 6.In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The &amp;#8216;-O&amp;#8217; option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo2.1) [Software]. (2014). Boulder, Colorado: UCAR/NCAR/CISL/VETS. http://dx.doi.org/10.5065/D6WD3XH5
 [^6]: http://nco.sourceforge.net/nco.html#Specifying-Input-Files&lt;/p&gt;
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
@@ -1100,7 +1100,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 &lt;p&gt;&lt;a title=&quot;By User:Anitagraser on QGIS Wiki, User:Anitagraser (http://www.qgis.org/wiki/File:QGis_Logo.png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AQGis_Logo.png&quot;&gt;&lt;img width=&quot;128&quot; alt=&quot;QGis Logo&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/128px-QGis_Logo.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;what-is-qgis&quot;&gt;What is QGIS?&lt;/h3&gt;
-&lt;p&gt;Straight from the horse’s mouth:&lt;/p&gt;
+&lt;p&gt;Straight from the horse&amp;#8217;s mouth:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;QGIS is the best GIS tool in the free and open-source software (FOSS) community.&lt;/p&gt;
@@ -1110,7 +1110,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
   &lt;p&gt;QGIS is a user friendly Open Source Geographic Information System (GIS) licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www2.qgis.org/en/site/forusers/download.html&quot;&gt;Here’s a link to download QGIS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www2.qgis.org/en/site/forusers/download.html&quot;&gt;Here&amp;#8217;s a link to download QGIS&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1125,7 +1125,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 &lt;ol&gt;
   &lt;li&gt;
     &lt;h5 id=&quot;menu-bar&quot;&gt;&lt;strong&gt;Menu Bar&lt;/strong&gt;&lt;/h5&gt;
-    &lt;p&gt;The menu bar provides access to QGIS features. In Linux systems, hover over to view menu bar options (haven’t checked other systems). The QGIS version is displayed while not hovering over the menu bar (linux systems). Most common features or tools are accessable through the toolbar icons which will be the prefered method throughout this QGIS introduction.&lt;/p&gt;
+    &lt;p&gt;The menu bar provides access to QGIS features. In Linux systems, hover over to view menu bar options (haven&amp;#8217;t checked other systems). The QGIS version is displayed while not hovering over the menu bar (linux systems). Most common features or tools are accessable through the toolbar icons which will be the prefered method throughout this QGIS introduction.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;h5 id=&quot;toolbar&quot;&gt;&lt;strong&gt;Toolbar&lt;/strong&gt;&lt;/h5&gt;
@@ -1133,7 +1133,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;h5 id=&quot;map-legend&quot;&gt;&lt;strong&gt;Map Legend&lt;/strong&gt;&lt;/h5&gt;
-    &lt;p&gt;The map legend is a list of all layers in the project. Each layer can be turned on or off with the layer’s checkbox.  It’s possible to group layers.&lt;/p&gt;
+    &lt;p&gt;The map legend is a list of all layers in the project. Each layer can be turned on or off with the layer&amp;#8217;s checkbox.  It&amp;#8217;s possible to group layers.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;h5 id=&quot;map-view&quot;&gt;&lt;strong&gt;Map View&lt;/strong&gt;&lt;/h5&gt;
@@ -1161,13 +1161,13 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 
 &lt;p&gt;&lt;em&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection. &lt;/p&gt;
+&lt;p&gt;From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection.&lt;/p&gt;
 
 &lt;h5 id=&quot;activate-necessary-providers&quot;&gt;Activate necessary providers&lt;/h5&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/providers-config.jpg&quot; alt=&quot;Activate Providers&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Options and configuration &amp;gt; Providers &amp;gt; $PROVIDER &amp;gt; Activate (be sure it’s checked)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Options and configuration &amp;gt; Providers &amp;gt; $PROVIDER &amp;gt; Activate (be sure it&amp;#8217;s checked)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/user_manual/processing_algs/index.html?highlight=providers&quot;&gt;See the complete list of processing providers and algorithms here&lt;/a&gt;&lt;/p&gt;
 
@@ -1187,7 +1187,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 
 &lt;p&gt;However, this is not the same as changing the project projection. You may define the project projection from &lt;em&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties &amp;gt; CRS&lt;/em&gt;. Also keep in mind, the CRS of a new project will change to the CRS of the first layer added to the project.&lt;/p&gt;
 
-&lt;p&gt;‘On the fly’ CRS transformation is not enabled by the default QGIS installation.  &lt;/p&gt;
+&lt;p&gt;&amp;#8216;On the fly&amp;#8217; CRS transformation is not enabled by the default QGIS installation.&lt;/p&gt;
 
 &lt;h3 id=&quot;supported-data-formats&quot;&gt;Supported Data Formats&lt;/h3&gt;
 
@@ -1201,7 +1201,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/add-vector.png&quot; alt=&quot;Add vector in QGIS&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;View vector attribute table by right clicking on the layer and clicking Open Attribute Table. From here you can sort data, show selected features, show features visible on map, show edited and new features, filter by column, or query data with and advanced filter. &lt;/p&gt;
+&lt;p&gt;View vector attribute table by right clicking on the layer and clicking Open Attribute Table. From here you can sort data, show selected features, show features visible on map, show edited and new features, filter by column, or query data with and advanced filter.&lt;/p&gt;
 
 &lt;p&gt;Attribute data can be edited by enabling and edit session with the Toggle Editing Mode icon (top left).&lt;/p&gt;
 
@@ -1215,13 +1215,13 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 
 &lt;h3 id=&quot;general-spatial-functions&quot;&gt;General Spatial Functions&lt;/h3&gt;
 
-&lt;p&gt;Spatial functions are accessable through &lt;em&gt;Menu Bar &amp;gt; Vector/Raster&lt;/em&gt;. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy. &lt;/p&gt;
+&lt;p&gt;Spatial functions are accessable through &lt;em&gt;Menu Bar &amp;gt; Vector/Raster&lt;/em&gt;. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy.&lt;/p&gt;
 
 &lt;h3 id=&quot;composing-maps-for-printnon-web-based&quot;&gt;Composing Maps (for print/non-web-based)&lt;/h3&gt;
 
 &lt;p&gt;This method is ideal for exporting your work for a research paper, admiring your work, and such. Developing a web map for dissimenating your data is a bit more involved and is discussed in the &lt;a href=&quot;/bootcamp/visualization/leaflet&quot;&gt;Publish Your Data to a Web Mapi/LeafletJS&lt;/a&gt; section. Also, to export data with styles see &lt;a href=&quot;this-is-not-a-link&quot;&gt;This section link&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Begin by opening the Print Composer: &lt;/p&gt;
+&lt;p&gt;Begin by opening the Print Composer:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/compose-map.png&quot; alt=&quot;Create new Print Composer workspace&quot; /&gt;&lt;/p&gt;
 
@@ -1233,7 +1233,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 
 &lt;p&gt;The Scenario:&lt;/p&gt;
 
-&lt;p&gt;You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map. &lt;/p&gt;
+&lt;p&gt;You&amp;#8217;ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1256,7 +1256,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger-line.html&quot;&gt;US Census - TIGER/Line (shapefiles and geodatabases)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Steps: &lt;/p&gt;
+&lt;p&gt;Steps:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;download data with meta data (DEM &amp;amp; washingon boundary data with meta data)&lt;/li&gt;
@@ -1298,7 +1298,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 
 &lt;h4 id=&quot;reclassify-and-rasterize-vector&quot;&gt;Reclassify and Rasterize Vector&lt;/h4&gt;
 
-&lt;p&gt;What this module covers: &lt;/p&gt;
+&lt;p&gt;What this module covers:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;editing vector data attributes&lt;/li&gt;
@@ -1311,7 +1311,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 &lt;p&gt;Data:
  * washington state geology shapefile&lt;/p&gt;
 
-&lt;p&gt;Steps: &lt;/p&gt;
+&lt;p&gt;Steps:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Import wa_geology.shp:
@@ -1329,12 +1329,12 @@ some ideas for QGIS tutorials:&lt;br /&gt;
   &lt;/li&gt;
   &lt;li&gt;Add and calculate new field:
     &lt;ul&gt;
-      &lt;li&gt;Match your Field Calculator window to the one below for creating a new field ‘strength’ with a range of values of 0-3. Be sure to match it exactly as it’s displayed: double-quotes are recognized as a column whereas single-quotes are recongnized as column values. Save your changes once finished.
+      &lt;li&gt;Match your Field Calculator window to the one below for creating a new field &amp;#8216;strength&amp;#8217; with a range of values of 0-3. Be sure to match it exactly as it&amp;#8217;s displayed: double-quotes are recognized as a column whereas single-quotes are recongnized as column values. Save your changes once finished.
     Expression:
     case
-    when “rock_type” = ‘soft’ then 1
-    when “rock_type” = ‘medium’ then 2
-    when “rock_type” = ‘hard’ then 3
+    when &amp;#8220;rock_type&amp;#8221; = &amp;#8216;soft&amp;#8217; then 1
+    when &amp;#8220;rock_type&amp;#8221; = &amp;#8216;medium&amp;#8217; then 2
+    when &amp;#8220;rock_type&amp;#8221; = &amp;#8216;hard&amp;#8217; then 3
     else 0
     done
    &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-04.png&quot; alt=&quot;QGIS: Add and calculate new field&quot; /&gt;&lt;/li&gt;
@@ -1351,12 +1351,12 @@ some ideas for QGIS tutorials:&lt;br /&gt;
   &lt;/li&gt;
   &lt;li&gt;Rasterize wa_geology.shp:
     &lt;ul&gt;
-      &lt;li&gt;GDAL’s rasterize is a prefered method. This can be accessed through &lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Conversion &amp;gt; Rasterize (Vector to raster)&lt;/em&gt;. Notice how the parameters have been diabled in the example below. There’s a specific reason for this. Complete the parameter inputs: &lt;em&gt;Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000&lt;/em&gt;. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.&lt;/li&gt;
+      &lt;li&gt;GDAL&amp;#8217;s rasterize is a prefered method. This can be accessed through &lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Conversion &amp;gt; Rasterize (Vector to raster)&lt;/em&gt;. Notice how the parameters have been diabled in the example below. There&amp;#8217;s a specific reason for this. Complete the parameter inputs: &lt;em&gt;Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000&lt;/em&gt;. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Click the edit icon (pencil) locate near the block of code&lt;/em&gt;. This enables you to add those non-QGIS parameters.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Add the line of code&lt;/em&gt; &lt;code&gt;-at -a_nodata 0&lt;/code&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt;. &lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Add the line of code&lt;/em&gt; &lt;code&gt;-at -a_nodata 0&lt;/code&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt;.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;-at&lt;/em&gt;: Enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;-a_nodata $value&lt;/em&gt;: Assign a specified nodata value to output bands - this prevents pixels with no data from being written into the output raster.&lt;sup id=&quot;fnref:3:1&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.gdal.org/gdal_rasterize.html&quot;&gt;Here’s a link to the gdal_rasterize parameters&lt;/a&gt;.&lt;br /&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.gdal.org/gdal_rasterize.html&quot;&gt;Here&amp;#8217;s a link to the gdal_rasterize parameters&lt;/a&gt;.&lt;br /&gt;
    &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-11-2.png&quot; alt=&quot;QGIS: Rasterize - Vector to raster&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -1364,17 +1364,17 @@ some ideas for QGIS tutorials:&lt;br /&gt;
     &lt;ul&gt;
       &lt;li&gt;Open wa_geology.tif style properties. HINT: See step 4.&lt;/li&gt;
       &lt;li&gt;For &lt;em&gt;Render type&lt;/em&gt;, select &lt;em&gt;Singleband pseudocolor&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;On the right select: &lt;em&gt;Load min/max values: Min/max; Extend: Actual (slower); then Load&lt;/em&gt;. This loads actual values into the classification. QGIS Approximates values by defautl. &lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Change Mode to Equal Interval with 3 classes&lt;/em&gt;. Remember, we only have three rock strength classes: soft, medium, hard. Change your color map if you’d like. The color maps are not stored into the raster, so the raster will load with the defaul color map (black to white) each time its opened in a new project.&lt;/li&gt;
+      &lt;li&gt;On the right select: &lt;em&gt;Load min/max values: Min/max; Extend: Actual (slower); then Load&lt;/em&gt;. This loads actual values into the classification. QGIS Approximates values by defautl.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Change Mode to Equal Interval with 3 classes&lt;/em&gt;. Remember, we only have three rock strength classes: soft, medium, hard. Change your color map if you&amp;#8217;d like. The color maps are not stored into the raster, so the raster will load with the defaul color map (black to white) each time its opened in a new project.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Click Classify&lt;/em&gt;. Apply and OK.&lt;br /&gt;
    &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-13.png&quot; alt=&quot;QGIS: Style raster&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster. &lt;/p&gt;
+&lt;p&gt;You&amp;#8217;ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster.&lt;/p&gt;
 
-&lt;p&gt;Keep this reclassified and rasterized vector, it’ll be used in the next lesson.&lt;/p&gt;
+&lt;p&gt;Keep this reclassified and rasterized vector, it&amp;#8217;ll be used in the next lesson.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1382,7 +1382,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 
 &lt;h4 id=&quot;vector-analysis&quot;&gt;Vector Analysis&lt;/h4&gt;
 
-&lt;p&gt;What this module covers: &lt;/p&gt;
+&lt;p&gt;What this module covers:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;buffer on polylines&lt;/li&gt;
@@ -1392,7 +1392,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 
 &lt;p&gt;Objective: Quantify and extract home values within high-risk landslide/mass-wasting areas.&lt;/p&gt;
 
-&lt;p&gt;Data: &lt;/p&gt;
+&lt;p&gt;Data:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Census housing data&lt;/li&gt;
@@ -1410,7 +1410,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
   &lt;li&gt;within soft geologic areas&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Steps: &lt;/p&gt;
+&lt;p&gt;Steps:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Import vector data and configure workspace/projecton:
@@ -1426,7 +1426,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
       &lt;li&gt;Import census tracts&lt;/li&gt;
       &lt;li&gt;Reproject census tract shapefile: &lt;a href=&quot;http://spatialreference.org/ref/epsg/2927/&quot;&gt;EPSG:2927&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;Import census housing data&lt;/li&gt;
-      &lt;li&gt;Use Toolbox to search for ‘join attribute table’&lt;/li&gt;
+      &lt;li&gt;Use Toolbox to search for &amp;#8216;join attribute table&amp;#8217;&lt;/li&gt;
       &lt;li&gt;Select parameters&lt;/li&gt;
       &lt;li&gt;Check output - confirm housing data is joined to tracts.&lt;/li&gt;
     &lt;/ul&gt;
@@ -1442,7 +1442,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 
 &lt;h4 id=&quot;raster-analysis&quot;&gt;Raster Analysis&lt;/h4&gt;
 
-&lt;p&gt;What this module covers: &lt;/p&gt;
+&lt;p&gt;What this module covers:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;importing raster data&lt;/li&gt;
@@ -1452,13 +1452,13 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 
 &lt;p&gt;Research question/objective: complete locating high-risk landslide/mass-wasting areas near (select region)&lt;/p&gt;
 
-&lt;p&gt;High-risk slope: &lt;/p&gt;
+&lt;p&gt;High-risk slope:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;numbers&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;High-risk aspect: &lt;/p&gt;
+&lt;p&gt;High-risk aspect:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;numbers&lt;/li&gt;
@@ -1472,7 +1472,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
   &lt;li&gt;data will be used in Cartography/Visualization&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Raster Statistics: &lt;/p&gt;
+&lt;p&gt;Raster Statistics:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;histogram&lt;/li&gt;
@@ -1498,14 +1498,14 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 &lt;ul&gt;
   &lt;li&gt;exporting data in web formats&lt;/li&gt;
   &lt;li&gt;&lt;em&gt;do something with leaflet&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;do something with serving data&lt;/em&gt; &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;do something with serving data&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;References: &lt;/p&gt;
+&lt;p&gt;References:&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
@@ -1521,6 +1521,51 @@ some ideas for QGIS tutorials:&lt;br /&gt;
                 <link>http://104.237.129.71/bootcamp/applications/qgis</link>
                 <guid>http://104.237.129.71/bootcamp/applications/qgis</guid>
                 <pubDate>2003-12-31T00:00:00-07:00</pubDate>
+        </item>
+
+        <item>
+                <title>GRASS GIS</title>
+                <description>
+&lt;h1 id=&quot;geographic-resources-analysis-support-system-grass-gis&quot;&gt;Geographic Resources Analysis Support System (GRASS GIS)&lt;/h1&gt;
+&lt;p&gt;&lt;a title=&quot;Grasslogo_vector_big, via Wikimedia Commons&quot; href=&quot;upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Grasslogo_vector_big.png/431px-Grasslogo_vector_big.png&quot;&gt;&lt;img width=&quot;431&quot; alt=&quot;Grass GIS Logo&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Grasslogo_vector_big.png/431px-Grasslogo_vector_big.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;GRASS GIS is an open-source Geographic Information System used for data management, image processing, graphics production, spatial modelling, and visualizations of various data types.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;history&quot;&gt;History&lt;/h2&gt;
+
+&lt;p&gt;A branch of the US Army Corp of Enineers called the U.S. Army Construction Engineering Research Laboratories(USA-CERL) began developing GRASS GIS as a tool to perform boolean operations on multiple rasters and was quickly adopted by a host of National Agencies. With over 30 years of development under its belt, GRASS is currently used by NASA, NOAA, USDA, DLR, CSIRO, the National Park Service, the U.S. Census Bureau and the USGS.&lt;/p&gt;
+
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
+
+&lt;p&gt;GRASS differs from other GIS applications in that it works both as a stand-alone application and as an embedded library in QGIS. GRASS is also available through a Graphical User Interface, Command Line, or a host of language interfaces including Python, R, Java, PHP and C++.&lt;/p&gt;
+
+&lt;p&gt;GRASS is also distinct in that all datasets are stored in text documents. The environment variables and datasets metadata are stored in separate files to allow the program to quickly scan through the metadata.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title=&quot;GRASS GIS data location structure&quot; href=&quot;http://grass.osgeo.org/grass64/manuals/help_loc_struct.png&quot;&gt;&lt;img width=&quot;879&quot; src=&quot;//grass.osgeo.org/grass64/manuals/help_loc_struct.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;GRASS supports the following types of datasets:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Vector&lt;/li&gt;
+  &lt;li&gt;Raster&lt;/li&gt;
+  &lt;li&gt;LiDAR&lt;/li&gt;
+  &lt;li&gt;Time series&lt;/li&gt;
+  &lt;li&gt;Vector Networks&lt;/li&gt;
+  &lt;li&gt;3D&lt;/li&gt;
+  &lt;li&gt;Spatial SQL&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;GRASS Development Team, 2012. Geographic Resources Analysis Support System (GRASS) Software. Open Source Geospatial Foundation project. &lt;a href=&quot;http://grass.osgeo.org&quot;&gt;http://grass.osgeo.org&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+                <link>http://104.237.129.71/bootcamp/applications/grass-gis</link>
+                <guid>http://104.237.129.71/bootcamp/applications/grass-gis</guid>
+                <pubDate>2003-12-30T00:00:00-07:00</pubDate>
         </item>
 
         <item>
@@ -1592,113 +1637,210 @@ some ideas for QGIS tutorials:&lt;br /&gt;
                 <title>General Functions</title>
                 <description>&lt;h1 id=&quot;general-spatial-functions&quot;&gt;General Spatial Functions&lt;/h1&gt;
 
-&lt;h4 id=&quot;spatial-queries&quot;&gt;Spatial Queries&lt;/h4&gt;
+&lt;h2 id=&quot;relational-operations&quot;&gt;Relational Operations&lt;/h2&gt;
 
-&lt;p&gt;Spatial queries differ from typical SQL queries in that they account for the spatial relationships between geometry data types.&lt;/p&gt;
+&lt;p&gt;Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.[^1]&lt;/p&gt;
 
-&lt;p&gt;These relationships include:&lt;/p&gt;
+&lt;table border=&quot;0&quot; align=&quot;center&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td align=&quot;center&quot;&gt;
+      &lt;table border=&quot;0&quot; summary=&quot;manufactured viewport for HTML img&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+        &lt;tr&gt;
+          &lt;td align=&quot;center&quot; valign=&quot;middle&quot;&gt;&lt;i&gt;b&lt;/i&gt; &amp;#160; &lt;a href=&quot;/wiki/File:De9im04.png&quot; class=&quot;image&quot;&gt;&lt;img alt=&quot;De9im04.png&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/e/e2/De9im04.png&quot; width=&quot;100&quot; height=&quot;100&quot; data-file-width=&quot;100&quot; data-file-height=&quot;100&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td align=&quot;center&quot; valign=&quot;middle&quot;&gt;
+      &lt;table border=&quot;0&quot; summary=&quot;manufactured viewport for HTML img&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+        &lt;tr&gt;
+          &lt;td align=&quot;center&quot; valign=&quot;middle&quot;&gt;&lt;i&gt;a&lt;/i&gt;&lt;br /&gt;
+            &lt;a href=&quot;/wiki/File:De9im03.png&quot; class=&quot;image&quot;&gt;&lt;img alt=&quot;De9im03.png&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/c/c3/De9im03.png&quot; width=&quot;100&quot; height=&quot;100&quot; data-file-width=&quot;100&quot; data-file-height=&quot;100&quot; /&gt;&lt;/a&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;table border=&quot;0&quot;&gt;
+        &lt;tr&gt;
+          &lt;th align=&quot;center&quot;&gt;&lt;/th&gt;
+          &lt;th align=&quot;center&quot;&gt;&lt;strong&gt;Interior&lt;/strong&gt;&lt;/th&gt;
+          &lt;th align=&quot;center&quot;&gt;&lt;strong&gt;Boundary&lt;/strong&gt;&lt;/th&gt;
+          &lt;th align=&quot;center&quot;&gt;&lt;strong&gt;Exterior&lt;/strong&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td align=&quot;center&quot;&gt;&lt;strong&gt;Interior&lt;/strong&gt;&lt;/td&gt;
+          &lt;td align=&quot;center&quot; style=&quot;border-right: 2px solid #BCB; border-bottom: 2px solid #BCB;&quot;&gt;
+            &lt;a href=&quot;/wiki/File:De9im05.png&quot; class=&quot;image&quot;&gt;&lt;img alt=&quot;De9im05.png&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/4/44/De9im05.png&quot; width=&quot;100&quot; height=&quot;100&quot; data-file-width=&quot;100&quot; data-file-height=&quot;100&quot; /&gt;&lt;/a&gt;
+            &lt;p&gt;&amp;#160; &lt;i&gt;dim&lt;/i&gt;[&lt;span style=&quot;font-family: monospace, monospace;&quot;&gt;&amp;#123;&amp;#123;&amp;#123;1&amp;#125;&amp;#125;&amp;#125;&lt;/span&gt;] = &lt;b&gt;2&lt;/b&gt; &amp;#160;&lt;/p&gt;
+          &lt;/td&gt;
+          &lt;td align=&quot;center&quot; style=&quot;border-right: 2px solid #BCB; border-bottom: 2px solid #BCB;&quot;&gt;
+            &lt;a href=&quot;/wiki/File:De9im06.png&quot; class=&quot;image&quot;&gt;&lt;img alt=&quot;De9im06.png&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/9/9b/De9im06.png&quot; width=&quot;100&quot; height=&quot;100&quot; data-file-width=&quot;100&quot; data-file-height=&quot;100&quot; /&gt;&lt;/a&gt;
+            &lt;p&gt;&amp;#160; &lt;i&gt;dim&lt;/i&gt;[&lt;span style=&quot;font-family: monospace, monospace;&quot;&gt;&amp;#123;&amp;#123;&amp;#123;1&amp;#125;&amp;#125;&amp;#125;&lt;/span&gt;] = &lt;b&gt;1&lt;/b&gt; &amp;#160;&lt;/p&gt;
+          &lt;/td&gt;
+        &lt;td align=&quot;center&quot; style=&quot;border-bottom: 2px solid #BCB;&quot;&gt;
+          &lt;a href=&quot;/wiki/File:De9im07.png&quot; class=&quot;image&quot;&gt;&lt;img alt=&quot;De9im07.png&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/0/03/De9im07.png&quot; width=&quot;100&quot; height=&quot;100&quot; data-file-width=&quot;100&quot; data-file-height=&quot;100&quot; /&gt;&lt;/a&gt;
+          &lt;p&gt;&amp;#160; &lt;i&gt;dim&lt;/i&gt;[&lt;span style=&quot;font-family: monospace, monospace;&quot;&gt;&amp;#123;&amp;#123;&amp;#123;1&amp;#125;&amp;#125;&amp;#125;&lt;/span&gt;] = &lt;b&gt;2&lt;/b&gt; &amp;#160;&lt;/p&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td align=&quot;center&quot;&gt;&lt;span class=&quot;bold&quot;&gt;&lt;strong&gt;Boundary&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+        &lt;td align=&quot;center&quot; style=&quot;border-right: 2px solid #BCB; border-bottom: 2px solid #BCB;&quot;&gt;
+          &lt;div class=&quot;informalfigure&quot;&gt;
+            &lt;div&gt;
+              &lt;a href=&quot;/wiki/File:De9im08.png&quot; class=&quot;image&quot;&gt;&lt;img alt=&quot;De9im08.png&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/7/76/De9im08.png&quot; width=&quot;100&quot; height=&quot;100&quot; data-file-width=&quot;100&quot; data-file-height=&quot;100&quot; /&gt;&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;p&gt;&amp;#160; &lt;i&gt;dim&lt;/i&gt;[&lt;span style=&quot;font-family: monospace, monospace;&quot;&gt;&amp;#123;&amp;#123;&amp;#123;1&amp;#125;&amp;#125;&amp;#125;&lt;/span&gt;] = &lt;strong&gt;1&lt;/strong&gt; &amp;#160;&lt;/p&gt;
+        &lt;/td&gt;
+        &lt;td align=&quot;center&quot; style=&quot;border-right: 2px solid #BCB; border-bottom: 2px solid #BCB;&quot;&gt;
+          &lt;div class=&quot;informalfigure&quot;&gt;
+            &lt;div&gt;
+              &lt;a href=&quot;/wiki/File:De9im09.png&quot; class=&quot;image&quot;&gt;&lt;img alt=&quot;De9im09.png&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/b/b3/De9im09.png&quot; width=&quot;100&quot; height=&quot;100&quot; data-file-width=&quot;100&quot; data-file-height=&quot;100&quot; /&gt;&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;p&gt;&amp;#160; &lt;i&gt;dim&lt;/i&gt;[&lt;span style=&quot;font-family: monospace, monospace;&quot;&gt;&amp;#123;&amp;#123;&amp;#123;1&amp;#125;&amp;#125;&amp;#125;&lt;/span&gt;] = &lt;strong&gt;0&lt;/strong&gt; &amp;#160;&lt;/p&gt;
+        &lt;/td&gt;
+        &lt;td align=&quot;center&quot; style=&quot;border-bottom: 2px solid #BCB;&quot;&gt;
+          &lt;div class=&quot;informalfigure&quot;&gt;
+            &lt;div&gt;
+              &lt;a href=&quot;/wiki/File:De9im10.png&quot; class=&quot;image&quot;&gt;&lt;img alt=&quot;De9im10.png&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/1/1d/De9im10.png&quot; width=&quot;100&quot; height=&quot;100&quot; data-file-width=&quot;100&quot; data-file-height=&quot;100&quot; /&gt;&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;p&gt;&amp;#160; &lt;i&gt;dim&lt;/i&gt;[&lt;span style=&quot;font-family: monospace, monospace;&quot;&gt;&amp;#123;&amp;#123;&amp;#123;1&amp;#125;&amp;#125;&amp;#125;&lt;/span&gt;] = &lt;strong&gt;1&lt;/strong&gt; &amp;#160;&lt;/p&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td align=&quot;center&quot;&gt;&lt;span class=&quot;bold&quot;&gt;&lt;strong&gt;Exterior&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+        &lt;td align=&quot;center&quot; style=&quot;border-right: 2px solid #BCB;&quot;&gt;
+          &lt;div class=&quot;informalfigure&quot;&gt;
+            &lt;div&gt;
+              &lt;a href=&quot;/wiki/File:De9im11.png&quot; class=&quot;image&quot;&gt;&lt;img alt=&quot;De9im11.png&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/7/73/De9im11.png&quot; width=&quot;100&quot; height=&quot;100&quot; data-file-width=&quot;100&quot; data-file-height=&quot;100&quot; /&gt;&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;p&gt;&amp;#160; &lt;i&gt;dim&lt;/i&gt;[&lt;span style=&quot;font-family: monospace, monospace;&quot;&gt;&amp;#123;&amp;#123;&amp;#123;1&amp;#125;&amp;#125;&amp;#125;&lt;/span&gt;] = &lt;strong&gt;2&lt;/strong&gt; &amp;#160;&lt;/p&gt;
+        &lt;/td&gt;
+        &lt;td align=&quot;center&quot; style=&quot;border-right: 2px solid #BCB;&quot;&gt;
+          &lt;div class=&quot;informalfigure&quot;&gt;
+            &lt;div&gt;
+              &lt;a href=&quot;/wiki/File:De9im12.png&quot; class=&quot;image&quot;&gt;&lt;img alt=&quot;De9im12.png&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/6/63/De9im12.png&quot; width=&quot;100&quot; height=&quot;100&quot; data-file-width=&quot;100&quot; data-file-height=&quot;100&quot; /&gt;&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;p&gt;&amp;#160; &lt;i&gt;dim&lt;/i&gt;[&lt;span style=&quot;font-family: monospace, monospace;&quot;&gt;&amp;#123;&amp;#123;&amp;#123;1&amp;#125;&amp;#125;&amp;#125;&lt;/span&gt;] = &lt;strong&gt;1&lt;/strong&gt; &amp;#160;&lt;/p&gt;
+        &lt;/td&gt;
+        &lt;td align=&quot;center&quot;&gt;
+          &lt;div class=&quot;informalfigure&quot;&gt;
+            &lt;div&gt;
+              &lt;a href=&quot;/wiki/File:De9im13.png&quot; class=&quot;image&quot;&gt;&lt;img alt=&quot;De9im13.png&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/c/ca/De9im13.png&quot; width=&quot;100&quot; height=&quot;100&quot; data-file-width=&quot;100&quot; data-file-height=&quot;100&quot; /&gt;&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;p&gt;&amp;#160; &lt;i&gt;dim&lt;/i&gt;[&lt;span style=&quot;font-family: monospace, monospace;&quot;&gt;&amp;#123;&amp;#123;&amp;#123;1&amp;#125;&amp;#125;&amp;#125;&lt;/span&gt;] = &lt;strong&gt;2&lt;/strong&gt; &amp;#160;&lt;/p&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;spatial-predicates&quot;&gt;Spatial Predicates&lt;/h3&gt;
+&lt;p&gt;The above figure demonstrates the criteria outlined by the Dimensionally Extended Nine-Intersection Model(DE-9IM). The matrix is used to outline specific spatial relationships or predicates which are more accessible to interpretaion. These named spatial predicates are also used by spatial queryies to selet subsets of geometrys that fit in one spatial predicate.&lt;/p&gt;
+
+&lt;p&gt;Here is a quick outline of the Spatial Predicates&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Equals&lt;/dt&gt;
+  &lt;dd&gt;The two geometric objects are spatially equal meaning, they represent the same geometry (congruent in geometric terms)&lt;/dd&gt;
+  &lt;dt&gt;Disjoint&lt;/dt&gt;
+  &lt;dd&gt;The two geometric objects share no points in common, the two objects are completely separate&lt;/dd&gt;
+  &lt;dt&gt;Intersects&lt;/dt&gt;
+  &lt;dd&gt;The two geometric objects have at least one point in common&lt;/dd&gt;
+  &lt;dt&gt;Touches&lt;/dt&gt;
+  &lt;dd&gt;The two geometric objects have at least one boundary point in common, but no interior points&lt;/dd&gt;
+  &lt;dt&gt;Crosses&lt;/dt&gt;
+  &lt;dd&gt;The two geometric objects share some but not all interior points&lt;/dd&gt;
+  &lt;dt&gt;Contains&lt;/dt&gt;
+  &lt;dd&gt;One geometry is contained by the other if all the points of one geometry are within the boundary or interior of the other and they share at least one interior point. This means that this predicate may produce unpredictable behavior for linestrings and points which have no interior points.[^2]&lt;/dd&gt;
+  &lt;dt&gt;Within&lt;/dt&gt;
+  &lt;dd&gt;The inverse of Contains. The first geometry is completely within the second geometry&lt;/dd&gt;
+  &lt;dt&gt;Overlaps&lt;/dt&gt;
+  &lt;dd&gt;The two geometries share some but not all points in common, the two geometries have the same dimensions and the intersection of the two geometries has the same dimension as the two input geometries&lt;/dd&gt;
+  &lt;dt&gt;Covers&lt;/dt&gt;
+  &lt;dd&gt;Similar to contains, but does not require that the two geometries share an interior point, which makes it the proper tool for working with inputs of different dimensions.&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h3 id=&quot;methods-for-spatial-analysis&quot;&gt;Methods for Spatial Analysis&lt;/h3&gt;
+
+&lt;p&gt;There are a few standard methods for geometric analysis available based on the geoetric object model. This is a brief listing of basic analyses and is by no means exhaustive of the available functions.&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Distance&lt;/dt&gt;
+  &lt;dd&gt;Measures the shortest distance between two geometries.&lt;/dd&gt;
+  &lt;dt&gt;Buffer&lt;/dt&gt;
+  &lt;dd&gt;Creates a geometric object that represents all points within a given distance from the given geometry&lt;/dd&gt;
+  &lt;dt&gt;Convex Hull&lt;/dt&gt;
+  &lt;dd&gt;Creates a geometric object that represent the minimum bounding convex polygon that contains all points of the given geometry&lt;/dd&gt;
+  &lt;dt&gt;Intersection&lt;/dt&gt;
+  &lt;dd&gt;Returns a geometric object that represents the intersecting parts of two given geometries&lt;/dd&gt;
+  &lt;dt&gt;Union&lt;/dt&gt;
+  &lt;dd&gt;Creates a geometric object that represents the combination of two given geometries&lt;/dd&gt;
+  &lt;dt&gt;Difference&lt;/dt&gt;
+  &lt;dd&gt;Returns the given geometries that do not intersect. If all gemetries intersect, an empty set will be returned.&lt;/dd&gt;
+  &lt;dt&gt;Symmetric Difference&lt;/dt&gt;
+  &lt;dd&gt;Creates a geometric object of the disjoint parts of two geometries. The output will have all pieceheld by one geometry or the other, but not the areas held by both.&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h4 id=&quot;examples&quot;&gt;Examples&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;dl&gt;
-      &lt;dt&gt;Distance &lt;/dt&gt;
-      &lt;dd&gt;Returns the distance between two geometries&lt;/dd&gt;
-    &lt;/dl&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;dl&gt;
-      &lt;dt&gt;Equals&lt;/dt&gt;
-      &lt;dd&gt;Returns true if the given geometries represent the same geometry&lt;/dd&gt;
-    &lt;/dl&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;dl&gt;
-      &lt;dt&gt;Disjoint&lt;/dt&gt;
-      &lt;dd&gt;Returns true if the two geometries do not spatially intersect&lt;/dd&gt;
-    &lt;/dl&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;dl&gt;
-      &lt;dt&gt;Intersects&lt;/dt&gt;
-      &lt;dd&gt;Returns true if the given geometries intersect&lt;/dd&gt;
-    &lt;/dl&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;dl&gt;
-      &lt;dt&gt;Touches&lt;/dt&gt;
-      &lt;dd&gt;Returns true if the given geometries have at least one point in common, but their interiors do not intersect&lt;/dd&gt;
-    &lt;/dl&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;dl&gt;
-      &lt;dt&gt;Crosses&lt;/dt&gt;
-      &lt;dd&gt;Returns true if the given geometries share some but not all interior points&lt;/dd&gt;
-    &lt;/dl&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;dl&gt;
-      &lt;dt&gt;Overlaps&lt;/dt&gt;
-      &lt;dd&gt;True if the given geometries share space but are not completely contained by each other.&lt;/dd&gt;
-    &lt;/dl&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;dl&gt;
-      &lt;dt&gt;Contains&lt;/dt&gt;
-      &lt;dd&gt;True if no points of geometry B lie in the exterior of A  and at least one point of the interior of B lies in the interior of A.&lt;/dd&gt;
-    &lt;/dl&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;vector-functions&quot;&gt;Vector Functions&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Join - This will merge features from one layer to another by either a spatial proximity, query or intersection. Some spatial joins include:
-    &lt;ul&gt;
-      &lt;li&gt;Join school attendance ratings to census blocks&lt;/li&gt;
-      &lt;li&gt;Join income demographic data to store locations&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Intersect - Instersect extracts overlapping features from two layers. This is a spatial form of the SQL inner join. Examples of intersections:
+  &lt;li&gt;Intersection
     &lt;ul&gt;
       &lt;li&gt;All rivers within washington state boundary&lt;/li&gt;
       &lt;li&gt;Residential areas with past landslide&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Union - Merges the two datasets spatial extents(logical AND). This comes in handy when aggregating datasets from that may border each other or occur in different extents.  Examples:
+  &lt;li&gt;Union
     &lt;ul&gt;
       &lt;li&gt;Merging census data for two states in a single layer (Useful for studying phenomena that do not respect political boundaries)&lt;/li&gt;
       &lt;li&gt;Merging state boundaries for Canada, U.S. and Mexico into a North American dataset (GADM makes this a breeze)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Disjoint - Extracts the areas only held by one layer or another and excludes overlapping areas(logical OR).
+  &lt;li&gt;Symmetric Difference
     &lt;ul&gt;
-      &lt;li&gt;WHY IS THIS USEFUL?&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Buffer - This will create an output holding areas covered by a designated radius of the layer’s features. This allows you to analyze phenomena by proximity.
+  &lt;li&gt;Buffer
     &lt;ul&gt;
-      &lt;li&gt;Instagram posts vs distance to local eatery&lt;/li&gt;
-      &lt;li&gt;Tweets vs proximity to sporting event&lt;/li&gt;
+      &lt;li&gt;Instagram posts vs within 100m of a local restaurant&lt;/li&gt;
+      &lt;li&gt;Tweets vs within 1km of a football stadium&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Convex Hull - This creates the smallest polygon containing a given set of features
+  &lt;li&gt;Convex Hull
     &lt;ul&gt;
       &lt;li&gt;Bounding boxes, circles&lt;/li&gt;
-      &lt;li&gt;Collision detection&lt;/li&gt;
+      &lt;li&gt;Range modeling for small data sets&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;raster-functions&quot;&gt;Raster Functions&lt;/h4&gt;
+&lt;h3 id=&quot;raster-functions&quot;&gt;Raster Functions&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Slope - This function will calculate a slope surface given a raster holding an elevation model&lt;/li&gt;
   &lt;li&gt;Aspect - This outputs a surface holding values 0-360 referencing the azimuth of the given surface&lt;/li&gt;
   &lt;li&gt;Raster Calculator - Performs a designated mathematical equation on all values within a raster. This can also be used to combine/difference rasters.&lt;/li&gt;
   &lt;li&gt;Interpolation - Useful for resurfacing a dataset. This can also be used to create a continuous surface from a point dataset.&lt;/li&gt;
-  &lt;li&gt;Zonal Statistics -&lt;/li&gt;
   &lt;li&gt;Reclassify - Useful for creating discrete value categories from continous values(e.g.float data) also useful for creating presence absence datasets.&lt;/li&gt;
+  &lt;li&gt;Polygonize - Creates a set of polygon features representing the given raster dataset&lt;/li&gt;
+  &lt;li&gt;Histogram - Create a histogram showing the distribution of values in a raster dataset&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;[^1] : SQL Simple Features Specification
+[^2] : JTS
+[^3] : Esri
+[^4] : PostGIS Reference Manual.  &lt;a href=&quot;//postgis.org/documentation/manual-svn/using_postgis_dbmanagement.html&quot;&gt;http://postgis.org/documentation/manual-svn/using_postigs_dbmanagement.html&lt;/a&gt;&lt;/p&gt;
 </description>
                 <link>http://104.237.129.71/bootcamp/data%20wrangling/functions</link>
                 <guid>http://104.237.129.71/bootcamp/data%20wrangling/functions</guid>
@@ -1713,7 +1855,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 
 &lt;h3 id=&quot;the-importance-of-spatial-data-metadata&quot;&gt;The importance of spatial data metadata&lt;/h3&gt;
 
-&lt;p&gt;Spatial data without metadata isn’t useless but it doesn’t help you get too far. &lt;/p&gt;
+&lt;p&gt;Spatial data without metadata isn’t useless but it doesn’t help you get too far.&lt;/p&gt;
 
 &lt;h3 id=&quot;viewing-metadata-in-qgis&quot;&gt;Viewing metadata in QGIS&lt;/h3&gt;
 
@@ -1721,7 +1863,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
 
 &lt;p&gt;View Metadata in QGIS &lt;em&gt;Right-click layer &amp;gt; Properties &amp;gt; Metadata&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;General: &lt;/p&gt;
+&lt;p&gt;General:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Storage type&lt;/li&gt;
@@ -1732,7 +1874,7 @@ some ideas for QGIS tutorials:&lt;br /&gt;
   &lt;li&gt;Editing capabilities&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Extend: &lt;/p&gt;
+&lt;p&gt;Extend:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;(xMin, yMin), (xMax,yMax)&lt;/li&gt;
@@ -1817,7 +1959,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;ul&gt;
   &lt;li&gt;
     &lt;dl&gt;
-      &lt;dt&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger.html&quot;&gt;Topologically Integrated Geographic Encoding and Referencing (TIGER) Products&lt;/a&gt; &lt;/dt&gt;
+      &lt;dt&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger.html&quot;&gt;Topologically Integrated Geographic Encoding and Referencing (TIGER) Products&lt;/a&gt;&lt;/dt&gt;
       &lt;dd&gt;TIGER products are spatial extracts from the Census Bureau’s MAF/TIGER database containing features such as roads, railroads, rivers, as well as legal and statistical geographic areas. The Census Bureau offers (these products) in several file types&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.”&lt;/dd&gt;
     &lt;/dl&gt;
   &lt;/li&gt;
@@ -1836,14 +1978,14 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
   &lt;dt&gt;&lt;a href=&quot;http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1&quot;&gt;Web Feature Service (WFS)&lt;/a&gt; - Useful for modifying features in remote datasets&lt;/dt&gt;
   &lt;dd&gt;The WFS represents a change in the way geographic information is created, modified, and exchanged on the Internet. Rather than sharing geographic information at the file level using the File Transfer Protocol(FTP), the WFS offers direct fine-grained access to geographic information at the feature and feature property level. Web features services allow clients to only retrieve or modify the data they are seeking, rather than retrieving a file that contains the data they are seeking and possibly much more&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
-  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wms&quot;&gt;Web Map Service (WMS)&lt;/a&gt; - Useful for visualizing remote datasets &lt;/dt&gt;
+  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wms&quot;&gt;Web Map Service (WMS)&lt;/a&gt; - Useful for visualizing remote datasets&lt;/dt&gt;
   &lt;dd&gt;The Web Map Service Interface Standard provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. The WMS response will return one or more geo-registered map images (JPEG, PNG, etc) to be display in a browser application&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
   &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wps&quot;&gt;Web Processing Service (WPS)&lt;/a&gt; - Utilizes remote resources for computation&lt;/dt&gt;
   &lt;dd&gt;THe WPS Standard provides rule for standardizing inputs and outputs for geospatial processing services, such as polygon overlay. The standard also defines how a client can request the execution of a process and how the output of the process is handled&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;. 
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
   &lt;dt&gt;&lt;a href=&quot;http://www.opendap.org&quot;&gt;OPeNDAP&lt;/a&gt;&lt;/dt&gt;
-  &lt;dd&gt;OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations. &lt;/dd&gt;
+  &lt;dd&gt;OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations.&lt;/dd&gt;
 &lt;/dl&gt;
 
 &lt;p&gt;A few examples of these applications are:&lt;/p&gt;
@@ -1857,7 +1999,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;http://www.gadm.org  &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;http://www.gadm.org &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
       &lt;p&gt;http://www.census.gov/geo/maps-data/data/tiger.html &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
@@ -1887,39 +2029,44 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
                 <description>
 &lt;h1 id=&quot;is-spatial-special&quot;&gt;Is Spatial Special?&lt;/h1&gt;
 
-&lt;p&gt;There has been discussions about the nature of spatial data and whether or not there is anything special about it. Since the OGC agreed on the Simple Features for SQL specification in 1999, spatial data can be stored alongside other data types as another column in a table. However, we can see a lot of GIS professionals evangelizing the difference between spatial data and &lt;em&gt;regular data&lt;/em&gt;. &lt;/p&gt;
+&lt;p&gt;There have been numerous discussions about the nature of spatial data and whether or not there is anything special about spatial information. Since the Open Geospatial Consortium(OGC) created the Simple Features for SQL specification in 1999, spatial data can be stored alongside other data types as just another column in a table. However,if you look for it, you can see a lot of GIS professionals evangelizing the difference between spatial data and &lt;em&gt;regular data&lt;/em&gt;. Is there really a valid reason that spatial data is more unique than temporal or text data types? Is it just GIS professionals trying to sell their expertise as a separate field?&lt;/p&gt;
 
 &lt;h2 id=&quot;do-they-have-a-point&quot;&gt;Do they have a point?&lt;/h2&gt;
 
-&lt;p&gt;There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of forms.&lt;/p&gt;
+&lt;p&gt;There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of data types, which are each inter-related. Spatial data is also dependent on a few factors such as projection, ellipsoid, and unit of measure. Spatial data is naturally multi-dimensional but needs to normally be passed through a visualization application to understand. Finally, a sticking point for spatial data has been how should the data be organized effectively and how can the inherent relationships between objects be tested efficiently.&lt;/p&gt;
+
+&lt;p&gt;The specification helps to define a few words useful when dealing with spatial data.&lt;/p&gt;
+
+&lt;p&gt;A &lt;em&gt;feature&lt;/em&gt; is an abstraction of real world phenomena.&lt;/p&gt;
+
+&lt;p&gt;The simple features for SQL defined a simple feature as a feature with all geometric attributes described piecewise by straight line or planar interpolation between sets of points.&lt;/p&gt;
 
 &lt;h3 id=&quot;spatial-data-types&quot;&gt;1. Spatial Data Types&lt;/h3&gt;
 
-&lt;p&gt;The OGC decided on a set of Spatial data types or geometry objects in the Simple Features for SQL specification&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;The Geometry Object Model from the Simple Features for SQL specification&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
 
 &lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/bootcamp//assets/images/geometryObjectModel.png&quot; alt=&quot;geomObjModel&quot; /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Point&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;LineString&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Polygon&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Surface&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Geometry Collection&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;This structure allowed developers to rely on a standard system for storing spatial data types and representing the relationships between different spatial data types.&lt;/p&gt;
+
+&lt;p&gt;Some of the most used spatial data types are:&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Point&lt;/dt&gt;
+  &lt;dd&gt;A Point is a 0-dimensional geometric object and represents a single location in coordinate space. A Point has an x-coordinate value, and a y-coordinate value. If called for by the associated Spatial Reference System, it may also have coordinate values for z and m.&lt;/dd&gt;
+  &lt;dt&gt;LineString&lt;/dt&gt;
+  &lt;dd&gt;A linestring is a Curve with linear interpolation between Points. Each consecutive pair of points defines aLine Segment. A  line is a LineString with exactly 2 Points. A Linear Ring is a LineString is a LieString that is both closed and simple. A linestring is a series of connected points. These points act as vertices or nodes and are connected by curves. Each curve is assigned a start point and end point whcih represents the cardinality of the linestring. This cardinality is used to designate an order from the starting point to the end point.&lt;/dd&gt;
+  &lt;dt&gt;Polygon&lt;/dt&gt;
+  &lt;dd&gt;A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. Polygons are topologically closed. THe boundary of a Polygon consists of a set of LinearRings that make up its exterior and interior boundaries. No two Rings in the boundary cross and the Rings in the boundary of a Polygon may intersect but only as a tangent.  A series of connected line strings&lt;/dd&gt;
+  &lt;dt&gt;Surface&lt;/dt&gt;
+  &lt;dd&gt;A topological 2-dimensional geometric primitive, locally representing a continuous image of a region of a plane.&lt;/dd&gt;
+  &lt;dt&gt;Geometry Collection&lt;/dt&gt;
+  &lt;dd&gt;A geometric object that is a collection of some number of geometric objects. All the objects in a geometry collection must be in the sata spatial reference system.&lt;/dd&gt;
+&lt;/dl&gt;
 
 &lt;h3 id=&quot;sorting-and-indexes&quot;&gt;2. Sorting and Indexes&lt;/h3&gt;
 
-&lt;p&gt;Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type. &lt;/p&gt;
+&lt;p&gt;Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type.&lt;/p&gt;
 
 &lt;p&gt;Sorting spatial data poses an interesting problem. Do you sort from North to south? West to East? What happens if you are sorting lines or polygons that overlap?&lt;/p&gt;
 
@@ -1927,7 +2074,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;p&gt;The R-Tree index was proposed by Antoine Guttman in 1984.&lt;/p&gt;
 
-&lt;p&gt;In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features. &lt;/p&gt;
+&lt;p&gt;In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects&amp;#8217; spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features.&lt;/p&gt;
 
 &lt;p&gt;&lt;a title=&quot;By Skinkie, w:en:Radim Baca (Own work) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AR-tree.svg&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;R-tree&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/R-tree.svg/512px-R-tree.svg.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -1935,13 +2082,17 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;p&gt;Spatial Data requires at least 2 dimensions X and Y, which are traditionally held in Longitude, and Latitude. Spatial data can also require elevation(Z) and temporal (t) dimensions depending on the data. These dimension require novel methods for measure relationships between objects in multiple dimensions.&lt;/p&gt;
 
-&lt;h3 id=&quot;dependence&quot;&gt;4. Dependence&lt;/h3&gt;
+&lt;h3 id=&quot;reference-systems&quot;&gt;4. Reference Systems&lt;/h3&gt;
+
+&lt;p&gt;A &lt;em&gt;Coordinate Reference System&lt;/em&gt; is built on top of a &lt;em&gt;coordinate system&lt;/em&gt;. A &lt;em&gt;coordinate system&lt;/em&gt; is a set of mathematical rules for specifying how coordinates are to be assigned to each point, also known as a &lt;em&gt;projection&lt;/em&gt;. A &lt;em&gt;coordinate reference system&lt;/em&gt; is a coordinate system that is related to the real world by a datum, this can also be known as a &lt;em&gt;geographic coordinate system&lt;/em&gt; or &lt;em&gt;spatial reference system&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;dependence&quot;&gt;5. Dependence&lt;/h3&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;“Everything is related to everything else, but near things are more related than distant things” - Waldo Tobler&lt;/p&gt;
+  &lt;p&gt;&amp;#8220;Everything is related to everything else, but near things are more related than distant things&amp;#8221; - Waldo Tobler&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Tobler’s First law of Geography is the fundamental basis of Spatial Analysis. &lt;/p&gt;
+&lt;p&gt;Tobler&amp;#8217;s First law of Geography is the fundamental basis of Spatial Analysis.&lt;/p&gt;
 
 &lt;p&gt;This spatial dependence required the study of spatial effects and their influence on statistical studies.&lt;/p&gt;
 
@@ -1957,7 +2108,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
       &lt;p&gt;&lt;a href=&quot;http://portal.opengeospatial.org/files/?artifact_id=829&quot;&gt;OpenGIS Simple Features Implementation Specification for SQL&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Guttman, A. (1984). “R-Trees: A Dynamic Index Structure for Spatial Searching”. &lt;em&gt;Proceedings of the 1984 ACM SIGMOD international conference of Management of data - SIGMOD ‘84.&lt;/em&gt; p. 47 doi:10.1145/602259.602266. ISBN 0897911288. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Guttman, A. (1984). &amp;#8220;R-Trees: A Dynamic Index Structure for Spatial Searching&amp;#8221;. &lt;em&gt;Proceedings of the 1984 ACM SIGMOD international conference of Management of data - SIGMOD &amp;#8216;84.&lt;/em&gt; p. 47 doi:10.1145/602259.602266. ISBN 0897911288. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:3&quot;&gt;
       &lt;p&gt;Luc Anselin, Spatial Econometrics, 1999 &lt;a href=&quot;https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf&quot;&gt;https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
@@ -1996,7 +2147,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;p&gt;Projections characterize spatial data by setting coordinate reference systems for each data set.&lt;/p&gt;
 
 &lt;p&gt;Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
- will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth&#39;s image onto a plane. &lt;/p&gt;
+ will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth's image onto a plane.&lt;/p&gt;
 
 &lt;h4 id=&quot;projections-can-come-in-a-variety-of-forms&quot;&gt;Projections can come in a variety of forms:&lt;/h4&gt;
 
@@ -2045,11 +2196,11 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis. &lt;/p&gt;
+&lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.gdal.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assetsimages/gdalinfo.png&quot; alt=&quot;Using GDAL to check projection&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assetsimages/spatialreference.png&quot; alt=&quot;SpatialReference.org: EPSG:4326&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -2087,7 +2238,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
   &lt;li&gt;Arcinfo/Ascii grid: Proprietary format by Esri&lt;/li&gt;
   &lt;li&gt;Geodatabase: Esri proprietary spatial database. Very easy to load data into, not so easy to extract.&lt;/li&gt;
   &lt;li&gt;GeoJSON: Encodes points, lines, and polygons (and collections of those) along with information about them using JSON (JavaScript Object Notation). This format is popular for web maps.&lt;/li&gt;
-  &lt;li&gt;Database: There are various databases that, with extensions, can hold geographic objects. Some notable examples are PostgreSQL with PostGIS, and SQLite with the SpatiaLite extension. It is important to look into the level of spatial support within a database before performing any analysis. For example, MySQL&#39;s spatial extension has geometry support, but the geometries are all defined by bounding boxes rather than the true geometry.&lt;/li&gt;
+  &lt;li&gt;Database: There are various databases that, with extensions, can hold geographic objects. Some notable examples are PostgreSQL with PostGIS, and SQLite with the SpatiaLite extension. It is important to look into the level of spatial support within a database before performing any analysis. For example, MySQL's spatial extension has geometry support, but the geometries are all defined by bounding boxes rather than the true geometry.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
                 <link>http://104.237.129.71/bootcamp/intro/intro</link>

@@ -172,6 +172,14 @@
       
     
   
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
 
 
 
@@ -456,6 +464,14 @@
       
     
   
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
 
 
 
@@ -723,6 +739,14 @@
       
     
   
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
 
 
 
@@ -878,39 +902,44 @@
   
 <h1 id="is-spatial-special">Is Spatial Special?</h1>
 
-<p>There has been discussions about the nature of spatial data and whether or not there is anything special about it. Since the OGC agreed on the Simple Features for SQL specification in 1999, spatial data can be stored alongside other data types as another column in a table. However, we can see a lot of GIS professionals evangelizing the difference between spatial data and <em>regular data</em>. </p>
+<p>There have been numerous discussions about the nature of spatial data and whether or not there is anything special about spatial information. Since the Open Geospatial Consortium(OGC) created the Simple Features for SQL specification in 1999, spatial data can be stored alongside other data types as just another column in a table. However,if you look for it, you can see a lot of GIS professionals evangelizing the difference between spatial data and <em>regular data</em>. Is there really a valid reason that spatial data is more unique than temporal or text data types? Is it just GIS professionals trying to sell their expertise as a separate field?</p>
 
 <h2 id="do-they-have-a-point">Do they have a point?</h2>
 
-<p>There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of forms.</p>
+<p>There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of data types, which are each inter-related. Spatial data is also dependent on a few factors such as projection, ellipsoid, and unit of measure. Spatial data is naturally multi-dimensional but needs to normally be passed through a visualization application to understand. Finally, a sticking point for spatial data has been how should the data be organized effectively and how can the inherent relationships between objects be tested efficiently.</p>
+
+<p>The specification helps to define a few words useful when dealing with spatial data.</p>
+
+<p>A <em>feature</em> is an abstraction of real world phenomena.</p>
+
+<p>The simple features for SQL defined a simple feature as a feature with all geometric attributes described piecewise by straight line or planar interpolation between sets of points.</p>
 
 <h3 id="spatial-data-types">1. Spatial Data Types</h3>
 
-<p>The OGC decided on a set of Spatial data types or geometry objects in the Simple Features for SQL specification<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+<p>The Geometry Object Model from the Simple Features for SQL specification<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>:</p>
 
 <p class="center"><img src="/bootcamp//assets/images/geometryObjectModel.png" alt="geomObjModel" /></p>
 
-<ul>
-  <li>
-    <p>Point</p>
-  </li>
-  <li>
-    <p>LineString</p>
-  </li>
-  <li>
-    <p>Polygon</p>
-  </li>
-  <li>
-    <p>Surface</p>
-  </li>
-  <li>
-    <p>Geometry Collection</p>
-  </li>
-</ul>
+<p>This structure allowed developers to rely on a standard system for storing spatial data types and representing the relationships between different spatial data types.</p>
+
+<p>Some of the most used spatial data types are:</p>
+
+<dl>
+  <dt>Point</dt>
+  <dd>A Point is a 0-dimensional geometric object and represents a single location in coordinate space. A Point has an x-coordinate value, and a y-coordinate value. If called for by the associated Spatial Reference System, it may also have coordinate values for z and m.</dd>
+  <dt>LineString</dt>
+  <dd>A linestring is a Curve with linear interpolation between Points. Each consecutive pair of points defines aLine Segment. A  line is a LineString with exactly 2 Points. A Linear Ring is a LineString is a LieString that is both closed and simple. A linestring is a series of connected points. These points act as vertices or nodes and are connected by curves. Each curve is assigned a start point and end point whcih represents the cardinality of the linestring. This cardinality is used to designate an order from the starting point to the end point.</dd>
+  <dt>Polygon</dt>
+  <dd>A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. Polygons are topologically closed. THe boundary of a Polygon consists of a set of LinearRings that make up its exterior and interior boundaries. No two Rings in the boundary cross and the Rings in the boundary of a Polygon may intersect but only as a tangent.  A series of connected line strings</dd>
+  <dt>Surface</dt>
+  <dd>A topological 2-dimensional geometric primitive, locally representing a continuous image of a region of a plane.</dd>
+  <dt>Geometry Collection</dt>
+  <dd>A geometric object that is a collection of some number of geometric objects. All the objects in a geometry collection must be in the sata spatial reference system.</dd>
+</dl>
 
 <h3 id="sorting-and-indexes">2. Sorting and Indexes</h3>
 
-<p>Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type. </p>
+<p>Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type.</p>
 
 <p>Sorting spatial data poses an interesting problem. Do you sort from North to south? West to East? What happens if you are sorting lines or polygons that overlap?</p>
 
@@ -918,7 +947,7 @@
 
 <p>The R-Tree index was proposed by Antoine Guttman in 1984.</p>
 
-<p>In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features. </p>
+<p>In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects&#8217; spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features.</p>
 
 <p><a title="By Skinkie, w:en:Radim Baca (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AR-tree.svg"><img width="512" alt="R-tree" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/R-tree.svg/512px-R-tree.svg.png" /></a></p>
 
@@ -926,13 +955,17 @@
 
 <p>Spatial Data requires at least 2 dimensions X and Y, which are traditionally held in Longitude, and Latitude. Spatial data can also require elevation(Z) and temporal (t) dimensions depending on the data. These dimension require novel methods for measure relationships between objects in multiple dimensions.</p>
 
-<h3 id="dependence">4. Dependence</h3>
+<h3 id="reference-systems">4. Reference Systems</h3>
+
+<p>A <em>Coordinate Reference System</em> is built on top of a <em>coordinate system</em>. A <em>coordinate system</em> is a set of mathematical rules for specifying how coordinates are to be assigned to each point, also known as a <em>projection</em>. A <em>coordinate reference system</em> is a coordinate system that is related to the real world by a datum, this can also be known as a <em>geographic coordinate system</em> or <em>spatial reference system</em>.</p>
+
+<h3 id="dependence">5. Dependence</h3>
 
 <blockquote>
-  <p>“Everything is related to everything else, but near things are more related than distant things” - Waldo Tobler</p>
+  <p>&#8220;Everything is related to everything else, but near things are more related than distant things&#8221; - Waldo Tobler</p>
 </blockquote>
 
-<p>Tobler’s First law of Geography is the fundamental basis of Spatial Analysis. </p>
+<p>Tobler&#8217;s First law of Geography is the fundamental basis of Spatial Analysis.</p>
 
 <p>This spatial dependence required the study of spatial effects and their influence on statistical studies.</p>
 
@@ -948,7 +981,7 @@
       <p><a href="http://portal.opengeospatial.org/files/?artifact_id=829">OpenGIS Simple Features Implementation Specification for SQL</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:2">
-      <p>Guttman, A. (1984). “R-Trees: A Dynamic Index Structure for Spatial Searching”. <em>Proceedings of the 1984 ACM SIGMOD international conference of Management of data - SIGMOD ‘84.</em> p. 47 doi:10.1145/602259.602266. ISBN 0897911288. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+      <p>Guttman, A. (1984). &#8220;R-Trees: A Dynamic Index Structure for Spatial Searching&#8221;. <em>Proceedings of the 1984 ACM SIGMOD international conference of Management of data - SIGMOD &#8216;84.</em> p. 47 doi:10.1145/602259.602266. ISBN 0897911288. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:3">
       <p>Luc Anselin, Spatial Econometrics, 1999 <a href="https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf">https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
