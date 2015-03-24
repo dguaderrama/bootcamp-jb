@@ -12,6 +12,14 @@ body {
   line-height: 1.625em;
 }
 
+/* iframe classes */
+.paletton, .leaflet, .d3, .openlayers {
+  width: 100%;
+  height: 400px;
+  display: block;
+}
+
+
 /* background images */
 /* !important allow you to keep a standard color background for .unit-article header when the page(class) does not have a background image */
 .qgis {
@@ -32,18 +40,18 @@ body {
 }
 /* sticky nav -- jquery -- */
 #sticky.stick {
-  /* uncomment this line to make the left nav column stick when scrolling. and see notes below */
-//  position: fixed;
+  /* uncomment/comment-out this line to make the left nav column stick/not-stick when scrolling. and see notes below */
+  position: fixed;
+
   top: 0;
   z-index: 10;
   border-radius: 0 0 0.5em 0.5em;
   background-color: white;
 }
-/* also, uncomment this to give the body a min-height so the footer doesn't cover the left nav */
+/* sticky.nav -- jquery -- also, uncomment/comment-out this to give the body a min-height so the footer doesn't cover the left nav */
 .unit-article .entry-content {
- // min-height: 555px;
+ min-height: 555px;
 }
-
 .sticky-left-nav { 
   margin-left: 12%;
 }
@@ -86,7 +94,7 @@ body {
 }
 .unit-article .entry-content {
   width: 55%;
-  min-height: 515px;
+  min-height: 535px;
 }
 .dropdown-nav li {
   list-style-type: none;

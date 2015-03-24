@@ -7,13 +7,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>GRASS GIS</title>
+	<title>Map Types</title>
 	<meta name="author" content="Nathan Casler">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
 	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/" rel="alternate" title="GRASS GIS" type="application/atom+xml">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Map Types" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 	
 	<!-- Latest compiled and minified CSS -->
@@ -175,7 +175,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/applications/grass-gis" class="active">GRASS GIS</a></li>
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
       	
       
     
@@ -239,7 +239,7 @@
     
       
       	
-      	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
+      	<li class="active"><a href="/bootcamp/cartography/map-types" class="active">Map Types</a></li>
       	
       
     
@@ -350,7 +350,7 @@
 			<header id="content-header">
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-						<h1 class="h2 entry-title">GRASS GIS</h1>
+						<h1 class="h2 entry-title">Map Types</h1>
 
 
 
@@ -475,7 +475,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/applications/grass-gis" class="active">GRASS GIS</a></li>
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
       	
       
     
@@ -537,7 +537,7 @@
     
       
       	
-      	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
+      	<li class="active"><a href="/bootcamp/cartography/map-types" class="active">Map Types</a></li>
       	
       
     
@@ -758,7 +758,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/applications/grass-gis" class="active">GRASS GIS</a></li>
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
       	
       
     
@@ -820,7 +820,7 @@
     
       
       	
-      	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
+      	<li class="active"><a href="/bootcamp/cartography/map-types" class="active">Map Types</a></li>
       	
       
     
@@ -924,52 +924,36 @@
 
 <div class="entry-content">
   
-<h1 id="geographic-resources-analysis-support-system-grass-gis">Geographic Resources Analysis Support System (GRASS GIS)</h1>
-<p><a title="Grasslogo_vector_big, via Wikimedia Commons" href="upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Grasslogo_vector_big.png/431px-Grasslogo_vector_big.png"><img width="431" alt="Grass GIS Logo" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Grasslogo_vector_big.png/431px-Grasslogo_vector_big.png" /></a></p>
+<h2 id="understanding-different-map-types">Understanding different map types</h2>
 
-<p>GRASS GIS is an open-source Geographic Information System used for data management, image processing, graphics production, spatial modelling, and visualizations of various data types.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
-
-<h2 id="history">History</h2>
-
-<p>A branch of the US Army Corp of Enineers called the U.S. Army Construction Engineering Research Laboratories(USA-CERL) began developing GRASS GIS as a tool to perform boolean operations on multiple rasters and was quickly adopted by a host of National Agencies. With over 30 years of development under its belt, GRASS is currently used by NASA, NOAA, USDA, DLR, CSIRO, the National Park Service, the U.S. Census Bureau and the USGS.</p>
-
-<h2 id="features">Features</h2>
-
-<p>GRASS differs from other GIS applications in that it works both as a stand-alone application and as an embedded library in QGIS. GRASS is also available through a Graphical User Interface, Command Line, or a host of language interfaces including Python, R, Java, PHP and C++.</p>
-
-<p>GRASS is also distinct in that all datasets are stored in text documents. The environment variables and datasets metadata are stored in separate files to allow the program to quickly scan through the metadata.</p>
-
-<p><a title="GRASS GIS data location structure" href="http://grass.osgeo.org/grass64/manuals/help_loc_struct.png"><img width="879" src="//grass.osgeo.org/grass64/manuals/help_loc_struct.png" /></a></p>
-
-<p>GRASS supports the following types of datasets:</p>
+<h3 id="thematic">Thematic</h3>
 
 <ul>
-  <li>Vector</li>
-  <li>Raster</li>
-  <li>LiDAR</li>
-  <li>Time series</li>
-  <li>Vector Networks</li>
-  <li>3D</li>
-  <li>Spatial SQL</li>
+  <li>Choropleth</li>
+  <li>Proportional/graduated symbols</li>
+  <li>Isarithmic/contour</li>
+  <li>Topographic</li>
+  <li>Dot</li>
+  <li>Univariate/Multivariate</li>
+  <li>Dasymetric</li>
 </ul>
 
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p>GRASS Development Team, 2012. Geographic Resources Analysis Support System (GRASS) Software. Open Source Geospatial Foundation project. <a href="http://grass.osgeo.org">http://grass.osgeo.org</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
+<hr />
+
+<p><br /></p>
+
+<p>References</p>
+
 
 
           <!--
 					<div class="meta">
 						<p class="date-publish">
 							Published: 
-							<date class="date-pub" title="2003-12-30T00:00:00-07:00" datetime="2003-12-30T00:00:00-07:00" pubdate>
+							<date class="date-pub" title="2005-12-25T00:00:00-07:00" datetime="2005-12-25T00:00:00-07:00" pubdate>
 							<span class="month"><abbr>December</abbr></span>
-							<span class="day">30</span>
-							<span class="year">2003</span>
+							<span class="day">25</span>
+							<span class="year">2005</span>
 							</date>
 						</p>
 						<ul class="list-category list-linear">
@@ -980,8 +964,8 @@
 
   
      
-    	<li><a href="/categories.html#applications-ref">
-    		applications <span>2</span>
+    	<li><a href="/categories.html#cartography-ref">
+    		cartography <span>3</span>
     	</a></li>
     
   
@@ -996,11 +980,13 @@
 
   
      
-    	<li><a href="/tags.html#applications-ref">applications <span>2</span></a></li>
+    	<li><a href="/tags.html#cartography-ref">cartography <span>3</span></a></li>
      
-    	<li><a href="/tags.html#grass-ref">grass <span>1</span></a></li>
+    	<li><a href="/tags.html#map types-ref">map types <span>1</span></a></li>
      
-    	<li><a href="/tags.html#gis-ref">gis <span>1</span></a></li>
+    	<li><a href="/tags.html#qgis-ref">qgis <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#mapbox-ref">mapbox <span>1</span></a></li>
     
   
 
@@ -1029,13 +1015,13 @@
 					<nav class="pagination">
 						<ul>
 							
-              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/data%20wrangling/data-wrangling" title="View Data Wrangling">&laquo; Data Wrangling</a></li>
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/cartography/web-mapping" title="View Web Mapping">&laquo; Web Mapping</a></li>
 							
 							
 							<li class="pipe"> | </li>
 							
 							
-              <li class="next"><a class="internal" rel="next"  href="/bootcamp/applications/qgis" title="View QGIS">QGIS &raquo;</a></li>
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/cartography/fundamentals" title="View Fundamentals">Fundamentals &raquo;</a></li>
 							
 						</ul>
 					</nav>
@@ -1084,7 +1070,7 @@
 		};
 	load('//platform.twitter.com/widgets.js', 'tweetjs');
 	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
-	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/applications/grass-gis" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/cartography/map-types" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
 	}(document, 'script'));
 </script>
 <script>

@@ -22,8 +22,10 @@ tags : [cartography, web map, leaflet, openlayers, d3]
 
 <iframe class="leaflet" src="http://leafletjs.com/examples/choropleth-example.html" frameborder="0"></iframe>
 
+----
 
-[Here's a list of tile map service (TMS) providers](http://leaflet-extras.github.io/leaflet-providers/preview/). Nearly all TMS providers are free for personal use.
+<br>
+
 
 ### OpenLayers 3
 
@@ -31,24 +33,49 @@ OpenLayers is an open-source JavaScript library.
 
 <iframe class="openlayers" src="http://openlayers.org/en/v3.2.1/examples/earthquake-clusters.html" frameborder="0"></iframe>
 
+----
+
+<br>
+
 [Here are OpenLayers 3 examples](http://openlayers.org/en/v3.3.0/examples/)
 
 ### D3.js
 
 [D3](http://d3js.org/) is an excellent tool for visualizing spatial data, but flexes its muscles with non-spatial data. 
 
-Spatial Data
-
-<iframe class="d3" src="http://bl.ocks.org/mbostock/raw/4060606/" frameborder="0"></iframe>
+#### Spatial Data
 
 [Choropleth explained here](http://bl.ocks.org/mbostock/raw/4060606/)
 
-Non-spatial data
+<iframe class="d3" src="http://bl.ocks.org/mbostock/raw/4060606/" frameborder="0"></iframe>
 
-<iframe class="d3" src="http://bl.ocks.org/mbostock/raw/4062045/" frameborder="0"></iframe>
+----
+
+<br>
+
+#### Non-spatial data
 
 [Force-Directed Graph explained here](http://bl.ocks.org/mbostock/4062045)
 
+<iframe class="d3" src="http://bl.ocks.org/mbostock/raw/4062045/" frameborder="0"></iframe>
+
+----
+
+<br>
+
+## Tile Map Service (TMS)
+
+[Here's a list of tile map service (TMS) providers](http://leaflet-extras.github.io/leaflet-providers/preview/). Nearly all TMS providers are free for <em>personal use</em>.
+
+Mapbox Suite is ideal for creating custom basemaps.
+
+A basemap is what your spatial data layers are set on top of. 
+
+Satellite imagery is the most commonly know type of TMS. Mapbox Suite uses vector data to create basemaps. Frameworks such as Leaflet.js allow you to overlay spatial data on top of TMS/basemaps.
+
+----
+
+<br>
 
 ## Leaflet.js basic tutorials
 
