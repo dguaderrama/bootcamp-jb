@@ -57,4 +57,9 @@ Some useful spatial libraries in R include:
       
 There are several other libraries([GEOS](http://geos.osgeo.org),[Grass GIS](http://grass.osgeo.org)), languages([Bash](http://www.gnu.org/software/bash),[Python](http://www.python.org), [C++](http://cplusplus.com)) useful for manipulating spatial datasets, which are outside our current scope. We can cover these at a later time.
 
+###[GRASS GIS](http://osgeo.grass.org)
 
+
+The Geographic Resources Analysis Support System(GRASS GIS) is a Geographic Information System used for data management, image processing, graphics production, spatial modeling and visualization of many types of data.
+
+GRASS GIS was originally developed by the U.S. Army Construction Engineering Research Laboratories, a branch of the US Army Corp of Engineers. It was originally developed as a tool for land management and environmental planning by the military. GRASS GIS is currently used in academic and commercial settings around the world, as well as many governmental agencies.

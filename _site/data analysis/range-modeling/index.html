@@ -7,13 +7,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Fundamentals</title>
+	<title>Range Modeling</title>
 	<meta name="author" content="Nathan Casler">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
 	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/" rel="alternate" title="Fundamentals" type="application/atom+xml">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Range Modeling" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 	
 	<!-- Latest compiled and minified CSS -->
@@ -215,7 +215,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/range-modeling">Range Modeling</a></li>
+      	<li class="active"><a href="/bootcamp/data%20analysis/range-modeling" class="active">Range Modeling</a></li>
       	
       
     
@@ -239,7 +239,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/cartography/fundamentals" class="active">Fundamentals</a></li>
+      	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
       	
       
     
@@ -366,7 +366,7 @@
 			<header id="content-header">
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-						<h1 class="h2 entry-title">Fundamentals</h1>
+						<h1 class="h2 entry-title">Range Modeling</h1>
 
 
 
@@ -530,7 +530,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/range-modeling">Range Modeling</a></li>
+      	<li class="active"><a href="/bootcamp/data%20analysis/range-modeling" class="active">Range Modeling</a></li>
       	
       
     
@@ -553,7 +553,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/cartography/fundamentals" class="active">Fundamentals</a></li>
+      	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
       	
       
     
@@ -829,7 +829,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/range-modeling">Range Modeling</a></li>
+      	<li class="active"><a href="/bootcamp/data%20analysis/range-modeling" class="active">Range Modeling</a></li>
       	
       
     
@@ -852,7 +852,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/cartography/fundamentals" class="active">Fundamentals</a></li>
+      	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
       	
       
     
@@ -972,80 +972,139 @@
 
 <div class="entry-content">
   
-<h2 id="cartography-fundamentals">Cartography fundamentals</h2>
+<h1 id="species-range-modeling-with-maxent">Species Range Modeling with Maxent</h1>
 
-<p>Set aside your analytical skills and put on your creativity hat.</p>
+<h2 id="scope">Scope</h2>
 
-<p>Time to get creative.</p>
+<p>This lesson will take us through the steps involved in creating a species range model using the Maximum Entropy probability distribution.</p>
 
-<p>Effectively communicate your data.</p>
+<p>Before we load in any data we should set the project projection. </p>
 
-<p>Cartography should be fun but don’t create more work for yourself, keep it simple.</p>
+<p>To add this to QGIS you can go into the top menu:</p>
 
-<h2 id="elements-of-effective-cartography">Elements of effective cartography</h2>
+<p>Settings &gt; Custom CRS…</p>
 
-<p>Including necessary information leads to effective mapping. </p>
+<p>Click <em>Add new CRS</em> to create a new custom projection</p>
 
-<p>Your audience must understand what you’re trying to convey.</p>
+<p><img src="/bootcamp//assets/images/addNewCrs.png" alt="add-Crs" /></p>
 
-<ul>
-  <li>Legend</li>
-  <li>Colors</li>
-  <li>Fonts</li>
-  <li>Labels</li>
-  <li>Attribution</li>
-  <li>Scale</li>
-  <li>North arrow</li>
-</ul>
+<p>In the box labeled <em>Name:</em> enter <em>New World LAEA</em></p>
 
-<h2 id="colors-are-important">Colors are !important</h2>
+<p>Under parameters enter the following Proj4 string:</p>
 
-<p>Monochromatic is best used for choropleth (actually, this should be the only type of color scheme for a choropleth)</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">+proj<span class="o">=</span>laea +lat_0<span class="o">=</span><span class="m">15</span> +lon_0<span class="o">=</span>-80 +x_0<span class="o">=</span><span class="m">0</span> +y_0<span class="o">=</span><span class="m">0</span> +ellps<span class="o">=</span>WGS84 +toWGS84<span class="o">=</span>0,0,0,0,0,0,0 +units<span class="o">=</span>m +no_defs</code></pre></div>
 
-<p>Color blindness is important factor when selecting color schemes.</p>
+<p>The window should look like this:</p>
 
-<p><a href="http://colorbrewer2.org/">ColorBrewer 2.0</a> is an excellent tool for selecting colors and saving time. It considers colorblindness which should always be an important factor when selecting color schemes. </p>
+<p><img src="/bootcamp//assets/images/customCrs.png" alt="custom-CRS" /></p>
 
-<p>Grey scale maps for non-color-based printed maps.</p>
+<p>Click OK to exit the window</p>
 
-<p>Tools like <a href="http://paletton.com/">paletton.com</a> are simply a color wheel that help the color picking process. Paletton.com has options such as monochromatic, adjacent colors, triad, and tetrad that pick colors based on a single color selection. This is actually meant for web designing but has the same prinicple of color theory. </p>
+<p>To make set the project projection, in the top menu select Project &gt; Project Properies</p>
 
-<iframe class="paletton" src="http://paletton.com/"></iframe>
+<p>You will need to select <em>Enable ‘on the fly’ CRS transformation</em> to set the projection.</p>
 
-<h2 id="mapbox-suite">Mapbox Suite</h2>
+<p>You can either scroll through the choices in the second window, or filter them by the string “New World”</p>
 
-<blockquote>
-  <p>CartoCSS</p>
-</blockquote>
+<p>Select the projection in the second window and Click <em>Apply</em></p>
 
-<h2 id="qgis-cartography">QGIS Cartography</h2>
+<p><img src="/bootcamp/assets/images/setProjection.png" alt="set-projection" /></p>
 
-<blockquote>
-  <p>basics of graphic design and exporting maps - print or web-based</p>
-</blockquote>
+<h2 id="data-collection">Data Collection</h2>
 
-<blockquote>
-  <p>walkthrough of carto in qgis</p>
-</blockquote>
+<p>This model will require a comma-separated list of species observation locations.</p>
 
-<p><br /></p>
+<p>There are two viable inputs to the modeling algorithm:</p>
 
-<hr />
+<p>CSV with species name, longitude, latitude</p>
 
-<p><br /></p>
+<p>SWD file with raster values sampled from points</p>
 
-<p>References</p>
+<p>Since the SWD files make the Maximum entropy algorithm much more performant, we will create one from a regular csv.</p>
 
+<p>We can use QGIS to create these files.</p>
+
+<p>The workflow is as follows:</p>
+
+<p>Load a species shapefile:</p>
+
+<p>We will be loading the layers for this exercise using the QGIS Irods plugin.</p>
+
+<p><a href="http://irods.org"><em>iRods</em></a></p>
+
+<p>To install the plugin, in the Top Menu go to Plugins &gt; Manage and Install Plugins…</p>
+
+<p>In the left sidebar click <em>Get more</em></p>
+
+<p>You can either scroll through the plugins or search for <em>iRods</em></p>
+
+<p><img src="/bootcamp//assets/images/irodsPlugin.png" alt="irods-Plugin" /></p>
+
+<p>You can install the plugin by clicking <em>Install plugin</em> and you should receive this message</p>
+
+<p><img src="/bootcamp//assets/images/pluginInstalled.png" alt="plugin-Installed" /></p>
+
+<p>You can now click on <em>Installed</em> in the left sidebar to ensure that the iRods plugin is both installed and enabled.</p>
+
+<p><img src="/bootcamp//assets/images/pluginEnabled.png" alt="plugin-enabled" /></p>
+
+<p>If you have already set up your iPlant account and were given permissions to the Bootcamp dataset continue to the next steps. </p>
+
+<p>If not, make sure to <a href="http://user.iplantcollaborative.org">register for iPlant access</a>, and request access to the data store.</p>
+
+<p>Once, you have access to the data store you can open up the iRods plugin to view the available datasets.</p>
+
+<p><img src="/bootcamp//assets/images/irodsLogo.png" alt="irods-Logo" /></p>
+
+<p>Once you click on the iRods icon, a window should show up where you can enter in your iplant account credentials</p>
+
+<p><img src="/bootcamp//assets/images/irodsLogin.png" alt="irods-Login" /></p>
+
+<p>This should open up a window with your local files, to get to the Bootcamp files, you will have to set the directory using <em>Set Datastore</em></p>
+
+<p>In the bottom right of the window click <em>Set Datastore</em></p>
+
+<p>In the next prompt, enter “/iplant/home/shared/aegis/Spatial-bootcamp”</p>
+
+<p><img src="/bootcamp//assets/images/setDatastore.png" alt="set-datastore" /></p>
+
+<p>Click set to close the dialog.</p>
+
+<p>You should see a new window with a series of directories.</p>
+
+<p>For this exercise our files will be found under “Range-model”</p>
+
+<p>We can use the Abies amabilis shapefile titled: Abies_amabilis.shp</p>
+
+<p><img src="/bootcamp//assets/images/rangeModelFiles.png" alt="range-model-files" /></p>
+
+<p>The layer name should come up in the left Table of Contents and the points should show up on the center panel.</p>
+
+<p><img src="/bootcamp//assets/images/abiesImport.png" alt="abies-import" /></p>
+
+<p>Since the Species CSV comes in EPSG:4326, and the environmental variables come in a custom projection, we will need to repojrect the species layer.</p>
+
+<p>The new projection has the following Proj4 definition:</p>
+
+<p>Now that you have the points projected. We need to import the raster datasets.</p>
+
+<p>These files will be stored in the sub-directory <em>Range-model/env</em></p>
+
+<p>They will need to be downloaded however, so the gdal drivers can merge them.</p>
+
+<p>!!! Document the steps to download them either through the data store or from the irods plugin if you can get it to recognize the ascii raster !!!</p>
+
+<p>In order to merge the rasters, we will need to load all of the environmental factors locally.</p>
 
 
           <!--
 					<div class="meta">
 						<p class="date-publish">
 							Published: 
-							<date class="date-pub" title="2005-12-31T00:00:00-07:00" datetime="2005-12-31T00:00:00-07:00" pubdate>
+							<date class="date-pub" title="2004-12-29T00:00:00-07:00" datetime="2004-12-29T00:00:00-07:00" pubdate>
 							<span class="month"><abbr>December</abbr></span>
-							<span class="day">31</span>
-							<span class="year">2005</span>
+							<span class="day">29</span>
+							<span class="year">2004</span>
 							</date>
 						</p>
 						<ul class="list-category list-linear">
@@ -1056,8 +1115,8 @@
 
   
      
-    	<li><a href="/categories.html#cartography-ref">
-    		cartography <span>4</span>
+    	<li><a href="/categories.html#data analysis-ref">
+    		data analysis <span>3</span>
     	</a></li>
     
   
@@ -1072,11 +1131,7 @@
 
   
      
-    	<li><a href="/tags.html#cartography-ref">cartography <span>3</span></a></li>
-     
-    	<li><a href="/tags.html#map design-ref">map design <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#colorbewer-ref">colorbewer <span>2</span></a></li>
+    	<li><a href="/tags.html#range-modeling-ref">range-modeling <span>1</span></a></li>
     
   
 
@@ -1105,13 +1160,13 @@
 					<nav class="pagination">
 						<ul>
 							
-              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/cartography/cartography" title="View Cartography">&laquo; Cartography</a></li>
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/applications/qgis" title="View QGIS">&laquo; QGIS</a></li>
 							
 							
 							<li class="pipe"> | </li>
 							
 							
-              <li class="next"><a class="internal" rel="next"  href="/bootcamp/distribution/distribution" title="View Distribution">Distribution &raquo;</a></li>
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/data%20analysis/netcdf" title="View NetCDF">NetCDF &raquo;</a></li>
 							
 						</ul>
 					</nav>
@@ -1160,7 +1215,7 @@
 		};
 	load('//platform.twitter.com/widgets.js', 'tweetjs');
 	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
-	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/cartography/fundamentals" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/data%20analysis/range-modeling" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
 	}(document, 'script'));
 </script>
 <script>
