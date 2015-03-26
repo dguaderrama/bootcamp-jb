@@ -19,6 +19,9 @@ body {
   display: block;
 }
 
+hr {
+  border-color: rgba(0,0,0,0.2) !important;
+}
 
 /* background images */
 /* !important allow you to keep a standard color background for .unit-article header when the page(class) does not have a background image */
@@ -50,7 +53,7 @@ body {
 }
 /* sticky.nav -- jquery -- also, uncomment/comment-out this to give the body a min-height so the footer doesn't cover the left nav */
 .unit-article .entry-content {
- min-height: 555px;
+// min-height: 600px;
 }
 .sticky-left-nav { 
   margin-left: 12%;
@@ -61,7 +64,7 @@ body {
   float: left;
 }
 .sticky-left-nav-inner {
-  padding: 0px 20px 20px 20px;
+//  padding: 0px 20px 20px 20px;
 }
 .sticky-left-nav h4 {
   margin: 0px !important;
@@ -94,7 +97,7 @@ body {
 }
 .unit-article .entry-content {
   width: 55%;
-  min-height: 535px;
+  min-height: 600px;
 }
 .dropdown-nav li {
   list-style-type: none;
@@ -434,7 +437,7 @@ pre {
   border-bottom: 1px dotted #bbddbb;
 }
 .unit-article blockquote {
-  border-left: 1em solid rgba(21, 25, 25, 0.8);
+  border-left: 0.6em solid rgba(21, 25, 25, 0.4);
   padding-left: 1em;
 }
 .unit-article blockquote p {

@@ -45,9 +45,7 @@ OpenLayers is an open-source JavaScript library.
 
 #### Spatial Data
 
-[Choropleth explained here](http://bl.ocks.org/mbostock/raw/4060606/)
-
-<iframe class="d3" src="http://bl.ocks.org/mbostock/raw/4060606/" frameborder="0"></iframe>
+<iframe class="d3" src="http://ssz.fr/places/?us#beach/" frameborder="0"></iframe>
 
 ----
 

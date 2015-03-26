@@ -247,14 +247,6 @@
     
       
       	
-      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
-      	
-      
-    
-  
-    
-      
-      	
       	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
       	
       
@@ -561,14 +553,6 @@
     
       
       	
-      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
-      	
-      
-    
-  
-    
-      
-      	
       	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
       	
       
@@ -860,14 +844,6 @@
     
       
       	
-      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
-      	
-      
-    
-  
-    
-      
-      	
       	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
       	
       
@@ -975,7 +951,7 @@
 
 <h2 id="relational-operations">Relational Operations</h2>
 
-<p>Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.[^1] </p>
+<p>Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.[^1]</p>
 
 <table border="0" align="center">
   <tr>
@@ -1081,7 +1057,7 @@
 </table>
 
 <h3 id="spatial-predicates">Spatial Predicates</h3>
-<p>The above figure demonstrates the criteria outlined by the Dimensionally Extended Nine-Intersection Model(DE-9IM). The matrix is used to outline specific spatial relationships or predicates which are more accessible to interpretaion. These named spatial predicates are also used by spatial queryies to selet subsets of geometrys that fit in one spatial predicate. </p>
+<p>The above figure demonstrates the criteria outlined by the Dimensionally Extended Nine-Intersection Model(DE-9IM). The matrix is used to outline specific spatial relationships or predicates which are more accessible to interpretaion. These named spatial predicates are also used by spatial queryies to selet subsets of geometrys that fit in one spatial predicate.</p>
 
 <p>Here is a quick outline of the Spatial Predicates</p>
 
@@ -1090,7 +1066,7 @@
   <dd>The two geometric objects are spatially equal meaning, they represent the same geometry (congruent in geometric terms)</dd>
   <dt>Disjoint</dt>
   <dd>The two geometric objects share no points in common, the two objects are completely separate</dd>
-  <dt>Intersects </dt>
+  <dt>Intersects</dt>
   <dd>The two geometric objects have at least one point in common</dd>
   <dt>Touches</dt>
   <dd>The two geometric objects have at least one boundary point in common, but no interior points</dd>
@@ -1112,7 +1088,7 @@
 
 <dl>
   <dt>Distance</dt>
-  <dd>Measures the shortest distance between two geometries. </dd>
+  <dd>Measures the shortest distance between two geometries.</dd>
   <dt>Buffer</dt>
   <dd>Creates a geometric object that represents all points within a given distance from the given geometry</dd>
   <dt>Convex Hull</dt>
@@ -1136,24 +1112,24 @@
       <li>Residential areas with past landslide</li>
     </ul>
   </li>
-  <li>Union 
+  <li>Union
     <ul>
       <li>Merging census data for two states in a single layer (Useful for studying phenomena that do not respect political boundaries)</li>
       <li>Merging state boundaries for Canada, U.S. and Mexico into a North American dataset (GADM makes this a breeze)</li>
     </ul>
   </li>
-  <li>Symmetric Difference 
+  <li>Symmetric Difference
     <ul>
       <li></li>
     </ul>
   </li>
-  <li>Buffer 
+  <li>Buffer
     <ul>
       <li>Instagram posts vs within 100m of a local restaurant</li>
       <li>Tweets vs within 1km of a football stadium</li>
     </ul>
   </li>
-  <li>Convex Hull 
+  <li>Convex Hull
     <ul>
       <li>Bounding boxes, circles</li>
       <li>Range modeling for small data sets</li>
