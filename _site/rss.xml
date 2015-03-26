@@ -5,8 +5,8 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-03-24T17:45:53-07:00</lastBuildDate>
-        <pubDate>2015-03-24T17:45:53-07:00</pubDate>
+        <lastBuildDate>2015-03-25T17:17:28-07:00</lastBuildDate>
+        <pubDate>2015-03-25T17:17:28-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -1331,17 +1331,129 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;Since the Species CSV comes in EPSG:4326, and the environmental variables come in a custom projection, we will need to repojrect the species layer.&lt;/p&gt;
 
-&lt;p&gt;The new projection has the following Proj4 definition:&lt;/p&gt;
+&lt;p&gt;To check the species projection you can right-click the Abies_amabilis in the Table of Contents and select &lt;em&gt;Properties&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Now that you have the points projected. We need to import the raster datasets.&lt;/p&gt;
+&lt;p&gt;The Layer properties window will display the layer’s Coordinate Reference System:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/abiesProjection.png&quot; alt=&quot;abies-projection&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To change the projection, you can close out of the &lt;em&gt;Layer Properties&lt;/em&gt; window.&lt;/p&gt;
+
+&lt;p&gt;Right click the Abies_amabilis layer in the Table of Contents and select &lt;em&gt;Save as…&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You can leave the format as ESRI Shapefile&lt;/p&gt;
+
+&lt;p&gt;Click browse to set the location for the output file and name it &lt;em&gt;abies_projected&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Under CRS select &lt;em&gt;Project CRS&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally check the &lt;em&gt;Add saved file to map&lt;/em&gt; option&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/abiesProject.png&quot; alt=&quot;abies-project&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Right click the new layer and check the layer Properties to make sure the Coordinate Reference System is &lt;em&gt;New World LAEA&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If the projection matches, you can remove the original &lt;em&gt;Abies_amabilis&lt;/em&gt; layer from the Table of Contents by Right-clicking and selecting &lt;em&gt;Remove&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that you have the points projected. We need to import the environmental layers.&lt;/p&gt;
 
 &lt;p&gt;These files will be stored in the sub-directory &lt;em&gt;Range-model/env&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;They will need to be downloaded however, so the gdal drivers can merge them.&lt;/p&gt;
 
-&lt;p&gt;!!! Document the steps to download them either through the data store or from the irods plugin if you can get it to recognize the ascii raster !!!&lt;/p&gt;
+&lt;p&gt;The environmental layers can be found in the iPlant data store in the &lt;em&gt;env.zip&lt;/em&gt; file.&lt;/p&gt;
 
-&lt;p&gt;In order to merge the rasters, we will need to load all of the environmental factors locally.&lt;/p&gt;
+&lt;p&gt;To download the layers, sign in to the iPlant Discovery Environment and open the Data Store. &lt;/p&gt;
+
+&lt;p&gt;The layers should be available under /iplant/home/shared/aegis/Spatial-bootcamp/Range-model/env.zip&lt;/p&gt;
+
+&lt;p&gt;To download the archive, check the file and click &lt;em&gt;Download&lt;/em&gt; &amp;gt; &lt;em&gt;Simple Download&lt;/em&gt; in the Menu bar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/iplantEnvDownload.png&quot; alt=&quot;iplant-env-download&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Download the zip file to your workspace and unzip the directory. You should find a group of ascii rasters.&lt;/p&gt;
+
+&lt;p&gt;You can load the ascii rasters into QGIS as Raster datasets.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/QgisAddRaster.png&quot; alt=&quot;qgis-add-raster&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click the Add Raster button, navigate to the unzipped directory and select all of the ascii rasters.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/loadEnvRasters.png&quot; alt=&quot;load-env-rasters&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once all the rasters are loaded, you should see them in your Table of Contents, but not on the map. &lt;/p&gt;
+
+&lt;p&gt;If you check the layer properties on one of the rasters, you can see that they default to EPSG:4326, although we had previously stated they come in the New World LAEA.&lt;/p&gt;
+
+&lt;p&gt;This happens because Ascii Grid Format doesn’t store any projection information. &lt;/p&gt;
+
+&lt;p&gt;To allow any analysis, we will have to define the projection for the raster data sets. &lt;/p&gt;
+
+&lt;p&gt;To do this, you can click on the layer name in the Table of Contents and Select &lt;em&gt;Set Layer CRS&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Select &lt;em&gt;New WOrld LAEA&lt;/em&gt; from the list of projections and click &lt;em&gt;OK&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/setEnvProjection.png&quot; alt=&quot;set-env-projection&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Check the layer properties to make sure the projection has been set.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/envProjected.png&quot; alt=&quot;env-projected&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Repeat the above steps for each of the ascii rasters until they all have the proper projection.&lt;/p&gt;
+
+&lt;h3 id=&quot;swd-creation&quot;&gt;SWD creation&lt;/h3&gt;
+
+&lt;p&gt;To create the SWD, we need to sample the environmental variable layers at the observation points. To do this, we will need to install the Point Sampling Plugin.&lt;/p&gt;
+
+&lt;p&gt;In the top menu, click Plugins &amp;gt; Manage and Install Plugins…&lt;/p&gt;
+
+&lt;p&gt;Click &lt;em&gt;Get more&lt;/em&gt; in the left menu and Search for Point sampling&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/pointSamplingPlugin.png&quot; alt=&quot;point-sampling-plugin&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click &lt;em&gt;Install plugin&lt;/em&gt; and check that it is enabled under the list of installed plugins.&lt;/p&gt;
+
+&lt;p&gt;Navigate to Plugins &amp;gt; Analyses &amp;gt; Point Sampling Tool&lt;/p&gt;
+
+&lt;p&gt;In the dialog that opens, select abies_projected as the &lt;em&gt;Layer containing sampling points&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Under &lt;em&gt;Layers with fields/bands to get values from:&lt;/em&gt; Select all of the environmental layers with type &lt;em&gt;(raster)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Under &lt;em&gt;Output point vector layer:&lt;/em&gt; Click Browse and select the location for the output.&lt;/p&gt;
+
+&lt;p&gt;Name the output Abies_swd.shp and make sure &lt;em&gt;Add created layer to the TOC&lt;/em&gt; is checked&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/sampleEnv.png&quot; alt=&quot;sample-env&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To make sure that the point sampling worked, we will check the new attribute table.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/swdAttributes.png&quot; alt=&quot;swd-attributes&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We are almost done with our SWD, the next step is to add a column with the species name.&lt;/p&gt;
+
+&lt;p&gt;While we are in the attribute table you can add a column using the field calculator.&lt;/p&gt;
+
+&lt;p&gt;First, we need to Start an editing session on our attribute table by clicking the Toggle Edits Button in the upper left corner of the table.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/startEdit.png&quot; alt=&quot;start-edit&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, open the Raster Calculator on the right side of the toolbar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/openRasterCalculator.png&quot; alt=&quot;open-raster-calculator&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the dialog that opens, make sure that *Create a new field is checked.&lt;/p&gt;
+
+&lt;p&gt;Set the output field name to &lt;em&gt;species&lt;/em&gt; with a field type of Text (string) and a length of 14&lt;/p&gt;
+
+&lt;p&gt;Set the expression to ‘Abies_amabils’ to set the value for each row to the species name.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/addColumn.png&quot; alt=&quot;add-column&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once the column has been added, save your edits by hitting the Save Edits Button next to the Toggle Edits Button.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/saveEdit.png&quot; alt=&quot;save-edit&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that we have our species name in the table, we need to create a csv for Maxent to read.&lt;/p&gt;
 </description>
                 <link>http://104.237.129.71/bootcamp/data%20analysis/range-modeling</link>
                 <guid>http://104.237.129.71/bootcamp/data%20analysis/range-modeling</guid>
