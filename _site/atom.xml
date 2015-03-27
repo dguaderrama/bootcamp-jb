@@ -4,7 +4,7 @@
  <title>Spatial Data Bootcamp</title>
  <link href="http://104.237.129.71/bootcamp/" rel="self"/>
  <link href="http://104.237.129.71/bootcamp"/>
- <updated>2015-03-25T18:49:53-07:00</updated>
+ <updated>2015-03-26T18:07:08-07:00</updated>
  <id>http://104.237.129.71/bootcamp</id>
  <author>
    <name>Nathan Casler</name>
@@ -393,7 +393,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;elements-of-effective-cartography&quot;&gt;Elements of effective cartography&lt;/h2&gt;
 
-&lt;p&gt;Including necessary information leads to effective mapping.&lt;/p&gt;
+&lt;p&gt;Including necessary information leads to effective cartography.&lt;/p&gt;
 
 &lt;p&gt;Your audience must understand what you’re trying to convey.&lt;/p&gt;
 
@@ -407,19 +407,19 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;li&gt;North arrow&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;colors-are-important&quot;&gt;Colors are !important&lt;/h2&gt;
+&lt;h2 id=&quot;colors-are-important&quot;&gt;Colors are important&lt;/h2&gt;
 
 &lt;p&gt;Monochromatic is best used for choropleth (actually, this should be the only type of color scheme for a choropleth)&lt;/p&gt;
 
 &lt;p&gt;Color blindness is important factor when selecting color schemes.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://colorbrewer2.org/&quot;&gt;ColorBrewer 2.0&lt;/a&gt; is an excellent tool for selecting colors and saving time. It considers colorblindness which should always be an important factor when selecting color schemes.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://colorbrewer2.org/&quot;&gt;ColorBrewer 2.0&lt;/a&gt; is an excellent cartography tool for selecting colors and saving time. It considers colorblindness which should always be an important factor when selecting color schemes.&lt;/p&gt;
 
 &lt;p&gt;Grey scale maps for non-color-based printed maps.&lt;/p&gt;
 
 &lt;p&gt;Tools like &lt;a href=&quot;http://paletton.com/&quot;&gt;paletton.com&lt;/a&gt; are simply a color wheel that help the color picking process. Paletton.com has options such as monochromatic, adjacent colors, triad, and tetrad that pick colors based on a single color selection. This is actually meant for web designing but has the same prinicple of color theory.&lt;/p&gt;
 
-&lt;iframe class=&quot;paletton&quot; src=&quot;http://paletton.com/&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;http://paletton.com&quot; target=&quot;_blank&quot; alt=&quot;Spatial Data Bootcamp: Paletton.com color wheel&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/paletton.jpg&quot; alt=&quot;Spatial Data Bootcamp: Paletton.com color wheel&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;mapbox-suite&quot;&gt;Mapbox Suite&lt;/h2&gt;
 
@@ -456,25 +456,35 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
    <content type="html">
 &lt;h1 id=&quot;understanding-different-map-types&quot;&gt;Understanding different map types&lt;/h1&gt;
 
+&lt;p&gt;Below are some of the major map-type groups.&lt;/p&gt;
+
 &lt;h2 id=&quot;thematic&quot;&gt;Thematic&lt;/h2&gt;
 
-&lt;p&gt;The purpose of a thematic map is to emphasise the theme or subject area of a particular set of spatial data.  In this situation you’ll notice there usually aren’t many sets of data being visualized, typically a univariate or bivariate analysis used to convey the message.  Below are some common types of thematic maps.&lt;/p&gt;
+&lt;p&gt;There are many types of thematic maps. Their purpose is to emphasise the theme or subject area of a particular set of spatial data. Below a few examples of thematic maps.&lt;/p&gt;
 
 &lt;h3 id=&quot;choropleth&quot;&gt;Choropleth&lt;/h3&gt;
 
-&lt;p&gt;Choropleth maps are colored using a monochromatic theme to visualize the measurement of the statistical variable being displayed. A common theme is using Census data to create a choropleth map, such as normalizing unemployment by population to calculate an unemployment rate. Or simply counting the number of electoral votes per president during an election and visualizing with blue and red states.&lt;/p&gt;
-
-&lt;h4 id=&quot;univariate&quot;&gt;Univariate&lt;/h4&gt;
-
-&lt;p&gt;Below is a univariate choropleth map of the unemployment rate in June 2010. Source: &lt;a href=&quot;http://www.nytimes.com/interactive/2009/03/03/us/20090303_LEONHARDT.html?scp=1&amp;amp;sq=recession%20map&amp;amp;st=cse&amp;amp;_r=0&quot;&gt;New York Times&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Choropleth maps are colored using a monochromatic theme to visualize the measurement of the statistical variable being displayed. A common theme is using Census data to create a choropleth map, such as normalizing unemployment by population to calculate an unemployment rate. Or simply counting the number of electoral votes per president during an election and visualizing with blue and red states. Below is a univariate choropleth map of the unemployment rate in June 2010. Source: &lt;a href=&quot;http://www.nytimes.com/interactive/2009/03/03/us/20090303_LEONHARDT.html?scp=1&amp;amp;sq=recession%20map&amp;amp;st=cse&amp;amp;_r=0&quot;&gt;New York Times&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.nytimes.com/interactive/2009/03/03/us/20090303_LEONHARDT.html?scp=1&amp;amp;sq=recession%20map&amp;amp;st=cse&amp;amp;_r=0&quot; target=&quot;_blank&quot; alt=&quot;Spatial Data Bootcamp: Geography of a Recession choropleth map&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/geography-of-recession.jpg&quot; alt=&quot;Spatial Data Bootcamp: Geography of a Recession choropleth map&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;h3 id=&quot;graduated-symbols&quot;&gt;Graduated Symbols&lt;/h3&gt;
+
+&lt;p&gt;Below is a graduated symbols map using circles to show population of areas. The larger the circle, the higher the population count. The map visualizes settlements of English-born immigrants in the United States during 2000. Source: &lt;a href=&quot;http://www.nytimes.com/interactive/2009/03/10/us/20090310-immigration-explorer.html?_r=0&quot;&gt;New York Times&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.nytimes.com/interactive/2009/03/10/us/20090310-immigration-explorer.html?_r=0&quot; target=&quot;_blank&quot; alt=&quot;Spatial Data Bootcamp: Graduated symbols map&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/graduated-symbols-map.jpg&quot; alt=&quot;Spatial Data Bootcamp: Graduated symbols map&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;weather&quot;&gt;Weather&lt;/h3&gt;
 
-&lt;p&gt;GISS Surface Temperature Analysis. Source: &lt;a href=&quot;http://data.giss.nasa.gov/gistemp/&quot;&gt;NASA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Weather as a theme. GISS Surface Temperature Analysis. Source: &lt;a href=&quot;http://data.giss.nasa.gov/gistemp/&quot;&gt;NASA&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://data.giss.nasa.gov/gistemp/&quot; target=&quot;_blank&quot; alt=&quot;Spatial Data Bootcamp: NASA GISS Surface Temperature Analysis&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/surface-temp-analysis.jpg&quot; alt=&quot;Spatial Data Bootcamp: NASA GISS Surface Temperature Analysis&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;sound&quot;&gt;Sound&lt;/h3&gt;
+
+&lt;p&gt;Mapping sound. Source: NPS Sounds &amp;amp; Night Skies Division.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/soundscape-nps.jpg&quot; alt=&quot;Spatial Data Bootcamp: Mapping sound&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1475,7 +1485,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
    <content type="html">
 &lt;p&gt;&lt;a title=&quot;By User:Anitagraser on QGIS Wiki, User:Anitagraser (http://www.qgis.org/wiki/File:QGis_Logo.png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AQGis_Logo.png&quot;&gt;&lt;img width=&quot;128&quot; alt=&quot;QGis Logo&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/128px-QGis_Logo.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;what-is-qgis&quot;&gt;What is QGIS?&lt;/h3&gt;
+&lt;h1 id=&quot;what-is-qgis&quot;&gt;What is QGIS?&lt;/h1&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;QGIS is the best GIS tool in the free and open-source software (FOSS) community.&lt;/p&gt;
@@ -1489,48 +1499,36 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;exlpore-qgis&quot;&gt;Exlpore QGIS:&lt;/h3&gt;
+&lt;h2 id=&quot;exlpore-qgis&quot;&gt;Exlpore QGIS:&lt;/h2&gt;
 
 &lt;p&gt;For a more thorough explanation of QGIS, &lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/user_manual/&quot; target=&quot;new&quot;&gt;see the QGIS User Guide here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h4 id=&quot;the-basics&quot;&gt;The Basics&lt;/h4&gt;
+&lt;h2 id=&quot;the-basics&quot;&gt;The Basics&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/qgis-gui.png&quot; alt=&quot;QGIS GUI&quot; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;
-    &lt;h5 id=&quot;menu-bar&quot;&gt;&lt;strong&gt;Menu Bar&lt;/strong&gt;&lt;/h5&gt;
-    &lt;p&gt;The menu bar provides access to QGIS features. In Linux systems, hover over to view menu bar options (haven’t checked other systems). The QGIS version is displayed while not hovering over the menu bar (linux systems). Most common features or tools are accessable through the toolbar icons which will be the prefered method throughout this QGIS introduction.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h5 id=&quot;toolbar&quot;&gt;&lt;strong&gt;Toolbar&lt;/strong&gt;&lt;/h5&gt;
-    &lt;p&gt;The toolbar provides access to most standard QGIS functions. Go to &lt;em&gt;Menu Bar &amp;gt; View &amp;gt; Toolbars&lt;/em&gt; to activate or deactivate toolbars. Hover over tools to view the description and puropose.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h5 id=&quot;map-legend&quot;&gt;&lt;strong&gt;Map Legend&lt;/strong&gt;&lt;/h5&gt;
-    &lt;p&gt;The map legend is a list of all layers in the project. Each layer can be turned on or off with the layer’s checkbox.  It’s possible to group layers.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h5 id=&quot;map-view&quot;&gt;&lt;strong&gt;Map View&lt;/strong&gt;&lt;/h5&gt;
-    &lt;p&gt;The map view displays the active layers in the map project. You can set the map view extent by right-clicking on a layer and selecting &lt;em&gt;Zoom to layer extent&lt;/em&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h5 id=&quot;status-bar&quot;&gt;&lt;strong&gt;Status Bar&lt;/strong&gt;&lt;/h5&gt;
-    &lt;p&gt;The status bar displays current position in map coordiantes (e.g., meters or decimal degrees) as the mouse pointer moves across the map view. To the left of the coordinate display is the button gor toggling extents and mouse position display. To the right of the map coordinates is the scale, which may be set to one of the predefined zoom extends of 1:500 to 1:1,000,000. This scale setting will adjust as you zoom or pan throught the map view. Options for map rendering are to the right of the current map scale setting. To the far right is the current CRS for the map project.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h5 id=&quot;processing-toolbox&quot;&gt;&lt;strong&gt;Processing Toolbox&lt;/strong&gt;&lt;/h5&gt;
-    &lt;p&gt;The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Toolbox&lt;/em&gt;. This helpful tool allows searching by keyword for the geoalgorithm from each of the active processing roviders.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Menu Bar&lt;/strong&gt;
+The menu bar provides access to QGIS features. In Linux systems, hover over to view menu bar options (haven’t checked other systems). The QGIS version is displayed while not hovering over the menu bar (linux systems). Most common features or tools are accessable through the toolbar icons which will be the prefered method throughout this QGIS introduction.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Toolbar&lt;/strong&gt;
+The toolbar provides access to most standard QGIS functions. Go to &lt;em&gt;Menu Bar &amp;gt; View &amp;gt; Toolbars&lt;/em&gt; to activate or deactivate toolbars. Hover over tools to view the description and puropose.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Map Legend&lt;/strong&gt;
+The map legend is a list of all layers in the project. Each layer can be turned on or off with the layer’s checkbox.  It’s possible to group layers.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Map View&lt;/strong&gt;
+The map view displays the active layers in the map project. You can set the map view extent by right-clicking on a layer and selecting &lt;em&gt;Zoom to layer extent&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Status Bar&lt;/strong&gt;
+The status bar displays current position in map coordiantes (e.g., meters or decimal degrees) as the mouse pointer moves across the map view. To the left of the coordinate display is the button gor toggling extents and mouse position display. To the right of the map coordinates is the scale, which may be set to one of the predefined zoom extends of 1:500 to 1:1,000,000. This scale setting will adjust as you zoom or pan throught the map view. Options for map rendering are to the right of the current map scale setting. To the far right is the current CRS for the map project.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Processing Toolbox&lt;/strong&gt;
+The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Toolbox&lt;/em&gt;. This helpful tool allows searching by keyword for the geoalgorithm from each of the active processing roviders.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;configure-your-workspace&quot;&gt;Configure your workspace&lt;/h4&gt;
+&lt;h2 id=&quot;configure-your-workspace&quot;&gt;Configure your workspace&lt;/h2&gt;
 
-&lt;h5 id=&quot;project-properties&quot;&gt;Project properties&lt;/h5&gt;
+&lt;h3 id=&quot;project-properties&quot;&gt;Project properties&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/project-properties.jpg&quot; alt=&quot;QGIS Project Properties&quot; /&gt;&lt;/p&gt;
 
@@ -1538,7 +1536,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection.&lt;/p&gt;
 
-&lt;h5 id=&quot;activate-necessary-providers&quot;&gt;Activate necessary providers&lt;/h5&gt;
+&lt;h3 id=&quot;activate-necessary-providers&quot;&gt;Activate necessary providers&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/providers-config.jpg&quot; alt=&quot;Activate Providers&quot; /&gt;&lt;/p&gt;
 
@@ -1550,7 +1548,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;working-with-project-projections&quot;&gt;Working with Project Projections&lt;/h3&gt;
+&lt;h2 id=&quot;working-with-project-projections&quot;&gt;Working with Project Projections&lt;/h2&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;QGIS allows users to define a global and project-wide CRS (coordinate reference system) for layers without a pre-defined CRS. It also allows the user to define custom coordinate reference systems and supports on-the-fly (OTF) projection of vector and raster layers. All of these features allow the user to display layers with different CRSs and have them overlay properly.&lt;sup id=&quot;fnref:2:1&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
@@ -1558,17 +1556,21 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;See &lt;a href=&quot;/bootcamp/intro/spatial-data&quot;&gt;Intro to Spatial Data&lt;/a&gt; for more detailed info on projections.&lt;/p&gt;
 
-&lt;p&gt;Each new project starts with the global default projection, &lt;a href=&quot;http://www.spatialreference.org/epsg/wgs-84/&quot;&gt;EPSG:4326 - WGS 84&lt;/a&gt; (&lt;code&gt;proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs&lt;/code&gt;). This can be changed at &lt;em&gt;Menu Bar &amp;gt; Settings &amp;gt; Options &amp;gt; CRS &amp;gt; Default CRS for new projects&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Each new project starts with the global default projection, &lt;a href=&quot;http://www.spatialreference.org/epsg/wgs-84/&quot;&gt;EPSG:4326 - WGS 84&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This can be changed at &lt;em&gt;Menu Bar &amp;gt; Settings &amp;gt; Options &amp;gt; CRS &amp;gt; Default CRS for new projects&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;However, this is not the same as changing the project projection. You may define the project projection from &lt;em&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties &amp;gt; CRS&lt;/em&gt;. Also keep in mind, the CRS of a new project will change to the CRS of the first layer added to the project.&lt;/p&gt;
 
 &lt;p&gt;‘On the fly’ CRS transformation is not enabled by the default QGIS installation.&lt;/p&gt;
 
-&lt;h3 id=&quot;supported-data-formats&quot;&gt;Supported Data Formats&lt;/h3&gt;
+&lt;h2 id=&quot;supported-data-formats&quot;&gt;Supported Data Formats&lt;/h2&gt;
 
 &lt;p&gt;QGIS support a multitude of data types from simple shapefiles to database tables to Web Feature Service layers. Sticking to the basics, below are quick descriptions of vector and raster data.&lt;/p&gt;
 
-&lt;h4 id=&quot;vector&quot;&gt;Vector&lt;/h4&gt;
+&lt;h3 id=&quot;vector&quot;&gt;Vector&lt;/h3&gt;
 
 &lt;p&gt;QGIS uses the GDAL OGR library to read and write vector data formats, such as the most commonly known ESRI shapefile. GRASS vector and PostreSQL support is provided by a native QGIS provider plugin&lt;sup id=&quot;fnref:2:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. &lt;a href=&quot;http://www.gdal.org/ogr_formats.html&quot;&gt;Here is the complete list of OGR vector formats&lt;/a&gt;.&lt;/p&gt;
 
@@ -1580,7 +1582,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;Attribute data can be edited by enabling and edit session with the Toggle Editing Mode icon (top left).&lt;/p&gt;
 
-&lt;h4 id=&quot;raster&quot;&gt;Raster&lt;/h4&gt;
+&lt;h3 id=&quot;raster&quot;&gt;Raster&lt;/h3&gt;
 
 &lt;p&gt;QGIS uses the GDAL library to read and write raster data formats while GRASS raster support is provided by a native QGIS provider plugin&lt;sup id=&quot;fnref:2:3&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. &lt;a href=&quot;http://www.gdal.org/formats_list.html&quot;&gt;Here is the complete list of GDAL raster formats&lt;/a&gt;.&lt;/p&gt;
 
@@ -1588,11 +1590,11 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/add-raster.png&quot; alt=&quot;Add raster in QGIS&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;general-spatial-functions&quot;&gt;General Spatial Functions&lt;/h3&gt;
+&lt;h2 id=&quot;general-spatial-functions&quot;&gt;General Spatial Functions&lt;/h2&gt;
 
 &lt;p&gt;Spatial functions are accessable through &lt;em&gt;Menu Bar &amp;gt; Vector/Raster&lt;/em&gt;. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy.&lt;/p&gt;
 
-&lt;h3 id=&quot;composing-maps-for-printnon-web-based&quot;&gt;Composing Maps (for print/non-web-based)&lt;/h3&gt;
+&lt;h2 id=&quot;composing-maps-for-printnon-web-based&quot;&gt;Composing Maps (for print/non-web-based)&lt;/h2&gt;
 
 &lt;p&gt;This method is ideal for exporting your work for a research paper, admiring your work, and such. Developing a web map for dissimenating your data is a bit more involved and is discussed in the &lt;a href=&quot;/bootcamp/visualization/leaflet&quot;&gt;Publish Your Data to a Web Mapi/LeafletJS&lt;/a&gt; section. Also, to export data with styles see &lt;a href=&quot;this-is-not-a-link&quot;&gt;This section link&lt;/a&gt;.&lt;/p&gt;
 
@@ -1600,23 +1602,31 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/compose-map.png&quot; alt=&quot;Create new Print Composer workspace&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;lessons&quot;&gt;Lessons&lt;/h3&gt;
-
-&lt;p&gt;Lessons are intended for learning basic spatial functions with QGIS. Each lesson is a prerequisite for the subsequent lesson. For best results, start from beginning to end from collecting data throught visualizing the final product. However, data will be prepared and available if you wish to jump through lessons without completing the former.&lt;/p&gt;
-
-&lt;p&gt;DISCLAIMER: Data provided here have been reclassified/modified to fit the needs of the lessons and should not be used in any scientific analysis. Original data sources and researh articles are available if you feel the need to pursue your dreams of performing a landslide susceptibility analysis. &lt;a href=&quot;/bootcamp/references/citations&quot;&gt;Original data and research articles are located here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The Scenario:&lt;/p&gt;
-
-&lt;p&gt;You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h4&gt;
+&lt;h1 id=&quot;lessons&quot;&gt;Lessons&lt;/h1&gt;
 
-&lt;p&gt;What this lesson covers:&lt;/p&gt;
+&lt;p&gt;Lessons are intended for learning basic spatial functions with QGIS. Each lesson is a prerequisite for the subsequent lesson. For best results, start from beginning to end from collecting data throught visualizing the final product. However, data will be prepared and available if you wish to jump through lessons without completing the former.&lt;/p&gt;
+
+&lt;p&gt;DISCLAIMER: Data provided here have been reclassified/modified to fit the needs of the lessons and should not be used in any scientific analysis. Original data sources and researh articles are available if you feel the need to pursue your dreams of performing a landslide susceptibility analysis. &lt;a href=&quot;/bootcamp/references/citations&quot;&gt;Original data and research articles are located here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-scenario&quot;&gt;The Scenario:&lt;/h2&gt;
+
+&lt;p&gt;You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h2&gt;
+
+&lt;h3 id=&quot;what-this-lesson-covers&quot;&gt;What this lesson covers:&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;downloading data&lt;/li&gt;
@@ -1624,14 +1634,45 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;file storage/project directory (keep your data directories clean)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Data sources:&lt;/p&gt;
+&lt;h3 id=&quot;objective&quot;&gt;Objective:&lt;/h3&gt;
+
+&lt;p&gt;Gather data necessary for locating high-risk landslide areas in the state of Washington.&lt;/p&gt;
+
+&lt;h3 id=&quot;data-sources&quot;&gt;Data sources:&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://factfinder.census.gov/&quot;&gt;US Census - American Fact Finder (real estate)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger-line.html&quot;&gt;US Census - TIGER/Line (shapefiles and geodatabases)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;GTOPO30&lt;/li&gt;
+  &lt;li&gt;Washington boundary&lt;/li&gt;
+  &lt;li&gt;Washington geology&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://factfinder.census.gov/&quot;&gt;dont think this will be used US Census - American Fact Finder (real estate)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger-line.html&quot;&gt;dont think this will be used US Census - TIGER/Line (shapefiles and geodatabases)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Steps:&lt;/p&gt;
+&lt;h3 id=&quot;steps&quot;&gt;Steps:&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;prepare project directory
+    &lt;ul&gt;
+      &lt;li&gt;this is intended for a best practice&lt;/li&gt;
+      &lt;li&gt;create folder structure&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;how to download gtopo30
+    &lt;ul&gt;
+      &lt;li&gt;explain&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;how to download washington boundary
+    &lt;ul&gt;
+      &lt;li&gt;explain&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;how to download washington geology
+    &lt;ul&gt;
+      &lt;li&gt;explain&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;ul&gt;
   &lt;li&gt;download data with meta data (DEM &amp;amp; washingon boundary data with meta data)&lt;/li&gt;
@@ -1639,13 +1680,15 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;data will be used in Data Prep&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;data-prep&quot;&gt;Data Prep&lt;/h4&gt;
+&lt;h2 id=&quot;data-wrangling---prepare-digital-elevation-model&quot;&gt;Data Wrangling - Prepare Digital Elevation Model&lt;/h2&gt;
 
-&lt;p&gt;What this lesson covers:&lt;/p&gt;
+&lt;h3 id=&quot;what-this-lesson-covers-1&quot;&gt;What this lesson covers:&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;reprojecting data&lt;/li&gt;
@@ -1653,12 +1696,17 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;importing data (raster and vector)&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h3 id=&quot;objective-1&quot;&gt;Objective:&lt;/h3&gt;
+
 &lt;p&gt;Download, examine, and prepare DEM for landslide susceptibility analysis.&lt;/p&gt;
 
-&lt;p&gt;Data:
- * gtopo30 DEM - northwest america&lt;/p&gt;
+&lt;h3 id=&quot;data&quot;&gt;Data:&lt;/h3&gt;
 
-&lt;p&gt;Steps:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;gtopo30 DEM - northwest america&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;steps-1&quot;&gt;Steps:&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;import DEM of northwest US&lt;/li&gt;
@@ -1667,13 +1715,15 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;data will be used in Reclassify and Rasterize Vector&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;reclassify-and-rasterize-vector&quot;&gt;Reclassify and Rasterize Vector&lt;/h4&gt;
+&lt;h2 id=&quot;data-wrangling---reclassify-and-rasterize-vector&quot;&gt;Data Wrangling - Reclassify and Rasterize Vector&lt;/h2&gt;
 
-&lt;p&gt;What this module covers:&lt;/p&gt;
+&lt;h3 id=&quot;what-this-module-covers&quot;&gt;What this module covers:&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;editing vector data attributes&lt;/li&gt;
@@ -1681,18 +1731,23 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;rasterizing vector data&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h3 id=&quot;objective-2&quot;&gt;Objective&lt;/h3&gt;
+
 &lt;p&gt;Prepare geology layer with geo_type (just an example) of soft, medium, hard, mass-wasting&lt;/p&gt;
 
-&lt;p&gt;Data:
- * washington state geology shapefile&lt;/p&gt;
+&lt;h3 id=&quot;data-1&quot;&gt;Data:&lt;/h3&gt;
 
-&lt;p&gt;Steps:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;washington state geology shapefile&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;steps-2&quot;&gt;Steps:&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Import wa_geology.shp:
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Open QGIS, Add Vector Layer, and navigate to wa_geology.shp.&lt;/em&gt;&lt;br /&gt;
- &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-01.png&quot; alt=&quot;QGIS: Add geology vector layer into map view&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-01.png&quot; alt=&quot;QGIS: Add geology vector layer into map view&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Open field calculator in Attribute Table:
@@ -1704,15 +1759,8 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;/li&gt;
   &lt;li&gt;Add and calculate new field:
     &lt;ul&gt;
-      &lt;li&gt;Match your Field Calculator window to the one below for creating a new field ‘strength’ with a range of values of 0-3. Be sure to match it exactly as it’s displayed: double-quotes are recognized as a column whereas single-quotes are recongnized as column values. Save your changes once finished.
-    Expression:
-    case
-    when “rock_type” = ‘soft’ then 1
-    when “rock_type” = ‘medium’ then 2
-    when “rock_type” = ‘hard’ then 3
-    else 0
-    done
-   &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-04.png&quot; alt=&quot;QGIS: Add and calculate new field&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Match your Field Calculator window to the one below for creating a new field ‘strength’ with a range of values of 0-3. Be sure to match it exactly as it’s displayed: &lt;em&gt;double-quotes are evaluated as a column whereas single-quotes are evaluated as column values. Save your changes once finished&lt;/em&gt;.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Expression:&lt;br /&gt;case&lt;br /&gt;when “rock_type” = ‘soft’ then 1&lt;br /&gt;when “rock_type” = ‘medium’ then 2&lt;br /&gt;when “rock_type” = ‘hard’ then 3&lt;br /&gt;else 0&lt;br /&gt;done&lt;br /&gt;&lt;/strong&gt;
+&lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-04.png&quot; alt=&quot;QGIS: Add and calculate new field&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Style wa_geology.shp:
@@ -1721,14 +1769,14 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
       &lt;li&gt;Change style type from &lt;em&gt;Single Symbol&lt;/em&gt; to &lt;em&gt;Categorized&lt;/em&gt;.&lt;/li&gt;
       &lt;li&gt;Categorize by &lt;em&gt;strength&lt;/em&gt; and click &lt;em&gt;Classify&lt;/em&gt; to add classes.&lt;/li&gt;
       &lt;li&gt;Match your colors with the example below or get fancy with your own styling.&lt;br /&gt;
-   &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-07.png&quot; alt=&quot;QGIS: Style shapefile&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-07.png&quot; alt=&quot;QGIS: Style shapefile&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Rasterize wa_geology.shp:
     &lt;ul&gt;
       &lt;li&gt;GDAL’s rasterize is a prefered method. This can be accessed through &lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Conversion &amp;gt; Rasterize (Vector to raster)&lt;/em&gt;. Notice how the parameters have been diabled in the example below. There’s a specific reason for this. Complete the parameter inputs: &lt;em&gt;Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000&lt;/em&gt;. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Click the edit icon (pencil) locate near the block of code&lt;/em&gt;. This enables you to add those non-QGIS parameters.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Add the line of code&lt;/em&gt; &lt;code&gt;-at -a_nodata 0&lt;/code&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Add the line of code&lt;/em&gt; &lt;code&gt;-at -a_nodata 0&lt;/code&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;-at&lt;/em&gt;: Enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;-a_nodata $value&lt;/em&gt;: Assign a specified nodata value to output bands - this prevents pixels with no data from being written into the output raster.&lt;sup id=&quot;fnref:3:1&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://www.gdal.org/gdal_rasterize.html&quot;&gt;Here’s a link to the gdal_rasterize parameters&lt;/a&gt;.&lt;br /&gt;
@@ -1751,13 +1799,15 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;Keep this reclassified and rasterized vector, it’ll be used in the next lesson.&lt;/p&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;vector-analysis&quot;&gt;Vector Analysis&lt;/h4&gt;
+&lt;h2 id=&quot;vector-analysis&quot;&gt;Vector Analysis&lt;/h2&gt;
 
-&lt;p&gt;What this module covers:&lt;/p&gt;
+&lt;h3 id=&quot;what-this-module-covers-1&quot;&gt;What this module covers:&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;buffer on polylines&lt;/li&gt;
@@ -1765,9 +1815,11 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;join census housing (home values) to census tracts (shapefile)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Objective: Quantify and extract home values within high-risk landslide/mass-wasting areas.&lt;/p&gt;
+&lt;h3 id=&quot;objective-3&quot;&gt;Objective:&lt;/h3&gt;
 
-&lt;p&gt;Data:&lt;/p&gt;
+&lt;p&gt;Quantify and extract home values within high-risk landslide/mass-wasting areas.&lt;/p&gt;
+
+&lt;h3 id=&quot;data-2&quot;&gt;Data:&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Census housing data&lt;/li&gt;
@@ -1777,7 +1829,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;&lt;a href=&quot;http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx&quot;&gt;Seismogenic Features -  NEED GDAL filegb driver&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;High-risk area =&lt;/p&gt;
+&lt;h4 id=&quot;high-risk-area-&quot;&gt;High-risk area =&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;within 100m of fault lines&lt;/li&gt;
@@ -1785,7 +1837,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;within soft geologic areas&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Steps:&lt;/p&gt;
+&lt;h3 id=&quot;steps-3&quot;&gt;Steps:&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Import vector data and configure workspace/projecton:
@@ -1811,70 +1863,189 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;data will be used in Raster Analysis&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;raster-analysis&quot;&gt;Raster Analysis&lt;/h4&gt;
+&lt;h2 id=&quot;raster-analysis&quot;&gt;Raster Analysis&lt;/h2&gt;
 
-&lt;p&gt;What this module covers:&lt;/p&gt;
+&lt;h3 id=&quot;what-this-module-covers-2&quot;&gt;What this module covers:&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;importing raster data&lt;/li&gt;
+  &lt;li&gt;Importing raster data&lt;/li&gt;
   &lt;li&gt;DEM Terrain analysis (slope, aspect)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;need something for interpolation&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Raster analysis using Raster Calculator&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Research question/objective: complete locating high-risk landslide/mass-wasting areas near (select region)&lt;/p&gt;
+&lt;h3 id=&quot;objective-4&quot;&gt;Objective:&lt;/h3&gt;
 
-&lt;p&gt;High-risk slope:&lt;/p&gt;
+&lt;p&gt;Complete locating high-risk landslide/mass-wasting areas in Washington. You must use the digital elevation model (DEM) that you created in &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model&quot;&gt;Data Wrangling - DEM&lt;/a&gt; to produce slope and aspect rasters. Lastly, you need perforam a raster summation for locating high-risk landslide areas.&lt;/p&gt;
+
+&lt;h3 id=&quot;data-3&quot;&gt;Data:&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;numbers&lt;/li&gt;
+  &lt;li&gt;Washington DEM (wa_dem.tif) - &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model&quot;&gt;SEE Data Wrangling&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Washington geology raster (wa_geology.tif) - &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---reclassify-and-rasterize-vector&quot;&gt;SEE Data Wrangling&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;High-risk aspect:&lt;/p&gt;
+&lt;h3 id=&quot;data-classifications&quot;&gt;Data Classifications:&lt;/h3&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;numbers&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4 id=&quot;high-risk-slope&quot;&gt;High-risk slope:&lt;/h4&gt;
 
-&lt;p&gt;Steps:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
+      &lt;th&gt;    &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Slope&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3-5°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5-10°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10-15°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;15-20°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;20-30°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;30-40°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40°&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;calc slope and aspect&lt;/li&gt;
-  &lt;li&gt;raster calc (add) product from Vector Analysis with slope and aspect&lt;/li&gt;
-  &lt;li&gt;data will be used in Cartography/Visualization&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4 id=&quot;geology-strength&quot;&gt;Geology strength:&lt;/h4&gt;
 
-&lt;p&gt;Raster Statistics:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
+      &lt;th&gt;  &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Strength&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Low (high-risk)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Medium&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;High (low-risk)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;steps-4&quot;&gt;Steps:&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Import raster data:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Open QGIS &amp;gt; Add Raster Layer &amp;gt; Data directory &amp;gt; Add: wa_dem.tif and wa_geology.tif&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;BEST PRACTICE: Check your projections before performing any anaylsis, otherwise you’re in for a lot of trouble. Also, check raster resolutions before analysis, you don’t want your results to be off or invalid.&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-1.jpg&quot; alt=&quot;image-1&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Style wa_geology.tif to help better visualize data:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Right-click layer &amp;gt; Properties &amp;gt; Style&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Render type: Singleband pseudocolor&lt;/li&gt;
+      &lt;li&gt;Generate new color map: select color map&lt;/li&gt;
+      &lt;li&gt;Mode: Equal interval = 3&lt;/li&gt;
+      &lt;li&gt;Set Max = 3&lt;/li&gt;
+      &lt;li&gt;Load min/max values: Min/max&lt;/li&gt;
+      &lt;li&gt;Accuracy: Actual (slower)&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Click Classify&lt;/em&gt; to enable changes.
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-2.jpg&quot; alt=&quot;image-2&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;To change individual value colors, &lt;em&gt;double-click the color box&lt;/em&gt; of the desired value:&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-3.jpg&quot; alt=&quot;image-3&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Click Apply and OK to save changes.&lt;/li&gt;
+      &lt;li&gt;Notice how the layer label has changed from 1-2.998 to 1-3.&lt;/li&gt;
+      &lt;li&gt;Also, notice some geology raster pixel values are missing (you can see wa_dem black values), this is due to a no-data value assigned to water. Water != geology.&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-4.jpg&quot; alt=&quot;image-4&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Calculate slope:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Analysis &amp;gt; DEM (Terrain models)&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Configure as follows:&lt;br /&gt;Input file (DEM raster): wa_dem&lt;br /&gt;Output file: slope.tif&lt;br /&gt;Mode: Slope&lt;br /&gt;Scale: 0.30&lt;br /&gt;&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;explain scale = 0.30&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-5.jpg&quot; alt=&quot;image-5&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Click OK, OK, CLOSE to exit DEM (Terrain models)&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-6.jpg&quot; alt=&quot;image-6&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Reclassify slope raster
+    &lt;ul&gt;
+      &lt;li&gt;use R for reclass&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Intersect geology.tif, slope.tif, aspect.tif
+    &lt;ul&gt;
+      &lt;li&gt;calc g + s + a&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Reclass landslide susceptibility raster
+    &lt;ul&gt;
+      &lt;li&gt;see CA-USGS classification&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Style layer
+    &lt;ul&gt;
+      &lt;li&gt;style&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Explain what was covered.&lt;/p&gt;
+
+&lt;h3 id=&quot;raster-statistics&quot;&gt;Raster Statistics:&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;histogram&lt;/li&gt;
   &lt;li&gt;zonal stats&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;cartography-print-based&quot;&gt;Cartography (print-based)&lt;/h4&gt;
-
-&lt;p&gt;What this lesson covers:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;making a map in QGIS (not a web map)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;visualization-web-based&quot;&gt;Visualization (web-based)&lt;/h4&gt;
-
-&lt;p&gt;What this lesson covers:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;exporting data in web formats&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;do something with leaflet&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;do something with serving data&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;hr /&gt;
 

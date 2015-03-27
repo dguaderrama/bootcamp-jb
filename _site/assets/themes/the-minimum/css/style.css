@@ -52,19 +52,15 @@ hr {
   background-color: white;
 }
 /* sticky.nav -- jquery -- also, uncomment/comment-out this to give the body a min-height so the footer doesn't cover the left nav */
-.unit-article .entry-content {
-// min-height: 600px;
+.content {
+ min-height: 600px; 
 }
 .sticky-left-nav { 
   margin-left: 12%;
 }
 .sticky-left-nav {
-  height: 100%;
- // width: 12.5%;
+/*  width: 12.5%; */
   float: left;
-}
-.sticky-left-nav-inner {
-//  padding: 0px 20px 20px 20px;
 }
 .sticky-left-nav h4 {
   margin: 0px !important;
@@ -97,7 +93,6 @@ hr {
 }
 .unit-article .entry-content {
   width: 55%;
-  min-height: 600px;
 }
 .dropdown-nav li {
   list-style-type: none;
