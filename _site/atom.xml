@@ -4,7 +4,7 @@
  <title>Spatial Data Bootcamp</title>
  <link href="http://104.237.129.71/bootcamp/" rel="self"/>
  <link href="http://104.237.129.71/bootcamp"/>
- <updated>2015-03-26T18:07:08-07:00</updated>
+ <updated>2015-03-27T14:15:08-07:00</updated>
  <id>http://104.237.129.71/bootcamp</id>
  <author>
    <name>Nathan Casler</name>
@@ -1982,7 +1982,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Open QGIS &amp;gt; Add Raster Layer &amp;gt; Data directory &amp;gt; Add: wa_dem.tif and wa_geology.tif&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;BEST PRACTICE: Check your projections before performing any anaylsis, otherwise you’re in for a lot of trouble. Also, check raster resolutions before analysis, you don’t want your results to be off or invalid.&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-1.jpg&quot; alt=&quot;image-1&quot; /&gt;&lt;/li&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-1.jpg&quot; alt=&quot;Spatial Data Bootcamp: Raster Analysis - import raster data&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Style wa_geology.tif to help better visualize data:
@@ -1995,27 +1995,33 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
       &lt;li&gt;Load min/max values: Min/max&lt;/li&gt;
       &lt;li&gt;Accuracy: Actual (slower)&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Click Classify&lt;/em&gt; to enable changes.
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-2.jpg&quot; alt=&quot;image-2&quot; /&gt;&lt;/li&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-2.jpg&quot; alt=&quot;Spatial Data Bootcamp: Raster Analysis - style raster data&quot; /&gt;&lt;/li&gt;
       &lt;li&gt;To change individual value colors, &lt;em&gt;double-click the color box&lt;/em&gt; of the desired value:&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-3.jpg&quot; alt=&quot;image-3&quot; /&gt;&lt;/li&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-3.jpg&quot; alt=&quot;Spatial Data Bootcamp: Raster Analysis - style raster data&quot; /&gt;&lt;/li&gt;
       &lt;li&gt;Click Apply and OK to save changes.&lt;/li&gt;
       &lt;li&gt;Notice how the layer label has changed from 1-2.998 to 1-3.&lt;/li&gt;
       &lt;li&gt;Also, notice some geology raster pixel values are missing (you can see wa_dem black values), this is due to a no-data value assigned to water. Water != geology.&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-4.jpg&quot; alt=&quot;image-4&quot; /&gt;&lt;/li&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-4.jpg&quot; alt=&quot;Spatial Data Bootcamp: Raster Analysis - style raster data&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Calculate slope:
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Analysis &amp;gt; DEM (Terrain models)&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Configure as follows:&lt;br /&gt;Input file (DEM raster): wa_dem&lt;br /&gt;Output file: slope.tif&lt;br /&gt;Mode: Slope&lt;br /&gt;Scale: 0.30&lt;br /&gt;&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Configure as follows:&lt;br /&gt;&lt;br /&gt;Input file (DEM raster): wa_dem&lt;br /&gt;Output file: slope.tif&lt;br /&gt;Mode: Slope&lt;br /&gt;Scale: 0.30&lt;br /&gt;&lt;br /&gt;&lt;/strong&gt;&lt;/li&gt;
       &lt;li&gt;explain scale = 0.30&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-5.jpg&quot; alt=&quot;image-5&quot; /&gt;&lt;/li&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-5.jpg&quot; alt=&quot;Spatial Data Bootcamp: Raster Analysis - DEM Terrain Analysis - Slope&quot; /&gt;&lt;/li&gt;
       &lt;li&gt;Click OK, OK, CLOSE to exit DEM (Terrain models)&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-6.jpg&quot; alt=&quot;image-6&quot; /&gt;&lt;/li&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-6.jpg&quot; alt=&quot;Spatial Data Bootcamp: Raster Analysis - DEM Terrain Analysis - Slope&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Reclassify slope raster
     &lt;ul&gt;
+      &lt;li&gt;Enable the Processing Toolbox: &lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Toolbox &amp;gt; Select Advanced interface&lt;/em&gt;&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-7.jpg&quot; alt=&quot;Spatial Data Bootcamp: Raster Analysis - Reclassify slope raster&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;The &lt;em&gt;r.reclass&lt;/em&gt; tool will be used to reclassify the slope raster into correct categories. Create a text file with the following data. Save it as slope-rule.txt.&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-8.jpg&quot; alt=&quot;Spatial Data Bootcamp: Raster Analysis - Reclassify slope raster&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Open GRASS tool, r.reclass: &lt;em&gt;Processing Toolbox (with Advanced interface) &amp;gt; GRASS Commands &amp;gt; Raster &amp;gt; r.reclass&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Configure your inputs as follows:&lt;strong&gt;&lt;br /&gt;&lt;br /&gt;Input Raster: slope&lt;br /&gt;File containing reclass rules: slope-rules.txt&lt;br /&gt;Output raster layer: slope-reclass.tif&lt;/strong&gt; (NOTE: select &lt;em&gt;Save to file…&lt;/em&gt; or QGIS will not create a permanent output)&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;use R for reclass&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
