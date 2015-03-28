@@ -22,7 +22,9 @@ body {
 hr {
   border-color: rgba(0,0,0,0.2) !important;
 }
-
+p, a {
+  word-wrap: break-word;
+}
 /* background images */
 /* !important allow you to keep a standard color background for .unit-article header when the page(class) does not have a background image */
 .qgis {
