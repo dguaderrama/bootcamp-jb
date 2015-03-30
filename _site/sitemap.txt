@@ -22,5 +22,6 @@ http://104.237.129.71/bootcamp/data%20wrangling/data-wrangling
 http://104.237.129.71/bootcamp/data%20wrangling/functions
 http://104.237.129.71/bootcamp/data%20collection/metadata
 http://104.237.129.71/bootcamp/data%20collection/credible-sources
+http://104.237.129.71/bootcamp/data%20collection/consumable-services
 http://104.237.129.71/bootcamp/intro/what
 http://104.237.129.71/bootcamp/intro/intro

@@ -5,8 +5,8 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-03-30T10:43:35-07:00</lastBuildDate>
-        <pubDate>2015-03-30T10:43:35-07:00</pubDate>
+        <lastBuildDate>2015-03-30T14:07:07-07:00</lastBuildDate>
+        <pubDate>2015-03-30T14:07:07-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -404,7 +404,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;colors-are-important&quot;&gt;Colors are important&lt;/h2&gt;
 
-&lt;p&gt;Monochromatic is best used for choropleth (actually, this should be the only type of color scheme for a choropleth)&lt;/p&gt;
+&lt;p&gt;Colors can add meaning and beauty to your data, but it is important to select an appropriate color scheme for your goals. For example, for a choropleth map, you should use a monochromatic color scheme.&lt;/p&gt;
 
 &lt;p&gt;Color blindness is important factor when selecting color schemes.&lt;/p&gt;
 
@@ -2191,7 +2191,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;h2 id=&quot;relational-operations&quot;&gt;Relational Operations&lt;/h2&gt;
 
-&lt;p&gt;Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.[^1]&lt;/p&gt;
+&lt;p&gt;Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;table border=&quot;0&quot; align=&quot;center&quot;&gt;
   &lt;tr&gt;
@@ -2313,7 +2313,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
   &lt;dt&gt;Crosses&lt;/dt&gt;
   &lt;dd&gt;The two geometric objects share some but not all interior points&lt;/dd&gt;
   &lt;dt&gt;Contains&lt;/dt&gt;
-  &lt;dd&gt;One geometry is contained by the other if all the points of one geometry are within the boundary or interior of the other and they share at least one interior point. This means that this predicate may produce unpredictable behavior for linestrings and points which have no interior points.[^2]&lt;/dd&gt;
+  &lt;dd&gt;One geometry is contained by the other if all the points of one geometry are within the boundary or interior of the other and they share at least one interior point. This means that this predicate may produce unpredictable behavior for linestrings and points which have no interior points.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/dd&gt;
   &lt;dt&gt;Within&lt;/dt&gt;
   &lt;dd&gt;The inverse of Contains. The first geometry is completely within the second geometry&lt;/dd&gt;
   &lt;dt&gt;Overlaps&lt;/dt&gt;
@@ -2389,10 +2389,24 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
   &lt;li&gt;Histogram - Create a histogram showing the distribution of values in a raster dataset&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;[^1] : SQL Simple Features Specification
-[^2] : JTS
-[^3] : Esri
-[^4] : PostGIS Reference Manual.  &lt;a href=&quot;//postgis.org/documentation/manual-svn/using_postgis_dbmanagement.html&quot;&gt;http://postgis.org/documentation/manual-svn/using_postigs_dbmanagement.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[^3] : Esri&lt;/li&gt;
+  &lt;li&gt;[^4] : PostGIS Reference Manual.  &lt;a href=&quot;//postgis.org/documentation/manual-svn/using_postgis_dbmanagement.html&quot;&gt;http://postgis.org/documentation/manual-svn/using_postigs_dbmanagement.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;SQL Simple Features Specification &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;JTS &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
                 <link>http://104.237.129.71/bootcamp/data%20wrangling/functions</link>
                 <guid>http://104.237.129.71/bootcamp/data%20wrangling/functions</guid>
@@ -2574,6 +2588,56 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
                 <link>http://104.237.129.71/bootcamp/data%20collection/credible-sources</link>
                 <guid>http://104.237.129.71/bootcamp/data%20collection/credible-sources</guid>
                 <pubDate>2001-12-20T00:00:00-07:00</pubDate>
+        </item>
+
+        <item>
+                <title>Consumable Services</title>
+                <description>&lt;h1 id=&quot;consumable-services&quot;&gt;Consumable Services&lt;/h1&gt;
+
+&lt;p&gt;There is a variety of methods to access spatial data. The most obvious one is downloading a dataset to local machine. This can be the easiest option if the dataset is small enough to download quickly, and the data repository is easy to find. If this is not the case, there are several other options available:&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;&lt;a href=&quot;http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1&quot;&gt;Web Feature Service (WFS)&lt;/a&gt; - Useful for modifying features in remote datasets&lt;/dt&gt;
+  &lt;dd&gt;The WFS represents a change in the way geographic information is created, modified, and exchanged on the Internet. Rather than sharing geographic information at the file level using the File Transfer Protocol(FTP), the WFS offers direct fine-grained access to geographic information at the feature and feature property level. Web features services allow clients to only retrieve or modify the data they are seeking, rather than retrieving a file that contains the data they are seeking and possibly much more&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.
+&lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
+  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wms&quot;&gt;Web Map Service (WMS)&lt;/a&gt; - Useful for visualizing remote datasets&lt;/dt&gt;
+  &lt;dd&gt;The Web Map Service Interface Standard provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. The WMS response will return one or more geo-registered map images (JPEG, PNG, etc) to be display in a browser application&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.
+&lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
+  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wps&quot;&gt;Web Processing Service (WPS)&lt;/a&gt; - Utilizes remote resources for computation&lt;/dt&gt;
+  &lt;dd&gt;THe WPS Standard provides rule for standardizing inputs and outputs for geospatial processing services, such as polygon overlay. The standard also defines how a client can request the execution of a process and how the output of the process is handled&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. 
+&lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
+  &lt;dt&gt;&lt;a href=&quot;http://www.opendap.org&quot;&gt;OPeNDAP&lt;/a&gt;&lt;/dt&gt;
+  &lt;dd&gt;OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations.&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;A few examples of these applications are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://giss.nasa.gov/tools/panoply&quot;&gt;Panoply&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://unidata.usr.edu/software/idv&quot;&gt;Integrated Data Viewer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.iges.org/grads&quot;&gt;GrADS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1 &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;http://www.opengeospatial.org/standards/wms &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;http://www.opengeospatial.org/standards/wps &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;http://www.opendap.org &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+                <link>http://104.237.129.71/bootcamp/data%20collection/consumable-services</link>
+                <guid>http://104.237.129.71/bootcamp/data%20collection/consumable-services</guid>
+                <pubDate>2001-12-10T00:00:00-07:00</pubDate>
         </item>
 
         <item>

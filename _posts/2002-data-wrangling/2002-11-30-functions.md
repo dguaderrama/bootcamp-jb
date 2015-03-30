@@ -206,8 +206,13 @@ Symmetric Difference
   * Polygonize - Creates a set of polygon features representing the given raster dataset
   * Histogram - Create a histogram showing the distribution of values in a raster dataset
 
+<br>
 
-[^1] : SQL Simple Features Specification
-[^2] : JTS
-[^3] : Esri
-[^4] : PostGIS Reference Manual.  <a href="//postgis.org/documentation/manual-svn/using_postgis_dbmanagement.html">http://postgis.org/documentation/manual-svn/using_postigs_dbmanagement.html</a>
+----
+
+[^1]: SQL Simple Features Specification
+[^2]: JTS
+
+
+* [^3] : Esri
+* [^4] : PostGIS Reference Manual.  <a href="//postgis.org/documentation/manual-svn/using_postgis_dbmanagement.html">http://postgis.org/documentation/manual-svn/using_postigs_dbmanagement.html</a>
