@@ -55,7 +55,7 @@ NASA is the go-to for remotely sensed data due to their history as a leader in s
 #### [National Oceanic and Atmospheric Administration (NOAA)](http://www.noaa.gov)
 <a href="http://commons.wikimedia.org/wiki/File:NOAA.png#mediaviewer/File:NOAA.png"><img alt="NOAA.png" src="http://upload.wikimedia.org/wikipedia/commons/3/3a/NOAA.png" height="145" width="145"></a>
 
-NOAA provides a variety of data products for weather and climate. NOAA has an extensive Thredds catalog of climate data available at http://www.esrl.noaa.gov/psd/thredds/calatlog/Datasets/catalog.xml using the OPeNDAP protocol.
+NOAA provides a variety of data products for weather and climate. NOAA has an extensive Thredds catalog of climate data available at [http://www.esrl.noaa.gov/psd/thredds/calatlog/Datasets/catalog.html](http://www.esrl.noaa.gov/psd/thredds/catalog/Datasets/catalog.html) using the OPeNDAP protocol.
 
   + [Climate Prediction Center](http://www.cpc.ncep.noaa.gov)
 

@@ -359,7 +359,7 @@
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
             <h1 class="h2 entry-title">QGIS</h1> 
-            <h2 class="h2 entry-title">Supporting tagline</h2>
+            <!--            <h2 class="h2 entry-title">Supporting tagline</h2> -->
 
 
 
@@ -1448,7 +1448,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
     <ul>
       <li><em>Open QGIS &gt; Add Raster Layer &gt; Data directory &gt; Add: wa_dem.tif and wa_geology.tif</em><br /></li>
       <li>BEST PRACTICE: Check your projections before performing any anaylsis, otherwise you’re in for a lot of trouble. Also, check raster resolutions before analysis, you don’t want your results to be off or invalid.<br />
-  <img src="/bootcamp/assets/images/raster-analysis-1.jpg" alt="image-1" /></li>
+  <img src="/bootcamp/assets/images/raster-analysis-1.jpg" alt="Spatial Data Bootcamp: Raster Analysis - import raster data" /></li>
     </ul>
   </li>
   <li>Style wa_geology.tif to help better visualize data:
@@ -1461,27 +1461,33 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
       <li>Load min/max values: Min/max</li>
       <li>Accuracy: Actual (slower)</li>
       <li><em>Click Classify</em> to enable changes.
-  <img src="/bootcamp/assets/images/raster-analysis-2.jpg" alt="image-2" /></li>
+  <img src="/bootcamp/assets/images/raster-analysis-2.jpg" alt="Spatial Data Bootcamp: Raster Analysis - style raster data" /></li>
       <li>To change individual value colors, <em>double-click the color box</em> of the desired value:<br />
-  <img src="/bootcamp/assets/images/raster-analysis-3.jpg" alt="image-3" /></li>
+  <img src="/bootcamp/assets/images/raster-analysis-3.jpg" alt="Spatial Data Bootcamp: Raster Analysis - style raster data" /></li>
       <li>Click Apply and OK to save changes.</li>
       <li>Notice how the layer label has changed from 1-2.998 to 1-3.</li>
       <li>Also, notice some geology raster pixel values are missing (you can see wa_dem black values), this is due to a no-data value assigned to water. Water != geology.<br />
-  <img src="/bootcamp/assets/images/raster-analysis-4.jpg" alt="image-4" /></li>
+  <img src="/bootcamp/assets/images/raster-analysis-4.jpg" alt="Spatial Data Bootcamp: Raster Analysis - style raster data" /></li>
     </ul>
   </li>
   <li>Calculate slope:
     <ul>
       <li><em>Menu Bar &gt; Raster &gt; Analysis &gt; DEM (Terrain models)</em></li>
-      <li><strong>Configure as follows:<br />Input file (DEM raster): wa_dem<br />Output file: slope.tif<br />Mode: Slope<br />Scale: 0.30<br /></strong></li>
+      <li><strong>Configure as follows:<br /><br />Input file (DEM raster): wa_dem<br />Output file: slope.tif<br />Mode: Slope<br />Scale: 0.30<br /><br /></strong></li>
       <li>explain scale = 0.30<br />
-  <img src="/bootcamp/assets/images/raster-analysis-5.jpg" alt="image-5" /></li>
+  <img src="/bootcamp/assets/images/raster-analysis-5.jpg" alt="Spatial Data Bootcamp: Raster Analysis - DEM Terrain Analysis - Slope" /></li>
       <li>Click OK, OK, CLOSE to exit DEM (Terrain models)<br />
-  <img src="/bootcamp/assets/images/raster-analysis-6.jpg" alt="image-6" /></li>
+  <img src="/bootcamp/assets/images/raster-analysis-6.jpg" alt="Spatial Data Bootcamp: Raster Analysis - DEM Terrain Analysis - Slope" /></li>
     </ul>
   </li>
   <li>Reclassify slope raster
     <ul>
+      <li>Enable the Processing Toolbox: <em>Menu Bar &gt; Processing &gt; Toolbox &gt; Select Advanced interface</em><br />
+  <img src="/bootcamp/assets/images/raster-analysis-7.jpg" alt="Spatial Data Bootcamp: Raster Analysis - Reclassify slope raster" /></li>
+      <li>The <em>r.reclass</em> tool will be used to reclassify the slope raster into correct categories. Create a text file with the following data. Save it as slope-rule.txt.<br />
+  <img src="/bootcamp/assets/images/raster-analysis-8.jpg" alt="Spatial Data Bootcamp: Raster Analysis - Reclassify slope raster" /></li>
+      <li>Open GRASS tool, r.reclass: <em>Processing Toolbox (with Advanced interface) &gt; GRASS Commands &gt; Raster &gt; r.reclass</em></li>
+      <li>Configure your inputs as follows:<strong><br /><br />Input Raster: slope<br />File containing reclass rules: slope-rules.txt<br />Output raster layer: slope-reclass.tif</strong> (NOTE: select <em>Save to file…</em> or QGIS will not create a permanent output)<br /><br /></li>
       <li>use R for reclass</li>
     </ul>
   </li>
