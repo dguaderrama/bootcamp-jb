@@ -140,9 +140,22 @@ In order to visualize the data, we will need to open up QGIS.
 
 
 
-1. Click here: [ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140m90.tar.gz](ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140m90.tar.gz)
-2. Move to project directory.
-3. Unpack files.
+
+The DEM can be downloaded from <a href="ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140m90.tar.gz">ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140n90.tar.gz</a>
+
+This tarball can be extracted using an archive extraction application like [7-zip](http://www.7-zip.org).
+
+(Note: if you are using 7-zip or winRAR to extract the file, you will have to extract the .gz first. Then extract the .tar file from within the extracted subdirectory.)
+
+If you are using Mac or Linux you can extract the files in the terminal with the following command:
+
+{% highlight bash %}
+tar -zxvf w140m90.tar.gz
+{% endhighlight %}
+
+----
+
+<br>
 
 [^1]: http://www.gadm.org 
 [^2]: http://www.census.gov/geo/maps-data/data/tiger.html

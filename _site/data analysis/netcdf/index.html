@@ -1,0 +1,1467 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Averaging Rainfall</title>
+	<meta name="author" content="Nathan Casler">
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
+	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Averaging Rainfall" type="application/atom+xml">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="page-container">
+
+
+<!-- post (.md) content -->
+<div id="page" class="hentry">
+	<header class="the-header">
+		<div class="unit-head">
+			<div class="unit-inner unit-head-inner">
+				<p class="logo"><a href="/bootcamp/">Spatial Data Bootcamp</a></p>
+				<nav class="nav-global">
+					<ul>
+            <li class="home"><a href="/bootcamp/index.html">Home</a></li>
+            <li class="bootcamp"><a href="/bootcamp/intro/what">Bootcamp Material</a></li>
+            <li class="about"><a href="/bootcamp/about.html">About Us</a></li>
+					</ul>
+				</nav>
+			</div><!-- unit-inner -->
+		</div><!-- unit-head -->
+	</header>
+	<div class="body" role="main">
+		<div class="unit-body">
+			<div class="unit-inner unit-body-inner">
+				<div class="entry-content">
+					
+            <div class="dropdown-nav">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Table of Contents<span class="caret"></span></a>
+                <ul style="" class="dropdown-menu" role="menu">
+                 
+                  <h4 id="setup-ref">Setup</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="intro-ref">Intro</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/projections">Projections</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="data collection-ref">Data collection</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/consumable-services">Consumable Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="data wrangling-ref">Data wrangling</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-wrangling">Data Formatting</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/functions">Spatial Manipulation</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="data analysis-ref">Data analysis</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/data%20analysis/netcdf" class="active">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="cartography-ref">Cartography</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="distribution-ref">Distribution</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/distribution">Distribution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="things to come-ref">Things to come</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/things%20to%20come/future">Future</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="applications-ref">Applications</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/qgis">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/panoply">Panoply</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="references-ref">References</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div><!-- dropdown nav -->
+<article class="unit-article layout-post">
+	<div class="unit-inner unit-article-inner">
+		<div class="content">
+			<header id="content-header">
+				<div class="unit-head">
+					<div class="unit-inner unit-head-inner">
+            <h1 class="h2 entry-title">Averaging Rainfall</h1> 
+            <!--            <h2 class="h2 entry-title">Supporting tagline</h2> -->
+
+
+
+					</div><!-- unit-inner -->
+				</div><!-- unit-head -->
+			</header>
+
+    
+      <!--
+      <div class="col-md-2 sticky-left-nav">
+ 
+  <h4 id="setup-ref">Setup</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/projections">Projections</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data collection-ref">Data collection</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/consumable-services">Consumable Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data wrangling-ref">Data wrangling</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-wrangling">Data Formatting</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/functions">Spatial Manipulation</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data analysis-ref">Data analysis</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/data%20analysis/netcdf" class="active">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="cartography-ref">Cartography</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="distribution-ref">Distribution</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/distribution">Distribution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="things to come-ref">Things to come</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/things%20to%20come/future">Future</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="applications-ref">Applications</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/qgis">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/panoply">Panoply</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="references-ref">References</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+
+
+    </div>
+    -->
+			<div class="bd">
+
+        <!-- holding -->
+        <!-- sticky left navigation -->
+<div id="sticky-anchor" class="sticky-left-nav">
+  <div id="sticky" class="sticky-left-nav-inner">
+    <h3>Contents</h3>
+    
+   
+  <h4 id="setup-ref">Setup</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/projections">Projections</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data collection-ref">Data collection</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/consumable-services">Consumable Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data wrangling-ref">Data wrangling</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-wrangling">Data Formatting</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/functions">Spatial Manipulation</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data analysis-ref">Data analysis</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/data%20analysis/netcdf" class="active">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="cartography-ref">Cartography</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="distribution-ref">Distribution</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/distribution">Distribution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="things to come-ref">Things to come</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/things%20to%20come/future">Future</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="applications-ref">Applications</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/qgis">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/panoply">Panoply</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="references-ref">References</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+
+  </div>  
+  <div class="clear"></div>
+</div> <!--left-nav -->
+
+
+
+<div class="entry-content content">
+  
+<h1 id="averaging-annual-rainfall">Averaging Annual Rainfall</h1>
+
+<h1 id="network-common-data-form-netcdf">Network Common Data Form (netCDF)</h1>
+
+<p><img src="/bootcamp/assets/images/netcdf1_sm.png" alt="netcdf-logo" /></p>
+
+<p>NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate.</p>
+
+<p>NetCDF is a set of software libraries and describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF was developed at <a href="http://unidata.ucar.edu">Unidata</a>. Unidata provides data and software tools for use in geoscience education and research. Unidata is part of the University Corporation for Atmospheric Research(<a href="http://ucar.edu">UCAR</a>) Community Programs(<a href="http://www.uop.ucar.edu">UCP</a>).<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+
+<p>NetCDF data is accessible via a series of language APIs: C, C++, Fortran77/90, Java, NCL, Objective-C, Perl, Python, R, Tcl/Tk, and Visual Basic</p>
+
+<p><img src="/bootcamp/assets/images/netcdf-structure.png" alt="netcdf-architecture" /></p>
+
+<p>NetCDF data is also accessible via a series of applications including: Panoply, nco, IDV, GrADS, FERRET and various others. For the full listing of applications, <a href="http://www.unidata.ucar.edu/software/netcdf/software.html">look here.</a>.</p>
+
+<p>With the help of a THREDDS Data Server, large netCDF datasets are easily accessible and discoverable through a client application or through HTTP.</p>
+
+<p>The multidimensional nature of netCDF data makes storage of complex data such as temperature and humidity simple. Also, since netCDF allows for multivariate storage, several variables can be subsets, ensembled and explored simultaneously. An issue can be the process of creating a usable dataset from netCDF data. This can be due to the sensor-based nature of netCDF, which is a primary dataset (i.e. daily precipitation sums). In order to get the proper dataset, it often requires researchers to subset, and ensemble values over a dimension. Ensembled data sets could be seasonal datasets, climatologies, or long-term averages.</p>
+
+<h2 id="overview">Overview</h2>
+
+<h2 id="procedure">Procedure</h2>
+
+<p>For our case study, we created an annual average for precipitation between 2007-2014.</p>
+
+<p>We had to first locate the datasets from http://esrl.noaa.gov/psd/thredds/dodsC/Datasets/cpc_us_precip/RT</p>
+
+<p>This brought us 9 years of datasets.</p>
+
+<p><img src="/bootcamp/assets/images/daily-precip.png" alt="daily-precip" /></p>
+
+<h4 id="subsetting-data">Subsetting data</h4>
+
+<p>These datasets were then subsetted to our bounding box with the following command:</p>
+
+<h5 id="netcdf-kitchen-sink">netCDF Kitchen Sink</h5>
+
+<p>The nickname ‘kitchen sink’ is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option ‘-d’<sup id="fnref:4"><a href="#fn:4" class="footnote">2</a></sup>. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">ncks -O -d lon,234.0,244.0 -d lat,44.0,50.0 <span class="k">${</span><span class="nv">URL</span><span class="k">}</span>.<span class="k">${</span><span class="nv">year</span><span class="k">}</span>.nc subset.<span class="k">${</span><span class="nv">year</span><span class="k">}</span>.nc</code></pre></div>
+
+<p>In the above command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testing.</p>
+
+<h4 id="removing-bad-values">Removing bad values</h4>
+<p>If you look at the metadata for the subsetted file, you can see that the ‘precip’ variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25° x .25°(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library.</p>
+
+<h5 id="netcdf-arithmetic-processor">netCDF Arithmetic Processor</h5>
+
+<p>The netCDF Arithmetic Processor(ncap2) was written to perform arbitrary algebraic transformation of data and archive the results as easily as possible<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>. Instructions for ncap2 can be contained in an MCP script file or delivered inline with the ‘-s’ flag. One of ncap2’s most powerful features is its ability to define new variables in terms of existing variables.</p>
+
+<hr />
+
+<h4 id="overview-1">Overview</h4>
+
+<p>Panoply 
+The ncap2 command we will be using is:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">ncap2 -O -s <span class="s1">&#39;where(precip &lt; 0.0 || precip &gt; 10000) precip=0;&#39;</span> subset.<span class="k">${</span><span class="nv">year</span><span class="k">}</span>.nc narm.<span class="k">${</span><span class="nv">year</span><span class="k">}</span>.nc</code></pre></div>
+
+<p>In the above command, we use the inline script flag ‘-s’ to specify that the cell value should be set to 0 if it is less than 0 or greater than 10,000. Once again, we include the overwrite flag ‘-O’ for scripting purposes.</p>
+
+<h4 id="summing-yearly-precipitation">Summing yearly precipitation</h4>
+<p>Since our analysis is looking at patterns of precipitation over time, rather than the amount of rain accumulated during a particular day, we will have create an ensemble dataset with the sum of precipitation for a given year. We will be using the NetCDF Record Averager to sum our precipitation values over the time dimension.</p>
+
+<h5 id="netcdf-record-averager">netCDF Record Averager</h5>
+
+<p>The netCDF Record Averager averages record variables across an abitrary number of input-files. ncra will apply a given operation to the all the cell values across a given dimension.<sup id="fnref:4:1"><a href="#fn:4" class="footnote">2</a></sup></p>
+
+<p>The ncra command we will be using is:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">ncra -O --op-typ<span class="o">=</span>ttl -d <span class="nb">time</span>,,,1 -v precip narm.<span class="k">${</span><span class="nv">year</span><span class="k">}</span>.nc annual.<span class="k">${</span><span class="nv">year</span><span class="k">}</span>.nc</code></pre></div>
+
+<p>In the above command, the ‘-v precip’ flag defines the variable ncra will operate on. The ‘–op-type=ttl’ flag indicates that we want ncra to calculate the sum of records while the ‘-d’ flag indicates that we are summing the values across the time dimension. Once again we include the overwrite flag ‘-O’ for scripting purposes.</p>
+
+<h4 id="regridding-netcdf-files">Regridding netCDF files</h4>
+
+<p>The next step we will take is to scale our precipitation raster to match the resolution and extent of the other inputs. There is no turn-key solution for regridding netCDF datasets, so we had to create a script from some existing NCL examples.</p>
+
+<h5 id="ncar-command-language">NCAR Command Language</h5>
+
+<p>The NCAR Command Language (NCL), a product of the Computational and Information Systems Laboratory at the National Center for Atmospheric Research(NCAR) and sponsored by the National Science Foundation,  is a free interpreted language designed specifically for data analysis and visualization. NCL supports netCDF 3/4, GRIB 1/2, HDF 4/5, HDF-EOS 2/5, shapefile, ASCII and binary formats<sup id="fnref:5"><a href="#fn:5" class="footnote">4</a></sup>. NCL gives users fine-grained access to netCDF datasets, their dimensions, variable and attributes.  Another benefit of NCL is the amount of working examples available online and the quality of language documentation. The NCL variable model is based on the netCDF variable model which makes handling netCDF data naturally.</p>
+
+<p>The script we used for the regridding can be found in the Resources page.</p>
+
+<h4 id="averaging-annual-values">Averaging annual values</h4>
+
+<p>Once we have regridded the data, we have to create an average of the annual precipitation totals. We will use the netCDF Ensemble Statistics(nces)Utility to create the average annual dataset.</p>
+
+<h5 id="netcdf-ensemble-statistics">netCDF Ensemble Statistics</h5>
+
+<p>netCDF Ensemble Statistics performs gridpoint statistics on variables across an arbitray number(an ensemble) of input files and/or input groups within each file. nces is distinct from ncra which performs statistics only over the record dimension(s)(e.g. time) and weights each record in each record dimension evenly<sup id="fnref:4:2"><a href="#fn:4" class="footnote">2</a></sup></p>
+
+<p>The nces command we will be using is:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">nces -O -n 8,2,1 <span class="k">${</span><span class="nv">OUTPUTDIR</span><span class="k">}</span>/regrid.2007.nc avg_annual.nc</code></pre></div>
+
+<p>The above command uses the loop flag ‘-n 8,2,1’ which uses the following syntax -n <em>file_number,digit_number,numeric_increment</em> where <em>file_number</em> is the number of files, <em>digit_number</em> is the fixed number of numeric digits comprising the <em>numeric_suffix</em> and <em>numeric_increment</em> is the constant, integer-valued difference between the <em>numeric_suffix</em> of any two files<sup id="fnref:6"><a href="#fn:6" class="footnote">5</a></sup>.</p>
+
+<h4 id="converting-to-geotiff">Converting to GeoTiff</h4>
+
+<p>In order for us to combine our new averaged annual precipitation layer with our other landslide susceptibility inputs, we will have to define the lat/lon extent of our data and project our data into EPSG:2927. This can be done using a simple R script. Our R Script will require a few libraries</p>
+
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="kn">library</span><span class="p">(</span>raster<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>ncdf4<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>rgdal<span class="p">)</span></code></pre></div>
+
+<p>Once our libraries have loaded we can set the input directory to the folder holding our precipitation layer and load it as a raster.</p>
+
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="kp">setwd</span><span class="p">(</span><span class="s">&#39;path/to/files&#39;</span><span class="p">)</span>
+
+r <span class="o">&lt;-</span> raster<span class="p">(</span><span class="s">&#39;avg_annual.nc&#39;</span><span class="p">)</span>
+
+<span class="c1">#get netCDF extent</span>
+oldExt <span class="o">&lt;-</span> extent<span class="p">(</span>r<span class="p">)</span>
+
+<span class="c1"># set new netCDF extent by subtracting 360 from X coordinates</span>
+xMin <span class="o">&lt;-</span> oldExt<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="o">-</span> <span class="m">360</span>
+xMax <span class="o">&lt;-</span> oldExt<span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="o">-</span> <span class="m">360</span>
+yMin <span class="o">&lt;-</span> oldExt<span class="p">[</span><span class="m">3</span><span class="p">]</span>
+yMax <span class="o">&lt;-</span> oldExt<span class="p">[</span><span class="m">4</span><span class="p">]</span>
+
+<span class="c1"># create extent object</span>
+geoExt <span class="o">&lt;-</span> extent<span class="p">(</span>xMin<span class="p">,</span> xMax<span class="p">,</span> yMin<span class="p">,</span> yMax<span class="p">)</span>
+r <span class="o">&lt;-</span> setExtent<span class="p">(</span>r<span class="p">,</span> geoExt<span class="p">,</span> keepres<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span></code></pre></div>
+
+<p>Now that the extent is properly set, we will set the new projection and projected extent information</p>
+
+<div class="highlight"><pre><code class="language-r" data-lang="r">newProj <span class="o">&lt;-</span> <span class="s">&#39;+proj=lcc +lat_1=47.33333333333334 +lat_2=45.83333333333334 +lat_0=45.33333333333334 +lon_0=-120.5 +x_0=500000.0001016001 +y_0=0 +ellps=GRS80 +to_meter=0.3048006096012192 +no_defs&#39;</span> 
+xMinPrj <span class="o">&lt;-</span> <span class="m">548554.658</span>
+xMaxPrj <span class="o">&lt;-</span> <span class="m">2558498.351</span>
+yMinPrj <span class="o">&lt;-</span> <span class="m">77271.774</span>
+yMaxPrj <span class="o">&lt;-</span> <span class="m">1366159.434</span>
+
+xRes <span class="o">&lt;-</span> <span class="m">1000</span>
+yRes <span class="o">&lt;-</span> <span class="m">1000</span>
+
+newRaster <span class="o">&lt;-</span> raster<span class="p">(</span>xmn<span class="o">=</span>xMinPrj<span class="p">,</span> xmx<span class="o">=</span>xMaxPrj<span class="p">,</span> ymn<span class="o">=</span>yMinPrj<span class="p">,</span> ymx<span class="o">=</span>yMaxPrj<span class="p">,</span> crs<span class="o">=</span>newProj<span class="p">,</span> res<span class="o">=</span><span class="m">1000</span><span class="p">)</span>
+
+newR <span class="o">&lt;-</span> projectRaster<span class="p">(</span>r<span class="p">,</span> newRaster<span class="p">)</span>
+
+<span class="kp">print</span><span class="p">(</span><span class="s">&quot;Finished projecting raster&quot;</span><span class="p">)</span>
+
+<span class="kp">summary</span><span class="p">(</span>newR<span class="p">)</span>
+fileout <span class="o">&lt;-</span> <span class="s">&quot;testRout.tif&quot;</span>
+<span class="kp">print</span><span class="p">(</span><span class="kp">paste0</span><span class="p">(</span><span class="s">&quot;Writing new Raster to &quot;</span><span class="p">,</span> fileout<span class="p">))</span>
+
+writeRaster<span class="p">(</span>newR<span class="p">,</span> filename<span class="o">=</span>fileout<span class="p">,</span> format<span class="o">=</span><span class="s">&quot;GTiff&quot;</span><span class="p">,</span> options<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;COMPRESS=ZIP&quot;</span><span class="p">),</span> overwrite<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+
+<span class="kp">print</span><span class="p">(</span><span class="s">&quot;Finished outputting raster. Exiting...&quot;</span><span class="p">)</span></code></pre></div>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>https://www.unidata.ucar.edu/software/netcdf/docs <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>http://nco.sourceforge.net/nco.html <a href="#fnref:4" class="reversefootnote">&#8617;</a> <a href="#fnref:4:1" class="reversefootnote">&#8617;<sup>2</sup></a> <a href="#fnref:4:2" class="reversefootnote">&#8617;<sup>3</sup></a></p>
+    </li>
+    <li id="fn:3">
+      <p>http://stderr.org/doc/nco/html/ncap2-netCDF-Arithmetic-Processor.html <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo5]: The NCAR Command Language (Version 6.In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo2.1) [Software]. (2014). Boulder, Colorado: UCAR/NCAR/CISL/VETS. http://dx.doi.org/10.5065/D6WD3XH5 <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>http://nco.sourceforge.net/nco.html#Specifying-Input-Files <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+          <!--
+					<div class="meta">
+						<p class="date-publish">
+							Published: 
+							<date class="date-pub" title="2004-12-30T00:00:00-07:00" datetime="2004-12-30T00:00:00-07:00" pubdate>
+							<span class="month"><abbr>December</abbr></span>
+							<span class="day">30</span>
+							<span class="year">2004</span>
+							</date>
+						</p>
+						<ul class="list-category list-linear">
+							<li class="list-head">category: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/categories.html#data analysis-ref">
+    		data analysis <span>3</span>
+    	</a></li>
+    
+  
+
+
+						</ul>
+						<ul class="list-tag list-linear">
+							<li class="list-head">tags: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/tags.html#netcdf-ref">netcdf <span>2</span></a></li>
+    
+  
+
+
+
+						</ul>
+					</div>
+          meta -->
+
+
+				</div><!-- entry-content -->
+				<div class="misc-content">
+					<div class="social">
+						<ul class="list-linear">
+							<li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="" data-lang="en">Tweet</a></div></li>
+							<li><div class="twitter-follow"><a href="https://twitter.com/" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
+						</ul>
+					</div>
+					
+					
+				</div><!-- misc-content -->
+				
+			</div><!-- bd -->
+			<footer class="unit-foot">
+				<div class="unit-inner unit-foot-inner">
+					<nav class="pagination">
+						<ul>
+							
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/data%20analysis/range-modeling" title="View Range Modeling">&laquo; Range Modeling</a></li>
+							
+							
+							<li class="pipe"> | </li>
+							
+							
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/data%20analysis/case-study" title="View Data Analysis">Data Analysis &raquo;</a></li>
+							
+						</ul>
+					</nav>
+					<p class="gotop">
+						<a href="#page">Back to Top</a>
+					</p>
+				</div>
+			</footer>
+
+		</div><!-- content -->
+	</div><!-- unit-inner -->
+</article>
+
+
+				</div>
+			</div><!-- unit-inner -->
+		</div><!-- unit-body -->
+	</div><!-- body -->
+	<footer class="the-footer">
+		<div class="unit-foot">
+			<div class="unit-inner unit-foot-inner">
+				<div class="misc vcard">
+					<h4>about</h4>
+					<ul>
+						<li class="contact"><address><span class="author fn n">Nathan Casler</span> - <span class="fn email">ncasler@email.arizona.edu</span></address></li>
+            <!--						<li class="github"><a href="http://github.com//" rel="me">github.com/</a></li>
+						<li class="twitter"><a href="http://twitter.com//" rel="me">twitter.com/</a></li>
+            <li class="rss"><a href="http://feeds.feedburner.com/">Subscribe to RSS Feed</a></li>-->
+					</ul>
+				</div><!-- misc -->
+				<p class="licence">
+        <!--					Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>-->
+					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+				</p>
+			</div><!-- unit-foot-inner -->
+		</div><!-- unit-foot -->
+	</footer>
+</div><!-- page -->
+</div><!-- page-container -->
+<script>
+	(function(d, s) {
+		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.src = url; js.id = id;
+		fjs.parentNode.insertBefore(js, fjs);
+		};
+	load('//platform.twitter.com/widgets.js', 'tweetjs');
+	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/data%20analysis/netcdf" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	}(document, 'script'));
+</script>
+<script>
+/*! A fix for the iOS orientationchange zoom bug.Script by @scottjehl, rebound by @wilto. MIT License.*/
+(function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
+</script>
+
+  
+</body>
+</html>
+
