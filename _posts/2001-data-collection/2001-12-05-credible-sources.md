@@ -103,7 +103,7 @@ A few examples of these applications are:
 
 ## Exercise
 
-#### Downloading adminstrative boundary data
+#### Download adminstrative boundary data
 
 For this exercise, we will be subsetting a shapefile of the US states.
 
@@ -135,6 +135,14 @@ The .shp, .shx, .dbf .prj files make up what we call *Shapefiles*
 In order to visualize the data, we will need to open up QGIS.
 
 ----
+
+#### Download GTOPO30 elevation data
+
+
+
+1. Click here: [ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140m90.tar.gz](ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140m90.tar.gz)
+2. Move to project directory.
+3. Unpack files.
 
 [^1]: http://www.gadm.org 
 [^2]: http://www.census.gov/geo/maps-data/data/tiger.html

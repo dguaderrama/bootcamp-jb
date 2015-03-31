@@ -5,32 +5,25 @@ tagline: "Supporting tagline"
 tags : [qgis, leaflet, colorbewer]
 ---
 
-# Cartography & Visualisation
+{% include JB/setup %}
 
- * Best practices, sites like ColorBrewer
- * QGIS
- * Panoply
- * MapBox Suite
- * Mapbox.js
-   * Leaflet.js
-   * OpenLayers.js
-   * D3.js
-
-
-### Exercise
+### Exercises
 
 Making maps in QGIS
 
 Before starting this next section, add the following layers:
+
  * geo_coded.tif
- * slope-geo-sect.tif
- * landslide-suscept.tif
+ <!--* slope-geo-sect.tif-->
+ <!--* landslide-suscept.tif-->
  * dem-washington.tif
 
-![Spatial Data Bootcamp: Cartography in QGIS]({{site.baseurl}}{{ASSET_PATH}}/images/carto/carto-1.png)
+ ![Spatial Data Bootcamp: Cartography in QGIS]({{site.baseurl}}{{ASSET_PATH}}/images/carto/carto-1.png)
 
 ----
      
+### Exercise 1
+
 Create map of Washington rock strength
 
 Needs: dem, geo_coded
@@ -40,11 +33,8 @@ Layering - same concept as photo editing; layers stack, or go on top of each oth
 #### Prepare data for map
 
 1. Uncheck all layers, less dem-washington and geo_coded
-2. Create hillshade:
- * <em>Menu Bar > Raster > Analysis > DEM (Terrain models)</em>
- * Configure input as follows:<br>
- Notice the Z factor, this will exaggerate elevation and give the map an appearance of greater relief.<br>
-![Spatial Data Bootcamp: Cartography in QGIS]({{site.baseurl}}{{ASSET_PATH}}/images/carto/carto-2.png) 
+<!--2. Create hillshade: * <em>Menu Bar > Raster > Analysis > DEM (Terrain models)</em> * Configure input as follows:<br> Notice the Z factor, this will exaggerate elevation and give the map an appearance of greater relief.<br>![Spatial Data Bootcamp: Cartography in QGIS]({{site.baseurl}}{{ASSET_PATH}}/images/carto/carto-2.png) -->
+2. Load hillshade-washington.tif
 2. Be sure geo_coded is moved up, or on top of dem-washington:
  * <em>Click-hold-drag geo_coded</em> to the top of the layer list.
  * Uncheck dem-washington layer.<br>
@@ -79,7 +69,7 @@ Layering - same concept as photo editing; layers stack, or go on top of each oth
  * Notice how names and values are not appropriate for a final map. To open legend propertie, using the **Select/Move Item** tool: <em>Select the legend layer and notice the Item properties on the right</em><br>
  ![Spatial Data Bootcamp: Cartography in QGIS]({{site.baseurl}}{{ASSET_PATH}}/images/carto/carto-9.png)
  * Item properties: Here you are able to change the title, select which legend to produce based on the map layer, modify legend item, etc. See the images below for the list of options.<br>
- ![Spatial Data Bootcamp: Cartography in QGIS]({{site.baseurl}}{{ASSET_PATH}}/images/carto/carto-10.md)
+ ![Spatial Data Bootcamp: Cartography in QGIS]({{site.baseurl}}{{ASSET_PATH}}/images/carto/carto-10.png)
  6. Add a title:
  * add title
  7. Add scale bar:
@@ -92,4 +82,10 @@ Layering - same concept as photo editing; layers stack, or go on top of each oth
 10. Configure additional features
 11. Export map:
  * As Image, PDF, or SVG.<br>
- ![Spatial Data Bootcamp: Cartography in QGIS]({{site.baseurl}}{{ASSET_PATH}}/images/carto/carto-final-map.png)
+ <img src="{{site.baseurl}}{{ASSET_PATH}}/images/carto/carto-final-map.jpg" style="border:1px solid black;" alt="Spatial Data Bootcamp: Cartography in QGIS">
+
+<br>
+
+----
+
+<br>

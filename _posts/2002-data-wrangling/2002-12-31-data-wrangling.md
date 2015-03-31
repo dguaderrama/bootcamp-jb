@@ -30,7 +30,8 @@ These methods can be performed using a variety of tools depending on the specifi
   * In the top navbar go Project > Project Properties
   * Select CRS in the Left menu
   * Check *Enable On-the-fly CRS transformation*
-  * Select *NAD83(HARN)/Washington South(ftUS) EPSG:2927* from the List of Projections<br>
+  * Using the Filter, search <em>2927</em> and select *NAD83(HARN)/Washington South(ftUS) EPSG:2927* from the List of Projections.
+  * Apply and OK to save changes.<br>
   ![projection]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-projection.png)<br>
 2. Add the US States shapefile<br><br>
   Since our project is directed at the state of Washington. We should extract the Washington state boundary for our study. The GADM[^7] project provides high-quality boundary data on country,state and county levels. We can use the US-state level dataset to get the Washington boundary. <br><br>
@@ -38,7 +39,8 @@ These methods can be performed using a variety of tools depending on the specifi
   * Browse to the USA_adm1.shp layer from the iPlant Data Store<br>
   ![USA_states]({{site.baseurl}}{{ASSET_PATH}}/images/usa-states.png)<br>
 3. Create a layer for the state of Washington 
-  * In the top toolbar, select *Select Single Feature*
+  * Within the Layers List, click on USA_adm1 to activate layer tools.
+  * Select Single Feature tool:<br><em>Menu Bar > View > Select > Select Single Feature</em> OR<br>in the top toolbar, select *Select Single Feature*
   * Click on the state of Washington to select it<br>
   ![washington-selected]({{site.baseurl}}{{ASSET_PATH}}/images/washington-selected.png)<br>
   * Right click on the USA_adm1 layer and select *Save Selection As...*
@@ -46,7 +48,7 @@ These methods can be performed using a variety of tools depending on the specifi
       - Save as: washington.shp
       - Encoding: UTF-8
       - CRS: 
-          + Project CRS
+          + Selected CRS
           + Browse > *NAD83(HARN)/Washington South (ftUS) EPSG:2927*<br>
   ![save-washington]({{site.baseurl}}{{ASSET_PATH}}/images/save-washington.png)<br>
 4. Load the new washington layer<br>
@@ -68,8 +70,11 @@ These methods can be performed using a variety of tools depending on the specifi
     + Input File: *W140N90*
     + Output File: *secondary_files/dem-project.tif*
     + Source SRS: *EPSG:4326*
+    + Target SRS: **2927**<br> &nbsp;&nbsp;&nbsp;&nbsp;**NOTE**: When searching for an SRS, you MUST click on SRS in the bottom list otherwise you will not actually be selecting an SRS
     + Resampling Method: *Near*
-    + No data values: *0*<br>
+    + No data values: *0*
+  * Be sure to click CLOSE and not OK when exiting tools. Clicking OK will rerun the tool.
     ![project-dem]({{site.baseurl}}{{ASSET_PATH}}/images/project-dem.png)<br>
+7. **Important!** Save you current project workspace in your project directory. Saving will maintain the configuration of your project workspace. You will be using this project workspace for the following lessons.
 
 ### Continue to the next lesson...

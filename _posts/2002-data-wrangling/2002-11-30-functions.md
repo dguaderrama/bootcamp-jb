@@ -217,16 +217,18 @@ Symmetric Difference
 
 ## Exercise
 
+The following exercises are a continuation of the previous exercises. Open your project workspace before starting the following steps. See [Data Wrangling]({{site.baseurl}}/data%20wrangling/data-wrangling).
+
 8. Clip the dem to the state boundary
   * In the top menu, select Raster > Extraction > Clipper
   * In the window, set the following options:
-    + Input file: dem-project.tif
-    + Output file: dem-washington.tif
-    + No data value: 0
-    + Clipping Mode: Mask layer > washington
+    + **Input file: dem-project.tif**
+    + **Output file: dem-washington.tif**
+    + **No data value: 0**
+    + **Clipping Mode: Mask layer > washington**
     + Load into canvas when finished<br>
   ![dem-washington]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington.png)<br>
-9. Remove the W140N90 layer<br>
+9. Remove the dem-project.tif layer<br>
   ![dem-washington-display]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington-display.png)<br>
 10. Create a slope surface <br>
   In the top menu, select **Raster > Analysis > DEM** <br>
@@ -247,8 +249,13 @@ Symmetric Difference
   * Altitude of light: 45.0
   * Load into canvas when finished<br>
   ![hillshade-calc]({{site.baseurl}}{{ASSET_PATH}}/images/hillshade-calc.png)<br>
+12. Save your project workspace.
 
+<br>
 
+----
+
+<br>
 
 [^1]: SQL Simple Features Specification
 [^2]: JTS
