@@ -58,7 +58,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Table of Contents<span class="caret"></span></a>
                 <ul style="" class="dropdown-menu" role="menu">
                  
-                  <h4 id="intro-ref">Intro</h4>
+                  <h4 id="setup-ref">Setup</h4>
                   <!-- add class="divider" to li in page list-->
                   <ul>
                       
@@ -71,10 +71,26 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="intro-ref">Intro</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
   
     
       
@@ -419,7 +435,7 @@
       <!--
       <div class="col-md-2 sticky-left-nav">
  
-  <h4 id="intro-ref">Intro</h4>
+  <h4 id="setup-ref">Setup</h4>
   <ul>
       
     
@@ -431,10 +447,25 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
   
     
       
@@ -758,7 +789,7 @@
     <h3>Contents</h3>
     
    
-  <h4 id="intro-ref">Intro</h4>
+  <h4 id="setup-ref">Setup</h4>
   <ul>
       
     
@@ -770,10 +801,25 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
   
     
       
@@ -1099,15 +1145,15 @@
 
 <p>This lesson will take us through the steps involved in creating a species range model using the Maximum Entropy probability distribution.</p>
 
-<p>Before we load in any data we should set the project projection. </p>
+<p>Before we load in any data we should set the project projection.</p>
 
 <p>To add this to QGIS you can go into the top menu:</p>
 
-<p>Settings &gt; Custom CRS…</p>
+<p>Settings &gt; Custom CRS&#8230;</p>
 
 <p>Click <em>Add new CRS</em> to create a new custom projection</p>
 
-<p><img src="/bootcamp//assets/images/addNewCrs.png" alt="add-Crs" /></p>
+<p class="center"><img src="/bootcamp//assets/images/addNewCrs.png" alt="add-Crs" /></p>
 
 <p>In the box labeled <em>Name:</em> enter <em>New World LAEA</em></p>
 
@@ -1123,9 +1169,9 @@
 
 <p>To make set the project projection, in the top menu select Project &gt; Project Properies</p>
 
-<p>You will need to select <em>Enable ‘on the fly’ CRS transformation</em> to set the projection.</p>
+<p>You will need to select <em>Enable &#8216;on the fly&#8217; CRS transformation</em> to set the projection.</p>
 
-<p>You can either scroll through the choices in the second window, or filter them by the string “New World”</p>
+<p>You can either scroll through the choices in the second window, or filter them by the string &#8220;New World&#8221;</p>
 
 <p>Select the projection in the second window and Click <em>Apply</em></p>
 
@@ -1153,7 +1199,7 @@
 
 <p><a href="http://irods.org"><em>iRods</em></a></p>
 
-<p>To install the plugin, in the Top Menu go to Plugins &gt; Manage and Install Plugins…</p>
+<p>To install the plugin, in the Top Menu go to Plugins &gt; Manage and Install Plugins&#8230;</p>
 
 <p>In the left sidebar click <em>Get more</em></p>
 
@@ -1169,7 +1215,7 @@
 
 <p><img src="/bootcamp//assets/images/pluginEnabled.png" alt="plugin-enabled" /></p>
 
-<p>If you have already set up your iPlant account and were given permissions to the Bootcamp dataset continue to the next steps. </p>
+<p>If you have already set up your iPlant account and were given permissions to the Bootcamp dataset continue to the next steps.</p>
 
 <p>If not, make sure to <a href="http://user.iplantcollaborative.org">register for iPlant access</a>, and request access to the data store.</p>
 
@@ -1185,7 +1231,7 @@
 
 <p>In the bottom right of the window click <em>Set Datastore</em></p>
 
-<p>In the next prompt, enter “/iplant/home/shared/aegis/Spatial-bootcamp”</p>
+<p>In the next prompt, enter &#8220;/iplant/home/shared/aegis/Spatial-bootcamp&#8221;</p>
 
 <p><img src="/bootcamp//assets/images/setDatastore.png" alt="set-datastore" /></p>
 
@@ -1193,7 +1239,7 @@
 
 <p>You should see a new window with a series of directories.</p>
 
-<p>For this exercise our files will be found under “Range-model”</p>
+<p>For this exercise our files will be found under &#8220;Range-model&#8221;</p>
 
 <p>We can use the Abies amabilis shapefile titled: Abies_amabilis.shp</p>
 
@@ -1207,13 +1253,13 @@
 
 <p>To check the species projection you can right-click the Abies_amabilis in the Table of Contents and select <em>Properties</em></p>
 
-<p>The Layer properties window will display the layer’s Coordinate Reference System:</p>
+<p>The Layer properties window will display the layer&#8217;s Coordinate Reference System:</p>
 
 <p><img src="/bootcamp//assets/images/abiesProjection.png" alt="abies-projection" /></p>
 
 <p>To change the projection, you can close out of the <em>Layer Properties</em> window.</p>
 
-<p>Right click the Abies_amabilis layer in the Table of Contents and select <em>Save as…</em></p>
+<p>Right click the Abies_amabilis layer in the Table of Contents and select <em>Save as&#8230;</em></p>
 
 <p>You can leave the format as ESRI Shapefile</p>
 
@@ -1237,7 +1283,7 @@
 
 <p>The environmental layers can be found in the iPlant data store in the <em>env.zip</em> file.</p>
 
-<p>To download the layers, sign in to the iPlant Discovery Environment and open the Data Store. </p>
+<p>To download the layers, sign in to the iPlant Discovery Environment and open the Data Store.</p>
 
 <p>The layers should be available under /iplant/home/shared/aegis/Spatial-bootcamp/Range-model/env.zip</p>
 
@@ -1255,13 +1301,13 @@
 
 <p><img src="/bootcamp//assets/images/loadEnvRasters.png" alt="load-env-rasters" /></p>
 
-<p>Once all the rasters are loaded, you should see them in your Table of Contents, but not on the map. </p>
+<p>Once all the rasters are loaded, you should see them in your Table of Contents, but not on the map.</p>
 
 <p>If you check the layer properties on one of the rasters, you can see that they default to EPSG:4326, although we had previously stated they come in the New World LAEA.</p>
 
-<p>This happens because Ascii Grid Format doesn’t store any projection information. </p>
+<p>This happens because Ascii Grid Format doesn&#8217;t store any projection information.</p>
 
-<p>To allow any analysis, we will have to define the projection for the raster data sets. </p>
+<p>To allow any analysis, we will have to define the projection for the raster data sets.</p>
 
 <p>To do this, you can click on the layer name in the Table of Contents and Select <em>Set Layer CRS</em></p>
 
@@ -1279,7 +1325,7 @@
 
 <p>To create the SWD, we need to sample the environmental variable layers at the observation points. To do this, we will need to install the Point Sampling Plugin.</p>
 
-<p>In the top menu, click Plugins &gt; Manage and Install Plugins…</p>
+<p>In the top menu, click Plugins &gt; Manage and Install Plugins&#8230;</p>
 
 <p>Click <em>Get more</em> in the left menu and Search for Point sampling</p>
 
@@ -1319,7 +1365,7 @@
 
 <p>Set the output field name to <em>species</em> with a field type of Text (string) and a length of 14</p>
 
-<p>Set the expression to ‘Abies_amabils’ to set the value for each row to the species name.</p>
+<p>Set the expression to &#8216;Abies_amabils&#8217; to set the value for each row to the species name.</p>
 
 <p><img src="/bootcamp//assets/images/addColumn.png" alt="add-column" /></p>
 

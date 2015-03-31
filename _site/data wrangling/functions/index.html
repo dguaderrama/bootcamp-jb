@@ -58,7 +58,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Table of Contents<span class="caret"></span></a>
                 <ul style="" class="dropdown-menu" role="menu">
                  
-                  <h4 id="intro-ref">Intro</h4>
+                  <h4 id="setup-ref">Setup</h4>
                   <!-- add class="divider" to li in page list-->
                   <ul>
                       
@@ -71,10 +71,26 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="intro-ref">Intro</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
   
     
       
@@ -419,7 +435,7 @@
       <!--
       <div class="col-md-2 sticky-left-nav">
  
-  <h4 id="intro-ref">Intro</h4>
+  <h4 id="setup-ref">Setup</h4>
   <ul>
       
     
@@ -431,10 +447,25 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
   
     
       
@@ -758,7 +789,7 @@
     <h3>Contents</h3>
     
    
-  <h4 id="intro-ref">Intro</h4>
+  <h4 id="setup-ref">Setup</h4>
   <ul>
       
     
@@ -770,10 +801,25 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
   
     
       
@@ -1097,7 +1143,7 @@
 
 <h2 id="relational-operations">Relational Operations</h2>
 
-<p>Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> </p>
+<p>Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth&#8217;s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
 
 <table border="0" align="center">
   <tr>
@@ -1202,8 +1248,10 @@
 </tr>
 </table>
 
+<hr />
+
 <h3 id="spatial-predicates">Spatial Predicates</h3>
-<p>The above figure demonstrates the criteria outlined by the Dimensionally Extended Nine-Intersection Model(DE-9IM). The matrix is used to outline specific spatial relationships or predicates which are more accessible to interpretaion. These named spatial predicates are also used by spatial queryies to selet subsets of geometrys that fit in one spatial predicate. </p>
+<p>The above figure demonstrates the criteria outlined by the Dimensionally Extended Nine-Intersection Model(DE-9IM). The matrix is used to outline specific spatial relationships or predicates which are more accessible to interpretaion. These named spatial predicates are also used by spatial queryies to selet subsets of geometrys that fit in one spatial predicate.</p>
 
 <p>Here is a quick outline of the Spatial Predicates</p>
 
@@ -1212,7 +1260,7 @@
   <dd>The two geometric objects are spatially equal meaning, they represent the same geometry (congruent in geometric terms)</dd>
   <dt>Disjoint</dt>
   <dd>The two geometric objects share no points in common, the two objects are completely separate</dd>
-  <dt>Intersects </dt>
+  <dt>Intersects</dt>
   <dd>The two geometric objects have at least one point in common</dd>
   <dt>Touches</dt>
   <dd>The two geometric objects have at least one boundary point in common, but no interior points</dd>
@@ -1228,13 +1276,15 @@
   <dd>Similar to contains, but does not require that the two geometries share an interior point, which makes it the proper tool for working with inputs of different dimensions.</dd>
 </dl>
 
+<hr />
+
 <h3 id="methods-for-spatial-analysis">Methods for Spatial Analysis</h3>
 
 <p>There are a few standard methods for geometric analysis available based on the geoetric object model. This is a brief listing of basic analyses and is by no means exhaustive of the available functions.</p>
 
 <dl>
   <dt>Distance</dt>
-  <dd>Measures the shortest distance between two geometries. </dd>
+  <dd>Measures the shortest distance between two geometries.</dd>
   <dt>Buffer</dt>
   <dd>Creates a geometric object that represents all points within a given distance from the given geometry</dd>
   <dt>Convex Hull</dt>
@@ -1249,6 +1299,8 @@
   <dd>Creates a geometric object of the disjoint parts of two geometries. The output will have all pieceheld by one geometry or the other, but not the areas held by both.</dd>
 </dl>
 
+<hr />
+
 <h4 id="examples">Examples</h4>
 
 <ul>
@@ -1258,30 +1310,27 @@
       <li>Residential areas with past landslide</li>
     </ul>
   </li>
-  <li>Union 
+  <li>Union
     <ul>
       <li>Merging census data for two states in a single layer (Useful for studying phenomena that do not respect political boundaries)</li>
       <li>Merging state boundaries for Canada, U.S. and Mexico into a North American dataset (GADM makes this a breeze)</li>
     </ul>
   </li>
-  <li>Symmetric Difference 
-    <ul>
-      <li></li>
-    </ul>
-  </li>
-  <li>Buffer 
+  <li>Buffer
     <ul>
       <li>Instagram posts vs within 100m of a local restaurant</li>
       <li>Tweets vs within 1km of a football stadium</li>
     </ul>
   </li>
-  <li>Convex Hull 
+  <li>Convex Hull
     <ul>
       <li>Bounding boxes, circles</li>
       <li>Range modeling for small data sets</li>
     </ul>
   </li>
 </ul>
+
+<hr />
 
 <h3 id="raster-functions">Raster Functions</h3>
 
@@ -1301,9 +1350,21 @@
 
 <h2 id="exercise">Exercise</h2>
 
-<h3 id="creating-slope-and-and-hillshade-surfaces">Creating slope and and hillshade surfaces</h3>
-
 <ol>
+  <li>Clip the dem to the state boundary
+    <ul>
+      <li>In the top menu, select Raster &gt; Extraction &gt; Clipper</li>
+      <li>In the window, set the following options:</li>
+      <li>Input file: dem-project.tif</li>
+      <li>Output file: dem-washington.tif</li>
+      <li>No data value: 0</li>
+      <li>Clipping Mode: Mask layer &gt; washington</li>
+      <li>Load into canvas when finished<br />
+  <img src="/bootcamp/assets/images/dem-washington.png" alt="dem-washington" /><br /></li>
+    </ul>
+  </li>
+  <li>Remove the W140N90 layer<br />
+  <img src="/bootcamp/assets/images/dem-washington-display.png" alt="dem-washington-display" /><br /></li>
   <li>Create a slope surface <br />
   In the top menu, select <strong>Raster &gt; Analysis &gt; DEM</strong> <br />
     <ul>

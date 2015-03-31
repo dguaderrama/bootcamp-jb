@@ -71,14 +71,5 @@ These methods can be performed using a variety of tools depending on the specifi
     + Resampling Method: *Near*
     + No data values: *0*<br>
     ![project-dem]({{site.baseurl}}{{ASSET_PATH}}/images/project-dem.png)<br>
-8. Clip the dem to the shapefile
-  * In the top menu, select Raster > Extraction > Clipper
-  * In the window, set the following options:
-    + Input file: dem-project.tif
-    + Output file: dem-washington.tif
-    + No data value: 0
-    + Clipping Mode: Mask layer > washington
-    + Load into canvas when finished<br>
-  ![dem-washington]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington.png)<br>
-9. Remove the W140N90 layer<br>
-  ![dem-washington-display]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington-display.png)<br>
+
+### Continue to the next lesson...

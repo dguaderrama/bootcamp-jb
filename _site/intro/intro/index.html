@@ -58,7 +58,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Table of Contents<span class="caret"></span></a>
                 <ul style="" class="dropdown-menu" role="menu">
                  
-                  <h4 id="intro-ref">Intro</h4>
+                  <h4 id="setup-ref">Setup</h4>
                   <!-- add class="divider" to li in page list-->
                   <ul>
                       
@@ -71,10 +71,26 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="intro-ref">Intro</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
   
     
       
@@ -419,7 +435,7 @@
       <!--
       <div class="col-md-2 sticky-left-nav">
  
-  <h4 id="intro-ref">Intro</h4>
+  <h4 id="setup-ref">Setup</h4>
   <ul>
       
     
@@ -431,10 +447,25 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
   
     
       
@@ -758,7 +789,7 @@
     <h3>Contents</h3>
     
    
-  <h4 id="intro-ref">Intro</h4>
+  <h4 id="setup-ref">Setup</h4>
   <ul>
       
     
@@ -770,10 +801,25 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
   
     
       
@@ -1094,36 +1140,42 @@
 <div class="entry-content content">
   
 <h1 id="rasters-and-vectors">Rasters and Vectors</h1>
-<p>Spatial data is created as simply as adding a column of geographical location to your table. There are two types of spatial data: vector and raster.</p>
+<p>There are two main families of spatial data which are each used for a specific function. Vector data, which represents discrete phenomena such as bus stations, and Raster data which represents continuous phenomena like temperature.</p>
+
+<hr />
 
 <h2 id="vectora-namevectora">Vector<a name="vector"></a></h2>
 
-<p>Vector data contains features (features are usually points, lines or polygons) which represent things in the real world. For example, a vector data file might include a river represented by a line. Now that whole line can contain information about the river (as opposed to defining that information pixel by pixel). For data which is associated with categorical data or entities like countries, mountains, roads, etc. vector data is the way to go.</p>
+<p>Vector data uses features (features are usually points, lines or polygons) to represent discrete phenomena in the real world. For example, a vector data file might include a river represented by a line which is assigned a value. For data which is associated with discrete entities like countries, landmarks, roads, etc. vector data is the way to go.</p>
 
 <p><a title="By Wegmann (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ARaster_vector_tikz.png"><img width="450" alt="Raster vector tikz" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Raster_vector_tikz.png/512px-Raster_vector_tikz.png" /></a></p>
 
 <p><br /></p>
 
+<hr />
+
 <h2 id="raster">Raster</h2>
 
-<p>Raster data is most recognizable as a satellite image. Satellite images are, simply put, pictures of the earth from space. Just like the pictures you can take with a hand-held digital camera, the information is in the pixels. Each pixel has a number value that translates into a color. Raster data is good for investigating what is happening on earth in real time, or for data which is continuous.<br /><br /></p>
+<p>Raster data is used to represent continuous phenemena in our world. Continuous phenomena have an assigned value at all positions on a surface. Raster data is commonly seen in satellite images. Satellite images are, simply put, pictures of the earth from space. Just like the pictures you can take with a hand-held digital camera, the information is in the pixels. Each pixel has a number value that can be translated into a color. Raster data si commonly output by sensors.<br /><br /></p>
 
 <p><a title="By Ldecola (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AThe_use_of_a_raster_data_structure_to_summarize_a_point_pattern.gif"><img width="512" alt="The use of a raster data structure to summarize a point pattern" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b7/The_use_of_a_raster_data_structure_to_summarize_a_point_pattern.gif/512px-The_use_of_a_raster_data_structure_to_summarize_a_point_pattern.gif" /></a></p>
 
 <p><br /></p>
 
+<hr />
+
 <p><br /></p>
 
 <h2 id="common-data-formats">Common Data Formats</h2>
-<p>The goal of your project will ultimately define whether you use raster or vector data. Here are some common data formats you may encounter:</p>
+<p>Here are some common data formats you may encounter:</p>
 
 <ul>
   <li>Shapefile: Stores point, line, and polygon data. This file type is actually made up of a collection of files with the following endings: These are mandatory: .shp, .shx, .dbf There are many others which are optional, including the important .prj file that describes the projection information for that data.</li>
+  <li>Geodatabase: Esri proprietary spatial database. Very easy to load data into, not so easy to extract.</li>
+  <li>GeoJSON: Encodes points, lines, and polygons (and collections of those) along with information about them using JSON (JavaScript Object Notation). This format is popular for web maps.</li>
   <li>GeoTIFF: A standard that allows embedding geographic information in a TIFF file.</li>
   <li>NetCDF: A multidimensional data format that allows for multiple variables covering 1 or more dimensions.</li>
   <li>Arcinfo/Ascii grid: Proprietary format by Esri</li>
-  <li>Geodatabase: Esri proprietary spatial database. Very easy to load data into, not so easy to extract.</li>
-  <li>GeoJSON: Encodes points, lines, and polygons (and collections of those) along with information about them using JSON (JavaScript Object Notation). This format is popular for web maps.</li>
   <li>Database: There are various databases that, with extensions, can hold geographic objects. Some notable examples are PostgreSQL with PostGIS, and SQLite with the SpatiaLite extension. It is important to look into the level of spatial support within a database before performing any analysis. For example, MySQL's spatial extension has geometry support, but the geometries are all defined by bounding boxes rather than the true geometry.</li>
 </ul>
 
@@ -1148,7 +1200,7 @@
   
      
     	<li><a href="/categories.html#intro-ref">
-    		intro <span>4</span>
+    		intro <span>3</span>
     	</a></li>
     
   

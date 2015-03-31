@@ -134,7 +134,7 @@ The .shp, .shx, .dbf .prj files make up what we call *Shapefiles*
 
 In order to visualize the data, we will need to open up QGIS.
 
-Navigate to your QGIS installation and Start it.
+----
 
 [^1]: http://www.gadm.org 
 [^2]: http://www.census.gov/geo/maps-data/data/tiger.html

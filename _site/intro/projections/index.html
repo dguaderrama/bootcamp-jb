@@ -58,7 +58,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Table of Contents<span class="caret"></span></a>
                 <ul style="" class="dropdown-menu" role="menu">
                  
-                  <h4 id="intro-ref">Intro</h4>
+                  <h4 id="setup-ref">Setup</h4>
                   <!-- add class="divider" to li in page list-->
                   <ul>
                       
@@ -71,10 +71,26 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="intro-ref">Intro</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
   
     
       
@@ -419,7 +435,7 @@
       <!--
       <div class="col-md-2 sticky-left-nav">
  
-  <h4 id="intro-ref">Intro</h4>
+  <h4 id="setup-ref">Setup</h4>
   <ul>
       
     
@@ -431,10 +447,25 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
   
     
       
@@ -758,7 +789,7 @@
     <h3>Contents</h3>
     
    
-  <h4 id="intro-ref">Intro</h4>
+  <h4 id="setup-ref">Setup</h4>
   <ul>
       
     
@@ -770,10 +801,25 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
   
     
       
@@ -1097,60 +1143,71 @@
 <p>Projections characterize spatial data by setting coordinate reference systems for each data set.</p>
 
 <p>Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
- will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth's image onto a plane. </p>
+ will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth's image onto a plane.</p>
 
-<h4 id="projections-can-come-in-a-variety-of-forms">Projections can come in a variety of forms:</h4>
+<h4 id="distortion">Distortion</h4>
 
-<h5 id="conic">Conic</h5>
+<p>Since projections attempt to represent the 3-dimensional globe on a 2-dimensional plane, they will all suffer from some level of distortion. It is important to choose a projection which preserves the elements you are interested in studying.</p>
+
+<hr />
+
+<h3 id="projection-properties">Projection Properties</h3>
+
+<p><strong>Conformal</strong></p>
+
+<p>Also known as <em>fidelity of shape</em>, these projections preserve shape. This means that scale distortion must be the same in all directions and each parallel must cross every meridian at right angles. These projections are important for navigational and large-scale mapping[^1]
+Examples include Mercator, and Lambert Conformal Conic.</p>
+
+<p><strong>Equal Area</strong></p>
+
+<p>Preserves the area relationships between regions. This maintain the proper ratio of area between regions. An example of this is the Mollweide projection. These projections are useful for statistical comparisons.</p>
+
+<p><strong>Equidistant</strong></p>
+
+<p>Preserves the proportional distances between any two points from their spherical distances.</p>
+
+<hr />
+
+<h3 id="geometric-projection-types">Geometric Projection Types</h3>
+
+<p><strong>Conic</strong></p>
 
 <p><a href="http://commons.wikimedia.org/wiki/File:Usgs_map_lambert_conformal_conic.PNG#mediaviewer/File:Usgs_map_lambert_conformal_conic.PNG"><img alt="Usgs map lambert conformal conic.PNG" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Usgs_map_lambert_conformal_conic.PNG" /></a>
-<br /><br /></p>
+<br /></p>
 
-<h5 id="azimuthal">Azimuthal</h5>
+<p>Conic projections are created by projecting part of a sphere onto a cone. Conic projections tend to be useful for representing data in temperate climates due to their location. Conicn projections are not useful for representing global phenomena due to their construction.</p>
 
-<p><a title="By User:Quadell, re-coloring US Government USGS image. [Public domain or Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AUsgs_map_azimuthal_equidistant.PNG"><img alt="Usgs map azimuthal equidistant" src="http://upload.wikimedia.org/wikipedia/commons/6/64/Usgs_map_azimuthal_equidistant.PNG" /></a>
-<br /><br /></p>
+<p><strong>Azimuthal</strong></p>
 
-<h5 id="cylindrical">Cylindrical</h5>
+<p><a title="By User:Quadell, re-cml projectionloring US Government USGS image. [Public domain or Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AUsgs_map_azimuthal_equidistant.PNG"><img alt="Usgs map azimuthal equidistant" src="http://upload.wikimedia.org/wikipedia/commons/6/64/Usgs_map_azimuthal_equidistant.PNG" /></a>
+<br />
+Azimuthal projections are created by flattening a side of the sphere from a reference point. Azimuthal projections are useful for mapping polar data.</p>
+
+<p><strong>Cylindrical</strong></p>
 
 <p><a title="By Ciphers (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AMercator_projection_ar.png"><img width="512" alt="Mercator projection ar" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Mercator_projection_ar.png/512px-Mercator_projection_ar.png" /></a>
-<br /><br /></p>
+<br /></p>
 
-<h5 id="sinusoidal">Sinusoidal</h5>
+<p>Cylindrical projections are created by projection a sphere onto a cylinder. Cylindrical projections suffer the least distortion along the line that it intersects the sphere, which is often around the Equator. This makes cylindrical projections useful for mapping tropical data. Examples include Mercator and Universal Transverse Mercator.</p>
 
-<p><a title="By Ciphers (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ASinusoidal_projection_ar.png"><img width="512" alt="Sinusoidal projection ar" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/12/Sinusoidal_projection_ar.png/512px-Sinusoidal_projection_ar.png" /></a>
-<br /><br /></p>
-
-<h5 id="polyhedral">Polyhedral</h5>
+<p><strong>Polyhedral</strong></p>
 
 <p><a title="By Chris Rywalt (POVRay) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ADymaxion_2003_animation_small1.gif"><img width="256" alt="Dymaxion 2003 animation small1" src="//upload.wikimedia.org/wikipedia/commons/b/bb/Dymaxion_2003_animation_small1.gif" /></a>
-<br /><br /></p>
+<br /></p>
 
-<h4 id="each-of-these-projections-also-has-a-property">Each of these projections also has a property:</h4>
-
-<h5 id="conformal">Conformal</h5>
-
-<p>[image of conformal]</p>
-
-<h5 id="equal-area">Equal Area</h5>
-<p>Preserves the area relationships between regions. This maintain the proper ratio of area between regions. An example of this is the Mollweide projection.</p>
-
-<h5 id="compromise">Compromise</h5>
-<p>[image of compromise]</p>
-
-<h5 id="equidistant">Equidistant</h5>
-<p>Preserves distance between points</p>
-
-<h5 id="gnomonic">Gnomonic</h5>
-<p>Often used in polyhedral or interrupted </p>
+<p>Polyhedral projections, also known as interrupted projections seek to minimize global distortion by tearing the sphere at specific areas. A common method for creating polyhedral projections is to coerce the sphere into a 3-dimensional geometric object such as a cube which is the then unraveled. Some examples include Dymaxion and Waterman&#8217;s butterfly.</p>
 
 <p><br /></p>
 
-<p>It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis. </p>
+<hr />
+
+<h3 id="checking-the-projection">Checking the projection</h3>
+
+<p>It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis.</p>
 
 <p><a href="http://www.gdal.org" target="new"><img src="/bootcamp/assets/images/gdalinfo.png" alt="Using GDAL to check projection" /></a></p>
 
-<p><a href="http://spatialreference.org" target="new">SpatialReference.org</a> is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings. </p>
+<p><a href="http://spatialreference.org" target="new">SpatialReference.org</a> is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings.</p>
 
 <p><a href="http://spatialreference.org" target="new"><img src="/bootcamp/assets/images/spatialreference.png" alt="SpatialReference.org: EPSG:4326" /></a></p>
 
@@ -1176,10 +1233,7 @@
 
 <p><em>NOTE: When reprojecting a raster, you should also resample your raster to ensure that the cells have the same width and height. The cells will distort in the new projection and most GIS software will refuse to read a raster with irregular cells.</em></p>
 
-<h2 id="exercise">Exercise</h2>
-
-<h4 id="reprojecting-a-raster">Reprojecting a raster</h4>
-
+<p>[^1] http://www.progonos.com</p>
 
 
           <!--
@@ -1201,7 +1255,7 @@
   
      
     	<li><a href="/categories.html#intro-ref">
-    		intro <span>4</span>
+    		intro <span>3</span>
     	</a></li>
     
   
@@ -1247,6 +1301,10 @@
 					<nav class="pagination">
 						<ul>
 							
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/setup/qgis-install" title="View Installing QGIS">&laquo; Installing QGIS</a></li>
+							
+							
+							<li class="pipe"> | </li>
 							
 							
               <li class="next"><a class="internal" rel="next"  href="/bootcamp/intro/intro" title="View Vectors and Rasters">Vectors and Rasters &raquo;</a></li>

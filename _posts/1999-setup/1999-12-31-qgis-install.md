@@ -1,7 +1,7 @@
 ---
 title: "Installing QGIS"
 layout: post
-category: Intro
+category: Setup
 tags: [intro, QGIS]
 ---
 

@@ -58,7 +58,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Table of Contents<span class="caret"></span></a>
                 <ul style="" class="dropdown-menu" role="menu">
                  
-                  <h4 id="intro-ref">Intro</h4>
+                  <h4 id="setup-ref">Setup</h4>
                   <!-- add class="divider" to li in page list-->
                   <ul>
                       
@@ -71,10 +71,26 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="intro-ref">Intro</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
   
     
       
@@ -419,7 +435,7 @@
       <!--
       <div class="col-md-2 sticky-left-nav">
  
-  <h4 id="intro-ref">Intro</h4>
+  <h4 id="setup-ref">Setup</h4>
   <ul>
       
     
@@ -431,10 +447,25 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
   
     
       
@@ -758,7 +789,7 @@
     <h3>Contents</h3>
     
    
-  <h4 id="intro-ref">Intro</h4>
+  <h4 id="setup-ref">Setup</h4>
   <ul>
       
     
@@ -770,10 +801,25 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
   
     
       
@@ -1092,13 +1138,17 @@
 
 
 <div class="entry-content content">
-  <h2 id="understanding-the-data-youve-just-gathered">Understanding the data you’ve just gathered</h2>
+  <h2 id="data-about-data">Data about data</h2>
 
-<p>Metadata is a powerful source of data used in all areas of science and technology. This data (should) explain eveything about the data you’ve just gathered; how it was collected, accuracy of the data, who and when it was collected, etc. Good metadata adds more credibility to the data. Having an understanding of the importance of meta data will help you produce well documented data about data.</p>
+<p>Metadata is easily overlooked, but can be critical when data is downloaded from an unfamiliar source. Metadata helps you understand the accuracy and content of your data.</p>
+
+<h2 id="understanding-the-data-youve-just-gathered">Understanding the data you’ve just gathered</h2>
+
+<p>Metadata (should) explain the critical elements of the data you have compiled or gathered. Some of these include how it was collected, accuracy of the data, when it was collected, and any limitations or possible errors. Good metadata adds credibility to a downloaded dataset. Having a positive attitude about metadata will help you produce well documented data that can be properly utilized by others in the future. A key to good metadata is thinking about what you think the next owner of the data should know about the dataset.</p>
 
 <h3 id="the-importance-of-spatial-data-metadata">The importance of spatial data metadata</h3>
 
-<p>Spatial data without metadata isn’t useless but it doesn’t help you get too far. </p>
+<p>Spatial data without metadata can be tricky, especially if the data is missing projection data. Many data formats hold projection information in an external projection file which can be easily forgotten. If you don’t know the projection of a dataset, you should not use the data in your analysis.</p>
 
 <h3 id="viewing-metadata-in-qgis">Viewing metadata in QGIS</h3>
 
@@ -1106,7 +1156,7 @@
 
 <p>View Metadata in QGIS <em>Right-click layer &gt; Properties &gt; Metadata</em></p>
 
-<p>General: </p>
+<p>General:</p>
 
 <ul>
   <li>Storage type</li>
@@ -1115,9 +1165,10 @@
   <li>Geometry type</li>
   <li>Number of features in layer</li>
   <li>Editing capabilities</li>
+  <li>Author or point of contact</li>
 </ul>
 
-<p>Extend: </p>
+<p>Extent:</p>
 
 <ul>
   <li>(xMin, yMin), (xMax,yMax)</li>

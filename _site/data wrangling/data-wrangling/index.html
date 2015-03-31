@@ -58,7 +58,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Table of Contents<span class="caret"></span></a>
                 <ul style="" class="dropdown-menu" role="menu">
                  
-                  <h4 id="intro-ref">Intro</h4>
+                  <h4 id="setup-ref">Setup</h4>
                   <!-- add class="divider" to li in page list-->
                   <ul>
                       
@@ -71,10 +71,26 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="intro-ref">Intro</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
   
     
       
@@ -419,7 +435,7 @@
       <!--
       <div class="col-md-2 sticky-left-nav">
  
-  <h4 id="intro-ref">Intro</h4>
+  <h4 id="setup-ref">Setup</h4>
   <ul>
       
     
@@ -431,10 +447,25 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
   
     
       
@@ -758,7 +789,7 @@
     <h3>Contents</h3>
     
    
-  <h4 id="intro-ref">Intro</h4>
+  <h4 id="setup-ref">Setup</h4>
   <ul>
       
     
@@ -770,10 +801,25 @@
     
       
       	
-      	<li><a href="/bootcamp/intro/qgis-install">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
   
     
       
@@ -1113,7 +1159,7 @@
 
 <ol>
   <li>Set project projection to EPSG:2927<br /><br /> 
-  Before starting any project in a GIS program, you should first set the project projection to make sure your data comes in with the same extent. <br />If you don’t set the project’s projection, the program will use the projection of the first layer added or EPSG:4326.<br /><br />
+  Before starting any project in a GIS program, you should first set the project projection to make sure your data comes in with the same extent. <br />If you don&#8217;t set the project&#8217;s projection, the program will use the projection of the first layer added or EPSG:4326.<br /><br />
   You can set the projection with the following steps:<br /><br />
   <img src="/bootcamp/assets/images/qgis-project-properties.png" alt="project-properties" /><br />
     <ul>
@@ -1132,16 +1178,16 @@
   <img src="/bootcamp/assets/images/usa-states.png" alt="USA_states" /><br /></li>
     </ul>
   </li>
-  <li>Create a layer for the state of Washington 
+  <li>Create a layer for the state of Washington
     <ul>
       <li>In the top toolbar, select <em>Select Single Feature</em></li>
       <li>Click on the state of Washington to select it<br />
   <img src="/bootcamp/assets/images/washington-selected.png" alt="washington-selected" /><br /></li>
-      <li>Right click on the USA_adm1 layer and select <em>Save Selection As…</em></li>
+      <li>Right click on the USA_adm1 layer and select <em>Save Selection As&#8230;</em></li>
       <li>Format: ESRI Shapefile</li>
       <li>Save as: washington.shp</li>
       <li>Encoding: UTF-8</li>
-      <li>CRS: 
+      <li>CRS:
         <ul>
           <li>Project CRS</li>
           <li>Browse &gt; <em>NAD83(HARN)/Washington South (ftUS) EPSG:2927</em><br />
@@ -1184,21 +1230,9 @@
  <img src="/bootcamp/assets/images/project-dem.png" alt="project-dem" /><br /></li>
     </ul>
   </li>
-  <li>Clip the dem to the shapefile
-    <ul>
-      <li>In the top menu, select Raster &gt; Extraction &gt; Clipper</li>
-      <li>In the window, set the following options:</li>
-      <li>Input file: dem-project.tif</li>
-      <li>Output file: dem-washington.tif</li>
-      <li>No data value: 0</li>
-      <li>Clipping Mode: Mask layer &gt; washington</li>
-      <li>Load into canvas when finished<br />
-  <img src="/bootcamp/assets/images/dem-washington.png" alt="dem-washington" /><br /></li>
-    </ul>
-  </li>
-  <li>Remove the W140N90 layer<br />
-  <img src="/bootcamp/assets/images/dem-washington-display.png" alt="dem-washington-display" /><br /></li>
 </ol>
+
+<h3 id="continue-to-the-next-lesson">Continue to the next lesson&#8230;</h3>
 
 
           <!--

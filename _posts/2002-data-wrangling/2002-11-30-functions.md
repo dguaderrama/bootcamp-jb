@@ -118,6 +118,8 @@ Relational operators are a set of methods used to test for the existence of a sp
 </tr>
 </table>
 
+----
+
 ### Spatial Predicates
 The above figure demonstrates the criteria outlined by the Dimensionally Extended Nine-Intersection Model(DE-9IM). The matrix is used to outline specific spatial relationships or predicates which are more accessible to interpretaion. These named spatial predicates are also used by spatial queryies to selet subsets of geometrys that fit in one spatial predicate. 
 
@@ -150,6 +152,7 @@ Overlaps
 Covers
   : Similar to contains, but does not require that the two geometries share an interior point, which makes it the proper tool for working with inputs of different dimensions.
 
+----
 
 ### Methods for Spatial Analysis
 
@@ -176,6 +179,7 @@ Difference
 Symmetric Difference
   : Creates a geometric object of the disjoint parts of two geometries. The output will have all pieceheld by one geometry or the other, but not the areas held by both.
 
+----
 
 #### Examples
 
@@ -187,9 +191,6 @@ Symmetric Difference
   - Merging census data for two states in a single layer (Useful for studying phenomena that do not respect political boundaries)
   - Merging state boundaries for Canada, U.S. and Mexico into a North American dataset (GADM makes this a breeze)
 
-* Symmetric Difference 
-  - 
-
 * Buffer 
   - Instagram posts vs within 100m of a local restaurant
   - Tweets vs within 1km of a football stadium
@@ -197,7 +198,9 @@ Symmetric Difference
 * Convex Hull 
   - Bounding boxes, circles
   - Range modeling for small data sets
-  
+
+----
+
 ### Raster Functions
 
   * Slope - This function will calculate a slope surface given a raster holding an elevation model
@@ -214,8 +217,17 @@ Symmetric Difference
 
 ## Exercise
 
-### Creating slope and and hillshade surfaces
-
+8. Clip the dem to the state boundary
+  * In the top menu, select Raster > Extraction > Clipper
+  * In the window, set the following options:
+    + Input file: dem-project.tif
+    + Output file: dem-washington.tif
+    + No data value: 0
+    + Clipping Mode: Mask layer > washington
+    + Load into canvas when finished<br>
+  ![dem-washington]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington.png)<br>
+9. Remove the W140N90 layer<br>
+  ![dem-washington-display]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington-display.png)<br>
 10. Create a slope surface <br>
   In the top menu, select **Raster > Analysis > DEM** <br>
   * Input file: dem-washington
