@@ -1,18 +1,22 @@
 ---
-title: "Case Study"
+title: "Landslide Susceptibility"
 layout: post
 category : "Data Analysis"
-tagline: "Supporting tagline"
+tagline: ""
 tags : [data analysis]
 ---
 
 {% include JB/setup %}
 
-# Case Study
+# Landslide Susceptibility Model
 
-## Landslide Susceptibility Model
+----
 
-This case study has been chosed to demonstrate the concepts being highlighted by the bootcamp. We have chosen a landslide susceptibility analysis due to the diversity of inputs and a general curiousity into the methodology. The study area has been chosen in response to the Oso Mudslide[^1] which took place in Washington State on March 22nd, 2014. The methodology for this analysis is based off of work done by the California Geological Survey in Conjunction with the USGS[^2].
+### Overview
+
+This case study has been chosen to demonstrate the concepts being highlighted by the bootcamp. We have chosen a landslide susceptibility analysis due to the diversity of inputs and a general curiousity into the methodology. The study area has been chosen in response to the Oso Mudslide[^1] which took place in Washington State on March 22nd, 2014. The methodology for this analysis is based off of work done by the California Geological Survey in Conjunction with the USGS[^2].
+
+----
 
 ### Project Definition
 
@@ -21,6 +25,8 @@ Bounding Coordinates: (-125.3424, 44.9408), (-115.8, 49.779)
 Resolution: 1 km
 Projection: Washington State Plane South (US ft) [^3]
 : EPSG:2927
+
+----
 
 ### Data Collection
 
@@ -31,74 +37,64 @@ Data types: Landslides are discrete phenomena that should be represented using v
 | DEM                  || GTopo30[^3]                               |
 | Geology              || Washington Dept. of Natural Resources[^5] |
 | Landslide Inventory  || Washington Dept. of Natural Resources[^5] |
+| Washington Boundary  || Global Administrative Areas[^8]           |
 | Daily Precipitation  || Earth System Research Laboratory(NOAA)[^7]| 
 
-The DEM can be downloaded from ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140m90.tar.gz
+The DEM can be downloaded from <a href="ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140m90.tar.gz">ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140n90.tar.gz</a>
 
+This tarball can be extracted using an archive extraction application like [7-zip](http://www.7-zip.org).
+
+(Note: if you are using 7-zip or winRAR to extract the file, you will have to extract the .gz first. Then extract the .tar file from within the extracted subdirectory.)
+
+If you are using Mac or Linux you can extract the files in the terminal with the following command:
+
+{% highlight bash %}
 tar -zxvf w140m90.tar.gz
+{% endhighlight %}
 
+----
 
 ### Data Wrangling
 
-Open Quantum GIS
-
-1. Set project projection to EPSG:2927
-  
-  Before starting any project in a GIS program, you should first set the project projection to make sure your data comes in with the same extent. 
-  If you don't set the project's projection, the program will use the projection of the first layer added or EPSG:4326.
- 
-  You can set the projection with the following steps:
-
+1. Set project projection to EPSG:2927<br><br> 
+  Before starting any project in a GIS program, you should first set the project projection to make sure your data comes in with the same extent. <br>If you don't set the project's projection, the program will use the projection of the first layer added or EPSG:4326.<br><br>
+  You can set the projection with the following steps:<br><br>
+  ![project-properties]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-project-properties.png)<br>
   * In the top navbar go Project > Project Properties
-  ![project-properties]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-project-properties.png)
   * Select CRS in the Left menu
   * Check *Enable On-the-fly CRS transformation*
-  * Select *NAD83(HARN)/Washington South(ftUS) EPSG:2927* from the List of Projections
-
-  ![projection]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-projection.png)
-
-2. Add the US States shapefile
-  
-  Since our project is directed at the state of Washington. We should extract the Washington state boundary for our study. The GADM[^7] project provides high-quality boundary data on country,state and county levels. We can use the US-state level dataset to get the Washington boundary.
- 
-
+  * Select *NAD83(HARN)/Washington South(ftUS) EPSG:2927* from the List of Projections<br>
+  ![projection]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-projection.png)<br>
+2. Add the US States shapefile<br><br>
+  Since our project is directed at the state of Washington. We should extract the Washington state boundary for our study. The GADM[^7] project provides high-quality boundary data on country,state and county levels. We can use the US-state level dataset to get the Washington boundary. <br><br>
   * Select *Add Vector Layer* in the left toolbar
-  * Browse to the USA_adm1.shp layer from the iPlant Data Store
-  ![USA_states]({{site.baseurl}}{{ASSET_PATH}}/images/usa-states.png)
-
-3. Create a layer for the state of Washington
-  
+  * Browse to the USA_adm1.shp layer from the iPlant Data Store<br>
+  ![USA_states]({{site.baseurl}}{{ASSET_PATH}}/images/usa-states.png)<br>
+3. Create a layer for the state of Washington 
   * In the top toolbar, select *Select Single Feature*
-  * Click on the state of Washington to select it
-  ![washington-selected]({{site.baseurl}}{{ASSET_PATH}}/images/washington-selected.png)
+  * Click on the state of Washington to select it<br>
+  ![washington-selected]({{site.baseurl}}{{ASSET_PATH}}/images/washington-selected.png)<br>
   * Right click on the USA_adm1 layer and select *Save Selection As...*
       - Format: ESRI Shapefile
       - Save as: washington.shp
       - Encoding: UTF-8
       - CRS: 
           + Project CRS
-          + Browse > *NAD83(HARN)/Washington South (ftUS) EPSG:2927*
-  ![save-washington]({{site.baseurl}}{{ASSET_PATH}}/images/save-washington.png)
-4. Load the new washington layer
-
+          + Browse > *NAD83(HARN)/Washington South (ftUS) EPSG:2927*<br>
+  ![save-washington]({{site.baseurl}}{{ASSET_PATH}}/images/save-washington.png)<br>
+4. Load the new washington layer<br>
   * Select *Add Vector Layer*
-  * Browse to the new washington layer and click *Open*
-5. Remove the USA_adm1 layer from the project 
-
-  Now that we have the Washington layer, we can get rid of the U.S. layer. 
-
+  * Browse to the new washington layer and click *Open*<br>
+5. Remove the USA_adm1 layer from the project <br>
+  Now that we have the Washington layer, we can get rid of the U.S. layer. <br>
   * Right click the layer in the table of contents
   * Select *Remove*
-6. Add the DEM layer from the iPlant data store
-
-  DEMs or *Digital Elevation Models* are very useful for establishing topological context in a map. DEMs generally come as a raster dataset that consists of elevation values.
-  There are several different byproducts that can be created from DEMs.
-
-  This DEM was taken from the GTOPO30 satellite data.
-
+6. Add the DEM layer from the iPlant data store<br>
+  DEMs or *Digital Elevation Models* are very useful for establishing topological context in a map. DEMs generally come as a raster dataset that consists of elevation values. There are several different byproducts that can be created from DEMs.<br><br>
+  This DEM was taken from the GTOPO30 satellite data.<br>
   * In the left toolbar, select *Add Raster Layer*
-  * Select *source_files/W140N90.DEM*
-  ![dem-load]({{site.baseurl}}{{ASSET_PATH}}/images/dem-load.png)
+  * Select *source_files/W140N90.DEM*<br>
+  ![dem-load]({{site.baseurl}}{{ASSET_PATH}}/images/dem-load.png)<br>
 7. Project the dem to EPSG:2927
   * In the top menu, go to Raster > Projections > Warp (Reproject)
   * Use the following options
@@ -106,8 +102,8 @@ Open Quantum GIS
     + Output File: *secondary_files/dem-project.tif*
     + Source SRS: *EPSG:4326*
     + Resampling Method: *Near*
-    + No data values: *0*
-    ![project-dem]({{site.baseurl}}{{ASSET_PATH}}/images/project-dem.png)
+    + No data values: *0*<br>
+    ![project-dem]({{site.baseurl}}{{ASSET_PATH}}/images/project-dem.png)<br>
 8. Clip the dem to the shapefile
   * In the top menu, select Raster > Extraction > Clipper
   * In the window, set the following options:
@@ -115,23 +111,20 @@ Open Quantum GIS
     + Output file: dem-washington.tif
     + No data value: 0
     + Clipping Mode: Mask layer > washington
-    + Load into canvas when finished
-
-  ![dem-washington]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington.png)
-9. Remove the W140N90 layer
-  ![dem-washington-display]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington-display.png)
-10. Create a slope surface 
-  In the top menu, select Raster > Analysis > DEM
+    + Load into canvas when finished<br>
+  ![dem-washington]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington.png)<br>
+9. Remove the W140N90 layer<br>
+  ![dem-washington-display]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington-display.png)<br>
+10. Create a slope surface <br>
+  In the top menu, select **Raster > Analysis > DEM** <br>
   * Input file: dem-washington
   * Output file: slope-washington.tif
   * Mode: Slope
   * Scale: 0.30
-  * Load into canvas when finished
-
-  ![create-slope]({{site.baseurl}}{{ASSET_PATH}}/images/create-slope.png)
-
-11. Create a hillshade layer
-  In the top menu, select Raster > Analysis > DEM
+  * Load into canvas when finished<br>
+  ![create-slope]({{site.baseurl}}{{ASSET_PATH}}/images/create-slope.png)<br>
+11. Create a hillshade layer<br>
+  In the top menu, select **Raster > Analysis > DEM** <br>
   * Input file: dem-washington
   * Output file: hillshade-washington.tif
   * Mode: Hillshade
@@ -139,15 +132,15 @@ Open Quantum GIS
   * Scale: 0.30
   * Azimuth of light: 315.0
   * Altitude of light: 45.0
-  * Load into canvas when finished
+  * Load into canvas when finished<br>
+  ![hillshade-calc]({{site.baseurl}}{{ASSET_PATH}}/images/hillshade-calc.png)<br>
 
-  ![hillshade-calc]({{site.baseurl}}{{ASSET_PATH}}/images/hillshade-calc.png)
 
-
+----
 
 ### Data Analysis
 
-Reclassify inputs:
+Reclassifying inputs:
 
 ####Slope
 
@@ -180,13 +173,14 @@ The r.reclass tool reads text files which define the classification rules(rule f
 
 Once we have created the slope rule file. We can select the r.reclass tool from the Processing Toolbox.
 
-In the processing toolbox, select *GRASS commands* > *Raster* > > *r.reclass*
+In the processing toolbox, select *GRASS commands* > *Raster* > *r.reclass*
 
-We will use the following settings for the reclassify tool:
-  * Input Raster: *slope-washington*
-  * File containing reclass rules: *slope-rules.txt*
-  * Output raster layer: *slope-reclass.tif* (NOTE: select *Save to file...* or else QGIS will not create a permanent output)
-  ![slope-reclass]({{site.baseurl}}{{ASSET_PATH}}/images/slope-reclass.png)
+We will use the following settings for the reclassify tool:<br>
+
+  * Input Raster: _slope-washington_
+  * File containing reclass rules: _slope-rules.txt_
+  * Output raster layer: _slope-reclass.tif_ (NOTE: select *Save to file...* or else QGIS will not create a permanent output)<br>
+![slope-reclass]({{site.baseurl}}{{ASSET_PATH}}/images/slope-reclass.png)
 
 
 ####Susceptibility
@@ -203,7 +197,9 @@ In the top menu, select *Raster* > *Raster Calculator*
 
 Our raster calculator expression will be: 
 
+{% highlight bash %}
 ("geo_coded@1" * 10) + "slope-reclass@1"
+{% endhighlight %}
 
 Output layer: slope-geo-sect.tif
 
@@ -267,3 +263,4 @@ Go to Cartography & Visualization...
 [^5]: http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx
 [^6]: http://wdfw.wa.gov/conservation/gap/land_cover_data.html
 [^7]: http://www.esrl.noaa.gov/thredds/catalog/Datasets/cpc_us_precip/catalog.xml#Datasets/cpc_us_precip/RT
+[^8]: http://gadm.org/country

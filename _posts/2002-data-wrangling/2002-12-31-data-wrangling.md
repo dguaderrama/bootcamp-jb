@@ -1,12 +1,13 @@
 ---
-title: "Data Wrangling"
+title: "Data Formatting"
 layout: post
-category : Data Wrangling
+category : Data wrangling
 tagline: "Supporting tagline"
 tags : [wrangling]
 ---
 
-# Data Wrangling
+{% include JB/setup %}
+# Data Formatting
 
 Data manipulation can be a simple endeavour if the data inputs come in the same or compatible formats. Data sources will usually have a specific format they use for their data which can make it easy to use work with their datasets. Unfortunately, when we gather data from various sources, we are usually given several different formats to data to deal with. Data wrangling is the process of manipulating and reformatting disparate data sources into compatible datasets. Data wrangling makes proper analysis/modeling possible. There are several methods common to spatial data wrangling some of which are:
 
@@ -20,46 +21,64 @@ These methods can be performed using a variety of tools depending on the specifi
 
 <br>
 
-### [Geospatial Data Abstraction Library/OGR Simple Feature Library (GDAL/OGR)](http://www.gdal.org)
+## Exercise
 
-<a title="By GDAL Team (http://download.osgeo.org/gdal/) [MIT (http://opensource.org/licenses/mit-license.php), GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AGDALLogoColor.svg"><img width="128" alt="GDALLogoColor" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/GDALLogoColor.svg/128px-GDALLogoColor.svg.png"/></a>
-
-GDAL is a translator library for raster and vector data formats under and [X/MIT](http://trac.osgeo.org/wikiFAQGeneral#WhatlicensedoesGDALOGRuse) style [Open Source](http://www.opensource.org) license by the [Open Source Geospatial Foundation](http://www.osgeo.org). GDAL utilizes abstract data models for raster and vector data, which allow GDAL to translate between such a variety of formats. The GDAL library also provides a variety of command-line utilities for raster and vector manipulation. A few of the utilities are:
-  
-  + [gdalinfo](http://www.gdal.org/gdalinfo.html) - Provides a variety of information about a supported raster dataset
-  + [gdal_translate](http://www.gdal.org/gdal_translate.html) - Translates raster data between different formats
-  + [gdalwarp](http://www.gdal.org/gdalwarp.html) - Reprojection and manipulates rasters datasets
-  + [gdaldem](http://www.gdal.org/gdaldem.html) - Methods for analyzing and visualizing Digital Elevation Models (e.g. slope, hillshade, aspect,color-relief)
-  + [gdal_polygonize](http://www.gdal.org/gdal_polygonize.html) - Converts a raster dataset into a polygonal vector dataset
-  + [gdal2tiles](http://www.gdal.org/gdal2tiles.html) - Creates a directory with Tile Mapping Service(TMS) tiles, KMLs and simple web viewers
-  + [ogrinfo](http://www.gdal.org/ogrinfo.html) - Provides a variety of information about a supported vector dataset
-  + [ogr2ogr](http://gdal.org/ogr2ogr.html) - Translates a vector dataset between different formats
-  + [ogrlineref](http://gdal.org/ogrlineref.html) - Create or query a linear referenced file from input data
-
-<br>
-
-###[The R Project for Statistical Computing](http://www.r-project.org)
-
-<a title="By Towolf-en (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ARlogo-unofficial-vector-editable.svg"><img width="128" alt="Rlogo-unofficial-vector-editable" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Rlogo-unofficial-vector-editable.svg/128px-Rlogo-unofficial-vector-editable.svg.png"/></a>
-
-R is a programming language descended from the S statistical language. R has a strong presence in the statistical/data science fields due to ease of use and speedy prototyping. Since R treats all values as vectors, it has a natural strengths with manipulating tabular data. With thanks to Roger Bivand, R has grown strong spatial capabilities. The book [Applied Spatial Data in R](http://www.springerlink.com/content/m5171462720p) provides a good background on the different libraries, data formats and functions available in R, but R is continually growing so it is good to check the [Comprehensive R Archive Network (CRAN)](http://cran.r-project.org) for additional libraries.
-  
-Some useful spatial libraries in R include:
-
-  + [sp](http://cran.r-projection.org/web/packages/sp) - Classes and methods for spatial data
-  + [rgdal](http://cran.r-project.org/web/packages/rgdal) - Bindings for the Geospatial Data Abstraction Library
-  + [raster](http://cran.r-project.org/web/packages/raster) - Geographic data analysis and modeling
-  + [spdep](http://cran.r-project.org/web/packages/spdep) - Spatial Dependence: Weighting schemes, statistics, and models
-  + [maptools](http://cran.r-project.org/web/packages/maptools) - Tools for Reading and handling spatial objects
-  + [rgeos](http://cran.r-project.org/web/packages/rgeos) - Interface to Geometry Engine - Open Source (GEOS)
-
-<br>
-      
-There are several other libraries([GEOS](http://geos.osgeo.org),[Grass GIS](http://grass.osgeo.org)), languages([Bash](http://www.gnu.org/software/bash),[Python](http://www.python.org), [C++](http://cplusplus.com)) useful for manipulating spatial datasets, which are outside our current scope. We can cover these at a later time.
-
-###[GRASS GIS](http://osgeo.grass.org)
-
-
-The Geographic Resources Analysis Support System(GRASS GIS) is a Geographic Information System used for data management, image processing, graphics production, spatial modeling and visualization of many types of data.
-
-GRASS GIS was originally developed by the U.S. Army Construction Engineering Research Laboratories, a branch of the US Army Corp of Engineers. It was originally developed as a tool for land management and environmental planning by the military. GRASS GIS is currently used in academic and commercial settings around the world, as well as many governmental agencies.
+1. Set project projection to EPSG:2927<br><br> 
+  Before starting any project in a GIS program, you should first set the project projection to make sure your data comes in with the same extent. <br>If you don't set the project's projection, the program will use the projection of the first layer added or EPSG:4326.<br><br>
+  You can set the projection with the following steps:<br><br>
+  ![project-properties]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-project-properties.png)<br>
+  * In the top navbar go Project > Project Properties
+  * Select CRS in the Left menu
+  * Check *Enable On-the-fly CRS transformation*
+  * Select *NAD83(HARN)/Washington South(ftUS) EPSG:2927* from the List of Projections<br>
+  ![projection]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-projection.png)<br>
+2. Add the US States shapefile<br><br>
+  Since our project is directed at the state of Washington. We should extract the Washington state boundary for our study. The GADM[^7] project provides high-quality boundary data on country,state and county levels. We can use the US-state level dataset to get the Washington boundary. <br><br>
+  * Select *Add Vector Layer* in the left toolbar
+  * Browse to the USA_adm1.shp layer from the iPlant Data Store<br>
+  ![USA_states]({{site.baseurl}}{{ASSET_PATH}}/images/usa-states.png)<br>
+3. Create a layer for the state of Washington 
+  * In the top toolbar, select *Select Single Feature*
+  * Click on the state of Washington to select it<br>
+  ![washington-selected]({{site.baseurl}}{{ASSET_PATH}}/images/washington-selected.png)<br>
+  * Right click on the USA_adm1 layer and select *Save Selection As...*
+      - Format: ESRI Shapefile
+      - Save as: washington.shp
+      - Encoding: UTF-8
+      - CRS: 
+          + Project CRS
+          + Browse > *NAD83(HARN)/Washington South (ftUS) EPSG:2927*<br>
+  ![save-washington]({{site.baseurl}}{{ASSET_PATH}}/images/save-washington.png)<br>
+4. Load the new washington layer<br>
+  * Select *Add Vector Layer*
+  * Browse to the new washington layer and click *Open*<br>
+5. Remove the USA_adm1 layer from the project <br>
+  Now that we have the Washington layer, we can get rid of the U.S. layer. <br>
+  * Right click the layer in the table of contents
+  * Select *Remove*
+6. Add the DEM layer from the iPlant data store<br>
+  DEMs or *Digital Elevation Models* are very useful for establishing topological context in a map. DEMs generally come as a raster dataset that consists of elevation values. There are several different byproducts that can be created from DEMs.<br><br>
+  This DEM was taken from the GTOPO30 satellite data.<br>
+  * In the left toolbar, select *Add Raster Layer*
+  * Select *source_files/W140N90.DEM*<br>
+  ![dem-load]({{site.baseurl}}{{ASSET_PATH}}/images/dem-load.png)<br>
+7. Project the dem to EPSG:2927
+  * In the top menu, go to Raster > Projections > Warp (Reproject)
+  * Use the following options
+    + Input File: *W140N90*
+    + Output File: *secondary_files/dem-project.tif*
+    + Source SRS: *EPSG:4326*
+    + Resampling Method: *Near*
+    + No data values: *0*<br>
+    ![project-dem]({{site.baseurl}}{{ASSET_PATH}}/images/project-dem.png)<br>
+8. Clip the dem to the shapefile
+  * In the top menu, select Raster > Extraction > Clipper
+  * In the window, set the following options:
+    + Input file: dem-project.tif
+    + Output file: dem-washington.tif
+    + No data value: 0
+    + Clipping Mode: Mask layer > washington
+    + Load into canvas when finished<br>
+  ![dem-washington]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington.png)<br>
+9. Remove the W140N90 layer<br>
+  ![dem-washington-display]({{site.baseurl}}{{ASSET_PATH}}/images/dem-washington-display.png)<br>

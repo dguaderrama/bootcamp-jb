@@ -1,12 +1,14 @@
 ---
-title: "General Functions"
+title: "Spatial Manipulation"
 layout: post
 category : Data Wrangling
 tagline: "Supporting tagline"
 tags : [spatial functions]
 ---
 
-# General Spatial Functions
+{% include JB/setup %}
+
+# Spatial Functions
 
 ## Relational Operations
 
@@ -209,6 +211,32 @@ Symmetric Difference
 <br>
 
 ----
+
+## Exercise
+
+### Creating slope and and hillshade surfaces
+
+10. Create a slope surface <br>
+  In the top menu, select **Raster > Analysis > DEM** <br>
+  * Input file: dem-washington
+  * Output file: slope-washington.tif
+  * Mode: Slope
+  * Scale: 0.30
+  * Load into canvas when finished<br>
+  ![create-slope]({{site.baseurl}}{{ASSET_PATH}}/images/create-slope.png)<br>
+11. Create a hillshade layer<br>
+  In the top menu, select **Raster > Analysis > DEM** <br>
+  * Input file: dem-washington
+  * Output file: hillshade-washington.tif
+  * Mode: Hillshade
+  * Z factor: 1.0
+  * Scale: 0.30
+  * Azimuth of light: 315.0
+  * Altitude of light: 45.0
+  * Load into canvas when finished<br>
+  ![hillshade-calc]({{site.baseurl}}{{ASSET_PATH}}/images/hillshade-calc.png)<br>
+
+
 
 [^1]: SQL Simple Features Specification
 [^2]: JTS

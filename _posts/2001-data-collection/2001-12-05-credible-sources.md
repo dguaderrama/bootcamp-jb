@@ -6,6 +6,8 @@ tagline: "Supporting tagline"
 tags : [data collection, data sources]
 ---
 
+{% include JB/setup %}
+
 # Data Collection
 
 ### Credible Data Sources
@@ -99,6 +101,40 @@ A few examples of these applications are:
   + [Integrated Data Viewer](http://unidata.usr.edu/software/idv)
   + [GrADS](http://www.iges.org/grads)
 
+## Exercise
+
+#### Downloading adminstrative boundary data
+
+For this exercise, we will be subsetting a shapefile of the US states.
+
+The dataset can be found on the [Global Administrative Areas website](http://www.gadm.org/country)
+
+Select *United States* from the Country dropdown and set *Shapefile* as the file format.
+
+![gadmUs]({{site.baseurl}}/{{ASSET_PATH}}/images/gadm-us.png)
+
+Click 'OK' to enter the download screen.
+
+On the next screen, click the blue 'download' link to start the download.
+
+![gadmDownload]({{site.baseurl}}/{{ASSET_PATH}}/images/gadm-download.png)
+
+Select a workspace to save the USA_adm.zip dataset
+
+![gadmSave]({{site.baseurl}}/{{ASSET_PATH}}/images/gadm-save.png)
+
+Unpack the zip archive using your choice of file archival software.<br>
+(Note: if you don't have any software to unzip archives, [7-zip](http://www.7-zip.org) is an easy to use free application)
+
+Once the archive has been unpacked, you can see the datasets which should include a pdf, a few .csv files and some .shp,.shx,.dbf and .prj files.
+
+![gadm-unzip]({{site.baseurl}}/{{ASSET_PATH}}/images/gadm-unzip.png)
+
+The .shp, .shx, .dbf .prj files make up what we call *Shapefiles*
+
+In order to visualize the data, we will need to open up QGIS.
+
+Navigate to your QGIS installation and Start it.
 
 [^1]: http://www.gadm.org 
 [^2]: http://www.census.gov/geo/maps-data/data/tiger.html

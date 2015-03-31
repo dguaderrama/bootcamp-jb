@@ -1,7 +1,7 @@
 ---
 title: "Web Mapping"
 layout: post
-category : Cartography
+category : Distribution
 tagline: "interactive web maps"
 tags : [cartography, web map, leaflet, openlayers, d3]
 ---
