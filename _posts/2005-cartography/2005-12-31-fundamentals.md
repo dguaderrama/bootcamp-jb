@@ -31,21 +31,58 @@ the following elements can be included with your map.
  * Attribution - An attribution is often necessary when using geographic information, whether it be for the data itself,
  the map that is underneath the data, or the design elements included.
  * Scale - Although scale is often left out of zoomable web maps, it is an important element for static maps. The scale bar can be simple and near the bottom of your map.
- * North arrow
+ * North arrow - The classic arrow that points north!
 
 ## Color
 
-Colors can add meaning and beauty to your data, but it is important to select an appropriate color scheme for your goals. For example, for a choropleth map, you should use a monochromatic color scheme.
+Color can add meaning and beauty to your data. To get inspired, think about what different colors evoke.
+Red can express heat or urgency, while blue might be calming and cool.
 
-Color blindness is important factor when selecting color schemes.
+If you are unsure of which colors to use, you can use [ColorBrewer 2.0](http://colorbrewer2.org/). Besides
+providing excellent color schemes, it considers colorblindness which should always be an important
+factor when selecting color schemes.
 
-[ColorBrewer 2.0](http://colorbrewer2.org/) is an excellent cartography tool for selecting colors and saving time. It considers colorblindness which should always be an important factor when selecting color schemes.
+The type of color scheme you use depends on the nature of your data. We can take a look at the
+options from ColorBrewer.
 
-Grey scale maps for non-color-based printed maps.
+Sequential Data
+For sequential data, a monochromatic color scheme is a good choice. In this type
+of scheme you have just one hue, and vary the lightness. Your colors may go from
+light blue to dark blue, for example. This scheme is ideal for a choropleth map.
 
-Tools like [paletton.com](http://paletton.com/) are simply a color wheel that help the color picking process. Paletton.com has options such as monochromatic, adjacent colors, triad, and tetrad that pick colors based on a single color selection. This is actually meant for web designing but has the same principle of color theory.
+![Monochromatic]({{site.baseurl}}{{ASSET_PATH}}/images/colortype/monochrome.png)
 
-<a href="http://paletton.com" target="_blank" alt="Spatial Data Bootcamp: Paletton.com color wheel">![Spatial Data Bootcamp: Paletton.com color wheel]({{site.baseurl}}{{ASSET_PATH}}/images/paletton.jpg)</a>
+ColorBrewer also provides color schemes for sequential data with related
+hues that vary in lightness. These are harder to create on your own, since
+you don't want to use hues that are very different from one another.
+
+Don't hesitate to try a simple greyscale scheme ranging from white to black.
+Simple is often better, after all.
+
+Diverging Data
+Now you can have two main hues! These should contrast well with each other, and
+in between them you can use a neutral color, like white. As you go from the
+neutral middle towards the extremes, you can increase the saturation or darkness
+of your two colors.
+
+![Diverging]({{site.baseurl}}{{ASSET_PATH}}/images/colortype/diverge.png)
+
+Qualitative Data
+For this type of data, you don't want your hues to be related to each other,
+because each color is just a category, without representing any order
+or degree in your data.
+
+![Qualitative]({{site.baseurl}}{{ASSET_PATH}}/images/colortype/qualitative.png)
+
+A classic example of this type of color scheme is on geologic maps, where each
+color is a different rock unit.
+
+Tools like [paletton.com](http://paletton.com/) are simply a color wheel. Paletton.com has options such as monochromatic, adjacent colors, triad, and tetrad that pick colors based on a single color selection. These are meant for web designing but can be useful for maps, as well.
+
+<!--<a href="http://paletton.com" target="_blank" alt="Spatial Data Bootcamp: Paletton.com color wheel">![Spatial Data Bootcamp: Paletton.com color wheel]({{site.baseurl}}{{ASSET_PATH}}/images/paletton.jpg)</a>-->
+
+## Typography
+
 
 
 ## Mapbox Suite
@@ -63,7 +100,7 @@ Besides being an easy way to make tiles, what makes TileMill great for visualizi
 
 After installing TileMill, the first thing you see when you open it is the projects page.
 
-![TileMill First Opened]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/tilemillopen.png)
+![TileMill first view]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/tilemillopen.png)
 
 
 
