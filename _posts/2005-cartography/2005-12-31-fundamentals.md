@@ -9,29 +9,31 @@ tags : [cartography, map design, colorbewer]
 
 ## Cartography fundamentals
 
-Set aside your analytical skills and put on your creativity hat.
+Map-making has historically  been both a science and an art. For visualizing scientific data on
+maps, we now have new technologies that make it easy to create beautiful data visualizations.
 
-Time to get creative.
+Using the principles of art and design, we can take data and display it on the map as
+easily understandable information that the general public can relate to.
 
-Effectively communicate your data.
+Whether your goals are to publish, share your research, or reach a wider audience,
+a good map design will make your data more powerful.
 
-Cartography should be fun but don't create more work for yourself, keep it simple.
+In practicing cartography, it is important to remember that often, the best
+design is rooted in simplicity. The main focus should be the information.
 
 ## Elements of effective cartography
 
-Including necessary information leads to effective cartography.
+To help your audience understand what you're trying to convey,
+the following elements can be included with your map.
 
-Your audience must understand what you're trying to convey.
-
- * Legend
- * Colors
- * Fonts
- * Labels
- * Attribution
- * Scale
+ * Legend - The most important element for understanding the data, the legend should concisely explain what is on the map.
+ * Labels - Labels can help your audience identify features on the map like cities, roads, and lakes, or they can serve to point out important areas.
+ * Attribution - An attribution is often necessary when using geographic information, whether it be for the data itself,
+ the map that is underneath the data, or the design elements included.
+ * Scale - Although scale is often left out of zoomable web maps, it is an important element for static maps. The scale bar can be simple and near the bottom of your map.
  * North arrow
 
-## Colors are important
+## Color
 
 Colors can add meaning and beauty to your data, but it is important to select an appropriate color scheme for your goals. For example, for a choropleth map, you should use a monochromatic color scheme.
 
