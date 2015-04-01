@@ -47,15 +47,51 @@ p, a {
 #sticky.stick {
   /* uncomment/comment-out this line to make the left nav column stick/not-stick when scrolling. and see notes below */
   position: fixed;
-
-  top: 0;
+  top: 40px;
   z-index: 10;
   border-radius: 0 0 0.5em 0.5em;
   background-color: white;
 }
 /* sticky.nav -- jquery -- also, uncomment/comment-out this to give the body a min-height so the footer doesn't cover the left nav */
 .content {
- min-height: 740px; 
+/* min-height: 740px; */
+}
+#sticky ul {
+  display: none;
+  padding: 0px !important; 
+}
+#sticky {
+  box-shadow: 
+    0 5px 15px 1px rgba(0, 0, 0, 0.6), 
+    0 0 200px 1px rgba(255, 255, 255, 0.5);
+}
+#sticky h3 {
+  padding: 10px 0px 5px 10px;
+}
+#sticky h4 {
+  background: #003040;
+  background: linear-gradient(#003040, #002525);
+  margin: 0px !important;
+  padding: 10px 0px 10px 20px !important;
+  width: 200px;
+  color: white;
+}
+#sticky h4:hover {
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+  }
+#sticky ul li a {
+  display: block;
+  padding: 5px 0px 5px 35px;
+  background: #004050;
+  color: white;
+  transition: all 0.15s;
+}
+#sticky ul li a:hover {
+  background: #003545 !important;
+  border-left: 5px solid lightgreen !important;
+}
+#sticky li.active a {
+  display: block;
 }
 .sticky-left-nav { 
   margin-left: 12%;
@@ -65,7 +101,7 @@ p, a {
   float: left;
 }
 .sticky-left-nav h4 {
-  margin: 0px !important;
+  cursor: pointer;
 }
 .sticky-left-nav ul {
   margin: 0px !important;
