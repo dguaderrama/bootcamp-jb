@@ -83,7 +83,31 @@ Tools like [paletton.com](http://paletton.com/) are simply a color wheel. Palett
 
 ## Typography
 
+Most maps have text for the title, legends, and labels. The choice of fonts for these
+elements can add to the overall feel of your map. It is generally recognized that
+different fonts convey personalities. Some are more serious, and others are
+playful. For research maps, you can use simple and formal fonts, similar to
+what you might choose for an article or other text publication.
 
+The most important aspect of text on maps is its legibility. The easier to read,
+the better.
+
+What font options are there? The main distinctions between fonts are Serif and Sans-Serif.
+Serif fonts have little decorators at the tips of letters, while Sans-Serif fonts do not.
+A Sans-serif font is good for numbers, small text on your map, and also for maps on the web.
+Serif fonts can be good for printed maps, titles, and larger text.
+Traditionally, maps with many labels use a pair of fonts - one serif and one sans-serif.
+
+Some recommended font pairs include
+Frutiger with Meridien
+Rotis with Univers
+Myriad with Kepler
+Nueva with Tekton
+
+Sometimes you may have to take kerning (the spacing between letters in a font) into consideration.
+
+Try exploring more combinations on [TypeBrewer](http://www.typebrewer.org/). Note: this site is not
+related to ColorBrewer.
 
 ## Mapbox Suite
 
@@ -109,7 +133,6 @@ After installing TileMill, the first thing you see when you open it is the proje
 
 > basics of graphic design and exporting maps - print or web-based
 
-> walkthrough of carto in qgis
 
 <br>
 
