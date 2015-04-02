@@ -10,7 +10,12 @@ tags : [cartography, web map, leaflet, openlayers, d3]
 
 ## Understanding web mapping
 
+A map on the Internet shouldn't be just a picture. There is potential for interaction,
+animation, 3D, and more! Even better, the internet can allow
+us to share our maps and spatial data more effectively than ever.
+But first, lets start with the basics.
 
+What is different about a map on the web?
 
 ## Web map frameworks
 
@@ -41,7 +46,7 @@ OpenLayers is an open-source JavaScript library.
 
 ### D3.js
 
-[D3](http://d3js.org/) is an excellent tool for visualizing spatial data, but flexes its muscles with non-spatial data. 
+[D3](http://d3js.org/) is an excellent tool for visualizing spatial data, but flexes its muscles with non-spatial data.
 
 #### Spatial Data
 
@@ -67,7 +72,7 @@ OpenLayers is an open-source JavaScript library.
 
 Mapbox Suite is ideal for creating custom basemaps.
 
-A basemap is what your spatial data layers are set on top of. 
+A basemap is what your spatial data layers are set on top of.
 
 Satellite imagery is the most commonly know type of TMS. Mapbox Suite uses vector data to create basemaps. Frameworks such as Leaflet.js allow you to overlay spatial data on top of TMS/basemaps.
 
@@ -77,7 +82,7 @@ Satellite imagery is the most commonly know type of TMS. Mapbox Suite uses vecto
 
 ## Leaflet.js basic tutorials
 
-Read below for basic Leaflet.js tutorials. Most of the code can be 'easily' figured out by reading the parameters already set. Basic knowledge of HTML and CSS are a plus, and basics of JavaScript will help you develop interactive maps. 
+Read below for basic Leaflet.js tutorials. Most of the code can be 'easily' figured out by reading the parameters already set. Basic knowledge of HTML and CSS are a plus, and basics of JavaScript will help you develop interactive maps.
 
 [View the Leaflet.js API here](http://leafletjs.com/reference.html)
 
@@ -87,7 +92,5 @@ A simple user-friendly method of creating a basic Leaflet with a layer through Q
 
 1. Open QGIS and install qgis2leaf plugin:
   * <em>Menu Bar > Plugins > Manage and Install PLugins > Search 'qgis2leaf'</em>
-1. Add vector layer. 
-  * NOTE: vector data is stored as points (with lines connecting lines, polylines, and polygons). The output of a 90MB shapefile to [GeoJSON](http://geojson.org/) is nearly 300MB (this will vary, however). Understanding your data beforehand will help you in the long run. See [Data Wrangling]({{site.baseurl}}/data wrangling/data-wrangling/) 
-
-
+1. Add vector layer.
+  * NOTE: vector data is stored as points (with lines connecting lines, polylines, and polygons). The output of a 90MB shapefile to [GeoJSON](http://geojson.org/) is nearly 300MB (this will vary, however). Understanding your data beforehand will help you in the long run. See [Data Wrangling]({{site.baseurl}}/data wrangling/data-wrangling/)
