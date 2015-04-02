@@ -5,8 +5,8 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-03-31T18:09:10-07:00</lastBuildDate>
-        <pubDate>2015-03-31T18:09:10-07:00</pubDate>
+        <lastBuildDate>2015-04-02T15:55:49-07:00</lastBuildDate>
+        <pubDate>2015-04-02T15:55:49-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -1149,26 +1149,29 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 &lt;h3 id=&quot;what-this-module-covers-1&quot;&gt;What this module covers:&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;buffer on polylines&lt;/li&gt;
-  &lt;li&gt;intersecting vector layers&lt;/li&gt;
-  &lt;li&gt;join census housing (home values) to census tracts (shapefile)&lt;/li&gt;
+  &lt;li&gt;Buffer polylines&lt;/li&gt;
+  &lt;li&gt;Join census housing (home values) to census tracts (shapefile)&lt;/li&gt;
+  &lt;li&gt;Intersecting vector layers&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;objective-3&quot;&gt;Objective:&lt;/h3&gt;
 
-&lt;p&gt;Quantify and extract home values within high-risk landslide/mass-wasting areas.&lt;/p&gt;
+&lt;p&gt;Quantify total home value at risk within landslide/mass-wasting areas.&lt;/p&gt;
 
-&lt;h3 id=&quot;data-2&quot;&gt;Data:&lt;/h3&gt;
+&lt;h3 id=&quot;data-collection-there-needs-to-be-instructionsquick-lesson-on-each-of-the-collection-sources&quot;&gt;Data Collection: (there needs to be instructions/quick lesson on each of the collection sources)&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Census housing data&lt;/li&gt;
-  &lt;li&gt;Census tract shapefile&lt;/li&gt;
-  &lt;li&gt;streams and rivers &lt;a href=&quot;http://www.ecy.wa.gov/services/gis/data/inlandWaters/sma/sma-streams-adopt.htm&quot;&gt;meta data &amp;amp; data download&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://earthquake.usgs.gov/hazards/qfaults&quot;&gt;Quaternary Faults data and meta data&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx&quot;&gt;Seismogenic Features -  NEED GDAL filegb driver&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml&quot; alt=&quot;Spatial Data Bootcamp: Download Census housing data - American FactFinder&quot; target=&quot;_blank&quot;&gt;Census housing data - American FactFinder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.census.gov/geo/maps-data/data/tiger.html&quot; alt=&quot;Spatial Data Bootcamp: Download Census tract shapefile - TIGER data&quot; target=&quot;_blank&quot;&gt;Census tracts - TIGER Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://earthquake.usgs.gov/hazards/qfaults&quot; alt=&quot;Spatial Data Bootcamp: Download USGS quaternary faults&quot; target=&quot;_blank&quot;&gt;Quaternary faults - USGS &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx&quot; alt=&quot;Spatial Data Bootcamp: Download seismogenic features&quot; target=&quot;_blank&quot;&gt;Washington seismogenic features - REQUIRES GDAL filegdb driver!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nhd.usgs.gov/&quot; alt=&quot;Spatial Data Bootcamp: Download USGS National Hydrography Dataset - Washington&quot; target=&quot;_blank&quot;&gt;Washington streams/rivers - USGS National Hydrography Dataset&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;faults_100k - [source]&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;high-risk-area-&quot;&gt;High-risk area =&lt;/h4&gt;
+&lt;h3 id=&quot;data-wrangling&quot;&gt;Data Wrangling:&lt;/h3&gt;
+
+&lt;h4 id=&quot;high-risk-rules&quot;&gt;High-risk rules:&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;within 100m of fault lines&lt;/li&gt;
@@ -1176,31 +1179,63 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
   &lt;li&gt;within soft geologic areas&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;steps-3&quot;&gt;Steps:&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Open QGIS and configure project workspace.&lt;/li&gt;
+  &lt;li&gt;Import data:
+    &lt;ul&gt;
+      &lt;li&gt;HINT: The project projection will default to the first layer that is added to the project (See lower right of image below: EPSG:2927).&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Add Vector Layer &lt;/em&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-2.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add vector data&quot; /&gt;&lt;br /&gt;&lt;strong&gt;fault_100k.shp&lt;/strong&gt;&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-3.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - streams and faults&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Buffer fault lines to 100m:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Vector &amp;gt; Geoprocessing Tools &amp;gt; Buffer(s)&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Configure inputs as follows:&lt;br /&gt;&lt;strong&gt;Input vector layer: fault_100k&lt;br /&gt;Buffer distance: 100&lt;br /&gt;Output shapefile: fault_buffer_100m.shp&lt;br /&gt;Add results to canvas: (Checked)&lt;/strong&gt;&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-4.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - buffer analysis&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Zoom in to a buffer, close enough to see the width&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Open the meaure tool&lt;/em&gt; &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/measure-tool.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - measure tool&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Measure the width of the buffer.&lt;/em&gt; Notice how the total width is only about 62 meters, or 100 feet. Current map units are determined from the CRS, in this case EPSG:2927 is in US feet and we need meters. Simply changing the CRS in Project Properties does not give us the correct results- this is still measured from EPSG:2927 US feet.&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/measure-tool-2.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - measure buffer&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Important:&lt;/strong&gt;&lt;br /&gt;There are two methods to perfoming a buffer analysis on our shapefile. The problem here is that our CRS is EPSG:2927 (in US feet) and the buffer distance is based on map units (still US feet). The two methods are: convert 100 meters to US feet and use this value in the buffer analysis while maintaining EPSG:2927 (in US feet); OR, reproject the layer thus creating a new file with a CRS in meters (correct map units).  &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Open a new project&lt;/em&gt; and close without saving current project. This will clear the CRS to avoid confusion.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Reopen fault_100k.shp&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Reprojecting from EPSG:2927 to EPSG:26910 will change units from feet to meters, allowing to perform a correct buffer analysis (in meters).&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Reproject fault_100k.shp to ESPG:26910:&lt;/em&gt;&lt;br /&gt;&lt;strong&gt;Reproject from EPSG:2927 (NAD83(HARN) Washington South US feet) to EPSG:26910 (NAD83 UTM10N US meters) - both have same datum (NAD83)&lt;/strong&gt;&lt;br /&gt;Easiest method is &lt;em&gt;Right-click on layer in layer list &amp;gt; Save As&lt;/em&gt; and configure inputs as follows:&lt;br /&gt;&lt;strong&gt;Format: ESRI Shapefile&lt;br /&gt;Save As: fault_100k_26910.shp&lt;br /&gt;CRS: Selected CRS&lt;br /&gt;CRS: EPSG: 26910&lt;/strong&gt;&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-buffer-crs-error-2.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - wrangling projections&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Configure inputs as follows:&lt;br /&gt;&lt;strong&gt;Input vector layer: fault_100k&lt;br /&gt;Buffer distance: 100&lt;br /&gt;Add results to canvas: (Checked)&lt;br /&gt;Output shapefile: faults_100m.shp&lt;/strong&gt;&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-5.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - buffer faults&quot; /&gt;
+    &lt;ol&gt;
+      &lt;li&gt;merge buffered fault lines with rivers/streams&lt;/li&gt;
+      &lt;li&gt;join census housing data (.csv) to census tracts (shapefile)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Import census tracts&lt;/li&gt;
+  &lt;li&gt;Reproject census tract shapefile: &lt;a href=&quot;http://spatialreference.org/ref/epsg/2927/&quot;&gt;EPSG:2927&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Import census housing data&lt;/li&gt;
+  &lt;li&gt;Use Toolbox to search for ‘join attribute table’&lt;/li&gt;
+  &lt;li&gt;Select parameters&lt;/li&gt;
+  &lt;li&gt;Check output - confirm housing data is joined to tracts.
+    &lt;ol&gt;
+      &lt;li&gt;normalize housing data - tract house count X median tract house value = total tract home value.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-analysis&quot;&gt;Data Analysis:&lt;/h3&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Import vector data and configure workspace/projecton:
-    &lt;ul&gt;
-      &lt;li&gt;rivers.shp&lt;/li&gt;
-      &lt;li&gt;faults.shp&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;buffer fault lines and rivers/streams&lt;/li&gt;
-  &lt;li&gt;merge buffered fault lines with rivers/streams&lt;/li&gt;
-  &lt;li&gt;join census housing data (.csv) to census tracts (shapefile)
-    &lt;ul&gt;
-      &lt;li&gt;Import census tracts&lt;/li&gt;
-      &lt;li&gt;Reproject census tract shapefile: &lt;a href=&quot;http://spatialreference.org/ref/epsg/2927/&quot;&gt;EPSG:2927&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;Import census housing data&lt;/li&gt;
-      &lt;li&gt;Use Toolbox to search for ‘join attribute table’&lt;/li&gt;
-      &lt;li&gt;Select parameters&lt;/li&gt;
-      &lt;li&gt;Check output - confirm housing data is joined to tracts.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;normalize housing data - tract house count X median tract house value = total tract home value.&lt;/li&gt;
   &lt;li&gt;intersect buffered-merged-joined data with reclassified-rasterized geology layer&lt;/li&gt;
   &lt;li&gt;data will be used in Raster Analysis&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h3 id=&quot;data-distribution&quot;&gt;Data Distribution:&lt;/h3&gt;
+
+&lt;p&gt;What’s the best method for distributing or visualizing this data over the web?&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1222,7 +1257,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;Complete locating high-risk landslide/mass-wasting areas in Washington. You must use the digital elevation model (DEM) that you created in &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model&quot;&gt;Data Wrangling - DEM&lt;/a&gt; to produce slope and aspect rasters. Lastly, you need perforam a raster summation for locating high-risk landslide areas.&lt;/p&gt;
 
-&lt;h3 id=&quot;data-3&quot;&gt;Data:&lt;/h3&gt;
+&lt;h3 id=&quot;data-2&quot;&gt;Data:&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Washington DEM (wa_dem.tif) - &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model&quot;&gt;SEE Data Wrangling&lt;/a&gt;&lt;/li&gt;
@@ -1314,7 +1349,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;steps-4&quot;&gt;Steps:&lt;/h3&gt;
+&lt;h3 id=&quot;steps-3&quot;&gt;Steps:&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Import raster data:
@@ -1530,6 +1565,13 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
                 <description>
 &lt;h2 id=&quot;understanding-web-mapping&quot;&gt;Understanding web mapping&lt;/h2&gt;
 
+&lt;p&gt;A map on the Internet shouldn’t be just a picture. There is potential for interaction,
+animation, 3D, and more! Even better, the internet can allow
+us to share our maps and spatial data more effectively than ever.
+But first, lets start with the basics.&lt;/p&gt;
+
+&lt;p&gt;What is different about a map on the web?&lt;/p&gt;
+
 &lt;h2 id=&quot;web-map-frameworks&quot;&gt;Web map frameworks&lt;/h2&gt;
 
 &lt;h3 id=&quot;leafletjs&quot;&gt;Leaflet.js&lt;/h3&gt;
@@ -1616,7 +1658,6 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
-
 </description>
                 <link>http://104.237.129.71/bootcamp/distribution/web-mapping</link>
                 <guid>http://104.237.129.71/bootcamp/distribution/web-mapping</guid>
@@ -1628,58 +1669,131 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
                 <description>
 &lt;h2 id=&quot;cartography-fundamentals&quot;&gt;Cartography fundamentals&lt;/h2&gt;
 
-&lt;p&gt;Set aside your analytical skills and put on your creativity hat.&lt;/p&gt;
+&lt;p&gt;Map-making has historically  been both a science and an art. For visualizing scientific data on
+maps, we now have new technologies that make it easy to create beautiful data visualizations.&lt;/p&gt;
 
-&lt;p&gt;Time to get creative.&lt;/p&gt;
+&lt;p&gt;Using the principles of art and design, we can take data and display it on the map as
+easily understandable information that the general public can relate to.&lt;/p&gt;
 
-&lt;p&gt;Effectively communicate your data.&lt;/p&gt;
+&lt;p&gt;Whether your goals are to publish, share your research, or reach a wider audience,
+a good map design will make your data more powerful.&lt;/p&gt;
 
-&lt;p&gt;Cartography should be fun but don’t create more work for yourself, keep it simple.&lt;/p&gt;
+&lt;p&gt;In practicing cartography, it is important to remember that often, the best
+design is rooted in simplicity. The main focus should be the information.&lt;/p&gt;
 
 &lt;h2 id=&quot;elements-of-effective-cartography&quot;&gt;Elements of effective cartography&lt;/h2&gt;
 
-&lt;p&gt;Including necessary information leads to effective cartography.&lt;/p&gt;
-
-&lt;p&gt;Your audience must understand what you’re trying to convey.&lt;/p&gt;
+&lt;p&gt;To help your audience understand what you’re trying to convey,
+the following elements can be included with your map.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Legend&lt;/li&gt;
-  &lt;li&gt;Colors&lt;/li&gt;
-  &lt;li&gt;Fonts&lt;/li&gt;
-  &lt;li&gt;Labels&lt;/li&gt;
-  &lt;li&gt;Attribution&lt;/li&gt;
-  &lt;li&gt;Scale&lt;/li&gt;
-  &lt;li&gt;North arrow&lt;/li&gt;
+  &lt;li&gt;Legend - The most important element for understanding the data, the legend should concisely explain what is on the map.&lt;/li&gt;
+  &lt;li&gt;Labels - Labels can help your audience identify features on the map like cities, roads, and lakes, or they can serve to point out important areas.&lt;/li&gt;
+  &lt;li&gt;Attribution - An attribution is often necessary when using geographic information, whether it be for the data itself,
+ the map that is underneath the data, or the design elements included.&lt;/li&gt;
+  &lt;li&gt;Scale - Although scale is often left out of zoomable web maps, it is an important element for static maps. The scale bar can be simple and near the bottom of your map.&lt;/li&gt;
+  &lt;li&gt;North arrow - The classic arrow that points north!&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;colors-are-important&quot;&gt;Colors are important&lt;/h2&gt;
+&lt;h2 id=&quot;color&quot;&gt;Color&lt;/h2&gt;
 
-&lt;p&gt;Colors can add meaning and beauty to your data, but it is important to select an appropriate color scheme for your goals. For example, for a choropleth map, you should use a monochromatic color scheme.&lt;/p&gt;
+&lt;p&gt;Color can add meaning and beauty to your data. To get inspired, think about what different colors evoke.
+Red can express heat or urgency, while blue might be calming and cool.&lt;/p&gt;
 
-&lt;p&gt;Color blindness is important factor when selecting color schemes.&lt;/p&gt;
+&lt;p&gt;If you are unsure of which colors to use, you can use &lt;a href=&quot;http://colorbrewer2.org/&quot;&gt;ColorBrewer 2.0&lt;/a&gt;. Besides
+providing excellent color schemes, it considers colorblindness which should always be an important
+factor when selecting color schemes.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://colorbrewer2.org/&quot;&gt;ColorBrewer 2.0&lt;/a&gt; is an excellent cartography tool for selecting colors and saving time. It considers colorblindness which should always be an important factor when selecting color schemes.&lt;/p&gt;
+&lt;p&gt;The type of color scheme you use depends on the nature of your data. We can take a look at the
+options from ColorBrewer.&lt;/p&gt;
 
-&lt;p&gt;Grey scale maps for non-color-based printed maps.&lt;/p&gt;
+&lt;p&gt;Sequential Data
+For sequential data, a monochromatic color scheme is a good choice. In this type
+of scheme you have just one hue, and vary the lightness. Your colors may go from
+light blue to dark blue, for example. This scheme is ideal for a choropleth map.&lt;/p&gt;
 
-&lt;p&gt;Tools like &lt;a href=&quot;http://paletton.com/&quot;&gt;paletton.com&lt;/a&gt; are simply a color wheel that help the color picking process. Paletton.com has options such as monochromatic, adjacent colors, triad, and tetrad that pick colors based on a single color selection. This is actually meant for web designing but has the same prinicple of color theory.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/colortype/monochrome.png&quot; alt=&quot;Monochromatic&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://paletton.com&quot; target=&quot;_blank&quot; alt=&quot;Spatial Data Bootcamp: Paletton.com color wheel&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/paletton.jpg&quot; alt=&quot;Spatial Data Bootcamp: Paletton.com color wheel&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ColorBrewer also provides color schemes for sequential data with related
+hues that vary in lightness. These are harder to create on your own, since
+you don’t want to use hues that are very different from one another.&lt;/p&gt;
+
+&lt;p&gt;Don’t hesitate to try a simple greyscale scheme ranging from white to black.
+Simple is often better, after all.&lt;/p&gt;
+
+&lt;p&gt;Diverging Data
+Now you can have two main hues! These should contrast well with each other, and
+in between them you can use a neutral color, like white. As you go from the
+neutral middle towards the extremes, you can increase the saturation or darkness
+of your two colors.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/colortype/diverge.png&quot; alt=&quot;Diverging&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Qualitative Data
+For this type of data, you don’t want your hues to be related to each other,
+because each color is just a category, without representing any order
+or degree in your data.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/colortype/qualitative.png&quot; alt=&quot;Qualitative&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A classic example of this type of color scheme is on geologic maps, where each
+color is a different rock unit.&lt;/p&gt;
+
+&lt;p&gt;Tools like &lt;a href=&quot;http://paletton.com/&quot;&gt;paletton.com&lt;/a&gt; are simply a color wheel. Paletton.com has options such as monochromatic, adjacent colors, triad, and tetrad that pick colors based on a single color selection. These are meant for web designing but can be useful for maps, as well.&lt;/p&gt;
+
+&lt;!--&lt;a href=&quot;http://paletton.com&quot; target=&quot;_blank&quot; alt=&quot;Spatial Data Bootcamp: Paletton.com color wheel&quot;&gt;![Spatial Data Bootcamp: Paletton.com color wheel](/bootcamp/assets/images/paletton.jpg)&lt;/a&gt;--&gt;
+
+&lt;h2 id=&quot;typography&quot;&gt;Typography&lt;/h2&gt;
+
+&lt;p&gt;Most maps have text for the title, legends, and labels. The choice of typefaces (generally referred to
+as fonts) for these elements can add to the overall feel of your map. It is generally recognized that
+different typefaces convey personalities. Some are more serious, and others are
+playful. For research maps, you can use a simple and formal typeface, similar to
+what you might choose for an article or other text publication.&lt;/p&gt;
+
+&lt;p&gt;The most important aspect of text on maps is its legibility. The easier to read,
+the better.&lt;/p&gt;
+
+&lt;p&gt;What typeface options are there? The main distinction is Serif versus Sans-Serif.
+Serif typefaces have little decorators at the tips of letters, while Sans-Serif typefaces do not.
+A Sans-serif typeface is good for numbers, small text on your map, and also for maps on the web.
+Serif typefaces can be good for printed maps, titles, and larger text.
+Traditionally, maps with many labels use a pair of typefaces - one serif and one sans-serif.&lt;/p&gt;
+
+&lt;p&gt;Some recommended pairs include
+Frutiger with Meridien
+Rotis with Univers
+Myriad with Kepler
+Nueva with Tekton&lt;/p&gt;
+
+&lt;p&gt;Sometimes you may have to take kerning (the spacing between letters) into consideration.&lt;/p&gt;
+
+&lt;p&gt;Try exploring more combinations on &lt;a href=&quot;http://www.typebrewer.org/&quot;&gt;TypeBrewer&lt;/a&gt;. Note: this site is not
+related to ColorBrewer.&lt;/p&gt;
 
 &lt;h2 id=&quot;mapbox-suite&quot;&gt;Mapbox Suite&lt;/h2&gt;
 
+&lt;p&gt;MapBox created the open source tool &lt;a href=&quot;https://www.mapbox.com/tilemill/&quot;&gt;TileMill&lt;/a&gt;, and has since also released
+&lt;a href=&quot;https://www.mapbox.com/design/&quot;&gt;MapBox Studio&lt;/a&gt; which has some more design features for creating map styles.
+However, TileMill has what we need, so we focus on it for now.&lt;/p&gt;
+
 &lt;blockquote&gt;
-  &lt;p&gt;CartoCSS&lt;/p&gt;
+  &lt;p&gt;TileMill&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;What made TileMill popular was the ability to turn maps from many formats into tiles. The map is like one big picture,
+which is then split up into squares. This speeds up the process of displaying maps on the web.&lt;/p&gt;
+
+&lt;p&gt;Besides being an easy way to make tiles, what makes TileMill great for visualizing our data is ‘CartoCSS’, which is just like CSS (Cascading Style Sheets), but for maps! You can type CartoCSS code directly into the TileMill desktop application.&lt;/p&gt;
+
+&lt;p&gt;After installing TileMill, the first thing you see when you open it is the projects page.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/tilemill/tilemillopen.png&quot; alt=&quot;TileMill first view&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;qgis-cartography&quot;&gt;QGIS Cartography&lt;/h2&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;basics of graphic design and exporting maps - print or web-based&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;walkthrough of carto in qgis&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;

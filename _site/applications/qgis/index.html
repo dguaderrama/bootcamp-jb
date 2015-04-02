@@ -1489,26 +1489,29 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 <h3 id="what-this-module-covers-1">What this module covers:</h3>
 
 <ul>
-  <li>buffer on polylines</li>
-  <li>intersecting vector layers</li>
-  <li>join census housing (home values) to census tracts (shapefile)</li>
+  <li>Buffer polylines</li>
+  <li>Join census housing (home values) to census tracts (shapefile)</li>
+  <li>Intersecting vector layers</li>
 </ul>
 
 <h3 id="objective-3">Objective:</h3>
 
-<p>Quantify and extract home values within high-risk landslide/mass-wasting areas.</p>
+<p>Quantify total home value at risk within landslide/mass-wasting areas.</p>
 
-<h3 id="data-2">Data:</h3>
+<h3 id="data-collection-there-needs-to-be-instructionsquick-lesson-on-each-of-the-collection-sources">Data Collection: (there needs to be instructions/quick lesson on each of the collection sources)</h3>
 
 <ul>
-  <li>Census housing data</li>
-  <li>Census tract shapefile</li>
-  <li>streams and rivers <a href="http://www.ecy.wa.gov/services/gis/data/inlandWaters/sma/sma-streams-adopt.htm">meta data &amp; data download</a></li>
-  <li><a href="http://earthquake.usgs.gov/hazards/qfaults">Quaternary Faults data and meta data</a></li>
-  <li><a href="http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx">Seismogenic Features -  NEED GDAL filegb driver</a></li>
+  <li><a href="http://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml" alt="Spatial Data Bootcamp: Download Census housing data - American FactFinder" target="_blank">Census housing data - American FactFinder</a></li>
+  <li><a href="https://www.census.gov/geo/maps-data/data/tiger.html" alt="Spatial Data Bootcamp: Download Census tract shapefile - TIGER data" target="_blank">Census tracts - TIGER Data</a></li>
+  <li><a href="http://earthquake.usgs.gov/hazards/qfaults" alt="Spatial Data Bootcamp: Download USGS quaternary faults" target="_blank">Quaternary faults - USGS </a></li>
+  <li><a href="http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx" alt="Spatial Data Bootcamp: Download seismogenic features" target="_blank">Washington seismogenic features - REQUIRES GDAL filegdb driver!</a></li>
+  <li><a href="http://nhd.usgs.gov/" alt="Spatial Data Bootcamp: Download USGS National Hydrography Dataset - Washington" target="_blank">Washington streams/rivers - USGS National Hydrography Dataset</a></li>
+  <li>faults_100k - [source]</li>
 </ul>
 
-<h4 id="high-risk-area-">High-risk area =</h4>
+<h3 id="data-wrangling">Data Wrangling:</h3>
+
+<h4 id="high-risk-rules">High-risk rules:</h4>
 
 <ul>
   <li>within 100m of fault lines</li>
@@ -1516,31 +1519,63 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
   <li>within soft geologic areas</li>
 </ul>
 
-<h3 id="steps-3">Steps:</h3>
+<ol>
+  <li>Open QGIS and configure project workspace.</li>
+  <li>Import data:
+    <ul>
+      <li>HINT: The project projection will default to the first layer that is added to the project (See lower right of image below: EPSG:2927).</li>
+      <li><em>Add Vector Layer </em><img src="/bootcamp/assets/images/vector-analysis/vector-analysis-2.png" alt="Spatial Data Bootcamp: Vector Analysis - add vector data" /><br /><strong>fault_100k.shp</strong><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-3.png" alt="Spatial Data Bootcamp: Vector Analysis - streams and faults" /></li>
+    </ul>
+  </li>
+  <li>Buffer fault lines to 100m:
+    <ul>
+      <li><em>Menu Bar &gt; Vector &gt; Geoprocessing Tools &gt; Buffer(s)</em></li>
+      <li>Configure inputs as follows:<br /><strong>Input vector layer: fault_100k<br />Buffer distance: 100<br />Output shapefile: fault_buffer_100m.shp<br />Add results to canvas: (Checked)</strong><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-4.png" alt="Spatial Data Bootcamp: Vector Analysis - buffer analysis" /></li>
+      <li><em>Zoom in to a buffer, close enough to see the width</em></li>
+      <li><em>Open the meaure tool</em> <img src="/bootcamp/assets/images/vector-analysis/measure-tool.png" alt="Spatial Data Bootcamp: Vector Analysis - measure tool" /></li>
+      <li><em>Measure the width of the buffer.</em> Notice how the total width is only about 62 meters, or 100 feet. Current map units are determined from the CRS, in this case EPSG:2927 is in US feet and we need meters. Simply changing the CRS in Project Properties does not give us the correct results- this is still measured from EPSG:2927 US feet.<br />
+   <img src="/bootcamp/assets/images/vector-analysis/measure-tool-2.png" alt="Spatial Data Bootcamp: Vector Analysis - measure buffer" /><br /><br /><strong>Important:</strong><br />There are two methods to perfoming a buffer analysis on our shapefile. The problem here is that our CRS is EPSG:2927 (in US feet) and the buffer distance is based on map units (still US feet). The two methods are: convert 100 meters to US feet and use this value in the buffer analysis while maintaining EPSG:2927 (in US feet); OR, reproject the layer thus creating a new file with a CRS in meters (correct map units).  <br /><br /></li>
+      <li><em>Open a new project</em> and close without saving current project. This will clear the CRS to avoid confusion.</li>
+      <li><em>Reopen fault_100k.shp</em></li>
+      <li>Reprojecting from EPSG:2927 to EPSG:26910 will change units from feet to meters, allowing to perform a correct buffer analysis (in meters).</li>
+      <li><em>Reproject fault_100k.shp to ESPG:26910:</em><br /><strong>Reproject from EPSG:2927 (NAD83(HARN) Washington South US feet) to EPSG:26910 (NAD83 UTM10N US meters) - both have same datum (NAD83)</strong><br />Easiest method is <em>Right-click on layer in layer list &gt; Save As</em> and configure inputs as follows:<br /><strong>Format: ESRI Shapefile<br />Save As: fault_100k_26910.shp<br />CRS: Selected CRS<br />CRS: EPSG: 26910</strong><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-buffer-crs-error-2.png" alt="Spatial Data Bootcamp: Vector Analysis - wrangling projections" /></li>
+    </ul>
+  </li>
+</ol>
+
+<ul>
+  <li>Configure inputs as follows:<br /><strong>Input vector layer: fault_100k<br />Buffer distance: 100<br />Add results to canvas: (Checked)<br />Output shapefile: faults_100m.shp</strong><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-5.png" alt="Spatial Data Bootcamp: Vector Analysis - buffer faults" />
+    <ol>
+      <li>merge buffered fault lines with rivers/streams</li>
+      <li>join census housing data (.csv) to census tracts (shapefile)</li>
+    </ol>
+  </li>
+  <li>Import census tracts</li>
+  <li>Reproject census tract shapefile: <a href="http://spatialreference.org/ref/epsg/2927/">EPSG:2927</a></li>
+  <li>Import census housing data</li>
+  <li>Use Toolbox to search for ‘join attribute table’</li>
+  <li>Select parameters</li>
+  <li>Check output - confirm housing data is joined to tracts.
+    <ol>
+      <li>normalize housing data - tract house count X median tract house value = total tract home value.</li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="data-analysis">Data Analysis:</h3>
 
 <ol>
-  <li>Import vector data and configure workspace/projecton:
-    <ul>
-      <li>rivers.shp</li>
-      <li>faults.shp</li>
-    </ul>
-  </li>
-  <li>buffer fault lines and rivers/streams</li>
-  <li>merge buffered fault lines with rivers/streams</li>
-  <li>join census housing data (.csv) to census tracts (shapefile)
-    <ul>
-      <li>Import census tracts</li>
-      <li>Reproject census tract shapefile: <a href="http://spatialreference.org/ref/epsg/2927/">EPSG:2927</a></li>
-      <li>Import census housing data</li>
-      <li>Use Toolbox to search for ‘join attribute table’</li>
-      <li>Select parameters</li>
-      <li>Check output - confirm housing data is joined to tracts.</li>
-    </ul>
-  </li>
-  <li>normalize housing data - tract house count X median tract house value = total tract home value.</li>
   <li>intersect buffered-merged-joined data with reclassified-rasterized geology layer</li>
   <li>data will be used in Raster Analysis</li>
 </ol>
+
+<h3 id="data-distribution">Data Distribution:</h3>
+
+<p>What’s the best method for distributing or visualizing this data over the web?</p>
 
 <p><br /></p>
 
@@ -1562,7 +1597,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <p>Complete locating high-risk landslide/mass-wasting areas in Washington. You must use the digital elevation model (DEM) that you created in <a href="/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model">Data Wrangling - DEM</a> to produce slope and aspect rasters. Lastly, you need perforam a raster summation for locating high-risk landslide areas.</p>
 
-<h3 id="data-3">Data:</h3>
+<h3 id="data-2">Data:</h3>
 
 <ul>
   <li>Washington DEM (wa_dem.tif) - <a href="/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model">SEE Data Wrangling</a></li>
@@ -1654,7 +1689,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
   </tbody>
 </table>
 
-<h3 id="steps-4">Steps:</h3>
+<h3 id="steps-3">Steps:</h3>
 
 <ol>
   <li>Import raster data:

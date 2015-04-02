@@ -44,10 +44,10 @@ p, a {
   background-color: inherit !important;
 }
 /* sticky nav -- jquery -- */
-#sticky.stick {
+.stick {
   /* uncomment/comment-out this line to make the left nav column stick/not-stick when scrolling. and see notes below */
   position: fixed;
-  top: 40px;
+  top: 20px;
   z-index: 10;
   border-radius: 0 0 0.5em 0.5em;
   background-color: white;
