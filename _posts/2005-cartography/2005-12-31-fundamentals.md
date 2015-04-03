@@ -109,7 +109,7 @@ MapBox created the open source tool [TileMill](https://www.mapbox.com/tilemill/)
 [MapBox Studio](https://www.mapbox.com/design/) which has some more design features for creating map styles.
 However, TileMill has what we need, so we focus on it for now.
 
->TileMill
+#TileMill
 
 What made TileMill popular was the ability to turn maps from many formats into tiles. The map is like one big picture, which is then split up into squares.
 This speeds up the process of displaying maps on the web.
@@ -127,7 +127,7 @@ give it a name (any name!) and keep the 'Include World layer and styles' checked
 
 Now you have a blank world map! Lets make it our own.
 
->CartoCSS
+#CartoCSS
 
 So what is CSS? It stands for Cascading Style Sheets. The key part of that is 'Style'.
 CSS is used to make websites look nice - the css file governs colors, sizes, and fonts.
@@ -162,6 +162,14 @@ always have 6 digits (letters or numbers) and a pound symbol in the front.
 Replace #b8dee6 with the color of your choice, then save to see the difference.
 
 ![New Background Color]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/firststyle.png)
+
+>Map Features
+
+When we are working with vector data, we refer to features on the map, which could be
+things like cities, rivers, and countries. In general, these vector features will always
+be either points, lines, or polygons.
+
+Now lets add a new map feature
 
 ## QGIS Cartography
 
