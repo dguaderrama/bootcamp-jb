@@ -1164,58 +1164,131 @@
   
 <h2 id="cartography-fundamentals">Cartography fundamentals</h2>
 
-<p>Set aside your analytical skills and put on your creativity hat.</p>
+<p>Map-making has historically  been both a science and an art. For visualizing scientific data on
+maps, we now have new technologies that make it easy to create beautiful data visualizations.</p>
 
-<p>Time to get creative.</p>
+<p>Using the principles of art and design, we can take data and display it on the map as
+easily understandable information that the general public can relate to.</p>
 
-<p>Effectively communicate your data.</p>
+<p>Whether your goals are to publish, share your research, or reach a wider audience,
+a good map design will make your data more powerful.</p>
 
-<p>Cartography should be fun but don’t create more work for yourself, keep it simple.</p>
+<p>In practicing cartography, it is important to remember that often, the best
+design is rooted in simplicity. The main focus should be the information.</p>
 
 <h2 id="elements-of-effective-cartography">Elements of effective cartography</h2>
 
-<p>Including necessary information leads to effective cartography.</p>
-
-<p>Your audience must understand what you’re trying to convey.</p>
+<p>To help your audience understand what you’re trying to convey,
+the following elements can be included with your map.</p>
 
 <ul>
-  <li>Legend</li>
-  <li>Colors</li>
-  <li>Fonts</li>
-  <li>Labels</li>
-  <li>Attribution</li>
-  <li>Scale</li>
-  <li>North arrow</li>
+  <li>Legend - The most important element for understanding the data, the legend should concisely explain what is on the map.</li>
+  <li>Labels - Labels can help your audience identify features on the map like cities, roads, and lakes, or they can serve to point out important areas.</li>
+  <li>Attribution - An attribution is often necessary when using geographic information, whether it be for the data itself,
+ the map that is underneath the data, or the design elements included.</li>
+  <li>Scale - Although scale is often left out of zoomable web maps, it is an important element for static maps. The scale bar can be simple and near the bottom of your map.</li>
+  <li>North arrow - The classic arrow that points north!</li>
 </ul>
 
-<h2 id="colors-are-important">Colors are important</h2>
+<h2 id="color">Color</h2>
 
-<p>Colors can add meaning and beauty to your data, but it is important to select an appropriate color scheme for your goals. For example, for a choropleth map, you should use a monochromatic color scheme.</p>
+<p>Color can add meaning and beauty to your data. To get inspired, think about what different colors evoke.
+Red can express heat or urgency, while blue might be calming and cool.</p>
 
-<p>Color blindness is important factor when selecting color schemes.</p>
+<p>If you are unsure of which colors to use, you can use <a href="http://colorbrewer2.org/">ColorBrewer 2.0</a>. Besides
+providing excellent color schemes, it considers colorblindness which should always be an important
+factor when selecting color schemes.</p>
 
-<p><a href="http://colorbrewer2.org/">ColorBrewer 2.0</a> is an excellent cartography tool for selecting colors and saving time. It considers colorblindness which should always be an important factor when selecting color schemes.</p>
+<p>The type of color scheme you use depends on the nature of your data. We can take a look at the
+options from ColorBrewer.</p>
 
-<p>Grey scale maps for non-color-based printed maps.</p>
+<p>Sequential Data
+For sequential data, a monochromatic color scheme is a good choice. In this type
+of scheme you have just one hue, and vary the lightness. Your colors may go from
+light blue to dark blue, for example. This scheme is ideal for a choropleth map.</p>
 
-<p>Tools like <a href="http://paletton.com/">paletton.com</a> are simply a color wheel that help the color picking process. Paletton.com has options such as monochromatic, adjacent colors, triad, and tetrad that pick colors based on a single color selection. This is actually meant for web designing but has the same prinicple of color theory.</p>
+<p><img src="/bootcamp/assets/images/colortype/monochrome.png" alt="Monochromatic" /></p>
 
-<p><a href="http://paletton.com" target="_blank" alt="Spatial Data Bootcamp: Paletton.com color wheel"><img src="/bootcamp/assets/images/paletton.jpg" alt="Spatial Data Bootcamp: Paletton.com color wheel" /></a></p>
+<p>ColorBrewer also provides color schemes for sequential data with related
+hues that vary in lightness. These are harder to create on your own, since
+you don’t want to use hues that are very different from one another.</p>
+
+<p>Don’t hesitate to try a simple greyscale scheme ranging from white to black.
+Simple is often better, after all.</p>
+
+<p>Diverging Data
+Now you can have two main hues! These should contrast well with each other, and
+in between them you can use a neutral color, like white. As you go from the
+neutral middle towards the extremes, you can increase the saturation or darkness
+of your two colors.</p>
+
+<p><img src="/bootcamp/assets/images/colortype/diverge.png" alt="Diverging" /></p>
+
+<p>Qualitative Data
+For this type of data, you don’t want your hues to be related to each other,
+because each color is just a category, without representing any order
+or degree in your data.</p>
+
+<p><img src="/bootcamp/assets/images/colortype/qualitative.png" alt="Qualitative" /></p>
+
+<p>A classic example of this type of color scheme is on geologic maps, where each
+color is a different rock unit.</p>
+
+<p>Tools like <a href="http://paletton.com/">paletton.com</a> are simply a color wheel. Paletton.com has options such as monochromatic, adjacent colors, triad, and tetrad that pick colors based on a single color selection. These are meant for web designing but can be useful for maps, as well.</p>
+
+<!--<a href="http://paletton.com" target="_blank" alt="Spatial Data Bootcamp: Paletton.com color wheel">![Spatial Data Bootcamp: Paletton.com color wheel](/bootcamp/assets/images/paletton.jpg)</a>-->
+
+<h2 id="typography">Typography</h2>
+
+<p>Most maps have text for the title, legends, and labels. The choice of typefaces (generally referred to
+as fonts) for these elements can add to the overall feel of your map. It is generally recognized that
+different typefaces convey personalities. Some are more serious, and others are
+playful. For research maps, you can use a simple and formal typeface, similar to
+what you might choose for an article or other text publication.</p>
+
+<p>The most important aspect of text on maps is its legibility. The easier to read,
+the better.</p>
+
+<p>What typeface options are there? The main distinction is Serif versus Sans-Serif.
+Serif typefaces have little decorators at the tips of letters, while Sans-Serif typefaces do not.
+A Sans-serif typeface is good for numbers, small text on your map, and also for maps on the web.
+Serif typefaces can be good for printed maps, titles, and larger text.
+Traditionally, maps with many labels use a pair of typefaces - one serif and one sans-serif.</p>
+
+<p>Some recommended pairs include
+Frutiger with Meridien
+Rotis with Univers
+Myriad with Kepler
+Nueva with Tekton</p>
+
+<p>Sometimes you may have to take kerning (the spacing between letters) into consideration.</p>
+
+<p>Try exploring more combinations on <a href="http://www.typebrewer.org/">TypeBrewer</a>. Note: this site is not
+related to ColorBrewer.</p>
 
 <h2 id="mapbox-suite">Mapbox Suite</h2>
 
+<p>MapBox created the open source tool <a href="https://www.mapbox.com/tilemill/">TileMill</a>, and has since also released
+<a href="https://www.mapbox.com/design/">MapBox Studio</a> which has some more design features for creating map styles.
+However, TileMill has what we need, so we focus on it for now.</p>
+
 <blockquote>
-  <p>CartoCSS</p>
+  <p>TileMill</p>
 </blockquote>
+
+<p>What made TileMill popular was the ability to turn maps from many formats into tiles. The map is like one big picture,
+which is then split up into squares. This speeds up the process of displaying maps on the web.</p>
+
+<p>Besides being an easy way to make tiles, what makes TileMill great for visualizing our data is ‘CartoCSS’, which is just like CSS (Cascading Style Sheets), but for maps! You can type CartoCSS code directly into the TileMill desktop application.</p>
+
+<p>After installing TileMill, the first thing you see when you open it is the projects page.</p>
+
+<p><img src="/bootcamp/assets/images/tilemill/tilemillopen.png" alt="TileMill first view" /></p>
 
 <h2 id="qgis-cartography">QGIS Cartography</h2>
 
 <blockquote>
   <p>basics of graphic design and exporting maps - print or web-based</p>
-</blockquote>
-
-<blockquote>
-  <p>walkthrough of carto in qgis</p>
 </blockquote>
 
 <p><br /></p>
