@@ -164,12 +164,37 @@ Replace #b8dee6 with the color of your choice, then save to see the difference.
 ![New Background Color]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/firststyle.png)
 
 >Map Features
-
 When we are working with vector data, we refer to features on the map, which could be
 things like cities, rivers, and countries. In general, these vector features will always
 be either points, lines, or polygons.
 
-Now lets add a new map feature
+>Layers in Tilemill
+Every time you add more data to your map, you can put it in its own layer.
+When we import data into Tilemill, it automatically becomes a new layer.
+We give every layer a class name, and some have IDs, too. IDs must be unique to each layer,
+but a class name can be used more than once.
+
+To choose a layer based on a class, we start with a period, then the class name.
+For example:
+    .cities
+      {
+        marker-fill: blue;
+      }
+To choose a layer based on an ID, we start with a pound symbol, then the ID name.
+For example:
+    #Barcelona
+      {
+        marker-fill: red;
+      }
+
+Now lets add a new property to our .countries layer (this layer already has the class
+  'countries' given to it).
+  Directly underneath the line "polygon-fill: #fff;"
+  Write "polygon-opacity: 0.8;" Then click save.
+  Notice that while you are writing, the property name is light grey, but once you
+  finish it turns to regular black text. This is to help you know that you are using
+  a valid property name.
+
 
 ## QGIS Cartography
 
