@@ -4,7 +4,7 @@
  <title>Spatial Data Bootcamp</title>
  <link href="http://104.237.129.71/bootcamp/" rel="self"/>
  <link href="http://104.237.129.71/bootcamp"/>
- <updated>2015-04-02T15:55:49-07:00</updated>
+ <updated>2015-04-02T17:16:05-07:00</updated>
  <id>http://104.237.129.71/bootcamp</id>
  <author>
    <name>Nathan Casler</name>
@@ -1189,47 +1189,52 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
   &lt;li&gt;Import data:
     &lt;ul&gt;
       &lt;li&gt;HINT: The project projection will default to the first layer that is added to the project (See lower right of image below: EPSG:2927).&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Add Vector Layer &lt;/em&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-2.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add vector data&quot; /&gt;&lt;br /&gt;&lt;strong&gt;fault_100k.shp&lt;/strong&gt;&lt;br /&gt;
+      &lt;li&gt;&lt;em&gt;Add Vector Layer: &lt;/em&gt;&lt;img src=&quot;/bootcamp/assets/images/qgis/add-vector.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add vector data&quot; /&gt;&lt;br /&gt;&lt;strong&gt;fault_100k.shp&lt;/strong&gt;&lt;br /&gt;
    &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-3.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - streams and faults&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Buffer fault lines to 100m:
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Vector &amp;gt; Geoprocessing Tools &amp;gt; Buffer(s)&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Configure inputs as follows:&lt;br /&gt;&lt;strong&gt;Input vector layer: fault_100k&lt;br /&gt;Buffer distance: 100&lt;br /&gt;Output shapefile: fault_buffer_100m.shp&lt;br /&gt;Add results to canvas: (Checked)&lt;/strong&gt;&lt;br /&gt;
+      &lt;li&gt;Configure inputs as follows:&lt;br /&gt;&lt;strong&gt;Input vector layer: fault_100k&lt;br /&gt;Buffer distance: 100&lt;br /&gt;Output shapefile: fault_buffer_100m.shp&lt;br /&gt;Add results to canvas: (Checked)&lt;br /&gt;Click OK to perform analysis, Close to exit the tool&lt;/strong&gt;&lt;br /&gt;
    &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-4.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - buffer analysis&quot; /&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Zoom in to a buffer, close enough to see the width&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Open the meaure tool&lt;/em&gt; &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/measure-tool.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - measure tool&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Measure the width of the buffer.&lt;/em&gt; Notice how the total width is only about 62 meters, or 100 feet. Current map units are determined from the CRS, in this case EPSG:2927 is in US feet and we need meters. Simply changing the CRS in Project Properties does not give us the correct results- this is still measured from EPSG:2927 US feet.&lt;br /&gt;
-   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/measure-tool-2.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - measure buffer&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Important:&lt;/strong&gt;&lt;br /&gt;There are two methods to perfoming a buffer analysis on our shapefile. The problem here is that our CRS is EPSG:2927 (in US feet) and the buffer distance is based on map units (still US feet). The two methods are: convert 100 meters to US feet and use this value in the buffer analysis while maintaining EPSG:2927 (in US feet); OR, reproject the layer thus creating a new file with a CRS in meters (correct map units).  &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Open a new project&lt;/em&gt; and close without saving current project. This will clear the CRS to avoid confusion.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Reopen fault_100k.shp&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Reprojecting from EPSG:2927 to EPSG:26910 will change units from feet to meters, allowing to perform a correct buffer analysis (in meters).&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Reproject fault_100k.shp to ESPG:26910:&lt;/em&gt;&lt;br /&gt;&lt;strong&gt;Reproject from EPSG:2927 (NAD83(HARN) Washington South US feet) to EPSG:26910 (NAD83 UTM10N US meters) - both have same datum (NAD83)&lt;/strong&gt;&lt;br /&gt;Easiest method is &lt;em&gt;Right-click on layer in layer list &amp;gt; Save As&lt;/em&gt; and configure inputs as follows:&lt;br /&gt;&lt;strong&gt;Format: ESRI Shapefile&lt;br /&gt;Save As: fault_100k_26910.shp&lt;br /&gt;CRS: Selected CRS&lt;br /&gt;CRS: EPSG: 26910&lt;/strong&gt;&lt;br /&gt;
-   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-buffer-crs-error-2.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - wrangling projections&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Open the meaure tool&lt;/em&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/measure-tool.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - measure tool&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Measure the width of the buffer.&lt;/em&gt; Notice how the total width is only about 62 meters, or 100 feet. Current map units are determined by the CRS, in this case EPSG:2927 is in US feet and we need meters. Simply changing the CRS in Project Properties does not give us the correct results- this is still measured from EPSG:2927 US feet.&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-measure-tool-2.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - measure buffer&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Important:&lt;/strong&gt;&lt;br /&gt;There are two methods to perfoming a buffer analysis on our shapefile. The problem here is that our CRS is EPSG:2927 (in US feet) and the buffer distance is based on map units (still US feet). The two methods are: convert 100 meters to US feet and use this value in the buffer analysis while maintaining EPSG:2927 (in US feet); OR, reproject the layer thus creating a new file with a CRS in meters (correct map units), and then reprojecting back to EPSG:2927. We’ll go with the former.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;Now we need to perform the buffer analysis with the correct method. &lt;em&gt;Remove the incorrect buffer layer: fault_buffer_100m.shp&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Add Vector Layer: &lt;/em&gt;&lt;img src=&quot;/bootcamp/assets/images/qgis/add-vector.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add vector&quot; /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;NHD_MajorStreams.shpi&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-5.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add vector data&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Open the buffer tool:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Vector &amp;gt; Geoprocessing Tools &amp;gt; Buffer(s)&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Buffer fault_100k:
+    &lt;ul&gt;
+      &lt;li&gt;Configure inputs as follow:&lt;br /&gt;&lt;strong&gt;Input vector layer: fault_100k&lt;br /&gt;Buffer distance: 328&lt;br /&gt;Output shapefile: fault_buffer_100m.shp&lt;br /&gt;Add result to canvas: (Checked)&lt;br /&gt;Click OK to run (overwrite necessary), and CLOSE to exit tool&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Repeat buffer with NHD_MajorStreams.shp&lt;/li&gt;
+  &lt;li&gt;merge buffered fault lines with rivers/streams&lt;/li&gt;
+  &lt;li&gt;join census housing data (.csv) to census tracts (shapefile)
+    &lt;ul&gt;
+      &lt;li&gt;Import census tracts&lt;/li&gt;
+      &lt;li&gt;Reproject census tract shapefile: &lt;a href=&quot;http://spatialreference.org/ref/epsg/2927/&quot;&gt;EPSG:2927&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Import census housing data&lt;/li&gt;
+      &lt;li&gt;Use Toolbox to search for ‘join attribute table’&lt;/li&gt;
+      &lt;li&gt;Select parameters&lt;/li&gt;
+      &lt;li&gt;Check output - confirm housing data is joined to tracts.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;normalize housing data - tract house count X median tract house value = total tract home value.&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Configure inputs as follows:&lt;br /&gt;&lt;strong&gt;Input vector layer: fault_100k&lt;br /&gt;Buffer distance: 100&lt;br /&gt;Add results to canvas: (Checked)&lt;br /&gt;Output shapefile: faults_100m.shp&lt;/strong&gt;&lt;br /&gt;
-   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-5.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - buffer faults&quot; /&gt;
-    &lt;ol&gt;
-      &lt;li&gt;merge buffered fault lines with rivers/streams&lt;/li&gt;
-      &lt;li&gt;join census housing data (.csv) to census tracts (shapefile)&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Import census tracts&lt;/li&gt;
-  &lt;li&gt;Reproject census tract shapefile: &lt;a href=&quot;http://spatialreference.org/ref/epsg/2927/&quot;&gt;EPSG:2927&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Import census housing data&lt;/li&gt;
-  &lt;li&gt;Use Toolbox to search for ‘join attribute table’&lt;/li&gt;
-  &lt;li&gt;Select parameters&lt;/li&gt;
-  &lt;li&gt;Check output - confirm housing data is joined to tracts.
-    &lt;ol&gt;
-      &lt;li&gt;normalize housing data - tract house count X median tract house value = total tract home value.&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;h3 id=&quot;data-analysis&quot;&gt;Data Analysis:&lt;/h3&gt;
 
