@@ -121,16 +121,47 @@ After installing TileMill, the first thing you see when you open it is the proje
 ![TileMill first view]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/tilemillopen.png)
 
 Lets create a new project to play around with style. Click on 'New Project' in the top left corner,
-and you will see the following
+give it a name (any name!) and keep the 'Include World layer and styles' checked.
 
 ![New Project]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/newproject.png)
 
-
+Now you have a blank world map! Lets make it our own.
 
 >CartoCSS
 
-So what is CSS? It stands for
+So what is CSS? It stands for Cascading Style Sheets. The key part of that is 'Style'.
+CSS is used to make websites look nice - the css file governs colors, sizes, and fonts.
 
+CartoCSS has the same syntax as regular CSS. First you select the element that you will
+be applying styles to. For example, you could choose 'Map' for the entire map. Within
+curly brackets, you put all your properties.
+
+One the left you put the name of the property you want to change (for example,
+background-color). Then comes a colon, and on the right the value for that property.
+You should end your lines with a semicolon.
+
+    element
+      {
+        propertyName: propertyValue;
+      }
+
+On the right of your new map project you can see a space with some css code already
+there. This is what goes in your style file when you save your project. To see
+the changes that you make here, remember to click 'Save' at the top right.
+
+See the part that styles the 'Map' element? There is a property called
+background-color in there.
+The property value that is assigned to the background color is written in hexadecimal
+notation. You can get colors represented in hexadecimal notation from most color
+wheels on the Internet (and also from Color Brewer!). Lets open up the Paletton.com
+and pick a different blue.
+Once you find a color you like in the square to the right, hover over it or click
+to see the hexadecimal value (or hex code). I chose #0C44C4. Colors in this format
+always have 6 digits (letters or numbers) and a pound symbol in the front.
+
+Replace #b8dee6 with the color of your choice, then save to see the difference.
+
+![New Background Color]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/firststyle.png)
 
 ## QGIS Cartography
 
