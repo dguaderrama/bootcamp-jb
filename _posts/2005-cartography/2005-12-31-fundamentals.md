@@ -98,15 +98,9 @@ A Sans-serif typeface is good for numbers, small text on your map, and also for 
 Serif typefaces can be good for printed maps, titles, and larger text.
 Traditionally, maps with many labels use a pair of typefaces - one serif and one sans-serif.
 
-Some recommended pairs include
-Frutiger with Meridien
-Rotis with Univers
-Myriad with Kepler
-Nueva with Tekton
-
 Sometimes you may have to take kerning (the spacing between letters) into consideration.
 
-Try exploring more combinations on [TypeBrewer](http://www.typebrewer.org/). Note: this site is not
+Try exploring combinations on [TypeBrewer](http://www.typebrewer.org/). Note: this site is not
 related to ColorBrewer.
 
 ## Mapbox Suite
@@ -117,8 +111,8 @@ However, TileMill has what we need, so we focus on it for now.
 
 >TileMill
 
-What made TileMill popular was the ability to turn maps from many formats into tiles. The map is like one big picture,
-which is then split up into squares. This speeds up the process of displaying maps on the web.
+What made TileMill popular was the ability to turn maps from many formats into tiles. The map is like one big picture, which is then split up into squares.
+This speeds up the process of displaying maps on the web.
 
 Besides being an easy way to make tiles, what makes TileMill great for visualizing our data is 'CartoCSS', which is just like CSS (Cascading Style Sheets), but for maps! You can type CartoCSS code directly into the TileMill desktop application.
 
@@ -126,7 +120,16 @@ After installing TileMill, the first thing you see when you open it is the proje
 
 ![TileMill first view]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/tilemillopen.png)
 
+Lets create a new project to play around with style. Click on 'New Project' in the top left corner,
+and you will see the following
 
+![New Project]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/newproject.png)
+
+
+
+>CartoCSS
+
+So what is CSS? It stands for
 
 
 ## QGIS Cartography
