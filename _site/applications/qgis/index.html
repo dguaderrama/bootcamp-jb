@@ -1213,7 +1213,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <p><em>Menu Bar &gt; Project &gt; Project Properties</em></p>
 
-<p>From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection. </p>
+<p>From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection.</p>
 
 <h3 id="activate-necessary-providers">Activate necessary providers</h3>
 
@@ -1235,7 +1235,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <p>See <a href="/bootcamp/intro/spatial-data">Intro to Spatial Data</a> for more detailed info on projections.</p>
 
-<p>Each new project starts with the global default projection, <a href="http://www.spatialreference.org/epsg/wgs-84/">EPSG:4326 - WGS 84</a>: </p>
+<p>Each new project starts with the global default projection, <a href="http://www.spatialreference.org/epsg/wgs-84/">EPSG:4326 - WGS 84</a>:</p>
 
 <p><code>proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</code></p>
 
@@ -1243,7 +1243,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <p>However, this is not the same as changing the project projection. You may define the project projection from <em>Menu Bar &gt; Project &gt; Project Properties &gt; CRS</em>. Also keep in mind, the CRS of a new project will change to the CRS of the first layer added to the project.</p>
 
-<p>‘On the fly’ CRS transformation is not enabled by the default QGIS installation.  </p>
+<p>‘On the fly’ CRS transformation is not enabled by the default QGIS installation.</p>
 
 <h2 id="supported-data-formats">Supported Data Formats</h2>
 
@@ -1257,7 +1257,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <p><img src="/bootcamp/assets/images/add-vector.png" alt="Add vector in QGIS" /></p>
 
-<p>View vector attribute table by right clicking on the layer and clicking Open Attribute Table. From here you can sort data, show selected features, show features visible on map, show edited and new features, filter by column, or query data with and advanced filter. </p>
+<p>View vector attribute table by right clicking on the layer and clicking Open Attribute Table. From here you can sort data, show selected features, show features visible on map, show edited and new features, filter by column, or query data with and advanced filter.</p>
 
 <p>Attribute data can be edited by enabling and edit session with the Toggle Editing Mode icon (top left).</p>
 
@@ -1271,13 +1271,13 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <h2 id="general-spatial-functions">General Spatial Functions</h2>
 
-<p>Spatial functions are accessable through <em>Menu Bar &gt; Vector/Raster</em>. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy. </p>
+<p>Spatial functions are accessable through <em>Menu Bar &gt; Vector/Raster</em>. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy.</p>
 
 <h2 id="composing-maps-for-printnon-web-based">Composing Maps (for print/non-web-based)</h2>
 
 <p>This method is ideal for exporting your work for a research paper, admiring your work, and such. Developing a web map for dissimenating your data is a bit more involved and is discussed in the <a href="/bootcamp/visualization/leaflet">Publish Your Data to a Web Mapi/LeafletJS</a> section. Also, to export data with styles see <a href="this-is-not-a-link">This section link</a>.</p>
 
-<p>Begin by opening the Print Composer: </p>
+<p>Begin by opening the Print Composer:</p>
 
 <p><img src="/bootcamp/assets/images/compose-map.png" alt="Create new Print Composer workspace" /></p>
 
@@ -1295,7 +1295,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <h2 id="the-scenario">The Scenario:</h2>
 
-<p>You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map. </p>
+<p>You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map.</p>
 
 <p><br /></p>
 
@@ -1315,7 +1315,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <h3 id="objective">Objective:</h3>
 
-<p>Gather data necessary for locating high-risk landslide areas in the state of Washington. </p>
+<p>Gather data necessary for locating high-risk landslide areas in the state of Washington.</p>
 
 <h3 id="data-sources">Data sources:</h3>
 
@@ -1455,7 +1455,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
     <ul>
       <li>GDAL’s rasterize is a prefered method. This can be accessed through <em>Menu Bar &gt; Raster &gt; Conversion &gt; Rasterize (Vector to raster)</em>. Notice how the parameters have been diabled in the example below. There’s a specific reason for this. Complete the parameter inputs: <em>Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000</em>. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.</li>
       <li><em>Click the edit icon (pencil) locate near the block of code</em>. This enables you to add those non-QGIS parameters.</li>
-      <li><em>Add the line of code</em> <code>-at -a_nodata 0</code> just after <code>gdal_rasterize</code> </li>
+      <li><em>Add the line of code</em> <code>-at -a_nodata 0</code> just after <code>gdal_rasterize</code></li>
       <li><em>-at</em>: Enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.<sup id="fnref:3"><a href="#fn:3" class="footnote">2</a></sup></li>
       <li><em>-a_nodata $value</em>: Assign a specified nodata value to output bands - this prevents pixels with no data from being written into the output raster.<sup id="fnref:3:1"><a href="#fn:3" class="footnote">2</a></sup></li>
       <li><a href="http://www.gdal.org/gdal_rasterize.html">Here’s a link to the gdal_rasterize parameters</a>.<br />
@@ -1466,7 +1466,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
     <ul>
       <li>Open wa_geology.tif style properties. HINT: See step 4.</li>
       <li>For <em>Render type</em>, select <em>Singleband pseudocolor</em></li>
-      <li>On the right select: <em>Load min/max values: Min/max; Extend: Actual (slower); then Load</em>. This loads actual values into the classification. QGIS Approximates values by defautl. </li>
+      <li>On the right select: <em>Load min/max values: Min/max; Extend: Actual (slower); then Load</em>. This loads actual values into the classification. QGIS Approximates values by defautl.</li>
       <li><em>Change Mode to Equal Interval with 3 classes</em>. Remember, we only have three rock strength classes: soft, medium, hard. Change your color map if you’d like. The color maps are not stored into the raster, so the raster will load with the defaul color map (black to white) each time its opened in a new project.</li>
       <li><em>Click Classify</em>. Apply and OK.<br />
    <img src="/bootcamp/assets/images/lesson-1/lesson-1-13.png" alt="QGIS: Style raster" /></li>
@@ -1474,7 +1474,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
   </li>
 </ol>
 
-<p>You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster. </p>
+<p>You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster.</p>
 
 <p>Keep this reclassified and rasterized vector, it’ll be used in the next lesson.</p>
 
@@ -1496,7 +1496,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <h3 id="objective-3">Objective:</h3>
 
-<p>Quantify total home value at risk within landslide/mass-wasting areas.</p>
+<p>Quantify total home value at risk within landslide/mass-wasting and fautls.</p>
 
 <h3 id="data-collection-there-needs-to-be-instructionsquick-lesson-on-each-of-the-collection-sources">Data Collection: (there needs to be instructions/quick lesson on each of the collection sources)</h3>
 
@@ -1506,17 +1506,27 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
   <li><a href="http://earthquake.usgs.gov/hazards/qfaults" alt="Spatial Data Bootcamp: Download USGS quaternary faults" target="_blank">Quaternary faults - USGS </a></li>
   <li><a href="http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx" alt="Spatial Data Bootcamp: Download seismogenic features" target="_blank">Washington seismogenic features - REQUIRES GDAL filegdb driver!</a></li>
   <li><a href="http://nhd.usgs.gov/" alt="Spatial Data Bootcamp: Download USGS National Hydrography Dataset - Washington" target="_blank">Washington streams/rivers - USGS National Hydrography Dataset</a></li>
+</ul>
+
+<p>Here, the data are pre-wrangled (located on nathan’s server, for now):</p>
+
+<ul>
   <li>faults_100k - [source]</li>
+  <li><a href="/bootcamp/assets/data/housing-data.zip">housing-data.zip</a></li>
 </ul>
 
 <h3 id="data-wrangling">Data Wrangling:</h3>
+
+<h4 id="wrangle-census-data">Wrangle Census Data:</h4>
+
+<p>Luckily, the Census data has already been wrangled. Census data can sometimes be tricky.</p>
 
 <h4 id="high-risk-rules">High-risk rules:</h4>
 
 <ul>
   <li>within 100m of fault lines</li>
   <li>within 50m of rivers/streams</li>
-  <li>within soft geologic areas </li>
+  <li>within soft geologic areas</li>
 </ul>
 
 <ol>
@@ -1542,45 +1552,91 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
   <li>Now we need to perform the buffer analysis with the correct method. <em>Remove the incorrect buffer layer: fault_buffer_100m.shp</em></li>
   <li><em>Add Vector Layer: </em><img src="/bootcamp/assets/images/qgis/add-vector.png" alt="Spatial Data Bootcamp: Vector Analysis - add vector" />
     <ul>
-      <li>NHD_MajorStreams.shpi<br />
+      <li><strong>NHD_MajorStreams.shp<br /></strong>
   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-5.png" alt="Spatial Data Bootcamp: Vector Analysis - add vector data" /></li>
     </ul>
   </li>
-  <li>Open the buffer tool: 
+  <li>Open the buffer tool:
     <ul>
       <li><em>Menu Bar &gt; Vector &gt; Geoprocessing Tools &gt; Buffer(s)</em></li>
     </ul>
   </li>
-  <li>Buffer fault_100k:
+  <li><em>Buffer fault_100k:</em>
     <ul>
-      <li>Configure inputs as follow:<br /><strong>Input vector layer: fault_100k<br />Buffer distance: 328<br />Output shapefile: fault_buffer_100m.shp<br />Add result to canvas: (Checked)<br />Click OK to run (overwrite necessary), and CLOSE to exit tool</strong></li>
+      <li>Configure inputs as follow:<br /><strong>Input vector layer: fault_100k<br />Buffer distance: 328<br />Output shapefile: fault_buffer_100m.shp<br />Add result to canvas: (Checked)<br />Click OK to run (overwrite necessary), and CLOSE to exit tool</strong><br /><br /><strong>Reminder:</strong><br />Buffer distance = 100 meters * 3.28084 feet = 328.084 feet<br /> 1 meter = 3.28084 feet<br /><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-6.png" alt="Spatial Data Bootcamp: Vector Analysis - buffer vector" /></li>
     </ul>
   </li>
-  <li>Repeat buffer with NHD_MajorStreams.shp</li>
-  <li>merge buffered fault lines with rivers/streams</li>
-  <li>join census housing data (.csv) to census tracts (shapefile)
+  <li>Confirm 100 meter buffer on faults:
     <ul>
-      <li>Import census tracts</li>
-      <li>Reproject census tract shapefile: <a href="http://spatialreference.org/ref/epsg/2927/">EPSG:2927</a></li>
-      <li>Import census housing data</li>
-      <li>Use Toolbox to search for ‘join attribute table’</li>
-      <li>Select parameters</li>
-      <li>Check output - confirm housing data is joined to tracts.</li>
+      <li>Open measure tool <img src="/bootcamp/assets/images/qgis/measure-tool.png" alt="Spatial Data Bootcamp: Vector Analysis - measure tool" /> and confirm 200 meter total width (100 meters * 2 = 200 meters)<br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-7.png" alt="Spatial Data Bootcamp: Vector Analysis - measure faults buffer" /></li>
     </ul>
   </li>
-  <li>normalize housing data - tract house count X median tract house value = total tract home value.</li>
-</ol>
-
-<h3 id="data-analysis">Data Analysis:</h3>
-
-<ol>
-  <li>intersect buffered-merged-joined data with reclassified-rasterized geology layer</li>
+  <li><em>Repeat buffer with NHD_MajorStreams.shp</em>
+    <ul>
+      <li>Configure inputs as follows:<br /><strong>Input vector layer: NHD_MajorStreams<br />Buffer distance: 164<br />Output shapefile: streams_buffer_50m.shp<br />Add result to canvas: (Checked)<br />Click OK to run, CLOSE to exit tool</strong><br /><br /><strong>Reminder:</strong><br />Buffer distance = 50 meters * 3.28084 feet = 164.052 feet<br /> 1 meter = 3.28084 feet<br /><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-8.png" alt="Spatial Data Bootcamp: Vector Analysis - buffer streams" /></li>
+    </ul>
+  </li>
+  <li>Confirm 50 meter buffer on streams.</li>
+  <li>Import Census housing data (wa-housing-data.csv):
+    <ul>
+      <li>Notice: housing-data.csv has already been wrangled.</li>
+      <li>Add Delimited Text Layer <img src="/bootcamp/assets/images/qgis/add-csv.png" alt="Spatial Data Bootcamp: Vector Analysis - add Census data" /> or <em>Menu Bar &gt; Layer &gt; Add Delimited Text Layer</em></li>
+      <li>Configure inputs as follows:<br /><strong>File Name: housing-data.csv<br />File Format: CSV<br />First record has field names: (Checked)<br />No geometry (attribute only table): (Selected)<br />OK to add</strong> 
+ <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-9.png" alt="Spatial Data Bootcamp: Vector Analysis - add Census data" /></li>
+    </ul>
+  </li>
+  <li>View Census housing-data.csv:
+    <ul>
+      <li><em>Right-click housing-data (in layer list) &gt; Open attribute table</em></li>
+    </ul>
+  </li>
+  <li>Import Washington Census tracts (tl_2014__53_tract.shp) <img src="/bootcamp/assets/images/qgis/add-vector.png" alt="Spatial Data Bootcamp: Vector Analysis - add Census tracts" /><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-10.png" alt="Spatial Data Bootcamp: Vector Analysis - add Census tracts" /><br /><br /><strong>Important:</strong> Did you check the projection of the Census tracts shapefile? Be sure your shapefile CRS is EPSG:2927. <br /><br />‘on the fly’ projection is selected</li>
+  <li>Save Census tract (tl_2014_53_tract.shp) with ESPG:2927:
+    <ul>
+      <li><em>Right-click tl_2014_53_tract.shp (layer list) &gt; Save As</em></li>
+      <li>Configure as follows: <strong>ESRI Shapefile with EPSG:2927, Output filename: wa-tracts.shp, Add saved file to map: (Checked)</strong></li>
+    </ul>
+  </li>
+  <li><em>Remove current tl_2014_53_tract.shp</em><br />
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-11.png" alt="Spatial Data Bootcamp: Vector Analysis - workspace" /></li>
+  <li>Open wa-tracts attribute table and housing-data to find the key that will be used to join the tables. HINT: It’s GEOID and GEO.id2.<br /><br /><strong>notes:</strong> discuss field types, e.g. cannot compare a string to a number. – add image –<br /><br /></li>
+  <li>Join Census housing data (housing-data.csv) to Census tracts (wa-tracts.sho):
+    <ul>
+      <li>Open Processing Toolbox (<em>Menu Bar &gt; Processing &gt; Toolbox</em>), search for “join attributes table”, then double-click “Join attributes table”<br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-12.png" alt="Spatial Data Bootcamp: Vector Analysis - join attribute table" /></li>
+      <li>Configure Join attributes table as follows:<br /><strong>Input layer: wa-tracts<br />Input layer 2: housing-data<br />Table field: GEOID<br />Table field 2: GEO.id2<br />Output layer: (Save to file..) tracts-housing-data.shp</strong><br /><br /><strong>IMPORTANT:</strong> The concept behind this join is tabular (non-locational-data) joined to spatial data, not spatial data to tabular data. So, you must have spatial data (wa-tracts.shp) as the primary input and tabular data (housing-data.csv) as the secondary input. Notice in the <strong>Joing attributes table</strong> inputs below.<br /><img src="/bootcamp/assets/images/vector-analysis/vector-analysis-13.png" alt="Spatial Data Bootcamp: Vector Analysis - join Census tracts and housing data" /><br /><br /> <strong>NOTICE:</strong> “Layers do not all use the same CRS. This can cause unexpencted results.” Remember, the housing-data.csv does not have any locational data associated with it. Click Yes, to continue.<br /><br /><img src="/bootcamp/assets/images/vector-analysis/vector-analysis-14.png" alt="Spatial Data Bootcamp: Vector Analysis - join error" /></li>
+    </ul>
+  </li>
+  <li>Confirm output: housing data joined to tracts. Output is named “Output layer”, rename to “tracts_housing_data.shp” (<em>right-click layer &gt; Rename</em>). Hover over the layer in the layer list to view the source path.
+ <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-15.png" alt="Spatial Data Bootcamp: Vector Analysis - tracts and housing data joined" /></li>
+  <li>Normalize housing data - tract house count X median tract house value = total tract home value: (you’ll need point data to have a more accurate analysis)
+    <ul>
+      <li><em>Right-click tracts_housing_data &gt; Open Attribute Table &gt; Toggle editing mode &gt; Open field calculator</em></li>
+      <li>If you had downloaded the original ACS .csv with annotations then you would be able to easily find what the column headers mean. Or, you could locate the ACS metadata. But we have provided the difinitions below:<br />HC01_VC118 = Total Housing Units (Owner-occupied)<br />HC01_VC127 = Estimated Median Housing Unit (Owner-occupied)<br />We would have calculated total housing * median housing (total) but the ACS does not provide these metrics.</li>
+      <li>Configure inputs as follows:<br /><img src="/bootcamp/assets/images/vector-analysis/vector-analysis-16.png" alt="Spatial Data Bootcamp: Vector Analysis - normalize data" /></li>
+      <li>View your ouputs. Notice there are some NULL values:<br /><img src="/bootcamp/assets/images/vector-analysis/vector-analysis-17.png" alt="Spatial Data Bootcamp: Vector Analysis - noramlize data" /></li>
+    </ul>
+  </li>
+  <li>intersect buffered-merged-joined data with reclassified-rasterized geology layer
+    <ul>
+      <li>intersect buffered faults and streams:<br />
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-18.png" alt="Spatial Data Bootcamp: Vector Analysis - intersect buffered streams and faults" />
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-19.png" alt="Spatial Data Bootcamp: Vector Analysis - intersect buffered streams and faults" /></li>
+    </ul>
+  </li>
+  <li>calculate stream_fault_intersection shape area:
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-20.png" alt="Spatial Data Bootcamp: Vector Analysis - calculate shape area" />
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-21.png" alt="Spatial Data Bootcamp: Vector Analysis - calculate shape area" /></li>
+  <li>calculate tracts_housing shape area:
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-22.png" alt="Spatial Data Bootcamp: Vector Analysis - calculate shape area" /></li>
+  <li>spatial join stream_fault_intersection + tracts_housing: (this one takes a while)
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-23.png" alt="Spatial Data Bootcamp: Vector Analysis - spatially join stream_fault_intersection to wa-tracts" /></li>
   <li>data will be used in Raster Analysis</li>
 </ol>
-
-<h3 id="data-distribution">Data Distribution:</h3>
-
-<p>What’s the best method for distributing or visualizing this data over the web?</p>
 
 <p><br /></p>
 
@@ -1605,7 +1661,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 <h3 id="data-2">Data:</h3>
 
 <ul>
-  <li>Washington DEM (wa_dem.tif) - <a href="/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model">SEE Data Wrangling</a> </li>
+  <li>Washington DEM (wa_dem.tif) - <a href="/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model">SEE Data Wrangling</a></li>
   <li>Washington geology raster (wa_geology.tif) - <a href="/bootcamp/applications/qgis#data-wrangling---reclassify-and-rasterize-vector">SEE Data Wrangling</a></li>
 </ul>
 
@@ -1776,7 +1832,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <p><br /></p>
 
-<p>References: </p>
+<p>References:</p>
 
 <div class="footnotes">
   <ol>
