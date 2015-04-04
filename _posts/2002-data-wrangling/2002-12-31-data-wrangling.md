@@ -6,6 +6,14 @@ tagline: "Supporting tagline"
 tags : [wrangling]
 ---
 
+####**Pre-requisites:** Intro to Spatial Data, Data Collection
+
+####**Objectives:** 
+  - Understanding how to wrangle or prepare your data
+  - Recognize common methods to sptail data wrangling
+
+----
+
 {% include JB/setup %}
 # Data Formatting
 

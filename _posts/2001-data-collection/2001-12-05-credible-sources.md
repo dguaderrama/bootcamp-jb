@@ -8,6 +8,14 @@ tags : [data collection, data sources]
 
 {% include JB/setup %}
 
+####**Pre-requisites:** Intro to Spatial Data, Metadata, Consumable Services
+
+####**Objectves:**
+  - Understanding how to assess data sources 
+  - Recognize credible data sources
+
+----
+
 # Data Collection
 
 ### Credible Data Sources
@@ -76,6 +84,8 @@ The U.S. Census is the authority on national demographic data and creates standa
 #### Local and regional governments
  Most states maintain repositories of spatial data characteristic or pertinent to their scope. Some organizations to look for would be state geologic surveys, natural resource departments, city and county governments.
 
+<!--
+
 ### Consumable Services
 
 There is a variety of methods to access spatial data. The most obvious one is downloading a dataset to local machine. This can be the easiest option if the dataset is small enough to download quickly, and the data repository is easy to find. If this is not the case, there are several other options available:
@@ -100,6 +110,8 @@ A few examples of these applications are:
   + [Panoply](http://giss.nasa.gov/tools/panoply)
   + [Integrated Data Viewer](http://unidata.usr.edu/software/idv)
   + [GrADS](http://www.iges.org/grads)
+
+-->
 
 ## Exercise
 

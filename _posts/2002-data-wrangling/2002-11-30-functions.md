@@ -8,6 +8,14 @@ tags : [spatial functions]
 
 {% include JB/setup %}
 
+####**Pre-requisites:** Intro to Spatial Data, Data Formatting
+
+####**Objectives:**
+  - Recognize a few spatial relationships
+  - Understand how to clip a raster  
+
+----
+
 # Spatial Functions
 
 ## Relational Operations

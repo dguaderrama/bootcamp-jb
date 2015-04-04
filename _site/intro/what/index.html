@@ -207,7 +207,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
       	
       
     
@@ -587,7 +587,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
       	
       
     
@@ -948,7 +948,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
       	
       
     
@@ -1162,7 +1162,15 @@
 
 <div class="entry-content content">
   
-<h4 id="prerequisite-installing-qgis"><em>Prerequisite: Installing QGIS</em></h4>
+<h4 id="prerequisite-installing-qgis"><strong>Prerequisite: Installing QGIS</strong></h4>
+
+<h4 id="objectives"><strong>Objectives:</strong></h4>
+<ul>
+  <li>Understand fundamental elements of spatial data</li>
+  <li>Recognize the difference between Points, Lines, and Polygon data</li>
+</ul>
+
+<hr />
 
 <h1 id="is-spatial-special">Is Spatial Special?</h1>
 
@@ -1172,7 +1180,7 @@
 
 <h2 id="do-they-have-a-point">Do they have a point?</h2>
 
-<p>There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of data types, which are each inter-related. Spatial data is also dependent on a few factors such as projection, ellipsoid, and unit of measure. Spatial data is naturally multi-dimensional but needs to normally be passed through a visualization application to understand. Finally, a sticking point for spatial data has been how should the data be organized effectively and how can the inherent relationships between objects be tested efficiently.</p>
+<p>There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of data types, which are each inter-related. Spatial data is also dependent on a few factors such as projection, ellipsoid, and unit of measure. Spatial data is naturally multi-dimensional but needs to normally be passed through a visualization application to understand. Finally, a sticking point for spatial data has been how should the data be organized effectively and how can the inherent relationships between objects be tested efficiently. </p>
 
 <p>The specification helps to define a few words useful when dealing with spatial data.</p>
 
@@ -1193,11 +1201,11 @@
 <p>Some of the most used spatial data types are:</p>
 
 <dl>
-  <dt>Point</dt>
+  <dt>Point </dt>
   <dd>A Point is a 0-dimensional geometric object and represents a single location in coordinate space. A Point has an x-coordinate value, and a y-coordinate value. If called for by the associated Spatial Reference System, it may also have coordinate values for z and m.</dd>
-  <dt>LineString</dt>
+  <dt>LineString </dt>
   <dd>A linestring is a Curve with linear interpolation between Points. Each consecutive pair of points defines aLine Segment. A  line is a LineString with exactly 2 Points. A Linear Ring is a LineString is a LieString that is both closed and simple. A linestring is a series of connected points. These points act as vertices or nodes and are connected by curves. Each curve is assigned a start point and end point whcih represents the cardinality of the linestring. This cardinality is used to designate an order from the starting point to the end point.</dd>
-  <dt>Polygon</dt>
+  <dt>Polygon </dt>
   <dd>A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. Polygons are topologically closed. THe boundary of a Polygon consists of a set of LinearRings that make up its exterior and interior boundaries. No two Rings in the boundary cross and the Rings in the boundary of a Polygon may intersect but only as a tangent.  A series of connected line strings</dd>
   <dt>Raster</dt>
   <dd>A continuous surface made up of regular cells which hold values. Rasters are similar to matrices.</dd>
@@ -1217,7 +1225,7 @@
   <p>“Everything is related to everything else, but near things are more related than distant things” - Waldo Tobler</p>
 </blockquote>
 
-<p>Tobler’s First law of Geography is the fundamental basis of Spatial Analysis.</p>
+<p>Tobler’s First law of Geography is the fundamental basis of Spatial Analysis. </p>
 
 <p>This spatial dependence required the study of spatial effects and their influence on statistical studies.</p>
 
@@ -1231,7 +1239,7 @@
 
 <h3 id="sorting-and-indexes">Sorting and Indexes</h3>
 
-<p>Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type.</p>
+<p>Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type. </p>
 
 <p>Sorting spatial data poses an interesting problem. Do you sort from North to south? West to East? What happens if you are sorting lines or polygons that overlap?</p>
 
@@ -1239,7 +1247,7 @@
 
 <p>The R-Tree index was proposed by Antoine Guttman in 1984.</p>
 
-<p>In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.<sup id="fnref:2"><a href="#fn:2" class="footnote">3</a></sup> The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features.</p>
+<p>In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.<sup id="fnref:2"><a href="#fn:2" class="footnote">3</a></sup> The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features. </p>
 
 <p><a title="By Skinkie, w:en:Radim Baca (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AR-tree.svg"><img width="512" alt="R-tree" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/R-tree.svg/512px-R-tree.svg.png" /></a></p>
 

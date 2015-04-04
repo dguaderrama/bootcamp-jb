@@ -1,5 +1,5 @@
 ---
-title: "Data Analysis"
+title: "Exercise"
 layout: post
 category : "Data Analysis"
 tagline: ""
@@ -8,7 +8,11 @@ tags : [data analysis]
 
 {% include JB/setup %}
 
-### Data Analysis
+#### Prerequisites: Intro, Data Collection, Data Wrangling
+
+### Objectives: 
+  - Be able to reclassify a raster. 
+  - Understand basics of raster calculations.
 
 ### Exercise
 

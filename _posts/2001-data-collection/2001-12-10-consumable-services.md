@@ -6,6 +6,14 @@ tagline: "accessing spatial data"
 tags : [data collection, wfs, wms, wps, opendap]
 ---
 
+####**Pre-requisites: Intro to Spatial Data, Metadata**
+
+####**Objectives:**
+  - Recognize difference between services and local datasets
+  - Understand purpose of web services
+
+----
+
 # Consumable Services
 
 There is a variety of methods to access spatial data. The most obvious one is downloading a dataset to local machine. This can be the easiest option if the dataset is small enough to download quickly, and the data repository is easy to find. If this is not the case, there are several other options available:

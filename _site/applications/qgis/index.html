@@ -207,7 +207,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
       	
       
     
@@ -587,7 +587,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
       	
       
     
@@ -948,7 +948,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
       	
       
     
@@ -1213,7 +1213,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <p><em>Menu Bar &gt; Project &gt; Project Properties</em></p>
 
-<p>From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection.</p>
+<p>From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection. </p>
 
 <h3 id="activate-necessary-providers">Activate necessary providers</h3>
 
@@ -1235,7 +1235,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <p>See <a href="/bootcamp/intro/spatial-data">Intro to Spatial Data</a> for more detailed info on projections.</p>
 
-<p>Each new project starts with the global default projection, <a href="http://www.spatialreference.org/epsg/wgs-84/">EPSG:4326 - WGS 84</a>:</p>
+<p>Each new project starts with the global default projection, <a href="http://www.spatialreference.org/epsg/wgs-84/">EPSG:4326 - WGS 84</a>: </p>
 
 <p><code>proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</code></p>
 
@@ -1243,7 +1243,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <p>However, this is not the same as changing the project projection. You may define the project projection from <em>Menu Bar &gt; Project &gt; Project Properties &gt; CRS</em>. Also keep in mind, the CRS of a new project will change to the CRS of the first layer added to the project.</p>
 
-<p>‘On the fly’ CRS transformation is not enabled by the default QGIS installation.</p>
+<p>‘On the fly’ CRS transformation is not enabled by the default QGIS installation.  </p>
 
 <h2 id="supported-data-formats">Supported Data Formats</h2>
 
@@ -1257,7 +1257,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <p><img src="/bootcamp/assets/images/add-vector.png" alt="Add vector in QGIS" /></p>
 
-<p>View vector attribute table by right clicking on the layer and clicking Open Attribute Table. From here you can sort data, show selected features, show features visible on map, show edited and new features, filter by column, or query data with and advanced filter.</p>
+<p>View vector attribute table by right clicking on the layer and clicking Open Attribute Table. From here you can sort data, show selected features, show features visible on map, show edited and new features, filter by column, or query data with and advanced filter. </p>
 
 <p>Attribute data can be edited by enabling and edit session with the Toggle Editing Mode icon (top left).</p>
 
@@ -1271,13 +1271,13 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <h2 id="general-spatial-functions">General Spatial Functions</h2>
 
-<p>Spatial functions are accessable through <em>Menu Bar &gt; Vector/Raster</em>. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy.</p>
+<p>Spatial functions are accessable through <em>Menu Bar &gt; Vector/Raster</em>. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy. </p>
 
 <h2 id="composing-maps-for-printnon-web-based">Composing Maps (for print/non-web-based)</h2>
 
 <p>This method is ideal for exporting your work for a research paper, admiring your work, and such. Developing a web map for dissimenating your data is a bit more involved and is discussed in the <a href="/bootcamp/visualization/leaflet">Publish Your Data to a Web Mapi/LeafletJS</a> section. Also, to export data with styles see <a href="this-is-not-a-link">This section link</a>.</p>
 
-<p>Begin by opening the Print Composer:</p>
+<p>Begin by opening the Print Composer: </p>
 
 <p><img src="/bootcamp/assets/images/compose-map.png" alt="Create new Print Composer workspace" /></p>
 
@@ -1295,7 +1295,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <h2 id="the-scenario">The Scenario:</h2>
 
-<p>You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map.</p>
+<p>You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map. </p>
 
 <p><br /></p>
 
@@ -1315,7 +1315,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <h3 id="objective">Objective:</h3>
 
-<p>Gather data necessary for locating high-risk landslide areas in the state of Washington.</p>
+<p>Gather data necessary for locating high-risk landslide areas in the state of Washington. </p>
 
 <h3 id="data-sources">Data sources:</h3>
 
@@ -1455,7 +1455,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
     <ul>
       <li>GDAL’s rasterize is a prefered method. This can be accessed through <em>Menu Bar &gt; Raster &gt; Conversion &gt; Rasterize (Vector to raster)</em>. Notice how the parameters have been diabled in the example below. There’s a specific reason for this. Complete the parameter inputs: <em>Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000</em>. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.</li>
       <li><em>Click the edit icon (pencil) locate near the block of code</em>. This enables you to add those non-QGIS parameters.</li>
-      <li><em>Add the line of code</em> <code>-at -a_nodata 0</code> just after <code>gdal_rasterize</code></li>
+      <li><em>Add the line of code</em> <code>-at -a_nodata 0</code> just after <code>gdal_rasterize</code> </li>
       <li><em>-at</em>: Enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.<sup id="fnref:3"><a href="#fn:3" class="footnote">2</a></sup></li>
       <li><em>-a_nodata $value</em>: Assign a specified nodata value to output bands - this prevents pixels with no data from being written into the output raster.<sup id="fnref:3:1"><a href="#fn:3" class="footnote">2</a></sup></li>
       <li><a href="http://www.gdal.org/gdal_rasterize.html">Here’s a link to the gdal_rasterize parameters</a>.<br />
@@ -1466,7 +1466,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
     <ul>
       <li>Open wa_geology.tif style properties. HINT: See step 4.</li>
       <li>For <em>Render type</em>, select <em>Singleband pseudocolor</em></li>
-      <li>On the right select: <em>Load min/max values: Min/max; Extend: Actual (slower); then Load</em>. This loads actual values into the classification. QGIS Approximates values by defautl.</li>
+      <li>On the right select: <em>Load min/max values: Min/max; Extend: Actual (slower); then Load</em>. This loads actual values into the classification. QGIS Approximates values by defautl. </li>
       <li><em>Change Mode to Equal Interval with 3 classes</em>. Remember, we only have three rock strength classes: soft, medium, hard. Change your color map if you’d like. The color maps are not stored into the raster, so the raster will load with the defaul color map (black to white) each time its opened in a new project.</li>
       <li><em>Click Classify</em>. Apply and OK.<br />
    <img src="/bootcamp/assets/images/lesson-1/lesson-1-13.png" alt="QGIS: Style raster" /></li>
@@ -1474,7 +1474,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
   </li>
 </ol>
 
-<p>You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster.</p>
+<p>You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster. </p>
 
 <p>Keep this reclassified and rasterized vector, it’ll be used in the next lesson.</p>
 
@@ -1516,7 +1516,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 <ul>
   <li>within 100m of fault lines</li>
   <li>within 50m of rivers/streams</li>
-  <li>within soft geologic areas</li>
+  <li>within soft geologic areas </li>
 </ul>
 
 <ol>
@@ -1546,7 +1546,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-5.png" alt="Spatial Data Bootcamp: Vector Analysis - add vector data" /></li>
     </ul>
   </li>
-  <li>Open the buffer tool:
+  <li>Open the buffer tool: 
     <ul>
       <li><em>Menu Bar &gt; Vector &gt; Geoprocessing Tools &gt; Buffer(s)</em></li>
     </ul>
@@ -1605,7 +1605,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 <h3 id="data-2">Data:</h3>
 
 <ul>
-  <li>Washington DEM (wa_dem.tif) - <a href="/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model">SEE Data Wrangling</a></li>
+  <li>Washington DEM (wa_dem.tif) - <a href="/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model">SEE Data Wrangling</a> </li>
   <li>Washington geology raster (wa_geology.tif) - <a href="/bootcamp/applications/qgis#data-wrangling---reclassify-and-rasterize-vector">SEE Data Wrangling</a></li>
 </ul>
 
@@ -1776,7 +1776,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <p><br /></p>
 
-<p>References:</p>
+<p>References: </p>
 
 <div class="footnotes">
   <ol>

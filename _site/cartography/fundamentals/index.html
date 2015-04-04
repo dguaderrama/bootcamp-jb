@@ -207,7 +207,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
       	
       
     
@@ -587,7 +587,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
       	
       
     
@@ -948,7 +948,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
       	
       
     
@@ -1255,15 +1255,9 @@ A Sans-serif typeface is good for numbers, small text on your map, and also for 
 Serif typefaces can be good for printed maps, titles, and larger text.
 Traditionally, maps with many labels use a pair of typefaces - one serif and one sans-serif.</p>
 
-<p>Some recommended pairs include
-Frutiger with Meridien
-Rotis with Univers
-Myriad with Kepler
-Nueva with Tekton</p>
-
 <p>Sometimes you may have to take kerning (the spacing between letters) into consideration.</p>
 
-<p>Try exploring more combinations on <a href="http://www.typebrewer.org/">TypeBrewer</a>. Note: this site is not
+<p>Try exploring combinations on <a href="http://www.typebrewer.org/">TypeBrewer</a>. Note: this site is not
 related to ColorBrewer.</p>
 
 <h2 id="mapbox-suite">Mapbox Suite</h2>
@@ -1272,18 +1266,103 @@ related to ColorBrewer.</p>
 <a href="https://www.mapbox.com/design/">MapBox Studio</a> which has some more design features for creating map styles.
 However, TileMill has what we need, so we focus on it for now.</p>
 
-<blockquote>
-  <p>TileMill</p>
-</blockquote>
+<h1 id="tilemill">TileMill</h1>
 
-<p>What made TileMill popular was the ability to turn maps from many formats into tiles. The map is like one big picture,
-which is then split up into squares. This speeds up the process of displaying maps on the web.</p>
+<p>What made TileMill popular was the ability to turn maps from many formats into tiles. The map is like one big picture, which is then split up into squares.
+This speeds up the process of displaying maps on the web.</p>
 
 <p>Besides being an easy way to make tiles, what makes TileMill great for visualizing our data is ‘CartoCSS’, which is just like CSS (Cascading Style Sheets), but for maps! You can type CartoCSS code directly into the TileMill desktop application.</p>
 
 <p>After installing TileMill, the first thing you see when you open it is the projects page.</p>
 
 <p><img src="/bootcamp/assets/images/tilemill/tilemillopen.png" alt="TileMill first view" /></p>
+
+<p>Lets create a new project to play around with style. Click on ‘New Project’ in the top left corner,
+give it a name (any name!) and keep the ‘Include World layer and styles’ checked.</p>
+
+<p><img src="/bootcamp/assets/images/tilemill/newproject.png" alt="New Project" /></p>
+
+<p>Now you have a blank world map! Lets make it our own.</p>
+
+<h1 id="cartocss">CartoCSS</h1>
+
+<p>So what is CSS? It stands for Cascading Style Sheets. The key part of that is ‘Style’.
+CSS is used to make websites look nice - the css file governs colors, sizes, and fonts.</p>
+
+<p>CartoCSS has the same syntax as regular CSS. First you select the element that you will
+be applying styles to. For example, you could choose ‘Map’ for the entire map. Within
+curly brackets, you put all your properties.</p>
+
+<p>One the left you put the name of the property you want to change (for example,
+background-color). Then comes a colon, and on the right the value for that property.
+You should end your lines with a semicolon.</p>
+
+<pre><code>element
+  {
+    propertyName: propertyValue;
+  }
+</code></pre>
+
+<p>On the right of your new map project you can see a space with some css code already
+there. This is what goes in your style file when you save your project. To see
+the changes that you make here, remember to click ‘Save’ at the top right.</p>
+
+<p>See the part that styles the ‘Map’ element? There is a property called
+background-color in there.
+The property value that is assigned to the background color is written in hexadecimal
+notation. You can get colors represented in hexadecimal notation from most color
+wheels on the Internet (and also from Color Brewer!). Lets open up the Paletton.com
+and pick a different blue.
+Once you find a color you like in the square to the right, hover over it or click
+to see the hexadecimal value (or hex code). I chose #0C44C4. Colors in this format
+always have 6 digits (letters or numbers) and a pound symbol in the front.</p>
+
+<p>Replace #b8dee6 with the color of your choice, then save to see the difference.</p>
+
+<p><img src="/bootcamp/assets/images/tilemill/firststyle.png" alt="New Background Color" /></p>
+
+<blockquote>
+  <p>Map Features
+When we are working with vector data, we refer to features on the map, which could be
+things like cities, rivers, and countries. In general, these vector features will always
+be either points, lines, or polygons.</p>
+</blockquote>
+
+<blockquote>
+  <p>Layers in Tilemill
+Every time you add more data to your map, you can put it in its own layer.
+When we import data into Tilemill, it automatically becomes a new layer.
+We give every layer a class name, and some have IDs, too. IDs must be unique to each layer,
+but a class name can be used more than once.</p>
+</blockquote>
+
+<p>To choose a layer based on a class, we start with a period, then the class name.
+For example:
+    .cities
+      {
+        marker-fill: blue;
+      }
+To choose a layer based on an ID, we start with a pound symbol, then the ID name.
+For example:
+    #Barcelona
+      {
+        marker-fill: red;
+      }</p>
+
+<p>Now lets add a new property to our .countries layer (this layer already has the class
+  ‘countries’ given to it).
+  Directly underneath the line “polygon-fill: #fff;”
+  Write “polygon-opacity: 0.5;” Then click save.</p>
+
+<p>Now the countries look light blue! That is because some of the blue background
+  is showing through the white color.</p>
+
+<p><img src="/bootcamp/assets/images/tilemill/addproperty.png" alt="Add Property" /></p>
+
+<p>If we were dealing with lines we would use the properties that start with line- ,
+ while for points it is marker- .
+For more properties and examples reference the
+<a href="https://www.mapbox.com/tilemill/docs/manual/carto/">CartoCSS documentation</a></p>
 
 <h2 id="qgis-cartography">QGIS Cartography</h2>
 

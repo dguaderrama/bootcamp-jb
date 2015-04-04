@@ -207,7 +207,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
       	
       
     
@@ -587,7 +587,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
       	
       
     
@@ -948,7 +948,7 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Data Analysis</a></li>
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
       	
       
     
@@ -1162,6 +1162,16 @@
 
 <div class="entry-content content">
   
+<h4 id="pre-requisites-intro-to-spatial-data-metadata-consumable-services"><strong>Pre-requisites:</strong> Intro to Spatial Data, Metadata, Consumable Services</h4>
+
+<h4 id="objectves"><strong>Objectves:</strong></h4>
+<ul>
+  <li>Understanding how to assess data sources </li>
+  <li>Recognize credible data sources</li>
+</ul>
+
+<hr />
+
 <h1 id="data-collection">Data Collection</h1>
 
 <h3 id="credible-data-sources">Credible Data Sources</h3>
@@ -1232,7 +1242,7 @@ Some elements to look at when evaluating the quality of a data product are:</p>
 <ul>
   <li>
     <dl>
-      <dt><a href="http://www.census.gov/geo/maps-data/data/tiger.html">Topologically Integrated Geographic Encoding and Referencing (TIGER) Products</a></dt>
+      <dt><a href="http://www.census.gov/geo/maps-data/data/tiger.html">Topologically Integrated Geographic Encoding and Referencing (TIGER) Products</a> </dt>
       <dd>TIGER products are spatial extracts from the Census Bureau’s MAF/TIGER database containing features such as roads, railroads, rivers, as well as legal and statistical geographic areas. The Census Bureau offers (these products) in several file types<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.”</dd>
     </dl>
   </li>
@@ -1243,31 +1253,34 @@ Some elements to look at when evaluating the quality of a data product are:</p>
 <h4 id="local-and-regional-governments">Local and regional governments</h4>
 <p>Most states maintain repositories of spatial data characteristic or pertinent to their scope. Some organizations to look for would be state geologic surveys, natural resource departments, city and county governments.</p>
 
-<h3 id="consumable-services">Consumable Services</h3>
+<!--
 
-<p>There is a variety of methods to access spatial data. The most obvious one is downloading a dataset to local machine. This can be the easiest option if the dataset is small enough to download quickly, and the data repository is easy to find. If this is not the case, there are several other options available:</p>
+### Consumable Services
 
-<dl>
-  <dt><a href="http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1">Web Feature Service (WFS)</a> - Useful for modifying features in remote datasets</dt>
-  <dd>The WFS represents a change in the way geographic information is created, modified, and exchanged on the Internet. Rather than sharing geographic information at the file level using the File Transfer Protocol(FTP), the WFS offers direct fine-grained access to geographic information at the feature and feature property level. Web features services allow clients to only retrieve or modify the data they are seeking, rather than retrieving a file that contains the data they are seeking and possibly much more<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.
-<br /><br /></dd>
-  <dt><a href="http://www.opengeospatial.org/standards/wms">Web Map Service (WMS)</a> - Useful for visualizing remote datasets</dt>
-  <dd>The Web Map Service Interface Standard provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. The WMS response will return one or more geo-registered map images (JPEG, PNG, etc) to be display in a browser application<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>.
-<br /><br /></dd>
-  <dt><a href="http://www.opengeospatial.org/standards/wps">Web Processing Service (WPS)</a> - Utilizes remote resources for computation</dt>
-  <dd>THe WPS Standard provides rule for standardizing inputs and outputs for geospatial processing services, such as polygon overlay. The standard also defines how a client can request the execution of a process and how the output of the process is handled<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>. 
-<br /><br /></dd>
-  <dt><a href="http://www.opendap.org">OPeNDAP</a></dt>
-  <dd>OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet<sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup>. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations.</dd>
-</dl>
+There is a variety of methods to access spatial data. The most obvious one is downloading a dataset to local machine. This can be the easiest option if the dataset is small enough to download quickly, and the data repository is easy to find. If this is not the case, there are several other options available:
+  
+  [Web Feature Service (WFS)](http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1) - Useful for modifying features in remote datasets
+  : The WFS represents a change in the way geographic information is created, modified, and exchanged on the Internet. Rather than sharing geographic information at the file level using the File Transfer Protocol(FTP), the WFS offers direct fine-grained access to geographic information at the feature and feature property level. Web features services allow clients to only retrieve or modify the data they are seeking, rather than retrieving a file that contains the data they are seeking and possibly much more[^3].
+<br><br>
 
-<p>A few examples of these applications are:</p>
+  [Web Map Service (WMS)](http://www.opengeospatial.org/standards/wms) - Useful for visualizing remote datasets 
+  : The Web Map Service Interface Standard provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. The WMS response will return one or more geo-registered map images (JPEG, PNG, etc) to be display in a browser application[^4].
+<br><br>
 
-<ul>
-  <li><a href="http://giss.nasa.gov/tools/panoply">Panoply</a></li>
-  <li><a href="http://unidata.usr.edu/software/idv">Integrated Data Viewer</a></li>
-  <li><a href="http://www.iges.org/grads">GrADS</a></li>
-</ul>
+  [Web Processing Service (WPS)](http://www.opengeospatial.org/standards/wps) - Utilizes remote resources for computation
+  : THe WPS Standard provides rule for standardizing inputs and outputs for geospatial processing services, such as polygon overlay. The standard also defines how a client can request the execution of a process and how the output of the process is handled[^5]. 
+<br><br>
+
+  [OPeNDAP](http://www.opendap.org)
+  : OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet[^6]. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations. 
+
+A few examples of these applications are:
+
+  + [Panoply](http://giss.nasa.gov/tools/panoply)
+  + [Integrated Data Viewer](http://unidata.usr.edu/software/idv)
+  + [GrADS](http://www.iges.org/grads)
+
+-->
 
 <h2 id="exercise">Exercise</h2>
 
@@ -1323,22 +1336,10 @@ Some elements to look at when evaluating the quality of a data product are:</p>
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>http://www.gadm.org <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>http://www.gadm.org  <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:2">
       <p>http://www.census.gov/geo/maps-data/data/tiger.html <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:3">
-      <p>http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1 <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:4">
-      <p>http://www.opengeospatial.org/standards/wms <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:5">
-      <p>http://www.opengeospatial.org/standards/wps <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:6">
-      <p>http://www.opendap.org <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>

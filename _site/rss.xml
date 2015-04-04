@@ -5,8 +5,8 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-04-02T17:16:05-07:00</lastBuildDate>
-        <pubDate>2015-04-02T17:16:05-07:00</pubDate>
+        <lastBuildDate>2015-04-03T18:44:39-07:00</lastBuildDate>
+        <pubDate>2015-04-03T18:44:39-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -429,7 +429,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h3&gt;
 
-&lt;p&gt;Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets.&lt;/p&gt;
+&lt;p&gt;Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets. &lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -503,7 +503,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;img src=&quot;/bootcamp/assets/images/usa-states.png&quot; alt=&quot;USA_states&quot; /&gt;&lt;br /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Create a layer for the state of Washington
+  &lt;li&gt;Create a layer for the state of Washington 
     &lt;ul&gt;
       &lt;li&gt;In the top toolbar, select &lt;em&gt;Select Single Feature&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;Click on the state of Washington to select it&lt;br /&gt;
@@ -512,7 +512,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       &lt;li&gt;Format: ESRI Shapefile&lt;/li&gt;
       &lt;li&gt;Save as: washington.shp&lt;/li&gt;
       &lt;li&gt;Encoding: UTF-8&lt;/li&gt;
-      &lt;li&gt;CRS:
+      &lt;li&gt;CRS: 
         &lt;ul&gt;
           &lt;li&gt;Project CRS&lt;/li&gt;
           &lt;li&gt;Browse &amp;gt; &lt;em&gt;NAD83(HARN)/Washington South (ftUS) EPSG:2927&lt;/em&gt;&lt;br /&gt;
@@ -696,7 +696,7 @@ Reclassifying inputs:&lt;/p&gt;
 
 &lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Our raster calculator expression will be:&lt;/p&gt;
+&lt;p&gt;Our raster calculator expression will be: &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -873,7 +873,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;&lt;em&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection.&lt;/p&gt;
+&lt;p&gt;From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection. &lt;/p&gt;
 
 &lt;h3 id=&quot;activate-necessary-providers&quot;&gt;Activate necessary providers&lt;/h3&gt;
 
@@ -895,7 +895,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;See &lt;a href=&quot;/bootcamp/intro/spatial-data&quot;&gt;Intro to Spatial Data&lt;/a&gt; for more detailed info on projections.&lt;/p&gt;
 
-&lt;p&gt;Each new project starts with the global default projection, &lt;a href=&quot;http://www.spatialreference.org/epsg/wgs-84/&quot;&gt;EPSG:4326 - WGS 84&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Each new project starts with the global default projection, &lt;a href=&quot;http://www.spatialreference.org/epsg/wgs-84/&quot;&gt;EPSG:4326 - WGS 84&lt;/a&gt;: &lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs&lt;/code&gt;&lt;/p&gt;
 
@@ -903,7 +903,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;However, this is not the same as changing the project projection. You may define the project projection from &lt;em&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties &amp;gt; CRS&lt;/em&gt;. Also keep in mind, the CRS of a new project will change to the CRS of the first layer added to the project.&lt;/p&gt;
 
-&lt;p&gt;‘On the fly’ CRS transformation is not enabled by the default QGIS installation.&lt;/p&gt;
+&lt;p&gt;‘On the fly’ CRS transformation is not enabled by the default QGIS installation.  &lt;/p&gt;
 
 &lt;h2 id=&quot;supported-data-formats&quot;&gt;Supported Data Formats&lt;/h2&gt;
 
@@ -917,7 +917,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/add-vector.png&quot; alt=&quot;Add vector in QGIS&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;View vector attribute table by right clicking on the layer and clicking Open Attribute Table. From here you can sort data, show selected features, show features visible on map, show edited and new features, filter by column, or query data with and advanced filter.&lt;/p&gt;
+&lt;p&gt;View vector attribute table by right clicking on the layer and clicking Open Attribute Table. From here you can sort data, show selected features, show features visible on map, show edited and new features, filter by column, or query data with and advanced filter. &lt;/p&gt;
 
 &lt;p&gt;Attribute data can be edited by enabling and edit session with the Toggle Editing Mode icon (top left).&lt;/p&gt;
 
@@ -931,13 +931,13 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;h2 id=&quot;general-spatial-functions&quot;&gt;General Spatial Functions&lt;/h2&gt;
 
-&lt;p&gt;Spatial functions are accessable through &lt;em&gt;Menu Bar &amp;gt; Vector/Raster&lt;/em&gt;. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy.&lt;/p&gt;
+&lt;p&gt;Spatial functions are accessable through &lt;em&gt;Menu Bar &amp;gt; Vector/Raster&lt;/em&gt;. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy. &lt;/p&gt;
 
 &lt;h2 id=&quot;composing-maps-for-printnon-web-based&quot;&gt;Composing Maps (for print/non-web-based)&lt;/h2&gt;
 
 &lt;p&gt;This method is ideal for exporting your work for a research paper, admiring your work, and such. Developing a web map for dissimenating your data is a bit more involved and is discussed in the &lt;a href=&quot;/bootcamp/visualization/leaflet&quot;&gt;Publish Your Data to a Web Mapi/LeafletJS&lt;/a&gt; section. Also, to export data with styles see &lt;a href=&quot;this-is-not-a-link&quot;&gt;This section link&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Begin by opening the Print Composer:&lt;/p&gt;
+&lt;p&gt;Begin by opening the Print Composer: &lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/compose-map.png&quot; alt=&quot;Create new Print Composer workspace&quot; /&gt;&lt;/p&gt;
 
@@ -955,7 +955,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;h2 id=&quot;the-scenario&quot;&gt;The Scenario:&lt;/h2&gt;
 
-&lt;p&gt;You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map.&lt;/p&gt;
+&lt;p&gt;You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map. &lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -975,7 +975,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;h3 id=&quot;objective&quot;&gt;Objective:&lt;/h3&gt;
 
-&lt;p&gt;Gather data necessary for locating high-risk landslide areas in the state of Washington.&lt;/p&gt;
+&lt;p&gt;Gather data necessary for locating high-risk landslide areas in the state of Washington. &lt;/p&gt;
 
 &lt;h3 id=&quot;data-sources&quot;&gt;Data sources:&lt;/h3&gt;
 
@@ -1115,7 +1115,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
     &lt;ul&gt;
       &lt;li&gt;GDAL’s rasterize is a prefered method. This can be accessed through &lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Conversion &amp;gt; Rasterize (Vector to raster)&lt;/em&gt;. Notice how the parameters have been diabled in the example below. There’s a specific reason for this. Complete the parameter inputs: &lt;em&gt;Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000&lt;/em&gt;. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Click the edit icon (pencil) locate near the block of code&lt;/em&gt;. This enables you to add those non-QGIS parameters.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Add the line of code&lt;/em&gt; &lt;code&gt;-at -a_nodata 0&lt;/code&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Add the line of code&lt;/em&gt; &lt;code&gt;-at -a_nodata 0&lt;/code&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt; &lt;/li&gt;
       &lt;li&gt;&lt;em&gt;-at&lt;/em&gt;: Enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;-a_nodata $value&lt;/em&gt;: Assign a specified nodata value to output bands - this prevents pixels with no data from being written into the output raster.&lt;sup id=&quot;fnref:3:1&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://www.gdal.org/gdal_rasterize.html&quot;&gt;Here’s a link to the gdal_rasterize parameters&lt;/a&gt;.&lt;br /&gt;
@@ -1126,7 +1126,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
     &lt;ul&gt;
       &lt;li&gt;Open wa_geology.tif style properties. HINT: See step 4.&lt;/li&gt;
       &lt;li&gt;For &lt;em&gt;Render type&lt;/em&gt;, select &lt;em&gt;Singleband pseudocolor&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;On the right select: &lt;em&gt;Load min/max values: Min/max; Extend: Actual (slower); then Load&lt;/em&gt;. This loads actual values into the classification. QGIS Approximates values by defautl.&lt;/li&gt;
+      &lt;li&gt;On the right select: &lt;em&gt;Load min/max values: Min/max; Extend: Actual (slower); then Load&lt;/em&gt;. This loads actual values into the classification. QGIS Approximates values by defautl. &lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Change Mode to Equal Interval with 3 classes&lt;/em&gt;. Remember, we only have three rock strength classes: soft, medium, hard. Change your color map if you’d like. The color maps are not stored into the raster, so the raster will load with the defaul color map (black to white) each time its opened in a new project.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Click Classify&lt;/em&gt;. Apply and OK.&lt;br /&gt;
    &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-13.png&quot; alt=&quot;QGIS: Style raster&quot; /&gt;&lt;/li&gt;
@@ -1134,7 +1134,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster.&lt;/p&gt;
+&lt;p&gt;You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster. &lt;/p&gt;
 
 &lt;p&gt;Keep this reclassified and rasterized vector, it’ll be used in the next lesson.&lt;/p&gt;
 
@@ -1176,7 +1176,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 &lt;ul&gt;
   &lt;li&gt;within 100m of fault lines&lt;/li&gt;
   &lt;li&gt;within 50m of rivers/streams&lt;/li&gt;
-  &lt;li&gt;within soft geologic areas&lt;/li&gt;
+  &lt;li&gt;within soft geologic areas &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;ol&gt;
@@ -1206,7 +1206,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-5.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add vector data&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Open the buffer tool:
+  &lt;li&gt;Open the buffer tool: 
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Vector &amp;gt; Geoprocessing Tools &amp;gt; Buffer(s)&lt;/em&gt;&lt;/li&gt;
     &lt;/ul&gt;
@@ -1265,7 +1265,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 &lt;h3 id=&quot;data-2&quot;&gt;Data:&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Washington DEM (wa_dem.tif) - &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model&quot;&gt;SEE Data Wrangling&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Washington DEM (wa_dem.tif) - &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model&quot;&gt;SEE Data Wrangling&lt;/a&gt; &lt;/li&gt;
   &lt;li&gt;Washington geology raster (wa_geology.tif) - &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---reclassify-and-rasterize-vector&quot;&gt;SEE Data Wrangling&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1436,7 +1436,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;References:&lt;/p&gt;
+&lt;p&gt;References: &lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
@@ -1479,7 +1479,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 &lt;ul&gt;
   &lt;li&gt;Vector&lt;/li&gt;
   &lt;li&gt;Raster&lt;/li&gt;
-  &lt;li&gt;LiDAR&lt;/li&gt;
+  &lt;li&gt;LiDAR &lt;/li&gt;
   &lt;li&gt;Time series&lt;/li&gt;
   &lt;li&gt;Vector Networks&lt;/li&gt;
   &lt;li&gt;3D&lt;/li&gt;
@@ -1765,15 +1765,9 @@ A Sans-serif typeface is good for numbers, small text on your map, and also for 
 Serif typefaces can be good for printed maps, titles, and larger text.
 Traditionally, maps with many labels use a pair of typefaces - one serif and one sans-serif.&lt;/p&gt;
 
-&lt;p&gt;Some recommended pairs include
-Frutiger with Meridien
-Rotis with Univers
-Myriad with Kepler
-Nueva with Tekton&lt;/p&gt;
-
 &lt;p&gt;Sometimes you may have to take kerning (the spacing between letters) into consideration.&lt;/p&gt;
 
-&lt;p&gt;Try exploring more combinations on &lt;a href=&quot;http://www.typebrewer.org/&quot;&gt;TypeBrewer&lt;/a&gt;. Note: this site is not
+&lt;p&gt;Try exploring combinations on &lt;a href=&quot;http://www.typebrewer.org/&quot;&gt;TypeBrewer&lt;/a&gt;. Note: this site is not
 related to ColorBrewer.&lt;/p&gt;
 
 &lt;h2 id=&quot;mapbox-suite&quot;&gt;Mapbox Suite&lt;/h2&gt;
@@ -1782,18 +1776,103 @@ related to ColorBrewer.&lt;/p&gt;
 &lt;a href=&quot;https://www.mapbox.com/design/&quot;&gt;MapBox Studio&lt;/a&gt; which has some more design features for creating map styles.
 However, TileMill has what we need, so we focus on it for now.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;TileMill&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h1 id=&quot;tilemill&quot;&gt;TileMill&lt;/h1&gt;
 
-&lt;p&gt;What made TileMill popular was the ability to turn maps from many formats into tiles. The map is like one big picture,
-which is then split up into squares. This speeds up the process of displaying maps on the web.&lt;/p&gt;
+&lt;p&gt;What made TileMill popular was the ability to turn maps from many formats into tiles. The map is like one big picture, which is then split up into squares.
+This speeds up the process of displaying maps on the web.&lt;/p&gt;
 
 &lt;p&gt;Besides being an easy way to make tiles, what makes TileMill great for visualizing our data is ‘CartoCSS’, which is just like CSS (Cascading Style Sheets), but for maps! You can type CartoCSS code directly into the TileMill desktop application.&lt;/p&gt;
 
 &lt;p&gt;After installing TileMill, the first thing you see when you open it is the projects page.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/tilemill/tilemillopen.png&quot; alt=&quot;TileMill first view&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lets create a new project to play around with style. Click on ‘New Project’ in the top left corner,
+give it a name (any name!) and keep the ‘Include World layer and styles’ checked.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/tilemill/newproject.png&quot; alt=&quot;New Project&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now you have a blank world map! Lets make it our own.&lt;/p&gt;
+
+&lt;h1 id=&quot;cartocss&quot;&gt;CartoCSS&lt;/h1&gt;
+
+&lt;p&gt;So what is CSS? It stands for Cascading Style Sheets. The key part of that is ‘Style’.
+CSS is used to make websites look nice - the css file governs colors, sizes, and fonts.&lt;/p&gt;
+
+&lt;p&gt;CartoCSS has the same syntax as regular CSS. First you select the element that you will
+be applying styles to. For example, you could choose ‘Map’ for the entire map. Within
+curly brackets, you put all your properties.&lt;/p&gt;
+
+&lt;p&gt;One the left you put the name of the property you want to change (for example,
+background-color). Then comes a colon, and on the right the value for that property.
+You should end your lines with a semicolon.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;element
+  {
+    propertyName: propertyValue;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On the right of your new map project you can see a space with some css code already
+there. This is what goes in your style file when you save your project. To see
+the changes that you make here, remember to click ‘Save’ at the top right.&lt;/p&gt;
+
+&lt;p&gt;See the part that styles the ‘Map’ element? There is a property called
+background-color in there.
+The property value that is assigned to the background color is written in hexadecimal
+notation. You can get colors represented in hexadecimal notation from most color
+wheels on the Internet (and also from Color Brewer!). Lets open up the Paletton.com
+and pick a different blue.
+Once you find a color you like in the square to the right, hover over it or click
+to see the hexadecimal value (or hex code). I chose #0C44C4. Colors in this format
+always have 6 digits (letters or numbers) and a pound symbol in the front.&lt;/p&gt;
+
+&lt;p&gt;Replace #b8dee6 with the color of your choice, then save to see the difference.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/tilemill/firststyle.png&quot; alt=&quot;New Background Color&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Map Features
+When we are working with vector data, we refer to features on the map, which could be
+things like cities, rivers, and countries. In general, these vector features will always
+be either points, lines, or polygons.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Layers in Tilemill
+Every time you add more data to your map, you can put it in its own layer.
+When we import data into Tilemill, it automatically becomes a new layer.
+We give every layer a class name, and some have IDs, too. IDs must be unique to each layer,
+but a class name can be used more than once.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;To choose a layer based on a class, we start with a period, then the class name.
+For example:
+    .cities
+      {
+        marker-fill: blue;
+      }
+To choose a layer based on an ID, we start with a pound symbol, then the ID name.
+For example:
+    #Barcelona
+      {
+        marker-fill: red;
+      }&lt;/p&gt;
+
+&lt;p&gt;Now lets add a new property to our .countries layer (this layer already has the class
+  ‘countries’ given to it).
+  Directly underneath the line “polygon-fill: #fff;”
+  Write “polygon-opacity: 0.5;” Then click save.&lt;/p&gt;
+
+&lt;p&gt;Now the countries look light blue! That is because some of the blue background
+  is showing through the white color.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/tilemill/addproperty.png&quot; alt=&quot;Add Property&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If we were dealing with lines we would use the properties that start with line- ,
+ while for points it is marker- .
+For more properties and examples reference the
+&lt;a href=&quot;https://www.mapbox.com/tilemill/docs/manual/carto/&quot;&gt;CartoCSS documentation&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;qgis-cartography&quot;&gt;QGIS Cartography&lt;/h2&gt;
 
@@ -2015,9 +2094,15 @@ which is then split up into squares. This speeds up the process of displaying ma
         </item>
 
         <item>
-                <title>Data Analysis</title>
+                <title>Exercise</title>
                 <description>
-&lt;h3 id=&quot;data-analysis&quot;&gt;Data Analysis&lt;/h3&gt;
+&lt;h4 id=&quot;prerequisites-intro-data-collection-data-wrangling&quot;&gt;Prerequisites: Intro, Data Collection, Data Wrangling&lt;/h4&gt;
+
+&lt;h3 id=&quot;objectives&quot;&gt;Objectives:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Be able to reclassify a raster. &lt;/li&gt;
+  &lt;li&gt;Understand basics of raster calculations.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;exercise&quot;&gt;Exercise&lt;/h3&gt;
 
@@ -2134,7 +2219,7 @@ which is then split up into squares. This speeds up the process of displaying ma
 
 &lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Our raster calculator expression will be:&lt;/p&gt;
+&lt;p&gt;Our raster calculator expression will be: &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -2241,7 +2326,7 @@ which is then split up into squares. This speeds up the process of displaying ma
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;References:&lt;/p&gt;
+&lt;p&gt;References: &lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
@@ -2265,7 +2350,7 @@ which is then split up into squares. This speeds up the process of displaying ma
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/netcdf1_sm.png&quot; alt=&quot;netcdf-logo&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate.&lt;/p&gt;
+&lt;p&gt;NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate. &lt;/p&gt;
 
 &lt;p&gt;NetCDF is a set of software libraries and describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF was developed at &lt;a href=&quot;http://unidata.ucar.edu&quot;&gt;Unidata&lt;/a&gt;. Unidata provides data and software tools for use in geoscience education and research. Unidata is part of the University Corporation for Atmospheric Research(&lt;a href=&quot;http://ucar.edu&quot;&gt;UCAR&lt;/a&gt;) Community Programs(&lt;a href=&quot;http://www.uop.ucar.edu&quot;&gt;UCP&lt;/a&gt;).&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
@@ -2277,17 +2362,17 @@ which is then split up into squares. This speeds up the process of displaying ma
 
 &lt;p&gt;With the help of a THREDDS Data Server, large netCDF datasets are easily accessible and discoverable through a client application or through HTTP.&lt;/p&gt;
 
-&lt;p&gt;The multidimensional nature of netCDF data makes storage of complex data such as temperature and humidity simple. Also, since netCDF allows for multivariate storage, several variables can be subsets, ensembled and explored simultaneously. An issue can be the process of creating a usable dataset from netCDF data. This can be due to the sensor-based nature of netCDF, which is a primary dataset (i.e. daily precipitation sums). In order to get the proper dataset, it often requires researchers to subset, and ensemble values over a dimension. Ensembled data sets could be seasonal datasets, climatologies, or long-term averages.&lt;/p&gt;
+&lt;p&gt;The multidimensional nature of netCDF data makes storage of complex data such as temperature and humidity simple. Also, since netCDF allows for multivariate storage, several variables can be subsets, ensembled and explored simultaneously. An issue can be the process of creating a usable dataset from netCDF data. This can be due to the sensor-based nature of netCDF, which is a primary dataset (i.e. daily precipitation sums). In order to get the proper dataset, it often requires researchers to subset, and ensemble values over a dimension. Ensembled data sets could be seasonal datasets, climatologies, or long-term averages. &lt;/p&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
 &lt;h2 id=&quot;procedure&quot;&gt;Procedure&lt;/h2&gt;
 
-&lt;p&gt;For our case study, we created an annual average for precipitation between 2007-2014.&lt;/p&gt;
+&lt;p&gt;For our case study, we created an annual average for precipitation between 2007-2014. &lt;/p&gt;
 
 &lt;p&gt;We had to first locate the datasets from http://esrl.noaa.gov/psd/thredds/dodsC/Datasets/cpc_us_precip/RT&lt;/p&gt;
 
-&lt;p&gt;This brought us 9 years of datasets.&lt;/p&gt;
+&lt;p&gt;This brought us 9 years of datasets. &lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/daily-precip.png&quot; alt=&quot;daily-precip&quot; /&gt;&lt;/p&gt;
 
@@ -2297,14 +2382,14 @@ which is then split up into squares. This speeds up the process of displaying ma
 
 &lt;h5 id=&quot;netcdf-kitchen-sink&quot;&gt;netCDF Kitchen Sink&lt;/h5&gt;
 
-&lt;p&gt;The nickname ‘kitchen sink’ is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option ‘-d’&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions.&lt;/p&gt;
+&lt;p&gt;The nickname ‘kitchen sink’ is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option ‘-d’&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions. &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ncks -O -d lon,234.0,244.0 -d lat,44.0,50.0 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc subset.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In the above command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testing.&lt;/p&gt;
 
 &lt;h4 id=&quot;removing-bad-values&quot;&gt;Removing bad values&lt;/h4&gt;
-&lt;p&gt;If you look at the metadata for the subsetted file, you can see that the ‘precip’ variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25° x .25°(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library.&lt;/p&gt;
+&lt;p&gt;If you look at the metadata for the subsetted file, you can see that the ‘precip’ variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25° x .25°(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library. &lt;/p&gt;
 
 &lt;h5 id=&quot;netcdf-arithmetic-processor&quot;&gt;netCDF Arithmetic Processor&lt;/h5&gt;
 
@@ -2444,7 +2529,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;This lesson will take us through the steps involved in creating a species range model using the Maximum Entropy probability distribution.&lt;/p&gt;
 
-&lt;p&gt;Before we load in any data we should set the project projection.&lt;/p&gt;
+&lt;p&gt;Before we load in any data we should set the project projection. &lt;/p&gt;
 
 &lt;p&gt;To add this to QGIS you can go into the top menu:&lt;/p&gt;
 
@@ -2452,7 +2537,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;Click &lt;em&gt;Add new CRS&lt;/em&gt; to create a new custom projection&lt;/p&gt;
 
-&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/bootcamp//assets/images/addNewCrs.png&quot; alt=&quot;add-Crs&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/addNewCrs.png&quot; alt=&quot;add-Crs&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In the box labeled &lt;em&gt;Name:&lt;/em&gt; enter &lt;em&gt;New World LAEA&lt;/em&gt;&lt;/p&gt;
 
@@ -2514,7 +2599,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/pluginEnabled.png&quot; alt=&quot;plugin-enabled&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;If you have already set up your iPlant account and were given permissions to the Bootcamp dataset continue to the next steps.&lt;/p&gt;
+&lt;p&gt;If you have already set up your iPlant account and were given permissions to the Bootcamp dataset continue to the next steps. &lt;/p&gt;
 
 &lt;p&gt;If not, make sure to &lt;a href=&quot;http://user.iplantcollaborative.org&quot;&gt;register for iPlant access&lt;/a&gt;, and request access to the data store.&lt;/p&gt;
 
@@ -2582,7 +2667,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;The environmental layers can be found in the iPlant data store in the &lt;em&gt;env.zip&lt;/em&gt; file.&lt;/p&gt;
 
-&lt;p&gt;To download the layers, sign in to the iPlant Discovery Environment and open the Data Store.&lt;/p&gt;
+&lt;p&gt;To download the layers, sign in to the iPlant Discovery Environment and open the Data Store. &lt;/p&gt;
 
 &lt;p&gt;The layers should be available under /iplant/home/shared/aegis/Spatial-bootcamp/Range-model/env.zip&lt;/p&gt;
 
@@ -2600,13 +2685,13 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/loadEnvRasters.png&quot; alt=&quot;load-env-rasters&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Once all the rasters are loaded, you should see them in your Table of Contents, but not on the map.&lt;/p&gt;
+&lt;p&gt;Once all the rasters are loaded, you should see them in your Table of Contents, but not on the map. &lt;/p&gt;
 
 &lt;p&gt;If you check the layer properties on one of the rasters, you can see that they default to EPSG:4326, although we had previously stated they come in the New World LAEA.&lt;/p&gt;
 
-&lt;p&gt;This happens because Ascii Grid Format doesn’t store any projection information.&lt;/p&gt;
+&lt;p&gt;This happens because Ascii Grid Format doesn’t store any projection information. &lt;/p&gt;
 
-&lt;p&gt;To allow any analysis, we will have to define the projection for the raster data sets.&lt;/p&gt;
+&lt;p&gt;To allow any analysis, we will have to define the projection for the raster data sets. &lt;/p&gt;
 
 &lt;p&gt;To do this, you can click on the layer name in the Table of Contents and Select &lt;em&gt;Set Layer CRS&lt;/em&gt;&lt;/p&gt;
 
@@ -2681,7 +2766,16 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
         <item>
                 <title>Data Formatting</title>
-                <description>
+                <description>&lt;h4 id=&quot;pre-requisites-intro-to-spatial-data-data-collection&quot;&gt;&lt;strong&gt;Pre-requisites:&lt;/strong&gt; Intro to Spatial Data, Data Collection&lt;/h4&gt;
+
+&lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Understanding how to wrangle or prepare your data&lt;/li&gt;
+  &lt;li&gt;Recognize common methods to sptail data wrangling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
 &lt;h1 id=&quot;data-formatting&quot;&gt;Data Formatting&lt;/h1&gt;
 
 &lt;p&gt;Data manipulation can be a simple endeavour if the data inputs come in the same or compatible formats. Data sources will usually have a specific format they use for their data which can make it easy to use work with their datasets. Unfortunately, when we gather data from various sources, we are usually given several different formats to data to deal with. Data wrangling is the process of manipulating and reformatting disparate data sources into compatible datasets. Data wrangling makes proper analysis/modeling possible. There are several methods common to spatial data wrangling some of which are:&lt;/p&gt;
@@ -2722,7 +2816,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;img src=&quot;/bootcamp/assets/images/usa-states.png&quot; alt=&quot;USA_states&quot; /&gt;&lt;br /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Create a layer for the state of Washington
+  &lt;li&gt;Create a layer for the state of Washington 
     &lt;ul&gt;
       &lt;li&gt;Within the Layers List, click on USA_adm1 to activate layer tools.&lt;/li&gt;
       &lt;li&gt;Select Single Feature tool:&lt;br /&gt;&lt;em&gt;Menu Bar &amp;gt; View &amp;gt; Select &amp;gt; Select Single Feature&lt;/em&gt; OR&lt;br /&gt;in the top toolbar, select &lt;em&gt;Select Single Feature&lt;/em&gt;&lt;/li&gt;
@@ -2732,7 +2826,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
       &lt;li&gt;Format: ESRI Shapefile&lt;/li&gt;
       &lt;li&gt;Save as: washington.shp&lt;/li&gt;
       &lt;li&gt;Encoding: UTF-8&lt;/li&gt;
-      &lt;li&gt;CRS:
+      &lt;li&gt;CRS: 
         &lt;ul&gt;
           &lt;li&gt;Selected CRS&lt;/li&gt;
           &lt;li&gt;Browse &amp;gt; &lt;em&gt;NAD83(HARN)/Washington South (ftUS) EPSG:2927&lt;/em&gt;&lt;br /&gt;
@@ -2790,11 +2884,21 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
         <item>
                 <title>Spatial Manipulation</title>
                 <description>
+&lt;h4 id=&quot;pre-requisites-intro-to-spatial-data-data-formatting&quot;&gt;&lt;strong&gt;Pre-requisites:&lt;/strong&gt; Intro to Spatial Data, Data Formatting&lt;/h4&gt;
+
+&lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Recognize a few spatial relationships&lt;/li&gt;
+  &lt;li&gt;Understand how to clip a raster  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
 &lt;h1 id=&quot;spatial-functions&quot;&gt;Spatial Functions&lt;/h1&gt;
 
 &lt;h2 id=&quot;relational-operations&quot;&gt;Relational Operations&lt;/h2&gt;
 
-&lt;p&gt;Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;/p&gt;
 
 &lt;table border=&quot;0&quot; align=&quot;center&quot;&gt;
   &lt;tr&gt;
@@ -2902,7 +3006,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;spatial-predicates&quot;&gt;Spatial Predicates&lt;/h3&gt;
-&lt;p&gt;The above figure demonstrates the criteria outlined by the Dimensionally Extended Nine-Intersection Model(DE-9IM). The matrix is used to outline specific spatial relationships or predicates which are more accessible to interpretaion. These named spatial predicates are also used by spatial queryies to selet subsets of geometrys that fit in one spatial predicate.&lt;/p&gt;
+&lt;p&gt;The above figure demonstrates the criteria outlined by the Dimensionally Extended Nine-Intersection Model(DE-9IM). The matrix is used to outline specific spatial relationships or predicates which are more accessible to interpretaion. These named spatial predicates are also used by spatial queryies to selet subsets of geometrys that fit in one spatial predicate. &lt;/p&gt;
 
 &lt;p&gt;Here is a quick outline of the Spatial Predicates&lt;/p&gt;
 
@@ -2911,7 +3015,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;dd&gt;The two geometric objects are spatially equal meaning, they represent the same geometry (congruent in geometric terms)&lt;/dd&gt;
   &lt;dt&gt;Disjoint&lt;/dt&gt;
   &lt;dd&gt;The two geometric objects share no points in common, the two objects are completely separate&lt;/dd&gt;
-  &lt;dt&gt;Intersects&lt;/dt&gt;
+  &lt;dt&gt;Intersects &lt;/dt&gt;
   &lt;dd&gt;The two geometric objects have at least one point in common&lt;/dd&gt;
   &lt;dt&gt;Touches&lt;/dt&gt;
   &lt;dd&gt;The two geometric objects have at least one boundary point in common, but no interior points&lt;/dd&gt;
@@ -2935,7 +3039,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;dl&gt;
   &lt;dt&gt;Distance&lt;/dt&gt;
-  &lt;dd&gt;Measures the shortest distance between two geometries.&lt;/dd&gt;
+  &lt;dd&gt;Measures the shortest distance between two geometries. &lt;/dd&gt;
   &lt;dt&gt;Buffer&lt;/dt&gt;
   &lt;dd&gt;Creates a geometric object that represents all points within a given distance from the given geometry&lt;/dd&gt;
   &lt;dt&gt;Convex Hull&lt;/dt&gt;
@@ -2961,19 +3065,19 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
       &lt;li&gt;Residential areas with past landslide&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Union
+  &lt;li&gt;Union 
     &lt;ul&gt;
       &lt;li&gt;Merging census data for two states in a single layer (Useful for studying phenomena that do not respect political boundaries)&lt;/li&gt;
       &lt;li&gt;Merging state boundaries for Canada, U.S. and Mexico into a North American dataset (GADM makes this a breeze)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Buffer
+  &lt;li&gt;Buffer 
     &lt;ul&gt;
       &lt;li&gt;Instagram posts vs within 100m of a local restaurant&lt;/li&gt;
       &lt;li&gt;Tweets vs within 1km of a football stadium&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Convex Hull
+  &lt;li&gt;Convex Hull 
     &lt;ul&gt;
       &lt;li&gt;Bounding boxes, circles&lt;/li&gt;
       &lt;li&gt;Range modeling for small data sets&lt;/li&gt;
@@ -3074,7 +3178,17 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
         <item>
                 <title>Metadata</title>
-                <description>&lt;h2 id=&quot;data-about-data&quot;&gt;Data about data&lt;/h2&gt;
+                <description>&lt;h4 id=&quot;pre-requisites-intro-to-spaital-data&quot;&gt;&lt;strong&gt;Pre-requisites: Intro to Spaital Data&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Understanding purpose of metadata&lt;/li&gt;
+  &lt;li&gt;Recognizing elements included in spatial metadata&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;data-about-data&quot;&gt;Data about data&lt;/h2&gt;
 
 &lt;p&gt;Metadata is easily overlooked, but can be critical when data is downloaded from an unfamiliar source. Metadata helps you understand the accuracy and content of your data.&lt;/p&gt;
 
@@ -3092,7 +3206,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;View Metadata in QGIS &lt;em&gt;Right-click layer &amp;gt; Properties &amp;gt; Metadata&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;General:&lt;/p&gt;
+&lt;p&gt;General: &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Storage type&lt;/li&gt;
@@ -3104,7 +3218,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;Author or point of contact&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Extent:&lt;/p&gt;
+&lt;p&gt;Extent: &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;(xMin, yMin), (xMax,yMax)&lt;/li&gt;
@@ -3119,7 +3233,17 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
         <item>
                 <title>Consumable Services</title>
-                <description>&lt;h1 id=&quot;consumable-services&quot;&gt;Consumable Services&lt;/h1&gt;
+                <description>&lt;h4 id=&quot;pre-requisites-intro-to-spatial-data-metadata&quot;&gt;&lt;strong&gt;Pre-requisites: Intro to Spatial Data, Metadata&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Recognize difference between services and local datasets&lt;/li&gt;
+  &lt;li&gt;Understand purpose of web services&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;consumable-services&quot;&gt;Consumable Services&lt;/h1&gt;
 
 &lt;p&gt;There is a variety of methods to access spatial data. The most obvious one is downloading a dataset to local machine. This can be the easiest option if the dataset is small enough to download quickly, and the data repository is easy to find. If this is not the case, there are several other options available:&lt;/p&gt;
 
@@ -3127,14 +3251,14 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;dt&gt;&lt;a href=&quot;http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1&quot;&gt;Web Feature Service (WFS)&lt;/a&gt; - Useful for modifying features in remote datasets&lt;/dt&gt;
   &lt;dd&gt;The WFS represents a change in the way geographic information is created, modified, and exchanged on the Internet. Rather than sharing geographic information at the file level using the File Transfer Protocol(FTP), the WFS offers direct fine-grained access to geographic information at the feature and feature property level. Web features services allow clients to only retrieve or modify the data they are seeking, rather than retrieving a file that contains the data they are seeking and possibly much more&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
-  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wms&quot;&gt;Web Map Service (WMS)&lt;/a&gt; - Useful for visualizing remote datasets&lt;/dt&gt;
+  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wms&quot;&gt;Web Map Service (WMS)&lt;/a&gt; - Useful for visualizing remote datasets &lt;/dt&gt;
   &lt;dd&gt;The Web Map Service Interface Standard provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. The WMS response will return one or more geo-registered map images (JPEG, PNG, etc) to be display in a browser application&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
   &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wps&quot;&gt;Web Processing Service (WPS)&lt;/a&gt; - Utilizes remote resources for computation&lt;/dt&gt;
   &lt;dd&gt;THe WPS Standard provides rule for standardizing inputs and outputs for geospatial processing services, such as polygon overlay. The standard also defines how a client can request the execution of a process and how the output of the process is handled&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. 
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
   &lt;dt&gt;&lt;a href=&quot;http://www.opendap.org&quot;&gt;OPeNDAP&lt;/a&gt;&lt;/dt&gt;
-  &lt;dd&gt;OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations.&lt;/dd&gt;
+  &lt;dd&gt;OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations. &lt;/dd&gt;
 &lt;/dl&gt;
 
 &lt;p&gt;A few examples of these applications are:&lt;/p&gt;
@@ -3170,6 +3294,16 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
         <item>
                 <title>Credible Data Sources</title>
                 <description>
+&lt;h4 id=&quot;pre-requisites-intro-to-spatial-data-metadata-consumable-services&quot;&gt;&lt;strong&gt;Pre-requisites:&lt;/strong&gt; Intro to Spatial Data, Metadata, Consumable Services&lt;/h4&gt;
+
+&lt;h4 id=&quot;objectves&quot;&gt;&lt;strong&gt;Objectves:&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Understanding how to assess data sources &lt;/li&gt;
+  &lt;li&gt;Recognize credible data sources&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
 &lt;h1 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h1&gt;
 
 &lt;h3 id=&quot;credible-data-sources&quot;&gt;Credible Data Sources&lt;/h3&gt;
@@ -3240,7 +3374,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;ul&gt;
   &lt;li&gt;
     &lt;dl&gt;
-      &lt;dt&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger.html&quot;&gt;Topologically Integrated Geographic Encoding and Referencing (TIGER) Products&lt;/a&gt;&lt;/dt&gt;
+      &lt;dt&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger.html&quot;&gt;Topologically Integrated Geographic Encoding and Referencing (TIGER) Products&lt;/a&gt; &lt;/dt&gt;
       &lt;dd&gt;TIGER products are spatial extracts from the Census Bureau’s MAF/TIGER database containing features such as roads, railroads, rivers, as well as legal and statistical geographic areas. The Census Bureau offers (these products) in several file types&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.”&lt;/dd&gt;
     &lt;/dl&gt;
   &lt;/li&gt;
@@ -3251,31 +3385,34 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;h4 id=&quot;local-and-regional-governments&quot;&gt;Local and regional governments&lt;/h4&gt;
 &lt;p&gt;Most states maintain repositories of spatial data characteristic or pertinent to their scope. Some organizations to look for would be state geologic surveys, natural resource departments, city and county governments.&lt;/p&gt;
 
-&lt;h3 id=&quot;consumable-services&quot;&gt;Consumable Services&lt;/h3&gt;
+&lt;!--
 
-&lt;p&gt;There is a variety of methods to access spatial data. The most obvious one is downloading a dataset to local machine. This can be the easiest option if the dataset is small enough to download quickly, and the data repository is easy to find. If this is not the case, there are several other options available:&lt;/p&gt;
+### Consumable Services
 
-&lt;dl&gt;
-  &lt;dt&gt;&lt;a href=&quot;http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1&quot;&gt;Web Feature Service (WFS)&lt;/a&gt; - Useful for modifying features in remote datasets&lt;/dt&gt;
-  &lt;dd&gt;The WFS represents a change in the way geographic information is created, modified, and exchanged on the Internet. Rather than sharing geographic information at the file level using the File Transfer Protocol(FTP), the WFS offers direct fine-grained access to geographic information at the feature and feature property level. Web features services allow clients to only retrieve or modify the data they are seeking, rather than retrieving a file that contains the data they are seeking and possibly much more&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
-&lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
-  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wms&quot;&gt;Web Map Service (WMS)&lt;/a&gt; - Useful for visualizing remote datasets&lt;/dt&gt;
-  &lt;dd&gt;The Web Map Service Interface Standard provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. The WMS response will return one or more geo-registered map images (JPEG, PNG, etc) to be display in a browser application&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.
-&lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
-  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wps&quot;&gt;Web Processing Service (WPS)&lt;/a&gt; - Utilizes remote resources for computation&lt;/dt&gt;
-  &lt;dd&gt;THe WPS Standard provides rule for standardizing inputs and outputs for geospatial processing services, such as polygon overlay. The standard also defines how a client can request the execution of a process and how the output of the process is handled&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;. 
-&lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
-  &lt;dt&gt;&lt;a href=&quot;http://www.opendap.org&quot;&gt;OPeNDAP&lt;/a&gt;&lt;/dt&gt;
-  &lt;dd&gt;OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations.&lt;/dd&gt;
-&lt;/dl&gt;
+There is a variety of methods to access spatial data. The most obvious one is downloading a dataset to local machine. This can be the easiest option if the dataset is small enough to download quickly, and the data repository is easy to find. If this is not the case, there are several other options available:
+  
+  [Web Feature Service (WFS)](http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1) - Useful for modifying features in remote datasets
+  : The WFS represents a change in the way geographic information is created, modified, and exchanged on the Internet. Rather than sharing geographic information at the file level using the File Transfer Protocol(FTP), the WFS offers direct fine-grained access to geographic information at the feature and feature property level. Web features services allow clients to only retrieve or modify the data they are seeking, rather than retrieving a file that contains the data they are seeking and possibly much more[^3].
+&lt;br&gt;&lt;br&gt;
 
-&lt;p&gt;A few examples of these applications are:&lt;/p&gt;
+  [Web Map Service (WMS)](http://www.opengeospatial.org/standards/wms) - Useful for visualizing remote datasets 
+  : The Web Map Service Interface Standard provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. The WMS response will return one or more geo-registered map images (JPEG, PNG, etc) to be display in a browser application[^4].
+&lt;br&gt;&lt;br&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://giss.nasa.gov/tools/panoply&quot;&gt;Panoply&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://unidata.usr.edu/software/idv&quot;&gt;Integrated Data Viewer&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.iges.org/grads&quot;&gt;GrADS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+  [Web Processing Service (WPS)](http://www.opengeospatial.org/standards/wps) - Utilizes remote resources for computation
+  : THe WPS Standard provides rule for standardizing inputs and outputs for geospatial processing services, such as polygon overlay. The standard also defines how a client can request the execution of a process and how the output of the process is handled[^5]. 
+&lt;br&gt;&lt;br&gt;
+
+  [OPeNDAP](http://www.opendap.org)
+  : OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet[^6]. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations. 
+
+A few examples of these applications are:
+
+  + [Panoply](http://giss.nasa.gov/tools/panoply)
+  + [Integrated Data Viewer](http://unidata.usr.edu/software/idv)
+  + [GrADS](http://www.iges.org/grads)
+
+--&gt;
 
 &lt;h2 id=&quot;exercise&quot;&gt;Exercise&lt;/h2&gt;
 
@@ -3331,22 +3468,10 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;http://www.gadm.org &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;http://www.gadm.org  &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
       &lt;p&gt;http://www.census.gov/geo/maps-data/data/tiger.html &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1 &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;http://www.opengeospatial.org/standards/wms &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:5&quot;&gt;
-      &lt;p&gt;http://www.opengeospatial.org/standards/wps &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:6&quot;&gt;
-      &lt;p&gt;http://www.opendap.org &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -3359,7 +3484,15 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
         <item>
                 <title>Is Spatial Special?</title>
                 <description>
-&lt;h4 id=&quot;prerequisite-installing-qgis&quot;&gt;&lt;em&gt;Prerequisite: Installing QGIS&lt;/em&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;prerequisite-installing-qgis&quot;&gt;&lt;strong&gt;Prerequisite: Installing QGIS&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Understand fundamental elements of spatial data&lt;/li&gt;
+  &lt;li&gt;Recognize the difference between Points, Lines, and Polygon data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
 
 &lt;h1 id=&quot;is-spatial-special&quot;&gt;Is Spatial Special?&lt;/h1&gt;
 
@@ -3369,7 +3502,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;h2 id=&quot;do-they-have-a-point&quot;&gt;Do they have a point?&lt;/h2&gt;
 
-&lt;p&gt;There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of data types, which are each inter-related. Spatial data is also dependent on a few factors such as projection, ellipsoid, and unit of measure. Spatial data is naturally multi-dimensional but needs to normally be passed through a visualization application to understand. Finally, a sticking point for spatial data has been how should the data be organized effectively and how can the inherent relationships between objects be tested efficiently.&lt;/p&gt;
+&lt;p&gt;There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of data types, which are each inter-related. Spatial data is also dependent on a few factors such as projection, ellipsoid, and unit of measure. Spatial data is naturally multi-dimensional but needs to normally be passed through a visualization application to understand. Finally, a sticking point for spatial data has been how should the data be organized effectively and how can the inherent relationships between objects be tested efficiently. &lt;/p&gt;
 
 &lt;p&gt;The specification helps to define a few words useful when dealing with spatial data.&lt;/p&gt;
 
@@ -3390,11 +3523,11 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;p&gt;Some of the most used spatial data types are:&lt;/p&gt;
 
 &lt;dl&gt;
-  &lt;dt&gt;Point&lt;/dt&gt;
+  &lt;dt&gt;Point &lt;/dt&gt;
   &lt;dd&gt;A Point is a 0-dimensional geometric object and represents a single location in coordinate space. A Point has an x-coordinate value, and a y-coordinate value. If called for by the associated Spatial Reference System, it may also have coordinate values for z and m.&lt;/dd&gt;
-  &lt;dt&gt;LineString&lt;/dt&gt;
+  &lt;dt&gt;LineString &lt;/dt&gt;
   &lt;dd&gt;A linestring is a Curve with linear interpolation between Points. Each consecutive pair of points defines aLine Segment. A  line is a LineString with exactly 2 Points. A Linear Ring is a LineString is a LieString that is both closed and simple. A linestring is a series of connected points. These points act as vertices or nodes and are connected by curves. Each curve is assigned a start point and end point whcih represents the cardinality of the linestring. This cardinality is used to designate an order from the starting point to the end point.&lt;/dd&gt;
-  &lt;dt&gt;Polygon&lt;/dt&gt;
+  &lt;dt&gt;Polygon &lt;/dt&gt;
   &lt;dd&gt;A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. Polygons are topologically closed. THe boundary of a Polygon consists of a set of LinearRings that make up its exterior and interior boundaries. No two Rings in the boundary cross and the Rings in the boundary of a Polygon may intersect but only as a tangent.  A series of connected line strings&lt;/dd&gt;
   &lt;dt&gt;Raster&lt;/dt&gt;
   &lt;dd&gt;A continuous surface made up of regular cells which hold values. Rasters are similar to matrices.&lt;/dd&gt;
@@ -3414,7 +3547,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
   &lt;p&gt;“Everything is related to everything else, but near things are more related than distant things” - Waldo Tobler&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Tobler’s First law of Geography is the fundamental basis of Spatial Analysis.&lt;/p&gt;
+&lt;p&gt;Tobler’s First law of Geography is the fundamental basis of Spatial Analysis. &lt;/p&gt;
 
 &lt;p&gt;This spatial dependence required the study of spatial effects and their influence on statistical studies.&lt;/p&gt;
 
@@ -3428,7 +3561,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;h3 id=&quot;sorting-and-indexes&quot;&gt;Sorting and Indexes&lt;/h3&gt;
 
-&lt;p&gt;Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type.&lt;/p&gt;
+&lt;p&gt;Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type. &lt;/p&gt;
 
 &lt;p&gt;Sorting spatial data poses an interesting problem. Do you sort from North to south? West to East? What happens if you are sorting lines or polygons that overlap?&lt;/p&gt;
 
@@ -3436,7 +3569,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;p&gt;The R-Tree index was proposed by Antoine Guttman in 1984.&lt;/p&gt;
 
-&lt;p&gt;In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features.&lt;/p&gt;
+&lt;p&gt;In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features. &lt;/p&gt;
 
 &lt;p&gt;&lt;a title=&quot;By Skinkie, w:en:Radim Baca (Own work) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AR-tree.svg&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;R-tree&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/R-tree.svg/512px-R-tree.svg.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -3470,6 +3603,16 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
         <item>
                 <title>Vectors and Rasters</title>
                 <description>
+&lt;h4 id=&quot;pre-requisites-installing-qgis-is-spatial-special&quot;&gt;&lt;strong&gt;Pre-requisites: Installing QGIS, Is Spatial Special?&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Understand the difference between a raster and a vector dataset. &lt;/li&gt;
+  &lt;li&gt;Recognize a few spatial data formats.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
 &lt;h1 id=&quot;rasters-and-vectors&quot;&gt;Rasters and Vectors&lt;/h1&gt;
 &lt;p&gt;There are two main families of spatial data which are each used for a specific function. Vector data, which represents discrete phenomena such as bus stations, and Raster data which represents continuous phenomena like temperature.&lt;/p&gt;
 
@@ -3519,11 +3662,21 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
         <item>
                 <title>Projections</title>
                 <description>
-&lt;h2 id=&quot;projections-a-nameprojectionsa&quot;&gt;Projections &lt;a name=&quot;projections&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h4 id=&quot;pre-requisites-is-spatial-special-vectors-and-rasters&quot;&gt;&lt;strong&gt;Pre-requisites: Is Spatial Special, Vectors and Rasters&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Understand purpose of using a projection on a map&lt;/li&gt;
+  &lt;li&gt;Recognize a few projection types&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;projections-a-nameprojectionsa&quot;&gt;Projections &lt;a name=&quot;projections&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Projections characterize spatial data by setting coordinate reference systems for each data set.&lt;/p&gt;
 
 &lt;p&gt;Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
- will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth&#39;s image onto a plane.&lt;/p&gt;
+ will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth&#39;s image onto a plane. &lt;/p&gt;
 
 &lt;h4 id=&quot;distortion&quot;&gt;Distortion&lt;/h4&gt;
 
@@ -3568,7 +3721,7 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
 &lt;p&gt;&lt;a title=&quot;By Ciphers (Own work) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AMercator_projection_ar.png&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;Mercator projection ar&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Mercator_projection_ar.png/512px-Mercator_projection_ar.png&quot; /&gt;&lt;/a&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Cylindrical projections are created by projection a sphere onto a cylinder. Cylindrical projections suffer the least distortion along the line that it intersects the sphere, which is often around the Equator. This makes cylindrical projections useful for mapping tropical data. Examples include Mercator and Universal Transverse Mercator.&lt;/p&gt;
+&lt;p&gt;Cylindrical projections are created by projection a sphere onto a cylinder. Cylindrical projections suffer the least distortion along the line that it intersects the sphere, which is often around the Equator. This makes cylindrical projections useful for mapping tropical data. Examples include Mercator and Universal Transverse Mercator. &lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Polyhedral&lt;/strong&gt;&lt;/p&gt;
 
@@ -3583,11 +3736,11 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
 
 &lt;h3 id=&quot;checking-the-projection&quot;&gt;Checking the projection&lt;/h3&gt;
 
-&lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis.&lt;/p&gt;
+&lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis. &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.gdal.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/gdalinfo.png&quot; alt=&quot;Using GDAL to check projection&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings. &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/spatialreference.png&quot; alt=&quot;SpatialReference.org: EPSG:4326&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 

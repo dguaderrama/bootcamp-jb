@@ -7,7 +7,15 @@ tags: [intro, projection]
 
 {% include JB/setup %}
 
-##Projections <a name="projections"></a>
+####**Pre-requisites: Is Spatial Special, Vectors and Rasters**
+
+####**Objectives:**
+  - Understand purpose of using a projection on a map
+  - Recognize a few projection types
+
+----
+
+#Projections <a name="projections"></a>
 Projections characterize spatial data by setting coordinate reference systems for each data set.
 
 Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
