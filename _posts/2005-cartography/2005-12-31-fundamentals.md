@@ -190,11 +190,17 @@ For example:
 Now lets add a new property to our .countries layer (this layer already has the class
   'countries' given to it).
   Directly underneath the line "polygon-fill: #fff;"
-  Write "polygon-opacity: 0.8;" Then click save.
-  Notice that while you are writing, the property name is light grey, but once you
-  finish it turns to regular black text. This is to help you know that you are using
-  a valid property name.
+  Write "polygon-opacity: 0.5;" Then click save.
 
+  Now the countries look light blue! That is because some of the blue background
+  is showing through the white color.
+
+  ![Add Property]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/addproperty.png)
+
+If we were dealing with lines we would use the properties that start with line- ,
+ while for points it is marker- .
+For more properties and examples reference the
+[CartoCSS documentation](https://www.mapbox.com/tilemill/docs/manual/carto/)
 
 ## QGIS Cartography
 
