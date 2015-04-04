@@ -11,11 +11,16 @@ tags : [cartography, web map, leaflet, openlayers, d3]
 ## Understanding web mapping
 
 A map on the Internet shouldn't be just a picture. There is potential for interaction,
-animation, 3D, and more! Even better, the internet can allow
-us to share our maps and spatial data more effectively than ever.
-But first, lets start with the basics.
+animation, 3D, and more! Even better, the Internet can allowus to share our maps and
+spatial data more effectively than ever.
 
-What is different about a map on the web?
+How does a map work on the web?
+
+Anatomy of a web map
+Zooming
+Tiling
+Interaction
+Sharing
 
 ## Web map frameworks
 
