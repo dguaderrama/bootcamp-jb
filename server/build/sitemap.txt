@@ -1,0 +1,33 @@
+
+http://104.237.129.71/bootcamp/sitemap.txt
+http://104.237.129.71/bootcamp/categories.html
+http://104.237.129.71/bootcamp/rss.xml
+http://104.237.129.71/bootcamp/about.html
+http://104.237.129.71/bootcamp/index.html
+http://104.237.129.71/bootcamp/atom.xml
+
+http://104.237.129.71/bootcamp/References/citations
+http://104.237.129.71/bootcamp/References/scripts
+http://104.237.129.71/bootcamp/References/tools
+http://104.237.129.71/bootcamp/References/case-study
+http://104.237.129.71/bootcamp/Applications/qgis
+http://104.237.129.71/bootcamp/Applications/grass-gis
+http://104.237.129.71/bootcamp/Applications/panoply
+http://104.237.129.71/bootcamp/Things to Come/future
+http://104.237.129.71/bootcamp/Distribution/distribution
+http://104.237.129.71/bootcamp/Distribution/web-mapping
+http://104.237.129.71/bootcamp/Cartography/fundamentals
+http://104.237.129.71/bootcamp/Cartography/cartography
+http://104.237.129.71/bootcamp/Cartography/map-types
+http://104.237.129.71/bootcamp/Data Analysis/case-study
+http://104.237.129.71/bootcamp/Data Analysis/netcdf
+http://104.237.129.71/bootcamp/Data Analysis/range-modeling
+http://104.237.129.71/bootcamp/Data wrangling/data-wrangling
+http://104.237.129.71/bootcamp/Data Wrangling/functions
+http://104.237.129.71/bootcamp/Data Collection/metadata
+http://104.237.129.71/bootcamp/Data Collection/consumable-services
+http://104.237.129.71/bootcamp/Data Collection/credible-sources
+http://104.237.129.71/bootcamp/Intro/what
+http://104.237.129.71/bootcamp/Intro/intro
+http://104.237.129.71/bootcamp/Intro/projections
+http://104.237.129.71/bootcamp/Setup/qgis-install

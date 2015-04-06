@@ -5,8 +5,8 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-04-03T21:21:32-07:00</lastBuildDate>
-        <pubDate>2015-04-03T21:21:32-07:00</pubDate>
+        <lastBuildDate>2015-04-05T21:39:17-07:00</lastBuildDate>
+        <pubDate>2015-04-05T21:39:17-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -1453,31 +1453,129 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
     &lt;ul&gt;
       &lt;li&gt;Enable the Processing Toolbox: &lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Toolbox &amp;gt; Select Advanced interface&lt;/em&gt;&lt;br /&gt;
   &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-7.jpg&quot; alt=&quot;Spatial Data Bootcamp: Raster Analysis - Reclassify slope raster&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;The &lt;em&gt;r.reclass&lt;/em&gt; tool will be used to reclassify the slope raster into correct categories. Create a text file with the following data. Save it as slope-rule.txt.&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-8.jpg&quot; alt=&quot;Spatial Data Bootcamp: Raster Analysis - Reclassify slope raster&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;Open GRASS tool, r.reclass: &lt;em&gt;Processing Toolbox (with Advanced interface) &amp;gt; GRASS Commands &amp;gt; Raster &amp;gt; r.reclass&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Configure your inputs as follows:&lt;strong&gt;&lt;br /&gt;&lt;br /&gt;Input Raster: slope&lt;br /&gt;File containing reclass rules: slope-rules.txt&lt;br /&gt;Output raster layer: slope-reclass.tif&lt;/strong&gt; (NOTE: select &lt;em&gt;Save to file…&lt;/em&gt; or QGIS will not create a permanent output)&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-      &lt;li&gt;use R for reclass&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Intersect geology.tif, slope.tif, aspect.tif
-    &lt;ul&gt;
-      &lt;li&gt;calc g + s + a&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Reclass landslide susceptibility raster
-    &lt;ul&gt;
-      &lt;li&gt;see CA-USGS classification&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Style layer
-    &lt;ul&gt;
-      &lt;li&gt;style&lt;/li&gt;
+      &lt;li&gt;The &lt;em&gt;r.reclass&lt;/em&gt; tool will be used to reclassify the slope raster into correct categories. Create a text file with the following data. Save it as slope-rule.txt.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Explain what was covered.&lt;/p&gt;
+&lt;h5 id=&quot;slope-ruletxt&quot;&gt;&lt;em&gt;slope-rule.txt&lt;/em&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;0 thru 2.99 = 1
+3 thru 4.99 = 2
+5 thru 9.99 = 3
+10 thru 14.99 = 4
+15 thru 19.99 = 5
+20 thru 29.99 = 6 
+30 thru 39.99 = 7
+40 thru 90 = 8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/raster-analysis-8.jpg&quot; alt=&quot;Spatial Data Bootcamp: Raster Analysis - Reclassify slope raster&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open GRASS tool, r.reclass: &lt;em&gt;Processing Toolbox (with Advanced interface) &amp;gt; GRASS Commands &amp;gt; Raster &amp;gt; r.reclass&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Configure your inputs as follows:&lt;strong&gt;&lt;br /&gt;&lt;br /&gt;Input Raster: slope&lt;br /&gt;File containing reclass rules: slope-rules.txt&lt;br /&gt;Output raster layer: slope-reclass.tif&lt;/strong&gt; (NOTE: select &lt;em&gt;Save to file…&lt;/em&gt; or QGIS will not create a permanent output)&lt;br /&gt;&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-slope-reclass-inputs.png&quot; alt=&quot;Spatial Data Bootcamp: Raster Analysis - reclassified slope output&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We will have to do some raster calculations to create the output data set. The classifications are taken from the California study&lt;sup id=&quot;fnref:2:4&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and are as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/landslide-key.png&quot; alt=&quot;landslide-key&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Since we need to cross reference these categories, we need to create a raster which represents each unique combination of the slope and rock strength classes. A method to create unique combinations is to promote the rock strength categories a decimal place. This would make the rock classes: 10,20, and 30.&lt;/p&gt;
+
+&lt;p&gt;To create these new classes, we can load the source_files/geo_coded.tif, and secondary_files/slope_reclass.tif&lt;/p&gt;
+
+&lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Our raster calculator expression will be:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Output layer: slope-geo-sect.tif&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/raster-calc.png&quot; alt=&quot;raster-calc&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can apply the landslide susceptibility classification using r.reclass and the following rule file:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;landslide-rule.txt&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;11 12 13 21 31 = 0
+14 = 3
+22 23 = 5
+15 = 6
+16 32 33 = 7
+17 18 24 = 8
+25 thru 28 34 = 9
+35 thru 38 = 10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;precipitation&quot;&gt;Precipitation&lt;/h4&gt;
+
+&lt;p&gt;Now that we have created the landslide susceptibility layer, we can make use the Average Annual Precipitation layer to check the susceptible areas against the areas receiving the most annual rain.&lt;/p&gt;
+
+&lt;p&gt;Convert millimeters to inches&lt;/p&gt;
+
+&lt;p&gt;Raster calculator: precip = precip * 0.0394&lt;/p&gt;
+
+&lt;p&gt;Check THIS STEP AGAINST REFERENCES&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
+      &lt;th&gt;    &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Precipitation&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5-10 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10-15 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;15-30 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;30-45 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;45-60 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;60-75 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;75-90 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 90 in&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;raster-statistics&quot;&gt;Raster Statistics:&lt;/h3&gt;
 
@@ -1485,6 +1583,16 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
   &lt;li&gt;histogram&lt;/li&gt;
   &lt;li&gt;zonal stats&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;visualization&quot;&gt;Visualization&lt;/h3&gt;
+
+&lt;p&gt;Now that the output datasets have been created, we can work on making our results presentable.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Explain what was covered.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1497,7 +1605,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/index.html&quot;&gt;http://docs.qgis.org/2.6/en/docs/index.html&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:2:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:2:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:2:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/index.html&quot;&gt;http://docs.qgis.org/2.6/en/docs/index.html&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:2:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:2:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:2:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:2:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:3&quot;&gt;
       &lt;p&gt;&lt;a href=&quot;http://www.gdal.org/gdal_rasterize.html&quot;&gt;http://www.gdal.org/gdal_rasterize.html&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:3:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
@@ -1731,6 +1839,32 @@ Sharing&lt;/p&gt;
         </item>
 
         <item>
+                <title>Exercise</title>
+                <description>
+&lt;h1 id=&quot;exercise&quot;&gt;Exercise&lt;/h1&gt;
+
+&lt;h3 id=&quot;what-this-exercise-covers&quot;&gt;What this exercise covers&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;objectives&quot;&gt;Objectives&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;procedures&quot;&gt;Procedures&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;what-was-covered&quot;&gt;What was covered&lt;/h2&gt;
+
+&lt;hr /&gt;
+</description>
+                <link>http://104.237.129.71/bootcamp/distribution/exercise</link>
+                <guid>http://104.237.129.71/bootcamp/distribution/exercise</guid>
+                <pubDate>2006-01-01T00:00:00-07:00</pubDate>
+        </item>
+
+        <item>
                 <title>Fundamentals</title>
                 <description>
 &lt;h2 id=&quot;cartography-fundamentals&quot;&gt;Cartography fundamentals&lt;/h2&gt;
@@ -1956,32 +2090,110 @@ For more properties and examples reference the
         </item>
 
         <item>
-                <title>Cartography</title>
+                <title>Map Types</title>
                 <description>
-&lt;h3 id=&quot;exercises&quot;&gt;Exercises&lt;/h3&gt;
+&lt;h1 id=&quot;understanding-different-map-types&quot;&gt;Understanding different map types&lt;/h1&gt;
 
-&lt;p&gt;Making maps in QGIS&lt;/p&gt;
+&lt;p&gt;Below are some of the major map-type groups.&lt;/p&gt;
 
-&lt;p&gt;Before starting this next section, add the following layers:&lt;/p&gt;
+&lt;h2 id=&quot;thematic&quot;&gt;Thematic&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;geo_coded.tif
- &lt;!--* slope-geo-sect.tif--&gt;
- &lt;!--* landslide-suscept.tif--&gt;&lt;/li&gt;
-  &lt;li&gt;dem-washington.tif&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;There are many types of thematic maps. Their purpose is to emphasise the theme or subject area of a particular set of spatial data. Below a few examples of thematic maps.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/carto/carto-1.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;choropleth&quot;&gt;Choropleth&lt;/h3&gt;
+
+&lt;p&gt;Choropleth maps are colored using a monochromatic theme to visualize the measurement of the statistical variable being displayed. A common theme is using Census data to create a choropleth map, such as normalizing unemployment by population to calculate an unemployment rate. Or simply counting the number of electoral votes per president during an election and visualizing with blue and red states. Below is a univariate choropleth map of the unemployment rate in June 2010. Source: &lt;a href=&quot;http://www.nytimes.com/interactive/2009/03/03/us/20090303_LEONHARDT.html?scp=1&amp;amp;sq=recession%20map&amp;amp;st=cse&amp;amp;_r=0&quot;&gt;New York Times&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.nytimes.com/interactive/2009/03/03/us/20090303_LEONHARDT.html?scp=1&amp;amp;sq=recession%20map&amp;amp;st=cse&amp;amp;_r=0&quot; target=&quot;_blank&quot; alt=&quot;Spatial Data Bootcamp: Geography of a Recession choropleth map&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/geography-of-recession.jpg&quot; alt=&quot;Spatial Data Bootcamp: Geography of a Recession choropleth map&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;graduated-symbols&quot;&gt;Graduated Symbols&lt;/h3&gt;
+
+&lt;p&gt;Below is a graduated symbols map using circles to show population of areas. The larger the circle, the higher the population count. The map visualizes settlements of English-born immigrants in the United States during 2000. Source: &lt;a href=&quot;http://www.nytimes.com/interactive/2009/03/10/us/20090310-immigration-explorer.html?_r=0&quot;&gt;New York Times&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.nytimes.com/interactive/2009/03/10/us/20090310-immigration-explorer.html?_r=0&quot; target=&quot;_blank&quot; alt=&quot;Spatial Data Bootcamp: Graduated symbols map&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/graduated-symbols-map.jpg&quot; alt=&quot;Spatial Data Bootcamp: Graduated symbols map&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;weather&quot;&gt;Weather&lt;/h3&gt;
+
+&lt;p&gt;Weather as a theme. GISS Surface Temperature Analysis. Source: &lt;a href=&quot;http://data.giss.nasa.gov/gistemp/&quot;&gt;NASA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://data.giss.nasa.gov/gistemp/&quot; target=&quot;_blank&quot; alt=&quot;Spatial Data Bootcamp: NASA GISS Surface Temperature Analysis&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/surface-temp-analysis.jpg&quot; alt=&quot;Spatial Data Bootcamp: NASA GISS Surface Temperature Analysis&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;sound&quot;&gt;Sound&lt;/h3&gt;
+
+&lt;p&gt;Mapping sound. Source: NPS Sounds &amp;amp; Night Skies Division.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/soundscape-nps.jpg&quot; alt=&quot;Spatial Data Bootcamp: Mapping sound&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;Reference maps visualize multiple types of data without focusing on one particular dataset and are meant for referencing locations. Think of how Google would have to use so many layers to create Google Maps; roads, rivers, cities, national park boundaries, satallite imagery, etc. Below is an example of reference maps. Source: &lt;a href=&quot;https://www.google.com/maps/@32.25,-110.95,13z&quot;&gt;Google Maps&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.google.com/maps/@32.25,-110.95,13z&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/spatial-data-bootcamp-google-maps.jpg&quot; alt=&quot;Spatial Data Bootcamp: Google Maps as a reference map type&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;topographic&quot;&gt;Topographic&lt;/h2&gt;
+
+&lt;p&gt;Topographic maps emphasize physical features in an area. Contour lines help visualize elevations- lines connecting points of equal elevation above the mean sea level. The United States Geological Survey is best known for their US topographic quadrangle maps. &lt;a href=&quot;http://nationalmap.gov/ustopo/&quot;&gt;You can download them here for free&lt;/a&gt;. Below is an example of a historic 1x1 degree (60 arcminutes) quadrangle drawn by hand, you’ll have to click to enlarge it. Source &lt;a href=&quot;http://nationalmap.gov/ustopo/UST_slideshow2/Black%20Canyon%20City_AZ/AZ_Prescott_315580_1887_250000.html&quot;&gt;USGS&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nationalmap.gov/ustopo/UST_slideshow2/Black%20Canyon%20City_AZ/AZ_Prescott_315580_1887_250000.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/usgs-prescott-quadrangle.jpg&quot; alt=&quot;Spatial Data Bootcamp: USGS Topo topographic quadrangle map&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;navigation&quot;&gt;Navigation&lt;/h2&gt;
+
+&lt;p&gt;Navigational maps are used for navigating. The roads in Google Maps help you get from once place to the next. Sailors need to know shipping routes and ports. Or the hiking route you’ve just found from researching online. Below are some examples of navigational maps.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;References&lt;/p&gt;
+
+</description>
+                <link>http://104.237.129.71/bootcamp/cartography/map-types</link>
+                <guid>http://104.237.129.71/bootcamp/cartography/map-types</guid>
+                <pubDate>2005-12-25T00:00:00-07:00</pubDate>
+        </item>
+
+        <item>
+                <title>Exercise</title>
+                <description>
+&lt;h1 id=&quot;exercise&quot;&gt;Exercise&lt;/h1&gt;
+
+&lt;h2 id=&quot;objectives&quot;&gt;Objectives&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create a print-based (static, non-interactive) map in QGIS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Exercise 1 - create map of Washington rock strength&lt;/li&gt;
+  &lt;li&gt;Exercise 2 - create map of Washington landslide susceptibility&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;procedures&quot;&gt;Procedures&lt;/h2&gt;
 
 &lt;h3 id=&quot;exercise-1&quot;&gt;Exercise 1&lt;/h3&gt;
 
 &lt;p&gt;Create map of Washington rock strength&lt;/p&gt;
 
-&lt;p&gt;Needs: dem, geo_coded&lt;/p&gt;
+&lt;p&gt;Layers needs:&lt;/p&gt;
 
-&lt;p&gt;Layering - same concept as photo editing; layers stack, or go on top of each other. Increasing transparency will reduce layer opacity or make it see-through.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;geo_coded.tif&lt;/li&gt;
+  &lt;li&gt;dem-washington.tif&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/carto/carto-1.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;prepare-data-for-map&quot;&gt;Prepare data for map&lt;/h4&gt;
 
@@ -2079,327 +2291,16 @@ For more properties and examples reference the
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;what-was-covered&quot;&gt;What was covered&lt;/h2&gt;
+
+&lt;hr /&gt;
 </description>
-                <link>http://104.237.129.71/bootcamp/cartography/cartography</link>
-                <guid>http://104.237.129.71/bootcamp/cartography/cartography</guid>
-                <pubDate>2005-12-31T00:00:00-07:00</pubDate>
-        </item>
-
-        <item>
-                <title>Map Types</title>
-                <description>
-&lt;h1 id=&quot;understanding-different-map-types&quot;&gt;Understanding different map types&lt;/h1&gt;
-
-&lt;p&gt;Below are some of the major map-type groups.&lt;/p&gt;
-
-&lt;h2 id=&quot;thematic&quot;&gt;Thematic&lt;/h2&gt;
-
-&lt;p&gt;There are many types of thematic maps. Their purpose is to emphasise the theme or subject area of a particular set of spatial data. Below a few examples of thematic maps.&lt;/p&gt;
-
-&lt;h3 id=&quot;choropleth&quot;&gt;Choropleth&lt;/h3&gt;
-
-&lt;p&gt;Choropleth maps are colored using a monochromatic theme to visualize the measurement of the statistical variable being displayed. A common theme is using Census data to create a choropleth map, such as normalizing unemployment by population to calculate an unemployment rate. Or simply counting the number of electoral votes per president during an election and visualizing with blue and red states. Below is a univariate choropleth map of the unemployment rate in June 2010. Source: &lt;a href=&quot;http://www.nytimes.com/interactive/2009/03/03/us/20090303_LEONHARDT.html?scp=1&amp;amp;sq=recession%20map&amp;amp;st=cse&amp;amp;_r=0&quot;&gt;New York Times&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.nytimes.com/interactive/2009/03/03/us/20090303_LEONHARDT.html?scp=1&amp;amp;sq=recession%20map&amp;amp;st=cse&amp;amp;_r=0&quot; target=&quot;_blank&quot; alt=&quot;Spatial Data Bootcamp: Geography of a Recession choropleth map&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/geography-of-recession.jpg&quot; alt=&quot;Spatial Data Bootcamp: Geography of a Recession choropleth map&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;graduated-symbols&quot;&gt;Graduated Symbols&lt;/h3&gt;
-
-&lt;p&gt;Below is a graduated symbols map using circles to show population of areas. The larger the circle, the higher the population count. The map visualizes settlements of English-born immigrants in the United States during 2000. Source: &lt;a href=&quot;http://www.nytimes.com/interactive/2009/03/10/us/20090310-immigration-explorer.html?_r=0&quot;&gt;New York Times&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.nytimes.com/interactive/2009/03/10/us/20090310-immigration-explorer.html?_r=0&quot; target=&quot;_blank&quot; alt=&quot;Spatial Data Bootcamp: Graduated symbols map&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/graduated-symbols-map.jpg&quot; alt=&quot;Spatial Data Bootcamp: Graduated symbols map&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;weather&quot;&gt;Weather&lt;/h3&gt;
-
-&lt;p&gt;Weather as a theme. GISS Surface Temperature Analysis. Source: &lt;a href=&quot;http://data.giss.nasa.gov/gistemp/&quot;&gt;NASA&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://data.giss.nasa.gov/gistemp/&quot; target=&quot;_blank&quot; alt=&quot;Spatial Data Bootcamp: NASA GISS Surface Temperature Analysis&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/surface-temp-analysis.jpg&quot; alt=&quot;Spatial Data Bootcamp: NASA GISS Surface Temperature Analysis&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;sound&quot;&gt;Sound&lt;/h3&gt;
-
-&lt;p&gt;Mapping sound. Source: NPS Sounds &amp;amp; Night Skies Division.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/soundscape-nps.jpg&quot; alt=&quot;Spatial Data Bootcamp: Mapping sound&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-
-&lt;p&gt;Reference maps visualize multiple types of data without focusing on one particular dataset and are meant for referencing locations. Think of how Google would have to use so many layers to create Google Maps; roads, rivers, cities, national park boundaries, satallite imagery, etc. Below is an example of reference maps. Source: &lt;a href=&quot;https://www.google.com/maps/@32.25,-110.95,13z&quot;&gt;Google Maps&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.google.com/maps/@32.25,-110.95,13z&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/spatial-data-bootcamp-google-maps.jpg&quot; alt=&quot;Spatial Data Bootcamp: Google Maps as a reference map type&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;topographic&quot;&gt;Topographic&lt;/h2&gt;
-
-&lt;p&gt;Topographic maps emphasize physical features in an area. Contour lines help visualize elevations- lines connecting points of equal elevation above the mean sea level. The United States Geological Survey is best known for their US topographic quadrangle maps. &lt;a href=&quot;http://nationalmap.gov/ustopo/&quot;&gt;You can download them here for free&lt;/a&gt;. Below is an example of a historic 1x1 degree (60 arcminutes) quadrangle drawn by hand, you’ll have to click to enlarge it. Source &lt;a href=&quot;http://nationalmap.gov/ustopo/UST_slideshow2/Black%20Canyon%20City_AZ/AZ_Prescott_315580_1887_250000.html&quot;&gt;USGS&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://nationalmap.gov/ustopo/UST_slideshow2/Black%20Canyon%20City_AZ/AZ_Prescott_315580_1887_250000.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/usgs-prescott-quadrangle.jpg&quot; alt=&quot;Spatial Data Bootcamp: USGS Topo topographic quadrangle map&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;navigation&quot;&gt;Navigation&lt;/h2&gt;
-
-&lt;p&gt;Navigational maps are used for navigating. The roads in Google Maps help you get from once place to the next. Sailors need to know shipping routes and ports. Or the hiking route you’ve just found from researching online. Below are some examples of navigational maps.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;References&lt;/p&gt;
-
-</description>
-                <link>http://104.237.129.71/bootcamp/cartography/map-types</link>
-                <guid>http://104.237.129.71/bootcamp/cartography/map-types</guid>
-                <pubDate>2005-12-25T00:00:00-07:00</pubDate>
-        </item>
-
-        <item>
-                <title>Exercise</title>
-                <description>
-&lt;h4 id=&quot;prerequisites-intro-data-collection-data-wrangling&quot;&gt;Prerequisites: Intro, Data Collection, Data Wrangling&lt;/h4&gt;
-
-&lt;h3 id=&quot;objectives&quot;&gt;Objectives:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Be able to reclassify a raster.&lt;/li&gt;
-  &lt;li&gt;Understand basics of raster calculations.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;exercise&quot;&gt;Exercise&lt;/h3&gt;
-
-&lt;p&gt;This exercise will walk through reclassifying raster data.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;create-reclassification-rules-text-file&quot;&gt;1 - Create reclassification rules text file&lt;/h3&gt;
-
-&lt;h4 id=&quot;slope&quot;&gt;Slope&lt;/h4&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Slope&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3-5°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5-10°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10-15°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15-20°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;20-30°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;30-40°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40°&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;In order to reclass our slope layer into something useful, we will use the grass &lt;em&gt;r.reclass&lt;/em&gt; tool&lt;/p&gt;
-
-&lt;p&gt;The r.reclass tool reads text files which define the classification rules(rule files). For this example, our rule fill will have the following contents:&lt;/p&gt;
-
-&lt;h5 id=&quot;slope-ruletxt&quot;&gt;&lt;em&gt;slope-rule.txt&lt;/em&gt;&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;0 thru 2.99 = 1
-3 thru 4.99 = 2
-5 thru 9.99 = 3
-10 thru 14.99 = 4
-15 thru 19.99 = 5
-20 thru 29.99 = 6 
-30 thru 39.99 = 7
-40 thru 90 = 8
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;reclassify-raster&quot;&gt;2 - Reclassify raster&lt;/h3&gt;
-
-&lt;p&gt;Once we have created the slope rule file. We can select the r.reclass tool from the Processing Toolbox.&lt;/p&gt;
-
-&lt;p&gt;Your Processing Toolbox may not be opened. &lt;em&gt;Open your Processing Toolbox: Menu Bar &amp;gt; Processing &amp;gt; Toolbox&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;In the processing toolbox, select &lt;em&gt;GRASS commands&lt;/em&gt; &amp;gt; &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;r.reclass&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;We will use the following settings for the reclassify tool:&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Input Raster: &lt;em&gt;slope-washington&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;File containing reclass rules: &lt;em&gt;slope-rules.txt&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Output raster layer: &lt;em&gt;slope-reclass.tif&lt;/em&gt; (NOTE: select &lt;em&gt;Save to file…&lt;/em&gt; or else QGIS will not create a permanent output)&lt;br /&gt;
-&lt;img src=&quot;/bootcamp/assets/images/slope-reclass.png&quot; alt=&quot;slope-reclass&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;susceptibility&quot;&gt;3 - Susceptibility&lt;/h3&gt;
-
-&lt;p&gt;We will have to do some raster calculations to create the output data set. The classifications are taken from the California study&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and are as follows:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/landslide-key.png&quot; alt=&quot;landslide-key&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Since we need to cross reference these categories, we need to create a raster which represents each unique combination of the slope and rock strength classes. A method to create unique combinations is to promote the rock strength categories a decimal place. This would make the rock classes: 10,20, and 30.&lt;/p&gt;
-
-&lt;p&gt;To create these new classes, we can &lt;strong&gt;load the following files&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;source_files/geo_coded.tif&lt;/li&gt;
-  &lt;li&gt;secondary_files/slope-reclass.tif&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Our raster calculator expression will be:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Output layer: slope-geo-sect.tif&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/raster-calc.png&quot; alt=&quot;raster-calc&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We can apply the landslide susceptibility classification using r.reclass and the following rule file:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Reclassify slope-geo-sect.tif with the following rule:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Save output as landslide-suscept.tif&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;landslide-rule.txt&lt;/em&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;11 12 13 21 31 = 0
-14 = 3
-22 23 = 5
-15 = 6
-16 32 33 = 7
-17 18 24 = 8
-25 thru 28 34 = 9
-35 thru 38 = 10
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;precipitation&quot;&gt;4 - Precipitation&lt;/h4&gt;
-
-&lt;p&gt;Now that we have created the landslide susceptibility layer, we can make use the Average Annual Precipitation layer to check the susceptible areas against the areas receiving the most annual rain.&lt;/p&gt;
-
-&lt;p&gt;Convert millimeters to inches&lt;/p&gt;
-
-&lt;p&gt;Raster calculator: precip = precip * 0.0394&lt;/p&gt;
-
-&lt;p&gt;Check THIS STEP AGAINST REFERENCES&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Precipitation&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5-10 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10-15 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15-30 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;30-45 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;45-60 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;60-75 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;75-90 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 90 in&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;visualization&quot;&gt;Visualization&lt;/h3&gt;
-
-&lt;p&gt;Now that the output datasets have been created, we can work on making our results presentable.&lt;/p&gt;
-
-&lt;p&gt;Go to Cartography &amp;amp; Visualization…&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;References:&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;http://www.conservation.ca.gov/cgs/information/publications/Documents/MS58.pdf &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-                <link>http://104.237.129.71/bootcamp/data%20analysis/case-study</link>
-                <guid>http://104.237.129.71/bootcamp/data%20analysis/case-study</guid>
-                <pubDate>2004-12-31T00:00:00-07:00</pubDate>
+                <link>http://104.237.129.71/bootcamp/cartography/exercise</link>
+                <guid>http://104.237.129.71/bootcamp/cartography/exercise</guid>
+                <pubDate>2005-01-01T00:00:00-07:00</pubDate>
         </item>
 
         <item>
@@ -2826,6 +2727,254 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
         </item>
 
         <item>
+                <title>Exercise</title>
+                <description>
+&lt;h4 id=&quot;prerequisites-intro-data-collection-data-wrangling&quot;&gt;Prerequisites: Intro, Data Collection, Data Wrangling&lt;/h4&gt;
+
+&lt;h3 id=&quot;objectives&quot;&gt;Objectives:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Be able to reclassify a raster.&lt;/li&gt;
+  &lt;li&gt;Understand basics of raster calculations.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;exercise&quot;&gt;Exercise&lt;/h3&gt;
+
+&lt;p&gt;This exercise will walk through reclassifying raster data.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;create-reclassification-rules-text-file&quot;&gt;1 - Create reclassification rules text file&lt;/h3&gt;
+
+&lt;h4 id=&quot;slope&quot;&gt;Slope&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
+      &lt;th&gt;    &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Slope&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3-5°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5-10°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10-15°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;15-20°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;20-30°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;30-40°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40°&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;In order to reclass our slope layer into something useful, we will use the grass &lt;em&gt;r.reclass&lt;/em&gt; tool&lt;/p&gt;
+
+&lt;p&gt;The r.reclass tool reads text files which define the classification rules(rule files). For this example, our rule fill will have the following contents:&lt;/p&gt;
+
+&lt;h5 id=&quot;slope-ruletxt&quot;&gt;&lt;em&gt;slope-rule.txt&lt;/em&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;0 thru 2.99 = 1
+3 thru 4.99 = 2
+5 thru 9.99 = 3
+10 thru 14.99 = 4
+15 thru 19.99 = 5
+20 thru 29.99 = 6 
+30 thru 39.99 = 7
+40 thru 90 = 8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;reclassify-raster&quot;&gt;2 - Reclassify raster&lt;/h3&gt;
+
+&lt;p&gt;Once we have created the slope rule file. We can select the r.reclass tool from the Processing Toolbox.&lt;/p&gt;
+
+&lt;p&gt;Your Processing Toolbox may not be opened. &lt;em&gt;Open your Processing Toolbox: Menu Bar &amp;gt; Processing &amp;gt; Toolbox&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In the processing toolbox, select &lt;em&gt;GRASS commands&lt;/em&gt; &amp;gt; &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;r.reclass&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We will use the following settings for the reclassify tool:&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Input Raster: &lt;em&gt;slope-washington&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;File containing reclass rules: &lt;em&gt;slope-rules.txt&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Output raster layer: &lt;em&gt;slope-reclass.tif&lt;/em&gt; (NOTE: select &lt;em&gt;Save to file…&lt;/em&gt; or else QGIS will not create a permanent output)&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/slope-reclass.png&quot; alt=&quot;slope-reclass&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;susceptibility&quot;&gt;3 - Susceptibility&lt;/h3&gt;
+
+&lt;p&gt;We will have to do some raster calculations to create the output data set. The classifications are taken from the California study&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and are as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/landslide-key.png&quot; alt=&quot;landslide-key&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Since we need to cross reference these categories, we need to create a raster which represents each unique combination of the slope and rock strength classes. A method to create unique combinations is to promote the rock strength categories a decimal place. This would make the rock classes: 10,20, and 30.&lt;/p&gt;
+
+&lt;p&gt;To create these new classes, we can &lt;strong&gt;load the following files&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;source_files/geo_coded.tif&lt;/li&gt;
+  &lt;li&gt;secondary_files/slope-reclass.tif&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Our raster calculator expression will be:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Output layer: slope-geo-sect.tif&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/raster-calc.png&quot; alt=&quot;raster-calc&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can apply the landslide susceptibility classification using r.reclass and the following rule file:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Reclassify slope-geo-sect.tif with the following rule:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Save output as landslide-suscept.tif&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;landslide-rule.txt&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;11 12 13 21 31 = 0
+14 = 3
+22 23 = 5
+15 = 6
+16 32 33 = 7
+17 18 24 = 8
+25 thru 28 34 = 9
+35 thru 38 = 10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;precipitation&quot;&gt;4 - Precipitation&lt;/h4&gt;
+
+&lt;p&gt;Now that we have created the landslide susceptibility layer, we can make use the Average Annual Precipitation layer to check the susceptible areas against the areas receiving the most annual rain.&lt;/p&gt;
+
+&lt;p&gt;Convert millimeters to inches&lt;/p&gt;
+
+&lt;p&gt;Raster calculator: precip = precip * 0.0394&lt;/p&gt;
+
+&lt;p&gt;Check THIS STEP AGAINST REFERENCES&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
+      &lt;th&gt;    &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Precipitation&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5-10 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10-15 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;15-30 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;30-45 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;45-60 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;60-75 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;75-90 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 90 in&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;visualization&quot;&gt;Visualization&lt;/h3&gt;
+
+&lt;p&gt;Now that the output datasets have been created, we can work on making our results presentable.&lt;/p&gt;
+
+&lt;p&gt;Go to Cartography &amp;amp; Visualization…&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;References:&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;http://www.conservation.ca.gov/cgs/information/publications/Documents/MS58.pdf &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+                <link>http://104.237.129.71/bootcamp/data%20analysis/exercise</link>
+                <guid>http://104.237.129.71/bootcamp/data%20analysis/exercise</guid>
+                <pubDate>2004-12-01T00:00:00-07:00</pubDate>
+        </item>
+
+        <item>
                 <title>Data Formatting</title>
                 <description>&lt;h4 id=&quot;pre-requisites-intro-to-spatial-data-data-collection&quot;&gt;&lt;strong&gt;Pre-requisites:&lt;/strong&gt; Intro to Spatial Data, Data Collection&lt;/h4&gt;
 
@@ -3238,6 +3387,32 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
         </item>
 
         <item>
+                <title>Exercise</title>
+                <description>
+&lt;h1 id=&quot;exercise&quot;&gt;Exercise&lt;/h1&gt;
+
+&lt;h3 id=&quot;what-this-exercise-covers&quot;&gt;What this exercise covers&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;objectives&quot;&gt;Objectives&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;procedures&quot;&gt;Procedures&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;what-was-covered&quot;&gt;What was covered&lt;/h2&gt;
+
+&lt;hr /&gt;
+</description>
+                <link>http://104.237.129.71/bootcamp/data%20wrangling/exercise</link>
+                <guid>http://104.237.129.71/bootcamp/data%20wrangling/exercise</guid>
+                <pubDate>2002-01-01T00:00:00-07:00</pubDate>
+        </item>
+
+        <item>
                 <title>Metadata</title>
                 <description>&lt;h4 id=&quot;pre-requisites-intro-to-spaital-data&quot;&gt;&lt;strong&gt;Pre-requisites: Intro to Spaital Data&lt;/strong&gt;&lt;/h4&gt;
 
@@ -3475,7 +3650,103 @@ A few examples of these applications are:
 
 --&gt;
 
-&lt;h2 id=&quot;exercise&quot;&gt;Exercise&lt;/h2&gt;
+&lt;!--
+
+## Exercise
+
+#### Download adminstrative boundary data
+
+For this exercise, we will be subsetting a shapefile of the US states.
+
+The dataset can be found on the [Global Administrative Areas website](http://www.gadm.org/country)
+
+Select *United States* from the Country dropdown and set *Shapefile* as the file format.
+
+![gadmUs](/bootcamp//assets/images/gadm-us.png)
+
+Click &#39;OK&#39; to enter the download screen.
+
+On the next screen, click the blue &#39;download&#39; link to start the download.
+
+![gadmDownload](/bootcamp//assets/images/gadm-download.png)
+
+Select a workspace to save the USA_adm.zip dataset
+
+![gadmSave](/bootcamp//assets/images/gadm-save.png)
+
+Unpack the zip archive using your choice of file archival software.&lt;br&gt;
+(Note: if you don&#39;t have any software to unzip archives, [7-zip](http://www.7-zip.org) is an easy to use free application)
+
+Once the archive has been unpacked, you can see the datasets which should include a pdf, a few .csv files and some .shp,.shx,.dbf and .prj files.
+
+![gadm-unzip](/bootcamp//assets/images/gadm-unzip.png)
+
+The .shp, .shx, .dbf .prj files make up what we call *Shapefiles*
+
+In order to visualize the data, we will need to open up QGIS.
+
+----
+
+#### Download GTOPO30 elevation data
+
+
+
+
+The DEM can be downloaded from &lt;a href=&quot;ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140m90.tar.gz&quot;&gt;ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140n90.tar.gz&lt;/a&gt;
+
+This tarball can be extracted using an archive extraction application like [7-zip](http://www.7-zip.org).
+
+(Note: if you are using 7-zip or winRAR to extract the file, you will have to extract the .gz first. Then extract the .tar file from within the extracted subdirectory.)
+
+If you are using Mac or Linux you can extract the files in the terminal with the following command:
+
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;tar -zxvf w140m90.tar.gz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+--&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;http://www.gadm.org &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;http://www.census.gov/geo/maps-data/data/tiger.html &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+                <link>http://104.237.129.71/bootcamp/data%20collection/credible-sources</link>
+                <guid>http://104.237.129.71/bootcamp/data%20collection/credible-sources</guid>
+                <pubDate>2001-12-05T00:00:00-07:00</pubDate>
+        </item>
+
+        <item>
+                <title>Exercise</title>
+                <description>
+&lt;h1 id=&quot;exercise&quot;&gt;Exercise&lt;/h1&gt;
+
+&lt;h3 id=&quot;what-this-exercise-covers&quot;&gt;What this exercise covers&lt;/h3&gt;
+
+&lt;p&gt;Downloading vector and raster data:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Vector: administrative boundary data for the state of Washington from Global Administrative Areas&lt;/li&gt;
+  &lt;li&gt;Raster: GTOPO30 elevation data from the USGS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;objectives&quot;&gt;Objectives&lt;/h2&gt;
+
+&lt;p&gt;Download and inspect spatial data from different sources.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;procedures&quot;&gt;Procedures&lt;/h2&gt;
 
 &lt;h4 id=&quot;download-adminstrative-boundary-data&quot;&gt;Download adminstrative boundary data&lt;/h4&gt;
 
@@ -3524,22 +3795,19 @@ A few examples of these applications are:
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;what-was-covered&quot;&gt;What was covered&lt;/h2&gt;
 
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;http://www.gadm.org &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;http://www.census.gov/geo/maps-data/data/tiger.html &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Downloading vector and raster data&lt;/li&gt;
+  &lt;li&gt;Unpacking files&lt;/li&gt;
+  &lt;li&gt;Spatial data file types&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
 </description>
-                <link>http://104.237.129.71/bootcamp/data%20collection/credible-sources</link>
-                <guid>http://104.237.129.71/bootcamp/data%20collection/credible-sources</guid>
-                <pubDate>2001-12-05T00:00:00-07:00</pubDate>
+                <link>http://104.237.129.71/bootcamp/data%20collection/exercise</link>
+                <guid>http://104.237.129.71/bootcamp/data%20collection/exercise</guid>
+                <pubDate>2001-01-01T00:00:00-07:00</pubDate>
         </item>
 
         <item>
@@ -3721,6 +3989,36 @@ A few examples of these applications are:
         </item>
 
         <item>
+                <title>Common Data Types</title>
+                <description>
+&lt;h4 id=&quot;pre-requisites-installing-qgis-is-spatial-special&quot;&gt;&lt;strong&gt;Pre-requisites: Installing QGIS, Is Spatial Special?&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;common-data-formats&quot;&gt;Common Data Formats&lt;/h2&gt;
+
+&lt;p&gt;Here are some common data formats you may encounter:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Shapefile: Stores point, line, and polygon data. This file type is actually made up of a collection of files with the following endings: These are mandatory: .shp, .shx, .dbf There are many others which are optional, including the important .prj file that describes the projection information for that data.&lt;/li&gt;
+  &lt;li&gt;Geodatabase: Esri proprietary spatial database. Very easy to load data into, not so easy to extract.&lt;/li&gt;
+  &lt;li&gt;GeoJSON: Encodes points, lines, and polygons (and collections of those) along with information about them using JSON (JavaScript Object Notation). This format is popular for web maps.&lt;/li&gt;
+  &lt;li&gt;GeoTIFF: A standard that allows embedding geographic information in a TIFF file.&lt;/li&gt;
+  &lt;li&gt;NetCDF: A multidimensional data format that allows for multiple variables covering 1 or more dimensions.&lt;/li&gt;
+  &lt;li&gt;Arcinfo/Ascii grid: Proprietary format by Esri&lt;/li&gt;
+  &lt;li&gt;Database: There are various databases that, with extensions, can hold geographic objects. Some notable examples are PostgreSQL with PostGIS, and SQLite with the SpatiaLite extension. It is important to look into the level of spatial support within a database before performing any analysis. For example, MySQL&#39;s spatial extension has geometry support, but the geometries are all defined by bounding boxes rather than the true geometry.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+</description>
+                <link>http://104.237.129.71/bootcamp/intro/data-types</link>
+                <guid>http://104.237.129.71/bootcamp/intro/data-types</guid>
+                <pubDate>2000-12-26T00:00:00-07:00</pubDate>
+        </item>
+
+        <item>
                 <title>Projections</title>
                 <description>
 &lt;h4 id=&quot;pre-requisites-is-spatial-special-vectors-and-rasters&quot;&gt;&lt;strong&gt;Pre-requisites: Is Spatial Special, Vectors and Rasters&lt;/strong&gt;&lt;/h4&gt;
@@ -3831,7 +4129,7 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
 </description>
                 <link>http://104.237.129.71/bootcamp/intro/projections</link>
                 <guid>http://104.237.129.71/bootcamp/intro/projections</guid>
-                <pubDate>2000-12-28T00:00:00-07:00</pubDate>
+                <pubDate>2000-12-20T00:00:00-07:00</pubDate>
         </item>
 
         <item>

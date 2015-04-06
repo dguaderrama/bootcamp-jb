@@ -113,6 +113,8 @@ A few examples of these applications are:
 
 -->
 
+<!--
+
 ## Exercise
 
 #### Download adminstrative boundary data
@@ -164,7 +166,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 {% highlight bash %}
 tar -zxvf w140m90.tar.gz
 {% endhighlight %}
-
+-->
 ----
 
 <br>
