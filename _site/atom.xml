@@ -4,7 +4,7 @@
  <title>Spatial Data Bootcamp</title>
  <link href="http://104.237.129.71/bootcamp/" rel="self"/>
  <link href="http://104.237.129.71/bootcamp"/>
- <updated>2015-04-05T21:41:58-07:00</updated>
+ <updated>2015-04-06T18:29:28-07:00</updated>
  <id>http://104.237.129.71/bootcamp</id>
  <author>
    <name>Nathan Casler</name>
@@ -822,6 +822,169 @@ Reclassifying inputs:&lt;/p&gt;
  </entry>
  
  <entry>
+   <title>Vector Analysis</title>
+   <link href="http://104.237.129.71/bootcamp/references/vector-analysis"/>
+   <updated>2009-11-01T00:00:00-07:00</updated>
+   <id>http://104.237.129.71/bootcamp/references/vector-analysis</id>
+   <content type="html">
+&lt;h2 id=&quot;vector-analysis&quot;&gt;Vector Analysis&lt;/h2&gt;
+
+&lt;h3 id=&quot;what-this-module-covers&quot;&gt;What this module covers:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Buffer polylines&lt;/li&gt;
+  &lt;li&gt;Join census housing (home values) to census tracts (shapefile)&lt;/li&gt;
+  &lt;li&gt;Intersecting vector layers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;objective&quot;&gt;Objective:&lt;/h3&gt;
+
+&lt;p&gt;Quantify total home value at risk within landslide/mass-wasting and fautls.&lt;/p&gt;
+
+&lt;h3 id=&quot;data-collection-there-needs-to-be-instructionsquick-lesson-on-each-of-the-collection-sources&quot;&gt;Data Collection: (there needs to be instructions/quick lesson on each of the collection sources)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml&quot; alt=&quot;Spatial Data Bootcamp: Download Census housing data - American FactFinder&quot; target=&quot;_blank&quot;&gt;Census housing data - American FactFinder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.census.gov/geo/maps-data/data/tiger.html&quot; alt=&quot;Spatial Data Bootcamp: Download Census tract shapefile - TIGER data&quot; target=&quot;_blank&quot;&gt;Census tracts - TIGER Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://earthquake.usgs.gov/hazards/qfaults&quot; alt=&quot;Spatial Data Bootcamp: Download USGS quaternary faults&quot; target=&quot;_blank&quot;&gt;Quaternary faults - USGS &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx&quot; alt=&quot;Spatial Data Bootcamp: Download seismogenic features&quot; target=&quot;_blank&quot;&gt;Washington seismogenic features - REQUIRES GDAL filegdb driver!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nhd.usgs.gov/&quot; alt=&quot;Spatial Data Bootcamp: Download USGS National Hydrography Dataset - Washington&quot; target=&quot;_blank&quot;&gt;Washington streams/rivers - USGS National Hydrography Dataset&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here, the data are pre-wrangled (located on nathan’s server, for now):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;faults_100k - [source]&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/bootcamp/assets/data/housing-data.zip&quot;&gt;housing-data.zip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-wrangling&quot;&gt;Data Wrangling:&lt;/h3&gt;
+
+&lt;h4 id=&quot;wrangle-census-data&quot;&gt;Wrangle Census Data:&lt;/h4&gt;
+
+&lt;p&gt;Luckily, the Census data has already been wrangled. Census data can sometimes be tricky.&lt;/p&gt;
+
+&lt;h4 id=&quot;high-risk-rules&quot;&gt;High-risk rules:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;within 100m of fault lines&lt;/li&gt;
+  &lt;li&gt;within 50m of rivers/streams&lt;/li&gt;
+  &lt;li&gt;within soft geologic areas&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open QGIS and configure project workspace.&lt;/li&gt;
+  &lt;li&gt;Import data:
+    &lt;ul&gt;
+      &lt;li&gt;HINT: The project projection will default to the first layer that is added to the project (See lower right of image below: EPSG:2927).&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Add Vector Layer: &lt;/em&gt;&lt;img src=&quot;/bootcamp/assets/images/qgis/add-vector.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add vector data&quot; /&gt;&lt;br /&gt;&lt;strong&gt;fault_100k.shp&lt;/strong&gt;&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-3.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - streams and faults&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Buffer fault lines to 100m:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Vector &amp;gt; Geoprocessing Tools &amp;gt; Buffer(s)&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Configure inputs as follows:&lt;br /&gt;&lt;strong&gt;Input vector layer: fault_100k&lt;br /&gt;Buffer distance: 100&lt;br /&gt;Output shapefile: fault_buffer_100m.shp&lt;br /&gt;Add results to canvas: (Checked)&lt;br /&gt;Click OK to perform analysis, Close to exit the tool&lt;/strong&gt;&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-4.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - buffer analysis&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Zoom in to a buffer, close enough to see the width&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Open the meaure tool&lt;/em&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/measure-tool.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - measure tool&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Measure the width of the buffer.&lt;/em&gt; Notice how the total width is only about 62 meters, or 100 feet. Current map units are determined by the CRS, in this case EPSG:2927 is in US feet and we need meters. Simply changing the CRS in Project Properties does not give us the correct results- this is still measured from EPSG:2927 US feet.&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-measure-tool-2.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - measure buffer&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Important:&lt;/strong&gt;&lt;br /&gt;There are two methods to perfoming a buffer analysis on our shapefile. The problem here is that our CRS is EPSG:2927 (in US feet) and the buffer distance is based on map units (still US feet). The two methods are: convert 100 meters to US feet and use this value in the buffer analysis while maintaining EPSG:2927 (in US feet); OR, reproject the layer thus creating a new file with a CRS in meters (correct map units), and then reprojecting back to EPSG:2927. We’ll go with the former.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Now we need to perform the buffer analysis with the correct method. &lt;em&gt;Remove the incorrect buffer layer: fault_buffer_100m.shp&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Add Vector Layer: &lt;/em&gt;&lt;img src=&quot;/bootcamp/assets/images/qgis/add-vector.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add vector&quot; /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;NHD_MajorStreams.shp&lt;br /&gt;&lt;/strong&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-5.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add vector data&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Open the buffer tool:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Vector &amp;gt; Geoprocessing Tools &amp;gt; Buffer(s)&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Buffer fault_100k:&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Configure inputs as follow:&lt;br /&gt;&lt;strong&gt;Input vector layer: fault_100k&lt;br /&gt;Buffer distance: 328&lt;br /&gt;Output shapefile: fault_buffer_100m.shp&lt;br /&gt;Add result to canvas: (Checked)&lt;br /&gt;Click OK to run (overwrite necessary), and CLOSE to exit tool&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Reminder:&lt;/strong&gt;&lt;br /&gt;Buffer distance = 100 meters * 3.28084 feet = 328.084 feet&lt;br /&gt; 1 meter = 3.28084 feet&lt;br /&gt;&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-6.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - buffer vector&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Confirm 100 meter buffer on faults:
+    &lt;ul&gt;
+      &lt;li&gt;Open measure tool &lt;img src=&quot;/bootcamp/assets/images/qgis/measure-tool.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - measure tool&quot; /&gt; and confirm 200 meter total width (100 meters * 2 = 200 meters)&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-7.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - measure faults buffer&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Repeat buffer with NHD_MajorStreams.shp&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Configure inputs as follows:&lt;br /&gt;&lt;strong&gt;Input vector layer: NHD_MajorStreams&lt;br /&gt;Buffer distance: 164&lt;br /&gt;Output shapefile: streams_buffer_50m.shp&lt;br /&gt;Add result to canvas: (Checked)&lt;br /&gt;Click OK to run, CLOSE to exit tool&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Reminder:&lt;/strong&gt;&lt;br /&gt;Buffer distance = 50 meters * 3.28084 feet = 164.052 feet&lt;br /&gt; 1 meter = 3.28084 feet&lt;br /&gt;&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-8.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - buffer streams&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Confirm 50 meter buffer on streams.&lt;/li&gt;
+  &lt;li&gt;Import Census housing data (wa-housing-data.csv):
+    &lt;ul&gt;
+      &lt;li&gt;Notice: housing-data.csv has already been wrangled.&lt;/li&gt;
+      &lt;li&gt;Add Delimited Text Layer &lt;img src=&quot;/bootcamp/assets/images/qgis/add-csv.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add Census data&quot; /&gt; or &lt;em&gt;Menu Bar &amp;gt; Layer &amp;gt; Add Delimited Text Layer&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Configure inputs as follows:&lt;br /&gt;&lt;strong&gt;File Name: housing-data.csv&lt;br /&gt;File Format: CSV&lt;br /&gt;First record has field names: (Checked)&lt;br /&gt;No geometry (attribute only table): (Selected)&lt;br /&gt;OK to add&lt;/strong&gt; 
+ &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-9.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add Census data&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;View Census housing-data.csv:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Right-click housing-data (in layer list) &amp;gt; Open attribute table&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Import Washington Census tracts (tl_2014__53_tract.shp) &lt;img src=&quot;/bootcamp/assets/images/qgis/add-vector.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add Census tracts&quot; /&gt;&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-10.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add Census tracts&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Important:&lt;/strong&gt; Did you check the projection of the Census tracts shapefile? Be sure your shapefile CRS is EPSG:2927. &lt;br /&gt;&lt;br /&gt;‘on the fly’ projection is selected&lt;/li&gt;
+  &lt;li&gt;Save Census tract (tl_2014_53_tract.shp) with ESPG:2927:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Right-click tl_2014_53_tract.shp (layer list) &amp;gt; Save As&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Configure as follows: &lt;strong&gt;ESRI Shapefile with EPSG:2927, Output filename: wa-tracts.shp, Add saved file to map: (Checked)&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Remove current tl_2014_53_tract.shp&lt;/em&gt;&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-11.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - workspace&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Open wa-tracts attribute table and housing-data to find the key that will be used to join the tables. HINT: It’s GEOID and GEO.id2.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;notes:&lt;/strong&gt; discuss field types, e.g. cannot compare a string to a number. – add image –&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Join Census housing data (housing-data.csv) to Census tracts (wa-tracts.sho):
+    &lt;ul&gt;
+      &lt;li&gt;Open Processing Toolbox (&lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Toolbox&lt;/em&gt;), search for “join attributes table”, then double-click “Join attributes table”&lt;br /&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-12.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - join attribute table&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Configure Join attributes table as follows:&lt;br /&gt;&lt;strong&gt;Input layer: wa-tracts&lt;br /&gt;Input layer 2: housing-data&lt;br /&gt;Table field: GEOID&lt;br /&gt;Table field 2: GEO.id2&lt;br /&gt;Output layer: (Save to file..) tracts-housing-data.shp&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; The concept behind this join is tabular (non-locational-data) joined to spatial data, not spatial data to tabular data. So, you must have spatial data (wa-tracts.shp) as the primary input and tabular data (housing-data.csv) as the secondary input. Notice in the &lt;strong&gt;Joing attributes table&lt;/strong&gt; inputs below.&lt;br /&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-13.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - join Census tracts and housing data&quot; /&gt;&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;NOTICE:&lt;/strong&gt; “Layers do not all use the same CRS. This can cause unexpencted results.” Remember, the housing-data.csv does not have any locational data associated with it. Click Yes, to continue.&lt;br /&gt;&lt;br /&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-14.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - join error&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Confirm output: housing data joined to tracts. Output is named “Output layer”, rename to “tracts_housing_data.shp” (&lt;em&gt;right-click layer &amp;gt; Rename&lt;/em&gt;). Hover over the layer in the layer list to view the source path.
+ &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-15.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - tracts and housing data joined&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Normalize housing data - tract house count X median tract house value = total tract home value: (you’ll need point data to have a more accurate analysis)
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Right-click tracts_housing_data &amp;gt; Open Attribute Table &amp;gt; Toggle editing mode &amp;gt; Open field calculator&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;If you had downloaded the original ACS .csv with annotations then you would be able to easily find what the column headers mean. Or, you could locate the ACS metadata. But we have provided the difinitions below:&lt;br /&gt;HC01_VC118 = Total Housing Units (Owner-occupied)&lt;br /&gt;HC01_VC127 = Estimated Median Housing Unit (Owner-occupied)&lt;br /&gt;We would have calculated total housing * median housing (total) but the ACS does not provide these metrics.&lt;/li&gt;
+      &lt;li&gt;Configure inputs as follows:&lt;br /&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-16.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - normalize data&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;View your ouputs. Notice there are some NULL values:&lt;br /&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-17.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - noramlize data&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;intersect buffered-merged-joined data with reclassified-rasterized geology layer
+    &lt;ul&gt;
+      &lt;li&gt;intersect buffered faults and streams:&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-18.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - intersect buffered streams and faults&quot; /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-19.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - intersect buffered streams and faults&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;calculate stream_fault_intersection shape area:
+  &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-20.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - calculate shape area&quot; /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-21.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - calculate shape area&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;calculate tracts_housing shape area:
+  &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-22.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - calculate shape area&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;spatial join stream_fault_intersection + tracts_housing: (this one takes a while)
+  &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-23.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - spatially join stream_fault_intersection to wa-tracts&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;data will be used in Raster Analysis&lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>QGIS</title>
    <link href="http://104.237.129.71/bootcamp/applications/qgis"/>
    <updated>2008-12-31T00:00:00-07:00</updated>
@@ -1149,9 +1312,204 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;vector-analysis&quot;&gt;Vector Analysis&lt;/h2&gt;
+&lt;h2 id=&quot;vector-and-raster-analysis&quot;&gt;Vector and Raster Analysis&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;notes: move Download Census and Download TIGER to Data Collection.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;notes: create separate lesson for joining tabular data in QGIS&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;notes: create separate lesson for joining joined tabular data to vector data&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;notes: create separate lesson for intersecting vector with joined tabular data with raster&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h3 id=&quot;what-this-module-covers-1&quot;&gt;What this module covers:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Downloading Census Amerian FactFinder data&lt;/li&gt;
+  &lt;li&gt;Downloading Census TIGER boundary data&lt;/li&gt;
+  &lt;li&gt;Wrangling Census tabular data&lt;/li&gt;
+  &lt;li&gt;Importing non-spatial data into QGIS&lt;/li&gt;
+  &lt;li&gt;Joining Census housing data (home values) to Census tracts (shapefile)/joining non-spatial tabular data to vector spatial data&lt;/li&gt;
+  &lt;li&gt;Intersecting raster and vector layers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;objectives&quot;&gt;Objectives:&lt;/h3&gt;
+
+&lt;p&gt;Quantify total homve value at risk within landslide/mass-wasting areas.&lt;/p&gt;
+
+&lt;h3 id=&quot;data-collection-1&quot;&gt;Data Collection:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://factfinder.census.gov/&quot; alt=&quot;Spatial Data Bootcamp: Download Census housing data - American FactFinder&quot; target=&quot;_blank&quot;&gt;Census housing data - American FactFinder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.census.gov/geo/maps-data/data/tiger.html&quot; alt=&quot;Spatial Data Bootcamp: Download Census tract shapefile - TIGER data&quot; target=&quot;_blank&quot;&gt;Census tracts - TIGER Data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;downloading-data-from-american-factfinder-census&quot;&gt;Downloading data from American FactFinder (Census):&lt;/h4&gt;
+
+&lt;!--1. Download Census American FactFinder housing data:
+  * Open the &lt;a href=&quot;http://factfinder.census.gov/&quot; alt=&quot;Spatial Data Bootcamp: Download Census housing data - American FactFinder&quot; target=&quot;_blank&quot;&gt;Census American FactFinder site&lt;/a&gt; and select &lt;em&gt;Guided Search &gt; Get Me Started&lt;/em&gt;.&lt;br&gt;
+  ![Spatial Data Bootcamp: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-1.png)
+  * Step 1: Choose from one of the following. Click *Next*:&lt;br&gt;I&#39;m looking for information from a specific *dataset*&lt;br&gt;Click *NEXT*&lt;br&gt;
+  ![Spatial Data Bootcamp: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-2.png)
+  * Step 2: Search the dataset you&#39;re interested in. Click *Next*.&lt;br&gt;Select a program: *American Community Survey*&lt;br&gt;Select a dataset: *2013 ACS 5-year estimates*&lt;br&gt;*ADD TO YOUR SELECTIONS*&lt;br&gt;Click *NEXT*&lt;br&gt;
+  ![Spatial Data Bootcamp: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-3.png)
+  * Step 3: Select the topic(s) you&#39;re interested in. Click *Next*.&lt;br&gt;Basic Count/Estimate: *Housing Units*&lt;br&gt;Financial Characteristic: *Value of Home*&lt;br&gt;Click *NEXT*&lt;br&gt;
+  ![Spatial Data Bootcamp: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-4.png)
+  * Step 4: Add one or more geographic areas (states, cities, towns, etc.) to Your Selections. Click *Next*.&lt;br&gt;Select a geographic type: *.... ....Census Tract*&lt;br&gt;Select a state: *Washington*&lt;br&gt;Select a county: (leave blank)&lt;br&gt;Select one or more geographic areas: *All Census Tracts within Washington*&lt;br&gt;*ADD TO YOUR SELECTIONS*&lt;br&gt;Click *NEXT*&lt;br&gt;
+  ![Spatial Data Bootcamp: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-5.png)
+  * Step 5: There are no race or ethnic groups available based upon the contents of &#39;Your Selections&#39;.&lt;br&gt;Click *NEXT*&lt;br&gt;
+  ![Spatial Data Bootcamp: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-6.png)
+  * Step 6: &lt;em&gt;Skipped&lt;/em&gt;
+  * Step 7: Select a table, file or document from these top search results:&lt;br&gt;Click first row in table: *SELECTED HOUSING CHARACTERISTICS* DP04 2013 ACS 5-year estimates&lt;br&gt;
+  ![Spatial Data Bootcamp: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-7.png)
+  * Step 8: Table Viewer&lt;br&gt;
+  ![Spatial Data Bootcamp: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-8.png)
+  * Now you need to remove unneccessary data:&lt;br&gt;*Modify Table* ![Spatial Data Bootcamp: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-9.png)&lt;br&gt;
+--&gt;
+
+&lt;p&gt;The following method allows for less data wrangling (although it does involve two joins). We’re going to download Washington housing units and home value data individually and join them. If you go through the Guided Search then you’ll end up having to wrangling more than you want (remove lots of unneccessary data).&lt;/p&gt;
+
+&lt;h5 id=&quot;download-census-american-factfinder-housing-data&quot;&gt;&lt;strong&gt;1. Download Census American FactFinder housing data:&lt;/strong&gt;&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open the &lt;a href=&quot;http://factfinder.census.gov/&quot; alt=&quot;Spatial Data Bootcamp: Download Census housing data - American FactFinder&quot; target=&quot;_blank&quot;&gt;Census American FactFinder site&lt;/a&gt; and select &lt;em&gt;Advanced Search &amp;gt; SHOW ME ALL&lt;/em&gt;.&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-1.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;You are now viewing the &lt;em&gt;ADVANCED SEARCH&lt;/em&gt;. Search - Use options on the left (topics, geographics, …) to narrow your search results.&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-2.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Download &lt;em&gt;Washington Housing Units&lt;/em&gt;:&lt;br /&gt;
+Add &lt;em&gt;Housing Units&lt;/em&gt; to query:&lt;br /&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Click &lt;em&gt;Topics&lt;/em&gt; on the left-hand menu&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Select Topics to add to ‘Your Selections’&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Housing &amp;gt; Basic Count/Estimate &amp;gt; Click &lt;em&gt;Housing Units&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;em&gt;CLOSE&lt;/em&gt; (top right)&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-3.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;br /&gt;
+Add &lt;em&gt;Washington Census Tract&lt;/em&gt; to query:&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;em&gt;Geographies&lt;/em&gt; on left-hand menu&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Select a geographic type: &lt;em&gt;…. ….Census Tract -140&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Select a state: &lt;em&gt;Washington&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Select one or more geographic areas: &lt;em&gt;All Census Tracts within Washington&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;ADD TO YOUR SELECTIONS&lt;/em&gt;&lt;br /&gt;
+Click &lt;em&gt;CLOSE&lt;/em&gt; (top right)&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-4.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;br /&gt;
+Check row: &lt;em&gt;B25001 HOUSING UNITS 2013 ACS 5-year estimates&lt;/em&gt;&lt;br /&gt;
+Click &lt;em&gt;Download&lt;/em&gt; at the bottom of the table&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-5.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;
+Click &lt;em&gt;OK&lt;/em&gt; to create a zip file containing your selected products.&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-6.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;
+Click &lt;em&gt;DOWNLOAD&lt;/em&gt; to download zipped files&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-7.png&quot; alt=&quot;Spatial Data Bootcamp: Vector &amp;amp; Census data&quot; /&gt;
+Do not clear all selections.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Download &lt;em&gt;Washington Value of Homes&lt;/em&gt;:&lt;br /&gt;
+If you did not clear your selections from the previous steps then continue on, else seet &lt;strong&gt;Download Washington Housing Units&lt;/strong&gt; above.&lt;br /&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Remove &lt;em&gt;Housing Units&lt;/em&gt; from selection&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-8.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;em&gt;Topics&lt;/em&gt; on the left-hand menu and navigate to &lt;em&gt;Value of Home&lt;/em&gt;:&lt;br /&gt;&lt;em&gt;Housing &amp;gt; Financial Characteristic &amp;gt; Value of Home (click to select) &amp;gt; Click CLOSE (top right)&lt;/em&gt;&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-9.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Check row: &lt;em&gt;B25077 MEDIAN VALUE (DOLLARS) 2013 ACS 5-year estimates&lt;/em&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-10.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;em&gt;Download&lt;/em&gt; (bottom of table) to download zipped files&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-11.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;em&gt;OK&lt;/em&gt; to create a zip file containing your selected products&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-12.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;em&gt;Download&lt;/em&gt; to save the file to your computer. This zip file will be named the same as the one above, your browser will append (1).&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-13.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;download-tiger-census-tracts&quot;&gt;&lt;strong&gt;2. Download TIGER Census Tracts:&lt;/strong&gt;&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open the &lt;a href=&quot;https://www.census.gov/geo/maps-data/data/tiger.html&quot; alt=&quot;Spatial Data Bootcamp: Download Census tract shapefile - TIGER data&quot; target=&quot;_blank&quot;&gt;Census TIGER data site&lt;/a&gt; and click on TIGER/Line Shapefiles from the product table.&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-1.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;In the product year table, select &lt;em&gt;2014&lt;/em&gt;, click &lt;em&gt;Download&lt;/em&gt;, and enter the &lt;em&gt;Web Interface&lt;/em&gt;&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-2.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Select a layer type: &lt;em&gt;Census Tracts&lt;/em&gt;, then &lt;em&gt;Submit&lt;/em&gt;&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-3.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Census Tract - Select a state: &lt;em&gt;Washington&lt;/em&gt;, then &lt;em&gt;Download&lt;/em&gt;&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-4.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Save file. Navigate to your directory&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-5.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;unpack-downloaded-files&quot;&gt;&lt;strong&gt;3. Unpack downloaded files:&lt;/strong&gt;&lt;/h5&gt;
+
+&lt;p&gt;If you haven’t already downloaded your data, see &lt;strong&gt;Download Census Housing Data&lt;/strong&gt; and &lt;strong&gt;Download TIGER Census Tracts&lt;/strong&gt; above.&lt;/p&gt;
+
+&lt;p&gt;If you haven’t already moved your downloaded zip files from the above steps, move your zip files into your working directory.&lt;/p&gt;
+
+&lt;p&gt;Using an extraction application like 7-zip makes it easy to unzip these files.&lt;/p&gt;
+
+&lt;p&gt;Install 7-zip if necessary.&lt;/p&gt;
+
+&lt;p&gt;Right-click on zip file and ‘Extract Here’&lt;/p&gt;
+
+&lt;p&gt;Do this for all zip files.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-unpack-files.png&quot; alt=&quot;Spatial Data Bootcamp: Unzip files&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After unpacking files, open one of the Census ACS folders (aff_download).&lt;/p&gt;
+
+&lt;p&gt;Rename folder&lt;/p&gt;
+
+&lt;p&gt;Notice the files. Theres a text file with metadata on the given metric (Housing Units or Home Values). There’s a README that explains what’s inside of the zip file. There’s a metadata CSV that explains what the column headings represent. And there’s the data we need in CSV format with annotations.&lt;/p&gt;
+
+&lt;p&gt;Now open the Census tracts TIGER data folder. The XMl file contain the metadata about the shapefile. Double-clicking the XML files should open in a web browser and you should be able to read the information. The shapefile data is stored in the .dbf, .prj, .shp, and .shx. You can view the projection by opening the .prj in a text editor. Don’t bother trying to open the other files in a text editor.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-unpack-files-2.png&quot; alt=&quot;Spatial Data Bootcamp: View shapefiles and metadata&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;join-census-housing-data-to-tiger-census-tracts&quot;&gt;&lt;strong&gt;4. Join Census Housing Data to TIGER Census Tracts&lt;/strong&gt;&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Import Census Tracts shapefile&lt;/li&gt;
+  &lt;li&gt;View the attribute data&lt;/li&gt;
+  &lt;li&gt;Open CSV in text editor or Excel.
+    &lt;ul&gt;
+      &lt;li&gt;We’re looking for a unique key to join the data.&lt;/li&gt;
+      &lt;li&gt;HINT: It’s GEOID (tract) and GEO.id2 (ACS)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Save housing units CSV as housing-units.csv&lt;/li&gt;
+  &lt;li&gt;Save home values CSV as home-values.csv&lt;/li&gt;
+  &lt;li&gt;Just wait right there, one does not simply join a string (tract’s GEOID) to a number (ACS’s GEO.ids).
+    &lt;ul&gt;
+      &lt;li&gt;insert an image here of viewing field types in QGIS&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;You’ll first have to create a .csvt. Text files do not allow you to specify field types. Having a .csvt in the same directory as your .csv will allow QGIS to read the field type.&lt;br /&gt;Copy the line below and paste it into a text editor and save it as housing-units.csv&lt;br /&gt;“String”,”String”,”String”,”Integer”,”Integer”&lt;br /&gt;. Create another .csvt with the same text and save it as home-value.csvt. You need to be sure you have defined all fields, e.g. Your .csv has five fields, you must make the .csvt with five fields.&lt;/li&gt;
+  &lt;li&gt;Did you notice anything peculiar about the CSV headers? You’re in luck, we did. The headers for the housing attributes are the same in both home-value.csv and housing-units.csv. These fields will overwrite each other if we don’t change them now. Look at your metadata to decrypt the headers. Rename the following:&lt;br /&gt;home-value.csv:&lt;br /&gt;HD01_VD01 = Median Home Value (dollars)&lt;br /&gt;HD02_VD01 = Median Home value (MOE)&lt;br /&gt;housing-unit.csv:&lt;br /&gt;HD01_VD01 = Total Homes&lt;br /&gt;HD02_VD01 = Total Homes (MOE)&lt;/li&gt;
+  &lt;li&gt;Remove the CSV from your QGIS Layers List&lt;/li&gt;
+  &lt;li&gt;Open your revised CSVs in QGIS and confirm that all fields are correct. Notice the fields we need to perform calculations on are integers.&lt;/li&gt;
+  &lt;li&gt;Open the Processing Toolbox and search “join attribute table”. Open the tool.&lt;/li&gt;
+  &lt;li&gt;You must join the CSV (tabular) to the shapefile. You cannot join the shapefile to the tabular data… Configure your inputs as follows:&lt;br /&gt;
+image here of inputs&lt;br /&gt;
+notice the Unmatching CRS’s. Tabular data is not spatial data, else it’s spatial data… Click YES&lt;/li&gt;
+  &lt;li&gt;Your output layer is named ‘Output Layer’, hover over and you can see the file name. Rename this layer to tract-houses.&lt;/li&gt;
+  &lt;li&gt;Join home-values.csv to tract-houses.&lt;/li&gt;
+  &lt;li&gt;View output-layer attributes. Rename to tract-houses-values. Remove tract-houses, tl_2014_53_tract, home-values, and housing-units. We now have all of our data in one shapefile. And we’re still able to do calculations with our interger field (emphasis on the .csvt)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;vector-analysis&quot;&gt;Vector Analysis&lt;/h2&gt;
+
+&lt;h3 id=&quot;what-this-module-covers-2&quot;&gt;What this module covers:&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Buffer polylines&lt;/li&gt;
@@ -1170,12 +1528,9 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
   &lt;li&gt;&lt;a href=&quot;https://www.census.gov/geo/maps-data/data/tiger.html&quot; alt=&quot;Spatial Data Bootcamp: Download Census tract shapefile - TIGER data&quot; target=&quot;_blank&quot;&gt;Census tracts - TIGER Data&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://earthquake.usgs.gov/hazards/qfaults&quot; alt=&quot;Spatial Data Bootcamp: Download USGS quaternary faults&quot; target=&quot;_blank&quot;&gt;Quaternary faults - USGS &lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx&quot; alt=&quot;Spatial Data Bootcamp: Download seismogenic features&quot; target=&quot;_blank&quot;&gt;Washington seismogenic features - REQUIRES GDAL filegdb driver!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://nhd.usgs.gov/&quot; alt=&quot;Spatial Data Bootcamp: Download USGS National Hydrography Dataset - Washington&quot; target=&quot;_blank&quot;&gt;Washington streams/rivers - USGS National Hydrography Dataset&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Here, the data are pre-wrangled (located on nathan’s server, for now):&lt;/p&gt;
-
-&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://nhd.usgs.gov/&quot; alt=&quot;Spatial Data Bootcamp: Download USGS National Hydrography Dataset - Washington&quot; target=&quot;_blank&quot;&gt;Washington streams/rivers - USGS National Hydrography Dataset&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;faults_100k - [source]&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/bootcamp/assets/data/housing-data.zip&quot;&gt;housing-data.zip&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1311,7 +1666,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;h2 id=&quot;raster-analysis&quot;&gt;Raster Analysis&lt;/h2&gt;
 
-&lt;h3 id=&quot;what-this-module-covers-2&quot;&gt;What this module covers:&lt;/h3&gt;
+&lt;h3 id=&quot;what-this-module-covers-3&quot;&gt;What this module covers:&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Importing raster data&lt;/li&gt;
@@ -2092,6 +2447,136 @@ For more properties and examples reference the
  </entry>
  
  <entry>
+   <title>Cartography</title>
+   <link href="http://104.237.129.71/bootcamp/cartography/cartography"/>
+   <updated>2005-12-31T00:00:00-07:00</updated>
+   <id>http://104.237.129.71/bootcamp/cartography/cartography</id>
+   <content type="html">
+&lt;h3 id=&quot;exercises&quot;&gt;Exercises&lt;/h3&gt;
+
+&lt;p&gt;Making maps in QGIS&lt;/p&gt;
+
+&lt;p&gt;Before starting this next section, add the following layers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;geo_coded.tif
+ &lt;!--* slope-geo-sect.tif--&gt;
+ &lt;!--* landslide-suscept.tif--&gt;&lt;/li&gt;
+  &lt;li&gt;dem-washington.tif&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/carto/carto-1.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;exercise-1&quot;&gt;Exercise 1&lt;/h3&gt;
+
+&lt;p&gt;Create map of Washington rock strength&lt;/p&gt;
+
+&lt;p&gt;Needs: dem, geo_coded&lt;/p&gt;
+
+&lt;p&gt;Layering - same concept as photo editing; layers stack, or go on top of each other. Increasing transparency will reduce layer opacity or make it see-through.&lt;/p&gt;
+
+&lt;h4 id=&quot;prepare-data-for-map&quot;&gt;Prepare data for map&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Uncheck all layers, less dem-washington and geo_coded
+&lt;!--2. Create hillshade: * &lt;em&gt;Menu Bar &gt; Raster &gt; Analysis &gt; DEM (Terrain models)&lt;/em&gt; * Configure input as follows:&lt;br&gt; Notice the Z factor, this will exaggerate elevation and give the map an appearance of greater relief.&lt;br&gt;![Spatial Data Bootcamp: Cartography in QGIS](/bootcamp/assets/images/carto/carto-2.png) --&gt;&lt;/li&gt;
+  &lt;li&gt;Load hillshade-washington.tif&lt;/li&gt;
+  &lt;li&gt;Be sure geo_coded is moved up, or on top of dem-washington:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Click-hold-drag geo_coded&lt;/em&gt; to the top of the layer list.&lt;/li&gt;
+      &lt;li&gt;Uncheck dem-washington layer.&lt;br /&gt;
+ &lt;img src=&quot;/bootcamp/assets/images/carto/carto-3.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Style geo_coded with qml-style file:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Right-click geo_coded &amp;gt; Properties &amp;gt; Style&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Load Style… (button at bottom) &amp;gt; Navigate to rock-strength.qml&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;QGIS does not load actual minimum and maximum values by default. This enables faster layer rendering. You’ll want to load actual min/max values to visualize the correct data. To load actual min/max values:&lt;br /&gt;&lt;em&gt;Load min/max values: Min/max&lt;br /&gt;Accuracy: Actual (slower)&lt;br /&gt;Click Load&lt;br /&gt;Click Apply to save changes&lt;/em&gt;&lt;br /&gt;
+ &lt;img src=&quot;/bootcamp/assets/images/carto/carto-4.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Increase transparency:&lt;br /&gt;&lt;em&gt;From within layer Properties &amp;gt; Transparency &amp;gt; Global Transparency &amp;gt; 50%&lt;br /&gt;Click Apply, OK to save changes and close Properties&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;The product just created visualizes rock strength within Washington state with enhanced effects using hillshade and transparency.
+ &lt;img src=&quot;/bootcamp/assets/images/carto/carto-5.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;making-the-map&quot;&gt;Making the map&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;There are several was to open the &lt;strong&gt;Print Composer&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Project &amp;gt; New Print Composer&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Print Composer toolbar icon&lt;br /&gt;
+ &lt;img src=&quot;/bootcamp/assets/images/carto/carto-6.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Create title:
+    &lt;ul&gt;
+      &lt;li&gt;This new Print Composer project will be saved and can be accessed through the &lt;strong&gt;Composer Manager&lt;/strong&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The Print Composer opens in a new application window, you will still be able to work in your current project while making a map.&lt;/li&gt;
+  &lt;li&gt;You must add a map layer for visualizing. The &lt;strong&gt;Add Map&lt;/strong&gt; tool will require you to create a bounding box to fit the map. Adjust the bounding box as needed. To add a map layer:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Layout &amp;gt; Add Map&lt;/em&gt; OR&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Add new map&lt;/strong&gt; toolbar icon:&lt;br /&gt;
+ &lt;img src=&quot;/bootcamp/assets/images/carto/carto-7.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Move Item Content&lt;/strong&gt; tool will allow you to move the map without moving the bounding box&lt;br /&gt;
+ &lt;img src=&quot;/bootcamp/assets/images/carto/carto-8.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Explore tools by hovering over the toolbar icon or go to &lt;em&gt;Menu Bar &amp;gt; Layout&lt;/em&gt; to see the names of each layout tool.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add a legend:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Layout &amp;gt; Add Legend&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Notice how names and values are not appropriate for a final map. To open legend propertie, using the &lt;strong&gt;Select/Move Item&lt;/strong&gt; tool: &lt;em&gt;Select the legend layer and notice the Item properties on the right&lt;/em&gt;&lt;br /&gt;
+ &lt;img src=&quot;/bootcamp/assets/images/carto/carto-9.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Item properties: Here you are able to change the title, select which legend to produce based on the map layer, modify legend item, etc. See the images below for the list of options.&lt;br /&gt;
+ &lt;img src=&quot;/bootcamp/assets/images/carto/carto-10.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add a title:
+    &lt;ul&gt;
+      &lt;li&gt;add title&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add scale bar:
+    &lt;ul&gt;
+      &lt;li&gt;scale bar&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Map info
+    &lt;ul&gt;
+      &lt;li&gt;map info&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;North arrow
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Layout &amp;gt; Add image&lt;/em&gt; then click area on map.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Image item properties &amp;gt; Search directories &amp;gt; Locate North Arrow&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Configure additional features&lt;/li&gt;
+  &lt;li&gt;Export map:
+    &lt;ul&gt;
+      &lt;li&gt;As Image, PDF, or SVG.&lt;br /&gt;
+ &lt;img src=&quot;/bootcamp/assets/images/carto/carto-final-map.jpg&quot; style=&quot;border:1px solid black;&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Map Types</title>
    <link href="http://104.237.129.71/bootcamp/cartography/map-types"/>
    <updated>2005-12-25T00:00:00-07:00</updated>
@@ -2302,6 +2787,254 @@ For more properties and examples reference the
 &lt;h2 id=&quot;what-was-covered&quot;&gt;What was covered&lt;/h2&gt;
 
 &lt;hr /&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Exercise</title>
+   <link href="http://104.237.129.71/bootcamp/data%20analysis/case-study"/>
+   <updated>2004-12-31T00:00:00-07:00</updated>
+   <id>http://104.237.129.71/bootcamp/data%20analysis/case-study</id>
+   <content type="html">
+&lt;h4 id=&quot;prerequisites-intro-data-collection-data-wrangling&quot;&gt;Prerequisites: Intro, Data Collection, Data Wrangling&lt;/h4&gt;
+
+&lt;h3 id=&quot;objectives&quot;&gt;Objectives:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Be able to reclassify a raster.&lt;/li&gt;
+  &lt;li&gt;Understand basics of raster calculations.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;exercise&quot;&gt;Exercise&lt;/h3&gt;
+
+&lt;p&gt;This exercise will walk through reclassifying raster data.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;create-reclassification-rules-text-file&quot;&gt;1 - Create reclassification rules text file&lt;/h3&gt;
+
+&lt;h4 id=&quot;slope&quot;&gt;Slope&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
+      &lt;th&gt;    &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Slope&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3-5°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5-10°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10-15°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;15-20°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;20-30°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;30-40°&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40°&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;In order to reclass our slope layer into something useful, we will use the grass &lt;em&gt;r.reclass&lt;/em&gt; tool&lt;/p&gt;
+
+&lt;p&gt;The r.reclass tool reads text files which define the classification rules(rule files). For this example, our rule fill will have the following contents:&lt;/p&gt;
+
+&lt;h5 id=&quot;slope-ruletxt&quot;&gt;&lt;em&gt;slope-rule.txt&lt;/em&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;0 thru 2.99 = 1
+3 thru 4.99 = 2
+5 thru 9.99 = 3
+10 thru 14.99 = 4
+15 thru 19.99 = 5
+20 thru 29.99 = 6 
+30 thru 39.99 = 7
+40 thru 90 = 8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;reclassify-raster&quot;&gt;2 - Reclassify raster&lt;/h3&gt;
+
+&lt;p&gt;Once we have created the slope rule file. We can select the r.reclass tool from the Processing Toolbox.&lt;/p&gt;
+
+&lt;p&gt;Your Processing Toolbox may not be opened. &lt;em&gt;Open your Processing Toolbox: Menu Bar &amp;gt; Processing &amp;gt; Toolbox&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In the processing toolbox, select &lt;em&gt;GRASS commands&lt;/em&gt; &amp;gt; &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;r.reclass&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We will use the following settings for the reclassify tool:&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Input Raster: &lt;em&gt;slope-washington&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;File containing reclass rules: &lt;em&gt;slope-rules.txt&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Output raster layer: &lt;em&gt;slope-reclass.tif&lt;/em&gt; (NOTE: select &lt;em&gt;Save to file…&lt;/em&gt; or else QGIS will not create a permanent output)&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/slope-reclass.png&quot; alt=&quot;slope-reclass&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;susceptibility&quot;&gt;3 - Susceptibility&lt;/h3&gt;
+
+&lt;p&gt;We will have to do some raster calculations to create the output data set. The classifications are taken from the California study&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and are as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/landslide-key.png&quot; alt=&quot;landslide-key&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Since we need to cross reference these categories, we need to create a raster which represents each unique combination of the slope and rock strength classes. A method to create unique combinations is to promote the rock strength categories a decimal place. This would make the rock classes: 10,20, and 30.&lt;/p&gt;
+
+&lt;p&gt;To create these new classes, we can &lt;strong&gt;load the following files&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;source_files/geo_coded.tif&lt;/li&gt;
+  &lt;li&gt;secondary_files/slope-reclass.tif&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Our raster calculator expression will be:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Output layer: slope-geo-sect.tif&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/raster-calc.png&quot; alt=&quot;raster-calc&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can apply the landslide susceptibility classification using r.reclass and the following rule file:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Reclassify slope-geo-sect.tif with the following rule:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Save output as landslide-suscept.tif&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;landslide-rule.txt&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;11 12 13 21 31 = 0
+14 = 3
+22 23 = 5
+15 = 6
+16 32 33 = 7
+17 18 24 = 8
+25 thru 28 34 = 9
+35 thru 38 = 10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;precipitation&quot;&gt;4 - Precipitation&lt;/h4&gt;
+
+&lt;p&gt;Now that we have created the landslide susceptibility layer, we can make use the Average Annual Precipitation layer to check the susceptible areas against the areas receiving the most annual rain.&lt;/p&gt;
+
+&lt;p&gt;Convert millimeters to inches&lt;/p&gt;
+
+&lt;p&gt;Raster calculator: precip = precip * 0.0394&lt;/p&gt;
+
+&lt;p&gt;Check THIS STEP AGAINST REFERENCES&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
+      &lt;th&gt;    &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Precipitation&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5-10 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10-15 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;15-30 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;30-45 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;45-60 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;60-75 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;75-90 in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 90 in&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;visualization&quot;&gt;Visualization&lt;/h3&gt;
+
+&lt;p&gt;Now that the output datasets have been created, we can work on making our results presentable.&lt;/p&gt;
+
+&lt;p&gt;Go to Cartography &amp;amp; Visualization…&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;References:&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;http://www.conservation.ca.gov/cgs/information/publications/Documents/MS58.pdf &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </content>
  </entry>
  
@@ -3987,6 +4720,120 @@ If you are using Mac or Linux you can extract the files in the terminal with the
   &lt;li&gt;Database: There are various databases that, with extensions, can hold geographic objects. Some notable examples are PostgreSQL with PostGIS, and SQLite with the SpatiaLite extension. It is important to look into the level of spatial support within a database before performing any analysis. For example, MySQL&#39;s spatial extension has geometry support, but the geometries are all defined by bounding boxes rather than the true geometry.&lt;/li&gt;
 &lt;/ul&gt;
 
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Projections</title>
+   <link href="http://104.237.129.71/bootcamp/intro/projections"/>
+   <updated>2000-12-28T00:00:00-07:00</updated>
+   <id>http://104.237.129.71/bootcamp/intro/projections</id>
+   <content type="html">
+&lt;h4 id=&quot;pre-requisites-is-spatial-special-vectors-and-rasters&quot;&gt;&lt;strong&gt;Pre-requisites: Is Spatial Special, Vectors and Rasters&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Understand purpose of using a projection on a map&lt;/li&gt;
+  &lt;li&gt;Recognize a few projection types&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;projections-a-nameprojectionsa&quot;&gt;Projections &lt;a name=&quot;projections&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Projections characterize spatial data by setting coordinate reference systems for each data set.&lt;/p&gt;
+
+&lt;p&gt;Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
+ will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth&#39;s image onto a plane.&lt;/p&gt;
+
+&lt;h4 id=&quot;distortion&quot;&gt;Distortion&lt;/h4&gt;
+
+&lt;p&gt;Since projections attempt to represent the 3-dimensional globe on a 2-dimensional plane, they will all suffer from some level of distortion. It is important to choose a projection which preserves the elements you are interested in studying.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;projection-properties&quot;&gt;Projection Properties&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Conformal&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Also known as &lt;em&gt;fidelity of shape&lt;/em&gt;, these projections preserve shape. This means that scale distortion must be the same in all directions and each parallel must cross every meridian at right angles. These projections are important for navigational and large-scale mapping[^1]
+Examples include Mercator, and Lambert Conformal Conic.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Equal Area&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Preserves the area relationships between regions. This maintain the proper ratio of area between regions. An example of this is the Mollweide projection. These projections are useful for statistical comparisons.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Equidistant&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Preserves the proportional distances between any two points from their spherical distances.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;geometric-projection-types&quot;&gt;Geometric Projection Types&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Conic&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://commons.wikimedia.org/wiki/File:Usgs_map_lambert_conformal_conic.PNG#mediaviewer/File:Usgs_map_lambert_conformal_conic.PNG&quot;&gt;&lt;img alt=&quot;Usgs map lambert conformal conic.PNG&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/6/62/Usgs_map_lambert_conformal_conic.PNG&quot; /&gt;&lt;/a&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Conic projections are created by projecting part of a sphere onto a cone. Conic projections tend to be useful for representing data in temperate climates due to their location. Conicn projections are not useful for representing global phenomena due to their construction.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Azimuthal&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a title=&quot;By User:Quadell, re-cml projectionloring US Government USGS image. [Public domain or Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AUsgs_map_azimuthal_equidistant.PNG&quot;&gt;&lt;img alt=&quot;Usgs map azimuthal equidistant&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/6/64/Usgs_map_azimuthal_equidistant.PNG&quot; /&gt;&lt;/a&gt;
+&lt;br /&gt;
+Azimuthal projections are created by flattening a side of the sphere from a reference point. Azimuthal projections are useful for mapping polar data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cylindrical&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a title=&quot;By Ciphers (Own work) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AMercator_projection_ar.png&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;Mercator projection ar&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Mercator_projection_ar.png/512px-Mercator_projection_ar.png&quot; /&gt;&lt;/a&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cylindrical projections are created by projection a sphere onto a cylinder. Cylindrical projections suffer the least distortion along the line that it intersects the sphere, which is often around the Equator. This makes cylindrical projections useful for mapping tropical data. Examples include Mercator and Universal Transverse Mercator.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Polyhedral&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a title=&quot;By Chris Rywalt (POVRay) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ADymaxion_2003_animation_small1.gif&quot;&gt;&lt;img width=&quot;256&quot; alt=&quot;Dymaxion 2003 animation small1&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/b/bb/Dymaxion_2003_animation_small1.gif&quot; /&gt;&lt;/a&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Polyhedral projections, also known as interrupted projections seek to minimize global distortion by tearing the sphere at specific areas. A common method for creating polyhedral projections is to coerce the sphere into a 3-dimensional geometric object such as a cube which is the then unraveled. Some examples include Dymaxion and Waterman’s butterfly.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;checking-the-projection&quot;&gt;Checking the projection&lt;/h3&gt;
+
+&lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.gdal.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/gdalinfo.png&quot; alt=&quot;Using GDAL to check projection&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/spatialreference.png&quot; alt=&quot;SpatialReference.org: EPSG:4326&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Since there are a few thousand different projections, with their own area of interest, it is likely that you will come upon datasets with different projection in your project. The easiest way to resolve projection disputes is to decide on the projection for your project before gathering data and save the proj4 string assigned to the projection. This string will allow you to project your datasets to the proper coordinate reference system.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;table style=&quot;margin: 0px 25px;&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;h5&gt;EPSG:4326 (WGS84)&lt;/h5&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;br /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;td&gt;&lt;h5&gt;Custom proj4&lt;/h5&gt;&lt;/td&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;+proj=lcc +lat_1=45.89893890000052 +lat_2=47.69601440000037 +lat_0=46.8 +lon_0=2.33722917 +x_0=600000 +y_0=200000 +a=6378249.145 +b=6356514.96582849 +pm=2.337229167 +units=m +no_defs&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;NOTE: When reprojecting a raster, you should also resample your raster to ensure that the cells have the same width and height. The cells will distort in the new projection and most GIS software will refuse to read a raster with irregular cells.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[^1] http://www.progonos.com&lt;/p&gt;
 </content>
  </entry>
  
