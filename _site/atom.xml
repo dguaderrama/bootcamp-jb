@@ -4,7 +4,7 @@
  <title>Spatial Data Bootcamp</title>
  <link href="http://104.237.129.71/bootcamp/" rel="self"/>
  <link href="http://104.237.129.71/bootcamp"/>
- <updated>2015-04-06T18:29:28-07:00</updated>
+ <updated>2015-04-07T18:39:03-07:00</updated>
  <id>http://104.237.129.71/bootcamp</id>
  <author>
    <name>Nathan Casler</name>
@@ -1472,33 +1472,108 @@ If you did not clear your selections from the previous steps then continue on, e
 
 &lt;h5 id=&quot;join-census-housing-data-to-tiger-census-tracts&quot;&gt;&lt;strong&gt;4. Join Census Housing Data to TIGER Census Tracts&lt;/strong&gt;&lt;/h5&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;notes: wrangling tabular data (CSV) - naming conventions- no spaces in header!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;wrangling census data - remove all but GEO.id2 and HomeValue/Units - for the purposes of this exercise, we don’t need the additional data&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;wrangling census data - csvt - HomeValue/Units must be Real numbers for a correct Field Calculation (not sure why yet..)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;wrangling CSVT - to output correct number-types using Field Calculator, use Real(12.0) for HomeValues/Units&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;to join multiple tabular data: add shapefile, add CSVs, go to shapefile properties &amp;gt; joins &amp;gt; add joins &amp;gt; SAVE AS new shapefile (these joins are stored in virtual memory, you will return NULL on all records while using field calculator).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;field calc: SEE JOIN MULTIPLE TABULAR DATA. open attributes &amp;gt; edit mode &amp;gt; Field Calculator &amp;gt; enter inputs (reminder: integer * integer = number, integer * string = NULL)&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;ol&gt;
-  &lt;li&gt;Import Census Tracts shapefile&lt;/li&gt;
-  &lt;li&gt;View the attribute data&lt;/li&gt;
-  &lt;li&gt;Open CSV in text editor or Excel.
+  &lt;li&gt;Import Census Tracts shapefile &lt;strong&gt;tl_2014_53_tract&lt;/strong&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/add-vector.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Add vector layer&quot; /&gt;.&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-1.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Washington Census tracts&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Rename tl_2014_53_tract to census-tracts &lt;em&gt;Right-click layer &amp;gt; Rename&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Open the tract &lt;strong&gt;Attribute table&lt;/strong&gt; and leave it open: &lt;em&gt;Right-click tract layer &amp;gt; Attribute table&lt;/em&gt;&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-2.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Washington tract attributes&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;If you haven’t yet, download your Census data and return to this step. SEE &lt;em&gt;ENTER EXERCISE NUMBER AND LINK HERE&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Navigate to the Census Housing Units directory. You should have a soure_files directory with Census Housing Units, Census Home Values, and Census Tracts zip files and unzipped folders containing data.&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-3.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Washington Census data&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Rename ACS_13_5YR_B25001_with_ann.csv to housing-units.csv&lt;/em&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-4.png&quot; alt=&quot;Spaital Data Bootcamp: Census Join - Rename housing data CSV&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Open housing-units.csv and inspect the data for columns to use for our joins. HINT: it’s GEOID (tract shapefile) and GEO.id2 (ACS CSVs). We can only join data (tabular join) with &lt;em&gt;exact same&lt;/em&gt; columns. The Census provides these columns for this purpose (I’m sure other purposes as well). See the tables below:&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-5.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Locate similar columns&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Remove the second row containing the annotations. Delete the columns: GEO.id, GEO.display-lable, and HD02_VD01. For the purposes of this exercise, we do not need the removed columns. Our objective is to join data and visualize (with minimal data wrangling). In LibreOffice, highlight the row/column, right-click and Delete Selected Columns. Excel should be the same/similar. Command-line users, AWK is an easy solution. It should look like the file below:&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-6.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Delete housing data annotation&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Rename header HD01_VD01 to TotalUnitsHome. Save your document, be sure it’s stored as a Text CSV &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-8.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Save as Text CSV&quot; /&gt;. Excel users may have to select Text CSV from a drop-down list (I’ll check back with this). Renaming the headers reduced confusion down the road. Also, notice how there are no spaces in the header name. Removing (or not having) spaces is in the top 10 list of best naming convention practices (on all computer systems.. everywhere in the digital world.. you should never have spaces in your file names or directories). Close the document.&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-7.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Rename HD01_VD01 to MeanValueHome&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Do the same for the Home Values CSV:
     &lt;ul&gt;
-      &lt;li&gt;We’re looking for a unique key to join the data.&lt;/li&gt;
-      &lt;li&gt;HINT: It’s GEOID (tract) and GEO.id2 (ACS)&lt;/li&gt;
+      &lt;li&gt;Navigate to document&lt;/li&gt;
+      &lt;li&gt;Rename ACS_13_5YR_B25077_with_ann.csv to home-values.csv&lt;/li&gt;
+      &lt;li&gt;Delete second row with annotations&lt;/li&gt;
+      &lt;li&gt;Delete columns: GEO.id, GEO.display-label, HD02_VD01&lt;/li&gt;
+      &lt;li&gt;Rename HD01_VD01 to MedianValueHome&lt;/li&gt;
+      &lt;li&gt;Save your document in Text CSV format &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-8.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Save as Text CSV&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-9.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Wrangle Home Values CSV&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Save housing units CSV as housing-units.csv&lt;/li&gt;
-  &lt;li&gt;Save home values CSV as home-values.csv&lt;/li&gt;
-  &lt;li&gt;Just wait right there, one does not simply join a string (tract’s GEOID) to a number (ACS’s GEO.ids).
+  &lt;li&gt;You’re not quite finished with wrangling your data yet. If you have a quick look at your home-values.csv (it should still be open, Simon didn’t say close!), you’ll notice there are some invalid fields - number fields that contain non-numeric values. Lines 501 and 502 read 1,000,000+ and should be changed to 1000000.&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-10.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Wrangle Home Values CSV&quot; /&gt;
+There are some median home value records with ‘-‘ and if you read your metadata you would know that:&lt;br /&gt;&lt;br /&gt;&lt;em&gt;An ‘-‘ entry in the estimate column indicates that either no sample observations or too few sample observations were available to compute an estimate, or ratio of medians cannot be calculated because of one or both of the median estimates falls in the lowest interval or upper interval of an open-ended distribution.&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;Let’s cleanse this now:&lt;br /&gt; LibreOffice and Excel users, &lt;strong&gt;Find and Replace ‘-‘ (without single quotes) with NULL&lt;/strong&gt;&lt;br /&gt;VIM (or similar) users: &lt;strong&gt;%s#-#NULL#g&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Also, after making these changes the data type of the incorrect records have not changed - they’re still string/text fields in a numeric universe (only in LibreOffice/Excel, however). We will instruct QGIS on how to read the column data types with a .CSVT. Be sure to save your home-values.csv in Text CSV format &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-8.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Save as Text CSV&quot; /&gt;.
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-11.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Wrangle Home Values CSV&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Just wait right there, one does not simply join a string (tract’s GEOID) to a number (ACS’s GEO.ids). We now have to create our CSVTs (one for each home-values.csv and housing-units.csv). As a reminder, these indicate to QGIS the data types of each column of repsective CSVs. Our goal here is to join GEOID from tracts (shapefile) to GEO.id2 from home-values.csv and housing-units.csv. Go back into QGIS and open the census-tracts properties and navigate to &lt;strong&gt;Fields&lt;/strong&gt;. Locate GEOID in the table and notice its &lt;strong&gt;Type name&lt;/strong&gt; - &lt;strong&gt;String&lt;/strong&gt;. With less wrangling we can make GEO.id2 a string for joining purposes. Close the properties window. The following steps outline how to create the CSVTs.&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-12.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Tract field data types&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Open a text editr (gedit, VIM, notepad, notepad++) and enter the following row:&lt;br /&gt;
+“String”,”Real(12.0)”&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-13.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Creating a CSVT&quot; /&gt;
+What this means:&lt;br /&gt;
+There are two columns in this file separated by a common. The first column indicates string and the second is a real number with length of 12 and precision of 0. While preparing this exercise, QGIS didn’t like multiplying integers (Field Calculator results with NULL), so we’re using real number type. 0 precision removes unneccessary zeros after the decimal from real number types, also there are no fractions in the datasets.&lt;br /&gt;&lt;br /&gt;
     &lt;ul&gt;
-      &lt;li&gt;insert an image here of viewing field types in QGIS&lt;/li&gt;
+      &lt;li&gt;Save this file as &lt;em&gt;home-values.csvt&lt;/em&gt; within the &lt;em&gt;same&lt;/em&gt; directory as &lt;em&gt;home-values.csv&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;You’ll first have to create a .csvt. Text files do not allow you to specify field types. Having a .csvt in the same directory as your .csv will allow QGIS to read the field type.&lt;br /&gt;Copy the line below and paste it into a text editor and save it as housing-units.csv&lt;br /&gt;“String”,”String”,”String”,”Integer”,”Integer”&lt;br /&gt;. Create another .csvt with the same text and save it as home-value.csvt. You need to be sure you have defined all fields, e.g. Your .csv has five fields, you must make the .csvt with five fields.&lt;/li&gt;
-  &lt;li&gt;Did you notice anything peculiar about the CSV headers? You’re in luck, we did. The headers for the housing attributes are the same in both home-value.csv and housing-units.csv. These fields will overwrite each other if we don’t change them now. Look at your metadata to decrypt the headers. Rename the following:&lt;br /&gt;home-value.csv:&lt;br /&gt;HD01_VD01 = Median Home Value (dollars)&lt;br /&gt;HD02_VD01 = Median Home value (MOE)&lt;br /&gt;housing-unit.csv:&lt;br /&gt;HD01_VD01 = Total Homes&lt;br /&gt;HD02_VD01 = Total Homes (MOE)&lt;/li&gt;
-  &lt;li&gt;Remove the CSV from your QGIS Layers List&lt;/li&gt;
-  &lt;li&gt;Open your revised CSVs in QGIS and confirm that all fields are correct. Notice the fields we need to perform calculations on are integers.&lt;/li&gt;
-  &lt;li&gt;Open the Processing Toolbox and search “join attribute table”. Open the tool.&lt;/li&gt;
-  &lt;li&gt;You must join the CSV (tabular) to the shapefile. You cannot join the shapefile to the tabular data… Configure your inputs as follows:&lt;br /&gt;
-image here of inputs&lt;br /&gt;
-notice the Unmatching CRS’s. Tabular data is not spatial data, else it’s spatial data… Click YES&lt;/li&gt;
-  &lt;li&gt;Your output layer is named ‘Output Layer’, hover over and you can see the file name. Rename this layer to tract-houses.&lt;/li&gt;
-  &lt;li&gt;Join home-values.csv to tract-houses.&lt;/li&gt;
-  &lt;li&gt;View output-layer attributes. Rename to tract-houses-values. Remove tract-houses, tl_2014_53_tract, home-values, and housing-units. We now have all of our data in one shapefile. And we’re still able to do calculations with our interger field (emphasis on the .csvt)&lt;/li&gt;
+  &lt;li&gt;Luckily, we wrangled both CSVs into the same format, so copy &lt;em&gt;home-values.csvt&lt;/em&gt; and paste it into the &lt;em&gt;same&lt;/em&gt; directory as &lt;em&gt;housing-units.csv&lt;/em&gt;. Rename this pasted file as &lt;em&gt;housing-units.csvt&lt;/em&gt;. Data types, lengths, and precisions will be the same for both files.&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-14.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Viewing housing-units.csvt&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Import CSVs into QGIS. Don’t move just yet, there a little quirk about importing CSVs with CSVTs into QGIS. You &lt;em&gt;cannot&lt;/em&gt; use the &lt;strong&gt;Add Delimited Text Layer&lt;/strong&gt; tool, this does not recognize the CSVT precision and length. The best way to import with CSVTs is the ol’ drag-n-drop method (this has only been tested on Ubuntu 14.04 as of yet). Drag-and-drop your housing-units.csv and home-values.csv into QGIS. Don’t touch the associated CSVTs, QGIS reads these during the import process, just &lt;em&gt;don’t&lt;/em&gt; move these files. It’s the same concept as shapefiles and the multitude of associates files per one shapefile.&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-15.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Drag and drop CSVs&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Your workspace should look like the image below. Save your workspace now.&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-16.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - Workspace&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Now we are able to join our Census tabular data to the tracts shapefile. Join data by opening the &lt;strong&gt;Properties&lt;/strong&gt; of the census-tracts layer and navigating to the &lt;strong&gt;Joins&lt;/strong&gt; tab.&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-17.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - view tracts properties&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Start the first join by clicking the green plus sign &lt;img src=&quot;/bootcamp/assets/images/qgis/join-plus.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - green plus sign&quot; /&gt;. We’re joining home-values and housing-units to census-tracts with:&lt;br /&gt;&lt;strong&gt;Join field: GEO.id2&lt;br /&gt;Target field: GEOID&lt;br /&gt;Cache join layer in virtual memory: (checked)&lt;br /&gt;Apply and OK onced both joined&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-18.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - joining data&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Open census-tracts &lt;strong&gt;Attribute Table&lt;/strong&gt; and locate the MeanValueHome and TotalUnitsHome fields. Notice they’ve been renamed and cut-down. We can still decrypt these headings so we’ll continue on. Close the attributes table.&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-19.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - viewing joined data&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;You have joined the data but it’s currently being stored in the virtual memory, so we need to save census-tracts (with joined data) as a new shapefile: &lt;em&gt;Right-click shapefile &amp;gt; Save As&lt;/em&gt;&lt;br /&gt;
+&lt;strong&gt;Format: ESRI Shapefile&lt;br /&gt;
+Save as: tracts-values-units (save in your project directory)&lt;br /&gt;
+Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-20.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - save shapefile&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Let’s now calculate total housing value per census tract (TotalUnitsHome X MedianValueHome).
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Open tracts-value-units attributes table &amp;gt; Toggle editing mode&lt;/strong&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/toggle-editing-mode.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - toggle edits&quot; /&gt; &lt;strong&gt;&amp;gt; Field Calculator&lt;/strong&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/field-calculator.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - field calculator&quot; /&gt;.&lt;/li&gt;
+      &lt;li&gt;Configure Field Calculator inputs as follows:&lt;br /&gt;
+&lt;strong&gt;Create a new field: (checked)&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Output field name: TotalValue&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Output field type: Decimal number (real)&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Output field width: 20&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Precision: 0&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Expression: “home-value” * “housing-un”&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-21.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - field calculator&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Locate &lt;strong&gt;TotalValue&lt;/strong&gt; and confirm the calculation. NOTE: you should still have NULL values given that home-values.csv contains NULL values. Be sure to &lt;em&gt;Save edits&lt;/em&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/save-edits.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - save edits&quot; /&gt; and disable editing mode (Toggle editing mode) &lt;img src=&quot;/bootcamp/assets/images/qgis/toggle-editing-mode.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - toggle editing mode&quot; /&gt;. The editing options should now be grayed-out and disabled.&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-22.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - TotalValue per tract&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;You’ve successfully joined two sets of Census tabular data to a shapefile.&lt;/li&gt;
+  &lt;li&gt;Style tracts-values-units by categorizing by TotalValue and select a color ramp. QGIS will inform you that you have a high number of classes, click OK to confirm the categorization. We’ll need to remove NULL values. Locate NULL within the category table (HINT: it contains no values and is blank - look towards the bottom), highlight and click ‘Delete’ (not Delete all!) - ‘Delete’ removes only selected rows. Click Apply then OK to confirm changes. Deactivate census-tracts layer by unchecking it activate box in the layers list. Save your workspace. &lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-24.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - completed&quot; /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -4608,6 +4683,50 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 
 &lt;hr /&gt;
 
+&lt;h3 id=&quot;scale&quot;&gt;Scale&lt;/h3&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Scale&lt;/dt&gt;
+  &lt;dd&gt;Proportional difference between representation and actual object&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;Scale bars are commonly used on maps to visualize the map distance in real world units.&lt;/p&gt;
+
+&lt;p&gt;Scales can also be expressed in words(lexical form) or in a ratio (representative fraction).&lt;/p&gt;
+
+&lt;h4 id=&quot;lexical-form&quot;&gt;Lexical Form&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“five meters per centimeter”&lt;/li&gt;
+  &lt;li&gt;“120 miles per inch”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;representative-fraction&quot;&gt;Representative Fraction&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1:500,000&lt;/li&gt;
+  &lt;li&gt;1:25,000&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;resolution&quot;&gt;Resolution&lt;/h3&gt;
+
+&lt;h4 id=&quot;types&quot;&gt;Types:&lt;/h4&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Spatial Resolution&lt;/dt&gt;
+  &lt;dd&gt;Number of pixels per unit (pixels per inch)&lt;/dd&gt;
+  &lt;dt&gt;Temporal Resolution&lt;/dt&gt;
+  &lt;dd&gt;Number of frames per time interval (20 frames per second)&lt;/dd&gt;
+  &lt;dt&gt;Spectral Resolution&lt;/dt&gt;
+  &lt;dd&gt;Range of light wavelengths that can be captured by a given sensor (number of light bands)&lt;/dd&gt;
+  &lt;dt&gt;Radiometric Resolution&lt;/dt&gt;
+  &lt;dd&gt;Number of differences in brightness that can be detected (number of shades)&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;hr /&gt;
+
 &lt;h3 id=&quot;spatial-dependence&quot;&gt;Spatial Dependence&lt;/h3&gt;
 
 &lt;blockquote&gt;
@@ -4740,6 +4859,9 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 &lt;hr /&gt;
 
 &lt;h1 id=&quot;projections-a-nameprojectionsa&quot;&gt;Projections &lt;a name=&quot;projections&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a title=&quot;By Djexplo (Own work) [CC0], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ALatitude_and_Longitude_of_the_Earth.svg&quot;&gt;&lt;img src=&quot;/bootcamp//assets/images/earthCRS.png&quot; alt=&quot;earthCRS&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
 &lt;p&gt;Projections characterize spatial data by setting coordinate reference systems for each data set.&lt;/p&gt;
 
 &lt;p&gt;Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
@@ -4750,6 +4872,46 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 &lt;p&gt;Since projections attempt to represent the 3-dimensional globe on a 2-dimensional plane, they will all suffer from some level of distortion. It is important to choose a projection which preserves the elements you are interested in studying.&lt;/p&gt;
 
 &lt;hr /&gt;
+
+&lt;h4 id=&quot;coordinate-reference-systems&quot;&gt;Coordinate Reference Systems&lt;/h4&gt;
+
+&lt;p&gt;Projections are another name for projected coordinate systems. These projected coordinate systems compose a family of Coordinate Reference Systems.&lt;/p&gt;
+
+&lt;p&gt;Projected coordinate systems are based off of Geodetic Coordinate Systems. These Geodetic coordinate systems are ellipsoidal models aimed at representing the aspherical nature of the earth.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;earth-as-a-geoid&quot;&gt;Earth as a Geoid&lt;/h4&gt;
+
+&lt;p&gt;&lt;a title=&quot;By NASA/JPL/University of Texas Center for Space Research. [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AEarth_gravity.png&quot;&gt;&lt;img src=&quot;/bootcamp//assets/images/geoid.png&quot; alt=&quot;geoid&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Although we normally see the earth represented as a sphere, its shape is actually more irregular. The earth has an equatorial bulge and various other undulations due to tectonics, volcanics and the earth’s rotation.&lt;/p&gt;
+
+&lt;p&gt;The changes in the surface mass are the subject matter of Geodesy. Geodesists use differences in the vertical direction of gravity along with crustal, tidal, and polar motion to determine exact measurements of the Geoid. Geometric computations can become unwieldy processes due to the complicated nature of the Geoid surface. In order approximate the geoid while making geometric calculation feasible, reference ellipsoids were calculated.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;reference-ellipsoid&quot;&gt;Reference Ellipsoid&lt;/h3&gt;
+
+&lt;p&gt;&lt;a title=&quot;By NASA/JPL (http://sealevel.jpl.nasa.gov/gallery/posters.html) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AJason-1_measurement_system.gif&quot;&gt;&lt;img src=&quot;/bootcamp//assets/images/geoid-measure.gif&quot; alt=&quot;geoid-measure&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Reference ellipsoids have evolved over the years, moving from regional approximations to more precise global systems.&lt;/p&gt;
+
+&lt;p&gt;Regional ellipsoids like the North American Datum of 1927 which minimized distortion for the contiguous United States at the expense of more distant regions.&lt;/p&gt;
+
+&lt;p&gt;The modern reference ellipsoid, &lt;strong&gt;WGS 84&lt;/strong&gt; was developed using satellite measurements and past Geodetic System parameters, and has been the reference ellipsoid used by the Global Positioning System.&lt;/p&gt;
+
+&lt;p&gt;Most modern projections will use WGS 84 as the underlying reference ellipsoid, but it is important to check that your projection is defined correctly if you are dealing with old datasets.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;central-meridian&quot;&gt;Central Meridian&lt;/h4&gt;
+
+&lt;p&gt;Greenwich is the standard central meridian used in global projections. This point is given the value of 0° Longitude and serves as the origin the Global Positioning System. This delineation also leaves decides the use of Greenwich Mean Time as the standard time.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title=&quot;By Apletters (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AMeridian-at-Greenwich.jpg&quot;&gt;&lt;img src=&quot;/bootcamp//assets/images/greenwich-meridian.jpg&quot; alt=&quot;greenwichMeridian&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Greenwich meridian has a monument dedicated to it in several cities.&lt;/p&gt;
 
 &lt;h3 id=&quot;projection-properties&quot;&gt;Projection Properties&lt;/h3&gt;
 
@@ -4864,120 +5026,6 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
 &lt;/ul&gt;
 
 &lt;hr /&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Projections</title>
-   <link href="http://104.237.129.71/bootcamp/intro/projections"/>
-   <updated>2000-12-20T00:00:00-07:00</updated>
-   <id>http://104.237.129.71/bootcamp/intro/projections</id>
-   <content type="html">
-&lt;h4 id=&quot;pre-requisites-is-spatial-special-vectors-and-rasters&quot;&gt;&lt;strong&gt;Pre-requisites: Is Spatial Special, Vectors and Rasters&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Understand purpose of using a projection on a map&lt;/li&gt;
-  &lt;li&gt;Recognize a few projection types&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;projections-a-nameprojectionsa&quot;&gt;Projections &lt;a name=&quot;projections&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Projections characterize spatial data by setting coordinate reference systems for each data set.&lt;/p&gt;
-
-&lt;p&gt;Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
- will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth&#39;s image onto a plane.&lt;/p&gt;
-
-&lt;h4 id=&quot;distortion&quot;&gt;Distortion&lt;/h4&gt;
-
-&lt;p&gt;Since projections attempt to represent the 3-dimensional globe on a 2-dimensional plane, they will all suffer from some level of distortion. It is important to choose a projection which preserves the elements you are interested in studying.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;projection-properties&quot;&gt;Projection Properties&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Conformal&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Also known as &lt;em&gt;fidelity of shape&lt;/em&gt;, these projections preserve shape. This means that scale distortion must be the same in all directions and each parallel must cross every meridian at right angles. These projections are important for navigational and large-scale mapping[^1]
-Examples include Mercator, and Lambert Conformal Conic.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Equal Area&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Preserves the area relationships between regions. This maintain the proper ratio of area between regions. An example of this is the Mollweide projection. These projections are useful for statistical comparisons.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Equidistant&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Preserves the proportional distances between any two points from their spherical distances.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;geometric-projection-types&quot;&gt;Geometric Projection Types&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Conic&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://commons.wikimedia.org/wiki/File:Usgs_map_lambert_conformal_conic.PNG#mediaviewer/File:Usgs_map_lambert_conformal_conic.PNG&quot;&gt;&lt;img alt=&quot;Usgs map lambert conformal conic.PNG&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/6/62/Usgs_map_lambert_conformal_conic.PNG&quot; /&gt;&lt;/a&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Conic projections are created by projecting part of a sphere onto a cone. Conic projections tend to be useful for representing data in temperate climates due to their location. Conicn projections are not useful for representing global phenomena due to their construction.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Azimuthal&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a title=&quot;By User:Quadell, re-cml projectionloring US Government USGS image. [Public domain or Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AUsgs_map_azimuthal_equidistant.PNG&quot;&gt;&lt;img alt=&quot;Usgs map azimuthal equidistant&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/6/64/Usgs_map_azimuthal_equidistant.PNG&quot; /&gt;&lt;/a&gt;
-&lt;br /&gt;
-Azimuthal projections are created by flattening a side of the sphere from a reference point. Azimuthal projections are useful for mapping polar data.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cylindrical&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a title=&quot;By Ciphers (Own work) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AMercator_projection_ar.png&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;Mercator projection ar&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Mercator_projection_ar.png/512px-Mercator_projection_ar.png&quot; /&gt;&lt;/a&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Cylindrical projections are created by projection a sphere onto a cylinder. Cylindrical projections suffer the least distortion along the line that it intersects the sphere, which is often around the Equator. This makes cylindrical projections useful for mapping tropical data. Examples include Mercator and Universal Transverse Mercator.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Polyhedral&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a title=&quot;By Chris Rywalt (POVRay) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ADymaxion_2003_animation_small1.gif&quot;&gt;&lt;img width=&quot;256&quot; alt=&quot;Dymaxion 2003 animation small1&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/b/bb/Dymaxion_2003_animation_small1.gif&quot; /&gt;&lt;/a&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Polyhedral projections, also known as interrupted projections seek to minimize global distortion by tearing the sphere at specific areas. A common method for creating polyhedral projections is to coerce the sphere into a 3-dimensional geometric object such as a cube which is the then unraveled. Some examples include Dymaxion and Waterman’s butterfly.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;checking-the-projection&quot;&gt;Checking the projection&lt;/h3&gt;
-
-&lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.gdal.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/gdalinfo.png&quot; alt=&quot;Using GDAL to check projection&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/spatialreference.png&quot; alt=&quot;SpatialReference.org: EPSG:4326&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Since there are a few thousand different projections, with their own area of interest, it is likely that you will come upon datasets with different projection in your project. The easiest way to resolve projection disputes is to decide on the projection for your project before gathering data and save the proj4 string assigned to the projection. This string will allow you to project your datasets to the proper coordinate reference system.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;table style=&quot;margin: 0px 25px;&quot;&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;h5&gt;EPSG:4326 (WGS84)&lt;/h5&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;br /&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;td&gt;&lt;h5&gt;Custom proj4&lt;/h5&gt;&lt;/td&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;+proj=lcc +lat_1=45.89893890000052 +lat_2=47.69601440000037 +lat_0=46.8 +lon_0=2.33722917 +x_0=600000 +y_0=200000 +a=6378249.145 +b=6356514.96582849 +pm=2.337229167 +units=m +no_defs&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;NOTE: When reprojecting a raster, you should also resample your raster to ensure that the cells have the same width and height. The cells will distort in the new projection and most GIS software will refuse to read a raster with irregular cells.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;[^1] http://www.progonos.com&lt;/p&gt;
 </content>
  </entry>
  

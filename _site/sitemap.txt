@@ -37,5 +37,4 @@ http://104.237.129.71/bootcamp/intro/what
 http://104.237.129.71/bootcamp/intro/intro
 http://104.237.129.71/bootcamp/intro/projections
 http://104.237.129.71/bootcamp/intro/data-types
-http://104.237.129.71/bootcamp/intro/projections
 http://104.237.129.71/bootcamp/setup/qgis-install

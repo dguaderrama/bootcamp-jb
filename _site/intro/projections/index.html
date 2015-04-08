@@ -124,14 +124,6 @@
       
     
   
-    
-      
-      	
-      	<li class="active"><a href="/bootcamp/intro/projections" class="active">Projections</a></li>
-      	
-      
-    
-  
 
 
 
@@ -571,14 +563,6 @@
       
     
   
-    
-      
-      	
-      	<li class="active"><a href="/bootcamp/intro/projections" class="active">Projections</a></li>
-      	
-      
-    
-  
 
 
 
@@ -996,14 +980,6 @@
       
     
   
-    
-      
-      	
-      	<li class="active"><a href="/bootcamp/intro/projections" class="active">Projections</a></li>
-      	
-      
-    
-  
 
 
 
@@ -1365,6 +1341,9 @@
 <hr />
 
 <h1 id="projections-a-nameprojectionsa">Projections <a name="projections"></a></h1>
+
+<p><a title="By Djexplo (Own work) [CC0], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALatitude_and_Longitude_of_the_Earth.svg"><img src="/bootcamp//assets/images/earthCRS.png" alt="earthCRS" /></a></p>
+
 <p>Projections characterize spatial data by setting coordinate reference systems for each data set.</p>
 
 <p>Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
@@ -1375,6 +1354,46 @@
 <p>Since projections attempt to represent the 3-dimensional globe on a 2-dimensional plane, they will all suffer from some level of distortion. It is important to choose a projection which preserves the elements you are interested in studying.</p>
 
 <hr />
+
+<h4 id="coordinate-reference-systems">Coordinate Reference Systems</h4>
+
+<p>Projections are another name for projected coordinate systems. These projected coordinate systems compose a family of Coordinate Reference Systems.</p>
+
+<p>Projected coordinate systems are based off of Geodetic Coordinate Systems. These Geodetic coordinate systems are ellipsoidal models aimed at representing the aspherical nature of the earth.</p>
+
+<hr />
+
+<h4 id="earth-as-a-geoid">Earth as a Geoid</h4>
+
+<p><a title="By NASA/JPL/University of Texas Center for Space Research. [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AEarth_gravity.png"><img src="/bootcamp//assets/images/geoid.png" alt="geoid" /></a></p>
+
+<p>Although we normally see the earth represented as a sphere, its shape is actually more irregular. The earth has an equatorial bulge and various other undulations due to tectonics, volcanics and the earth’s rotation.</p>
+
+<p>The changes in the surface mass are the subject matter of Geodesy. Geodesists use differences in the vertical direction of gravity along with crustal, tidal, and polar motion to determine exact measurements of the Geoid. Geometric computations can become unwieldy processes due to the complicated nature of the Geoid surface. In order approximate the geoid while making geometric calculation feasible, reference ellipsoids were calculated.</p>
+
+<hr />
+
+<h3 id="reference-ellipsoid">Reference Ellipsoid</h3>
+
+<p><a title="By NASA/JPL (http://sealevel.jpl.nasa.gov/gallery/posters.html) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AJason-1_measurement_system.gif"><img src="/bootcamp//assets/images/geoid-measure.gif" alt="geoid-measure" /></a></p>
+
+<p>Reference ellipsoids have evolved over the years, moving from regional approximations to more precise global systems.</p>
+
+<p>Regional ellipsoids like the North American Datum of 1927 which minimized distortion for the contiguous United States at the expense of more distant regions.</p>
+
+<p>The modern reference ellipsoid, <strong>WGS 84</strong> was developed using satellite measurements and past Geodetic System parameters, and has been the reference ellipsoid used by the Global Positioning System.</p>
+
+<p>Most modern projections will use WGS 84 as the underlying reference ellipsoid, but it is important to check that your projection is defined correctly if you are dealing with old datasets.</p>
+
+<hr />
+
+<h4 id="central-meridian">Central Meridian</h4>
+
+<p>Greenwich is the standard central meridian used in global projections. This point is given the value of 0° Longitude and serves as the origin the Global Positioning System. This delineation also leaves decides the use of Greenwich Mean Time as the standard time.</p>
+
+<p><a title="By Apletters (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AMeridian-at-Greenwich.jpg"><img src="/bootcamp//assets/images/greenwich-meridian.jpg" alt="greenwichMeridian" /></a></p>
+
+<p>The Greenwich meridian has a monument dedicated to it in several cities.</p>
 
 <h3 id="projection-properties">Projection Properties</h3>
 
@@ -1480,7 +1499,7 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
   
      
     	<li><a href="/categories.html#intro-ref">
-    		intro <span>5</span>
+    		intro <span>4</span>
     	</a></li>
     
   
@@ -1495,9 +1514,9 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
 
   
      
-    	<li><a href="/tags.html#intro-ref">intro <span>6</span></a></li>
+    	<li><a href="/tags.html#intro-ref">intro <span>5</span></a></li>
      
-    	<li><a href="/tags.html#projection-ref">projection <span>2</span></a></li>
+    	<li><a href="/tags.html#projection-ref">projection <span>1</span></a></li>
     
   
 
