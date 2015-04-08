@@ -231,14 +231,6 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
-      	
-      
-    
-  
-    
-      
-      	
       	<li><a href="/bootcamp/data%20analysis/netcdf">Averaging Rainfall</a></li>
       	
       
@@ -280,14 +272,6 @@
       
       	
       	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
       	
       
     
@@ -667,14 +651,6 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
-      	
-      
-    
-  
-    
-      
-      	
       	<li><a href="/bootcamp/data%20analysis/netcdf">Averaging Rainfall</a></li>
       	
       
@@ -715,14 +691,6 @@
       
       	
       	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
       	
       
     
@@ -1084,14 +1052,6 @@
     
       
       	
-      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
-      	
-      
-    
-  
-    
-      
-      	
       	<li><a href="/bootcamp/data%20analysis/netcdf">Averaging Rainfall</a></li>
       	
       
@@ -1132,14 +1092,6 @@
       
       	
       	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
       	
       
     
@@ -1683,7 +1635,7 @@ The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Proc
 
 <h3 id="objectives">Objectives:</h3>
 
-<p>Quantify total homve value at risk within landslide/mass-wasting areas.</p>
+<p>Download Census tabular data and shapefile. Join two sets of Census tabular data to a shapefile.</p>
 
 <h3 id="data-collection-1">Data Collection:</h3>
 
@@ -1811,30 +1763,6 @@ If you did not clear your selections from the previous steps then continue on, e
 <p><img src="/bootcamp/assets/images/vector-tiger/vector-unpack-files-2.png" alt="Spatial Data Bootcamp: View shapefiles and metadata" /></p>
 
 <h5 id="join-census-housing-data-to-tiger-census-tracts"><strong>4. Join Census Housing Data to TIGER Census Tracts</strong></h5>
-
-<blockquote>
-  <p>notes: wrangling tabular data (CSV) - naming conventions- no spaces in header!</p>
-</blockquote>
-
-<blockquote>
-  <p>wrangling census data - remove all but GEO.id2 and HomeValue/Units - for the purposes of this exercise, we don’t need the additional data</p>
-</blockquote>
-
-<blockquote>
-  <p>wrangling census data - csvt - HomeValue/Units must be Real numbers for a correct Field Calculation (not sure why yet..)</p>
-</blockquote>
-
-<blockquote>
-  <p>wrangling CSVT - to output correct number-types using Field Calculator, use Real(12.0) for HomeValues/Units</p>
-</blockquote>
-
-<blockquote>
-  <p>to join multiple tabular data: add shapefile, add CSVs, go to shapefile properties &gt; joins &gt; add joins &gt; SAVE AS new shapefile (these joins are stored in virtual memory, you will return NULL on all records while using field calculator).</p>
-</blockquote>
-
-<blockquote>
-  <p>field calc: SEE JOIN MULTIPLE TABULAR DATA. open attributes &gt; edit mode &gt; Field Calculator &gt; enter inputs (reminder: integer * integer = number, integer * string = NULL)</p>
-</blockquote>
 
 <ol>
   <li>Import Census Tracts shapefile <strong>tl_2014_53_tract</strong> <img src="/bootcamp/assets/images/qgis/add-vector.png" alt="Spatial Data Bootcamp: Census Join - Add vector layer" />.<br />
@@ -2425,7 +2353,7 @@ Add saved file to map: (checked)</strong><br />
      
     	<li><a href="/tags.html#applications-ref">applications <span>3</span></a></li>
      
-    	<li><a href="/tags.html#qgis-ref">qgis <span>3</span></a></li>
+    	<li><a href="/tags.html#qgis-ref">qgis <span>2</span></a></li>
      
     	<li><a href="/tags.html#quantumgis-ref">quantumgis <span>1</span></a></li>
     

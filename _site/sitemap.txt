@@ -19,10 +19,8 @@ http://104.237.129.71/bootcamp/distribution/distribution
 http://104.237.129.71/bootcamp/distribution/web-mapping
 http://104.237.129.71/bootcamp/distribution/exercise
 http://104.237.129.71/bootcamp/cartography/fundamentals
-http://104.237.129.71/bootcamp/cartography/cartography
 http://104.237.129.71/bootcamp/cartography/map-types
 http://104.237.129.71/bootcamp/cartography/exercise
-http://104.237.129.71/bootcamp/data%20analysis/case-study
 http://104.237.129.71/bootcamp/data%20analysis/netcdf
 http://104.237.129.71/bootcamp/data%20analysis/range-modeling
 http://104.237.129.71/bootcamp/data%20analysis/exercise
