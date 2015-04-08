@@ -16,6 +16,9 @@ tags: [intro, projection]
 ----
 
 #Projections <a name="projections"></a>
+
+<a title="By Djexplo (Own work) [CC0], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALatitude_and_Longitude_of_the_Earth.svg">![earthCRS]({{site.baseurl}}/{{ASSET_PATH}}/images/earthCRS.png)</a>
+
 Projections characterize spatial data by setting coordinate reference systems for each data set.
 
 Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
@@ -26,6 +29,49 @@ Each projection is defined on top of a geographic coordinate system or spheroid 
 Since projections attempt to represent the 3-dimensional globe on a 2-dimensional plane, they will all suffer from some level of distortion. It is important to choose a projection which preserves the elements you are interested in studying.
 
 ----
+
+#### Coordinate Reference Systems
+
+Projections are another name for projected coordinate systems. These projected coordinate systems compose a family of Coordinate Reference Systems. 
+
+Projected coordinate systems are based off of Geodetic Coordinate Systems. These Geodetic coordinate systems are ellipsoidal models aimed at representing the aspherical nature of the earth.
+
+----
+
+#### Earth as a Geoid
+
+<a title="By NASA/JPL/University of Texas Center for Space Research. [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AEarth_gravity.png">![geoid]({{site.baseurl}}/{{ASSET_PATH}}/images/geoid.png)</a>
+
+Although we normally see the earth represented as a sphere, its shape is actually more irregular. The earth has an equatorial bulge and various other undulations due to tectonics, volcanics and the earth's rotation. 
+
+The changes in the surface mass are the subject matter of Geodesy. Geodesists use differences in the vertical direction of gravity along with crustal, tidal, and polar motion to determine exact measurements of the Geoid. Geometric computations can become unwieldy processes due to the complicated nature of the Geoid surface. In order approximate the geoid while making geometric calculation feasible, reference ellipsoids were calculated.
+
+----
+
+### Reference Ellipsoid
+
+<a title="By NASA/JPL (http://sealevel.jpl.nasa.gov/gallery/posters.html) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AJason-1_measurement_system.gif">![geoid-measure]({{site.baseurl}}/{{ASSET_PATH}}/images/geoid-measure.gif)</a>
+
+Reference ellipsoids have evolved over the years, moving from regional approximations to more precise global systems.
+
+Regional ellipsoids like the North American Datum of 1927 which minimized distortion for the contiguous United States at the expense of more distant regions.
+
+The modern reference ellipsoid, **WGS 84** was developed using satellite measurements and past Geodetic System parameters, and has been the reference ellipsoid used by the Global Positioning System. 
+
+Most modern projections will use WGS 84 as the underlying reference ellipsoid, but it is important to check that your projection is defined correctly if you are dealing with old datasets. 
+
+----
+
+#### Central Meridian
+
+Greenwich is the standard central meridian used in global projections. This point is given the value of 0&#176; Longitude and serves as the origin the Global Positioning System. This delineation also leaves decides the use of Greenwich Mean Time as the standard time.
+
+
+<a title="By Apletters (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AMeridian-at-Greenwich.jpg">![greenwichMeridian]({{site.baseurl}}/{{ASSET_PATH}}/images/greenwich-meridian.jpg)</a>
+
+
+The Greenwich meridian has a monument dedicated to it in several cities.
+
 
 ###Projection Properties
 
