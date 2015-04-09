@@ -5,8 +5,8 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-04-08T17:10:08-07:00</lastBuildDate>
-        <pubDate>2015-04-08T17:10:08-07:00</pubDate>
+        <lastBuildDate>2015-04-08T18:13:36-07:00</lastBuildDate>
+        <pubDate>2015-04-08T18:13:36-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -429,7 +429,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h3&gt;
 
-&lt;p&gt;Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets. &lt;/p&gt;
+&lt;p&gt;Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -503,7 +503,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;img src=&quot;/bootcamp/assets/images/usa-states.png&quot; alt=&quot;USA_states&quot; /&gt;&lt;br /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Create a layer for the state of Washington 
+  &lt;li&gt;Create a layer for the state of Washington
     &lt;ul&gt;
       &lt;li&gt;In the top toolbar, select &lt;em&gt;Select Single Feature&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;Click on the state of Washington to select it&lt;br /&gt;
@@ -512,7 +512,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       &lt;li&gt;Format: ESRI Shapefile&lt;/li&gt;
       &lt;li&gt;Save as: washington.shp&lt;/li&gt;
       &lt;li&gt;Encoding: UTF-8&lt;/li&gt;
-      &lt;li&gt;CRS: 
+      &lt;li&gt;CRS:
         &lt;ul&gt;
           &lt;li&gt;Project CRS&lt;/li&gt;
           &lt;li&gt;Browse &amp;gt; &lt;em&gt;NAD83(HARN)/Washington South (ftUS) EPSG:2927&lt;/em&gt;&lt;br /&gt;
@@ -696,7 +696,7 @@ Reclassifying inputs:&lt;/p&gt;
 
 &lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Our raster calculator expression will be: &lt;/p&gt;
+&lt;p&gt;Our raster calculator expression will be:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -857,14 +857,14 @@ Reclassifying inputs:&lt;/p&gt;
 
 &lt;h4 id=&quot;wrangle-census-data&quot;&gt;Wrangle Census Data:&lt;/h4&gt;
 
-&lt;p&gt;Luckily, the Census data has already been wrangled. Census data can sometimes be tricky. &lt;/p&gt;
+&lt;p&gt;Luckily, the Census data has already been wrangled. Census data can sometimes be tricky.&lt;/p&gt;
 
 &lt;h4 id=&quot;high-risk-rules&quot;&gt;High-risk rules:&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;within 100m of fault lines&lt;/li&gt;
   &lt;li&gt;within 50m of rivers/streams&lt;/li&gt;
-  &lt;li&gt;within soft geologic areas &lt;/li&gt;
+  &lt;li&gt;within soft geologic areas&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;ol&gt;
@@ -894,7 +894,7 @@ Reclassifying inputs:&lt;/p&gt;
   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-5.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add vector data&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Open the buffer tool: 
+  &lt;li&gt;Open the buffer tool:
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Vector &amp;gt; Geoprocessing Tools &amp;gt; Buffer(s)&lt;/em&gt;&lt;/li&gt;
     &lt;/ul&gt;
@@ -1036,7 +1036,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;&lt;em&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection. &lt;/p&gt;
+&lt;p&gt;From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection.&lt;/p&gt;
 
 &lt;h3 id=&quot;activate-necessary-providers&quot;&gt;Activate necessary providers&lt;/h3&gt;
 
@@ -1058,7 +1058,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;See &lt;a href=&quot;/bootcamp/intro/spatial-data&quot;&gt;Intro to Spatial Data&lt;/a&gt; for more detailed info on projections.&lt;/p&gt;
 
-&lt;p&gt;Each new project starts with the global default projection, &lt;a href=&quot;http://www.spatialreference.org/epsg/wgs-84/&quot;&gt;EPSG:4326 - WGS 84&lt;/a&gt;: &lt;/p&gt;
+&lt;p&gt;Each new project starts with the global default projection, &lt;a href=&quot;http://www.spatialreference.org/epsg/wgs-84/&quot;&gt;EPSG:4326 - WGS 84&lt;/a&gt;:&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs&lt;/code&gt;&lt;/p&gt;
 
@@ -1066,7 +1066,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;However, this is not the same as changing the project projection. You may define the project projection from &lt;em&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties &amp;gt; CRS&lt;/em&gt;. Also keep in mind, the CRS of a new project will change to the CRS of the first layer added to the project.&lt;/p&gt;
 
-&lt;p&gt;‘On the fly’ CRS transformation is not enabled by the default QGIS installation.  &lt;/p&gt;
+&lt;p&gt;‘On the fly’ CRS transformation is not enabled by the default QGIS installation.&lt;/p&gt;
 
 &lt;h2 id=&quot;supported-data-formats&quot;&gt;Supported Data Formats&lt;/h2&gt;
 
@@ -1080,7 +1080,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/add-vector.png&quot; alt=&quot;Add vector in QGIS&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;View vector attribute table by right clicking on the layer and clicking Open Attribute Table. From here you can sort data, show selected features, show features visible on map, show edited and new features, filter by column, or query data with and advanced filter. &lt;/p&gt;
+&lt;p&gt;View vector attribute table by right clicking on the layer and clicking Open Attribute Table. From here you can sort data, show selected features, show features visible on map, show edited and new features, filter by column, or query data with and advanced filter.&lt;/p&gt;
 
 &lt;p&gt;Attribute data can be edited by enabling and edit session with the Toggle Editing Mode icon (top left).&lt;/p&gt;
 
@@ -1094,13 +1094,13 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;h2 id=&quot;general-spatial-functions&quot;&gt;General Spatial Functions&lt;/h2&gt;
 
-&lt;p&gt;Spatial functions are accessable through &lt;em&gt;Menu Bar &amp;gt; Vector/Raster&lt;/em&gt;. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy. &lt;/p&gt;
+&lt;p&gt;Spatial functions are accessable through &lt;em&gt;Menu Bar &amp;gt; Vector/Raster&lt;/em&gt;. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy.&lt;/p&gt;
 
 &lt;h2 id=&quot;composing-maps-for-printnon-web-based&quot;&gt;Composing Maps (for print/non-web-based)&lt;/h2&gt;
 
 &lt;p&gt;This method is ideal for exporting your work for a research paper, admiring your work, and such. Developing a web map for dissimenating your data is a bit more involved and is discussed in the &lt;a href=&quot;/bootcamp/visualization/leaflet&quot;&gt;Publish Your Data to a Web Mapi/LeafletJS&lt;/a&gt; section. Also, to export data with styles see &lt;a href=&quot;this-is-not-a-link&quot;&gt;This section link&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Begin by opening the Print Composer: &lt;/p&gt;
+&lt;p&gt;Begin by opening the Print Composer:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/compose-map.png&quot; alt=&quot;Create new Print Composer workspace&quot; /&gt;&lt;/p&gt;
 
@@ -1118,7 +1118,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;h2 id=&quot;the-scenario&quot;&gt;The Scenario:&lt;/h2&gt;
 
-&lt;p&gt;You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map. &lt;/p&gt;
+&lt;p&gt;You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1138,7 +1138,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;h3 id=&quot;objective&quot;&gt;Objective:&lt;/h3&gt;
 
-&lt;p&gt;Gather data necessary for locating high-risk landslide areas in the state of Washington. &lt;/p&gt;
+&lt;p&gt;Gather data necessary for locating high-risk landslide areas in the state of Washington.&lt;/p&gt;
 
 &lt;h3 id=&quot;data-sources&quot;&gt;Data sources:&lt;/h3&gt;
 
@@ -1278,7 +1278,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
     &lt;ul&gt;
       &lt;li&gt;GDAL’s rasterize is a prefered method. This can be accessed through &lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Conversion &amp;gt; Rasterize (Vector to raster)&lt;/em&gt;. Notice how the parameters have been diabled in the example below. There’s a specific reason for this. Complete the parameter inputs: &lt;em&gt;Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000&lt;/em&gt;. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Click the edit icon (pencil) locate near the block of code&lt;/em&gt;. This enables you to add those non-QGIS parameters.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Add the line of code&lt;/em&gt; &lt;code&gt;-at -a_nodata 0&lt;/code&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt; &lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Add the line of code&lt;/em&gt; &lt;code&gt;-at -a_nodata 0&lt;/code&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;-at&lt;/em&gt;: Enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;-a_nodata $value&lt;/em&gt;: Assign a specified nodata value to output bands - this prevents pixels with no data from being written into the output raster.&lt;sup id=&quot;fnref:3:1&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://www.gdal.org/gdal_rasterize.html&quot;&gt;Here’s a link to the gdal_rasterize parameters&lt;/a&gt;.&lt;br /&gt;
@@ -1289,7 +1289,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
     &lt;ul&gt;
       &lt;li&gt;Open wa_geology.tif style properties. HINT: See step 4.&lt;/li&gt;
       &lt;li&gt;For &lt;em&gt;Render type&lt;/em&gt;, select &lt;em&gt;Singleband pseudocolor&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;On the right select: &lt;em&gt;Load min/max values: Min/max; Extend: Actual (slower); then Load&lt;/em&gt;. This loads actual values into the classification. QGIS Approximates values by defautl. &lt;/li&gt;
+      &lt;li&gt;On the right select: &lt;em&gt;Load min/max values: Min/max; Extend: Actual (slower); then Load&lt;/em&gt;. This loads actual values into the classification. QGIS Approximates values by defautl.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Change Mode to Equal Interval with 3 classes&lt;/em&gt;. Remember, we only have three rock strength classes: soft, medium, hard. Change your color map if you’d like. The color maps are not stored into the raster, so the raster will load with the defaul color map (black to white) each time its opened in a new project.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Click Classify&lt;/em&gt;. Apply and OK.&lt;br /&gt;
    &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-13.png&quot; alt=&quot;QGIS: Style raster&quot; /&gt;&lt;/li&gt;
@@ -1297,7 +1297,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster. &lt;/p&gt;
+&lt;p&gt;You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster.&lt;/p&gt;
 
 &lt;p&gt;Keep this reclassified and rasterized vector, it’ll be used in the next lesson.&lt;/p&gt;
 
@@ -1457,7 +1457,7 @@ If you did not clear your selections from the previous steps then continue on, e
 
 &lt;p&gt;After unpacking files, open one of the Census ACS folders (aff_download).&lt;/p&gt;
 
-&lt;p&gt;Rename folder &lt;/p&gt;
+&lt;p&gt;Rename folder&lt;/p&gt;
 
 &lt;p&gt;Notice the files. Theres a text file with metadata on the given metric (Housing Units or Home Values). There’s a README that explains what’s inside of the zip file. There’s a metadata CSV that explains what the column headings represent. And there’s the data we need in CSV format with annotations.&lt;/p&gt;
 
@@ -1527,9 +1527,9 @@ There are two columns in this file separated by a common. The first column indic
 Save as: tracts-values-units (save in your project directory)&lt;br /&gt;
 Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-20.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - save shapefile&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Let’s now calculate total housing value per census tract (TotalUnitsHome X MedianValueHome). 
+  &lt;li&gt;Let’s now calculate total housing value per census tract (TotalUnitsHome X MedianValueHome).
     &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Open tracts-value-units attributes table &amp;gt; Toggle editing mode&lt;/strong&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/toggle-editing-mode.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - toggle edits&quot; /&gt; &lt;strong&gt;&amp;gt; Field Calculator&lt;/strong&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/field-calculator.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - field calculator&quot; /&gt;. &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Open tracts-value-units attributes table &amp;gt; Toggle editing mode&lt;/strong&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/toggle-editing-mode.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - toggle edits&quot; /&gt; &lt;strong&gt;&amp;gt; Field Calculator&lt;/strong&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/field-calculator.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - field calculator&quot; /&gt;.&lt;/li&gt;
       &lt;li&gt;Configure Field Calculator inputs as follows:&lt;br /&gt;
 &lt;strong&gt;Create a new field: (checked)&lt;/strong&gt;&lt;br /&gt;
 &lt;strong&gt;Output field name: TotalValue&lt;/strong&gt;&lt;br /&gt;
@@ -1542,7 +1542,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
   &lt;/li&gt;
   &lt;li&gt;Locate &lt;strong&gt;TotalValue&lt;/strong&gt; and confirm the calculation. NOTE: you should still have NULL values given that home-values.csv contains NULL values. Be sure to &lt;em&gt;Save edits&lt;/em&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/save-edits.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - save edits&quot; /&gt; and disable editing mode (Toggle editing mode) &lt;img src=&quot;/bootcamp/assets/images/qgis/toggle-editing-mode.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - toggle editing mode&quot; /&gt;. The editing options should now be grayed-out and disabled.&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-22.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - TotalValue per tract&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;You’ve successfully joined two sets of Census tabular data to a shapefile. &lt;/li&gt;
+  &lt;li&gt;You’ve successfully joined two sets of Census tabular data to a shapefile.&lt;/li&gt;
   &lt;li&gt;Style tracts-values-units by categorizing by TotalValue and select a color ramp. QGIS will inform you that you have a high number of classes, click OK to confirm the categorization. We’ll need to remove NULL values. Locate NULL within the category table (HINT: it contains no values and is blank - look towards the bottom), highlight and click ‘Delete’ (not Delete all!) - ‘Delete’ removes only selected rows. Click Apply then OK to confirm changes. Deactivate census-tracts layer by unchecking it activate box in the layers list. Save your workspace. &lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-24.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - completed&quot; /&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -1585,14 +1585,14 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 
 &lt;h4 id=&quot;wrangle-census-data&quot;&gt;Wrangle Census Data:&lt;/h4&gt;
 
-&lt;p&gt;Luckily, the Census data has already been wrangled. Census data can sometimes be tricky. &lt;/p&gt;
+&lt;p&gt;Luckily, the Census data has already been wrangled. Census data can sometimes be tricky.&lt;/p&gt;
 
 &lt;h4 id=&quot;high-risk-rules&quot;&gt;High-risk rules:&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;within 100m of fault lines&lt;/li&gt;
   &lt;li&gt;within 50m of rivers/streams&lt;/li&gt;
-  &lt;li&gt;within soft geologic areas &lt;/li&gt;
+  &lt;li&gt;within soft geologic areas&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;ol&gt;
@@ -1622,7 +1622,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-5.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add vector data&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Open the buffer tool: 
+  &lt;li&gt;Open the buffer tool:
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Vector &amp;gt; Geoprocessing Tools &amp;gt; Buffer(s)&lt;/em&gt;&lt;/li&gt;
     &lt;/ul&gt;
@@ -1727,7 +1727,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 &lt;h3 id=&quot;data-2&quot;&gt;Data:&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Washington DEM (wa_dem.tif) - &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model&quot;&gt;SEE Data Wrangling&lt;/a&gt; &lt;/li&gt;
+  &lt;li&gt;Washington DEM (wa_dem.tif) - &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model&quot;&gt;SEE Data Wrangling&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Washington geology raster (wa_geology.tif) - &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---reclassify-and-rasterize-vector&quot;&gt;SEE Data Wrangling&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1892,7 +1892,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 
 &lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Our raster calculator expression will be: &lt;/p&gt;
+&lt;p&gt;Our raster calculator expression will be:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -2006,7 +2006,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;References: &lt;/p&gt;
+&lt;p&gt;References:&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
@@ -2049,7 +2049,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 &lt;ul&gt;
   &lt;li&gt;Vector&lt;/li&gt;
   &lt;li&gt;Raster&lt;/li&gt;
-  &lt;li&gt;LiDAR &lt;/li&gt;
+  &lt;li&gt;LiDAR&lt;/li&gt;
   &lt;li&gt;Time series&lt;/li&gt;
   &lt;li&gt;Vector Networks&lt;/li&gt;
   &lt;li&gt;3D&lt;/li&gt;
@@ -2496,136 +2496,6 @@ For more properties and examples reference the
         </item>
 
         <item>
-                <title>Cartography</title>
-                <description>
-&lt;h3 id=&quot;exercises&quot;&gt;Exercises&lt;/h3&gt;
-
-&lt;p&gt;Making maps in QGIS&lt;/p&gt;
-
-&lt;p&gt;Before starting this next section, add the following layers:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;geo_coded.tif
- &lt;!--* slope-geo-sect.tif--&gt;
- &lt;!--* landslide-suscept.tif--&gt;&lt;/li&gt;
-  &lt;li&gt;dem-washington.tif&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/carto/carto-1.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;exercise-1&quot;&gt;Exercise 1&lt;/h3&gt;
-
-&lt;p&gt;Create map of Washington rock strength&lt;/p&gt;
-
-&lt;p&gt;Needs: dem, geo_coded&lt;/p&gt;
-
-&lt;p&gt;Layering - same concept as photo editing; layers stack, or go on top of each other. Increasing transparency will reduce layer opacity or make it see-through.&lt;/p&gt;
-
-&lt;h4 id=&quot;prepare-data-for-map&quot;&gt;Prepare data for map&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Uncheck all layers, less dem-washington and geo_coded
-&lt;!--2. Create hillshade: * &lt;em&gt;Menu Bar &gt; Raster &gt; Analysis &gt; DEM (Terrain models)&lt;/em&gt; * Configure input as follows:&lt;br&gt; Notice the Z factor, this will exaggerate elevation and give the map an appearance of greater relief.&lt;br&gt;![Spatial Data Bootcamp: Cartography in QGIS](/bootcamp/assets/images/carto/carto-2.png) --&gt;&lt;/li&gt;
-  &lt;li&gt;Load hillshade-washington.tif&lt;/li&gt;
-  &lt;li&gt;Be sure geo_coded is moved up, or on top of dem-washington:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Click-hold-drag geo_coded&lt;/em&gt; to the top of the layer list.&lt;/li&gt;
-      &lt;li&gt;Uncheck dem-washington layer.&lt;br /&gt;
- &lt;img src=&quot;/bootcamp/assets/images/carto/carto-3.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Style geo_coded with qml-style file:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Right-click geo_coded &amp;gt; Properties &amp;gt; Style&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Load Style… (button at bottom) &amp;gt; Navigate to rock-strength.qml&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;QGIS does not load actual minimum and maximum values by default. This enables faster layer rendering. You’ll want to load actual min/max values to visualize the correct data. To load actual min/max values:&lt;br /&gt;&lt;em&gt;Load min/max values: Min/max&lt;br /&gt;Accuracy: Actual (slower)&lt;br /&gt;Click Load&lt;br /&gt;Click Apply to save changes&lt;/em&gt;&lt;br /&gt;
- &lt;img src=&quot;/bootcamp/assets/images/carto/carto-4.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;Increase transparency:&lt;br /&gt;&lt;em&gt;From within layer Properties &amp;gt; Transparency &amp;gt; Global Transparency &amp;gt; 50%&lt;br /&gt;Click Apply, OK to save changes and close Properties&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
-      &lt;li&gt;The product just created visualizes rock strength within Washington state with enhanced effects using hillshade and transparency.
- &lt;img src=&quot;/bootcamp/assets/images/carto/carto-5.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;making-the-map&quot;&gt;Making the map&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;There are several was to open the &lt;strong&gt;Print Composer&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Project &amp;gt; New Print Composer&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Print Composer toolbar icon&lt;br /&gt;
- &lt;img src=&quot;/bootcamp/assets/images/carto/carto-6.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Create title:
-    &lt;ul&gt;
-      &lt;li&gt;This new Print Composer project will be saved and can be accessed through the &lt;strong&gt;Composer Manager&lt;/strong&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The Print Composer opens in a new application window, you will still be able to work in your current project while making a map.&lt;/li&gt;
-  &lt;li&gt;You must add a map layer for visualizing. The &lt;strong&gt;Add Map&lt;/strong&gt; tool will require you to create a bounding box to fit the map. Adjust the bounding box as needed. To add a map layer:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Layout &amp;gt; Add Map&lt;/em&gt; OR&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Add new map&lt;/strong&gt; toolbar icon:&lt;br /&gt;
- &lt;img src=&quot;/bootcamp/assets/images/carto/carto-7.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Move Item Content&lt;/strong&gt; tool will allow you to move the map without moving the bounding box&lt;br /&gt;
- &lt;img src=&quot;/bootcamp/assets/images/carto/carto-8.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;Explore tools by hovering over the toolbar icon or go to &lt;em&gt;Menu Bar &amp;gt; Layout&lt;/em&gt; to see the names of each layout tool.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Add a legend:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Layout &amp;gt; Add Legend&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Notice how names and values are not appropriate for a final map. To open legend propertie, using the &lt;strong&gt;Select/Move Item&lt;/strong&gt; tool: &lt;em&gt;Select the legend layer and notice the Item properties on the right&lt;/em&gt;&lt;br /&gt;
- &lt;img src=&quot;/bootcamp/assets/images/carto/carto-9.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;Item properties: Here you are able to change the title, select which legend to produce based on the map layer, modify legend item, etc. See the images below for the list of options.&lt;br /&gt;
- &lt;img src=&quot;/bootcamp/assets/images/carto/carto-10.png&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Add a title:
-    &lt;ul&gt;
-      &lt;li&gt;add title&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Add scale bar:
-    &lt;ul&gt;
-      &lt;li&gt;scale bar&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Map info
-    &lt;ul&gt;
-      &lt;li&gt;map info&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;North arrow
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Layout &amp;gt; Add image&lt;/em&gt; then click area on map.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Image item properties &amp;gt; Search directories &amp;gt; Locate North Arrow&lt;/em&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Configure additional features&lt;/li&gt;
-  &lt;li&gt;Export map:
-    &lt;ul&gt;
-      &lt;li&gt;As Image, PDF, or SVG.&lt;br /&gt;
- &lt;img src=&quot;/bootcamp/assets/images/carto/carto-final-map.jpg&quot; style=&quot;border:1px solid black;&quot; alt=&quot;Spatial Data Bootcamp: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-</description>
-                <link>http://104.237.129.71/bootcamp/cartography/cartography</link>
-                <guid>http://104.237.129.71/bootcamp/cartography/cartography</guid>
-                <pubDate>2005-12-31T00:00:00-07:00</pubDate>
-        </item>
-
-        <item>
                 <title>Map Types</title>
                 <description>
 &lt;h1 id=&quot;understanding-different-map-types&quot;&gt;Understanding different map types&lt;/h1&gt;
@@ -2840,254 +2710,6 @@ For more properties and examples reference the
         </item>
 
         <item>
-                <title>Exercise</title>
-                <description>
-&lt;h4 id=&quot;prerequisites-intro-data-collection-data-wrangling&quot;&gt;Prerequisites: Intro, Data Collection, Data Wrangling&lt;/h4&gt;
-
-&lt;h3 id=&quot;objectives&quot;&gt;Objectives:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Be able to reclassify a raster. &lt;/li&gt;
-  &lt;li&gt;Understand basics of raster calculations.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;exercise&quot;&gt;Exercise&lt;/h3&gt;
-
-&lt;p&gt;This exercise will walk through reclassifying raster data.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;create-reclassification-rules-text-file&quot;&gt;1 - Create reclassification rules text file&lt;/h3&gt;
-
-&lt;h4 id=&quot;slope&quot;&gt;Slope&lt;/h4&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Slope&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3-5°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5-10°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10-15°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15-20°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;20-30°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;30-40°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40°&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;In order to reclass our slope layer into something useful, we will use the grass &lt;em&gt;r.reclass&lt;/em&gt; tool&lt;/p&gt;
-
-&lt;p&gt;The r.reclass tool reads text files which define the classification rules(rule files). For this example, our rule fill will have the following contents:&lt;/p&gt;
-
-&lt;h5 id=&quot;slope-ruletxt&quot;&gt;&lt;em&gt;slope-rule.txt&lt;/em&gt;&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;0 thru 2.99 = 1
-3 thru 4.99 = 2
-5 thru 9.99 = 3
-10 thru 14.99 = 4
-15 thru 19.99 = 5
-20 thru 29.99 = 6 
-30 thru 39.99 = 7
-40 thru 90 = 8
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;reclassify-raster&quot;&gt;2 - Reclassify raster&lt;/h3&gt;
-
-&lt;p&gt;Once we have created the slope rule file. We can select the r.reclass tool from the Processing Toolbox.&lt;/p&gt;
-
-&lt;p&gt;Your Processing Toolbox may not be opened. &lt;em&gt;Open your Processing Toolbox: Menu Bar &amp;gt; Processing &amp;gt; Toolbox&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;In the processing toolbox, select &lt;em&gt;GRASS commands&lt;/em&gt; &amp;gt; &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;r.reclass&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;We will use the following settings for the reclassify tool:&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Input Raster: &lt;em&gt;slope-washington&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;File containing reclass rules: &lt;em&gt;slope-rules.txt&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Output raster layer: &lt;em&gt;slope-reclass.tif&lt;/em&gt; (NOTE: select &lt;em&gt;Save to file…&lt;/em&gt; or else QGIS will not create a permanent output)&lt;br /&gt;
-&lt;img src=&quot;/bootcamp/assets/images/slope-reclass.png&quot; alt=&quot;slope-reclass&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;susceptibility&quot;&gt;3 - Susceptibility&lt;/h3&gt;
-
-&lt;p&gt;We will have to do some raster calculations to create the output data set. The classifications are taken from the California study&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and are as follows:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/landslide-key.png&quot; alt=&quot;landslide-key&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Since we need to cross reference these categories, we need to create a raster which represents each unique combination of the slope and rock strength classes. A method to create unique combinations is to promote the rock strength categories a decimal place. This would make the rock classes: 10,20, and 30.&lt;/p&gt;
-
-&lt;p&gt;To create these new classes, we can &lt;strong&gt;load the following files&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;source_files/geo_coded.tif&lt;/li&gt;
-  &lt;li&gt;secondary_files/slope-reclass.tif&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Our raster calculator expression will be: &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Output layer: slope-geo-sect.tif&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/raster-calc.png&quot; alt=&quot;raster-calc&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We can apply the landslide susceptibility classification using r.reclass and the following rule file:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Reclassify slope-geo-sect.tif with the following rule:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Save output as landslide-suscept.tif&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;landslide-rule.txt&lt;/em&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;11 12 13 21 31 = 0
-14 = 3
-22 23 = 5
-15 = 6
-16 32 33 = 7
-17 18 24 = 8
-25 thru 28 34 = 9
-35 thru 38 = 10
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;precipitation&quot;&gt;4 - Precipitation&lt;/h4&gt;
-
-&lt;p&gt;Now that we have created the landslide susceptibility layer, we can make use the Average Annual Precipitation layer to check the susceptible areas against the areas receiving the most annual rain.&lt;/p&gt;
-
-&lt;p&gt;Convert millimeters to inches&lt;/p&gt;
-
-&lt;p&gt;Raster calculator: precip = precip * 0.0394&lt;/p&gt;
-
-&lt;p&gt;Check THIS STEP AGAINST REFERENCES&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Precipitation&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5-10 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10-15 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15-30 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;30-45 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;45-60 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;60-75 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;75-90 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 90 in&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;visualization&quot;&gt;Visualization&lt;/h3&gt;
-
-&lt;p&gt;Now that the output datasets have been created, we can work on making our results presentable.&lt;/p&gt;
-
-&lt;p&gt;Go to Cartography &amp;amp; Visualization…&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;References: &lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;http://www.conservation.ca.gov/cgs/information/publications/Documents/MS58.pdf &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-                <link>http://104.237.129.71/bootcamp/data%20analysis/case-study</link>
-                <guid>http://104.237.129.71/bootcamp/data%20analysis/case-study</guid>
-                <pubDate>2004-12-31T00:00:00-07:00</pubDate>
-        </item>
-
-        <item>
                 <title>Averaging Rainfall</title>
                 <description>
 &lt;h1 id=&quot;averaging-annual-rainfall&quot;&gt;Averaging Annual Rainfall&lt;/h1&gt;
@@ -3096,7 +2718,7 @@ For more properties and examples reference the
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/netcdf1_sm.png&quot; alt=&quot;netcdf-logo&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate. &lt;/p&gt;
+&lt;p&gt;NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate.&lt;/p&gt;
 
 &lt;p&gt;NetCDF is a set of software libraries and describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF was developed at &lt;a href=&quot;http://unidata.ucar.edu&quot;&gt;Unidata&lt;/a&gt;. Unidata provides data and software tools for use in geoscience education and research. Unidata is part of the University Corporation for Atmospheric Research(&lt;a href=&quot;http://ucar.edu&quot;&gt;UCAR&lt;/a&gt;) Community Programs(&lt;a href=&quot;http://www.uop.ucar.edu&quot;&gt;UCP&lt;/a&gt;).&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
@@ -3108,17 +2730,17 @@ For more properties and examples reference the
 
 &lt;p&gt;With the help of a THREDDS Data Server, large netCDF datasets are easily accessible and discoverable through a client application or through HTTP.&lt;/p&gt;
 
-&lt;p&gt;The multidimensional nature of netCDF data makes storage of complex data such as temperature and humidity simple. Also, since netCDF allows for multivariate storage, several variables can be subsets, ensembled and explored simultaneously. An issue can be the process of creating a usable dataset from netCDF data. This can be due to the sensor-based nature of netCDF, which is a primary dataset (i.e. daily precipitation sums). In order to get the proper dataset, it often requires researchers to subset, and ensemble values over a dimension. Ensembled data sets could be seasonal datasets, climatologies, or long-term averages. &lt;/p&gt;
+&lt;p&gt;The multidimensional nature of netCDF data makes storage of complex data such as temperature and humidity simple. Also, since netCDF allows for multivariate storage, several variables can be subsets, ensembled and explored simultaneously. An issue can be the process of creating a usable dataset from netCDF data. This can be due to the sensor-based nature of netCDF, which is a primary dataset (i.e. daily precipitation sums). In order to get the proper dataset, it often requires researchers to subset, and ensemble values over a dimension. Ensembled data sets could be seasonal datasets, climatologies, or long-term averages.&lt;/p&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
 &lt;h2 id=&quot;procedure&quot;&gt;Procedure&lt;/h2&gt;
 
-&lt;p&gt;For our case study, we created an annual average for precipitation between 2007-2014. &lt;/p&gt;
+&lt;p&gt;For our case study, we created an annual average for precipitation between 2007-2014.&lt;/p&gt;
 
 &lt;p&gt;We had to first locate the datasets from http://esrl.noaa.gov/psd/thredds/dodsC/Datasets/cpc_us_precip/RT&lt;/p&gt;
 
-&lt;p&gt;This brought us 9 years of datasets. &lt;/p&gt;
+&lt;p&gt;This brought us 9 years of datasets.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/daily-precip.png&quot; alt=&quot;daily-precip&quot; /&gt;&lt;/p&gt;
 
@@ -3128,14 +2750,14 @@ For more properties and examples reference the
 
 &lt;h5 id=&quot;netcdf-kitchen-sink&quot;&gt;netCDF Kitchen Sink&lt;/h5&gt;
 
-&lt;p&gt;The nickname ‘kitchen sink’ is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option ‘-d’&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions. &lt;/p&gt;
+&lt;p&gt;The nickname ‘kitchen sink’ is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option ‘-d’&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ncks -O -d lon,234.0,244.0 -d lat,44.0,50.0 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc subset.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In the above command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testing.&lt;/p&gt;
 
 &lt;h4 id=&quot;removing-bad-values&quot;&gt;Removing bad values&lt;/h4&gt;
-&lt;p&gt;If you look at the metadata for the subsetted file, you can see that the ‘precip’ variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25° x .25°(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library. &lt;/p&gt;
+&lt;p&gt;If you look at the metadata for the subsetted file, you can see that the ‘precip’ variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25° x .25°(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library.&lt;/p&gt;
 
 &lt;h5 id=&quot;netcdf-arithmetic-processor&quot;&gt;netCDF Arithmetic Processor&lt;/h5&gt;
 
@@ -3275,7 +2897,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;This lesson will take us through the steps involved in creating a species range model using the Maximum Entropy probability distribution.&lt;/p&gt;
 
-&lt;p&gt;Before we load in any data we should set the project projection. &lt;/p&gt;
+&lt;p&gt;Before we load in any data we should set the project projection.&lt;/p&gt;
 
 &lt;p&gt;To add this to QGIS you can go into the top menu:&lt;/p&gt;
 
@@ -3283,7 +2905,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;Click &lt;em&gt;Add new CRS&lt;/em&gt; to create a new custom projection&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/addNewCrs.png&quot; alt=&quot;add-Crs&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/bootcamp//assets/images/addNewCrs.png&quot; alt=&quot;add-Crs&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In the box labeled &lt;em&gt;Name:&lt;/em&gt; enter &lt;em&gt;New World LAEA&lt;/em&gt;&lt;/p&gt;
 
@@ -3345,7 +2967,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/pluginEnabled.png&quot; alt=&quot;plugin-enabled&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;If you have already set up your iPlant account and were given permissions to the Bootcamp dataset continue to the next steps. &lt;/p&gt;
+&lt;p&gt;If you have already set up your iPlant account and were given permissions to the Bootcamp dataset continue to the next steps.&lt;/p&gt;
 
 &lt;p&gt;If not, make sure to &lt;a href=&quot;http://user.iplantcollaborative.org&quot;&gt;register for iPlant access&lt;/a&gt;, and request access to the data store.&lt;/p&gt;
 
@@ -3413,7 +3035,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;The environmental layers can be found in the iPlant data store in the &lt;em&gt;env.zip&lt;/em&gt; file.&lt;/p&gt;
 
-&lt;p&gt;To download the layers, sign in to the iPlant Discovery Environment and open the Data Store. &lt;/p&gt;
+&lt;p&gt;To download the layers, sign in to the iPlant Discovery Environment and open the Data Store.&lt;/p&gt;
 
 &lt;p&gt;The layers should be available under /iplant/home/shared/aegis/Spatial-bootcamp/Range-model/env.zip&lt;/p&gt;
 
@@ -3431,13 +3053,13 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/loadEnvRasters.png&quot; alt=&quot;load-env-rasters&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Once all the rasters are loaded, you should see them in your Table of Contents, but not on the map. &lt;/p&gt;
+&lt;p&gt;Once all the rasters are loaded, you should see them in your Table of Contents, but not on the map.&lt;/p&gt;
 
 &lt;p&gt;If you check the layer properties on one of the rasters, you can see that they default to EPSG:4326, although we had previously stated they come in the New World LAEA.&lt;/p&gt;
 
-&lt;p&gt;This happens because Ascii Grid Format doesn’t store any projection information. &lt;/p&gt;
+&lt;p&gt;This happens because Ascii Grid Format doesn’t store any projection information.&lt;/p&gt;
 
-&lt;p&gt;To allow any analysis, we will have to define the projection for the raster data sets. &lt;/p&gt;
+&lt;p&gt;To allow any analysis, we will have to define the projection for the raster data sets.&lt;/p&gt;
 
 &lt;p&gt;To do this, you can click on the layer name in the Table of Contents and Select &lt;em&gt;Set Layer CRS&lt;/em&gt;&lt;/p&gt;
 
@@ -3517,7 +3139,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h3 id=&quot;objectives&quot;&gt;Objectives:&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Be able to reclassify a raster. &lt;/li&gt;
+  &lt;li&gt;Be able to reclassify a raster.&lt;/li&gt;
   &lt;li&gt;Understand basics of raster calculations.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -3636,7 +3258,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Our raster calculator expression will be: &lt;/p&gt;
+&lt;p&gt;Our raster calculator expression will be:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -3743,7 +3365,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;References: &lt;/p&gt;
+&lt;p&gt;References:&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
@@ -3810,7 +3432,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;img src=&quot;/bootcamp/assets/images/usa-states.png&quot; alt=&quot;USA_states&quot; /&gt;&lt;br /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Create a layer for the state of Washington 
+  &lt;li&gt;Create a layer for the state of Washington
     &lt;ul&gt;
       &lt;li&gt;Within the Layers List, click on USA_adm1 to activate layer tools.&lt;/li&gt;
       &lt;li&gt;Select Single Feature tool:&lt;br /&gt;&lt;em&gt;Menu Bar &amp;gt; View &amp;gt; Select &amp;gt; Select Single Feature&lt;/em&gt; OR&lt;br /&gt;in the top toolbar, select &lt;em&gt;Select Single Feature&lt;/em&gt;&lt;/li&gt;
@@ -3820,7 +3442,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
       &lt;li&gt;Format: ESRI Shapefile&lt;/li&gt;
       &lt;li&gt;Save as: washington.shp&lt;/li&gt;
       &lt;li&gt;Encoding: UTF-8&lt;/li&gt;
-      &lt;li&gt;CRS: 
+      &lt;li&gt;CRS:
         &lt;ul&gt;
           &lt;li&gt;Selected CRS&lt;/li&gt;
           &lt;li&gt;Browse &amp;gt; &lt;em&gt;NAD83(HARN)/Washington South (ftUS) EPSG:2927&lt;/em&gt;&lt;br /&gt;
@@ -3883,7 +3505,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 &lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;Recognize a few spatial relationships&lt;/li&gt;
-  &lt;li&gt;Understand how to clip a raster  &lt;/li&gt;
+  &lt;li&gt;Understand how to clip a raster&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -3892,7 +3514,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h2 id=&quot;relational-operations&quot;&gt;Relational Operations&lt;/h2&gt;
 
-&lt;p&gt;Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;/p&gt;
+&lt;p&gt;Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;table border=&quot;0&quot; align=&quot;center&quot;&gt;
   &lt;tr&gt;
@@ -4000,7 +3622,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;spatial-predicates&quot;&gt;Spatial Predicates&lt;/h3&gt;
-&lt;p&gt;The above figure demonstrates the criteria outlined by the Dimensionally Extended Nine-Intersection Model(DE-9IM). The matrix is used to outline specific spatial relationships or predicates which are more accessible to interpretaion. These named spatial predicates are also used by spatial queryies to selet subsets of geometrys that fit in one spatial predicate. &lt;/p&gt;
+&lt;p&gt;The above figure demonstrates the criteria outlined by the Dimensionally Extended Nine-Intersection Model(DE-9IM). The matrix is used to outline specific spatial relationships or predicates which are more accessible to interpretaion. These named spatial predicates are also used by spatial queryies to selet subsets of geometrys that fit in one spatial predicate.&lt;/p&gt;
 
 &lt;p&gt;Here is a quick outline of the Spatial Predicates&lt;/p&gt;
 
@@ -4009,7 +3631,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;dd&gt;The two geometric objects are spatially equal meaning, they represent the same geometry (congruent in geometric terms)&lt;/dd&gt;
   &lt;dt&gt;Disjoint&lt;/dt&gt;
   &lt;dd&gt;The two geometric objects share no points in common, the two objects are completely separate&lt;/dd&gt;
-  &lt;dt&gt;Intersects &lt;/dt&gt;
+  &lt;dt&gt;Intersects&lt;/dt&gt;
   &lt;dd&gt;The two geometric objects have at least one point in common&lt;/dd&gt;
   &lt;dt&gt;Touches&lt;/dt&gt;
   &lt;dd&gt;The two geometric objects have at least one boundary point in common, but no interior points&lt;/dd&gt;
@@ -4033,7 +3655,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;dl&gt;
   &lt;dt&gt;Distance&lt;/dt&gt;
-  &lt;dd&gt;Measures the shortest distance between two geometries. &lt;/dd&gt;
+  &lt;dd&gt;Measures the shortest distance between two geometries.&lt;/dd&gt;
   &lt;dt&gt;Buffer&lt;/dt&gt;
   &lt;dd&gt;Creates a geometric object that represents all points within a given distance from the given geometry&lt;/dd&gt;
   &lt;dt&gt;Convex Hull&lt;/dt&gt;
@@ -4059,19 +3681,19 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
       &lt;li&gt;Residential areas with past landslide&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Union 
+  &lt;li&gt;Union
     &lt;ul&gt;
       &lt;li&gt;Merging census data for two states in a single layer (Useful for studying phenomena that do not respect political boundaries)&lt;/li&gt;
       &lt;li&gt;Merging state boundaries for Canada, U.S. and Mexico into a North American dataset (GADM makes this a breeze)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Buffer 
+  &lt;li&gt;Buffer
     &lt;ul&gt;
       &lt;li&gt;Instagram posts vs within 100m of a local restaurant&lt;/li&gt;
       &lt;li&gt;Tweets vs within 1km of a football stadium&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Convex Hull 
+  &lt;li&gt;Convex Hull
     &lt;ul&gt;
       &lt;li&gt;Bounding boxes, circles&lt;/li&gt;
       &lt;li&gt;Range modeling for small data sets&lt;/li&gt;
@@ -4226,7 +3848,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;View Metadata in QGIS &lt;em&gt;Right-click layer &amp;gt; Properties &amp;gt; Metadata&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;General: &lt;/p&gt;
+&lt;p&gt;General:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Storage type&lt;/li&gt;
@@ -4238,7 +3860,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;Author or point of contact&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Extent: &lt;/p&gt;
+&lt;p&gt;Extent:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;(xMin, yMin), (xMax,yMax)&lt;/li&gt;
@@ -4271,14 +3893,14 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;dt&gt;&lt;a href=&quot;http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1&quot;&gt;Web Feature Service (WFS)&lt;/a&gt; - Useful for modifying features in remote datasets&lt;/dt&gt;
   &lt;dd&gt;The WFS represents a change in the way geographic information is created, modified, and exchanged on the Internet. Rather than sharing geographic information at the file level using the File Transfer Protocol(FTP), the WFS offers direct fine-grained access to geographic information at the feature and feature property level. Web features services allow clients to only retrieve or modify the data they are seeking, rather than retrieving a file that contains the data they are seeking and possibly much more&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
-  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wms&quot;&gt;Web Map Service (WMS)&lt;/a&gt; - Useful for visualizing remote datasets &lt;/dt&gt;
+  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wms&quot;&gt;Web Map Service (WMS)&lt;/a&gt; - Useful for visualizing remote datasets&lt;/dt&gt;
   &lt;dd&gt;The Web Map Service Interface Standard provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. The WMS response will return one or more geo-registered map images (JPEG, PNG, etc) to be display in a browser application&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
   &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wps&quot;&gt;Web Processing Service (WPS)&lt;/a&gt; - Utilizes remote resources for computation&lt;/dt&gt;
   &lt;dd&gt;THe WPS Standard provides rule for standardizing inputs and outputs for geospatial processing services, such as polygon overlay. The standard also defines how a client can request the execution of a process and how the output of the process is handled&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. 
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
   &lt;dt&gt;&lt;a href=&quot;http://www.opendap.org&quot;&gt;OPeNDAP&lt;/a&gt;&lt;/dt&gt;
-  &lt;dd&gt;OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations. &lt;/dd&gt;
+  &lt;dd&gt;OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations.&lt;/dd&gt;
 &lt;/dl&gt;
 
 &lt;p&gt;A few examples of these applications are:&lt;/p&gt;
@@ -4318,7 +3940,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h4 id=&quot;objectves&quot;&gt;&lt;strong&gt;Objectves:&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;Understanding how to assess data sources &lt;/li&gt;
+  &lt;li&gt;Understanding how to assess data sources&lt;/li&gt;
   &lt;li&gt;Recognize credible data sources&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -4394,7 +4016,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;ul&gt;
   &lt;li&gt;
     &lt;dl&gt;
-      &lt;dt&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger.html&quot;&gt;Topologically Integrated Geographic Encoding and Referencing (TIGER) Products&lt;/a&gt; &lt;/dt&gt;
+      &lt;dt&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger.html&quot;&gt;Topologically Integrated Geographic Encoding and Referencing (TIGER) Products&lt;/a&gt;&lt;/dt&gt;
       &lt;dd&gt;TIGER products are spatial extracts from the Census Bureau’s MAF/TIGER database containing features such as roads, railroads, rivers, as well as legal and statistical geographic areas. The Census Bureau offers (these products) in several file types&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.”&lt;/dd&gt;
     &lt;/dl&gt;
   &lt;/li&gt;
@@ -4495,7 +4117,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;http://www.gadm.org  &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;http://www.gadm.org &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
       &lt;p&gt;http://www.census.gov/geo/maps-data/data/tiger.html &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
@@ -4515,7 +4137,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 
 &lt;h3 id=&quot;what-this-exercise-covers&quot;&gt;What this exercise covers&lt;/h3&gt;
 
-&lt;p&gt;Downloading vector and raster data:  &lt;/p&gt;
+&lt;p&gt;Downloading vector and raster data:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Vector: administrative boundary data for the state of Washington from Global Administrative Areas&lt;/li&gt;
@@ -4615,7 +4237,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 
 &lt;h2 id=&quot;do-they-have-a-point&quot;&gt;Do they have a point?&lt;/h2&gt;
 
-&lt;p&gt;There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of data types, which are each inter-related. Spatial data is also dependent on a few factors such as projection, ellipsoid, and unit of measure. Spatial data is naturally multi-dimensional but needs to normally be passed through a visualization application to understand. Finally, a sticking point for spatial data has been how should the data be organized effectively and how can the inherent relationships between objects be tested efficiently. &lt;/p&gt;
+&lt;p&gt;There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of data types, which are each inter-related. Spatial data is also dependent on a few factors such as projection, ellipsoid, and unit of measure. Spatial data is naturally multi-dimensional but needs to normally be passed through a visualization application to understand. Finally, a sticking point for spatial data has been how should the data be organized effectively and how can the inherent relationships between objects be tested efficiently.&lt;/p&gt;
 
 &lt;p&gt;The specification helps to define a few words useful when dealing with spatial data.&lt;/p&gt;
 
@@ -4636,11 +4258,11 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 &lt;p&gt;Some of the most used spatial data types are:&lt;/p&gt;
 
 &lt;dl&gt;
-  &lt;dt&gt;Point &lt;/dt&gt;
+  &lt;dt&gt;Point&lt;/dt&gt;
   &lt;dd&gt;A Point is a 0-dimensional geometric object and represents a single location in coordinate space. A Point has an x-coordinate value, and a y-coordinate value. If called for by the associated Spatial Reference System, it may also have coordinate values for z and m.&lt;/dd&gt;
-  &lt;dt&gt;LineString &lt;/dt&gt;
+  &lt;dt&gt;LineString&lt;/dt&gt;
   &lt;dd&gt;A linestring is a Curve with linear interpolation between Points. Each consecutive pair of points defines aLine Segment. A  line is a LineString with exactly 2 Points. A Linear Ring is a LineString is a LieString that is both closed and simple. A linestring is a series of connected points. These points act as vertices or nodes and are connected by curves. Each curve is assigned a start point and end point whcih represents the cardinality of the linestring. This cardinality is used to designate an order from the starting point to the end point.&lt;/dd&gt;
-  &lt;dt&gt;Polygon &lt;/dt&gt;
+  &lt;dt&gt;Polygon&lt;/dt&gt;
   &lt;dd&gt;A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. Polygons are topologically closed. THe boundary of a Polygon consists of a set of LinearRings that make up its exterior and interior boundaries. No two Rings in the boundary cross and the Rings in the boundary of a Polygon may intersect but only as a tangent.  A series of connected line strings&lt;/dd&gt;
   &lt;dt&gt;Raster&lt;/dt&gt;
   &lt;dd&gt;A continuous surface made up of regular cells which hold values. Rasters are similar to matrices.&lt;/dd&gt;
@@ -4704,7 +4326,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
   &lt;p&gt;“Everything is related to everything else, but near things are more related than distant things” - Waldo Tobler&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Tobler’s First law of Geography is the fundamental basis of Spatial Analysis. &lt;/p&gt;
+&lt;p&gt;Tobler’s First law of Geography is the fundamental basis of Spatial Analysis.&lt;/p&gt;
 
 &lt;p&gt;This spatial dependence required the study of spatial effects and their influence on statistical studies.&lt;/p&gt;
 
@@ -4718,7 +4340,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 
 &lt;h3 id=&quot;sorting-and-indexes&quot;&gt;Sorting and Indexes&lt;/h3&gt;
 
-&lt;p&gt;Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type. &lt;/p&gt;
+&lt;p&gt;Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type.&lt;/p&gt;
 
 &lt;p&gt;Sorting spatial data poses an interesting problem. Do you sort from North to south? West to East? What happens if you are sorting lines or polygons that overlap?&lt;/p&gt;
 
@@ -4726,7 +4348,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 
 &lt;p&gt;The R-Tree index was proposed by Antoine Guttman in 1984.&lt;/p&gt;
 
-&lt;p&gt;In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features. &lt;/p&gt;
+&lt;p&gt;In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features.&lt;/p&gt;
 
 &lt;p&gt;&lt;a title=&quot;By Skinkie, w:en:Radim Baca (Own work) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AR-tree.svg&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;R-tree&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/R-tree.svg/512px-R-tree.svg.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -4764,7 +4386,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 
 &lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;Understand the difference between a raster and a vector dataset. &lt;/li&gt;
+  &lt;li&gt;Understand the difference between a raster and a vector dataset.&lt;/li&gt;
   &lt;li&gt;Recognize a few spatial data formats.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -4836,7 +4458,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 &lt;p&gt;Projections characterize spatial data by setting coordinate reference systems for each data set.&lt;/p&gt;
 
 &lt;p&gt;Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
- will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth&#39;s image onto a plane. &lt;/p&gt;
+ will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth&#39;s image onto a plane.&lt;/p&gt;
 
 &lt;h4 id=&quot;distortion&quot;&gt;Distortion&lt;/h4&gt;
 
@@ -4848,7 +4470,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 
 &lt;p&gt;&lt;a title=&quot;By Geek3 (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ASphere_wireframe.svg&quot;&gt;&lt;img src=&quot;/bootcamp//assets/images/coordinate-grid.png&quot; alt=&quot;coordinateGrid&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Projections are another name for projected coordinate systems. These projected coordinate systems compose a family of Coordinate Reference Systems. &lt;/p&gt;
+&lt;p&gt;Projections are another name for projected coordinate systems. These projected coordinate systems compose a family of Coordinate Reference Systems.&lt;/p&gt;
 
 &lt;p&gt;Projected coordinate systems are based off of Geodetic Coordinate Systems. These Geodetic coordinate systems are ellipsoidal models aimed at representing the aspherical nature of the earth.&lt;/p&gt;
 
@@ -4858,7 +4480,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 
 &lt;p&gt;&lt;a title=&quot;By NASA/JPL/University of Texas Center for Space Research. [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AEarth_gravity.png&quot;&gt;&lt;img src=&quot;/bootcamp//assets/images/geoid.png&quot; alt=&quot;geoid&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Although we normally see the earth represented as a sphere, its shape is actually more irregular. The earth has an equatorial bulge and various other undulations due to tectonics, volcanics and the earth’s rotation. &lt;/p&gt;
+&lt;p&gt;Although we normally see the earth represented as a sphere, its shape is actually more irregular. The earth has an equatorial bulge and various other undulations due to tectonics, volcanics and the earth’s rotation.&lt;/p&gt;
 
 &lt;p&gt;The changes in the surface mass are the subject matter of Geodesy. Geodesists use differences in the vertical direction of gravity along with crustal, tidal, and polar motion to determine exact measurements of the Geoid. Geometric computations can become unwieldy processes due to the complicated nature of the Geoid surface. In order approximate the geoid while making geometric calculation feasible, reference ellipsoids were calculated.&lt;/p&gt;
 
@@ -4872,9 +4494,9 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 
 &lt;p&gt;Regional ellipsoids like the North American Datum of 1927 which minimized distortion for the contiguous United States at the expense of more distant regions.&lt;/p&gt;
 
-&lt;p&gt;The modern reference ellipsoid, &lt;strong&gt;WGS 84&lt;/strong&gt; was developed using satellite measurements and past Geodetic System parameters, and has been the reference ellipsoid used by the Global Positioning System. &lt;/p&gt;
+&lt;p&gt;The modern reference ellipsoid, &lt;strong&gt;WGS 84&lt;/strong&gt; was developed using satellite measurements and past Geodetic System parameters, and has been the reference ellipsoid used by the Global Positioning System.&lt;/p&gt;
 
-&lt;p&gt;Most modern projections will use WGS 84 as the underlying reference ellipsoid, but it is important to check that your projection is defined correctly if you are dealing with old datasets. &lt;/p&gt;
+&lt;p&gt;Most modern projections will use WGS 84 as the underlying reference ellipsoid, but it is important to check that your projection is defined correctly if you are dealing with old datasets.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -4930,7 +4552,7 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Cylindrical projections are created by projection a sphere onto a cylinder. Cylindrical projections suffer the least distortion along the line that it intersects the sphere, which is often around the Equator. This makes cylindrical projections useful for mapping tropical data. Examples include Mercator and Universal Transverse Mercator. &lt;/p&gt;
+&lt;p&gt;Cylindrical projections are created by projection a sphere onto a cylinder. Cylindrical projections suffer the least distortion along the line that it intersects the sphere, which is often around the Equator. This makes cylindrical projections useful for mapping tropical data. Examples include Mercator and Universal Transverse Mercator.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Polyhedral&lt;/strong&gt;&lt;/p&gt;
 
@@ -4947,11 +4569,11 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
 
 &lt;h3 id=&quot;checking-the-projection&quot;&gt;Checking the projection&lt;/h3&gt;
 
-&lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis. &lt;/p&gt;
+&lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.gdal.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/gdalinfo.png&quot; alt=&quot;Using GDAL to check projection&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/spatialreference.png&quot; alt=&quot;SpatialReference.org: EPSG:4326&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 

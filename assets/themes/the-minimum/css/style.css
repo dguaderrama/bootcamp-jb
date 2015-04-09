@@ -39,6 +39,11 @@ p, a {
   background-repeat: no-repeat !important;
 }
 
+.what {
+  background: url(/bootcamp/assets/images/what.png) !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+}
 /* navbar-nav */
 .navbar-nav {
   background-color: rgba(0,0,0,0.6);
