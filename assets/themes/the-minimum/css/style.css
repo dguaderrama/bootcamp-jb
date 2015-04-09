@@ -44,6 +44,11 @@ p, a {
   background-size: 100% !important;
   background-repeat: no-repeat !important;
 }
+.intro {
+  background: url(/bootcamp/assets/images/intro.png) !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+}
 /* navbar-nav */
 .navbar-nav {
   background-color: rgba(0,0,0,0.6);
@@ -417,15 +422,25 @@ pre {
   position: relative;
   top: 2px;
 }
+/* edit header
+ * add styling to header - replace class (.projections)
+ */
+.projections div div .entry-title {
+/*
+  enter styles here
+*/
+}
+
 /* MAIN
 --------------------------------------------------------------------------------- */
+/* this is for the header with background images */
 .unit-article header {
   background: url('/assets/themes/the-minimum/skin/100-90-5-monochrome.png');
   background-repeat: repeat;
   background-position: 0 0;
   background-color: #BADA55;
   margin-bottom: 1.625em;
-  padding-top: 5em;
+  padding-top: 13em;
   padding-bottom: 5em;
 }
 .unit-article header h1 {
