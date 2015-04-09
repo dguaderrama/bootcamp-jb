@@ -33,6 +33,12 @@ p, a {
   background-repeat: no-repeat !important;
 }
 
+.projections {
+  background: url(/bootcamp/assets/images/Earth_orthographic.jpg) !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+}
+
 /* navbar-nav */
 .navbar-nav {
   background-color: rgba(0,0,0,0.6);

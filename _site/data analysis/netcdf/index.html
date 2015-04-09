@@ -231,6 +231,14 @@
     
       
       	
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
       	<li class="active"><a href="/bootcamp/data%20analysis/netcdf" class="active">Averaging Rainfall</a></li>
       	
       
@@ -272,6 +280,14 @@
       
       	
       	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
       	
       
     
@@ -651,6 +667,14 @@
     
       
       	
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
       	<li class="active"><a href="/bootcamp/data%20analysis/netcdf" class="active">Averaging Rainfall</a></li>
       	
       
@@ -691,6 +715,14 @@
       
       	
       	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
       	
       
     
@@ -1052,6 +1084,14 @@
     
       
       	
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
       	<li class="active"><a href="/bootcamp/data%20analysis/netcdf" class="active">Averaging Rainfall</a></li>
       	
       
@@ -1092,6 +1132,14 @@
       
       	
       	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
       	
       
     
@@ -1288,7 +1336,7 @@
 
 <p><img src="/bootcamp/assets/images/netcdf1_sm.png" alt="netcdf-logo" /></p>
 
-<p>NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate.</p>
+<p>NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate. </p>
 
 <p>NetCDF is a set of software libraries and describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF was developed at <a href="http://unidata.ucar.edu">Unidata</a>. Unidata provides data and software tools for use in geoscience education and research. Unidata is part of the University Corporation for Atmospheric Research(<a href="http://ucar.edu">UCAR</a>) Community Programs(<a href="http://www.uop.ucar.edu">UCP</a>).<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
 
@@ -1300,17 +1348,17 @@
 
 <p>With the help of a THREDDS Data Server, large netCDF datasets are easily accessible and discoverable through a client application or through HTTP.</p>
 
-<p>The multidimensional nature of netCDF data makes storage of complex data such as temperature and humidity simple. Also, since netCDF allows for multivariate storage, several variables can be subsets, ensembled and explored simultaneously. An issue can be the process of creating a usable dataset from netCDF data. This can be due to the sensor-based nature of netCDF, which is a primary dataset (i.e. daily precipitation sums). In order to get the proper dataset, it often requires researchers to subset, and ensemble values over a dimension. Ensembled data sets could be seasonal datasets, climatologies, or long-term averages.</p>
+<p>The multidimensional nature of netCDF data makes storage of complex data such as temperature and humidity simple. Also, since netCDF allows for multivariate storage, several variables can be subsets, ensembled and explored simultaneously. An issue can be the process of creating a usable dataset from netCDF data. This can be due to the sensor-based nature of netCDF, which is a primary dataset (i.e. daily precipitation sums). In order to get the proper dataset, it often requires researchers to subset, and ensemble values over a dimension. Ensembled data sets could be seasonal datasets, climatologies, or long-term averages. </p>
 
 <h2 id="overview">Overview</h2>
 
 <h2 id="procedure">Procedure</h2>
 
-<p>For our case study, we created an annual average for precipitation between 2007-2014.</p>
+<p>For our case study, we created an annual average for precipitation between 2007-2014. </p>
 
 <p>We had to first locate the datasets from http://esrl.noaa.gov/psd/thredds/dodsC/Datasets/cpc_us_precip/RT</p>
 
-<p>This brought us 9 years of datasets.</p>
+<p>This brought us 9 years of datasets. </p>
 
 <p><img src="/bootcamp/assets/images/daily-precip.png" alt="daily-precip" /></p>
 
@@ -1320,14 +1368,14 @@
 
 <h5 id="netcdf-kitchen-sink">netCDF Kitchen Sink</h5>
 
-<p>The nickname ‘kitchen sink’ is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option ‘-d’<sup id="fnref:4"><a href="#fn:4" class="footnote">2</a></sup>. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions.</p>
+<p>The nickname ‘kitchen sink’ is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option ‘-d’<sup id="fnref:4"><a href="#fn:4" class="footnote">2</a></sup>. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions. </p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">ncks -O -d lon,234.0,244.0 -d lat,44.0,50.0 <span class="k">${</span><span class="nv">URL</span><span class="k">}</span>.<span class="k">${</span><span class="nv">year</span><span class="k">}</span>.nc subset.<span class="k">${</span><span class="nv">year</span><span class="k">}</span>.nc</code></pre></div>
 
 <p>In the above command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testing.</p>
 
 <h4 id="removing-bad-values">Removing bad values</h4>
-<p>If you look at the metadata for the subsetted file, you can see that the ‘precip’ variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25° x .25°(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library.</p>
+<p>If you look at the metadata for the subsetted file, you can see that the ‘precip’ variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25° x .25°(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library. </p>
 
 <h5 id="netcdf-arithmetic-processor">netCDF Arithmetic Processor</h5>
 
@@ -1473,7 +1521,7 @@ writeRaster<span class="p">(</span>newR<span class="p">,</span> filename<span cl
   
      
     	<li><a href="/categories.html#data analysis-ref">
-    		data analysis <span>3</span>
+    		data analysis <span>4</span>
     	</a></li>
     
   
@@ -1523,7 +1571,7 @@ writeRaster<span class="p">(</span>newR<span class="p">,</span> filename<span cl
 							<li class="pipe"> | </li>
 							
 							
-              <li class="next"><a class="internal" rel="next"  href="/bootcamp/cartography/exercise" title="View Exercise">Exercise &raquo;</a></li>
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/data%20analysis/case-study" title="View Exercise">Exercise &raquo;</a></li>
 							
 						</ul>
 					</nav>

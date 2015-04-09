@@ -32,6 +32,8 @@ Since projections attempt to represent the 3-dimensional globe on a 2-dimensiona
 
 #### Coordinate Reference Systems
 
+<a title="By Geek3 (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ASphere_wireframe.svg">![coordinateGrid]({{site.baseurl}}/{{ASSET_PATH}}/images/coordinate-grid.png)</a>
+
 Projections are another name for projected coordinate systems. These projected coordinate systems compose a family of Coordinate Reference Systems. 
 
 Projected coordinate systems are based off of Geodetic Coordinate Systems. These Geodetic coordinate systems are ellipsoidal models aimed at representing the aspherical nature of the earth.
@@ -77,10 +79,14 @@ The Greenwich meridian has a monument dedicated to it in several cities.
 
 **Conformal**
 
+<a title="By USGS, Mysid [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALambert_conformal_conic.svg">![conformalConic]({{site.baseurl}}/{{ASSET_PATH}}/images/conformal_conic.svg.png)/a>
+
 Also known as *fidelity of shape*, these projections preserve shape. This means that scale distortion must be the same in all directions and each parallel must cross every meridian at right angles. These projections are important for navigational and large-scale mapping[^1]
 Examples include Mercator, and Lambert Conformal Conic.
 
 **Equal Area**
+
+<a title="By Kai Krause [CC0], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ATrue_size_of_Africa.jpg">![trueSizeOfAfrica]({{site.baseurl}}/{{ASSET_PATH}}/images/True_size_of_Africa.jpg)</a>
 
 Preserves the area relationships between regions. This maintain the proper ratio of area between regions. An example of this is the Mollweide projection. These projections are useful for statistical comparisons.
 
@@ -95,26 +101,32 @@ Preserves the proportional distances between any two points from their spherical
 
 **Conic**
 
-<a href="http://commons.wikimedia.org/wiki/File:Usgs_map_lambert_conformal_conic.PNG#mediaviewer/File:Usgs_map_lambert_conformal_conic.PNG"><img alt="Usgs map lambert conformal conic.PNG" src="http://upload.wikimedia.org/wikipedia/commons/6/62/Usgs_map_lambert_conformal_conic.PNG"></a>
+<a title="By Koenb at Dutch Wikipedia (Original text: productie van de afbeelding uit het .shp-bestand: Koenb) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AWorld_borders_lambertcc000045.png">![worldBordersLambert]({{site.baseurl}}/{{ASSET_PATH}}/images/World_borders_lambert.png)</a>
+
 <br>
 
 Conic projections are created by projecting part of a sphere onto a cone. Conic projections tend to be useful for representing data in temperate climates due to their location. Conicn projections are not useful for representing global phenomena due to their construction.
 
 **Azimuthal**
 
-<a title="By User:Quadell, re-cml projectionloring US Government USGS image. [Public domain or Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AUsgs_map_azimuthal_equidistant.PNG"><img alt="Usgs map azimuthal equidistant" src="http://upload.wikimedia.org/wikipedia/commons/6/64/Usgs_map_azimuthal_equidistant.PNG"/></a>
+<a title="By RokerHRO (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AAzimuthal_Equidistant_S90.jpg">![azimuthalEquidistant]({{site.baseurl}}/{{ASSET_PATH}}/images/Azimuthal_Equidistant.jpg)</a>
+
 <br>
 Azimuthal projections are created by flattening a side of the sphere from a reference point. Azimuthal projections are useful for mapping polar data.
 
 **Cylindrical**
 
-<a title="By Ciphers (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AMercator_projection_ar.png"><img width="512" alt="Mercator projection ar" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Mercator_projection_ar.png/512px-Mercator_projection_ar.png"/></a>
+<a title="By KoenB (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ACilinderprojectie-constructie.jpg">![cylindricalProjection]({{site.baseurl}}/{{ASSET_PATH}}/images/cylindrical_projection.jpg)</a>
+
+
 <br>
 
 Cylindrical projections are created by projection a sphere onto a cylinder. Cylindrical projections suffer the least distortion along the line that it intersects the sphere, which is often around the Equator. This makes cylindrical projections useful for mapping tropical data. Examples include Mercator and Universal Transverse Mercator. 
 
 
 **Polyhedral**
+
+<a title="By Koenb at nl.wikipedia (Original text : KoenB) [Public domain], from Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3APolyederprojectie-6-rendered.png">![polyhedralProjection]({{site.baseurl}}/{{ASSET_PATH}}/images/Polyhedral_projection.png)</a>
 
 <a title="By Chris Rywalt (POVRay) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ADymaxion_2003_animation_small1.gif"><img width="256" alt="Dymaxion 2003 animation small1" src="//upload.wikimedia.org/wikipedia/commons/b/bb/Dymaxion_2003_animation_small1.gif"/></a>
 <br>
