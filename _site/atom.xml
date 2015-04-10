@@ -4,7 +4,7 @@
  <title>Spatial Data Bootcamp</title>
  <link href="http://104.237.129.71/bootcamp/" rel="self"/>
  <link href="http://104.237.129.71/bootcamp"/>
- <updated>2015-04-09T13:21:34-07:00</updated>
+ <updated>2015-04-09T20:04:51-07:00</updated>
  <id>http://104.237.129.71/bootcamp</id>
  <author>
    <name>Nathan Casler</name>
@@ -3791,6 +3791,8 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h2 id=&quot;exercise&quot;&gt;Exercise&lt;/h2&gt;
 
 &lt;ol&gt;
@@ -3874,6 +3876,156 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 &lt;/ol&gt;
 
 &lt;h3 id=&quot;continue-to-the-next-lesson&quot;&gt;Continue to the next lesson…&lt;/h3&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Data Hygiene</title>
+   <link href="http://104.237.129.71/bootcamp/data%20wrangling/data-cleaning"/>
+   <updated>2002-12-30T00:00:00-07:00</updated>
+   <id>http://104.237.129.71/bootcamp/data%20wrangling/data-cleaning</id>
+   <content type="html">&lt;h4 id=&quot;pre-requisites-intro-to-spatial-data-data-collection&quot;&gt;&lt;strong&gt;Pre-requisites&lt;/strong&gt; Intro to Spatial Data, Data Collection&lt;/h4&gt;
+
+&lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Understand how to clean datasets&lt;/li&gt;
+  &lt;li&gt;Recognize issues in our datasets&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;data-hygiene&quot;&gt;Data Hygiene&lt;/h1&gt;
+
+&lt;p&gt;In tutorials, and exercises it is common to receive prepared data sets which will easily fit into a workflow. Unfortunately, in real life, data comes in all shapes and sizes, and more often than not, the data we need has quality, consistency or format issues. These can be products of data entry, sensor calibrations, or legacy formats. &lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;data-janitor-someone-has-to-do-it&quot;&gt;Data Janitor: Someone has to do it&lt;/h2&gt;
+
+&lt;p&gt;It is important to know how to clean up the data sets we download, if we hope to make our workflows reproducible.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;keep-a-clean-workspace&quot;&gt;Keep a clean workspace&lt;/h2&gt;
+
+&lt;p&gt;Its hard to keep anything clean in a dirty kitchen. The same principle applies to our workspaces. If we are testing pieces of a workflow, it will be difficult to prevent ourself from creating an abundance of files, but the difference between a clean workspace and a messy one can be as simple as using standards with our naming conventions. &lt;/p&gt;
+
+&lt;p&gt;If we find workspace starts to look like:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;data.csv
+data_1.csv
+data-1.csv
+data1.csv
+data3.csv
+data_REAL.csv
+dataREAL_1.csv
+data_processed.csv
+data_FINAL.csv
+USE_THIS_data.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We might be guilty of data negligence. &lt;/p&gt;
+
+&lt;p&gt;If we are doing testing, it is good practice to create a scratch(temp) workspace to hold all of the intermediate files being created.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;naming-standards&quot;&gt;Naming Standards&lt;/h2&gt;
+
+&lt;p&gt;It is also good practice to keep with a consistent naming structure to prevent from confusing ourself when we go looking for the right file 6 months from now.&lt;/p&gt;
+
+&lt;p&gt;There are a variety of ways to name our files, and the one use is our own choice as long as we use it consitently&lt;/p&gt;
+
+&lt;p&gt;Here are a few examples:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CamelCase&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;myCoolFile.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;snake_case&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;my_cool_file.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;spinal-case&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;my-cool-file.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Train-Case&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;My-Cool-File.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;SCREAMING_SNAKE_CASE&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;MY_COOL_FILE.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;keep-it-simple&quot;&gt;Keep it simple&lt;/h2&gt;
+
+&lt;p&gt;If we have a lot of similar data, it can be easy for us to stuff everything into a single table that we can scan through. This can be good when datasets are still relatively small, but once we are dealing with 30+ columns it can become a huge pain to understand our datasets. &lt;/p&gt;
+
+&lt;p&gt;Once our datasets start growing, we should check to make sure we actually need all the data we have. If we don’t, it can be easy to become a data hoarder. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Just because we can fit everything doesn’t mean we should.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;These extra columns can not only make our data hard to read, but it can also make our data less reliable, more redundant, and slower to process.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;data-redundancy&quot;&gt;Data Redundancy&lt;/h2&gt;
+
+&lt;p&gt;Keeping redundant data in your dataset can seem like a good idea in case we mess up one column or row, then we can copy/paste the original data. This safeguard can introduce inconsistency and corruption into our data if we are not careful.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;id&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;temp&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;tempCel&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;67&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;19.4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;80&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;26.7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;89.6&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;32&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;45&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;45&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;33.8&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;In the table above, there is a temp column and a tempCel column. At first glance it could be easy to tell that the first temp column is Fahrenheit and the second is Celsius. An issue with redundancy comes when one column is updated and the other is not. If we don’t have information on which column is more reliable, we can only guess. These guesses become harder as datasets become larger and the relationships between the redundant data is more complex.&lt;/p&gt;
+
 </content>
  </entry>
  
@@ -4294,6 +4446,8 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;&lt;a href=&quot;http://www.iges.org/grads&quot;&gt;GrADS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;hr /&gt;
+
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:3&quot;&gt;
@@ -4346,12 +4500,18 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;h4 id=&quot;here-are-a-few-data-sources-to-check-if-you-are-looking-for-some-spatial-data&quot;&gt;Here are a few data sources to check if you are looking for some spatial data:&lt;/h4&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
 &lt;h4 id=&quot;global-administrative-areas-gadmhttpwwwgadmorg&quot;&gt;&lt;a href=&quot;http://www.gadm.org&quot;&gt;Global Administrative Areas (GADM)&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.gadm.org/img/gadm2_adm1_low.png&quot; alt=&quot;GADMN database of Global Administrative Areas&quot;&gt;&lt;img src=&quot;http://www.gadm.org/img/gadm2_adm1_high.png&quot; width=&quot;250px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;“GADM is a spatial database of the location of the world’s administrative areas (or administrative boundaries) for use in GIS and similar software. Administrative areas in this database are countries and lower level subdivisions such as provinces,departmens bibhag, bundeslander,etc… GADM describes where these administrative areas are and for each area it provides some attributes, such as the name and variant names&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.”&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;h4 id=&quot;united-states-geological-survey-usgshttpwwwusgsgov&quot;&gt;&lt;a href=&quot;http://www.usgs.gov&quot;&gt;United States Geological Survey (USGS)&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;http://commons.wikimedia.org/wiki/File:USGS_logo.png#mediaviewer/File:USGS_logo.png&quot;&gt;&lt;img alt=&quot;USGS logo.png&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/0/08/USGS_logo.png&quot; height=&quot;81&quot; width=&quot;220&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -4365,6 +4525,8 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;h4 id=&quot;national-aeronautics-and-space-administration-nasahttpwwwnasagov&quot;&gt;&lt;a href=&quot;http://www.nasa.gov&quot;&gt;National Aeronautics and Space Administration (NASA)&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;a title=&quot;By National Aeronautics and Space Administration [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ANASA_logo.svg&quot;&gt;&lt;img width=&quot;128&quot; alt=&quot;NASA logo&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/128px-NASA_logo.svg.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -4380,6 +4542,8 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h4 id=&quot;national-oceanic-and-atmospheric-administration-noaahttpwwwnoaagov&quot;&gt;&lt;a href=&quot;http://www.noaa.gov&quot;&gt;National Oceanic and Atmospheric Administration (NOAA)&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;http://commons.wikimedia.org/wiki/File:NOAA.png#mediaviewer/File:NOAA.png&quot;&gt;&lt;img alt=&quot;NOAA.png&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/3/3a/NOAA.png&quot; height=&quot;145&quot; width=&quot;145&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -4390,6 +4554,8 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;h4 id=&quot;us-census-bureauhttpwwwcensusgov&quot;&gt;&lt;a href=&quot;http://www.census.gov&quot;&gt;U.S Census Bureau&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;http://commons.wikimedia.org/wiki/File:Census_Bureau_seal.svg#mediaviewer/File:Census_Bureau_seal.svg&quot;&gt;&lt;img alt=&quot;Census Bureau seal.svg&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/6/6b/Census_Bureau_seal.svg&quot; height=&quot;145&quot; width=&quot;145&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -4407,37 +4573,10 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h4 id=&quot;local-and-regional-governments&quot;&gt;Local and regional governments&lt;/h4&gt;
 &lt;p&gt;Most states maintain repositories of spatial data characteristic or pertinent to their scope. Some organizations to look for would be state geologic surveys, natural resource departments, city and county governments.&lt;/p&gt;
-
-&lt;!--
-
-### Consumable Services
-
-There is a variety of methods to access spatial data. The most obvious one is downloading a dataset to local machine. This can be the easiest option if the dataset is small enough to download quickly, and the data repository is easy to find. If this is not the case, there are several other options available:
-  
-  [Web Feature Service (WFS)](http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1) - Useful for modifying features in remote datasets
-  : The WFS represents a change in the way geographic information is created, modified, and exchanged on the Internet. Rather than sharing geographic information at the file level using the File Transfer Protocol(FTP), the WFS offers direct fine-grained access to geographic information at the feature and feature property level. Web features services allow clients to only retrieve or modify the data they are seeking, rather than retrieving a file that contains the data they are seeking and possibly much more[^3].
-&lt;br&gt;&lt;br&gt;
-
-  [Web Map Service (WMS)](http://www.opengeospatial.org/standards/wms) - Useful for visualizing remote datasets 
-  : The Web Map Service Interface Standard provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. The WMS response will return one or more geo-registered map images (JPEG, PNG, etc) to be display in a browser application[^4].
-&lt;br&gt;&lt;br&gt;
-
-  [Web Processing Service (WPS)](http://www.opengeospatial.org/standards/wps) - Utilizes remote resources for computation
-  : THe WPS Standard provides rule for standardizing inputs and outputs for geospatial processing services, such as polygon overlay. The standard also defines how a client can request the execution of a process and how the output of the process is handled[^5]. 
-&lt;br&gt;&lt;br&gt;
-
-  [OPeNDAP](http://www.opendap.org)
-  : OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet[^6]. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations. 
-
-A few examples of these applications are:
-
-  + [Panoply](http://giss.nasa.gov/tools/panoply)
-  + [Integrated Data Viewer](http://unidata.usr.edu/software/idv)
-  + [GrADS](http://www.iges.org/grads)
-
---&gt;
 
 &lt;!--
 
@@ -4507,6 +4646,163 @@ If you are using Mac or Linux you can extract the files in the terminal with the
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Census Exercise</title>
+   <link href="http://104.237.129.71/bootcamp/data%20collection/census"/>
+   <updated>2001-01-02T00:00:00-07:00</updated>
+   <id>http://104.237.129.71/bootcamp/data%20collection/census</id>
+   <content type="html">
+&lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Learn where to download census demographic data.&lt;/li&gt;
+  &lt;li&gt;Learn where how to download census boundary data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-sources&quot;&gt;Data Sources:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://factfinder.census.gov/&quot; alt=&quot;Spatial Data Bootcamp: Download Census housing data - American FactFinder&quot; target=&quot;_blank&quot;&gt;Census housing data - American FactFinder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.census.gov/geo/maps-data/data/tiger.html&quot; alt=&quot;Spatial Data Bootcamp: Download Census tract shapefile - TIGER data&quot; target=&quot;_blank&quot;&gt;Census tracts - TIGER Data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Downloading Housing Data from American Factfinder&lt;/li&gt;
+  &lt;li&gt;Download Census Tract boundaries from the Census TIGER dataset&lt;/li&gt;
+  &lt;li&gt;Unpack downloaded data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;downloading-data-from-american-factfinder&quot;&gt;Downloading data from American FactFinder&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open the &lt;a href=&quot;http://factfinder.census.gov/&quot; alt=&quot;Spatial Data Bootcamp: Download Census housing data - American FactFinder&quot; target=&quot;_blank&quot;&gt;Census American FactFinder site&lt;/a&gt; and select &lt;em&gt;Advanced Search &amp;gt; SHOW ME ALL&lt;/em&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;screen-shot&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-1.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/p&gt;
+
+&lt;ul class=&quot;screen-shot&quot;&gt;
+  &lt;li&gt;In the &lt;em&gt;ADVANCED SEARCH&lt;/em&gt; window. Search - Use options on the left (topics, geographics, …) to narrow your search results.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-2.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;download-washington-housing-unitsbr&quot;&gt;Download &lt;em&gt;Washington Housing Units&lt;/em&gt;&lt;br /&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add &lt;em&gt;Housing Units&lt;/em&gt; to query:&lt;br /&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Click &lt;em&gt;Topics&lt;/em&gt; on the left-hand menu&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Select Topics to add to ‘Your Selections’&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Housing &amp;gt; Basic Count/Estimate &amp;gt; Click &lt;em&gt;Housing Units&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;em&gt;CLOSE&lt;/em&gt; (top right)&lt;br /&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;screen-shot&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-3.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add &lt;em&gt;Washington Census Tract&lt;/em&gt; to query:&lt;br /&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Click &lt;em&gt;Geographies&lt;/em&gt; on left-hand menu&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Select a geographic type: &lt;em&gt;…. ….Census Tract -140&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Select a state: &lt;em&gt;Washington&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Select one or more geographic areas: &lt;em&gt;All Census Tracts within Washington&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;em&gt;ADD TO YOUR SELECTIONS&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;em&gt;CLOSE&lt;/em&gt; (top right)&lt;br /&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-4.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Check row: &lt;em&gt;B25001 HOUSING UNITS 2013 ACS 5-year estimates&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Click &lt;em&gt;Download&lt;/em&gt; at the bottom of the table&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-5.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Click &lt;em&gt;OK&lt;/em&gt; to create a zip file containing your selected products.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-6.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Click &lt;em&gt;DOWNLOAD&lt;/em&gt; to download zipped files&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-7.png&quot; alt=&quot;Spatial Data Bootcamp: Vector &amp;amp; Census data&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Note: Do not clear all selections.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Download &lt;em&gt;Washington Value of Homes&lt;/em&gt;:&lt;br /&gt;
+If you did not clear your selections from the previous steps then continue on, else seet &lt;strong&gt;Download Washington Housing Units&lt;/strong&gt; above.&lt;br /&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Remove &lt;em&gt;Housing Units&lt;/em&gt; from selection&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-8.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;em&gt;Topics&lt;/em&gt; on the left-hand menu and navigate to &lt;em&gt;Value of Home&lt;/em&gt;:&lt;br /&gt;&lt;em&gt;Housing &amp;gt; Financial Characteristic &amp;gt; Value of Home (click to select) &amp;gt; Click CLOSE (top right)&lt;/em&gt;&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-9.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Check row: &lt;em&gt;B25077 MEDIAN VALUE (DOLLARS) 2013 ACS 5-year estimates&lt;/em&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-10.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;em&gt;Download&lt;/em&gt; (bottom of table) to download zipped files&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-11.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;em&gt;OK&lt;/em&gt; to create a zip file containing your selected products&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-12.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;em&gt;Download&lt;/em&gt; to save the file to your computer. This zip file will be named the same as the one above, your browser will append (1).&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-13.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;download-tiger-census-tracts&quot;&gt;Download TIGER Census Tracts&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open the &lt;a href=&quot;https://www.census.gov/geo/maps-data/data/tiger.html&quot; alt=&quot;Spatial Data Bootcamp: Download Census tract shapefile - TIGER data&quot; target=&quot;_blank&quot;&gt;Census TIGER data site&lt;/a&gt; and click on TIGER/Line Shapefiles from the product table.&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-1.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;In the product year table, select &lt;em&gt;2014&lt;/em&gt;, click &lt;em&gt;Download&lt;/em&gt;, and enter the &lt;em&gt;Web Interface&lt;/em&gt;&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-2.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Select a layer type: &lt;em&gt;Census Tracts&lt;/em&gt;, then &lt;em&gt;Submit&lt;/em&gt;&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-3.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Census Tract - Select a state: &lt;em&gt;Washington&lt;/em&gt;, then &lt;em&gt;Download&lt;/em&gt;&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-4.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Save file. Navigate to your directory&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-5.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;unpack-downloaded-files&quot;&gt;Unpack downloaded files&lt;/h3&gt;
+
+&lt;p&gt;If you haven’t already downloaded your data, see &lt;strong&gt;Download Census Housing Data&lt;/strong&gt; and &lt;strong&gt;Download TIGER Census Tracts&lt;/strong&gt; above.&lt;/p&gt;
+
+&lt;p&gt;If you haven’t already moved your downloaded zip files from the above steps, move your zip files into your working directory.&lt;/p&gt;
+
+&lt;p&gt;Using an extraction application like 7-zip makes it easy to unzip these files.&lt;/p&gt;
+
+&lt;p&gt;Install 7-zip if necessary.&lt;/p&gt;
+
+&lt;p&gt;Right-click on zip file and ‘Extract Here’&lt;/p&gt;
+
+&lt;p&gt;Do this for all zip files.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-unpack-files.png&quot; alt=&quot;Spatial Data Bootcamp: Unzip files&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After unpacking files, open one of the Census ACS folders (aff_download).&lt;/p&gt;
+
+&lt;p&gt;Rename folder &lt;/p&gt;
+
+&lt;p&gt;Notice the files. Theres a text file with metadata on the given metric (Housing Units or Home Values). There’s a README that explains what’s inside of the zip file. There’s a metadata CSV that explains what the column headings represent. And there’s the data we need in CSV format with annotations.&lt;/p&gt;
+
+&lt;p&gt;Now open the Census tracts TIGER data folder. The XMl file contain the metadata about the shapefile. Double-clicking the XML files should open in a web browser and you should be able to read the information. The shapefile data is stored in the .dbf, .prj, .shp, and .shx. You can view the projection by opening the .prj in a text editor. Don’t bother trying to open the other files in a text editor.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-unpack-files-2.png&quot; alt=&quot;Spatial Data Bootcamp: View shapefiles and metadata&quot; /&gt;&lt;/p&gt;
+
 </content>
  </entry>
  
@@ -4797,23 +5093,6 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 &lt;p&gt;&lt;a title=&quot;By Ldecola (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AThe_use_of_a_raster_data_structure_to_summarize_a_point_pattern.gif&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;The use of a raster data structure to summarize a point pattern&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/b/b7/The_use_of_a_raster_data_structure_to_summarize_a_point_pattern.gif/512px-The_use_of_a_raster_data_structure_to_summarize_a_point_pattern.gif&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;common-data-formats&quot;&gt;Common Data Formats&lt;/h2&gt;
-&lt;p&gt;Here are some common data formats you may encounter:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Shapefile: Stores point, line, and polygon data. This file type is actually made up of a collection of files with the following endings: These are mandatory: .shp, .shx, .dbf There are many others which are optional, including the important .prj file that describes the projection information for that data.&lt;/li&gt;
-  &lt;li&gt;Geodatabase: Esri proprietary spatial database. Very easy to load data into, not so easy to extract.&lt;/li&gt;
-  &lt;li&gt;GeoJSON: Encodes points, lines, and polygons (and collections of those) along with information about them using JSON (JavaScript Object Notation). This format is popular for web maps.&lt;/li&gt;
-  &lt;li&gt;GeoTIFF: A standard that allows embedding geographic information in a TIFF file.&lt;/li&gt;
-  &lt;li&gt;NetCDF: A multidimensional data format that allows for multiple variables covering 1 or more dimensions.&lt;/li&gt;
-  &lt;li&gt;Arcinfo/Ascii grid: Proprietary format by Esri&lt;/li&gt;
-  &lt;li&gt;Database: There are various databases that, with extensions, can hold geographic objects. Some notable examples are PostgreSQL with PostGIS, and SQLite with the SpatiaLite extension. It is important to look into the level of spatial support within a database before performing any analysis. For example, MySQL&#39;s spatial extension has geometry support, but the geometries are all defined by bounding boxes rather than the true geometry.&lt;/li&gt;
-&lt;/ul&gt;
 
 </content>
  </entry>

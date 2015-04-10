@@ -15,7 +15,9 @@
 	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
 	<link href="http://feeds.feedburner.com/" rel="alternate" title="Vectors and Rasters" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
-	
+  <link href="http://fonts.googleapis.com/css?family=League+Gothic:400,700" rel='stylesheet' type='text/css'>	
+  <link href="http://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet' type='text/css'>	
+  <link href="http://fonts.googleapis.com/css?family=Slabo+13px" rel='stylesheet' type='text/css'>	
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -167,6 +169,14 @@
     
       
       	
+      	<li><a href="/bootcamp/data%20collection/census">Census Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
       	<li><a href="/bootcamp/data%20collection/exercise">Exercise</a></li>
       	
       
@@ -192,6 +202,14 @@
       
       	
       	<li><a href="/bootcamp/data%20wrangling/data-wrangling">Data Formatting</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-cleaning">Data Hygiene</a></li>
       	
       
     
@@ -484,6 +502,7 @@
 	<div class="unit-inner unit-article-inner">
 		<div class="content">
 			<header id="content-header">
+        <div id="header-overlay">
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
             <h1 class="h2 entry-title">Vectors and Rasters</h1> 
@@ -493,6 +512,7 @@
 
 					</div><!-- unit-inner -->
 				</div><!-- unit-head -->
+      </div>
 			</header>
 
     
@@ -605,6 +625,14 @@
     
       
       	
+      	<li><a href="/bootcamp/data%20collection/census">Census Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
       	<li><a href="/bootcamp/data%20collection/exercise">Exercise</a></li>
       	
       
@@ -629,6 +657,14 @@
       
       	
       	<li><a href="/bootcamp/data%20wrangling/data-wrangling">Data Formatting</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-cleaning">Data Hygiene</a></li>
       	
       
     
@@ -1022,6 +1058,14 @@
     
       
       	
+      	<li><a href="/bootcamp/data%20collection/census">Census Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
       	<li><a href="/bootcamp/data%20collection/exercise">Exercise</a></li>
       	
       
@@ -1046,6 +1090,14 @@
       
       	
       	<li><a href="/bootcamp/data%20wrangling/data-wrangling">Data Formatting</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-cleaning">Data Hygiene</a></li>
       	
       
     
@@ -1363,23 +1415,6 @@
 
 <p><br /></p>
 
-<hr />
-
-<p><br /></p>
-
-<h2 id="common-data-formats">Common Data Formats</h2>
-<p>Here are some common data formats you may encounter:</p>
-
-<ul>
-  <li>Shapefile: Stores point, line, and polygon data. This file type is actually made up of a collection of files with the following endings: These are mandatory: .shp, .shx, .dbf There are many others which are optional, including the important .prj file that describes the projection information for that data.</li>
-  <li>Geodatabase: Esri proprietary spatial database. Very easy to load data into, not so easy to extract.</li>
-  <li>GeoJSON: Encodes points, lines, and polygons (and collections of those) along with information about them using JSON (JavaScript Object Notation). This format is popular for web maps.</li>
-  <li>GeoTIFF: A standard that allows embedding geographic information in a TIFF file.</li>
-  <li>NetCDF: A multidimensional data format that allows for multiple variables covering 1 or more dimensions.</li>
-  <li>Arcinfo/Ascii grid: Proprietary format by Esri</li>
-  <li>Database: There are various databases that, with extensions, can hold geographic objects. Some notable examples are PostgreSQL with PostGIS, and SQLite with the SpatiaLite extension. It is important to look into the level of spatial support within a database before performing any analysis. For example, MySQL's spatial extension has geometry support, but the geometries are all defined by bounding boxes rather than the true geometry.</li>
-</ul>
-
 
 
           <!--
@@ -1517,4 +1552,5 @@
   
 </body>
 </html>
+
 
