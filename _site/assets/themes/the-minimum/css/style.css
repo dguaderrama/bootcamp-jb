@@ -46,28 +46,14 @@ p, a {
 }
 /* background images */
 /* !important allow you to keep a standard color background for .unit-article header when the page(class) does not have a background image */
-.qgis {
-  background: url(/bootcamp/assets/images/bg-1.png) !important;
-  background-size: 100% !important;
-  background-repeat: no-repeat !important;
-}
 
 #content-header {
-  background: url(/bootcamp/assets/images/Earth_orthographic.jpg)  repeat !important;
+ /* background: url(/bootcamp/assets/images/Earth_orthographic_trans.jpg)  repeat !important;*/
   background-size: 100% !important;
   
+  background: url(/bootcamp/assets/images/Earth_orthographic.jpg)  repeat !important;
 }
 
-.what {
-  background: url(/bootcamp/assets/images/what.png) !important;
-  background-size: 100% !important;
-  background-repeat: no-repeat !important;
-}
-.intro {
-  background: url(/bootcamp/assets/images/intro.png) !important;
-  background-size: 100% !important;
-  background-repeat: no-repeat !important;
-}
 #content-header div div .entry-title {
   color: white;
   width: auto;
@@ -78,7 +64,10 @@ p, a {
 #header-overlay {
   height: 100%;
   display: block;
-  background-color: rgba(108,56,0,0.2);
+  /*background-color: rgba(108,56,0,0.2);*/
+ /* z-index: -10;*/ 
+  /*background: url(/bootcamp/assets/images/Earth_orthographic.jpg)  repeat !important;*/
+  background-color: rgba(3,17,83,0.2);
 }
 /* navbar-nav */
 .navbar-nav {
@@ -109,45 +98,63 @@ p, a {
 }
 #sticky ul {
   display: none;
-  padding: 0px !important; 
+  padding: 0px !important;
+  
 }
 #sticky {
-  box-shadow: 
+/*  box-shadow: 
     0 5px 15px 1px rgba(0, 0, 0, 0.6), 
-    0 0 200px 1px rgba(255, 255, 255, 0.5);
+    0 0 200px 1px rgba(255, 255, 255, 0.5);*/
 }
 #sticky h3 {
-  padding: 10px 0px 5px 10px;
+  padding: 30px 15px 20px 15px;
+  font-size: 2.5em;
+  text-align: center;
+  color: white;
+  border-bottom: 3px solid #D19300;
+
 }
 #sticky h4 {
-  background: #036382;
-  
-  background: linear-gradient(#09218E, #020F4A);
+  /*background: #036382;*/
+ /* background: rgba(9,33,142,0.8);*/
+  /*background: linear-gradient(#09218E, #020F4A);*/ 
+  border-bottom: 1px solid #D19300;
   margin: 0px !important;
   padding: 10px 0px 10px 20px !important;
   width: 200px;
   color: white;
 }
 #sticky h4:hover {
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+    color: #D19300;
+    /*color: #09218E;*/
+    /*text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);*/
+    background: rgba(9,33,142,0.8);
   }
 #sticky ul li a {
   display: block;
   padding: 5px 0px 5px 35px;
-  background: #09218E;
+  /*background: #09218E;*/
+  background: rgba(209,147,0,0.9);
   color: white;
   transition: all 0.15s;
 }
 #sticky ul li a:hover {
-  background: #09218E !important;
-  border-left: 5px solid #D19300 !important;
+  /*background: #09218E !important;*/
+  color: #09218E !important;
+  border-left: 5px solid #09218E !important;
 }
 #sticky li.active a {
   display: block;
 }
 .sticky-left-nav { 
-  margin-left: 12%;
+  margin-left: 0%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(3,17,83,0.9);
+  position: fixed;
 }
+
+
 .sticky-left-nav {
 /*  width: 12.5%; */
   float: left;
@@ -208,7 +215,8 @@ p, a {
 }
 /* header */
 .the-header {
-  background-color: rgba(21,11,0,1);
+  /*background-color: rgba(21,11,0,1);*/
+  background-color: rgba(0,3,16,1);
 }
 .the-header .logo {
   float: left;
