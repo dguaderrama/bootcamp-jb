@@ -79,7 +79,9 @@ color is a different rock unit.
 
 Tools like [paletton.com](http://paletton.com/) are simply a color wheel. Paletton.com has options such as monochromatic, adjacent colors, triad, and tetrad that pick colors based on a single color selection. These are meant for web designing but can be useful for maps, as well.
 
-<!--<a href="http://paletton.com" target="_blank" alt="Spatial Data Bootcamp: Paletton.com color wheel">![Spatial Data Bootcamp: Paletton.com color wheel]({{site.baseurl}}{{ASSET_PATH}}/images/paletton.jpg)</a>-->
+<a href="http://paletton.com" target="_blank" alt="Spatial Data Bootcamp: Paletton.com color wheel">![Spatial Data Bootcamp: Paletton.com color wheel]({{site.baseurl}}{{ASSET_PATH}}/images/paletton.jpg)</a>
+
+<!--"_"--->
 
 ## Typography
 
@@ -118,7 +120,7 @@ Besides being an easy way to make tiles, what makes TileMill great for visualizi
 
 After installing TileMill, the first thing you see when you open it is the projects page.
 
-![TileMill first view]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/tilemillopen.png)
+![TileMill first view]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/tilemill_open.png)
 
 Lets create a new project to play around with style. Click on 'New Project' in the top left corner,
 give it a name (any name!) and keep the 'Include World layer and styles' checked.

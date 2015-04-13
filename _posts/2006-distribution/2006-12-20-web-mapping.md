@@ -10,17 +10,16 @@ tags : [cartography, web map, leaflet, openlayers, d3]
 
 ## Understanding web mapping
 
-A map on the Internet shouldn't be just a picture. There is potential for interaction,
-animation, 3D, and more! Even better, the Internet can allowus to share our maps and
-spatial data more effectively than ever.
+A map on the Internet shouldn't be a static picture. There is potential for interaction, animation, and 3D! Even better, the Internet can allow us to share our maps and spatial data more effectively.
 
-How does a map work on the web?
+We've gone through the steps of putting our data on a map. We have styled it and
+created a legend. We split our map into tiles to make it easier and faster to
+display online.
 
-Anatomy of a web map
-Zooming
-Tiling
-Interaction
-Sharing
+Now we will use Javascript, the programming language that allows us
+to add interaction to websites. Various frameworks exist that help
+people use Javascript for web mapping. A framework is simply a
+library or tool that facilitates the use of the Javascript language.
 
 ## Web map frameworks
 
@@ -75,7 +74,7 @@ OpenLayers is an open-source JavaScript library.
 
 [Here's a list of tile map service (TMS) providers](http://leaflet-extras.github.io/leaflet-providers/preview/). Nearly all TMS providers are free for <em>personal use</em>.
 
-Mapbox Suite is ideal for creating custom basemaps.
+Mapbox Studio is ideal for creating custom basemaps.
 
 A basemap is what your spatial data layers are set on top of.
 
