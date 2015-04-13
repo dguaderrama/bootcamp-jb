@@ -1,0 +1,1642 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Cartography</title>
+	<meta name="author" content="Nathan Casler">
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
+	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Cartography" type="application/atom+xml">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=League+Gothic:400,700" rel='stylesheet' type='text/css'>	
+  <link href="http://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet' type='text/css'>	
+  <link href="http://fonts.googleapis.com/css?family=Slabo+13px" rel='stylesheet' type='text/css'>	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="page-container">
+
+
+<!-- post (.md) content -->
+<div id="page" class="hentry">
+	<header class="the-header">
+		<div class="unit-head">
+			<div class="unit-inner unit-head-inner">
+				<p class="logo"><a href="/bootcamp/">Spatial Data Bootcamp</a></p>
+				<nav class="nav-global">
+					<ul>
+            <li class="home"><a href="/bootcamp/index.html">Home</a></li>
+            <li class="bootcamp"><a href="/bootcamp/intro/what">Bootcamp Material</a></li>
+            <li class="about"><a href="/bootcamp/about.html">About Us</a></li>
+					</ul>
+				</nav>
+			</div><!-- unit-inner -->
+		</div><!-- unit-head -->
+	</header>
+	<div class="body" role="main">
+		<div class="unit-body">
+			<div class="unit-inner unit-body-inner">
+				<div class="entry-content">
+					
+            <div class="dropdown-nav">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Table of Contents<span class="caret"></span></a>
+                <ul style="" class="dropdown-menu" role="menu">
+                 
+                  <h4 id="setup-ref">Setup</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="intro-ref">Intro</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/projections">Projections</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/data-types">Common Data Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="data collection-ref">Data collection</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/consumable-services">Consumable Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/census">Census Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="data wrangling-ref">Data wrangling</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-wrangling">Data Formatting</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-cleaning">Data Hygiene</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/functions">Spatial Manipulation</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="data analysis-ref">Data analysis</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/netcdf">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="cartography-ref">Cartography</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/cartography/cartography" class="active">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="distribution-ref">Distribution</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/distribution">Distribution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="things to come-ref">Things to come</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/things%20to%20come/future">Future</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="applications-ref">Applications</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/qgis">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/panoply">Panoply</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="references-ref">References</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/vector-analysis">Vector Analysis</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div><!-- dropdown nav -->
+<article class="unit-article layout-post">
+	<div class="unit-inner unit-article-inner">
+		<div class="content">
+			<header id="content-header">
+        <div id="header-overlay">
+				<div class="unit-head">
+					<div class="unit-inner unit-head-inner">
+            <h1 class="h2 entry-title">Cartography</h1> 
+            <!--            <h2 class="h2 entry-title">Supporting tagline</h2> -->
+
+
+
+					</div><!-- unit-inner -->
+				</div><!-- unit-head -->
+      </div>
+			</header>
+
+    
+      <!--
+      <div class="col-md-2 sticky-left-nav">
+ 
+  <h4 id="setup-ref">Setup</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/projections">Projections</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/data-types">Common Data Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data collection-ref">Data collection</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/consumable-services">Consumable Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/census">Census Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data wrangling-ref">Data wrangling</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-wrangling">Data Formatting</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-cleaning">Data Hygiene</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/functions">Spatial Manipulation</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data analysis-ref">Data analysis</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/netcdf">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="cartography-ref">Cartography</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/cartography/cartography" class="active">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="distribution-ref">Distribution</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/distribution">Distribution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="things to come-ref">Things to come</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/things%20to%20come/future">Future</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="applications-ref">Applications</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/qgis">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/panoply">Panoply</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="references-ref">References</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/vector-analysis">Vector Analysis</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+
+
+    </div>
+    -->
+			<div class="bd">
+
+        <!-- sticky left navigation -->
+<div id="sticky-anchor" class="sticky-left-nav">
+  <div id="sticky" class="sticky-left-nav-inner">
+    <h3>Contents</h3>
+    
+   
+  <h4 id="setup-ref">Setup</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/projections">Projections</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/data-types">Common Data Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data collection-ref">Data collection</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/consumable-services">Consumable Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/census">Census Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data wrangling-ref">Data wrangling</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-wrangling">Data Formatting</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-cleaning">Data Hygiene</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/functions">Spatial Manipulation</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data analysis-ref">Data analysis</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/netcdf">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="cartography-ref">Cartography</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/cartography/cartography" class="active">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="distribution-ref">Distribution</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/distribution">Distribution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="things to come-ref">Things to come</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/things%20to%20come/future">Future</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="applications-ref">Applications</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/qgis">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/panoply">Panoply</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="references-ref">References</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/vector-analysis">Vector Analysis</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+
+  </div>  
+  <div class="clear"></div>
+</div> <!--left-nav -->
+
+
+
+<div class="entry-content content">
+  
+<h3 id="exercises">Exercises</h3>
+
+<p>Making maps in QGIS</p>
+
+<p>Before starting this next section, add the following layers:</p>
+
+<ul>
+  <li>geo_coded.tif
+ <!--* slope-geo-sect.tif-->
+ <!--* landslide-suscept.tif--></li>
+  <li>dem-washington.tif</li>
+</ul>
+
+<p><img src="/bootcamp/assets/images/carto/carto-1.png" alt="Spatial Data Bootcamp: Cartography in QGIS" /></p>
+
+<hr />
+
+<h3 id="exercise-1">Exercise 1</h3>
+
+<p>Create map of Washington rock strength</p>
+
+<p>Needs: dem, geo_coded</p>
+
+<p>Layering - same concept as photo editing; layers stack, or go on top of each other. Increasing transparency will reduce layer opacity or make it see-through.</p>
+
+<h4 id="prepare-data-for-map">Prepare data for map</h4>
+
+<ol>
+  <li>Uncheck all layers, less dem-washington and geo_coded
+<!--2. Create hillshade: * <em>Menu Bar > Raster > Analysis > DEM (Terrain models)</em> * Configure input as follows:<br> Notice the Z factor, this will exaggerate elevation and give the map an appearance of greater relief.<br>![Spatial Data Bootcamp: Cartography in QGIS](/bootcamp/assets/images/carto/carto-2.png) --></li>
+  <li>Load hillshade-washington.tif</li>
+  <li>Be sure geo_coded is moved up, or on top of dem-washington:
+    <ul>
+      <li><em>Click-hold-drag geo_coded</em> to the top of the layer list.</li>
+      <li>Uncheck dem-washington layer.<br />
+ <img src="/bootcamp/assets/images/carto/carto-3.png" alt="Spatial Data Bootcamp: Cartography in QGIS" /></li>
+    </ul>
+  </li>
+  <li>Style geo_coded with qml-style file:
+    <ul>
+      <li><em>Right-click geo_coded &gt; Properties &gt; Style</em></li>
+      <li><em>Load Style… (button at bottom) &gt; Navigate to rock-strength.qml</em></li>
+      <li>QGIS does not load actual minimum and maximum values by default. This enables faster layer rendering. You’ll want to load actual min/max values to visualize the correct data. To load actual min/max values:<br /><em>Load min/max values: Min/max<br />Accuracy: Actual (slower)<br />Click Load<br />Click Apply to save changes</em><br />
+ <img src="/bootcamp/assets/images/carto/carto-4.png" alt="Spatial Data Bootcamp: Cartography in QGIS" /></li>
+      <li>Increase transparency:<br /><em>From within layer Properties &gt; Transparency &gt; Global Transparency &gt; 50%<br />Click Apply, OK to save changes and close Properties</em><br /></li>
+      <li>The product just created visualizes rock strength within Washington state with enhanced effects using hillshade and transparency.
+ <img src="/bootcamp/assets/images/carto/carto-5.png" alt="Spatial Data Bootcamp: Cartography in QGIS" /></li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="making-the-map">Making the map</h4>
+
+<ol>
+  <li>There are several was to open the <strong>Print Composer</strong>:
+    <ul>
+      <li><em>Menu Bar &gt; Project &gt; New Print Composer</em></li>
+      <li>Print Composer toolbar icon<br />
+ <img src="/bootcamp/assets/images/carto/carto-6.png" alt="Spatial Data Bootcamp: Cartography in QGIS" /></li>
+    </ul>
+  </li>
+  <li>Create title:
+    <ul>
+      <li>This new Print Composer project will be saved and can be accessed through the <strong>Composer Manager</strong>.</li>
+    </ul>
+  </li>
+  <li>The Print Composer opens in a new application window, you will still be able to work in your current project while making a map.</li>
+  <li>You must add a map layer for visualizing. The <strong>Add Map</strong> tool will require you to create a bounding box to fit the map. Adjust the bounding box as needed. To add a map layer:
+    <ul>
+      <li><em>Menu Bar &gt; Layout &gt; Add Map</em> OR</li>
+      <li><strong>Add new map</strong> toolbar icon:<br />
+ <img src="/bootcamp/assets/images/carto/carto-7.png" alt="Spatial Data Bootcamp: Cartography in QGIS" /></li>
+      <li><strong>Move Item Content</strong> tool will allow you to move the map without moving the bounding box<br />
+ <img src="/bootcamp/assets/images/carto/carto-8.png" alt="Spatial Data Bootcamp: Cartography in QGIS" /></li>
+      <li>Explore tools by hovering over the toolbar icon or go to <em>Menu Bar &gt; Layout</em> to see the names of each layout tool.</li>
+    </ul>
+  </li>
+  <li>Add a legend:
+    <ul>
+      <li><em>Menu Bar &gt; Layout &gt; Add Legend</em></li>
+      <li>Notice how names and values are not appropriate for a final map. To open legend propertie, using the <strong>Select/Move Item</strong> tool: <em>Select the legend layer and notice the Item properties on the right</em><br />
+ <img src="/bootcamp/assets/images/carto/carto-9.png" alt="Spatial Data Bootcamp: Cartography in QGIS" /></li>
+      <li>Item properties: Here you are able to change the title, select which legend to produce based on the map layer, modify legend item, etc. See the images below for the list of options.<br />
+ <img src="/bootcamp/assets/images/carto/carto-10.png" alt="Spatial Data Bootcamp: Cartography in QGIS" /></li>
+    </ul>
+  </li>
+  <li>Add a title:
+    <ul>
+      <li>add title</li>
+    </ul>
+  </li>
+  <li>Add scale bar:
+    <ul>
+      <li>scale bar</li>
+    </ul>
+  </li>
+  <li>Map info
+    <ul>
+      <li>map info</li>
+    </ul>
+  </li>
+  <li>North arrow
+    <ul>
+      <li><em>Menu Bar &gt; Layout &gt; Add image</em> then click area on map.</li>
+      <li><em>Image item properties &gt; Search directories &gt; Locate North Arrow</em></li>
+    </ul>
+  </li>
+  <li>Configure additional features</li>
+  <li>Export map:
+    <ul>
+      <li>As Image, PDF, or SVG.<br />
+ <img src="/bootcamp/assets/images/carto/carto-final-map.jpg" style="border:1px solid black;" alt="Spatial Data Bootcamp: Cartography in QGIS" /></li>
+    </ul>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+
+          <!--
+					<div class="meta">
+						<p class="date-publish">
+							Published: 
+							<date class="date-pub" title="2005-12-31T00:00:00-07:00" datetime="2005-12-31T00:00:00-07:00" pubdate>
+							<span class="month"><abbr>December</abbr></span>
+							<span class="day">31</span>
+							<span class="year">2005</span>
+							</date>
+						</p>
+						<ul class="list-category list-linear">
+							<li class="list-head">category: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/categories.html#cartography-ref">
+    		cartography <span>4</span>
+    	</a></li>
+    
+  
+
+
+						</ul>
+						<ul class="list-tag list-linear">
+							<li class="list-head">tags: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/tags.html#qgis-ref">qgis <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#leaflet-ref">leaflet <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#colorbewer-ref">colorbewer <span>2</span></a></li>
+    
+  
+
+
+
+						</ul>
+					</div>
+          meta -->
+
+
+				</div><!-- entry-content -->
+				<div class="misc-content">
+					<div class="social">
+						<ul class="list-linear">
+							<li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="" data-lang="en">Tweet</a></div></li>
+							<li><div class="twitter-follow"><a href="https://twitter.com/" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
+						</ul>
+					</div>
+					
+					
+				</div><!-- misc-content -->
+				
+			</div><!-- bd -->
+			<footer class="unit-foot">
+				<div class="unit-inner unit-foot-inner">
+					<nav class="pagination">
+						<ul>
+							
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/cartography/map-types" title="View Map Types">&laquo; Map Types</a></li>
+							
+							
+							<li class="pipe"> | </li>
+							
+							
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/cartography/fundamentals" title="View Fundamentals">Fundamentals &raquo;</a></li>
+							
+						</ul>
+					</nav>
+					<p class="gotop">
+						<a href="#page">Back to Top</a>
+					</p>
+				</div>
+			</footer>
+
+		</div><!-- content -->
+	</div><!-- unit-inner -->
+</article>
+
+
+				</div>
+			</div><!-- unit-inner -->
+		</div><!-- unit-body -->
+	</div><!-- body -->
+	<footer class="the-footer">
+		<div class="unit-foot">
+			<div class="unit-inner unit-foot-inner">
+				<div class="misc vcard">
+					<h4>about</h4>
+					<ul>
+						<li class="contact"><address><span class="author fn n">Nathan Casler</span> - <span class="fn email">ncasler@email.arizona.edu</span></address></li>
+            <!--						<li class="github"><a href="http://github.com//" rel="me">github.com/</a></li>
+						<li class="twitter"><a href="http://twitter.com//" rel="me">twitter.com/</a></li>
+            <li class="rss"><a href="http://feeds.feedburner.com/">Subscribe to RSS Feed</a></li>-->
+					</ul>
+				</div><!-- misc -->
+				<p class="licence">
+        <!--					Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>-->
+					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+				</p>
+			</div><!-- unit-foot-inner -->
+		</div><!-- unit-foot -->
+	</footer>
+</div><!-- page -->
+</div><!-- page-container -->
+<script>
+	(function(d, s) {
+		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.src = url; js.id = id;
+		fjs.parentNode.insertBefore(js, fjs);
+		};
+	load('//platform.twitter.com/widgets.js', 'tweetjs');
+	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/cartography/cartography" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	}(document, 'script'));
+</script>
+<script>
+/*! A fix for the iOS orientationchange zoom bug.Script by @scottjehl, rebound by @wilto. MIT License.*/
+(function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
+</script>
+
+  
+</body>
+</html>
+
+

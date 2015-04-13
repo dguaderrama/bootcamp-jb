@@ -1,0 +1,1674 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Vector Analysis</title>
+	<meta name="author" content="Nathan Casler">
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src='/bootcamp/assets/js/jquery.hoverIntent.js'></script>
+  <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
+	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Vector Analysis" type="application/atom+xml">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=League+Gothic:400,700" rel='stylesheet' type='text/css'>	
+  <link href="http://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet' type='text/css'>	
+  <link href="http://fonts.googleapis.com/css?family=Slabo+13px" rel='stylesheet' type='text/css'>	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="page-container">
+
+
+<!-- post (.md) content -->
+<div id="page" class="hentry">
+	<header class="the-header">
+		<div class="unit-head">
+			<div class="unit-inner unit-head-inner">
+				<p class="logo"><a href="/bootcamp/">Spatial Data Bootcamp</a></p>
+				<nav class="nav-global">
+					<ul>
+            <li class="home"><a href="/bootcamp/index.html">Home</a></li>
+            <li class="bootcamp"><a href="/bootcamp/intro/what">Bootcamp Material</a></li>
+            <li class="about"><a href="/bootcamp/about.html">About Us</a></li>
+					</ul>
+				</nav>
+			</div><!-- unit-inner -->
+		</div><!-- unit-head -->
+	</header>
+	<div class="body" role="main">
+		<div class="unit-body">
+			<div class="unit-inner unit-body-inner">
+				<div class="entry-content">
+					
+            <div class="dropdown-nav">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Table of Contents<span class="caret"></span></a>
+                <ul style="" class="dropdown-menu" role="menu">
+                 
+                  <h4 id="setup-ref">Setup</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="intro-ref">Intro</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/projections">Projections</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/data-types">Common Data Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="data collection-ref">Data collection</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/consumable-services">Consumable Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/census">Census Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="data wrangling-ref">Data wrangling</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-wrangling">Data Formatting</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-cleaning">Data Hygiene</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/functions">Spatial Manipulation</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="data analysis-ref">Data analysis</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/netcdf">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="cartography-ref">Cartography</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="distribution-ref">Distribution</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/distribution">Distribution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="things to come-ref">Things to come</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/things%20to%20come/future">Future</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="applications-ref">Applications</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/qgis">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/panoply">Panoply</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="references-ref">References</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/references/vector-analysis" class="active">Vector Analysis</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div><!-- dropdown nav -->
+<article class="unit-article layout-post">
+	<div class="unit-inner unit-article-inner">
+		<div class="content">
+			<header id="content-header">
+        <div id="header-overlay">
+				<div class="unit-head">
+					<div class="unit-inner unit-head-inner">
+            <h1 class="h2 entry-title">Vector Analysis</h1> 
+            <!--            <h2 class="h2 entry-title"></h2> -->
+
+
+
+					</div><!-- unit-inner -->
+				</div><!-- unit-head -->
+      </div>
+			</header>
+
+    
+      <!--
+      <div class="col-md-2 sticky-left-nav">
+ 
+  <h4 id="setup-ref">Setup</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/projections">Projections</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/data-types">Common Data Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data collection-ref">Data collection</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/consumable-services">Consumable Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/census">Census Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data wrangling-ref">Data wrangling</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-wrangling">Data Formatting</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-cleaning">Data Hygiene</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/functions">Spatial Manipulation</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data analysis-ref">Data analysis</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/netcdf">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="cartography-ref">Cartography</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="distribution-ref">Distribution</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/distribution">Distribution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="things to come-ref">Things to come</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/things%20to%20come/future">Future</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="applications-ref">Applications</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/qgis">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/panoply">Panoply</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="references-ref">References</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/references/vector-analysis" class="active">Vector Analysis</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+
+
+    </div>
+    -->
+			<div class="bd">
+
+        <!-- sticky left navigation -->
+<div id="sticky-anchor" class="sticky-left-nav">
+  <div id="sticky" class="sticky-left-nav-inner">
+    <h3>Contents</h3>
+    
+   
+  <h4 id="setup-ref">Setup</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="intro-ref">Intro</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/what">Is Spatial Special?</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/projections">Projections</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/intro/data-types">Common Data Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data collection-ref">Data collection</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/consumable-services">Consumable Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/credible-sources">Credible Data Sources</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/census">Census Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20collection/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data wrangling-ref">Data wrangling</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-wrangling">Data Formatting</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/data-cleaning">Data Hygiene</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/functions">Spatial Manipulation</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20wrangling/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="data analysis-ref">Data analysis</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/case-study">Exercise</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/netcdf">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/data%20analysis/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="cartography-ref">Cartography</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/map-types">Map Types</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/cartography/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="distribution-ref">Distribution</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/distribution">Distribution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/distribution/exercise">Exercise</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="things to come-ref">Things to come</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/things%20to%20come/future">Future</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="applications-ref">Applications</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/qgis">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/applications/panoply">Panoply</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="references-ref">References</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/references/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/references/vector-analysis" class="active">Vector Analysis</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+
+  </div>  
+  <div class="clear"></div>
+</div> <!--left-nav -->
+
+
+
+<div class="entry-content content">
+  
+<h2 id="vector-analysis">Vector Analysis</h2>
+
+<h3 id="what-this-module-covers">What this module covers:</h3>
+
+<ul>
+  <li>Buffer polylines</li>
+  <li>Join census housing (home values) to census tracts (shapefile)</li>
+  <li>Intersecting vector layers</li>
+</ul>
+
+<h3 id="objective">Objective:</h3>
+
+<p>Quantify total home value at risk within landslide/mass-wasting and fautls.</p>
+
+<h3 id="data-collection-there-needs-to-be-instructionsquick-lesson-on-each-of-the-collection-sources">Data Collection: (there needs to be instructions/quick lesson on each of the collection sources)</h3>
+
+<ul>
+  <li><a href="http://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml" alt="Spatial Data Bootcamp: Download Census housing data - American FactFinder" target="_blank">Census housing data - American FactFinder</a></li>
+  <li><a href="https://www.census.gov/geo/maps-data/data/tiger.html" alt="Spatial Data Bootcamp: Download Census tract shapefile - TIGER data" target="_blank">Census tracts - TIGER Data</a></li>
+  <li><a href="http://earthquake.usgs.gov/hazards/qfaults" alt="Spatial Data Bootcamp: Download USGS quaternary faults" target="_blank">Quaternary faults - USGS </a></li>
+  <li><a href="http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx" alt="Spatial Data Bootcamp: Download seismogenic features" target="_blank">Washington seismogenic features - REQUIRES GDAL filegdb driver!</a></li>
+  <li><a href="http://nhd.usgs.gov/" alt="Spatial Data Bootcamp: Download USGS National Hydrography Dataset - Washington" target="_blank">Washington streams/rivers - USGS National Hydrography Dataset</a></li>
+</ul>
+
+<p>Here, the data are pre-wrangled (located on nathan’s server, for now):</p>
+
+<ul>
+  <li>faults_100k - [source]</li>
+  <li><a href="/bootcamp/assets/data/housing-data.zip">housing-data.zip</a></li>
+</ul>
+
+<h3 id="data-wrangling">Data Wrangling:</h3>
+
+<h4 id="wrangle-census-data">Wrangle Census Data:</h4>
+
+<p>Luckily, the Census data has already been wrangled. Census data can sometimes be tricky. </p>
+
+<h4 id="high-risk-rules">High-risk rules:</h4>
+
+<ul>
+  <li>within 100m of fault lines</li>
+  <li>within 50m of rivers/streams</li>
+  <li>within soft geologic areas </li>
+</ul>
+
+<ol>
+  <li>Open QGIS and configure project workspace.</li>
+  <li>Import data:
+    <ul>
+      <li>HINT: The project projection will default to the first layer that is added to the project (See lower right of image below: EPSG:2927).</li>
+      <li><em>Add Vector Layer: </em><img src="/bootcamp/assets/images/qgis/add-vector.png" alt="Spatial Data Bootcamp: Vector Analysis - add vector data" /><br /><strong>fault_100k.shp</strong><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-3.png" alt="Spatial Data Bootcamp: Vector Analysis - streams and faults" /></li>
+    </ul>
+  </li>
+  <li>Buffer fault lines to 100m:
+    <ul>
+      <li><em>Menu Bar &gt; Vector &gt; Geoprocessing Tools &gt; Buffer(s)</em></li>
+      <li>Configure inputs as follows:<br /><strong>Input vector layer: fault_100k<br />Buffer distance: 100<br />Output shapefile: fault_buffer_100m.shp<br />Add results to canvas: (Checked)<br />Click OK to perform analysis, Close to exit the tool</strong><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-4.png" alt="Spatial Data Bootcamp: Vector Analysis - buffer analysis" /></li>
+      <li><em>Zoom in to a buffer, close enough to see the width</em></li>
+      <li><em>Open the meaure tool</em> <img src="/bootcamp/assets/images/qgis/measure-tool.png" alt="Spatial Data Bootcamp: Vector Analysis - measure tool" /></li>
+      <li><em>Measure the width of the buffer.</em> Notice how the total width is only about 62 meters, or 100 feet. Current map units are determined by the CRS, in this case EPSG:2927 is in US feet and we need meters. Simply changing the CRS in Project Properties does not give us the correct results- this is still measured from EPSG:2927 US feet.<br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-measure-tool-2.png" alt="Spatial Data Bootcamp: Vector Analysis - measure buffer" /><br /><br /><strong>Important:</strong><br />There are two methods to perfoming a buffer analysis on our shapefile. The problem here is that our CRS is EPSG:2927 (in US feet) and the buffer distance is based on map units (still US feet). The two methods are: convert 100 meters to US feet and use this value in the buffer analysis while maintaining EPSG:2927 (in US feet); OR, reproject the layer thus creating a new file with a CRS in meters (correct map units), and then reprojecting back to EPSG:2927. We’ll go with the former.<br /><br /></li>
+    </ul>
+  </li>
+  <li>Now we need to perform the buffer analysis with the correct method. <em>Remove the incorrect buffer layer: fault_buffer_100m.shp</em></li>
+  <li><em>Add Vector Layer: </em><img src="/bootcamp/assets/images/qgis/add-vector.png" alt="Spatial Data Bootcamp: Vector Analysis - add vector" />
+    <ul>
+      <li><strong>NHD_MajorStreams.shp<br /></strong>
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-5.png" alt="Spatial Data Bootcamp: Vector Analysis - add vector data" /></li>
+    </ul>
+  </li>
+  <li>Open the buffer tool: 
+    <ul>
+      <li><em>Menu Bar &gt; Vector &gt; Geoprocessing Tools &gt; Buffer(s)</em></li>
+    </ul>
+  </li>
+  <li><em>Buffer fault_100k:</em>
+    <ul>
+      <li>Configure inputs as follow:<br /><strong>Input vector layer: fault_100k<br />Buffer distance: 328<br />Output shapefile: fault_buffer_100m.shp<br />Add result to canvas: (Checked)<br />Click OK to run (overwrite necessary), and CLOSE to exit tool</strong><br /><br /><strong>Reminder:</strong><br />Buffer distance = 100 meters * 3.28084 feet = 328.084 feet<br /> 1 meter = 3.28084 feet<br /><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-6.png" alt="Spatial Data Bootcamp: Vector Analysis - buffer vector" /></li>
+    </ul>
+  </li>
+  <li>Confirm 100 meter buffer on faults:
+    <ul>
+      <li>Open measure tool <img src="/bootcamp/assets/images/qgis/measure-tool.png" alt="Spatial Data Bootcamp: Vector Analysis - measure tool" /> and confirm 200 meter total width (100 meters * 2 = 200 meters)<br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-7.png" alt="Spatial Data Bootcamp: Vector Analysis - measure faults buffer" /></li>
+    </ul>
+  </li>
+  <li><em>Repeat buffer with NHD_MajorStreams.shp</em>
+    <ul>
+      <li>Configure inputs as follows:<br /><strong>Input vector layer: NHD_MajorStreams<br />Buffer distance: 164<br />Output shapefile: streams_buffer_50m.shp<br />Add result to canvas: (Checked)<br />Click OK to run, CLOSE to exit tool</strong><br /><br /><strong>Reminder:</strong><br />Buffer distance = 50 meters * 3.28084 feet = 164.052 feet<br /> 1 meter = 3.28084 feet<br /><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-8.png" alt="Spatial Data Bootcamp: Vector Analysis - buffer streams" /></li>
+    </ul>
+  </li>
+  <li>Confirm 50 meter buffer on streams.</li>
+  <li>Import Census housing data (wa-housing-data.csv):
+    <ul>
+      <li>Notice: housing-data.csv has already been wrangled.</li>
+      <li>Add Delimited Text Layer <img src="/bootcamp/assets/images/qgis/add-csv.png" alt="Spatial Data Bootcamp: Vector Analysis - add Census data" /> or <em>Menu Bar &gt; Layer &gt; Add Delimited Text Layer</em></li>
+      <li>Configure inputs as follows:<br /><strong>File Name: housing-data.csv<br />File Format: CSV<br />First record has field names: (Checked)<br />No geometry (attribute only table): (Selected)<br />OK to add</strong> 
+ <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-9.png" alt="Spatial Data Bootcamp: Vector Analysis - add Census data" /></li>
+    </ul>
+  </li>
+  <li>View Census housing-data.csv:
+    <ul>
+      <li><em>Right-click housing-data (in layer list) &gt; Open attribute table</em></li>
+    </ul>
+  </li>
+  <li>Import Washington Census tracts (tl_2014__53_tract.shp) <img src="/bootcamp/assets/images/qgis/add-vector.png" alt="Spatial Data Bootcamp: Vector Analysis - add Census tracts" /><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-10.png" alt="Spatial Data Bootcamp: Vector Analysis - add Census tracts" /><br /><br /><strong>Important:</strong> Did you check the projection of the Census tracts shapefile? Be sure your shapefile CRS is EPSG:2927. <br /><br />‘on the fly’ projection is selected</li>
+  <li>Save Census tract (tl_2014_53_tract.shp) with ESPG:2927:
+    <ul>
+      <li><em>Right-click tl_2014_53_tract.shp (layer list) &gt; Save As</em></li>
+      <li>Configure as follows: <strong>ESRI Shapefile with EPSG:2927, Output filename: wa-tracts.shp, Add saved file to map: (Checked)</strong></li>
+    </ul>
+  </li>
+  <li><em>Remove current tl_2014_53_tract.shp</em><br />
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-11.png" alt="Spatial Data Bootcamp: Vector Analysis - workspace" /></li>
+  <li>Open wa-tracts attribute table and housing-data to find the key that will be used to join the tables. HINT: It’s GEOID and GEO.id2.<br /><br /><strong>notes:</strong> discuss field types, e.g. cannot compare a string to a number. – add image –<br /><br /></li>
+  <li>Join Census housing data (housing-data.csv) to Census tracts (wa-tracts.sho):
+    <ul>
+      <li>Open Processing Toolbox (<em>Menu Bar &gt; Processing &gt; Toolbox</em>), search for “join attributes table”, then double-click “Join attributes table”<br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-12.png" alt="Spatial Data Bootcamp: Vector Analysis - join attribute table" /></li>
+      <li>Configure Join attributes table as follows:<br /><strong>Input layer: wa-tracts<br />Input layer 2: housing-data<br />Table field: GEOID<br />Table field 2: GEO.id2<br />Output layer: (Save to file..) tracts-housing-data.shp</strong><br /><br /><strong>IMPORTANT:</strong> The concept behind this join is tabular (non-locational-data) joined to spatial data, not spatial data to tabular data. So, you must have spatial data (wa-tracts.shp) as the primary input and tabular data (housing-data.csv) as the secondary input. Notice in the <strong>Joing attributes table</strong> inputs below.<br /><img src="/bootcamp/assets/images/vector-analysis/vector-analysis-13.png" alt="Spatial Data Bootcamp: Vector Analysis - join Census tracts and housing data" /><br /><br /> <strong>NOTICE:</strong> “Layers do not all use the same CRS. This can cause unexpencted results.” Remember, the housing-data.csv does not have any locational data associated with it. Click Yes, to continue.<br /><br /><img src="/bootcamp/assets/images/vector-analysis/vector-analysis-14.png" alt="Spatial Data Bootcamp: Vector Analysis - join error" /></li>
+    </ul>
+  </li>
+  <li>Confirm output: housing data joined to tracts. Output is named “Output layer”, rename to “tracts_housing_data.shp” (<em>right-click layer &gt; Rename</em>). Hover over the layer in the layer list to view the source path.
+ <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-15.png" alt="Spatial Data Bootcamp: Vector Analysis - tracts and housing data joined" /></li>
+  <li>Normalize housing data - tract house count X median tract house value = total tract home value: (you’ll need point data to have a more accurate analysis)
+    <ul>
+      <li><em>Right-click tracts_housing_data &gt; Open Attribute Table &gt; Toggle editing mode &gt; Open field calculator</em></li>
+      <li>If you had downloaded the original ACS .csv with annotations then you would be able to easily find what the column headers mean. Or, you could locate the ACS metadata. But we have provided the difinitions below:<br />HC01_VC118 = Total Housing Units (Owner-occupied)<br />HC01_VC127 = Estimated Median Housing Unit (Owner-occupied)<br />We would have calculated total housing * median housing (total) but the ACS does not provide these metrics.</li>
+      <li>Configure inputs as follows:<br /><img src="/bootcamp/assets/images/vector-analysis/vector-analysis-16.png" alt="Spatial Data Bootcamp: Vector Analysis - normalize data" /></li>
+      <li>View your ouputs. Notice there are some NULL values:<br /><img src="/bootcamp/assets/images/vector-analysis/vector-analysis-17.png" alt="Spatial Data Bootcamp: Vector Analysis - noramlize data" /></li>
+    </ul>
+  </li>
+  <li>intersect buffered-merged-joined data with reclassified-rasterized geology layer
+    <ul>
+      <li>intersect buffered faults and streams:<br />
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-18.png" alt="Spatial Data Bootcamp: Vector Analysis - intersect buffered streams and faults" />
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-19.png" alt="Spatial Data Bootcamp: Vector Analysis - intersect buffered streams and faults" /></li>
+    </ul>
+  </li>
+  <li>calculate stream_fault_intersection shape area:
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-20.png" alt="Spatial Data Bootcamp: Vector Analysis - calculate shape area" />
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-21.png" alt="Spatial Data Bootcamp: Vector Analysis - calculate shape area" /></li>
+  <li>calculate tracts_housing shape area:
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-22.png" alt="Spatial Data Bootcamp: Vector Analysis - calculate shape area" /></li>
+  <li>spatial join stream_fault_intersection + tracts_housing: (this one takes a while)
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-23.png" alt="Spatial Data Bootcamp: Vector Analysis - spatially join stream_fault_intersection to wa-tracts" /></li>
+  <li>data will be used in Raster Analysis</li>
+</ol>
+
+
+
+          <!--
+					<div class="meta">
+						<p class="date-publish">
+							Published: 
+							<date class="date-pub" title="2009-11-01T00:00:00-07:00" datetime="2009-11-01T00:00:00-07:00" pubdate>
+							<span class="month"><abbr>November</abbr></span>
+							<span class="day">01</span>
+							<span class="year">2009</span>
+							</date>
+						</p>
+						<ul class="list-category list-linear">
+							<li class="list-head">category: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/categories.html#references-ref">
+    		references <span>5</span>
+    	</a></li>
+    
+  
+
+
+						</ul>
+						<ul class="list-tag list-linear">
+							<li class="list-head">tags: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/tags.html#vector analysis-ref">vector analysis <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#census data-ref">census data <span>1</span></a></li>
+    
+  
+
+
+
+						</ul>
+					</div>
+          meta -->
+
+
+				</div><!-- entry-content -->
+				<div class="misc-content">
+					<div class="social">
+						<ul class="list-linear">
+							<li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="" data-lang="en">Tweet</a></div></li>
+							<li><div class="twitter-follow"><a href="https://twitter.com/" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
+						</ul>
+					</div>
+					
+					
+				</div><!-- misc-content -->
+				
+			</div><!-- bd -->
+			<footer class="unit-foot">
+				<div class="unit-inner unit-foot-inner">
+					<nav class="pagination">
+						<ul>
+							
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/references/case-study" title="View Landslide Susceptibility">&laquo; Landslide Susceptibility</a></li>
+							
+							
+							<li class="pipe"> | </li>
+							
+							
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/applications/qgis" title="View QGIS">QGIS &raquo;</a></li>
+							
+						</ul>
+					</nav>
+					<p class="gotop">
+						<a href="#page">Back to Top</a>
+					</p>
+				</div>
+			</footer>
+
+		</div><!-- content -->
+	</div><!-- unit-inner -->
+</article>
+
+
+				</div>
+			</div><!-- unit-inner -->
+		</div><!-- unit-body -->
+	</div><!-- body -->
+	<footer class="the-footer">
+		<div class="unit-foot">
+			<div class="unit-inner unit-foot-inner">
+				<div class="misc vcard">
+					<h4>about</h4>
+					<ul>
+						<li class="contact"><address><span class="author fn n">Nathan Casler</span> - <span class="fn email">ncasler@email.arizona.edu</span></address></li>
+            <!--						<li class="github"><a href="http://github.com//" rel="me">github.com/</a></li>
+						<li class="twitter"><a href="http://twitter.com//" rel="me">twitter.com/</a></li>
+            <li class="rss"><a href="http://feeds.feedburner.com/">Subscribe to RSS Feed</a></li>-->
+					</ul>
+				</div><!-- misc -->
+				<p class="licence">
+        <!--					Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>-->
+					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+				</p>
+			</div><!-- unit-foot-inner -->
+		</div><!-- unit-foot -->
+	</footer>
+</div><!-- page -->
+</div><!-- page-container -->
+<script>
+	(function(d, s) {
+		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.src = url; js.id = id;
+		fjs.parentNode.insertBefore(js, fjs);
+		};
+	load('//platform.twitter.com/widgets.js', 'tweetjs');
+	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/references/vector-analysis" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	}(document, 'script'));
+</script>
+<script>
+/*! A fix for the iOS orientationchange zoom bug.Script by @scottjehl, rebound by @wilto. MIT License.*/
+(function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
+</script>
+
+  
+</body>
+</html>
+
+

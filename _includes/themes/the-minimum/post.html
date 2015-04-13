@@ -21,6 +21,7 @@
 	<div class="unit-inner unit-article-inner">
 		<div class="content">
 			<header id="content-header">
+        <div id="header-overlay">
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
             <h1 class="h2 entry-title">{{ page.title }}</h1> 
@@ -30,6 +31,7 @@
 
 					</div><!-- unit-inner -->
 				</div><!-- unit-head -->
+      </div>
 			</header>
 
     
@@ -110,13 +112,13 @@
 					<nav class="pagination">
 						<ul>
 							{% if page.previous %}
-              <li class="prev"><a class="internal" rel="prev"  href="{{site.baseurl}}{{ page.previous.url }}" title="View {{ page.previous.title }}">&laquo; {{ page.previous.title }}</a></li>
+              <li class="prev"><a class="internal" rel="prev"  href="{{site.baseurl}}{{ page.next.url }}" title="View {{ page.next.title }}">&laquo; {{ page.next.title }}</a></li>
 							{% endif %}
 							{% if page.previous and page.next %}
 							<li class="pipe"> | </li>
 							{% endif %}
 							{% if page.next %}
-              <li class="next"><a class="internal" rel="next"  href="{{site.baseurl}}{{ page.next.url }}" title="View {{ page.next.title }}">{{ page.next.title }} &raquo;</a></li>
+              <li class="next"><a class="internal" rel="next"  href="{{site.baseurl}}{{ page.previous.url }}" title="View {{ page.previous.title }}">{{ page.previous.title }} &raquo;</a></li>
 							{% endif %}
 						</ul>
 					</nav>

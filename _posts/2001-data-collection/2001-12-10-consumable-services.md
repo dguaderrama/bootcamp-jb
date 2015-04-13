@@ -39,6 +39,7 @@ A few examples of these applications are:
   + [Integrated Data Viewer](http://unidata.usr.edu/software/idv)
   + [GrADS](http://www.iges.org/grads)
 
+----
 
 [^1]: http://www.gadm.org 
 [^2]: http://www.census.gov/geo/maps-data/data/tiger.html

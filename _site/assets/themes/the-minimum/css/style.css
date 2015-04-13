@@ -6,10 +6,29 @@
 
 @import "helper.css";
 
+@font-face {
+  font-family: 'Chunk';
+  src: url('/bootcamp/assets/fonts/Chunk/Chunkfive-webfont.eot'); /* IE9 Compat Modes */
+  src: url('/bootcamp/assets/fonts/Chunk/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/bootcamp/assets/fonts/Chunk/Chunkfive-webfont.woff') format('woff'), /* Modern Browsers */
+       url('/bootcamp/assets/fonts/Chunk/Chunkfive-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'junctionregularRegular';
+  src: url('/bootcamp/assets/themes/the-minimum/font/Junction-webfont.eot');
+  src: url('/bootcamp/assets/themes/the-minimum/font/Junction-webfont.eot?#iefix') format('embedded-opentype'), url('/bootcamp/assets/themes/the-minimum/font/Junction-webfont.woff') format('woff'), url('/bootcamp/assets/themes/the-minimum/font/Junction-webfont.ttf') format('truetype'), url('/bootcamp/assets/themes/the-minimum/font/Junction-webfont.svg#junctionregularRegular') format('svg');
+  font-weight: normal !important;
+  font-style: normal;
+}
+
 body {
-  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, "MS PGothic", Osaka, Sans-Serif;
+  font-family: 'Libre Baskerville', serif !important;
   font-size: 1em;
   line-height: 1.625em;
+  background: url(/bootcamp/assets/images/bg-repeat-2.png) repeat;
 }
 
 /* iframe classes */
@@ -27,12 +46,29 @@ p, a {
 }
 /* background images */
 /* !important allow you to keep a standard color background for .unit-article header when the page(class) does not have a background image */
-.qgis {
-  background: url(/bootcamp/assets/images/bg-1.png) !important;
+
+#content-header {
+ /* background: url(/bootcamp/assets/images/Earth_orthographic_trans.jpg)  repeat !important;*/
   background-size: 100% !important;
-  background-repeat: no-repeat !important;
+  
+  background: url(/bootcamp/assets/images/Earth_orthographic.jpg)  repeat !important;
 }
 
+#content-header div div .entry-title {
+  color: white;
+  width: auto;
+  font-size: 5em;
+  text-shadow: 3px 3px rgba(0,0,0,0.5);
+}
+
+#header-overlay {
+  height: 100%;
+  display: block;
+  /*background-color: rgba(108,56,0,0.2);*/
+ /* z-index: -10;*/ 
+  /*background: url(/bootcamp/assets/images/Earth_orthographic.jpg)  repeat !important;*/
+  background-color: rgba(3,17,83,0.2);
+}
 /* navbar-nav */
 .navbar-nav {
   background-color: rgba(0,0,0,0.6);
@@ -50,52 +86,75 @@ p, a {
   top: 20px;
   z-index: 10;
   border-radius: 0 0 0.5em 0.5em;
-  background-color: white;
+  /*background-color: white;*/
 }
+.stick h3 {
+  margin-top: 0px !important;
+}
+
 /* sticky.nav -- jquery -- also, uncomment/comment-out this to give the body a min-height so the footer doesn't cover the left nav */
 .content {
 /* min-height: 740px; */
 }
 #sticky ul {
   display: none;
-  padding: 0px !important; 
+  padding: 0px !important;
+  
 }
 #sticky {
-  box-shadow: 
+/*  box-shadow: 
     0 5px 15px 1px rgba(0, 0, 0, 0.6), 
-    0 0 200px 1px rgba(255, 255, 255, 0.5);
+    0 0 200px 1px rgba(255, 255, 255, 0.5);*/
 }
 #sticky h3 {
-  padding: 10px 0px 5px 10px;
+  padding: 30px 15px 20px 15px;
+  font-size: 2.5em;
+  text-align: center;
+  color: white;
+  border-bottom: 3px solid #D19300;
+
 }
 #sticky h4 {
-  background: #003040;
-  background: linear-gradient(#003040, #002525);
+  /*background: #036382;*/
+ /* background: rgba(9,33,142,0.8);*/
+  /*background: linear-gradient(#09218E, #020F4A);*/ 
+  border-bottom: 1px solid #D19300;
   margin: 0px !important;
   padding: 10px 0px 10px 20px !important;
   width: 200px;
   color: white;
 }
 #sticky h4:hover {
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+    color: #D19300;
+    /*color: #09218E;*/
+    /*text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);*/
+    background: rgba(9,33,142,0.8);
   }
 #sticky ul li a {
   display: block;
   padding: 5px 0px 5px 35px;
-  background: #004050;
+  /*background: #09218E;*/
+  background: rgba(209,147,0,0.9);
   color: white;
   transition: all 0.15s;
 }
 #sticky ul li a:hover {
-  background: #003545 !important;
-  border-left: 5px solid lightgreen !important;
+  /*background: #09218E !important;*/
+  color: #09218E !important;
+  border-left: 5px solid #09218E !important;
 }
 #sticky li.active a {
   display: block;
 }
 .sticky-left-nav { 
-  margin-left: 12%;
+  margin-left: 0%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(3,17,83,0.9);
+  position: fixed;
 }
+
+
 .sticky-left-nav {
 /*  width: 12.5%; */
   float: left;
@@ -111,7 +170,7 @@ p, a {
 }
 .sticky-left-nav a:hover {
   text-decoration: underline !important;
-  color: #bada55 !important;
+  color: #D19300 !important;
 }
 
 /* dropdown nav */
@@ -131,6 +190,11 @@ p, a {
 }
 .unit-article .entry-content {
   width: 55%;
+  padding: 20px 20px;
+  background-color: rgba(255,255,255,0.8);
+  -webkit-box-shadow: 0px 0px 105px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 105px -7px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 105px -7px rgba(0,0,0,0.75);
 }
 .dropdown-nav li {
   list-style-type: none;
@@ -145,11 +209,15 @@ p, a {
   padding-right: 25px !important;
 }
 .dropdown-menu ul {
-  border-bottom: 1px solid green;
+  border-bottom: 1px solid #D19300;
   margin-bottom: 3px;
   padding-bottom: 15px;
 }
 /* header */
+.the-header {
+  /*background-color: rgba(21,11,0,1);*/
+  background-color: rgba(0,3,16,1);
+}
 .the-header .logo {
   float: left;
 }
@@ -167,6 +235,7 @@ p, a {
   line-height: normal;
   letter-spacing: normal;
   margin-right: 16px;
+  color: white !important;
   word-spacing: normal;
   vertical-align: middle;
 }
@@ -178,6 +247,9 @@ p, a {
   display: inline;
 }
 
+.nav-global li a {
+  color: white !important;
+}
 /* entry content */
 
 blockquote a {
@@ -189,7 +261,7 @@ blockquote a {
 .unit-article .entry-content {
   margin-left: 32%;
 }
-.unit-inner .entry-title {
+.unit-head-inner {
   width: 55%;
   margin-left: auto;
   margin-right: auto;
@@ -201,7 +273,8 @@ blockquote a {
 }
 .misc-content {
   min-height: 40px;
-  margin-right: 5%;
+  margin-right: 3%;
+  margin-top: 10px;
 }
 .misc-content .social {
   float: right;
@@ -229,15 +302,22 @@ blockquote a {
 
 /* the-minimum template styling */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: junctionregularRegular, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, "MS PGothic", Osaka, Sans-Serif;
+h1,h2 { 
+  font-family: 'Chunk', sans-serif !important;
   font-weight: bold;
 }
+
+h3, h4 {
+  font-family: 'Chunk', sans-serif !important;
+  font-weight: bold;
+}
+
+h5,
+h6 {
+  font-family: 'Libre Baskerville', serif !important;;
+  font-weight: bold;
+}
+
 h1, .h1 {
   font-size: 42px;
   line-height: 52px;
@@ -315,13 +395,6 @@ No styleguide reference.
 @green:     #859900;
 
 */
-@font-face {
-  font-family: 'junctionregularRegular';
-  src: url('/assets/themes/the-minimum/font/Junction-webfont.eot');
-  src: url('/assets/themes/the-minimum/font/Junction-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/themes/the-minimum/font/Junction-webfont.woff') format('woff'), url('/assets/themes/the-minimum/font/Junction-webfont.ttf') format('truetype'), url('/assets/themes/the-minimum/font/Junction-webfont.svg#junctionregularRegular') format('svg');
-  font-weight: normal !important;
-  font-style: normal;
-}
 /*
 LESS helper
 */
@@ -393,11 +466,16 @@ pre {
 /* HEADER
 --------------------------------------------------------------------------------- */
 .the-header .logo {
-  font-family: junctionregularRegular, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, "MS PGothic", Osaka, Sans-Serif;
+  font-family: 'Chunk', junctionregularRegular, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, "MS PGothic", Osaka, Sans-Serif;
   margin: 0;
+  font-style: bold;
+  text-color: white !important; 
+  text-shadow: 2px 2px rgba(0,0,0,0.2);
 }
 .the-header .logo a:visited {
-  color: #2d2d2d;
+  color: white;
+  /*color: #2d2d2d;*/
+
 }
 .the-header .nav-global {
   text-transform: uppercase;
@@ -406,17 +484,32 @@ pre {
   position: relative;
   top: 2px;
 }
+/* edit header
+ * add styling to header - replace class (.projections)
+ */
+.projections div div .entry-title {
+/*
+  enter styles here
+*/
+}
+
+#header-overlay {
+  padding-top: 13em;
+  padding-bottom: 5em;
+}
 /* MAIN
 --------------------------------------------------------------------------------- */
+/* this is for the header with background images */
 .unit-article header {
   background: url('/assets/themes/the-minimum/skin/100-90-5-monochrome.png');
   background-repeat: repeat;
   background-position: 0 0;
-  background-color: #BADA55;
-  margin-bottom: 1.625em;
-  padding-top: 5em;
-  padding-bottom: 5em;
+  background-color: #00BFFF;
+  /*background-color: #BADA55;*/
+  /*padding-top: 13em;*/
+  /*padding-bottom: 5em;*/
 }
+
 .unit-article header h1 {
   color: #2d2d2d;
   margin-top: 0;
@@ -461,13 +554,13 @@ pre {
   margin-top: 0;
 }
 .unit-article a:link {
-  border-bottom: 1px dotted #99cc99;
+  border-bottom: 1px dotted #D19300;
 }
 .unit-article a:visited {
-  border-bottom: 1px dotted #77bb77;
+  border-bottom: 1px dotted #D19300;
 }
 .unit-article a:hover {
-  border-bottom: 1px dotted #bbddbb;
+  border-bottom: 1px dotted #D19300;
 }
 .unit-article blockquote {
   border-left: 0.6em solid rgba(21, 25, 25, 0.4);
@@ -722,8 +815,8 @@ pre {
 }
 .the-header .unit-inner {
   width: 75%;
-  margin-top: 1.625em;
-  margin-bottom: 1.625em;
+  padding-top: 1.625em;
+  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -812,6 +905,12 @@ pre {
   .dropdown {
     width: 100%;
   }
+}
+
+.screen-shot {
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.75);
 }
 
 /*

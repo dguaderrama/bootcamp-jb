@@ -29,6 +29,8 @@ These methods can be performed using a variety of tools depending on the specifi
 
 <br>
 
+----
+
 ## Exercise
 
 1. Set project projection to EPSG:2927<br><br> 

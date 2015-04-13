@@ -31,6 +31,39 @@ $(document).ready(function() {
         $(this).next().slideDown();
       }
   });
+
+
+ /* $(function($) {
+  function showMenu() {
+    $(this).next().slideDown(500, "swing");
+  }
+  function hideMenu() {
+    $("#sticky ul").slideUp(500, "swing");
+  }
+
+  $("#sticky h4").hoverIntent({
+    over: showMenu,
+    timeout: 500,
+    selector: this,
+    out: hideMenu
+  });
+ /* 
+  $("#sticky h4 ul").hoverIntent({
+    over: showMenu,
+    timeout: 500,
+    selector: this,
+    out: hideMenu
+  });
+  })*/
+
+ /* $("#sticky h4").hover(function() {
+
+    $("#sticky ul").slideUp();
+    if(!$(this).next().is("visible"))
+      {
+        $(this).next().slideDown();
+      }
+  });*/
 });
 
 
