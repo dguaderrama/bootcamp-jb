@@ -39,7 +39,6 @@ tags: ['census', 'data collection', 'fact finder']
 ![Spatial Data Bootcamp: Download Census data]({{site.baseurl}}{{ASSET_PATH}}/images/vector-census/vector-census-1.png)
 
 * In the *ADVANCED SEARCH* window. Search - Use options on the left (topics, geographics, ...) to narrow your search results.<br><br>
-
 {: .screen-shot}
 ![Spatial Data Bootcamp: Download Census data]({{site.baseurl}}{{ASSET_PATH}}/images/vector-census/vector-census-2.png)
 
@@ -66,46 +65,34 @@ tags: ['census', 'data collection', 'fact finder']
 
 * Check row: *B25001 HOUSING UNITS 2013 ACS 5-year estimates*<br>
 * Click *Download* at the bottom of the table<br>
-
-{:. .screen-shot}
+  
 ![Spatial Data Bootcamp: Download Census data]({{site.baseurl}}{{ASSET_PATH}}/images/vector-census/vector-census-5.png)
 
 * Click *OK* to create a zip file containing your selected products.<br>
-
-{: .screen-shot}
+  
 ![Spatial Data Bootcamp: Download Census data]({{site.baseurl}}{{ASSET_PATH}}/images/vector-census/vector-census-6.png)
 
 * Click *DOWNLOAD* to download zipped files<br>
-
-{: .screen-shot}
 ![Spatial Data Bootcamp: Vector & Census data]({{site.baseurl}}{{ASSET_PATH}}/images/vector-census/vector-census-7.png)
 
 *Note: Do not clear all selections.*
 
 * Download *Washington Value of Homes*:<br>
 If you did not clear your selections from the previous steps then continue on, else seet **Download Washington Housing Units** above.<br>
-<ol>
-  <li> Remove <b>Housing Units</b> from selection<br>
-    <img src="{{site.baseurl}}/{{ASSET_PATH}}/images/vector-census/vector-census-8.png" class="screen-shot"/>
-  </li><br>
-  <li> Click <b>Topics</b> on the left-hand menu and navigate to <b>Value of Home</b>:<br><b>Housing > Financial Characteristic > Value of Home (click to select) > Click CLOSE (top right)</b><br>
-    <img src="{{site.baseurl}}/{{ASSET_PATH}}/images/vector-census/vector-census-9.png" class="screen-shot"/>
-  <li> Check row: <b>B25077 MEDIAN VALUE (DOLLARS) 2013 ACS 5-year estimates</b>
-    <img src="{{site.baseurl}}/{{ASSET_PATH}}/images/vector-census/vector-census-10.png" class="screen-shot"/>
-  </li><br>
-  <li>Click <b>Download</b> (bottom of table) to download zipped files<br>
-    <img src="{{site.baseurl}}/{{ASSET_PATH}}/images/vector-census/vector-census-11.png" class="screen-shot" />
-  </li><br>
-  <li> Click <b>OK</b> to create a zip file containing your selected products<br>
-    <img src="{{site.baseurl}}/{{ASSET_PATH}}/images/vector-census/vector-census-12.png" class="screen-shot" />
-  </li><br>
-  <li> Click <b>Download</b> to save the file to your computer. This zip file will be named the same as the one above, your browser will append (1).<br>
-    <img src="{{site.baseurl}}/{{ASSET_PATH}}/images/vector-census/vector-census-13.png" class="screen-shot" />
-  </li>
-</ol>
-  
-###  Download TIGER Census Tracts
+  1. Remove *Housing Units* from selection<br>
+  ![Spatial Data Bootcamp: Download Census data]({{site.baseurl}}{{ASSET_PATH}}/images/vector-census/vector-census-8.png)
+  2. Click *Topics* on the left-hand menu and navigate to *Value of Home*:<br>*Housing > Financial Characteristic > Value of Home (click to select) > Click CLOSE (top right)*<br>
+  ![Spatial Data Bootcamp: Download Census data]({{site.baseurl}}{{ASSET_PATH}}/images/vector-census/vector-census-9.png)
+  3. Check row: *B25077 MEDIAN VALUE (DOLLARS) 2013 ACS 5-year estimates*
+  ![Spatial Data Bootcamp: Download Census data]({{site.baseurl}}{{ASSET_PATH}}/images/vector-census/vector-census-10.png)
+  4. Click *Download* (bottom of table) to download zipped files<br>
+  ![Spatial Data Bootcamp: Download Census data]({{site.baseurl}}{{ASSET_PATH}}/images/vector-census/vector-census-11.png)
+  5. Click *OK* to create a zip file containing your selected products<br>
+  ![Spatial Data Bootcamp: Download Census data]({{site.baseurl}}{{ASSET_PATH}}/images/vector-census/vector-census-12.png)
+  6. Click *Download* to save the file to your computer. This zip file will be named the same as the one above, your browser will append (1).<br>
+  ![Spatial Data Bootcamp: Download Census data]({{site.baseurl}}{{ASSET_PATH}}/images/vector-census/vector-census-13.png)
 
+###  Download TIGER Census Tracts
 
  1. Open the <a href="https://www.census.gov/geo/maps-data/data/tiger.html" alt="Spatial Data Bootcamp: Download Census tract shapefile - TIGER data" target="_blank">Census TIGER data site</a> and click on TIGER/Line Shapefiles from the product table.<br>
   ![Spatial Data Bootcamp: Download TIGER data]({{site.baseurl}}{{ASSET_PATH}}/images/vector-tiger/vector-tiger-1.png)

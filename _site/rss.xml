@@ -5,8 +5,8 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-04-10T14:46:11-07:00</lastBuildDate>
-        <pubDate>2015-04-10T14:46:11-07:00</pubDate>
+        <lastBuildDate>2015-04-13T17:27:22-07:00</lastBuildDate>
+        <pubDate>2015-04-13T17:27:22-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -2140,17 +2140,16 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
                 <description>
 &lt;h2 id=&quot;understanding-web-mapping&quot;&gt;Understanding web mapping&lt;/h2&gt;
 
-&lt;p&gt;A map on the Internet shouldn’t be just a picture. There is potential for interaction,
-animation, 3D, and more! Even better, the Internet can allowus to share our maps and
-spatial data more effectively than ever.&lt;/p&gt;
+&lt;p&gt;A map on the Internet shouldn’t be a static picture. There is potential for interaction, animation, and 3D! Even better, the Internet can allow us to share our maps and spatial data more effectively.&lt;/p&gt;
 
-&lt;p&gt;How does a map work on the web?&lt;/p&gt;
+&lt;p&gt;We’ve gone through the steps of putting our data on a map. We have styled it and
+created a legend. We split our map into tiles to make it easier and faster to
+display online.&lt;/p&gt;
 
-&lt;p&gt;Anatomy of a web map
-Zooming
-Tiling
-Interaction
-Sharing&lt;/p&gt;
+&lt;p&gt;Now we will use Javascript, the programming language that allows us
+to add interaction to websites. Various frameworks exist that help
+people use Javascript for web mapping. A framework is simply a
+library or tool that facilitates the use of the Javascript language.&lt;/p&gt;
 
 &lt;h2 id=&quot;web-map-frameworks&quot;&gt;Web map frameworks&lt;/h2&gt;
 
@@ -2206,7 +2205,7 @@ Sharing&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://leaflet-extras.github.io/leaflet-providers/preview/&quot;&gt;Here’s a list of tile map service (TMS) providers&lt;/a&gt;. Nearly all TMS providers are free for &lt;em&gt;personal use&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Mapbox Suite is ideal for creating custom basemaps.&lt;/p&gt;
+&lt;p&gt;Mapbox Studio is ideal for creating custom basemaps.&lt;/p&gt;
 
 &lt;p&gt;A basemap is what your spatial data layers are set on top of.&lt;/p&gt;
 
@@ -2347,7 +2346,9 @@ color is a different rock unit.&lt;/p&gt;
 
 &lt;p&gt;Tools like &lt;a href=&quot;http://paletton.com/&quot;&gt;paletton.com&lt;/a&gt; are simply a color wheel. Paletton.com has options such as monochromatic, adjacent colors, triad, and tetrad that pick colors based on a single color selection. These are meant for web designing but can be useful for maps, as well.&lt;/p&gt;
 
-&lt;!--&lt;a href=&quot;http://paletton.com&quot; target=&quot;_blank&quot; alt=&quot;Spatial Data Bootcamp: Paletton.com color wheel&quot;&gt;![Spatial Data Bootcamp: Paletton.com color wheel](/bootcamp/assets/images/paletton.jpg)&lt;/a&gt;--&gt;
+&lt;p&gt;&lt;a href=&quot;http://paletton.com&quot; target=&quot;_blank&quot; alt=&quot;Spatial Data Bootcamp: Paletton.com color wheel&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/paletton.jpg&quot; alt=&quot;Spatial Data Bootcamp: Paletton.com color wheel&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--&quot;_&quot;---&gt;
 
 &lt;h2 id=&quot;typography&quot;&gt;Typography&lt;/h2&gt;
 
@@ -2386,7 +2387,7 @@ This speeds up the process of displaying maps on the web.&lt;/p&gt;
 
 &lt;p&gt;After installing TileMill, the first thing you see when you open it is the projects page.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/tilemill/tilemillopen.png&quot; alt=&quot;TileMill first view&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/tilemill/tilemill_open.png&quot; alt=&quot;TileMill first view&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Lets create a new project to play around with style. Click on ‘New Project’ in the top left corner,
 give it a name (any name!) and keep the ‘Include World layer and styles’ checked.&lt;/p&gt;
@@ -4682,10 +4683,11 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 
 &lt;p class=&quot;screen-shot&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-1.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/p&gt;
 
-&lt;ul class=&quot;screen-shot&quot;&gt;
+&lt;ul&gt;
   &lt;li&gt;In the &lt;em&gt;ADVANCED SEARCH&lt;/em&gt; window. Search - Use options on the left (topics, geographics, …) to narrow your search results.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-2.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;screen-shot&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-2.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;download-washington-housing-unitsbr&quot;&gt;Download &lt;em&gt;Washington Housing Units&lt;/em&gt;&lt;br /&gt;&lt;/h4&gt;
 
@@ -4722,82 +4724,87 @@ If you are using Mac or Linux you can extract the files in the terminal with the
   &lt;li&gt;Click &lt;em&gt;Download&lt;/em&gt; at the bottom of the table&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-5.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;screen-shot&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-5.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Click &lt;em&gt;OK&lt;/em&gt; to create a zip file containing your selected products.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-6.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;screen-shot&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-6.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Click &lt;em&gt;DOWNLOAD&lt;/em&gt; to download zipped files&lt;br /&gt;
-&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-7.png&quot; alt=&quot;Spatial Data Bootcamp: Vector &amp;amp; Census data&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Click &lt;em&gt;DOWNLOAD&lt;/em&gt; to download zipped files&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p class=&quot;screen-shot&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-7.png&quot; alt=&quot;Spatial Data Bootcamp: Vector &amp;amp; Census data&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Note: Do not clear all selections.&lt;/em&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Download &lt;em&gt;Washington Value of Homes&lt;/em&gt;:&lt;br /&gt;
-If you did not clear your selections from the previous steps then continue on, else seet &lt;strong&gt;Download Washington Housing Units&lt;/strong&gt; above.&lt;br /&gt;
-    &lt;ol&gt;
-      &lt;li&gt;Remove &lt;em&gt;Housing Units&lt;/em&gt; from selection&lt;br /&gt;
-&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-8.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;Click &lt;em&gt;Topics&lt;/em&gt; on the left-hand menu and navigate to &lt;em&gt;Value of Home&lt;/em&gt;:&lt;br /&gt;&lt;em&gt;Housing &amp;gt; Financial Characteristic &amp;gt; Value of Home (click to select) &amp;gt; Click CLOSE (top right)&lt;/em&gt;&lt;br /&gt;
-&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-9.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;Check row: &lt;em&gt;B25077 MEDIAN VALUE (DOLLARS) 2013 ACS 5-year estimates&lt;/em&gt;
-&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-10.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;Click &lt;em&gt;Download&lt;/em&gt; (bottom of table) to download zipped files&lt;br /&gt;
-&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-11.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;Click &lt;em&gt;OK&lt;/em&gt; to create a zip file containing your selected products&lt;br /&gt;
-&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-12.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;Click &lt;em&gt;Download&lt;/em&gt; to save the file to your computer. This zip file will be named the same as the one above, your browser will append (1).&lt;br /&gt;
-&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-13.png&quot; alt=&quot;Spatial Data Bootcamp: Download Census data&quot; /&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
+If you did not clear your selections from the previous steps then continue on, else seet &lt;strong&gt;Download Washington Housing Units&lt;/strong&gt; above.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h3 id=&quot;download-tiger-census-tracts&quot;&gt;Download TIGER Census Tracts&lt;/h3&gt;
-
 &lt;ol&gt;
-  &lt;li&gt;Open the &lt;a href=&quot;https://www.census.gov/geo/maps-data/data/tiger.html&quot; alt=&quot;Spatial Data Bootcamp: Download Census tract shapefile - TIGER data&quot; target=&quot;_blank&quot;&gt;Census TIGER data site&lt;/a&gt; and click on TIGER/Line Shapefiles from the product table.&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-1.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;In the product year table, select &lt;em&gt;2014&lt;/em&gt;, click &lt;em&gt;Download&lt;/em&gt;, and enter the &lt;em&gt;Web Interface&lt;/em&gt;&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-2.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Select a layer type: &lt;em&gt;Census Tracts&lt;/em&gt;, then &lt;em&gt;Submit&lt;/em&gt;&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-3.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Census Tract - Select a state: &lt;em&gt;Washington&lt;/em&gt;, then &lt;em&gt;Download&lt;/em&gt;&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-4.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Save file. Navigate to your directory&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-tiger-5.png&quot; alt=&quot;Spatial Data Bootcamp: Download TIGER data&quot; /&gt;&lt;/li&gt;
-&lt;/ol&gt;
+  &lt;li&gt; Remove &lt;b&gt;Housing Units&lt;/b&gt; from selection&lt;br /&gt;
+    &lt;img src=&quot;/bootcamp//assets/images/vector-census/vector-census-8.png&quot; class=&quot;screen-shot&quot; /&gt;
+  &lt;/li&gt;&lt;br /&gt;
+  &lt;li&gt; Click &lt;b&gt;Topics&lt;/b&gt; on the left-hand menu and navigate to &lt;b&gt;Value of Home&lt;/b&gt;:&lt;br /&gt;&lt;b&gt;Housing &amp;gt; Financial Characteristic &amp;gt; Value of Home (click to select) &amp;gt; Click CLOSE (top right)&lt;/b&gt;&lt;br /&gt;
+    &lt;img src=&quot;/bootcamp//assets/images/vector-census/vector-census-9.png&quot; class=&quot;screen-shot&quot; /&gt;
+  &lt;li&gt; Check row: &lt;b&gt;B25077 MEDIAN VALUE (DOLLARS) 2013 ACS 5-year estimates&lt;/b&gt;
+    &lt;img src=&quot;/bootcamp//assets/images/vector-census/vector-census-10.png&quot; class=&quot;screen-shot&quot; /&gt;
+  &lt;/li&gt;&lt;br /&gt;
+  &lt;li&gt;Click &lt;b&gt;Download&lt;/b&gt; (bottom of table) to download zipped files&lt;br /&gt;
+    &lt;img src=&quot;/bootcamp//assets/images/vector-census/vector-census-11.png&quot; class=&quot;screen-shot&quot; /&gt;
+  &lt;/li&gt;&lt;br /&gt;
+  &lt;li&gt; Click &lt;b&gt;OK&lt;/b&gt; to create a zip file containing your selected products&lt;br /&gt;
+    &lt;img src=&quot;/bootcamp//assets/images/vector-census/vector-census-12.png&quot; class=&quot;screen-shot&quot; /&gt;
+  &lt;/li&gt;&lt;br /&gt;
+  &lt;li&gt; Click &lt;b&gt;Download&lt;/b&gt; to save the file to your computer. This zip file will be named the same as the one above, your browser will append (1).&lt;br /&gt;
+    &lt;img src=&quot;/bootcamp//assets/images/vector-census/vector-census-13.png&quot; class=&quot;screen-shot&quot; /&gt;
+  &lt;/li&gt;
 
-&lt;h3 id=&quot;unpack-downloaded-files&quot;&gt;Unpack downloaded files&lt;/h3&gt;
+  
+###  Download TIGER Census Tracts
 
-&lt;p&gt;If you haven’t already downloaded your data, see &lt;strong&gt;Download Census Housing Data&lt;/strong&gt; and &lt;strong&gt;Download TIGER Census Tracts&lt;/strong&gt; above.&lt;/p&gt;
 
-&lt;p&gt;If you haven’t already moved your downloaded zip files from the above steps, move your zip files into your working directory.&lt;/p&gt;
+ 1. Open the &lt;a href=&quot;https://www.census.gov/geo/maps-data/data/tiger.html&quot; alt=&quot;Spatial Data Bootcamp: Download Census tract shapefile - TIGER data&quot; target=&quot;_blank&quot;&gt;Census TIGER data site&lt;/a&gt; and click on TIGER/Line Shapefiles from the product table.&lt;br /&gt;
+  ![Spatial Data Bootcamp: Download TIGER data](/bootcamp/assets/images/vector-tiger/vector-tiger-1.png)
+ 2. In the product year table, select *2014*, click *Download*, and enter the *Web Interface*&lt;br /&gt;
+  ![Spatial Data Bootcamp: Download TIGER data](/bootcamp/assets/images/vector-tiger/vector-tiger-2.png)
+ 3. Select a layer type: *Census Tracts*, then *Submit*&lt;br /&gt;
+  ![Spatial Data Bootcamp: Download TIGER data](/bootcamp/assets/images/vector-tiger/vector-tiger-3.png)
+ 4. Census Tract - Select a state: *Washington*, then *Download*&lt;br /&gt;
+  ![Spatial Data Bootcamp: Download TIGER data](/bootcamp/assets/images/vector-tiger/vector-tiger-4.png)
+ 5. Save file. Navigate to your directory&lt;br /&gt;
+  ![Spatial Data Bootcamp: Download TIGER data](/bootcamp/assets/images/vector-tiger/vector-tiger-5.png)
 
-&lt;p&gt;Using an extraction application like 7-zip makes it easy to unzip these files.&lt;/p&gt;
+### Unpack downloaded files
 
-&lt;p&gt;Install 7-zip if necessary.&lt;/p&gt;
+If you haven&#39;t already downloaded your data, see **Download Census Housing Data** and **Download TIGER Census Tracts** above.
 
-&lt;p&gt;Right-click on zip file and ‘Extract Here’&lt;/p&gt;
+If you haven&#39;t already moved your downloaded zip files from the above steps, move your zip files into your working directory.
 
-&lt;p&gt;Do this for all zip files.&lt;/p&gt;
+Using an extraction application like 7-zip makes it easy to unzip these files.
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-unpack-files.png&quot; alt=&quot;Spatial Data Bootcamp: Unzip files&quot; /&gt;&lt;/p&gt;
+Install 7-zip if necessary.
 
-&lt;p&gt;After unpacking files, open one of the Census ACS folders (aff_download).&lt;/p&gt;
+Right-click on zip file and &#39;Extract Here&#39;
 
-&lt;p&gt;Rename folder &lt;/p&gt;
+Do this for all zip files.
 
-&lt;p&gt;Notice the files. Theres a text file with metadata on the given metric (Housing Units or Home Values). There’s a README that explains what’s inside of the zip file. There’s a metadata CSV that explains what the column headings represent. And there’s the data we need in CSV format with annotations.&lt;/p&gt;
+![Spatial Data Bootcamp: Unzip files](/bootcamp/assets/images/vector-tiger/vector-unpack-files.png)
 
-&lt;p&gt;Now open the Census tracts TIGER data folder. The XMl file contain the metadata about the shapefile. Double-clicking the XML files should open in a web browser and you should be able to read the information. The shapefile data is stored in the .dbf, .prj, .shp, and .shx. You can view the projection by opening the .prj in a text editor. Don’t bother trying to open the other files in a text editor.&lt;/p&gt;
+After unpacking files, open one of the Census ACS folders (aff_download).
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-unpack-files-2.png&quot; alt=&quot;Spatial Data Bootcamp: View shapefiles and metadata&quot; /&gt;&lt;/p&gt;
+Rename folder 
 
+Notice the files. Theres a text file with metadata on the given metric (Housing Units or Home Values). There&#39;s a README that explains what&#39;s inside of the zip file. There&#39;s a metadata CSV that explains what the column headings represent. And there&#39;s the data we need in CSV format with annotations.
+
+Now open the Census tracts TIGER data folder. The XMl file contain the metadata about the shapefile. Double-clicking the XML files should open in a web browser and you should be able to read the information. The shapefile data is stored in the .dbf, .prj, .shp, and .shx. You can view the projection by opening the .prj in a text editor. Don&#39;t bother trying to open the other files in a text editor.
+
+![Spatial Data Bootcamp: View shapefiles and metadata](/bootcamp/assets/images/vector-tiger/vector-unpack-files-2.png)
+
+&lt;/li&gt;&lt;/ol&gt;
 </description>
                 <link>http://104.237.129.71/bootcamp/data%20collection/census</link>
                 <guid>http://104.237.129.71/bootcamp/data%20collection/census</guid>
@@ -5073,7 +5080,9 @@ If you did not clear your selections from the previous steps then continue on, e
 
 &lt;h2 id=&quot;vectora-namevectora&quot;&gt;Vector&lt;a name=&quot;vector&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
 
-&lt;p&gt;Vector data uses features (features are usually points, lines or polygons) to represent discrete phenomena in the real world. For example, a vector data file might include a river represented by a line which is assigned a value. For data which is associated with discrete entities like countries, landmarks, roads, etc. vector data is the way to go.&lt;/p&gt;
+&lt;p&gt;Vector data uses features (features are usually points, lines or polygons) to represent discrete phenomena in the real world. For example, a vector data file might include a river represented by a line which is assigned a value. For data which is associated with discrete entities like countries, landmarks, roads, etc. vector data is the way to go.
+&lt;br /&gt;
+&lt;img width=&quot;512px&quot; src=&quot;/bootcamp//assets/images/Simple_vector_map.svg&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a title=&quot;By Wegmann (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ARaster_vector_tikz.png&quot;&gt;&lt;img width=&quot;450&quot; alt=&quot;Raster vector tikz&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Raster_vector_tikz.png/512px-Raster_vector_tikz.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
