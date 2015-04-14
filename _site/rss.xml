@@ -5,8 +5,8 @@
         <description>Spatial Data Bootcamp - Nathan Casler</description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-04-13T17:27:22-07:00</lastBuildDate>
-        <pubDate>2015-04-13T17:27:22-07:00</pubDate>
+        <lastBuildDate>2015-04-14T16:05:08-07:00</lastBuildDate>
+        <pubDate>2015-04-14T16:05:08-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -429,7 +429,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h3&gt;
 
-&lt;p&gt;Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets. &lt;/p&gt;
+&lt;p&gt;Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -503,7 +503,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;img src=&quot;/bootcamp/assets/images/usa-states.png&quot; alt=&quot;USA_states&quot; /&gt;&lt;br /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Create a layer for the state of Washington 
+  &lt;li&gt;Create a layer for the state of Washington
     &lt;ul&gt;
       &lt;li&gt;In the top toolbar, select &lt;em&gt;Select Single Feature&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;Click on the state of Washington to select it&lt;br /&gt;
@@ -512,7 +512,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       &lt;li&gt;Format: ESRI Shapefile&lt;/li&gt;
       &lt;li&gt;Save as: washington.shp&lt;/li&gt;
       &lt;li&gt;Encoding: UTF-8&lt;/li&gt;
-      &lt;li&gt;CRS: 
+      &lt;li&gt;CRS:
         &lt;ul&gt;
           &lt;li&gt;Project CRS&lt;/li&gt;
           &lt;li&gt;Browse &amp;gt; &lt;em&gt;NAD83(HARN)/Washington South (ftUS) EPSG:2927&lt;/em&gt;&lt;br /&gt;
@@ -696,7 +696,7 @@ Reclassifying inputs:&lt;/p&gt;
 
 &lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Our raster calculator expression will be: &lt;/p&gt;
+&lt;p&gt;Our raster calculator expression will be:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -857,14 +857,14 @@ Reclassifying inputs:&lt;/p&gt;
 
 &lt;h4 id=&quot;wrangle-census-data&quot;&gt;Wrangle Census Data:&lt;/h4&gt;
 
-&lt;p&gt;Luckily, the Census data has already been wrangled. Census data can sometimes be tricky. &lt;/p&gt;
+&lt;p&gt;Luckily, the Census data has already been wrangled. Census data can sometimes be tricky.&lt;/p&gt;
 
 &lt;h4 id=&quot;high-risk-rules&quot;&gt;High-risk rules:&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;within 100m of fault lines&lt;/li&gt;
   &lt;li&gt;within 50m of rivers/streams&lt;/li&gt;
-  &lt;li&gt;within soft geologic areas &lt;/li&gt;
+  &lt;li&gt;within soft geologic areas&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;ol&gt;
@@ -894,7 +894,7 @@ Reclassifying inputs:&lt;/p&gt;
   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-5.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add vector data&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Open the buffer tool: 
+  &lt;li&gt;Open the buffer tool:
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Vector &amp;gt; Geoprocessing Tools &amp;gt; Buffer(s)&lt;/em&gt;&lt;/li&gt;
     &lt;/ul&gt;
@@ -983,6 +983,427 @@ Reclassifying inputs:&lt;/p&gt;
         </item>
 
         <item>
+                <title>Leaflet</title>
+                <description>
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+
+ &lt;link rel=&quot;stylesheet&quot; href=&quot;http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css&quot; /&gt;
+ &lt;script src=&quot;http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js&quot;&gt;&lt;/script&gt;
+ &lt;style&gt;
+
+#map { 
+  height: 500px;
+  width: auto;
+}
+
+ &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1&gt;Leaflet.js&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/leaflet/logo-leaflet.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This exercise covers the basics of developing a simple Leaflet.js web map. This web map will be stored locally (&#39;localhost&#39;, or on your computer) but will still require an internet connection to access the Leaflet source. This exercise has been developed to allow for even the most entry-level web developer. To extend your script into something interactive requires a little bit of knowledge in JavaScript.&lt;/p&gt;
+
+&lt;p&gt;Also, we&#39;re serving spatial layers locally so you can&#39;t share your map over the web.&lt;/p&gt;
+
+&lt;h2&gt;Objectives:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Download US States TIGER shapefile&lt;/li&gt;
+  &lt;li&gt;Convert shapefile into GeoJSON&lt;/li&gt;
+  &lt;li&gt;Write simple HTML document with Leaflet basemap&lt;/li&gt;
+  &lt;li&gt;Overlay GeoJSON file on Leaflet basemap&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Requirements:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;An internet connection is critical. You&#39;ll be referencing and loading the remote Leaflet scripts.&lt;/li&gt;
+  &lt;li&gt;Some HTML, CSS, and JavaScript are a plus.&lt;/li&gt;
+  &lt;li&gt;A text editor (Notepad++, notepad, Sublime Text Editor, etc..) for modifying our code.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Resources:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.w3schools.com/&quot;&gt;w3Schools.com - web development reference&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://leafletjs.com/reference.html&quot;&gt;Leaflet API Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Procedures:&lt;/h2&gt;
+
+&lt;p&gt;&lt;a name=&quot;1&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;1. Working Directory&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create a new working diretory, this is where you will store your webpage documents and data. This is called the site root. We won&#39;t need additional directories for this exercise but if you&#39;ve opened up the leaflet-us-states-source.html you&#39;re able to see the site structure for these exercises. The Leaflet HTML document will depend on your folder structures- this will be explained later.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;2. Download US States TIGER shapefile&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Navigate to the Census TIGER site and download the US States shapefile at 500k resolution level:&lt;br /&gt;&lt;a href=&quot;https://www.census.gov/geo/maps-data/data/cbf/cbf_state.html&quot;&gt;https://www.census.gov/geo/maps-data/data/cbf/cbf_state.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Save or move this file into your working directory and unzip it.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;3. Create GeoJSON file&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;GeoJSON is a format for encoding a variety of geographic data structures - &lt;a href=&quot;http://geojson.org/&quot;&gt;geojson.org&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;GeoJSON is similar to a shapfile in that it stores points, line strings, and polygons. Coordinates in latitude and longitude are stored for each point. Remember, points connect lines and polygons. Below is a view of the tracts-housing-values.shp in GeoJSON format.&lt;/p&gt;
+
+&lt;img src=&quot;/bootcamp/assets/images/leaflet/geojson.png&quot; /&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://spatialreference.org/ref/sr-org/6864/&quot;&gt;EPSG:3857&lt;/a&gt; is the most common CRS for online maps and uses Spherical Mercator projections. This is used by almost all free and commercial tile providers. See &lt;a href=&quot;http://leafletjs.com/reference.html#icrs&quot;&gt;Leaflet ICRS for more info&lt;/a&gt;. We&#39;re safe with just using our &lt;a href=&quot;http://spatialreference.org/ref/epsg/4269/&quot;&gt;EPSG:4269&lt;/a&gt; for this exercise (it&#39;s what the Census provided).&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Load US States shapefile into QGIS (cb_2013_us_state_500k.shp)&lt;/li&gt;
+  &lt;li&gt;Save As .geojson into your working directory:&lt;/li&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;em&gt;Right-click layer &amp;gt; Save As&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Configure inputs as follows:&lt;br /&gt;
+      Format: &lt;strong&gt;GeoJSON&lt;/strong&gt;&lt;br /&gt;
+      Save As: &lt;strong&gt;us_states.geojson&lt;/strong&gt;
+      CRS: default EPSG:4269 is acceptable&lt;br /&gt;&lt;br /&gt;
+      &lt;img src=&quot;/bootcamp/assets/images/leaflet/export-geojson.png&quot; /&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;li&gt;Rename us_states.geojson to us_states.js&lt;/li&gt;
+  &lt;li&gt;Open us_states.js in a text editor (not Microsoft Word!) and create a JavaScript variable to call our US States data. The following JavaScript &lt;em&gt;must&lt;/em&gt; be entered correctly, one small error and you will not be loading a layer into Leaflet:&lt;br /&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Before creating the us_states variable, I&#39;ll explain in simple terms. You don&#39;t want to dump 25MB of GeoJSON code into your single-page web map document. We&#39;re going to reference an external source to call the GeoJSON code- the web browser loads all referenced files from the HEAD. So creating a variable in the us_states.js file will load properly when we open our leaflet.html file.
+      &lt;li&gt;Create us_states variable:&lt;br /&gt;&lt;br /&gt;
+      &lt;div&gt;
+        
+          &lt;code&gt;
+            &lt;span&gt;var us_states = [&lt;/span&gt;&lt;br /&gt;
+            &lt;span&gt;// your geojson is here&lt;/span&gt;&lt;br /&gt;
+            &lt;span&gt;// don&#39;t actually write anything with the &#39;//&#39; line-prefix&lt;/span&gt;&lt;br /&gt;
+            &lt;span&gt;// it&#39;s a comment&lt;/span&gt;&lt;br /&gt;
+            &lt;span&gt;// unless you want to write comments, of course&lt;/span&gt;&lt;br /&gt;
+            &lt;span&gt;];&lt;/span&gt;
+          &lt;/code&gt;
+        
+      &lt;/div&gt;
+      &lt;p&gt;The GeoJSON code is within &quot;features&quot;. Be sure the top of your us_states.js looks just like the code below. We&#39;ve just added the code highlighted in green:&lt;/p&gt;
+      &lt;img src=&quot;/bootcamp/assets/images/leaflet/var-us-states.png&quot; /&gt;&lt;br /&gt;
+      &lt;img src=&quot;/bootcamp/assets/images/leaflet/var-us-states-2.png&quot; /&gt;
+      &lt;/li&gt;
+      &lt;li&gt;So by this step, you should have a file named us_states.js with a us_states variable, and full of sptail data in GeoJSON format, that&#39;s stored in your working director.&lt;/li&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;4. Create HTML document&lt;/h3&gt;
+
+HTML documents provde the content and resources to your web browser to indicate what to render on your screen.
+
+&lt;ol&gt;
+  &lt;li&gt;Open text editor (not Microsoft Word!)&lt;/li&gt;
+  &lt;li&gt;Copy and paste HTML skeleton. It&#39;s made up of the basic HTML tags. HTML elements are explained below:&lt;br /&gt;
+&lt;div&gt;
+&lt;code&gt;
+&lt;span&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;br /&gt;
+&lt;span&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;br /&gt;
+&lt;span&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+&lt;br /&gt;
+&lt;span&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;br /&gt;
+&lt;span&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;br /&gt;
+&lt;span&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;br /&gt;
+&lt;span&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;br /&gt;
+&lt;/code&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;!DOCTYPE indicates to the browser of the document type. In this case, it&#39;s an HTML document.&lt;/li&gt;
+&lt;li&gt;HTML contains all elements and represents the root.&lt;/li&gt;
+&lt;li&gt;HEAD provides metadata to the browser.&lt;/li&gt;
+&lt;li&gt;SCRIPT is used to import executable scripts from a remote server (typical situation) or you can define script statements within the document.&lt;/li&gt;
+&lt;li&gt;STYLE is used to import website styling or define styling within the page. Note, you can also use inline styling.&lt;/li&gt;
+&lt;li&gt;BODY is where the content is stored.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Save this document as leaflet.html, inside of your working directory.&lt;/li&gt;
+&lt;/ol&gt; 
+
+&lt;h3&gt;4. Create Leaflet map&lt;/h3&gt;
+
+This next section should be painless. We&#39;ll be copying and pasting the code, but each item will still be explained so you&#39;ll know what to do the next time you want to develop a Leaflet web map. We&#39;ll be copying and pasting in blocks of code, by element sections:
+
+
+&lt;ol&gt;
+  &lt;li&gt;Prepare the HEAD. Below, there are two external files being called to, leaflet.css and leaflet.js. These provide the functionality of the map and styling. There&#39;s a STYLE tag that allow us to define the divider height and width so the map may be visible. Copy and paste the following code between your HEAD tags:&lt;br /&gt;&lt;br /&gt;
+  &lt;div&gt;
+    
+      &lt;code&gt;
+            &lt;span&gt;&amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;&lt;/span&gt;&lt;br /&gt;
+            &lt;span&gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css&quot;&amp;gt;&lt;/span&gt;&lt;br /&gt;
+            &lt;span&gt;&amp;lt;script src=&quot;http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br /&gt;
+            &lt;span&gt;&amp;lt;style&amp;gt;&lt;/span&gt;&lt;br /&gt;
+            &lt;span&gt;  #map {   height: 500px;  width: 700px;}&lt;/span&gt;&lt;br /&gt;
+            &lt;span&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+      &lt;/code&gt;
+    
+  &lt;/div&gt;
+  &lt;li&gt;Now for the hard part. The ID of the DIV below is equal to &#39;map&#39;, once we add our JavaScript you&#39;ll notice where &#39;map&#39; is defined. Basically, we&#39;re using the DIV as a place to put our map. Copy and paste the following code between the BODY tags:&lt;br /&gt;&lt;br /&gt;
+  &lt;div&gt;
+     
+       &lt;code&gt;
+          &lt;span&gt;&amp;lt;div id=&quot;map&quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+       &lt;/code&gt;
+     
+   &lt;/div&gt;     
+  &lt;/li&gt;
+  &lt;li&gt;Add JavaScript to make the map function properly. We define &#39;map&#39; with a center point and a zoom level. The variale grayScale is set to our basemap, which is added to the map with &#39;addTo.()&#39;. Copy and paste the following code below the map DIV, between the BODY tags:&lt;br /&gt;&lt;br /&gt;
+  &lt;div&gt;
+    
+      &lt;code&gt;
+        &lt;span&gt;&amp;lt;script&amp;gt;&lt;/span&gt;&lt;br /&gt;
+        &lt;span&gt;var map = L.map(&#39;map&#39;).setView([47,-100], 3);&lt;/span&gt;&lt;br /&gt;
+        &lt;span&gt;var grayScale = L.tileLayer(&#39;https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png&#39;, {
+      attribution: &#39;Map data copywright &amp;lt;a href=&quot;http://openstreetmap.org&quot;&amp;gt;OpenStreetMap&amp;lt;/a&amp;gt; contributors, &#39; +
+        &#39;&amp;lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&amp;gt;CC-BY-SA&amp;lt;/a&amp;gt;, &#39; +
+        &#39;Imagery copywright &amp;lt;a href=&quot;http://mapbox.com&quot;&amp;gt;Mapbox&amp;lt;/a&#39;,
+      id: &#39;examples.map-20v6611k&#39;
+    });
+&lt;/span&gt;&lt;br /&gt;
+        &lt;span&gt;grayScale.addTo(map);&lt;/span&gt;&lt;br /&gt; 
+        &lt;span&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+       &lt;/code&gt;
+    
+  &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Save your leaflet.html document now. Before moving on, test it out by Right-click and open in a web browser. Your view should be the same as what&#39;s displayed below. If you&#39;ve made one small mistake then the script won&#39;t run and you won&#39;t have a map. &lt;a href=&quot;#bottom&quot;&gt;See this reference below&lt;/a&gt; if you run into any troubles.&lt;br /&gt;&lt;br /&gt;
+
+&lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+
+var map = L.map(&#39;map&#39;).setView([47,-100],3);
+
+var grayScale = L.tileLayer(&#39;https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png&#39;, {
+      attribution: &#39;Map data &amp;copy; &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt; contributors, &#39; +
+        &#39;&lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&gt;CC-BY-SA&lt;/a&gt;, &#39; +
+        &#39;Imagery &amp;copy; &lt;a href=&quot;http://mapbox.com&quot;&gt;Mapbox&lt;/a&gt;&#39;,
+      id: &#39;examples.map-20v6611k&#39;
+    });
+
+grayScale.addTo(map);
+
+
+&lt;/script&gt;
+&lt;/li&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#bottom&quot;&gt;Go to the bottom of this document to view the full code. Click here.&lt;/a&gt;
+
+
+&lt;h3&gt;5. Add layer to Leafet map&lt;/h3&gt;
+
+&lt;p&gt;There are a few methods to serving spatial data. The method we&#39;re using is the most simple, least painful, and easiest method of them all. An ideal method is utelizing a Web Feature Service such as GeoServer but that&#39;s deep into the GIS programming world, and requires hours (maybe days) to configure before you can configure some more. But that&#39;s neither here nor there..&lt;/p&gt;
+
+&lt;p&gt;Now that we know we&#39;re not going to configure GeoServer, we can go ahaed and serve our data locally by simply calling our us_states.js script containing our GeoJSON data format that we converted from a shapefile. Serving data locally means that we cannot share our data through the internet. One does not simply serve spatial data on the web..&lt;/p&gt;
+
+&lt;p&gt;We&#39;re going to continue our trusty copy-and-paste method to add our US States layer.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Call to the us_states.js script. The following code depends on the us_states.js file to be in the &lt;em&gt;same&lt;/em&gt; folder as your leaflet.html. Copy and paste within the HEAD tag:&lt;br /&gt;
+  &lt;div&gt;
+    
+      &lt;code&gt;
+        &lt;span&gt;&amp;lt;script src=&quot;us_states.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+      &lt;/code&gt;
+    
+  &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add the layer to the map. Copy and paste within the SCRIPT tag within the BODY tag, below grayScale.addTo(map);&lt;br /&gt;
+  &lt;div&gt;
+    
+      &lt;code&gt;
+        &lt;span&gt;L.geoJson(us_states).addTo(map);&lt;/span&gt;
+      &lt;/code&gt;
+    
+  &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Your new Leaflet web map should look like the image below:&lt;br /&gt;
+    &lt;img src=&quot;/bootcamp/assets/images/leaflet/us-states.png&quot; /&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Additional Learning&lt;/h2&gt;
+
+&lt;h3&gt;Washington Census Tracts&lt;/h3&gt;
+
+&lt;p&gt;Now that you have a better understanding of QGIS, Leaflet, and GeoJSON, take a shot at visualizing Washington Census tracts (tracts-values-units.shp) in Leaflet. Also, add a functionality that displays the total housing value per tract on-click (in JS words, onClick). The document has already been created so use it as a reference as needed.&lt;/p&gt;
+
+&lt;p&gt;Exporting tracts-values-units.shp to .geojson results in a 25MB file. It may run a little slower the US States Leaflet we just made.&lt;/p&gt;
+
+&lt;p&gt;Open the leaflet-wa-tracts-source.html in a text editor for a reference.&lt;/p&gt;
+
+&lt;h4&gt;Guidance&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Before exporting tracts-values-units.shp into .geojson, calculate a new field named &#39;Values&#39; that is equal to TotalValues. However, it needs to be calculated into a text field. Leaflet wasn&#39;t recognizing TotalValue as a numerical field (JavaScript didn&#39;t recognize the child node..).&lt;/li&gt;
+&lt;li&gt;Export tracts-values-units.shp to .geojson, name this file wa_tracts.geojson. Then change file extension to .js (wa_tracts.js)&lt;/li&gt;
+&lt;li&gt;Open your wa_tracts and make the entire GeoJSON a variable of wa_tracts:&lt;br /&gt;
+&lt;div&gt;&lt;code&gt;
+&lt;span&gt;var wa_tracts = [ &lt;/span&gt;
+&lt;span&gt;// your geojson here&lt;/span&gt;
+&lt;span&gt;// these are comments&lt;/span&gt;
+&lt;span&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Create HTML document:&lt;br /&gt;
+&lt;div&gt;
+&lt;code&gt;
+&lt;span&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;br /&gt;
+&lt;span&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;br /&gt;
+&lt;span&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+&lt;br /&gt;
+&lt;span&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;br /&gt;
+&lt;span&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;br /&gt;
+&lt;span&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;br /&gt;
+&lt;span&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;br /&gt;
+&lt;/code&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;Be sure you reference the wa_tracts.js in the SCRIPT tag within HEAD:&lt;br /&gt;
+&lt;div&gt;&lt;code&gt;&lt;span&gt;&amp;lt;script src=&quot;wa_tracts.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Define your map with center and zoom level within SCRIPT within BODY:&lt;br /&gt;
+&lt;div&gt;&lt;code&gt;var map = L.map(&#39;map&#39;).setView([47.493,-120.563], 7);&lt;/code&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Add a basemap within SCRIPT within BODY:&lt;br /&gt;
+&lt;div&gt;&lt;code&gt;&lt;span&gt;var grayScale = L.tileLayer(&#39;https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png&#39;, {
+attribution: &#39;Map data copywright &amp;lt;a href=&quot;http://openstreetmap.org&quot;&amp;gt;OpenStreetMap&amp;lt;/a&amp;gt; contributors, &#39; +
+&#39;&amp;lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&amp;gt;CC-BY-SA&amp;lt;/a&amp;gt;, &#39; +
+&#39;Imagery copywright &amp;lt;a href=&quot;http://mapbox.com&quot;&amp;gt;Mapbox&amp;lt;/a&#39;,
+d: &#39;examples.map-20v6611k&#39;
+});
+&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;grayScale.addTo(map);&lt;/span&gt;&lt;br /&gt; 
+&lt;/code&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Add wa_tracts.js wih styling within SCRIPT witin BODY:&lt;br /&gt;
+&lt;div&gt;
+&lt;code&gt;
+&lt;span&gt;function getColor(d) {&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;return d &amp;gt; 3009765000  ? &#39;#BD0026&#39; :&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;       d &amp;gt; 849985200  ? &#39;#E31A1C&#39; :&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;       d &amp;gt; 612002600  ? &#39;#FC4E2A&#39; :&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;       d &amp;gt; 483352000   ? &#39;#FD8D3C&#39; :&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;       d &amp;gt; 378603000  ? &#39;#FEB24C&#39; :&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;       d &amp;gt; 259410650   ? &#39;#FED976&#39; :&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;                  &#39;#FFEDA0&#39;;&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;};&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span&gt;function style(feature) {&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;return {&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    fillColor: getColor(feature.properties.TotalValue),&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    weight: 2,&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    opacity: 1,&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    color: &#39;white&#39;,&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    dashArray: &#39;3&#39;,&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    fillOpacity: 0.7&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;};&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;};&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span&gt;// HINT: notice &#39;layer.bindPopup(feature.properties.Value);&#39;&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;// this is the same field that we calculated earlier from TotalValue into a text field.&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;// you can change the field that&#39;s displayed by changing the word &#39;Value&#39; &lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;// to the column header that you&#39;d like to display&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;// e.g. replacing Value with GEOID will display each tract GEOID&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span&gt;L.geoJson(wa_tracts, {&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    style: style,&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    onEachFeature: function (feature, layer) {&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    layer.bindPopup(feature.properties.Value);&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    }&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt; }).addTo(map);&lt;/span&gt;&lt;br /&gt;
+&lt;/code&gt;&lt;/div&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br /&gt;
+
+&lt;p&gt;A screenshot of Washington Census tracts with total home values on-click:&lt;/p&gt; 
+
+&lt;img src=&quot;/bootcamp/assets/images/leaflet/wa-tracts.png&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Further explore Leaflet. There&#39;s a plethora of help and documentation online from the open-source community.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#top&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;a name=&quot;bottom&quot;&gt;&lt;/a&gt;
+&lt;h4&gt;Resources&lt;/h4&gt;
+
+This is the full document from US States Steps 4 and 5:
+
+&lt;div&gt;
+&lt;code&gt;
+&lt;span&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;&amp;lt;html&amp;gt;&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;&amp;lt;head&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span&gt;    &amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css&quot;&amp;gt;&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    &amp;lt;script src=&quot;http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    &amp;lt;script src=&quot;us_states&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span&gt;    &amp;lt;style&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span&gt;      #map {   height: 500px;  width: 700px;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span&gt;    &amp;lt;/style&amp;gt;&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span&gt;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span&gt;    &amp;lt;div id=&quot;map&quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span&gt;    &amp;lt;script&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span&gt;      var map = L.map(&#39;map&#39;).setView([47,-100], 3);&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span&gt;      var grayScale = L.tileLayer(&#39;https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png&#39;, {&lt;br /&gt;
+attribution: &#39;Map data copywright &amp;lt;a href=&quot;http://openstreetmap.org&quot;&amp;gt;OpenStreetMap&amp;lt;/a&amp;gt; contributors, &#39; +&lt;br /&gt;
+&#39;&amp;lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&amp;gt;CC-BY-SA&amp;lt;/a&amp;gt;, &#39; +&lt;br /&gt;
+&#39;Imagery copywright &amp;lt;a href=&quot;http://mapbox.com&quot;&amp;gt;Mapbox&amp;lt;/a&#39;,&lt;br /&gt;
+id: &#39;examples.map-20v6611k&#39;&lt;br /&gt;
+});&lt;br /&gt;
+&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;      grayScale.addTo(map);&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;      L.geoJson(us_states).addTo(map);&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span&gt;    &amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;br /&gt;
+&lt;/code&gt;
+&lt;/div&gt;
+
+
+
+
+
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/body&gt;
+</description>
+                <link>http://104.237.129.71/bootcamp/references/leaflet</link>
+                <guid>http://104.237.129.71/bootcamp/references/leaflet</guid>
+                <pubDate>2009-10-01T00:00:00-07:00</pubDate>
+        </item>
+
+        <item>
                 <title>QGIS</title>
                 <description>
 &lt;p&gt;&lt;a title=&quot;By User:Anitagraser on QGIS Wiki, User:Anitagraser (http://www.qgis.org/wiki/File:QGis_Logo.png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AQGis_Logo.png&quot;&gt;&lt;img width=&quot;128&quot; alt=&quot;QGis Logo&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/128px-QGis_Logo.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -1036,7 +1457,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;&lt;em&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection. &lt;/p&gt;
+&lt;p&gt;From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection.&lt;/p&gt;
 
 &lt;h3 id=&quot;activate-necessary-providers&quot;&gt;Activate necessary providers&lt;/h3&gt;
 
@@ -1058,7 +1479,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;See &lt;a href=&quot;/bootcamp/intro/spatial-data&quot;&gt;Intro to Spatial Data&lt;/a&gt; for more detailed info on projections.&lt;/p&gt;
 
-&lt;p&gt;Each new project starts with the global default projection, &lt;a href=&quot;http://www.spatialreference.org/epsg/wgs-84/&quot;&gt;EPSG:4326 - WGS 84&lt;/a&gt;: &lt;/p&gt;
+&lt;p&gt;Each new project starts with the global default projection, &lt;a href=&quot;http://www.spatialreference.org/epsg/wgs-84/&quot;&gt;EPSG:4326 - WGS 84&lt;/a&gt;:&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs&lt;/code&gt;&lt;/p&gt;
 
@@ -1066,7 +1487,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;However, this is not the same as changing the project projection. You may define the project projection from &lt;em&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties &amp;gt; CRS&lt;/em&gt;. Also keep in mind, the CRS of a new project will change to the CRS of the first layer added to the project.&lt;/p&gt;
 
-&lt;p&gt;‘On the fly’ CRS transformation is not enabled by the default QGIS installation.  &lt;/p&gt;
+&lt;p&gt;‘On the fly’ CRS transformation is not enabled by the default QGIS installation.&lt;/p&gt;
 
 &lt;h2 id=&quot;supported-data-formats&quot;&gt;Supported Data Formats&lt;/h2&gt;
 
@@ -1080,7 +1501,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/add-vector.png&quot; alt=&quot;Add vector in QGIS&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;View vector attribute table by right clicking on the layer and clicking Open Attribute Table. From here you can sort data, show selected features, show features visible on map, show edited and new features, filter by column, or query data with and advanced filter. &lt;/p&gt;
+&lt;p&gt;View vector attribute table by right clicking on the layer and clicking Open Attribute Table. From here you can sort data, show selected features, show features visible on map, show edited and new features, filter by column, or query data with and advanced filter.&lt;/p&gt;
 
 &lt;p&gt;Attribute data can be edited by enabling and edit session with the Toggle Editing Mode icon (top left).&lt;/p&gt;
 
@@ -1094,13 +1515,13 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;h2 id=&quot;general-spatial-functions&quot;&gt;General Spatial Functions&lt;/h2&gt;
 
-&lt;p&gt;Spatial functions are accessable through &lt;em&gt;Menu Bar &amp;gt; Vector/Raster&lt;/em&gt;. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy. &lt;/p&gt;
+&lt;p&gt;Spatial functions are accessable through &lt;em&gt;Menu Bar &amp;gt; Vector/Raster&lt;/em&gt;. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy.&lt;/p&gt;
 
 &lt;h2 id=&quot;composing-maps-for-printnon-web-based&quot;&gt;Composing Maps (for print/non-web-based)&lt;/h2&gt;
 
 &lt;p&gt;This method is ideal for exporting your work for a research paper, admiring your work, and such. Developing a web map for dissimenating your data is a bit more involved and is discussed in the &lt;a href=&quot;/bootcamp/visualization/leaflet&quot;&gt;Publish Your Data to a Web Mapi/LeafletJS&lt;/a&gt; section. Also, to export data with styles see &lt;a href=&quot;this-is-not-a-link&quot;&gt;This section link&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Begin by opening the Print Composer: &lt;/p&gt;
+&lt;p&gt;Begin by opening the Print Composer:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/compose-map.png&quot; alt=&quot;Create new Print Composer workspace&quot; /&gt;&lt;/p&gt;
 
@@ -1118,7 +1539,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;h2 id=&quot;the-scenario&quot;&gt;The Scenario:&lt;/h2&gt;
 
-&lt;p&gt;You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map. &lt;/p&gt;
+&lt;p&gt;You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1138,7 +1559,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;h3 id=&quot;objective&quot;&gt;Objective:&lt;/h3&gt;
 
-&lt;p&gt;Gather data necessary for locating high-risk landslide areas in the state of Washington. &lt;/p&gt;
+&lt;p&gt;Gather data necessary for locating high-risk landslide areas in the state of Washington.&lt;/p&gt;
 
 &lt;h3 id=&quot;data-sources&quot;&gt;Data sources:&lt;/h3&gt;
 
@@ -1278,7 +1699,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
     &lt;ul&gt;
       &lt;li&gt;GDAL’s rasterize is a prefered method. This can be accessed through &lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Conversion &amp;gt; Rasterize (Vector to raster)&lt;/em&gt;. Notice how the parameters have been diabled in the example below. There’s a specific reason for this. Complete the parameter inputs: &lt;em&gt;Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000&lt;/em&gt;. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Click the edit icon (pencil) locate near the block of code&lt;/em&gt;. This enables you to add those non-QGIS parameters.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Add the line of code&lt;/em&gt; &lt;code&gt;-at -a_nodata 0&lt;/code&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt; &lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Add the line of code&lt;/em&gt; &lt;code&gt;-at -a_nodata 0&lt;/code&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;-at&lt;/em&gt;: Enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;-a_nodata $value&lt;/em&gt;: Assign a specified nodata value to output bands - this prevents pixels with no data from being written into the output raster.&lt;sup id=&quot;fnref:3:1&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;http://www.gdal.org/gdal_rasterize.html&quot;&gt;Here’s a link to the gdal_rasterize parameters&lt;/a&gt;.&lt;br /&gt;
@@ -1289,7 +1710,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
     &lt;ul&gt;
       &lt;li&gt;Open wa_geology.tif style properties. HINT: See step 4.&lt;/li&gt;
       &lt;li&gt;For &lt;em&gt;Render type&lt;/em&gt;, select &lt;em&gt;Singleband pseudocolor&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;On the right select: &lt;em&gt;Load min/max values: Min/max; Extend: Actual (slower); then Load&lt;/em&gt;. This loads actual values into the classification. QGIS Approximates values by defautl. &lt;/li&gt;
+      &lt;li&gt;On the right select: &lt;em&gt;Load min/max values: Min/max; Extend: Actual (slower); then Load&lt;/em&gt;. This loads actual values into the classification. QGIS Approximates values by defautl.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Change Mode to Equal Interval with 3 classes&lt;/em&gt;. Remember, we only have three rock strength classes: soft, medium, hard. Change your color map if you’d like. The color maps are not stored into the raster, so the raster will load with the defaul color map (black to white) each time its opened in a new project.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Click Classify&lt;/em&gt;. Apply and OK.&lt;br /&gt;
    &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-13.png&quot; alt=&quot;QGIS: Style raster&quot; /&gt;&lt;/li&gt;
@@ -1297,7 +1718,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster. &lt;/p&gt;
+&lt;p&gt;You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster.&lt;/p&gt;
 
 &lt;p&gt;Keep this reclassified and rasterized vector, it’ll be used in the next lesson.&lt;/p&gt;
 
@@ -1457,7 +1878,7 @@ If you did not clear your selections from the previous steps then continue on, e
 
 &lt;p&gt;After unpacking files, open one of the Census ACS folders (aff_download).&lt;/p&gt;
 
-&lt;p&gt;Rename folder &lt;/p&gt;
+&lt;p&gt;Rename folder&lt;/p&gt;
 
 &lt;p&gt;Notice the files. Theres a text file with metadata on the given metric (Housing Units or Home Values). There’s a README that explains what’s inside of the zip file. There’s a metadata CSV that explains what the column headings represent. And there’s the data we need in CSV format with annotations.&lt;/p&gt;
 
@@ -1527,9 +1948,9 @@ There are two columns in this file separated by a common. The first column indic
 Save as: tracts-values-units (save in your project directory)&lt;br /&gt;
 Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-20.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - save shapefile&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Let’s now calculate total housing value per census tract (TotalUnitsHome X MedianValueHome). 
+  &lt;li&gt;Let’s now calculate total housing value per census tract (TotalUnitsHome X MedianValueHome).
     &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Open tracts-value-units attributes table &amp;gt; Toggle editing mode&lt;/strong&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/toggle-editing-mode.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - toggle edits&quot; /&gt; &lt;strong&gt;&amp;gt; Field Calculator&lt;/strong&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/field-calculator.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - field calculator&quot; /&gt;. &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Open tracts-value-units attributes table &amp;gt; Toggle editing mode&lt;/strong&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/toggle-editing-mode.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - toggle edits&quot; /&gt; &lt;strong&gt;&amp;gt; Field Calculator&lt;/strong&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/field-calculator.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - field calculator&quot; /&gt;.&lt;/li&gt;
       &lt;li&gt;Configure Field Calculator inputs as follows:&lt;br /&gt;
 &lt;strong&gt;Create a new field: (checked)&lt;/strong&gt;&lt;br /&gt;
 &lt;strong&gt;Output field name: TotalValue&lt;/strong&gt;&lt;br /&gt;
@@ -1542,7 +1963,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
   &lt;/li&gt;
   &lt;li&gt;Locate &lt;strong&gt;TotalValue&lt;/strong&gt; and confirm the calculation. NOTE: you should still have NULL values given that home-values.csv contains NULL values. Be sure to &lt;em&gt;Save edits&lt;/em&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/save-edits.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - save edits&quot; /&gt; and disable editing mode (Toggle editing mode) &lt;img src=&quot;/bootcamp/assets/images/qgis/toggle-editing-mode.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - toggle editing mode&quot; /&gt;. The editing options should now be grayed-out and disabled.&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-22.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - TotalValue per tract&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;You’ve successfully joined two sets of Census tabular data to a shapefile. &lt;/li&gt;
+  &lt;li&gt;You’ve successfully joined two sets of Census tabular data to a shapefile.&lt;/li&gt;
   &lt;li&gt;Style tracts-values-units by categorizing by TotalValue and select a color ramp. QGIS will inform you that you have a high number of classes, click OK to confirm the categorization. We’ll need to remove NULL values. Locate NULL within the category table (HINT: it contains no values and is blank - look towards the bottom), highlight and click ‘Delete’ (not Delete all!) - ‘Delete’ removes only selected rows. Click Apply then OK to confirm changes. Deactivate census-tracts layer by unchecking it activate box in the layers list. Save your workspace. &lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-24.png&quot; alt=&quot;Spatial Data Bootcamp: Census Join - completed&quot; /&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -1585,14 +2006,14 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 
 &lt;h4 id=&quot;wrangle-census-data&quot;&gt;Wrangle Census Data:&lt;/h4&gt;
 
-&lt;p&gt;Luckily, the Census data has already been wrangled. Census data can sometimes be tricky. &lt;/p&gt;
+&lt;p&gt;Luckily, the Census data has already been wrangled. Census data can sometimes be tricky.&lt;/p&gt;
 
 &lt;h4 id=&quot;high-risk-rules&quot;&gt;High-risk rules:&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;within 100m of fault lines&lt;/li&gt;
   &lt;li&gt;within 50m of rivers/streams&lt;/li&gt;
-  &lt;li&gt;within soft geologic areas &lt;/li&gt;
+  &lt;li&gt;within soft geologic areas&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;ol&gt;
@@ -1622,7 +2043,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-5.png&quot; alt=&quot;Spatial Data Bootcamp: Vector Analysis - add vector data&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Open the buffer tool: 
+  &lt;li&gt;Open the buffer tool:
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Vector &amp;gt; Geoprocessing Tools &amp;gt; Buffer(s)&lt;/em&gt;&lt;/li&gt;
     &lt;/ul&gt;
@@ -1727,7 +2148,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 &lt;h3 id=&quot;data-2&quot;&gt;Data:&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Washington DEM (wa_dem.tif) - &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model&quot;&gt;SEE Data Wrangling&lt;/a&gt; &lt;/li&gt;
+  &lt;li&gt;Washington DEM (wa_dem.tif) - &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model&quot;&gt;SEE Data Wrangling&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Washington geology raster (wa_geology.tif) - &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---reclassify-and-rasterize-vector&quot;&gt;SEE Data Wrangling&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1892,7 +2313,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 
 &lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Our raster calculator expression will be: &lt;/p&gt;
+&lt;p&gt;Our raster calculator expression will be:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -2006,7 +2427,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;References: &lt;/p&gt;
+&lt;p&gt;References:&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
@@ -2049,7 +2470,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 &lt;ul&gt;
   &lt;li&gt;Vector&lt;/li&gt;
   &lt;li&gt;Raster&lt;/li&gt;
-  &lt;li&gt;LiDAR &lt;/li&gt;
+  &lt;li&gt;LiDAR&lt;/li&gt;
   &lt;li&gt;Time series&lt;/li&gt;
   &lt;li&gt;Vector Networks&lt;/li&gt;
   &lt;li&gt;3D&lt;/li&gt;
@@ -2847,7 +3268,7 @@ For more properties and examples reference the
 
 &lt;h3 id=&quot;objectives&quot;&gt;Objectives:&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Be able to reclassify a raster. &lt;/li&gt;
+  &lt;li&gt;Be able to reclassify a raster.&lt;/li&gt;
   &lt;li&gt;Understand basics of raster calculations.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -2966,7 +3387,7 @@ For more properties and examples reference the
 
 &lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Our raster calculator expression will be: &lt;/p&gt;
+&lt;p&gt;Our raster calculator expression will be:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -3073,7 +3494,7 @@ For more properties and examples reference the
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;References: &lt;/p&gt;
+&lt;p&gt;References:&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
@@ -3097,7 +3518,7 @@ For more properties and examples reference the
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/netcdf1_sm.png&quot; alt=&quot;netcdf-logo&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate. &lt;/p&gt;
+&lt;p&gt;NetCDF is a set of software libraryies and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF data is self-describing, multi-dimensional and multivariate.&lt;/p&gt;
 
 &lt;p&gt;NetCDF is a set of software libraries and describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. NetCDF was developed at &lt;a href=&quot;http://unidata.ucar.edu&quot;&gt;Unidata&lt;/a&gt;. Unidata provides data and software tools for use in geoscience education and research. Unidata is part of the University Corporation for Atmospheric Research(&lt;a href=&quot;http://ucar.edu&quot;&gt;UCAR&lt;/a&gt;) Community Programs(&lt;a href=&quot;http://www.uop.ucar.edu&quot;&gt;UCP&lt;/a&gt;).&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
@@ -3109,17 +3530,17 @@ For more properties and examples reference the
 
 &lt;p&gt;With the help of a THREDDS Data Server, large netCDF datasets are easily accessible and discoverable through a client application or through HTTP.&lt;/p&gt;
 
-&lt;p&gt;The multidimensional nature of netCDF data makes storage of complex data such as temperature and humidity simple. Also, since netCDF allows for multivariate storage, several variables can be subsets, ensembled and explored simultaneously. An issue can be the process of creating a usable dataset from netCDF data. This can be due to the sensor-based nature of netCDF, which is a primary dataset (i.e. daily precipitation sums). In order to get the proper dataset, it often requires researchers to subset, and ensemble values over a dimension. Ensembled data sets could be seasonal datasets, climatologies, or long-term averages. &lt;/p&gt;
+&lt;p&gt;The multidimensional nature of netCDF data makes storage of complex data such as temperature and humidity simple. Also, since netCDF allows for multivariate storage, several variables can be subsets, ensembled and explored simultaneously. An issue can be the process of creating a usable dataset from netCDF data. This can be due to the sensor-based nature of netCDF, which is a primary dataset (i.e. daily precipitation sums). In order to get the proper dataset, it often requires researchers to subset, and ensemble values over a dimension. Ensembled data sets could be seasonal datasets, climatologies, or long-term averages.&lt;/p&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
 &lt;h2 id=&quot;procedure&quot;&gt;Procedure&lt;/h2&gt;
 
-&lt;p&gt;For our case study, we created an annual average for precipitation between 2007-2014. &lt;/p&gt;
+&lt;p&gt;For our case study, we created an annual average for precipitation between 2007-2014.&lt;/p&gt;
 
 &lt;p&gt;We had to first locate the datasets from http://esrl.noaa.gov/psd/thredds/dodsC/Datasets/cpc_us_precip/RT&lt;/p&gt;
 
-&lt;p&gt;This brought us 9 years of datasets. &lt;/p&gt;
+&lt;p&gt;This brought us 9 years of datasets.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/daily-precip.png&quot; alt=&quot;daily-precip&quot; /&gt;&lt;/p&gt;
 
@@ -3129,14 +3550,14 @@ For more properties and examples reference the
 
 &lt;h5 id=&quot;netcdf-kitchen-sink&quot;&gt;netCDF Kitchen Sink&lt;/h5&gt;
 
-&lt;p&gt;The nickname ‘kitchen sink’ is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option ‘-d’&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions. &lt;/p&gt;
+&lt;p&gt;The nickname ‘kitchen sink’ is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option ‘-d’&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ncks -O -d lon,234.0,244.0 -d lat,44.0,50.0 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc subset.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In the above command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testing.&lt;/p&gt;
 
 &lt;h4 id=&quot;removing-bad-values&quot;&gt;Removing bad values&lt;/h4&gt;
-&lt;p&gt;If you look at the metadata for the subsetted file, you can see that the ‘precip’ variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25° x .25°(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library. &lt;/p&gt;
+&lt;p&gt;If you look at the metadata for the subsetted file, you can see that the ‘precip’ variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25° x .25°(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library.&lt;/p&gt;
 
 &lt;h5 id=&quot;netcdf-arithmetic-processor&quot;&gt;netCDF Arithmetic Processor&lt;/h5&gt;
 
@@ -3276,7 +3697,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;This lesson will take us through the steps involved in creating a species range model using the Maximum Entropy probability distribution.&lt;/p&gt;
 
-&lt;p&gt;Before we load in any data we should set the project projection. &lt;/p&gt;
+&lt;p&gt;Before we load in any data we should set the project projection.&lt;/p&gt;
 
 &lt;p&gt;To add this to QGIS you can go into the top menu:&lt;/p&gt;
 
@@ -3284,7 +3705,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;Click &lt;em&gt;Add new CRS&lt;/em&gt; to create a new custom projection&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/addNewCrs.png&quot; alt=&quot;add-Crs&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/bootcamp//assets/images/addNewCrs.png&quot; alt=&quot;add-Crs&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In the box labeled &lt;em&gt;Name:&lt;/em&gt; enter &lt;em&gt;New World LAEA&lt;/em&gt;&lt;/p&gt;
 
@@ -3346,7 +3767,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/pluginEnabled.png&quot; alt=&quot;plugin-enabled&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;If you have already set up your iPlant account and were given permissions to the Bootcamp dataset continue to the next steps. &lt;/p&gt;
+&lt;p&gt;If you have already set up your iPlant account and were given permissions to the Bootcamp dataset continue to the next steps.&lt;/p&gt;
 
 &lt;p&gt;If not, make sure to &lt;a href=&quot;http://user.iplantcollaborative.org&quot;&gt;register for iPlant access&lt;/a&gt;, and request access to the data store.&lt;/p&gt;
 
@@ -3414,7 +3835,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;The environmental layers can be found in the iPlant data store in the &lt;em&gt;env.zip&lt;/em&gt; file.&lt;/p&gt;
 
-&lt;p&gt;To download the layers, sign in to the iPlant Discovery Environment and open the Data Store. &lt;/p&gt;
+&lt;p&gt;To download the layers, sign in to the iPlant Discovery Environment and open the Data Store.&lt;/p&gt;
 
 &lt;p&gt;The layers should be available under /iplant/home/shared/aegis/Spatial-bootcamp/Range-model/env.zip&lt;/p&gt;
 
@@ -3432,13 +3853,13 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/loadEnvRasters.png&quot; alt=&quot;load-env-rasters&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Once all the rasters are loaded, you should see them in your Table of Contents, but not on the map. &lt;/p&gt;
+&lt;p&gt;Once all the rasters are loaded, you should see them in your Table of Contents, but not on the map.&lt;/p&gt;
 
 &lt;p&gt;If you check the layer properties on one of the rasters, you can see that they default to EPSG:4326, although we had previously stated they come in the New World LAEA.&lt;/p&gt;
 
-&lt;p&gt;This happens because Ascii Grid Format doesn’t store any projection information. &lt;/p&gt;
+&lt;p&gt;This happens because Ascii Grid Format doesn’t store any projection information.&lt;/p&gt;
 
-&lt;p&gt;To allow any analysis, we will have to define the projection for the raster data sets. &lt;/p&gt;
+&lt;p&gt;To allow any analysis, we will have to define the projection for the raster data sets.&lt;/p&gt;
 
 &lt;p&gt;To do this, you can click on the layer name in the Table of Contents and Select &lt;em&gt;Set Layer CRS&lt;/em&gt;&lt;/p&gt;
 
@@ -3518,7 +3939,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h3 id=&quot;objectives&quot;&gt;Objectives:&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Be able to reclassify a raster. &lt;/li&gt;
+  &lt;li&gt;Be able to reclassify a raster.&lt;/li&gt;
   &lt;li&gt;Understand basics of raster calculations.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -3637,7 +4058,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Our raster calculator expression will be: &lt;/p&gt;
+&lt;p&gt;Our raster calculator expression will be:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -3744,7 +4165,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;References: &lt;/p&gt;
+&lt;p&gt;References:&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
@@ -3813,7 +4234,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;img src=&quot;/bootcamp/assets/images/usa-states.png&quot; alt=&quot;USA_states&quot; /&gt;&lt;br /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Create a layer for the state of Washington 
+  &lt;li&gt;Create a layer for the state of Washington
     &lt;ul&gt;
       &lt;li&gt;Within the Layers List, click on USA_adm1 to activate layer tools.&lt;/li&gt;
       &lt;li&gt;Select Single Feature tool:&lt;br /&gt;&lt;em&gt;Menu Bar &amp;gt; View &amp;gt; Select &amp;gt; Select Single Feature&lt;/em&gt; OR&lt;br /&gt;in the top toolbar, select &lt;em&gt;Select Single Feature&lt;/em&gt;&lt;/li&gt;
@@ -3823,7 +4244,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
       &lt;li&gt;Format: ESRI Shapefile&lt;/li&gt;
       &lt;li&gt;Save as: washington.shp&lt;/li&gt;
       &lt;li&gt;Encoding: UTF-8&lt;/li&gt;
-      &lt;li&gt;CRS: 
+      &lt;li&gt;CRS:
         &lt;ul&gt;
           &lt;li&gt;Selected CRS&lt;/li&gt;
           &lt;li&gt;Browse &amp;gt; &lt;em&gt;NAD83(HARN)/Washington South (ftUS) EPSG:2927&lt;/em&gt;&lt;br /&gt;
@@ -3892,7 +4313,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h1 id=&quot;data-hygiene&quot;&gt;Data Hygiene&lt;/h1&gt;
 
-&lt;p&gt;In tutorials, and exercises it is common to receive prepared data sets which will easily fit into a workflow. Unfortunately, in real life, data comes in all shapes and sizes, and more often than not, the data we need has quality, consistency or format issues. These can be products of data entry, sensor calibrations, or legacy formats. &lt;/p&gt;
+&lt;p&gt;In tutorials, and exercises it is common to receive prepared data sets which will easily fit into a workflow. Unfortunately, in real life, data comes in all shapes and sizes, and more often than not, the data we need has quality, consistency or format issues. These can be products of data entry, sensor calibrations, or legacy formats.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -3904,7 +4325,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h2 id=&quot;keep-a-clean-workspace&quot;&gt;Keep a clean workspace&lt;/h2&gt;
 
-&lt;p&gt;Its hard to keep anything clean in a dirty kitchen. The same principle applies to our workspaces. If we are testing pieces of a workflow, it will be difficult to prevent ourself from creating an abundance of files, but the difference between a clean workspace and a messy one can be as simple as using standards with our naming conventions. &lt;/p&gt;
+&lt;p&gt;Its hard to keep anything clean in a dirty kitchen. The same principle applies to our workspaces. If we are testing pieces of a workflow, it will be difficult to prevent ourself from creating an abundance of files, but the difference between a clean workspace and a messy one can be as simple as using standards with our naming conventions.&lt;/p&gt;
 
 &lt;p&gt;If we find workspace starts to look like:&lt;/p&gt;
 
@@ -3919,7 +4340,7 @@ data_processed.csv
 data_FINAL.csv
 USE_THIS_data.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;We might be guilty of data negligence. &lt;/p&gt;
+&lt;p&gt;We might be guilty of data negligence.&lt;/p&gt;
 
 &lt;p&gt;If we are doing testing, it is good practice to create a scratch(temp) workspace to hold all of the intermediate files being created.&lt;/p&gt;
 
@@ -3957,9 +4378,9 @@ USE_THIS_data.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;keep-it-simple&quot;&gt;Keep it simple&lt;/h2&gt;
 
-&lt;p&gt;If we have a lot of similar data, it can be easy for us to stuff everything into a single table that we can scan through. This can be good when datasets are still relatively small, but once we are dealing with 30+ columns it can become a huge pain to understand our datasets. &lt;/p&gt;
+&lt;p&gt;If we have a lot of similar data, it can be easy for us to stuff everything into a single table that we can scan through. This can be good when datasets are still relatively small, but once we are dealing with 30+ columns it can become a huge pain to understand our datasets.&lt;/p&gt;
 
-&lt;p&gt;Once our datasets start growing, we should check to make sure we actually need all the data we have. If we don’t, it can be easy to become a data hoarder. &lt;/p&gt;
+&lt;p&gt;Once our datasets start growing, we should check to make sure we actually need all the data we have. If we don’t, it can be easy to become a data hoarder.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Just because we can fit everything doesn’t mean we should.&lt;/strong&gt;&lt;/p&gt;
 
@@ -4036,7 +4457,7 @@ USE_THIS_data.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;Recognize a few spatial relationships&lt;/li&gt;
-  &lt;li&gt;Understand how to clip a raster  &lt;/li&gt;
+  &lt;li&gt;Understand how to clip a raster&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -4045,7 +4466,7 @@ USE_THIS_data.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;relational-operations&quot;&gt;Relational Operations&lt;/h2&gt;
 
-&lt;p&gt;Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;/p&gt;
+&lt;p&gt;Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;table border=&quot;0&quot; align=&quot;center&quot;&gt;
   &lt;tr&gt;
@@ -4153,7 +4574,7 @@ USE_THIS_data.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;spatial-predicates&quot;&gt;Spatial Predicates&lt;/h3&gt;
-&lt;p&gt;The above figure demonstrates the criteria outlined by the Dimensionally Extended Nine-Intersection Model(DE-9IM). The matrix is used to outline specific spatial relationships or predicates which are more accessible to interpretaion. These named spatial predicates are also used by spatial queryies to selet subsets of geometrys that fit in one spatial predicate. &lt;/p&gt;
+&lt;p&gt;The above figure demonstrates the criteria outlined by the Dimensionally Extended Nine-Intersection Model(DE-9IM). The matrix is used to outline specific spatial relationships or predicates which are more accessible to interpretaion. These named spatial predicates are also used by spatial queryies to selet subsets of geometrys that fit in one spatial predicate.&lt;/p&gt;
 
 &lt;p&gt;Here is a quick outline of the Spatial Predicates&lt;/p&gt;
 
@@ -4162,7 +4583,7 @@ USE_THIS_data.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;dd&gt;The two geometric objects are spatially equal meaning, they represent the same geometry (congruent in geometric terms)&lt;/dd&gt;
   &lt;dt&gt;Disjoint&lt;/dt&gt;
   &lt;dd&gt;The two geometric objects share no points in common, the two objects are completely separate&lt;/dd&gt;
-  &lt;dt&gt;Intersects &lt;/dt&gt;
+  &lt;dt&gt;Intersects&lt;/dt&gt;
   &lt;dd&gt;The two geometric objects have at least one point in common&lt;/dd&gt;
   &lt;dt&gt;Touches&lt;/dt&gt;
   &lt;dd&gt;The two geometric objects have at least one boundary point in common, but no interior points&lt;/dd&gt;
@@ -4186,7 +4607,7 @@ USE_THIS_data.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;dl&gt;
   &lt;dt&gt;Distance&lt;/dt&gt;
-  &lt;dd&gt;Measures the shortest distance between two geometries. &lt;/dd&gt;
+  &lt;dd&gt;Measures the shortest distance between two geometries.&lt;/dd&gt;
   &lt;dt&gt;Buffer&lt;/dt&gt;
   &lt;dd&gt;Creates a geometric object that represents all points within a given distance from the given geometry&lt;/dd&gt;
   &lt;dt&gt;Convex Hull&lt;/dt&gt;
@@ -4212,19 +4633,19 @@ USE_THIS_data.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       &lt;li&gt;Residential areas with past landslide&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Union 
+  &lt;li&gt;Union
     &lt;ul&gt;
       &lt;li&gt;Merging census data for two states in a single layer (Useful for studying phenomena that do not respect political boundaries)&lt;/li&gt;
       &lt;li&gt;Merging state boundaries for Canada, U.S. and Mexico into a North American dataset (GADM makes this a breeze)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Buffer 
+  &lt;li&gt;Buffer
     &lt;ul&gt;
       &lt;li&gt;Instagram posts vs within 100m of a local restaurant&lt;/li&gt;
       &lt;li&gt;Tweets vs within 1km of a football stadium&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Convex Hull 
+  &lt;li&gt;Convex Hull
     &lt;ul&gt;
       &lt;li&gt;Bounding boxes, circles&lt;/li&gt;
       &lt;li&gt;Range modeling for small data sets&lt;/li&gt;
@@ -4379,7 +4800,7 @@ USE_THIS_data.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;View Metadata in QGIS &lt;em&gt;Right-click layer &amp;gt; Properties &amp;gt; Metadata&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;General: &lt;/p&gt;
+&lt;p&gt;General:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Storage type&lt;/li&gt;
@@ -4391,7 +4812,7 @@ USE_THIS_data.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;li&gt;Author or point of contact&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Extent: &lt;/p&gt;
+&lt;p&gt;Extent:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;(xMin, yMin), (xMax,yMax)&lt;/li&gt;
@@ -4424,14 +4845,14 @@ USE_THIS_data.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;dt&gt;&lt;a href=&quot;http://docs.opengeospatial.org/is/09-025e2/09-025r2.html#1&quot;&gt;Web Feature Service (WFS)&lt;/a&gt; - Useful for modifying features in remote datasets&lt;/dt&gt;
   &lt;dd&gt;The WFS represents a change in the way geographic information is created, modified, and exchanged on the Internet. Rather than sharing geographic information at the file level using the File Transfer Protocol(FTP), the WFS offers direct fine-grained access to geographic information at the feature and feature property level. Web features services allow clients to only retrieve or modify the data they are seeking, rather than retrieving a file that contains the data they are seeking and possibly much more&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
-  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wms&quot;&gt;Web Map Service (WMS)&lt;/a&gt; - Useful for visualizing remote datasets &lt;/dt&gt;
+  &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wms&quot;&gt;Web Map Service (WMS)&lt;/a&gt; - Useful for visualizing remote datasets&lt;/dt&gt;
   &lt;dd&gt;The Web Map Service Interface Standard provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. The WMS response will return one or more geo-registered map images (JPEG, PNG, etc) to be display in a browser application&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
   &lt;dt&gt;&lt;a href=&quot;http://www.opengeospatial.org/standards/wps&quot;&gt;Web Processing Service (WPS)&lt;/a&gt; - Utilizes remote resources for computation&lt;/dt&gt;
   &lt;dd&gt;THe WPS Standard provides rule for standardizing inputs and outputs for geospatial processing services, such as polygon overlay. The standard also defines how a client can request the execution of a process and how the output of the process is handled&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. 
 &lt;br /&gt;&lt;br /&gt;&lt;/dd&gt;
   &lt;dt&gt;&lt;a href=&quot;http://www.opendap.org&quot;&gt;OPeNDAP&lt;/a&gt;&lt;/dt&gt;
-  &lt;dd&gt;OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations. &lt;/dd&gt;
+  &lt;dd&gt;OpeNDAP, the original developer of the Data Access Protocol, allows users to access data over the internet&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;. OPeNDAP software requests data through URL. OPeNDAP services allow users to query and subset datasets that would be too large to download/manipulate locally. There are a variety of software programs that are OPeNDAP enabled, which allows users to combine local and remote data for visualizations.&lt;/dd&gt;
 &lt;/dl&gt;
 
 &lt;p&gt;A few examples of these applications are:&lt;/p&gt;
@@ -4473,7 +4894,7 @@ USE_THIS_data.csv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;objectves&quot;&gt;&lt;strong&gt;Objectves:&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;Understanding how to assess data sources &lt;/li&gt;
+  &lt;li&gt;Understanding how to assess data sources&lt;/li&gt;
   &lt;li&gt;Recognize credible data sources&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -4561,7 +4982,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;ul&gt;
   &lt;li&gt;
     &lt;dl&gt;
-      &lt;dt&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger.html&quot;&gt;Topologically Integrated Geographic Encoding and Referencing (TIGER) Products&lt;/a&gt; &lt;/dt&gt;
+      &lt;dt&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger.html&quot;&gt;Topologically Integrated Geographic Encoding and Referencing (TIGER) Products&lt;/a&gt;&lt;/dt&gt;
       &lt;dd&gt;TIGER products are spatial extracts from the Census Bureau’s MAF/TIGER database containing features such as roads, railroads, rivers, as well as legal and statistical geographic areas. The Census Bureau offers (these products) in several file types&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.”&lt;/dd&gt;
     &lt;/dl&gt;
   &lt;/li&gt;
@@ -4635,7 +5056,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;http://www.gadm.org  &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;http://www.gadm.org &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
       &lt;p&gt;http://www.census.gov/geo/maps-data/data/tiger.html &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
@@ -4818,7 +5239,7 @@ Now open the Census tracts TIGER data folder. The XMl file contain the metadata 
 
 &lt;h3 id=&quot;what-this-exercise-covers&quot;&gt;What this exercise covers&lt;/h3&gt;
 
-&lt;p&gt;Downloading vector and raster data:  &lt;/p&gt;
+&lt;p&gt;Downloading vector and raster data:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Vector: administrative boundary data for the state of Washington from Global Administrative Areas&lt;/li&gt;
@@ -4918,7 +5339,7 @@ Now open the Census tracts TIGER data folder. The XMl file contain the metadata 
 
 &lt;h2 id=&quot;do-they-have-a-point&quot;&gt;Do they have a point?&lt;/h2&gt;
 
-&lt;p&gt;There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of data types, which are each inter-related. Spatial data is also dependent on a few factors such as projection, ellipsoid, and unit of measure. Spatial data is naturally multi-dimensional but needs to normally be passed through a visualization application to understand. Finally, a sticking point for spatial data has been how should the data be organized effectively and how can the inherent relationships between objects be tested efficiently. &lt;/p&gt;
+&lt;p&gt;There are definitely a few elements that set spatial data apart from other data types. One of the first differences is that spatial data comes in a variety of data types, which are each inter-related. Spatial data is also dependent on a few factors such as projection, ellipsoid, and unit of measure. Spatial data is naturally multi-dimensional but needs to normally be passed through a visualization application to understand. Finally, a sticking point for spatial data has been how should the data be organized effectively and how can the inherent relationships between objects be tested efficiently.&lt;/p&gt;
 
 &lt;p&gt;The specification helps to define a few words useful when dealing with spatial data.&lt;/p&gt;
 
@@ -4939,11 +5360,11 @@ Now open the Census tracts TIGER data folder. The XMl file contain the metadata 
 &lt;p&gt;Some of the most used spatial data types are:&lt;/p&gt;
 
 &lt;dl&gt;
-  &lt;dt&gt;Point &lt;/dt&gt;
+  &lt;dt&gt;Point&lt;/dt&gt;
   &lt;dd&gt;A Point is a 0-dimensional geometric object and represents a single location in coordinate space. A Point has an x-coordinate value, and a y-coordinate value. If called for by the associated Spatial Reference System, it may also have coordinate values for z and m.&lt;/dd&gt;
-  &lt;dt&gt;LineString &lt;/dt&gt;
+  &lt;dt&gt;LineString&lt;/dt&gt;
   &lt;dd&gt;A linestring is a Curve with linear interpolation between Points. Each consecutive pair of points defines aLine Segment. A  line is a LineString with exactly 2 Points. A Linear Ring is a LineString is a LieString that is both closed and simple. A linestring is a series of connected points. These points act as vertices or nodes and are connected by curves. Each curve is assigned a start point and end point whcih represents the cardinality of the linestring. This cardinality is used to designate an order from the starting point to the end point.&lt;/dd&gt;
-  &lt;dt&gt;Polygon &lt;/dt&gt;
+  &lt;dt&gt;Polygon&lt;/dt&gt;
   &lt;dd&gt;A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. Polygons are topologically closed. THe boundary of a Polygon consists of a set of LinearRings that make up its exterior and interior boundaries. No two Rings in the boundary cross and the Rings in the boundary of a Polygon may intersect but only as a tangent.  A series of connected line strings&lt;/dd&gt;
   &lt;dt&gt;Raster&lt;/dt&gt;
   &lt;dd&gt;A continuous surface made up of regular cells which hold values. Rasters are similar to matrices.&lt;/dd&gt;
@@ -5007,7 +5428,7 @@ Now open the Census tracts TIGER data folder. The XMl file contain the metadata 
   &lt;p&gt;“Everything is related to everything else, but near things are more related than distant things” - Waldo Tobler&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Tobler’s First law of Geography is the fundamental basis of Spatial Analysis. &lt;/p&gt;
+&lt;p&gt;Tobler’s First law of Geography is the fundamental basis of Spatial Analysis.&lt;/p&gt;
 
 &lt;p&gt;This spatial dependence required the study of spatial effects and their influence on statistical studies.&lt;/p&gt;
 
@@ -5021,7 +5442,7 @@ Now open the Census tracts TIGER data folder. The XMl file contain the metadata 
 
 &lt;h3 id=&quot;sorting-and-indexes&quot;&gt;Sorting and Indexes&lt;/h3&gt;
 
-&lt;p&gt;Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type. &lt;/p&gt;
+&lt;p&gt;Sorting data alphabetically and numerically comes pretty naturally. In fact, many databases come with the option sort either Ascending or Descending without specifying the data type.&lt;/p&gt;
 
 &lt;p&gt;Sorting spatial data poses an interesting problem. Do you sort from North to south? West to East? What happens if you are sorting lines or polygons that overlap?&lt;/p&gt;
 
@@ -5029,7 +5450,7 @@ Now open the Census tracts TIGER data folder. The XMl file contain the metadata 
 
 &lt;p&gt;The R-Tree index was proposed by Antoine Guttman in 1984.&lt;/p&gt;
 
-&lt;p&gt;In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features. &lt;/p&gt;
+&lt;p&gt;In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features.&lt;/p&gt;
 
 &lt;p&gt;&lt;a title=&quot;By Skinkie, w:en:Radim Baca (Own work) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AR-tree.svg&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;R-tree&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/R-tree.svg/512px-R-tree.svg.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -5067,7 +5488,7 @@ Now open the Census tracts TIGER data folder. The XMl file contain the metadata 
 
 &lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;Understand the difference between a raster and a vector dataset. &lt;/li&gt;
+  &lt;li&gt;Understand the difference between a raster and a vector dataset.&lt;/li&gt;
   &lt;li&gt;Recognize a few spatial data formats.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -5124,7 +5545,7 @@ Now open the Census tracts TIGER data folder. The XMl file contain the metadata 
 &lt;p&gt;Projections characterize spatial data by setting coordinate reference systems for each data set.&lt;/p&gt;
 
 &lt;p&gt;Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
- will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth&#39;s image onto a plane. &lt;/p&gt;
+ will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth&#39;s image onto a plane.&lt;/p&gt;
 
 &lt;h4 id=&quot;distortion&quot;&gt;Distortion&lt;/h4&gt;
 
@@ -5136,7 +5557,7 @@ Now open the Census tracts TIGER data folder. The XMl file contain the metadata 
 
 &lt;p&gt;&lt;a title=&quot;By Geek3 (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ASphere_wireframe.svg&quot;&gt;&lt;img src=&quot;/bootcamp//assets/images/coordinate-grid.png&quot; alt=&quot;coordinateGrid&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Projections are another name for projected coordinate systems. These projected coordinate systems compose a family of Coordinate Reference Systems. &lt;/p&gt;
+&lt;p&gt;Projections are another name for projected coordinate systems. These projected coordinate systems compose a family of Coordinate Reference Systems.&lt;/p&gt;
 
 &lt;p&gt;Projected coordinate systems are based off of Geodetic Coordinate Systems. These Geodetic coordinate systems are ellipsoidal models aimed at representing the aspherical nature of the earth.&lt;/p&gt;
 
@@ -5146,7 +5567,7 @@ Now open the Census tracts TIGER data folder. The XMl file contain the metadata 
 
 &lt;p&gt;&lt;a title=&quot;By NASA/JPL/University of Texas Center for Space Research. [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AEarth_gravity.png&quot;&gt;&lt;img src=&quot;/bootcamp//assets/images/geoid.png&quot; alt=&quot;geoid&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Although we normally see the earth represented as a sphere, its shape is actually more irregular. The earth has an equatorial bulge and various other undulations due to tectonics, volcanics and the earth’s rotation. &lt;/p&gt;
+&lt;p&gt;Although we normally see the earth represented as a sphere, its shape is actually more irregular. The earth has an equatorial bulge and various other undulations due to tectonics, volcanics and the earth’s rotation.&lt;/p&gt;
 
 &lt;p&gt;The changes in the surface mass are the subject matter of Geodesy. Geodesists use differences in the vertical direction of gravity along with crustal, tidal, and polar motion to determine exact measurements of the Geoid. Geometric computations can become unwieldy processes due to the complicated nature of the Geoid surface. In order approximate the geoid while making geometric calculation feasible, reference ellipsoids were calculated.&lt;/p&gt;
 
@@ -5160,9 +5581,9 @@ Now open the Census tracts TIGER data folder. The XMl file contain the metadata 
 
 &lt;p&gt;Regional ellipsoids like the North American Datum of 1927 which minimized distortion for the contiguous United States at the expense of more distant regions.&lt;/p&gt;
 
-&lt;p&gt;The modern reference ellipsoid, &lt;strong&gt;WGS 84&lt;/strong&gt; was developed using satellite measurements and past Geodetic System parameters, and has been the reference ellipsoid used by the Global Positioning System. &lt;/p&gt;
+&lt;p&gt;The modern reference ellipsoid, &lt;strong&gt;WGS 84&lt;/strong&gt; was developed using satellite measurements and past Geodetic System parameters, and has been the reference ellipsoid used by the Global Positioning System.&lt;/p&gt;
 
-&lt;p&gt;Most modern projections will use WGS 84 as the underlying reference ellipsoid, but it is important to check that your projection is defined correctly if you are dealing with old datasets. &lt;/p&gt;
+&lt;p&gt;Most modern projections will use WGS 84 as the underlying reference ellipsoid, but it is important to check that your projection is defined correctly if you are dealing with old datasets.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -5218,7 +5639,7 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Cylindrical projections are created by projection a sphere onto a cylinder. Cylindrical projections suffer the least distortion along the line that it intersects the sphere, which is often around the Equator. This makes cylindrical projections useful for mapping tropical data. Examples include Mercator and Universal Transverse Mercator. &lt;/p&gt;
+&lt;p&gt;Cylindrical projections are created by projection a sphere onto a cylinder. Cylindrical projections suffer the least distortion along the line that it intersects the sphere, which is often around the Equator. This makes cylindrical projections useful for mapping tropical data. Examples include Mercator and Universal Transverse Mercator.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Polyhedral&lt;/strong&gt;&lt;/p&gt;
 
@@ -5235,11 +5656,11 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
 
 &lt;h3 id=&quot;checking-the-projection&quot;&gt;Checking the projection&lt;/h3&gt;
 
-&lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis. &lt;/p&gt;
+&lt;p&gt;It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.gdal.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/gdalinfo.png&quot; alt=&quot;Using GDAL to check projection&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;SpatialReference.org&lt;/a&gt; is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://spatialreference.org&quot; target=&quot;new&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/spatialreference.png&quot; alt=&quot;SpatialReference.org: EPSG:4326&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 

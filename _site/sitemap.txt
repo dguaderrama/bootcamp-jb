@@ -11,6 +11,7 @@ http://104.237.129.71/bootcamp/references/scripts
 http://104.237.129.71/bootcamp/references/tools
 http://104.237.129.71/bootcamp/references/case-study
 http://104.237.129.71/bootcamp/references/vector-analysis
+http://104.237.129.71/bootcamp/references/leaflet
 http://104.237.129.71/bootcamp/applications/qgis
 http://104.237.129.71/bootcamp/applications/grass-gis
 http://104.237.129.71/bootcamp/applications/panoply
