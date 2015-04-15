@@ -7,14 +7,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Installing QGIS</title>
+	<title>Tools</title>
 	<meta name="author" content="Nathan Casler">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src='/bootcamp/assets/js/jquery.hoverIntent.js'></script>
   <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
 	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/" rel="alternate" title="Installing QGIS" type="application/atom+xml">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Tools" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
   <link href="http://fonts.googleapis.com/css?family=League+Gothic:400,700" rel='stylesheet' type='text/css'>	
   <link href="http://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet' type='text/css'>	
@@ -74,7 +74,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/setup/qgis-install" class="active">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
@@ -450,7 +450,7 @@
     
       
       	
-      	<li><a href="/bootcamp/more%20reading.../tools">Tools</a></li>
+      	<li class="active"><a href="/bootcamp/more%20reading.../tools" class="active">Tools</a></li>
       	
       
     
@@ -498,7 +498,7 @@
         <div id="header-overlay">
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-            <h1 class="h2 entry-title">Installing QGIS</h1> 
+            <h1 class="h2 entry-title">Tools</h1> 
             <!--            <h2 class="h2 entry-title"></h2> -->
 
 
@@ -524,7 +524,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/setup/qgis-install" class="active">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
@@ -894,7 +894,7 @@
     
       
       	
-      	<li><a href="/bootcamp/more%20reading.../tools">Tools</a></li>
+      	<li class="active"><a href="/bootcamp/more%20reading.../tools" class="active">Tools</a></li>
       	
       
     
@@ -952,7 +952,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/setup/qgis-install" class="active">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
@@ -1322,7 +1322,7 @@
     
       
       	
-      	<li><a href="/bootcamp/more%20reading.../tools">Tools</a></li>
+      	<li class="active"><a href="/bootcamp/more%20reading.../tools" class="active">Tools</a></li>
       	
       
     
@@ -1364,48 +1364,52 @@
 
 
 <div class="entry-content content">
-  
-<h1 id="qgis">QGIS</h1>
+  <h3 id="geospatial-data-abstraction-libraryogr-simple-feature-library-gdalogrhttpwwwgdalorg"><a href="http://www.gdal.org">Geospatial Data Abstraction Library/OGR Simple Feature Library (GDAL/OGR)</a></h3>
 
-<h4 id="this-section-will-walk-you-through-the-process-of-installing-qgis">This section will walk you through the process of installing QGIS.</h4>
+<p><a title="By GDAL Team (http://download.osgeo.org/gdal/) [MIT (http://opensource.org/licenses/mit-license.php), GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AGDALLogoColor.svg"><img width="128" alt="GDALLogoColor" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/GDALLogoColor.svg/128px-GDALLogoColor.svg.png" /></a></p>
 
-<p><img src="/bootcamp//assets/images/qgis-home.png" alt="qgisHome" /></p>
+<p>GDAL is a translator library for raster and vector data formats under and <a href="http://trac.osgeo.org/wikiFAQGeneral#WhatlicensedoesGDALOGRuse">X/MIT</a> style <a href="http://www.opensource.org">Open Source</a> license by the <a href="http://www.osgeo.org">Open Source Geospatial Foundation</a>. GDAL utilizes abstract data models for raster and vector data, which allow GDAL to translate between such a variety of formats. The GDAL library also provides a variety of command-line utilities for raster and vector manipulation. A few of the utilities are:</p>
 
-<p>In order to demonstrate the lessons, we will need to download and install QGIS</p>
+<ul>
+  <li><a href="http://www.gdal.org/gdalinfo.html">gdalinfo</a> - Provides a variety of information about a supported raster dataset</li>
+  <li><a href="http://www.gdal.org/gdal_translate.html">gdal_translate</a> - Translates raster data between different formats</li>
+  <li><a href="http://www.gdal.org/gdalwarp.html">gdalwarp</a> - Reprojection and manipulates rasters datasets</li>
+  <li><a href="http://www.gdal.org/gdaldem.html">gdaldem</a> - Methods for analyzing and visualizing Digital Elevation Models (e.g. slope, hillshade, aspect,color-relief)</li>
+  <li><a href="http://www.gdal.org/gdal_polygonize.html">gdal_polygonize</a> - Converts a raster dataset into a polygonal vector dataset</li>
+  <li><a href="http://www.gdal.org/gdal2tiles.html">gdal2tiles</a> - Creates a directory with Tile Mapping Service(TMS) tiles, KMLs and simple web viewers</li>
+  <li><a href="http://www.gdal.org/ogrinfo.html">ogrinfo</a> - Provides a variety of information about a supported vector dataset</li>
+  <li><a href="http://gdal.org/ogr2ogr.html">ogr2ogr</a> - Translates a vector dataset between different formats</li>
+  <li><a href="http://gdal.org/ogrlineref.html">ogrlineref</a> - Create or query a linear referenced file from input data</li>
+</ul>
 
-<p>The QGIS download can be found <a href="http://www.qgis.org/en/site/forusers/download.html">here.</a></p>
+<p><br /></p>
 
-<p>(Note: This installation will require 1.3GB of disk space and can take 10-20 minutes to install.)</p>
+<h3 id="the-r-project-for-statistical-computinghttpwwwr-projectorg"><a href="http://www.r-project.org">The R Project for Statistical Computing</a></h3>
 
-<p>The website should detect your Operating System and show the installers available for your platform.</p>
+<p><a title="By Towolf-en (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ARlogo-unofficial-vector-editable.svg"><img width="128" alt="Rlogo-unofficial-vector-editable" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Rlogo-unofficial-vector-editable.svg/128px-Rlogo-unofficial-vector-editable.svg.png" /></a></p>
 
-<h3 id="windows">Windows</h3>
+<p>R is a programming language descended from the S statistical language. R has a strong presence in the statistical/data science fields due to ease of use and speedy prototyping. Since R treats all values as vectors, it has a natural strengths with manipulating tabular data. With thanks to Roger Bivand, R has grown strong spatial capabilities. The book <a href="http://www.springerlink.com/content/m5171462720p">Applied Spatial Data in R</a> provides a good background on the different libraries, data formats and functions available in R, but R is continually growing so it is good to check the <a href="http://cran.r-project.org">Comprehensive R Archive Network (CRAN)</a> for additional libraries.</p>
 
-<p><img src="/bootcamp//assets/images/qgis-downloads.png" alt="qgis-downloads" /></p>
+<p>Some useful spatial libraries in R include:</p>
 
-<p>If you are using windows, select the <em>QGIS Standalone Installer</em>, for the some of our plugins to function, you will need a 64-bit installation. If you are using a 32-bit windows system, you may need to skip a few of the exercises in the future.</p>
+<ul>
+  <li><a href="http://cran.r-projection.org/web/packages/sp">sp</a> - Classes and methods for spatial data</li>
+  <li><a href="http://cran.r-project.org/web/packages/rgdal">rgdal</a> - Bindings for the Geospatial Data Abstraction Library</li>
+  <li><a href="http://cran.r-project.org/web/packages/raster">raster</a> - Geographic data analysis and modeling</li>
+  <li><a href="http://cran.r-project.org/web/packages/spdep">spdep</a> - Spatial Dependence: Weighting schemes, statistics, and models</li>
+  <li><a href="http://cran.r-project.org/web/packages/maptools">maptools</a> - Tools for Reading and handling spatial objects</li>
+  <li><a href="http://cran.r-project.org/web/packages/rgeos">rgeos</a> - Interface to Geometry Engine - Open Source (GEOS)</li>
+</ul>
 
-<p>Once your download has finished, click on the download to start the installation wizard.</p>
+<p><br /></p>
 
-<p><img src="/bootcamp//assets/images/qgis-windows-install.png" alt="qgisWindowsInstall" /></p>
+<p>There are several other libraries(<a href="http://geos.osgeo.org">GEOS</a>,<a href="http://grass.osgeo.org">Grass GIS</a>), languages(<a href="http://www.gnu.org/software/bash">Bash</a>,<a href="http://www.python.org">Python</a>, <a href="http://cplusplus.com">C++</a>) useful for manipulating spatial datasets, which are outside our current scope. We can cover these at a later time.</p>
 
-<p>Follow the steps in the Wizard to complete the installation.</p>
+<h3 id="grass-gishttposgeograssorg"><a href="http://osgeo.grass.org">GRASS GIS</a></h3>
 
-<p>We won’t need the sample datasets for our exercises, so you can leave them unchecked during the install.</p>
+<p>The Geographic Resources Analysis Support System(GRASS GIS) is a Geographic Information System used for data management, image processing, graphics production, spatial modeling and visualization of many types of data.</p>
 
-<p><img src="/bootcamp//assets/images/qgis-windows-components.png" alt="qgisWindowsComponents" /></p>
-
-<h3 id="os-x">OS X</h3>
-
-<p>If you are using OS X, make sure to install the <em>GDAL Complete 1.11 framework package</em> before installing QGIS.</p>
-
-<p><img src="/bootcamp//assets/images/gdal-prereq.png" alt="gdalPrereq" /></p>
-
-<h3 id="linux">Linux</h3>
-
-<p>You can find the installation instructions for your distro <a href="http://qgis.org/en/site/forusers/alldownloads.html#linux">here.</a></p>
-
-<p>I would recommend the choosing the stable branch to minimize the risk of running into errors during the exercises.</p>
+<p>GRASS GIS was originally developed by the U.S. Army Construction Engineering Research Laboratories, a branch of the US Army Corp of Engineers. It was originally developed as a tool for land management and environmental planning by the military. GRASS GIS is currently used in academic and commercial settings around the world, as well as many governmental agencies.</p>
 
 
 
@@ -1413,10 +1417,10 @@
 					<div class="meta">
 						<p class="date-publish">
 							Published: 
-							<date class="date-pub" title="1999-12-31T00:00:00-07:00" datetime="1999-12-31T00:00:00-07:00" pubdate>
+							<date class="date-pub" title="2005-12-28T00:00:00-07:00" datetime="2005-12-28T00:00:00-07:00" pubdate>
 							<span class="month"><abbr>December</abbr></span>
-							<span class="day">31</span>
-							<span class="year">1999</span>
+							<span class="day">28</span>
+							<span class="year">2005</span>
 							</date>
 						</p>
 						<ul class="list-category list-linear">
@@ -1427,8 +1431,8 @@
 
   
      
-    	<li><a href="/categories.html#setup-ref">
-    		setup <span>1</span>
+    	<li><a href="/categories.html#more reading...-ref">
+    		more reading... <span>9</span>
     	</a></li>
     
   
@@ -1443,9 +1447,11 @@
 
   
      
-    	<li><a href="/tags.html#intro-ref">intro <span>5</span></a></li>
+    	<li><a href="/tags.html#gdal-ref">gdal <span>1</span></a></li>
      
-    	<li><a href="/tags.html#QGIS-ref">QGIS <span>1</span></a></li>
+    	<li><a href="/tags.html#R-ref">R <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#GRASS GIS-ref">GRASS GIS <span>1</span></a></li>
     
   
 
@@ -1474,9 +1480,13 @@
 					<nav class="pagination">
 						<ul>
 							
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/more%20reading.../panoply" title="View Panoply">&laquo; Panoply</a></li>
 							
 							
-              <li class="next"><a class="internal" rel="next"  href="/bootcamp" title="View "> &raquo;</a></li>
+							<li class="pipe"> | </li>
+							
+							
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/show%20your%20results/map-types" title="View Map Types">Map Types &raquo;</a></li>
 							
 						</ul>
 					</nav>
@@ -1525,7 +1535,7 @@
 		};
 	load('//platform.twitter.com/widgets.js', 'tweetjs');
 	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
-	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/setup/qgis-install" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/more%20reading.../tools" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
 	}(document, 'script'));
 </script>
 <script>

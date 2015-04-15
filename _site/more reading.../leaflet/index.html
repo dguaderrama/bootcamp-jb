@@ -7,14 +7,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Installing QGIS</title>
+	<title>Leaflet</title>
 	<meta name="author" content="Nathan Casler">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src='/bootcamp/assets/js/jquery.hoverIntent.js'></script>
   <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
 	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/" rel="alternate" title="Installing QGIS" type="application/atom+xml">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Leaflet" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
   <link href="http://fonts.googleapis.com/css?family=League+Gothic:400,700" rel='stylesheet' type='text/css'>	
   <link href="http://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet' type='text/css'>	
@@ -74,7 +74,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/setup/qgis-install" class="active">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
@@ -474,7 +474,7 @@
     
       
       	
-      	<li><a href="/bootcamp/more%20reading.../leaflet">Leaflet</a></li>
+      	<li class="active"><a href="/bootcamp/more%20reading.../leaflet" class="active">Leaflet</a></li>
       	
       
     
@@ -498,7 +498,7 @@
         <div id="header-overlay">
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-            <h1 class="h2 entry-title">Installing QGIS</h1> 
+            <h1 class="h2 entry-title">Leaflet</h1> 
             <!--            <h2 class="h2 entry-title"></h2> -->
 
 
@@ -524,7 +524,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/setup/qgis-install" class="active">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
@@ -918,7 +918,7 @@
     
       
       	
-      	<li><a href="/bootcamp/more%20reading.../leaflet">Leaflet</a></li>
+      	<li class="active"><a href="/bootcamp/more%20reading.../leaflet" class="active">Leaflet</a></li>
       	
       
     
@@ -952,7 +952,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/setup/qgis-install" class="active">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
@@ -1346,7 +1346,7 @@
     
       
       	
-      	<li><a href="/bootcamp/more%20reading.../leaflet">Leaflet</a></li>
+      	<li class="active"><a href="/bootcamp/more%20reading.../leaflet" class="active">Leaflet</a></li>
       	
       
     
@@ -1365,58 +1365,428 @@
 
 <div class="entry-content content">
   
-<h1 id="qgis">QGIS</h1>
+<head>
+<meta charset="utf-8" />
 
-<h4 id="this-section-will-walk-you-through-the-process-of-installing-qgis">This section will walk you through the process of installing QGIS.</h4>
+ <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+ <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+ <style>
 
-<p><img src="/bootcamp//assets/images/qgis-home.png" alt="qgisHome" /></p>
+#map { 
+  height: 500px;
+  width: auto;
+}
 
-<p>In order to demonstrate the lessons, we will need to download and install QGIS</p>
+ </style>
 
-<p>The QGIS download can be found <a href="http://www.qgis.org/en/site/forusers/download.html">here.</a></p>
+</head>
 
-<p>(Note: This installation will require 1.3GB of disk space and can take 10-20 minutes to install.)</p>
+<body>
 
-<p>The website should detect your Operating System and show the installers available for your platform.</p>
+<p><br /></p>
 
-<h3 id="windows">Windows</h3>
+<h1>Leaflet.js</h1>
 
-<p><img src="/bootcamp//assets/images/qgis-downloads.png" alt="qgis-downloads" /></p>
+<p><img src="/bootcamp/assets/images/leaflet/logo-leaflet.png" /></p>
 
-<p>If you are using windows, select the <em>QGIS Standalone Installer</em>, for the some of our plugins to function, you will need a 64-bit installation. If you are using a 32-bit windows system, you may need to skip a few of the exercises in the future.</p>
+<p>This exercise covers the basics of developing a simple Leaflet.js web map. This web map will be stored locally ('localhost', or on your computer) but will still require an internet connection to access the Leaflet source. This exercise has been developed to allow for even the most entry-level web developer. To extend your script into something interactive requires a little bit of knowledge in JavaScript.</p>
 
-<p>Once your download has finished, click on the download to start the installation wizard.</p>
+<p>Also, we're serving spatial layers locally so you can't share your map over the web.</p>
 
-<p><img src="/bootcamp//assets/images/qgis-windows-install.png" alt="qgisWindowsInstall" /></p>
+<h2>Objectives:</h2>
+<ul>
+  <li>Download US States TIGER shapefile</li>
+  <li>Convert shapefile into GeoJSON</li>
+  <li>Write simple HTML document with Leaflet basemap</li>
+  <li>Overlay GeoJSON file on Leaflet basemap</li>
+</ul>
 
-<p>Follow the steps in the Wizard to complete the installation.</p>
+<h2>Requirements:</h2>
+<ul>
+  <li>An internet connection is critical. You'll be referencing and loading the remote Leaflet scripts.</li>
+  <li>Some HTML, CSS, and JavaScript are a plus.</li>
+  <li>A text editor (Notepad++, notepad, Sublime Text Editor, etc..) for modifying our code.</li>
+</ul>
 
-<p>We won’t need the sample datasets for our exercises, so you can leave them unchecked during the install.</p>
+<h2>Resources:</h2>
+<ul>
+  <li><a href="http://www.w3schools.com/">w3Schools.com - web development reference</a></li>
+  <li><a href="http://leafletjs.com/reference.html">Leaflet API Reference</a></li>
+</ul>
 
-<p><img src="/bootcamp//assets/images/qgis-windows-components.png" alt="qgisWindowsComponents" /></p>
+<h2>Procedures:</h2>
 
-<h3 id="os-x">OS X</h3>
+<p><a name="1"></a></p>
 
-<p>If you are using OS X, make sure to install the <em>GDAL Complete 1.11 framework package</em> before installing QGIS.</p>
+<h3>1. Working Directory</h3>
 
-<p><img src="/bootcamp//assets/images/gdal-prereq.png" alt="gdalPrereq" /></p>
+<ul>
+  <li>Create a new working diretory, this is where you will store your webpage documents and data. This is called the site root. We won't need additional directories for this exercise but if you've opened up the leaflet-us-states-source.html you're able to see the site structure for these exercises. The Leaflet HTML document will depend on your folder structures- this will be explained later.</li>
+</ul>
 
-<h3 id="linux">Linux</h3>
+<h3>2. Download US States TIGER shapefile</h3>
 
-<p>You can find the installation instructions for your distro <a href="http://qgis.org/en/site/forusers/alldownloads.html#linux">here.</a></p>
+<ol>
+  <li>Navigate to the Census TIGER site and download the US States shapefile at 500k resolution level:<br /><a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_state.html">https://www.census.gov/geo/maps-data/data/cbf/cbf_state.html</a></li>
+  <li>Save or move this file into your working directory and unzip it.</li>
+</ol>
 
-<p>I would recommend the choosing the stable branch to minimize the risk of running into errors during the exercises.</p>
+<h3>3. Create GeoJSON file</h3>
 
+<blockquote>
+  <p>GeoJSON is a format for encoding a variety of geographic data structures - <a href="http://geojson.org/">geojson.org</a></p>
+</blockquote>
+
+<p>GeoJSON is similar to a shapfile in that it stores points, line strings, and polygons. Coordinates in latitude and longitude are stored for each point. Remember, points connect lines and polygons. Below is a view of the tracts-housing-values.shp in GeoJSON format.</p>
+
+<img src="/bootcamp/assets/images/leaflet/geojson.png" />
+
+<p><a href="http://spatialreference.org/ref/sr-org/6864/">EPSG:3857</a> is the most common CRS for online maps and uses Spherical Mercator projections. This is used by almost all free and commercial tile providers. See <a href="http://leafletjs.com/reference.html#icrs">Leaflet ICRS for more info</a>. We're safe with just using our <a href="http://spatialreference.org/ref/epsg/4269/">EPSG:4269</a> for this exercise (it's what the Census provided).</p>
+
+<ol>
+  <li>Load US States shapefile into QGIS (cb_2013_us_state_500k.shp)</li>
+  <li>Save As .geojson into your working directory:</li>
+    <ol>
+      <li><em>Right-click layer &gt; Save As</em></li>
+      <li>Configure inputs as follows:<br />
+      Format: <strong>GeoJSON</strong><br />
+      Save As: <strong>us_states.geojson</strong>
+      CRS: default EPSG:4269 is acceptable<br /><br />
+      <img src="/bootcamp/assets/images/leaflet/export-geojson.png" />
+      </li>
+    </ol>
+  <li>Rename us_states.geojson to us_states.js</li>
+  <li>Open us_states.js in a text editor (not Microsoft Word!) and create a JavaScript variable to call our US States data. The following JavaScript <em>must</em> be entered correctly, one small error and you will not be loading a layer into Leaflet:<br />
+    <ol>
+      <li>Before creating the us_states variable, I'll explain in simple terms. You don't want to dump 25MB of GeoJSON code into your single-page web map document. We're going to reference an external source to call the GeoJSON code- the web browser loads all referenced files from the HEAD. So creating a variable in the us_states.js file will load properly when we open our leaflet.html file.
+      <li>Create us_states variable:<br /><br />
+      <div>
+        
+          <code>
+            <span>var us_states = [</span><br />
+            <span>// your geojson is here</span><br />
+            <span>// don't actually write anything with the '//' line-prefix</span><br />
+            <span>// it's a comment</span><br />
+            <span>// unless you want to write comments, of course</span><br />
+            <span>];</span>
+          </code>
+        
+      </div>
+      <p>The GeoJSON code is within "features". Be sure the top of your us_states.js looks just like the code below. We've just added the code highlighted in green:</p>
+      <img src="/bootcamp/assets/images/leaflet/var-us-states.png" /><br />
+      <img src="/bootcamp/assets/images/leaflet/var-us-states-2.png" />
+      </li>
+      <li>So by this step, you should have a file named us_states.js with a us_states variable, and full of sptail data in GeoJSON format, that's stored in your working director.</li>
+      </li>
+    </ol>
+    </li>
+</ol>
+
+<h3>4. Create HTML document</h3>
+
+HTML documents provde the content and resources to your web browser to indicate what to render on your screen.
+
+<ol>
+  <li>Open text editor (not Microsoft Word!)</li>
+  <li>Copy and paste HTML skeleton. It's made up of the basic HTML tags. HTML elements are explained below:<br />
+<div>
+<code>
+<span>&lt;!DOCTYPE html&gt;</span>
+<br />
+<span>&lt;html&gt;</span>
+<br />
+<span>&lt;head&gt;</span>
+<br />
+<span>&lt;/head&gt;</span>
+<br />
+<span>&lt;body&gt;</span>
+<br />
+<span>&lt;/body&gt;</span>
+<br />
+<span>&lt;/html&gt;</span>
+<br />
+</code>
+</div>
+<ul>
+<li>!DOCTYPE indicates to the browser of the document type. In this case, it's an HTML document.</li>
+<li>HTML contains all elements and represents the root.</li>
+<li>HEAD provides metadata to the browser.</li>
+<li>SCRIPT is used to import executable scripts from a remote server (typical situation) or you can define script statements within the document.</li>
+<li>STYLE is used to import website styling or define styling within the page. Note, you can also use inline styling.</li>
+<li>BODY is where the content is stored.</li>
+</ul>
+</li>
+<li>Save this document as leaflet.html, inside of your working directory.</li>
+</ol> 
+
+<h3>4. Create Leaflet map</h3>
+
+This next section should be painless. We'll be copying and pasting the code, but each item will still be explained so you'll know what to do the next time you want to develop a Leaflet web map. We'll be copying and pasting in blocks of code, by element sections:
+
+
+<ol>
+  <li>Prepare the HEAD. Below, there are two external files being called to, leaflet.css and leaflet.js. These provide the functionality of the map and styling. There's a STYLE tag that allow us to define the divider height and width so the map may be visible. Copy and paste the following code between your HEAD tags:<br /><br />
+  <div>
+    
+      <code>
+            <span>&lt;meta charset="utf-8"&gt;</span><br />
+            <span>&lt;link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"&gt;</span><br />
+            <span>&lt;script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"&gt;&lt;/script&gt;</span><br />
+            <span>&lt;style&gt;</span><br />
+            <span>  #map {   height: 500px;  width: 700px;}</span><br />
+            <span>&lt;/style&gt;</span>
+      </code>
+    
+  </div>
+  <li>Now for the hard part. The ID of the DIV below is equal to 'map', once we add our JavaScript you'll notice where 'map' is defined. Basically, we're using the DIV as a place to put our map. Copy and paste the following code between the BODY tags:<br /><br />
+  <div>
+     
+       <code>
+          <span>&lt;div id="map"&gt;&lt;/div&gt;</span>
+       </code>
+     
+   </div>     
+  </li>
+  <li>Add JavaScript to make the map function properly. We define 'map' with a center point and a zoom level. The variale grayScale is set to our basemap, which is added to the map with 'addTo.()'. Copy and paste the following code below the map DIV, between the BODY tags:<br /><br />
+  <div>
+    
+      <code>
+        <span>&lt;script&gt;</span><br />
+        <span>var map = L.map('map').setView([47,-100], 3);</span><br />
+        <span>var grayScale = L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+      attribution: 'Map data copywright &lt;a href="http://openstreetmap.org"&gt;OpenStreetMap&lt;/a&gt; contributors, ' +
+        '&lt;a href="http://creativecommons.org/licenses/by-sa/2.0/"&gt;CC-BY-SA&lt;/a&gt;, ' +
+        'Imagery copywright &lt;a href="http://mapbox.com"&gt;Mapbox&lt;/a',
+      id: 'examples.map-20v6611k'
+    });
+</span><br />
+        <span>grayScale.addTo(map);</span><br /> 
+        <span>&lt;/script&gt;</span>
+       </code>
+    
+  </div>
+  </li>
+  <li>Save your leaflet.html document now. Before moving on, test it out by Right-click and open in a web browser. Your view should be the same as what's displayed below. If you've made one small mistake then the script won't run and you won't have a map. <a href="#bottom">See this reference below</a> if you run into any troubles.<br /><br />
+
+<div id="map"></div>
+
+<script>
+
+var map = L.map('map').setView([47,-100],3);
+
+var grayScale = L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+        '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+        'Imagery &copy; <a href="http://mapbox.com">Mapbox</a>',
+      id: 'examples.map-20v6611k'
+    });
+
+grayScale.addTo(map);
+
+
+</script>
+</li>
+<ul>
+  <li><a href="#bottom">Go to the bottom of this document to view the full code. Click here.</a>
+
+
+<h3>5. Add layer to Leafet map</h3>
+
+<p>There are a few methods to serving spatial data. The method we're using is the most simple, least painful, and easiest method of them all. An ideal method is utelizing a Web Feature Service such as GeoServer but that's deep into the GIS programming world, and requires hours (maybe days) to configure before you can configure some more. But that's neither here nor there..</p>
+
+<p>Now that we know we're not going to configure GeoServer, we can go ahaed and serve our data locally by simply calling our us_states.js script containing our GeoJSON data format that we converted from a shapefile. Serving data locally means that we cannot share our data through the internet. One does not simply serve spatial data on the web..</p>
+
+<p>We're going to continue our trusty copy-and-paste method to add our US States layer.</p>
+
+<ol>
+  <li>Call to the us_states.js script. The following code depends on the us_states.js file to be in the <em>same</em> folder as your leaflet.html. Copy and paste within the HEAD tag:<br />
+  <div>
+    
+      <code>
+        <span>&lt;script src="us_states.js"&gt;&lt;/script&gt;</span>
+      </code>
+    
+  </div>
+  </li>
+  <li>Add the layer to the map. Copy and paste within the SCRIPT tag within the BODY tag, below grayScale.addTo(map);<br />
+  <div>
+    
+      <code>
+        <span>L.geoJson(us_states).addTo(map);</span>
+      </code>
+    
+  </div>
+  </li>
+  <li>
+  <ul>
+    <li>Your new Leaflet web map should look like the image below:<br />
+    <img src="/bootcamp/assets/images/leaflet/us-states.png" />
+    </li>
+  </ul>
+  </li>
+</ol>
+
+
+<hr />
+
+<h2>Additional Learning</h2>
+
+<h3>Washington Census Tracts</h3>
+
+<p>Now that you have a better understanding of QGIS, Leaflet, and GeoJSON, take a shot at visualizing Washington Census tracts (tracts-values-units.shp) in Leaflet. Also, add a functionality that displays the total housing value per tract on-click (in JS words, onClick). The document has already been created so use it as a reference as needed.</p>
+
+<p>Exporting tracts-values-units.shp to .geojson results in a 25MB file. It may run a little slower the US States Leaflet we just made.</p>
+
+<p>Open the leaflet-wa-tracts-source.html in a text editor for a reference.</p>
+
+<h4>Guidance</h4>
+
+<ol>
+<li>Before exporting tracts-values-units.shp into .geojson, calculate a new field named 'Values' that is equal to TotalValues. However, it needs to be calculated into a text field. Leaflet wasn't recognizing TotalValue as a numerical field (JavaScript didn't recognize the child node..).</li>
+<li>Export tracts-values-units.shp to .geojson, name this file wa_tracts.geojson. Then change file extension to .js (wa_tracts.js)</li>
+<li>Open your wa_tracts and make the entire GeoJSON a variable of wa_tracts:<br />
+<div><code>
+<span>var wa_tracts = [ </span>
+<span>// your geojson here</span>
+<span>// these are comments</span>
+<span>];</span>
+</code></div></li>
+<li>Create HTML document:<br />
+<div>
+<code>
+<span>&lt;!DOCTYPE html&gt;</span>
+<br />
+<span>&lt;html&gt;</span>
+<br />
+<span>&lt;head&gt;</span>
+<br />
+<span>&lt;/head&gt;</span>
+<br />
+<span>&lt;body&gt;</span>
+<br />
+<span>&lt;/body&gt;</span>
+<br />
+<span>&lt;/html&gt;</span>
+<br />
+</code>
+</div>
+</li>
+<li>Be sure you reference the wa_tracts.js in the SCRIPT tag within HEAD:<br />
+<div><code><span>&lt;script src="wa_tracts.js"&gt;&lt;/script&gt;</span></code></div></li>
+<li>Define your map with center and zoom level within SCRIPT within BODY:<br />
+<div><code>var map = L.map('map').setView([47.493,-120.563], 7);</code></div></li>
+<li>Add a basemap within SCRIPT within BODY:<br />
+<div><code><span>var grayScale = L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+attribution: 'Map data copywright &lt;a href="http://openstreetmap.org"&gt;OpenStreetMap&lt;/a&gt; contributors, ' +
+'&lt;a href="http://creativecommons.org/licenses/by-sa/2.0/"&gt;CC-BY-SA&lt;/a&gt;, ' +
+'Imagery copywright &lt;a href="http://mapbox.com"&gt;Mapbox&lt;/a',
+d: 'examples.map-20v6611k'
+});
+</span><br />
+<span>grayScale.addTo(map);</span><br /> 
+</code></div></li>
+<li>Add wa_tracts.js wih styling within SCRIPT witin BODY:<br />
+<div>
+<code>
+<span>function getColor(d) {</span><br />
+<span>return d &gt; 3009765000  ? '#BD0026' :</span><br />
+<span>       d &gt; 849985200  ? '#E31A1C' :</span><br />
+<span>       d &gt; 612002600  ? '#FC4E2A' :</span><br />
+<span>       d &gt; 483352000   ? '#FD8D3C' :</span><br />
+<span>       d &gt; 378603000  ? '#FEB24C' :</span><br />
+<span>       d &gt; 259410650   ? '#FED976' :</span><br />
+<span>                  '#FFEDA0';</span><br />
+<span>};</span><br /><br />
+<span>function style(feature) {</span><br />
+<span>return {</span><br />
+<span>    fillColor: getColor(feature.properties.TotalValue),</span><br />
+<span>    weight: 2,</span><br />
+<span>    opacity: 1,</span><br />
+<span>    color: 'white',</span><br />
+<span>    dashArray: '3',</span><br />
+<span>    fillOpacity: 0.7</span><br />
+<span>};</span><br />
+<span>};</span><br /><br />
+<span>// HINT: notice 'layer.bindPopup(feature.properties.Value);'</span><br />
+<span>// this is the same field that we calculated earlier from TotalValue into a text field.</span><br />
+<span>// you can change the field that's displayed by changing the word 'Value' </span><br />
+<span>// to the column header that you'd like to display</span><br />
+<span>// e.g. replacing Value with GEOID will display each tract GEOID</span><br /><br />
+<span>L.geoJson(wa_tracts, {</span><br />
+<span>    style: style,</span><br />
+<span>    onEachFeature: function (feature, layer) {</span><br />
+<span>    layer.bindPopup(feature.properties.Value);</span><br />
+<span>    }</span><br />
+<span> }).addTo(map);</span><br />
+</code></div><br />
+</li>
+</ol>
+<br />
+
+<p>A screenshot of Washington Census tracts with total home values on-click:</p> 
+
+<img src="/bootcamp/assets/images/leaflet/wa-tracts.png" />
+<br />
+<br />
+<hr />
+
+<p>Further explore Leaflet. There's a plethora of help and documentation online from the open-source community.</p>
+
+<p><a href="#top">Back to top</a></p>
+<hr />
+
+<a name="bottom"></a>
+<h4>Resources</h4>
+
+This is the full document from US States Steps 4 and 5:
+
+<div>
+<code>
+<span>&lt;!DOCTYPE html&gt;</span><br />
+<span>&lt;html&gt;</span><br />
+<span>&lt;head&gt;</span><br /><br />
+<span>    &lt;meta charset="utf-8"&gt;</span><br />
+<span>    &lt;link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"&gt;</span><br />
+<span>    &lt;script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"&gt;&lt;/script&gt;</span><br />
+<span>    &lt;script src="us_states"&gt;&lt;/script&gt;</span><br /><br />
+<span>    &lt;style&gt;</span><br /><br />
+<span>      #map {   height: 500px;  width: 700px;}</span><br /><br />
+<span>    &lt;/style&gt;</span><br />
+<span>&lt;/head&gt;</span><br /><br />
+<span>&lt;body&gt;</span><br /><br />
+<span>    &lt;div id="map"&gt;&lt;/div&gt;</span><br /><br />
+<span>    &lt;script&gt;</span><br /><br />
+<span>      var map = L.map('map').setView([47,-100], 3);</span><br /><br />
+<span>      var grayScale = L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {<br />
+attribution: 'Map data copywright &lt;a href="http://openstreetmap.org"&gt;OpenStreetMap&lt;/a&gt; contributors, ' +<br />
+'&lt;a href="http://creativecommons.org/licenses/by-sa/2.0/"&gt;CC-BY-SA&lt;/a&gt;, ' +<br />
+'Imagery copywright &lt;a href="http://mapbox.com"&gt;Mapbox&lt;/a',<br />
+id: 'examples.map-20v6611k'<br />
+});<br />
+</span><br />
+<span>      grayScale.addTo(map);</span><br />
+<span>      L.geoJson(us_states).addTo(map);</span><br /><br />
+<span>    &lt;/script&gt;</span><br />
+<span>&lt;/body&gt;</span><br />
+<span>&lt;/html&gt;</span><br />
+</code>
+</div>
+
+
+
+
+
+</li></ul></li></ol></body>
 
 
           <!--
 					<div class="meta">
 						<p class="date-publish">
 							Published: 
-							<date class="date-pub" title="1999-12-31T00:00:00-07:00" datetime="1999-12-31T00:00:00-07:00" pubdate>
-							<span class="month"><abbr>December</abbr></span>
-							<span class="day">31</span>
-							<span class="year">1999</span>
+							<date class="date-pub" title="2005-10-01T00:00:00-07:00" datetime="2005-10-01T00:00:00-07:00" pubdate>
+							<span class="month"><abbr>October</abbr></span>
+							<span class="day">01</span>
+							<span class="year">2005</span>
 							</date>
 						</p>
 						<ul class="list-category list-linear">
@@ -1427,8 +1797,8 @@
 
   
      
-    	<li><a href="/categories.html#setup-ref">
-    		setup <span>1</span>
+    	<li><a href="/categories.html#more reading...-ref">
+    		more reading... <span>9</span>
     	</a></li>
     
   
@@ -1443,9 +1813,9 @@
 
   
      
-    	<li><a href="/tags.html#intro-ref">intro <span>5</span></a></li>
+    	<li><a href="/tags.html#leaflet-ref">leaflet <span>3</span></a></li>
      
-    	<li><a href="/tags.html#QGIS-ref">QGIS <span>1</span></a></li>
+    	<li><a href="/tags.html#web map-ref">web map <span>2</span></a></li>
     
   
 
@@ -1474,9 +1844,13 @@
 					<nav class="pagination">
 						<ul>
 							
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/more%20reading.../vector-analysis" title="View Vector Analysis">&laquo; Vector Analysis</a></li>
 							
 							
-              <li class="next"><a class="internal" rel="next"  href="/bootcamp" title="View "> &raquo;</a></li>
+							<li class="pipe"> | </li>
+							
+							
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/show%20your%20results/exercise" title="View Exercise">Exercise &raquo;</a></li>
 							
 						</ul>
 					</nav>
@@ -1525,7 +1899,7 @@
 		};
 	load('//platform.twitter.com/widgets.js', 'tweetjs');
 	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
-	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/setup/qgis-install" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/more%20reading.../leaflet" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
 	}(document, 'script'));
 </script>
 <script>

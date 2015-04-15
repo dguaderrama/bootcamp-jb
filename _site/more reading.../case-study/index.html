@@ -7,14 +7,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Installing QGIS</title>
+	<title>Landslide Susceptibility</title>
 	<meta name="author" content="Nathan Casler">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src='/bootcamp/assets/js/jquery.hoverIntent.js'></script>
   <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
 	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/" rel="alternate" title="Installing QGIS" type="application/atom+xml">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Landslide Susceptibility" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
   <link href="http://fonts.googleapis.com/css?family=League+Gothic:400,700" rel='stylesheet' type='text/css'>	
   <link href="http://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet' type='text/css'>	
@@ -74,7 +74,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/setup/qgis-install" class="active">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
@@ -458,7 +458,7 @@
     
       
       	
-      	<li><a href="/bootcamp/more%20reading.../case-study">Landslide Susceptibility</a></li>
+      	<li class="active"><a href="/bootcamp/more%20reading.../case-study" class="active">Landslide Susceptibility</a></li>
       	
       
     
@@ -498,7 +498,7 @@
         <div id="header-overlay">
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-            <h1 class="h2 entry-title">Installing QGIS</h1> 
+            <h1 class="h2 entry-title">Landslide Susceptibility</h1> 
             <!--            <h2 class="h2 entry-title"></h2> -->
 
 
@@ -524,7 +524,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/setup/qgis-install" class="active">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
@@ -902,7 +902,7 @@
     
       
       	
-      	<li><a href="/bootcamp/more%20reading.../case-study">Landslide Susceptibility</a></li>
+      	<li class="active"><a href="/bootcamp/more%20reading.../case-study" class="active">Landslide Susceptibility</a></li>
       	
       
     
@@ -952,7 +952,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/setup/qgis-install" class="active">Installing QGIS</a></li>
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
       	
       
     
@@ -1330,7 +1330,7 @@
     
       
       	
-      	<li><a href="/bootcamp/more%20reading.../case-study">Landslide Susceptibility</a></li>
+      	<li class="active"><a href="/bootcamp/more%20reading.../case-study" class="active">Landslide Susceptibility</a></li>
       	
       
     
@@ -1365,58 +1365,424 @@
 
 <div class="entry-content content">
   
-<h1 id="qgis">QGIS</h1>
+<h1 id="landslide-susceptibility-model">Landslide Susceptibility Model</h1>
 
-<h4 id="this-section-will-walk-you-through-the-process-of-installing-qgis">This section will walk you through the process of installing QGIS.</h4>
+<hr />
 
-<p><img src="/bootcamp//assets/images/qgis-home.png" alt="qgisHome" /></p>
+<h3 id="overview">Overview</h3>
 
-<p>In order to demonstrate the lessons, we will need to download and install QGIS</p>
+<p>This case study has been chosen to demonstrate the concepts being highlighted by the bootcamp. We have chosen a landslide susceptibility analysis due to the diversity of inputs and a general curiousity into the methodology. The study area has been chosen in response to the Oso Mudslide<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> which took place in Washington State on March 22nd, 2014. The methodology for this analysis is based off of work done by the California Geological Survey in Conjunction with the USGS<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.</p>
 
-<p>The QGIS download can be found <a href="http://www.qgis.org/en/site/forusers/download.html">here.</a></p>
+<hr />
 
-<p>(Note: This installation will require 1.3GB of disk space and can take 10-20 minutes to install.)</p>
+<h3 id="project-definition">Project Definition</h3>
 
-<p>The website should detect your Operating System and show the installers available for your platform.</p>
+<dl>
+  <dt>Location: Washington State </dt>
+  <dt>Bounding Coordinates: (-125.3424, 44.9408), (-115.8, 49.779)</dt>
+  <dt>Resolution: 1 km</dt>
+  <dt>Projection: Washington State Plane South (US ft) <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></dt>
+  <dd>EPSG:2927</dd>
+</dl>
 
-<h3 id="windows">Windows</h3>
+<hr />
 
-<p><img src="/bootcamp//assets/images/qgis-downloads.png" alt="qgis-downloads" /></p>
+<h3 id="data-collection">Data Collection</h3>
 
-<p>If you are using windows, select the <em>QGIS Standalone Installer</em>, for the some of our plugins to function, you will need a 64-bit installation. If you are using a 32-bit windows system, you may need to skip a few of the exercises in the future.</p>
+<p>Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets. </p>
 
-<p>Once your download has finished, click on the download to start the installation wizard.</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Input Layer</th>
+      <th>    </th>
+      <th style="text-align: center">Data Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">DEM</td>
+      <td> </td>
+      <td style="text-align: center">GTopo30<sup id="fnref:3:1"><a href="#fn:3" class="footnote">3</a></sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Geology</td>
+      <td> </td>
+      <td style="text-align: center">Washington Dept. of Natural Resources<sup id="fnref:5"><a href="#fn:5" class="footnote">4</a></sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Landslide Inventory</td>
+      <td> </td>
+      <td style="text-align: center">Washington Dept. of Natural Resources<sup id="fnref:5:1"><a href="#fn:5" class="footnote">4</a></sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Washington Boundary</td>
+      <td> </td>
+      <td style="text-align: center">Global Administrative Areas<sup id="fnref:8"><a href="#fn:8" class="footnote">5</a></sup></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Daily Precipitation</td>
+      <td> </td>
+      <td style="text-align: center">Earth System Research Laboratory(NOAA)<sup id="fnref:7"><a href="#fn:7" class="footnote">6</a></sup></td>
+    </tr>
+  </tbody>
+</table>
 
-<p><img src="/bootcamp//assets/images/qgis-windows-install.png" alt="qgisWindowsInstall" /></p>
+<p>The DEM can be downloaded from <a href="ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140m90.tar.gz">ftp://edcftp.cr.usgs.gov/data/gtopo30/global/w140n90.tar.gz</a></p>
 
-<p>Follow the steps in the Wizard to complete the installation.</p>
+<p>This tarball can be extracted using an archive extraction application like <a href="http://www.7-zip.org">7-zip</a>.</p>
 
-<p>We won’t need the sample datasets for our exercises, so you can leave them unchecked during the install.</p>
+<p>(Note: if you are using 7-zip or winRAR to extract the file, you will have to extract the .gz first. Then extract the .tar file from within the extracted subdirectory.)</p>
 
-<p><img src="/bootcamp//assets/images/qgis-windows-components.png" alt="qgisWindowsComponents" /></p>
+<p>If you are using Mac or Linux you can extract the files in the terminal with the following command:</p>
 
-<h3 id="os-x">OS X</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">tar -zxvf w140m90.tar.gz</code></pre></div>
 
-<p>If you are using OS X, make sure to install the <em>GDAL Complete 1.11 framework package</em> before installing QGIS.</p>
+<hr />
 
-<p><img src="/bootcamp//assets/images/gdal-prereq.png" alt="gdalPrereq" /></p>
+<h3 id="data-wrangling">Data Wrangling</h3>
 
-<h3 id="linux">Linux</h3>
+<ol>
+  <li>Set project projection to EPSG:2927<br /><br /> 
+  Before starting any project in a GIS program, you should first set the project projection to make sure your data comes in with the same extent. <br />If you don’t set the project’s projection, the program will use the projection of the first layer added or EPSG:4326.<br /><br />
+  You can set the projection with the following steps:<br /><br />
+  <img src="/bootcamp/assets/images/qgis-project-properties.png" alt="project-properties" /><br />
+    <ul>
+      <li>In the top navbar go Project &gt; Project Properties</li>
+      <li>Select CRS in the Left menu</li>
+      <li>Check <em>Enable On-the-fly CRS transformation</em></li>
+      <li>Select <em>NAD83(HARN)/Washington South(ftUS) EPSG:2927</em> from the List of Projections<br />
+  <img src="/bootcamp/assets/images/qgis-projection.png" alt="projection" /><br /></li>
+    </ul>
+  </li>
+  <li>Add the US States shapefile<br /><br />
+  Since our project is directed at the state of Washington. We should extract the Washington state boundary for our study. The GADM<sup id="fnref:7:1"><a href="#fn:7" class="footnote">6</a></sup> project provides high-quality boundary data on country,state and county levels. We can use the US-state level dataset to get the Washington boundary. <br /><br />
+    <ul>
+      <li>Select <em>Add Vector Layer</em> in the left toolbar</li>
+      <li>Browse to the USA_adm1.shp layer from the iPlant Data Store<br />
+  <img src="/bootcamp/assets/images/usa-states.png" alt="USA_states" /><br /></li>
+    </ul>
+  </li>
+  <li>Create a layer for the state of Washington 
+    <ul>
+      <li>In the top toolbar, select <em>Select Single Feature</em></li>
+      <li>Click on the state of Washington to select it<br />
+  <img src="/bootcamp/assets/images/washington-selected.png" alt="washington-selected" /><br /></li>
+      <li>Right click on the USA_adm1 layer and select <em>Save Selection As…</em></li>
+      <li>Format: ESRI Shapefile</li>
+      <li>Save as: washington.shp</li>
+      <li>Encoding: UTF-8</li>
+      <li>CRS: 
+        <ul>
+          <li>Project CRS</li>
+          <li>Browse &gt; <em>NAD83(HARN)/Washington South (ftUS) EPSG:2927</em><br />
+  <img src="/bootcamp/assets/images/save-washington.png" alt="save-washington" /><br /></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Load the new washington layer<br />
+    <ul>
+      <li>Select <em>Add Vector Layer</em></li>
+      <li>Browse to the new washington layer and click <em>Open</em><br /></li>
+    </ul>
+  </li>
+  <li>Remove the USA_adm1 layer from the project <br />
+  Now that we have the Washington layer, we can get rid of the U.S. layer. <br />
+    <ul>
+      <li>Right click the layer in the table of contents</li>
+      <li>Select <em>Remove</em></li>
+    </ul>
+  </li>
+  <li>Add the DEM layer from the iPlant data store<br />
+  DEMs or <em>Digital Elevation Models</em> are very useful for establishing topological context in a map. DEMs generally come as a raster dataset that consists of elevation values. There are several different byproducts that can be created from DEMs.<br /><br />
+  This DEM was taken from the GTOPO30 satellite data.<br />
+    <ul>
+      <li>In the left toolbar, select <em>Add Raster Layer</em></li>
+      <li>Select <em>source_files/W140N90.DEM</em><br />
+  <img src="/bootcamp/assets/images/dem-load.png" alt="dem-load" /><br /></li>
+    </ul>
+  </li>
+  <li>Project the dem to EPSG:2927
+    <ul>
+      <li>In the top menu, go to Raster &gt; Projections &gt; Warp (Reproject)</li>
+      <li>Use the following options</li>
+      <li>Input File: <em>W140N90</em></li>
+      <li>Output File: <em>secondary_files/dem-project.tif</em></li>
+      <li>Source SRS: <em>EPSG:4326</em></li>
+      <li>Resampling Method: <em>Near</em></li>
+      <li>No data values: <em>0</em><br />
+ <img src="/bootcamp/assets/images/project-dem.png" alt="project-dem" /><br /></li>
+    </ul>
+  </li>
+  <li>Clip the dem to the shapefile
+    <ul>
+      <li>In the top menu, select Raster &gt; Extraction &gt; Clipper</li>
+      <li>In the window, set the following options:</li>
+      <li>Input file: dem-project.tif</li>
+      <li>Output file: dem-washington.tif</li>
+      <li>No data value: 0</li>
+      <li>Clipping Mode: Mask layer &gt; washington</li>
+      <li>Load into canvas when finished<br />
+  <img src="/bootcamp/assets/images/dem-washington.png" alt="dem-washington" /><br /></li>
+    </ul>
+  </li>
+  <li>Remove the W140N90 layer<br />
+  <img src="/bootcamp/assets/images/dem-washington-display.png" alt="dem-washington-display" /><br /></li>
+  <li>Create a slope surface <br />
+  In the top menu, select <strong>Raster &gt; Analysis &gt; DEM</strong> <br />
+    <ul>
+      <li>Input file: dem-washington</li>
+      <li>Output file: slope-washington.tif</li>
+      <li>Mode: Slope</li>
+      <li>Scale: 0.30</li>
+      <li>Load into canvas when finished<br />
+  <img src="/bootcamp/assets/images/create-slope.png" alt="create-slope" /><br /></li>
+    </ul>
+  </li>
+  <li>Create a hillshade layer<br />
+  In the top menu, select <strong>Raster &gt; Analysis &gt; DEM</strong> <br />
+    <ul>
+      <li>Input file: dem-washington</li>
+      <li>Output file: hillshade-washington.tif</li>
+      <li>Mode: Hillshade</li>
+      <li>Z factor: 1.0</li>
+      <li>Scale: 0.30</li>
+      <li>Azimuth of light: 315.0</li>
+      <li>Altitude of light: 45.0</li>
+      <li>Load into canvas when finished<br />
+  <img src="/bootcamp/assets/images/hillshade-calc.png" alt="hillshade-calc" /><br /></li>
+    </ul>
+  </li>
+</ol>
 
-<p>You can find the installation instructions for your distro <a href="http://qgis.org/en/site/forusers/alldownloads.html#linux">here.</a></p>
+<hr />
 
-<p>I would recommend the choosing the stable branch to minimize the risk of running into errors during the exercises.</p>
+<h3 id="data-analysis">Data Analysis</h3>
+<p>i
+Reclassifying inputs:</p>
 
+<h4 id="slope">Slope</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Category</th>
+      <th>    </th>
+      <th style="text-align: center">Slope</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td> </td>
+      <td style="text-align: center">&lt; 3°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td> </td>
+      <td style="text-align: center">3-5°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td> </td>
+      <td style="text-align: center">5-10°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td> </td>
+      <td style="text-align: center">10-15°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td> </td>
+      <td style="text-align: center">15-20°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td> </td>
+      <td style="text-align: center">20-30°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7</td>
+      <td> </td>
+      <td style="text-align: center">30-40°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8</td>
+      <td> </td>
+      <td style="text-align: center">&gt; 40°</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In order to reclass our slope layer into something useful, we will use the grass <em>r.reclass</em> tool</p>
+
+<p>The r.reclass tool reads text files which define the classification rules(rule files). For this example, our rule fill will have the following contents:</p>
+
+<h5 id="slope-ruletxt"><em>slope-rule.txt</em></h5>
+<pre><code>0 thru 2.99 = 1
+3 thru 4.99 = 2
+5 thru 9.99 = 3
+10 thru 14.99 = 4
+15 thru 19.99 = 5
+20 thru 29.99 = 6 
+30 thru 39.99 = 7
+40 thru 90 = 8
+</code></pre>
+
+<p>Once we have created the slope rule file. We can select the r.reclass tool from the Processing Toolbox.</p>
+
+<p>In the processing toolbox, select <em>GRASS commands</em> &gt; <em>Raster</em> &gt; <em>r.reclass</em></p>
+
+<p>We will use the following settings for the reclassify tool:<br /></p>
+
+<ul>
+  <li>Input Raster: <em>slope-washington</em></li>
+  <li>File containing reclass rules: <em>slope-rules.txt</em></li>
+  <li>Output raster layer: <em>slope-reclass.tif</em> (NOTE: select <em>Save to file…</em> or else QGIS will not create a permanent output)<br />
+<img src="/bootcamp/assets/images/slope-reclass.png" alt="slope-reclass" /></li>
+</ul>
+
+<h4 id="susceptibility">Susceptibility</h4>
+
+<p>We will have to do some raster calculations to create the output data set. The classifications are taken from the California study<sup id="fnref:2:1"><a href="#fn:2" class="footnote">2</a></sup> and are as follows:</p>
+
+<p><img src="/bootcamp/assets/images/landslide-key.png" alt="landslide-key" /></p>
+
+<p>Since we need to cross reference these categories, we need to create a raster which represents each unique combination of the slope and rock strength classes. A method to create unique combinations is to promote the rock strength categories a decimal place. This would make the rock classes: 10,20, and 30.</p>
+
+<p>To create these new classes, we can load the source_files/geo_coded.tif, and secondary_files/slope_reclass.tif</p>
+
+<p>In the top menu, select <em>Raster</em> &gt; <em>Raster Calculator</em></p>
+
+<p>Our raster calculator expression will be: </p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span><span class="s2">&quot;geo_coded@1&quot;</span> * 10<span class="o">)</span> + <span class="s2">&quot;slope-reclass@1&quot;</span></code></pre></div>
+
+<p>Output layer: slope-geo-sect.tif</p>
+
+<p><img src="/bootcamp/assets/images/raster-calc.png" alt="raster-calc" /></p>
+
+<p>We can apply the landslide susceptibility classification using r.reclass and the following rule file:</p>
+
+<p><em>landslide-rule.txt</em></p>
+
+<pre><code>11 12 13 21 31 = 0
+14 = 3
+22 23 = 5
+15 = 6
+16 32 33 = 7
+17 18 24 = 8
+25 thru 28 34 = 9
+35 thru 38 = 10
+</code></pre>
+
+<h4 id="precipitation">Precipitation</h4>
+
+<p>Now that we have created the landslide susceptibility layer, we can make use the Average Annual Precipitation layer to check the susceptible areas against the areas receiving the most annual rain.</p>
+
+<p>Convert millimeters to inches</p>
+
+<p>Raster calculator: precip = precip * 0.0394</p>
+
+<p>Check THIS STEP AGAINST REFERENCES</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Category</th>
+      <th>    </th>
+      <th style="text-align: center">Precipitation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td> </td>
+      <td style="text-align: center">5-10 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td> </td>
+      <td style="text-align: center">10-15 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td> </td>
+      <td style="text-align: center">15-30 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td> </td>
+      <td style="text-align: center">30-45 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td> </td>
+      <td style="text-align: center">45-60 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td> </td>
+      <td style="text-align: center">60-75 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7</td>
+      <td> </td>
+      <td style="text-align: center">75-90 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8</td>
+      <td> </td>
+      <td style="text-align: center">&gt; 90 in</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="visualization">Visualization</h3>
+
+<p>Now that the output datasets have been created, we can work on making our results presentable.</p>
+
+<p>Go to Cartography &amp; Visualization…</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>http://www.usgs.gov/blogs/features/usgs_top_story/landslide-in-washington-state <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>http://www.conservation.ca.gov/cgs/information/publications/Documents/MS58.pdf <a href="#fnref:2" class="reversefootnote">&#8617;</a> <a href="#fnref:2:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:3">
+      <p>http://www.spatialreference.org/ref/epsg/2927 <a href="#fnref:3" class="reversefootnote">&#8617;</a> <a href="#fnref:3:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:5">
+      <p>http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx <a href="#fnref:5" class="reversefootnote">&#8617;</a> <a href="#fnref:5:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:8">
+      <p>http://gadm.org/country <a href="#fnref:8" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:7">
+      <p>http://www.esrl.noaa.gov/thredds/catalog/Datasets/cpc_us_precip/catalog.xml#Datasets/cpc_us_precip/RT <a href="#fnref:7" class="reversefootnote">&#8617;</a> <a href="#fnref:7:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+  </ol>
+</div>
 
 
           <!--
 					<div class="meta">
 						<p class="date-publish">
 							Published: 
-							<date class="date-pub" title="1999-12-31T00:00:00-07:00" datetime="1999-12-31T00:00:00-07:00" pubdate>
+							<date class="date-pub" title="2005-12-20T00:00:00-07:00" datetime="2005-12-20T00:00:00-07:00" pubdate>
 							<span class="month"><abbr>December</abbr></span>
-							<span class="day">31</span>
-							<span class="year">1999</span>
+							<span class="day">20</span>
+							<span class="year">2005</span>
 							</date>
 						</p>
 						<ul class="list-category list-linear">
@@ -1427,8 +1793,8 @@
 
   
      
-    	<li><a href="/categories.html#setup-ref">
-    		setup <span>1</span>
+    	<li><a href="/categories.html#more reading...-ref">
+    		more reading... <span>9</span>
     	</a></li>
     
   
@@ -1443,9 +1809,9 @@
 
   
      
-    	<li><a href="/tags.html#intro-ref">intro <span>5</span></a></li>
+    	<li><a href="/tags.html#case study-ref">case study <span>1</span></a></li>
      
-    	<li><a href="/tags.html#QGIS-ref">QGIS <span>1</span></a></li>
+    	<li><a href="/tags.html#landslide-ref">landslide <span>1</span></a></li>
     
   
 
@@ -1474,9 +1840,13 @@
 					<nav class="pagination">
 						<ul>
 							
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/show%20your%20results/map-types" title="View Map Types">&laquo; Map Types</a></li>
 							
 							
-              <li class="next"><a class="internal" rel="next"  href="/bootcamp" title="View "> &raquo;</a></li>
+							<li class="pipe"> | </li>
+							
+							
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/more%20reading.../vector-analysis" title="View Vector Analysis">Vector Analysis &raquo;</a></li>
 							
 						</ul>
 					</nav>
@@ -1525,7 +1895,7 @@
 		};
 	load('//platform.twitter.com/widgets.js', 'tweetjs');
 	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
-	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/setup/qgis-install" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/more%20reading.../case-study" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
 	}(document, 'script'));
 </script>
 <script>
