@@ -116,18 +116,6 @@ However, TileMill has what we need, so we focus on it for now.
 What made TileMill popular was the ability to turn maps from many formats into tiles. The map is like one big picture, which is then split up into squares.
 This speeds up the process of displaying maps on the web.
 
-Besides being an easy way to make tiles, what makes TileMill great for visualizing our data is 'CartoCSS', which is just like CSS (Cascading Style Sheets), but for maps! You can type CartoCSS code directly into the TileMill desktop application.
-
-After installing TileMill, the first thing you see when you open it is the projects page.
-
-![TileMill first view]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/tilemill_open.png)
-
-Lets create a new project to play around with style. Click on 'New Project' in the top left corner,
-give it a name (any name!) and keep the 'Include World layer and styles' checked.
-
-![New Project]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/newproject.png)
-
-Now you have a blank world map! Lets make it our own.
 
 #CartoCSS
 
@@ -151,19 +139,7 @@ On the right of your new map project you can see a space with some css code alre
 there. This is what goes in your style file when you save your project. To see
 the changes that you make here, remember to click 'Save' at the top right.
 
-See the part that styles the 'Map' element? There is a property called
-background-color in there.
-The property value that is assigned to the background color is written in hexadecimal
-notation. You can get colors represented in hexadecimal notation from most color
-wheels on the Internet (and also from Color Brewer!). Lets open up the Paletton.com
-and pick a different blue.
-Once you find a color you like in the square to the right, hover over it or click
-to see the hexadecimal value (or hex code). I chose #0C44C4. Colors in this format
-always have 6 digits (letters or numbers) and a pound symbol in the front.
 
-Replace #b8dee6 with the color of your choice, then save to see the difference.
-
-![New Background Color]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/firststyle.png)
 
 >Map Features
 When we are working with vector data, we refer to features on the map, which could be
@@ -189,15 +165,6 @@ For example:
         marker-fill: red;
       }
 
-Now lets add a new property to our .countries layer (this layer already has the class
-  'countries' given to it).
-  Directly underneath the line "polygon-fill: #fff;"
-  Write "polygon-opacity: 0.5;" Then click save.
-
-  Now the countries look light blue! That is because some of the blue background
-  is showing through the white color.
-
-  ![Add Property]({{site.baseurl}}{{ASSET_PATH}}/images/tilemill/addproperty.png)
 
 If we were dealing with lines we would use the properties that start with line- ,
  while for points it is marker- .
