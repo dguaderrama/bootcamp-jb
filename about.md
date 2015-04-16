@@ -1,9 +1,12 @@
 ---
 layout: page
-title: Spatial Data Carpentry
-tagline: tagline
+title : About
+header : About Us
+group: navigation
 ---
 {% include JB/setup %}
+
+{% assign posts_collate = site.posts %}
 
 ### Welcome to Spatial Data Carpentry
 
@@ -11,35 +14,15 @@ tagline: tagline
 
 ![iplant-logo]({{site.baseurl}}{{ASSET_PATH}}/images/iplant_logo_300.jpg)
 
-####WHO:
-
-iPlant Collaborative, UAGIST Center, and NEON Inc.
-
-This Spatial Data Carpentry site and Bootcamp are a product by the iPlant Collaborative with help from the UAGIST Center and NEON Inc.
-
-####WHAT:
-
-Spatial Data Boocamp
-
 This website, Spatial Data Carpentry, has been developed to provide the materials for the Spatial Data Carpentry. 
 
 The left-hand navigation (Contents), provides the bootcamp material from start (Setup) to finish (Show your results).
 
 Please see More Reading.. for further learning.
 
-####WHEN:
-
-Summer 2015, TBD
-
 The first run of the Spatial Data Carpentry will be held in summer 2015, TBD.
 
-####WHERE:
-
-BIO5 Institute, The University of Arizona
-
-####WHY:
-
-Provide a foundation for researchers and professionals looking to become more familiar with spatial data.
+This Spatial Bootcamp is a product by the iPlant Collaborative with help from the UAGIST Center and NEON Inc.
 
 This material has been created in hopes of providing a foundation for researchers and professionals looking to get more familiar with spatial data.
 

@@ -79,7 +79,7 @@ color is a different rock unit.
 
 Tools like [paletton.com](http://paletton.com/) are simply a color wheel. Paletton.com has options such as monochromatic, adjacent colors, triad, and tetrad that pick colors based on a single color selection. These are meant for web designing but can be useful for maps, as well.
 
-<a href="http://paletton.com" target="_blank" alt="Spatial Data Bootcamp: Paletton.com color wheel">![Spatial Data Bootcamp: Paletton.com color wheel]({{site.baseurl}}{{ASSET_PATH}}/images/paletton.jpg)</a>
+<a href="http://paletton.com" target="_blank" alt="Spatial Data Carpentry: Paletton.com color wheel">![Spatial Data Carpentry: Paletton.com color wheel]({{site.baseurl}}{{ASSET_PATH}}/images/paletton.jpg)</a>
 
 <!--"_"--->
 

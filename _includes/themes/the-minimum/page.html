@@ -6,6 +6,26 @@
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
 						<h1 class="h2 entry-title">{{ page.title }}</h1>
+<div class="dropdown-nav">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Table of Contents<span class="caret"></span></a>
+                <ul style="" class="dropdown-menu" role="menu">
+                {% for category in site.categories %} 
+                  <h4 id="{{ category[0] }}-ref">{{ category[0] | join: "/" | capitalize }}</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                    {% assign pages_list = category[1] %}  
+                    {% include JB/pages_list %}
+                  </ul>
+                {% endfor %}
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div><!-- dropdown nav -->
+
 					</div><!-- unit-inner -->
 				</div><!-- unit-head -->
 			</header>
@@ -24,6 +44,23 @@
 
 			<div class="bd">
 				<div class="entry-content page">
+
+<div id="sticky-anchor" class="sticky-left-nav">
+  <div id="sticky" class="sticky-left-nav-inner">
+    <h3>Contents</h3>
+    {% include JB/setup %}
+  {% for category in site.categories %} 
+  <h4 id="{{ category[0] }}-ref">{{ category[0] | join: "/" | capitalize }}</h4>
+  <ul>
+    {% assign pages_list = category[1] %}  
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
+  </div>  
+  <div class="clear"></div>
+</div> <!--left-nav -->
+
+
 					{{ content }}
 				</div><!-- entry-content -->
 			</div><!-- bd -->

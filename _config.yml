@@ -9,11 +9,14 @@ markdown: kramdown
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Spatial Data Bootcamp
+title : Spatial Data Carpentry
 tagline: Site Tagline
-author :
-  name : Nathan Casler
-  email : ncasler@email.arizona.edu
+author1 :
+  name1 : Nathan Casler
+  email1 : ncasler@email.arizona.edu
+author2 :
+  name2 : Daniel Guaderrama
+  email2 : dguaderrama@email.arizona.edu
 #  github : username
 #  twitter : username
 #  feedburner : feedname

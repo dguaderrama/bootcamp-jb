@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Landslide Susceptibility</title>
-	<meta name="author" content="Nathan Casler">
+	<meta name="author" content="">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src='/bootcamp/assets/js/jquery.hoverIntent.js'></script>
@@ -39,11 +39,10 @@
 	<header class="the-header">
 		<div class="unit-head">
 			<div class="unit-inner unit-head-inner">
-				<p class="logo"><a href="/bootcamp/">Spatial Data Bootcamp</a></p>
+				<p class="logo"><a href="/bootcamp/">Spatial Data Carpentry</a></p>
 				<nav class="nav-global">
 					<ul>
             <li class="home"><a href="/bootcamp/index.html">Home</a></li>
-            <li class="bootcamp"><a href="/bootcamp/intro/what">Bootcamp Material</a></li>
             <li class="about"><a href="/bootcamp/about.html">About Us</a></li>
 					</ul>
 				</nav>
@@ -1341,7 +1340,7 @@
 
 <h3 id="data-collection">Data Collection</h3>
 
-<p>Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets. </p>
+<p>Data types: Landslides are discrete phenomena that should be represented using vector data, but are caused by a variety of continuous and discrete conditions so our inputs will include raster, and vector data sets.</p>
 
 <table>
   <thead>
@@ -1415,7 +1414,7 @@
   <img src="/bootcamp/assets/images/usa-states.png" alt="USA_states" /><br /></li>
     </ul>
   </li>
-  <li>Create a layer for the state of Washington 
+  <li>Create a layer for the state of Washington
     <ul>
       <li>In the top toolbar, select <em>Select Single Feature</em></li>
       <li>Click on the state of Washington to select it<br />
@@ -1424,7 +1423,7 @@
       <li>Format: ESRI Shapefile</li>
       <li>Save as: washington.shp</li>
       <li>Encoding: UTF-8</li>
-      <li>CRS: 
+      <li>CRS:
         <ul>
           <li>Project CRS</li>
           <li>Browse &gt; <em>NAD83(HARN)/Washington South (ftUS) EPSG:2927</em><br />
@@ -1608,7 +1607,7 @@ Reclassifying inputs:</p>
 
 <p>In the top menu, select <em>Raster</em> &gt; <em>Raster Calculator</em></p>
 
-<p>Our raster calculator expression will be: </p>
+<p>Our raster calculator expression will be:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span><span class="s2">&quot;geo_coded@1&quot;</span> * 10<span class="o">)</span> + <span class="s2">&quot;slope-reclass@1&quot;</span></code></pre></div>
 
@@ -1824,14 +1823,15 @@ Reclassifying inputs:</p>
 					<h4>about</h4>
 					<ul>
 						<li class="contact"><address><span class="author fn n">Nathan Casler</span> - <span class="fn email">ncasler@email.arizona.edu</span></address></li>
+            <li class="contact"><address><span class="author fn n">Daniel Guaderrama</span> - <span class="fn email">dguaderrama@email.arizona.edu</span></address></li>
+
             <!--						<li class="github"><a href="http://github.com//" rel="me">github.com/</a></li>
 						<li class="twitter"><a href="http://twitter.com//" rel="me">twitter.com/</a></li>
             <li class="rss"><a href="http://feeds.feedburner.com/">Subscribe to RSS Feed</a></li>-->
 					</ul>
 				</div><!-- misc -->
 				<p class="licence">
-        <!--					Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>-->
-					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+        <!--Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.-->
 				</p>
 			</div><!-- unit-foot-inner -->
 		</div><!-- unit-foot -->

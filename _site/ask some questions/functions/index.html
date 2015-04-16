@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Spatial Analysis</title>
-	<meta name="author" content="Nathan Casler">
+	<meta name="author" content="">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src='/bootcamp/assets/js/jquery.hoverIntent.js'></script>
@@ -39,11 +39,10 @@
 	<header class="the-header">
 		<div class="unit-head">
 			<div class="unit-inner unit-head-inner">
-				<p class="logo"><a href="/bootcamp/">Spatial Data Bootcamp</a></p>
+				<p class="logo"><a href="/bootcamp/">Spatial Data Carpentry</a></p>
 				<nav class="nav-global">
 					<ul>
             <li class="home"><a href="/bootcamp/index.html">Home</a></li>
-            <li class="bootcamp"><a href="/bootcamp/intro/what">Bootcamp Material</a></li>
             <li class="about"><a href="/bootcamp/about.html">About Us</a></li>
 					</ul>
 				</nav>
@@ -1322,7 +1321,7 @@
 <h4 id="objectives"><strong>Objectives:</strong></h4>
 <ul>
   <li>Recognize a few spatial relationships</li>
-  <li>Understand how to clip a raster  </li>
+  <li>Understand how to clip a raster</li>
 </ul>
 
 <hr />
@@ -1331,7 +1330,7 @@
 
 <h2 id="relational-operations">Relational Operations</h2>
 
-<p>Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> </p>
+<p>Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
 
 <table border="0" align="center">
   <tr>
@@ -1439,7 +1438,7 @@
 <hr />
 
 <h3 id="spatial-predicates">Spatial Predicates</h3>
-<p>The above figure demonstrates the criteria outlined by the Dimensionally Extended Nine-Intersection Model(DE-9IM). The matrix is used to outline specific spatial relationships or predicates which are more accessible to interpretaion. These named spatial predicates are also used by spatial queryies to selet subsets of geometrys that fit in one spatial predicate. </p>
+<p>The above figure demonstrates the criteria outlined by the Dimensionally Extended Nine-Intersection Model(DE-9IM). The matrix is used to outline specific spatial relationships or predicates which are more accessible to interpretaion. These named spatial predicates are also used by spatial queryies to selet subsets of geometrys that fit in one spatial predicate.</p>
 
 <p>Here is a quick outline of the Spatial Predicates</p>
 
@@ -1448,7 +1447,7 @@
   <dd>The two geometric objects are spatially equal meaning, they represent the same geometry (congruent in geometric terms)</dd>
   <dt>Disjoint</dt>
   <dd>The two geometric objects share no points in common, the two objects are completely separate</dd>
-  <dt>Intersects </dt>
+  <dt>Intersects</dt>
   <dd>The two geometric objects have at least one point in common</dd>
   <dt>Touches</dt>
   <dd>The two geometric objects have at least one boundary point in common, but no interior points</dd>
@@ -1472,7 +1471,7 @@
 
 <dl>
   <dt>Distance</dt>
-  <dd>Measures the shortest distance between two geometries. </dd>
+  <dd>Measures the shortest distance between two geometries.</dd>
   <dt>Buffer</dt>
   <dd>Creates a geometric object that represents all points within a given distance from the given geometry</dd>
   <dt>Convex Hull</dt>
@@ -1498,19 +1497,19 @@
       <li>Residential areas with past landslide</li>
     </ul>
   </li>
-  <li>Union 
+  <li>Union
     <ul>
       <li>Merging census data for two states in a single layer (Useful for studying phenomena that do not respect political boundaries)</li>
       <li>Merging state boundaries for Canada, U.S. and Mexico into a North American dataset (GADM makes this a breeze)</li>
     </ul>
   </li>
-  <li>Buffer 
+  <li>Buffer
     <ul>
       <li>Instagram posts vs within 100m of a local restaurant</li>
       <li>Tweets vs within 1km of a football stadium</li>
     </ul>
   </li>
-  <li>Convex Hull 
+  <li>Convex Hull
     <ul>
       <li>Bounding boxes, circles</li>
       <li>Range modeling for small data sets</li>
@@ -1700,14 +1699,15 @@
 					<h4>about</h4>
 					<ul>
 						<li class="contact"><address><span class="author fn n">Nathan Casler</span> - <span class="fn email">ncasler@email.arizona.edu</span></address></li>
+            <li class="contact"><address><span class="author fn n">Daniel Guaderrama</span> - <span class="fn email">dguaderrama@email.arizona.edu</span></address></li>
+
             <!--						<li class="github"><a href="http://github.com//" rel="me">github.com/</a></li>
 						<li class="twitter"><a href="http://twitter.com//" rel="me">twitter.com/</a></li>
             <li class="rss"><a href="http://feeds.feedburner.com/">Subscribe to RSS Feed</a></li>-->
 					</ul>
 				</div><!-- misc -->
 				<p class="licence">
-        <!--					Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>-->
-					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+        <!--Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.-->
 				</p>
 			</div><!-- unit-foot-inner -->
 		</div><!-- unit-foot -->
