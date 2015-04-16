@@ -13,9 +13,22 @@ tags: [intro, projection]
   - Understand purpose of using a projection on a map
   - Recognize a few projection types
 
+
 ----
 
-#Projections <a name="projections"></a>
+###  Coordinate Reference Systems
+
+ A *Coordinate Reference System* is built on top of a *coordinate system*. A *coordinate system* is a set of mathematical rules for specifying how coordinates are to be assigned to each point, also known as a *projection*. A *coordinate reference system* is a coordinate system that is related to the real world by a datum, this can also be known as a *geographic coordinate system* or *spatial reference system*.
+
+
+
+----
+
+### Latitude and Longitude
+
+----
+
+### Projections <a name="projections"></a>
 
 <a title="By Djexplo (Own work) [CC0], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALatitude_and_Longitude_of_the_Earth.svg">![earthCRS]({{site.baseurl}}/{{ASSET_PATH}}/images/earthCRS.png)</a>
 

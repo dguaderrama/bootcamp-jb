@@ -1,7 +1,7 @@
 ---
 title: "Vector Analysis"
 layout: post
-category: More Reading...
+category: More Reading
 tagline: ""
 tags: [vector analysis, census data]
 ---

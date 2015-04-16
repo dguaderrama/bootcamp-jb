@@ -1,0 +1,2485 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>QGIS</title>
+	<meta name="author" content="Nathan Casler">
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src='/bootcamp/assets/js/jquery.hoverIntent.js'></script>
+  <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
+	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="QGIS" type="application/atom+xml">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=League+Gothic:400,700" rel='stylesheet' type='text/css'>	
+  <link href="http://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet' type='text/css'>	
+  <link href="http://fonts.googleapis.com/css?family=Slabo+13px" rel='stylesheet' type='text/css'>	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="page-container">
+
+
+<!-- post (.md) content -->
+<div id="page" class="hentry">
+	<header class="the-header">
+		<div class="unit-head">
+			<div class="unit-inner unit-head-inner">
+				<p class="logo"><a href="/bootcamp/">Spatial Data Bootcamp</a></p>
+				<nav class="nav-global">
+					<ul>
+            <li class="home"><a href="/bootcamp/index.html">Home</a></li>
+            <li class="bootcamp"><a href="/bootcamp/intro/what">Bootcamp Material</a></li>
+            <li class="about"><a href="/bootcamp/about.html">About Us</a></li>
+					</ul>
+				</nav>
+			</div><!-- unit-inner -->
+		</div><!-- unit-head -->
+	</header>
+	<div class="body" role="main">
+		<div class="unit-body">
+			<div class="unit-inner unit-body-inner">
+				<div class="entry-content">
+					
+            <div class="dropdown-nav">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Table of Contents<span class="caret"></span></a>
+                <ul style="" class="dropdown-menu" role="menu">
+                 
+                  <h4 id="setup-ref">Setup</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="know the basics-ref">Know the basics</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/projections">Projections</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/what">Scale and Resolution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/data-types">Common Data Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="get the data-ref">Get the data</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/sources">Data Sources</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/census">Census Data</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/terrain">Terrain Data</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="clean your data-ref">Clean your data</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/data-cleaning">Data Hygiene</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/formatting">Data Formatting</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="ask some questions-ref">Ask some questions</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/functions">Spatial Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/case-study">Landslide Mapping</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="show your results-ref">Show your results</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/map-types">Map Types</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/distribution">Distribution</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="more reading-ref">More reading</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/more%20reading/qgis" class="active">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/panoply">Panoply</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/consumable-services">Web Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/netcdf">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/vector-analysis">Vector Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/leaflet">Leaflet</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/spatial-issues">Spatial Issues</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div><!-- dropdown nav -->
+<article class="unit-article layout-post">
+	<div class="unit-inner unit-article-inner">
+		<div class="content">
+			<header id="content-header">
+        <div id="header-overlay">
+				<div class="unit-head">
+					<div class="unit-inner unit-head-inner">
+            <h1 class="h2 entry-title">QGIS</h1> 
+            <!--            <h2 class="h2 entry-title">Supporting tagline</h2> -->
+
+
+
+					</div><!-- unit-inner -->
+				</div><!-- unit-head -->
+      </div>
+			</header>
+
+    
+      <!--
+      <div class="col-md-2 sticky-left-nav">
+ 
+  <h4 id="setup-ref">Setup</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="know the basics-ref">Know the basics</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/projections">Projections</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/what">Scale and Resolution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/data-types">Common Data Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="get the data-ref">Get the data</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/sources">Data Sources</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/census">Census Data</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/terrain">Terrain Data</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="clean your data-ref">Clean your data</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/data-cleaning">Data Hygiene</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/formatting">Data Formatting</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="ask some questions-ref">Ask some questions</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/functions">Spatial Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/case-study">Landslide Mapping</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="show your results-ref">Show your results</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/map-types">Map Types</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/distribution">Distribution</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="more reading-ref">More reading</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/more%20reading/qgis" class="active">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/panoply">Panoply</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/consumable-services">Web Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/netcdf">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/vector-analysis">Vector Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/leaflet">Leaflet</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/spatial-issues">Spatial Issues</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+
+
+    </div>
+    -->
+			<div class="bd">
+
+        <!-- sticky left navigation -->
+<div id="sticky-anchor" class="sticky-left-nav">
+  <div id="sticky" class="sticky-left-nav-inner">
+    <h3>Contents</h3>
+    
+   
+  <h4 id="setup-ref">Setup</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="know the basics-ref">Know the basics</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/projections">Projections</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/what">Scale and Resolution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/data-types">Common Data Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="get the data-ref">Get the data</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/sources">Data Sources</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/census">Census Data</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/terrain">Terrain Data</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="clean your data-ref">Clean your data</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/data-cleaning">Data Hygiene</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/formatting">Data Formatting</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="ask some questions-ref">Ask some questions</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/functions">Spatial Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/case-study">Landslide Mapping</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="show your results-ref">Show your results</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/map-types">Map Types</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/distribution">Distribution</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="more reading-ref">More reading</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/more%20reading/qgis" class="active">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/grass-gis">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/panoply">Panoply</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/consumable-services">Web Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/netcdf">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/vector-analysis">Vector Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/leaflet">Leaflet</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/spatial-issues">Spatial Issues</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+
+  </div>  
+  <div class="clear"></div>
+</div> <!--left-nav -->
+
+
+
+<div class="entry-content content">
+  
+<p><a title="By User:Anitagraser on QGIS Wiki, User:Anitagraser (http://www.qgis.org/wiki/File:QGis_Logo.png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AQGis_Logo.png"><img width="128" alt="QGis Logo" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/128px-QGis_Logo.png" /></a></p>
+
+<h1 id="what-is-qgis">What is QGIS?</h1>
+
+<blockquote>
+  <p>QGIS is the best GIS tool in the free and open-source software (FOSS) community.</p>
+</blockquote>
+
+<blockquote>
+  <p>QGIS is a user friendly Open Source Geographic Information System (GIS) licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities.</p>
+</blockquote>
+
+<p><a href="http://www2.qgis.org/en/site/forusers/download.html">Here’s a link to download QGIS</a></p>
+
+<p><br /></p>
+
+<h2 id="exlpore-qgis">Exlpore QGIS:</h2>
+
+<p>For a more thorough explanation of QGIS, <a href="http://docs.qgis.org/2.6/en/docs/user_manual/" target="new">see the QGIS User Guide here</a>.</p>
+
+<h2 id="the-basics">The Basics</h2>
+
+<p><img src="/bootcamp/assets/images/qgis-gui.png" alt="QGIS GUI" /></p>
+
+<ol>
+  <li><strong>Menu Bar</strong>
+The menu bar provides access to QGIS features. In Linux systems, hover over to view menu bar options (haven’t checked other systems). The QGIS version is displayed while not hovering over the menu bar (linux systems). Most common features or tools are accessable through the toolbar icons which will be the prefered method throughout this QGIS introduction.</li>
+  <li><strong>Toolbar</strong>
+The toolbar provides access to most standard QGIS functions. Go to <em>Menu Bar &gt; View &gt; Toolbars</em> to activate or deactivate toolbars. Hover over tools to view the description and puropose.</li>
+  <li><strong>Map Legend</strong>
+The map legend is a list of all layers in the project. Each layer can be turned on or off with the layer’s checkbox.  It’s possible to group layers.</li>
+  <li><strong>Map View</strong>
+The map view displays the active layers in the map project. You can set the map view extent by right-clicking on a layer and selecting <em>Zoom to layer extent</em></li>
+  <li><strong>Status Bar</strong>
+The status bar displays current position in map coordiantes (e.g., meters or decimal degrees) as the mouse pointer moves across the map view. To the left of the coordinate display is the button gor toggling extents and mouse position display. To the right of the map coordinates is the scale, which may be set to one of the predefined zoom extends of 1:500 to 1:1,000,000. This scale setting will adjust as you zoom or pan throught the map view. Options for map rendering are to the right of the current map scale setting. To the far right is the current CRS for the map project.</li>
+  <li><strong>Processing Toolbox</strong>
+The processing toolbox must be turned on by naviagting to <em>Menu Bar &gt; Processing &gt; Toolbox</em>. This helpful tool allows searching by keyword for the geoalgorithm from each of the active processing roviders.<sup id="fnref:2"><a href="#fn:2" class="footnote">1</a></sup></li>
+</ol>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="configure-your-workspace">Configure your workspace</h2>
+
+<h3 id="project-properties">Project properties</h3>
+
+<p><img src="/bootcamp/assets/images/project-properties.jpg" alt="QGIS Project Properties" /></p>
+
+<p><em>Menu Bar &gt; Project &gt; Project Properties</em></p>
+
+<p>From here you can set the title, save relative paths (default!), set canvas units, enable on-the-fly projection, etc. On-the-fly projection will project layers added to the project to the configured projection. </p>
+
+<h3 id="activate-necessary-providers">Activate necessary providers</h3>
+
+<p><img src="/bootcamp/assets/images/providers-config.jpg" alt="Activate Providers" /></p>
+
+<p><em>Menu Bar &gt; Processing &gt; Options and configuration &gt; Providers &gt; $PROVIDER &gt; Activate (be sure it’s checked)</em></p>
+
+<p><a href="http://docs.qgis.org/2.6/en/docs/user_manual/processing_algs/index.html?highlight=providers">See the complete list of processing providers and algorithms here</a></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="working-with-project-projections">Working with Project Projections</h2>
+
+<blockquote>
+  <p>QGIS allows users to define a global and project-wide CRS (coordinate reference system) for layers without a pre-defined CRS. It also allows the user to define custom coordinate reference systems and supports on-the-fly (OTF) projection of vector and raster layers. All of these features allow the user to display layers with different CRSs and have them overlay properly.<sup id="fnref:2:1"><a href="#fn:2" class="footnote">1</a></sup></p>
+</blockquote>
+
+<p>See <a href="/bootcamp/intro/spatial-data">Intro to Spatial Data</a> for more detailed info on projections.</p>
+
+<p>Each new project starts with the global default projection, <a href="http://www.spatialreference.org/epsg/wgs-84/">EPSG:4326 - WGS 84</a>: </p>
+
+<p><code>proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs</code></p>
+
+<p>This can be changed at <em>Menu Bar &gt; Settings &gt; Options &gt; CRS &gt; Default CRS for new projects</em></p>
+
+<p>However, this is not the same as changing the project projection. You may define the project projection from <em>Menu Bar &gt; Project &gt; Project Properties &gt; CRS</em>. Also keep in mind, the CRS of a new project will change to the CRS of the first layer added to the project.</p>
+
+<p>‘On the fly’ CRS transformation is not enabled by the default QGIS installation.  </p>
+
+<h2 id="supported-data-formats">Supported Data Formats</h2>
+
+<p>QGIS support a multitude of data types from simple shapefiles to database tables to Web Feature Service layers. Sticking to the basics, below are quick descriptions of vector and raster data.</p>
+
+<h3 id="vector">Vector</h3>
+
+<p>QGIS uses the GDAL OGR library to read and write vector data formats, such as the most commonly known ESRI shapefile. GRASS vector and PostreSQL support is provided by a native QGIS provider plugin<sup id="fnref:2:2"><a href="#fn:2" class="footnote">1</a></sup>. <a href="http://www.gdal.org/ogr_formats.html">Here is the complete list of OGR vector formats</a>.</p>
+
+<p>Vector data is added to the project by simply clicking on the Add Vector Layer tool:</p>
+
+<p><img src="/bootcamp/assets/images/add-vector.png" alt="Add vector in QGIS" /></p>
+
+<p>View vector attribute table by right clicking on the layer and clicking Open Attribute Table. From here you can sort data, show selected features, show features visible on map, show edited and new features, filter by column, or query data with and advanced filter. </p>
+
+<p>Attribute data can be edited by enabling and edit session with the Toggle Editing Mode icon (top left).</p>
+
+<h3 id="raster">Raster</h3>
+
+<p>QGIS uses the GDAL library to read and write raster data formats while GRASS raster support is provided by a native QGIS provider plugin<sup id="fnref:2:3"><a href="#fn:2" class="footnote">1</a></sup>. <a href="http://www.gdal.org/formats_list.html">Here is the complete list of GDAL raster formats</a>.</p>
+
+<p>Similar to adding vector data, click on the Add Raster Layer tool:</p>
+
+<p><img src="/bootcamp/assets/images/add-raster.png" alt="Add raster in QGIS" /></p>
+
+<h2 id="general-spatial-functions">General Spatial Functions</h2>
+
+<p>Spatial functions are accessable through <em>Menu Bar &gt; Vector/Raster</em>. Or alternatively, they are accesses through the Toolbox panel where searching for tools by keyword is made easy. </p>
+
+<h2 id="composing-maps-for-printnon-web-based">Composing Maps (for print/non-web-based)</h2>
+
+<p>This method is ideal for exporting your work for a research paper, admiring your work, and such. Developing a web map for dissimenating your data is a bit more involved and is discussed in the <a href="/bootcamp/visualization/leaflet">Publish Your Data to a Web Mapi/LeafletJS</a> section. Also, to export data with styles see <a href="this-is-not-a-link">This section link</a>.</p>
+
+<p>Begin by opening the Print Composer: </p>
+
+<p><img src="/bootcamp/assets/images/compose-map.png" alt="Create new Print Composer workspace" /></p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h1 id="lessons">Lessons</h1>
+
+<p>Lessons are intended for learning basic spatial functions with QGIS. Each lesson is a prerequisite for the subsequent lesson. For best results, start from beginning to end from collecting data throught visualizing the final product. However, data will be prepared and available if you wish to jump through lessons without completing the former.</p>
+
+<p>DISCLAIMER: Data provided here have been reclassified/modified to fit the needs of the lessons and should not be used in any scientific analysis. Original data sources and researh articles are available if you feel the need to pursue your dreams of performing a landslide susceptibility analysis. <a href="/bootcamp/references/citations">Original data and research articles are located here</a>.</p>
+
+<h2 id="the-scenario">The Scenario:</h2>
+
+<p>You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map. </p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="data-collection">Data Collection</h2>
+
+<h3 id="what-this-lesson-covers">What this lesson covers:</h3>
+
+<ul>
+  <li>downloading data</li>
+  <li>downloading meta data</li>
+  <li>file storage/project directory (keep your data directories clean)</li>
+</ul>
+
+<h3 id="objective">Objective:</h3>
+
+<p>Gather data necessary for locating high-risk landslide areas in the state of Washington. </p>
+
+<h3 id="data-sources">Data sources:</h3>
+
+<ul>
+  <li>GTOPO30</li>
+  <li>Washington boundary</li>
+  <li>Washington geology</li>
+  <li><a href="http://factfinder.census.gov/">American Fact Finder (real estate)</a></li>
+  <li><a href="http://www.census.gov/geo/maps-data/data/tiger-line.html">TIGER/Line (shapefiles and geodatabases)</a></li>
+</ul>
+
+<h3 id="steps">Steps:</h3>
+
+<ol>
+  <li>prepare project directory
+    <ul>
+      <li>this is intended for a best practice</li>
+      <li>create folder structure</li>
+    </ul>
+  </li>
+  <li>how to download gtopo30
+    <ul>
+      <li>explain</li>
+    </ul>
+  </li>
+  <li>how to download washington boundary
+    <ul>
+      <li>explain</li>
+    </ul>
+  </li>
+  <li>how to download washington geology
+    <ul>
+      <li>explain</li>
+    </ul>
+  </li>
+</ol>
+
+<ul>
+  <li>download data with meta data (DEM &amp; washingon boundary data with meta data)</li>
+  <li>prepare project directory</li>
+  <li>data will be used in Data Prep</li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="data-wrangling---prepare-digital-elevation-model">Data Wrangling - Prepare Digital Elevation Model</h2>
+
+<h3 id="what-this-lesson-covers-1">What this lesson covers:</h3>
+
+<ul>
+  <li>reprojecting data</li>
+  <li>clipping data extents</li>
+  <li>importing data (raster and vector)</li>
+</ul>
+
+<h3 id="objective-1">Objective:</h3>
+
+<p>Download, examine, and prepare DEM for landslide susceptibility analysis.</p>
+
+<h3 id="data">Data:</h3>
+
+<ul>
+  <li>gtopo30 DEM - northwest america</li>
+</ul>
+
+<h3 id="steps-1">Steps:</h3>
+
+<ul>
+  <li>import DEM of northwest US</li>
+  <li>import washington boundary shapefile</li>
+  <li>clip DEM to washington boundary</li>
+  <li>data will be used in Reclassify and Rasterize Vector</li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="data-wrangling---reclassify-and-rasterize-vector">Data Wrangling - Reclassify and Rasterize Vector</h2>
+
+<h3 id="what-this-module-covers">What this module covers:</h3>
+
+<ul>
+  <li>editing vector data attributes</li>
+  <li>(re)classifying vector data</li>
+  <li>rasterizing vector data</li>
+</ul>
+
+<h3 id="objective-2">Objective</h3>
+
+<p>Prepare geology layer with geo_type (just an example) of soft, medium, hard, mass-wasting</p>
+
+<h3 id="data-1">Data:</h3>
+
+<ul>
+  <li>washington state geology shapefile</li>
+</ul>
+
+<h3 id="steps-2">Steps:</h3>
+
+<ol>
+  <li>Import wa_geology.shp:
+    <ul>
+      <li><em>Open QGIS, Add Vector Layer, and navigate to wa_geology.shp.</em><br />
+<img src="/bootcamp/assets/images/lesson-1/lesson-1-01.png" alt="QGIS: Add geology vector layer into map view" /></li>
+    </ul>
+  </li>
+  <li>Open field calculator in Attribute Table:
+    <ul>
+      <li><em>Right-click wa_geology in Layers List &gt; Open Attribute Table &gt; Toggle editing mode (top left)</em></li>
+      <li>While in edit mode, <em>Open field calculator (top right)</em><br />
+<img src="/bootcamp/assets/images/lesson-1/lesson-1-03.png" alt="QGIS: Open field calcultor" /></li>
+    </ul>
+  </li>
+  <li>Add and calculate new field:
+    <ul>
+      <li>Match your Field Calculator window to the one below for creating a new field ‘strength’ with a range of values of 0-3. Be sure to match it exactly as it’s displayed: <em>double-quotes are evaluated as a column whereas single-quotes are evaluated as column values. Save your changes once finished</em>.<br /><br /><strong>Expression:<br />case<br />when “rock_type” = ‘soft’ then 1<br />when “rock_type” = ‘medium’ then 2<br />when “rock_type” = ‘hard’ then 3<br />else 0<br />done<br /></strong>
+<img src="/bootcamp/assets/images/lesson-1/lesson-1-04.png" alt="QGIS: Add and calculate new field" /></li>
+    </ul>
+  </li>
+  <li>Style wa_geology.shp:
+    <ul>
+      <li><em>Right-click on wa_geology.shp in layer list &gt; Properties &gt; Style</em></li>
+      <li>Change style type from <em>Single Symbol</em> to <em>Categorized</em>.</li>
+      <li>Categorize by <em>strength</em> and click <em>Classify</em> to add classes.</li>
+      <li>Match your colors with the example below or get fancy with your own styling.<br />
+<img src="/bootcamp/assets/images/lesson-1/lesson-1-07.png" alt="QGIS: Style shapefile" /></li>
+    </ul>
+  </li>
+  <li>Rasterize wa_geology.shp:
+    <ul>
+      <li>GDAL’s rasterize is a prefered method. This can be accessed through <em>Menu Bar &gt; Raster &gt; Conversion &gt; Rasterize (Vector to raster)</em>. Notice how the parameters have been diabled in the example below. There’s a specific reason for this. Complete the parameter inputs: <em>Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000</em>. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.</li>
+      <li><em>Click the edit icon (pencil) locate near the block of code</em>. This enables you to add those non-QGIS parameters.</li>
+      <li><em>Add the line of code</em> <code>-at -a_nodata 0</code> just after <code>gdal_rasterize</code> </li>
+      <li><em>-at</em>: Enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.<sup id="fnref:3"><a href="#fn:3" class="footnote">2</a></sup></li>
+      <li><em>-a_nodata $value</em>: Assign a specified nodata value to output bands - this prevents pixels with no data from being written into the output raster.<sup id="fnref:3:1"><a href="#fn:3" class="footnote">2</a></sup></li>
+      <li><a href="http://www.gdal.org/gdal_rasterize.html">Here’s a link to the gdal_rasterize parameters</a>.<br />
+   <img src="/bootcamp/assets/images/lesson-1/lesson-1-11-2.png" alt="QGIS: Rasterize - Vector to raster" /></li>
+    </ul>
+  </li>
+  <li>Style the new wa_geology.tif:
+    <ul>
+      <li>Open wa_geology.tif style properties. HINT: See step 4.</li>
+      <li>For <em>Render type</em>, select <em>Singleband pseudocolor</em></li>
+      <li>On the right select: <em>Load min/max values: Min/max; Extend: Actual (slower); then Load</em>. This loads actual values into the classification. QGIS Approximates values by defautl. </li>
+      <li><em>Change Mode to Equal Interval with 3 classes</em>. Remember, we only have three rock strength classes: soft, medium, hard. Change your color map if you’d like. The color maps are not stored into the raster, so the raster will load with the defaul color map (black to white) each time its opened in a new project.</li>
+      <li><em>Click Classify</em>. Apply and OK.<br />
+   <img src="/bootcamp/assets/images/lesson-1/lesson-1-13.png" alt="QGIS: Style raster" /></li>
+    </ul>
+  </li>
+</ol>
+
+<p>You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster. </p>
+
+<p>Keep this reclassified and rasterized vector, it’ll be used in the next lesson.</p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="vector-and-raster-analysis">Vector and Raster Analysis</h2>
+
+<blockquote>
+  <p>notes: move Download Census and Download TIGER to Data Collection.</p>
+</blockquote>
+
+<blockquote>
+  <p>notes: create separate lesson for joining tabular data in QGIS</p>
+</blockquote>
+
+<blockquote>
+  <p>notes: create separate lesson for joining joined tabular data to vector data</p>
+</blockquote>
+
+<blockquote>
+  <p>notes: create separate lesson for intersecting vector with joined tabular data with raster</p>
+</blockquote>
+
+<h3 id="what-this-module-covers-1">What this module covers:</h3>
+
+<ul>
+  <li>Downloading Census Amerian FactFinder data</li>
+  <li>Downloading Census TIGER boundary data</li>
+  <li>Wrangling Census tabular data</li>
+  <li>Importing non-spatial data into QGIS</li>
+  <li>Joining Census housing data (home values) to Census tracts (shapefile)/joining non-spatial tabular data to vector spatial data</li>
+  <li>Intersecting raster and vector layers</li>
+</ul>
+
+<h3 id="objectives">Objectives:</h3>
+
+<p>Download Census tabular data and shapefile. Join two sets of Census tabular data to a shapefile.</p>
+
+<h3 id="data-collection-1">Data Collection:</h3>
+
+<ul>
+  <li><a href="http://factfinder.census.gov/" alt="Spatial Data Bootcamp: Download Census housing data - American FactFinder" target="_blank">Census housing data - American FactFinder</a></li>
+  <li><a href="https://www.census.gov/geo/maps-data/data/tiger.html" alt="Spatial Data Bootcamp: Download Census tract shapefile - TIGER data" target="_blank">Census tracts - TIGER Data</a></li>
+</ul>
+
+<h4 id="downloading-data-from-american-factfinder-census">Downloading data from American FactFinder (Census):</h4>
+
+<!--1. Download Census American FactFinder housing data:
+  * Open the <a href="http://factfinder.census.gov/" alt="Spatial Data Bootcamp: Download Census housing data - American FactFinder" target="_blank">Census American FactFinder site</a> and select <em>Guided Search > Get Me Started</em>.<br>
+  ![Spatial Data Bootcamp: Vector & Census data](/bootcamp/assets/images/vector-census/vector-census-1.png)
+  * Step 1: Choose from one of the following. Click *Next*:<br>I'm looking for information from a specific *dataset*<br>Click *NEXT*<br>
+  ![Spatial Data Bootcamp: Vector & Census data](/bootcamp/assets/images/vector-census/vector-census-2.png)
+  * Step 2: Search the dataset you're interested in. Click *Next*.<br>Select a program: *American Community Survey*<br>Select a dataset: *2013 ACS 5-year estimates*<br>*ADD TO YOUR SELECTIONS*<br>Click *NEXT*<br>
+  ![Spatial Data Bootcamp: Vector & Census data](/bootcamp/assets/images/vector-census/vector-census-3.png)
+  * Step 3: Select the topic(s) you're interested in. Click *Next*.<br>Basic Count/Estimate: *Housing Units*<br>Financial Characteristic: *Value of Home*<br>Click *NEXT*<br>
+  ![Spatial Data Bootcamp: Vector & Census data](/bootcamp/assets/images/vector-census/vector-census-4.png)
+  * Step 4: Add one or more geographic areas (states, cities, towns, etc.) to Your Selections. Click *Next*.<br>Select a geographic type: *.... ....Census Tract*<br>Select a state: *Washington*<br>Select a county: (leave blank)<br>Select one or more geographic areas: *All Census Tracts within Washington*<br>*ADD TO YOUR SELECTIONS*<br>Click *NEXT*<br>
+  ![Spatial Data Bootcamp: Vector & Census data](/bootcamp/assets/images/vector-census/vector-census-5.png)
+  * Step 5: There are no race or ethnic groups available based upon the contents of 'Your Selections'.<br>Click *NEXT*<br>
+  ![Spatial Data Bootcamp: Vector & Census data](/bootcamp/assets/images/vector-census/vector-census-6.png)
+  * Step 6: <em>Skipped</em>
+  * Step 7: Select a table, file or document from these top search results:<br>Click first row in table: *SELECTED HOUSING CHARACTERISTICS* DP04 2013 ACS 5-year estimates<br>
+  ![Spatial Data Bootcamp: Vector & Census data](/bootcamp/assets/images/vector-census/vector-census-7.png)
+  * Step 8: Table Viewer<br>
+  ![Spatial Data Bootcamp: Vector & Census data](/bootcamp/assets/images/vector-census/vector-census-8.png)
+  * Now you need to remove unneccessary data:<br>*Modify Table* ![Spatial Data Bootcamp: Vector & Census data](/bootcamp/assets/images/vector-census/vector-census-9.png)<br>
+-->
+
+<p>The following method allows for less data wrangling (although it does involve two joins). We’re going to download Washington housing units and home value data individually and join them. If you go through the Guided Search then you’ll end up having to wrangling more than you want (remove lots of unneccessary data).</p>
+
+<h5 id="download-census-american-factfinder-housing-data"><strong>1. Download Census American FactFinder housing data:</strong></h5>
+
+<ul>
+  <li>Open the <a href="http://factfinder.census.gov/" alt="Spatial Data Bootcamp: Download Census housing data - American FactFinder" target="_blank">Census American FactFinder site</a> and select <em>Advanced Search &gt; SHOW ME ALL</em>.<br />
+<img src="/bootcamp/assets/images/vector-census/vector-census-1.png" alt="Spatial Data Bootcamp: Download Census data" /></li>
+  <li>You are now viewing the <em>ADVANCED SEARCH</em>. Search - Use options on the left (topics, geographics, …) to narrow your search results.<br />
+<img src="/bootcamp/assets/images/vector-census/vector-census-2.png" alt="Spatial Data Bootcamp: Download Census data" /></li>
+  <li>Download <em>Washington Housing Units</em>:<br />
+Add <em>Housing Units</em> to query:<br />
+    <ol>
+      <li>Click <em>Topics</em> on the left-hand menu<br /></li>
+      <li>Select Topics to add to ‘Your Selections’<br /></li>
+      <li>Housing &gt; Basic Count/Estimate &gt; Click <em>Housing Units</em><br /></li>
+      <li>Click <em>CLOSE</em> (top right)<br />
+<img src="/bootcamp/assets/images/vector-census/vector-census-3.png" alt="Spatial Data Bootcamp: Download Census data" /><br />
+Add <em>Washington Census Tract</em> to query:<br /></li>
+      <li>Click <em>Geographies</em> on left-hand menu<br /></li>
+      <li>Select a geographic type: <em>…. ….Census Tract -140</em><br /></li>
+      <li>Select a state: <em>Washington</em><br /></li>
+      <li>Select one or more geographic areas: <em>All Census Tracts within Washington</em><br />
+<em>ADD TO YOUR SELECTIONS</em><br />
+Click <em>CLOSE</em> (top right)<br />
+<img src="/bootcamp/assets/images/vector-census/vector-census-4.png" alt="Spatial Data Bootcamp: Download Census data" /><br />
+Check row: <em>B25001 HOUSING UNITS 2013 ACS 5-year estimates</em><br />
+Click <em>Download</em> at the bottom of the table<br />
+<img src="/bootcamp/assets/images/vector-census/vector-census-5.png" alt="Spatial Data Bootcamp: Download Census data" />
+Click <em>OK</em> to create a zip file containing your selected products.<br />
+<img src="/bootcamp/assets/images/vector-census/vector-census-6.png" alt="Spatial Data Bootcamp: Download Census data" />
+Click <em>DOWNLOAD</em> to download zipped files<br />
+<img src="/bootcamp/assets/images/vector-census/vector-census-7.png" alt="Spatial Data Bootcamp: Vector &amp; Census data" />
+Do not clear all selections.</li>
+    </ol>
+  </li>
+  <li>Download <em>Washington Value of Homes</em>:<br />
+If you did not clear your selections from the previous steps then continue on, else seet <strong>Download Washington Housing Units</strong> above.<br />
+    <ol>
+      <li>Remove <em>Housing Units</em> from selection<br />
+<img src="/bootcamp/assets/images/vector-census/vector-census-8.png" alt="Spatial Data Bootcamp: Download Census data" /></li>
+      <li>Click <em>Topics</em> on the left-hand menu and navigate to <em>Value of Home</em>:<br /><em>Housing &gt; Financial Characteristic &gt; Value of Home (click to select) &gt; Click CLOSE (top right)</em><br />
+<img src="/bootcamp/assets/images/vector-census/vector-census-9.png" alt="Spatial Data Bootcamp: Download Census data" /></li>
+      <li>Check row: <em>B25077 MEDIAN VALUE (DOLLARS) 2013 ACS 5-year estimates</em>
+<img src="/bootcamp/assets/images/vector-census/vector-census-10.png" alt="Spatial Data Bootcamp: Download Census data" /></li>
+      <li>Click <em>Download</em> (bottom of table) to download zipped files<br />
+<img src="/bootcamp/assets/images/vector-census/vector-census-11.png" alt="Spatial Data Bootcamp: Download Census data" /></li>
+      <li>Click <em>OK</em> to create a zip file containing your selected products<br />
+<img src="/bootcamp/assets/images/vector-census/vector-census-12.png" alt="Spatial Data Bootcamp: Download Census data" /></li>
+      <li>Click <em>Download</em> to save the file to your computer. This zip file will be named the same as the one above, your browser will append (1).<br />
+<img src="/bootcamp/assets/images/vector-census/vector-census-13.png" alt="Spatial Data Bootcamp: Download Census data" /></li>
+    </ol>
+  </li>
+</ul>
+
+<h5 id="download-tiger-census-tracts"><strong>2. Download TIGER Census Tracts:</strong></h5>
+
+<ol>
+  <li>Open the <a href="https://www.census.gov/geo/maps-data/data/tiger.html" alt="Spatial Data Bootcamp: Download Census tract shapefile - TIGER data" target="_blank">Census TIGER data site</a> and click on TIGER/Line Shapefiles from the product table.<br />
+  <img src="/bootcamp/assets/images/vector-tiger/vector-tiger-1.png" alt="Spatial Data Bootcamp: Download TIGER data" /></li>
+  <li>In the product year table, select <em>2014</em>, click <em>Download</em>, and enter the <em>Web Interface</em><br />
+  <img src="/bootcamp/assets/images/vector-tiger/vector-tiger-2.png" alt="Spatial Data Bootcamp: Download TIGER data" /></li>
+  <li>Select a layer type: <em>Census Tracts</em>, then <em>Submit</em><br />
+  <img src="/bootcamp/assets/images/vector-tiger/vector-tiger-3.png" alt="Spatial Data Bootcamp: Download TIGER data" /></li>
+  <li>Census Tract - Select a state: <em>Washington</em>, then <em>Download</em><br />
+  <img src="/bootcamp/assets/images/vector-tiger/vector-tiger-4.png" alt="Spatial Data Bootcamp: Download TIGER data" /></li>
+  <li>Save file. Navigate to your directory<br />
+  <img src="/bootcamp/assets/images/vector-tiger/vector-tiger-5.png" alt="Spatial Data Bootcamp: Download TIGER data" /></li>
+</ol>
+
+<h5 id="unpack-downloaded-files"><strong>3. Unpack downloaded files:</strong></h5>
+
+<p>If you haven’t already downloaded your data, see <strong>Download Census Housing Data</strong> and <strong>Download TIGER Census Tracts</strong> above.</p>
+
+<p>If you haven’t already moved your downloaded zip files from the above steps, move your zip files into your working directory.</p>
+
+<p>Using an extraction application like 7-zip makes it easy to unzip these files.</p>
+
+<p>Install 7-zip if necessary.</p>
+
+<p>Right-click on zip file and ‘Extract Here’</p>
+
+<p>Do this for all zip files.</p>
+
+<p><img src="/bootcamp/assets/images/vector-tiger/vector-unpack-files.png" alt="Spatial Data Bootcamp: Unzip files" /></p>
+
+<p>After unpacking files, open one of the Census ACS folders (aff_download).</p>
+
+<p>Rename folder </p>
+
+<p>Notice the files. Theres a text file with metadata on the given metric (Housing Units or Home Values). There’s a README that explains what’s inside of the zip file. There’s a metadata CSV that explains what the column headings represent. And there’s the data we need in CSV format with annotations.</p>
+
+<p>Now open the Census tracts TIGER data folder. The XMl file contain the metadata about the shapefile. Double-clicking the XML files should open in a web browser and you should be able to read the information. The shapefile data is stored in the .dbf, .prj, .shp, and .shx. You can view the projection by opening the .prj in a text editor. Don’t bother trying to open the other files in a text editor.</p>
+
+<p><img src="/bootcamp/assets/images/vector-tiger/vector-unpack-files-2.png" alt="Spatial Data Bootcamp: View shapefiles and metadata" /></p>
+
+<h5 id="join-census-housing-data-to-tiger-census-tracts"><strong>4. Join Census Housing Data to TIGER Census Tracts</strong></h5>
+
+<ol>
+  <li>Import Census Tracts shapefile <strong>tl_2014_53_tract</strong> <img src="/bootcamp/assets/images/qgis/add-vector.png" alt="Spatial Data Bootcamp: Census Join - Add vector layer" />.<br />
+<img src="/bootcamp/assets/images/census-join/census-join-1.png" alt="Spatial Data Bootcamp: Census Join - Washington Census tracts" /></li>
+  <li>Rename tl_2014_53_tract to census-tracts <em>Right-click layer &gt; Rename</em>.</li>
+  <li>Open the tract <strong>Attribute table</strong> and leave it open: <em>Right-click tract layer &gt; Attribute table</em><br />
+<img src="/bootcamp/assets/images/census-join/census-join-2.png" alt="Spatial Data Bootcamp: Census Join - Washington tract attributes" /></li>
+  <li>If you haven’t yet, download your Census data and return to this step. SEE <em>ENTER EXERCISE NUMBER AND LINK HERE</em><br /></li>
+  <li>Navigate to the Census Housing Units directory. You should have a soure_files directory with Census Housing Units, Census Home Values, and Census Tracts zip files and unzipped folders containing data.<br />
+<img src="/bootcamp/assets/images/census-join/census-join-3.png" alt="Spatial Data Bootcamp: Census Join - Washington Census data" /></li>
+  <li><em>Rename ACS_13_5YR_B25001_with_ann.csv to housing-units.csv</em>
+<img src="/bootcamp/assets/images/census-join/census-join-4.png" alt="Spaital Data Bootcamp: Census Join - Rename housing data CSV" /></li>
+  <li>Open housing-units.csv and inspect the data for columns to use for our joins. HINT: it’s GEOID (tract shapefile) and GEO.id2 (ACS CSVs). We can only join data (tabular join) with <em>exact same</em> columns. The Census provides these columns for this purpose (I’m sure other purposes as well). See the tables below:<br />
+<img src="/bootcamp/assets/images/census-join/census-join-5.png" alt="Spatial Data Bootcamp: Census Join - Locate similar columns" /></li>
+  <li>Remove the second row containing the annotations. Delete the columns: GEO.id, GEO.display-lable, and HD02_VD01. For the purposes of this exercise, we do not need the removed columns. Our objective is to join data and visualize (with minimal data wrangling). In LibreOffice, highlight the row/column, right-click and Delete Selected Columns. Excel should be the same/similar. Command-line users, AWK is an easy solution. It should look like the file below:<br />
+<img src="/bootcamp/assets/images/census-join/census-join-6.png" alt="Spatial Data Bootcamp: Census Join - Delete housing data annotation" /></li>
+  <li>Rename header HD01_VD01 to TotalUnitsHome. Save your document, be sure it’s stored as a Text CSV <img src="/bootcamp/assets/images/census-join/census-join-8.png" alt="Spatial Data Bootcamp: Census Join - Save as Text CSV" />. Excel users may have to select Text CSV from a drop-down list (I’ll check back with this). Renaming the headers reduced confusion down the road. Also, notice how there are no spaces in the header name. Removing (or not having) spaces is in the top 10 list of best naming convention practices (on all computer systems.. everywhere in the digital world.. you should never have spaces in your file names or directories). Close the document.<br />
+<img src="/bootcamp/assets/images/census-join/census-join-7.png" alt="Spatial Data Bootcamp: Census Join - Rename HD01_VD01 to MeanValueHome" /></li>
+  <li>Do the same for the Home Values CSV:
+    <ul>
+      <li>Navigate to document</li>
+      <li>Rename ACS_13_5YR_B25077_with_ann.csv to home-values.csv</li>
+      <li>Delete second row with annotations</li>
+      <li>Delete columns: GEO.id, GEO.display-label, HD02_VD01</li>
+      <li>Rename HD01_VD01 to MedianValueHome</li>
+      <li>Save your document in Text CSV format <img src="/bootcamp/assets/images/census-join/census-join-8.png" alt="Spatial Data Bootcamp: Census Join - Save as Text CSV" /><br />
+<img src="/bootcamp/assets/images/census-join/census-join-9.png" alt="Spatial Data Bootcamp: Census Join - Wrangle Home Values CSV" /></li>
+    </ul>
+  </li>
+  <li>You’re not quite finished with wrangling your data yet. If you have a quick look at your home-values.csv (it should still be open, Simon didn’t say close!), you’ll notice there are some invalid fields - number fields that contain non-numeric values. Lines 501 and 502 read 1,000,000+ and should be changed to 1000000.<br />
+<img src="/bootcamp/assets/images/census-join/census-join-10.png" alt="Spatial Data Bootcamp: Census Join - Wrangle Home Values CSV" />
+There are some median home value records with ‘-‘ and if you read your metadata you would know that:<br /><br /><em>An ‘-‘ entry in the estimate column indicates that either no sample observations or too few sample observations were available to compute an estimate, or ratio of medians cannot be calculated because of one or both of the median estimates falls in the lowest interval or upper interval of an open-ended distribution.</em><br /><br />Let’s cleanse this now:<br /> LibreOffice and Excel users, <strong>Find and Replace ‘-‘ (without single quotes) with NULL</strong><br />VIM (or similar) users: <strong>%s#-#NULL#g</strong><br /><br />Also, after making these changes the data type of the incorrect records have not changed - they’re still string/text fields in a numeric universe (only in LibreOffice/Excel, however). We will instruct QGIS on how to read the column data types with a .CSVT. Be sure to save your home-values.csv in Text CSV format <img src="/bootcamp/assets/images/census-join/census-join-8.png" alt="Spatial Data Bootcamp: Census Join - Save as Text CSV" />.
+<img src="/bootcamp/assets/images/census-join/census-join-11.png" alt="Spatial Data Bootcamp: Census Join - Wrangle Home Values CSV" /></li>
+  <li>Just wait right there, one does not simply join a string (tract’s GEOID) to a number (ACS’s GEO.ids). We now have to create our CSVTs (one for each home-values.csv and housing-units.csv). As a reminder, these indicate to QGIS the data types of each column of repsective CSVs. Our goal here is to join GEOID from tracts (shapefile) to GEO.id2 from home-values.csv and housing-units.csv. Go back into QGIS and open the census-tracts properties and navigate to <strong>Fields</strong>. Locate GEOID in the table and notice its <strong>Type name</strong> - <strong>String</strong>. With less wrangling we can make GEO.id2 a string for joining purposes. Close the properties window. The following steps outline how to create the CSVTs.<br />
+<img src="/bootcamp/assets/images/census-join/census-join-12.png" alt="Spatial Data Bootcamp: Census Join - Tract field data types" /></li>
+  <li>Open a text editr (gedit, VIM, notepad, notepad++) and enter the following row:<br />
+“String”,”Real(12.0)”<br />
+<img src="/bootcamp/assets/images/census-join/census-join-13.png" alt="Spatial Data Bootcamp: Census Join - Creating a CSVT" />
+What this means:<br />
+There are two columns in this file separated by a common. The first column indicates string and the second is a real number with length of 12 and precision of 0. While preparing this exercise, QGIS didn’t like multiplying integers (Field Calculator results with NULL), so we’re using real number type. 0 precision removes unneccessary zeros after the decimal from real number types, also there are no fractions in the datasets.<br /><br />
+    <ul>
+      <li>Save this file as <em>home-values.csvt</em> within the <em>same</em> directory as <em>home-values.csv</em><br /><br /></li>
+    </ul>
+  </li>
+  <li>Luckily, we wrangled both CSVs into the same format, so copy <em>home-values.csvt</em> and paste it into the <em>same</em> directory as <em>housing-units.csv</em>. Rename this pasted file as <em>housing-units.csvt</em>. Data types, lengths, and precisions will be the same for both files.<br />
+<img src="/bootcamp/assets/images/census-join/census-join-14.png" alt="Spatial Data Bootcamp: Census Join - Viewing housing-units.csvt" /></li>
+  <li>Import CSVs into QGIS. Don’t move just yet, there a little quirk about importing CSVs with CSVTs into QGIS. You <em>cannot</em> use the <strong>Add Delimited Text Layer</strong> tool, this does not recognize the CSVT precision and length. The best way to import with CSVTs is the ol’ drag-n-drop method (this has only been tested on Ubuntu 14.04 as of yet). Drag-and-drop your housing-units.csv and home-values.csv into QGIS. Don’t touch the associated CSVTs, QGIS reads these during the import process, just <em>don’t</em> move these files. It’s the same concept as shapefiles and the multitude of associates files per one shapefile.<br />
+<img src="/bootcamp/assets/images/census-join/census-join-15.png" alt="Spatial Data Bootcamp: Census Join - Drag and drop CSVs" /></li>
+  <li>Your workspace should look like the image below. Save your workspace now.<br />
+<img src="/bootcamp/assets/images/census-join/census-join-16.png" alt="Spatial Data Bootcamp: Census Join - Workspace" /></li>
+  <li>Now we are able to join our Census tabular data to the tracts shapefile. Join data by opening the <strong>Properties</strong> of the census-tracts layer and navigating to the <strong>Joins</strong> tab.<br />
+<img src="/bootcamp/assets/images/census-join/census-join-17.png" alt="Spatial Data Bootcamp: Census Join - view tracts properties" /></li>
+  <li>Start the first join by clicking the green plus sign <img src="/bootcamp/assets/images/qgis/join-plus.png" alt="Spatial Data Bootcamp: Census Join - green plus sign" />. We’re joining home-values and housing-units to census-tracts with:<br /><strong>Join field: GEO.id2<br />Target field: GEOID<br />Cache join layer in virtual memory: (checked)<br />Apply and OK onced both joined</strong><br />
+<img src="/bootcamp/assets/images/census-join/census-join-18.png" alt="Spatial Data Bootcamp: Census Join - joining data" /></li>
+  <li>Open census-tracts <strong>Attribute Table</strong> and locate the MeanValueHome and TotalUnitsHome fields. Notice they’ve been renamed and cut-down. We can still decrypt these headings so we’ll continue on. Close the attributes table.<br />
+<img src="/bootcamp/assets/images/census-join/census-join-19.png" alt="Spatial Data Bootcamp: Census Join - viewing joined data" /></li>
+  <li>You have joined the data but it’s currently being stored in the virtual memory, so we need to save census-tracts (with joined data) as a new shapefile: <em>Right-click shapefile &gt; Save As</em><br />
+<strong>Format: ESRI Shapefile<br />
+Save as: tracts-values-units (save in your project directory)<br />
+Add saved file to map: (checked)</strong><br />
+<img src="/bootcamp/assets/images/census-join/census-join-20.png" alt="Spatial Data Bootcamp: Census Join - save shapefile" /></li>
+  <li>Let’s now calculate total housing value per census tract (TotalUnitsHome X MedianValueHome). 
+    <ul>
+      <li><strong>Open tracts-value-units attributes table &gt; Toggle editing mode</strong> <img src="/bootcamp/assets/images/qgis/toggle-editing-mode.png" alt="Spatial Data Bootcamp: Census Join - toggle edits" /> <strong>&gt; Field Calculator</strong> <img src="/bootcamp/assets/images/qgis/field-calculator.png" alt="Spatial Data Bootcamp: Census Join - field calculator" />. </li>
+      <li>Configure Field Calculator inputs as follows:<br />
+<strong>Create a new field: (checked)</strong><br />
+<strong>Output field name: TotalValue</strong><br />
+<strong>Output field type: Decimal number (real)</strong><br />
+<strong>Output field width: 20</strong><br />
+<strong>Precision: 0</strong><br />
+<strong>Expression: “home-value” * “housing-un”</strong><br /><br />
+<img src="/bootcamp/assets/images/census-join/census-join-21.png" alt="Spatial Data Bootcamp: Census Join - field calculator" /></li>
+    </ul>
+  </li>
+  <li>Locate <strong>TotalValue</strong> and confirm the calculation. NOTE: you should still have NULL values given that home-values.csv contains NULL values. Be sure to <em>Save edits</em> <img src="/bootcamp/assets/images/qgis/save-edits.png" alt="Spatial Data Bootcamp: Census Join - save edits" /> and disable editing mode (Toggle editing mode) <img src="/bootcamp/assets/images/qgis/toggle-editing-mode.png" alt="Spatial Data Bootcamp: Census Join - toggle editing mode" />. The editing options should now be grayed-out and disabled.<br />
+<img src="/bootcamp/assets/images/census-join/census-join-22.png" alt="Spatial Data Bootcamp: Census Join - TotalValue per tract" /></li>
+  <li>You’ve successfully joined two sets of Census tabular data to a shapefile. </li>
+  <li>Style tracts-values-units by categorizing by TotalValue and select a color ramp. QGIS will inform you that you have a high number of classes, click OK to confirm the categorization. We’ll need to remove NULL values. Locate NULL within the category table (HINT: it contains no values and is blank - look towards the bottom), highlight and click ‘Delete’ (not Delete all!) - ‘Delete’ removes only selected rows. Click Apply then OK to confirm changes. Deactivate census-tracts layer by unchecking it activate box in the layers list. Save your workspace. <br />
+<img src="/bootcamp/assets/images/census-join/census-join-24.png" alt="Spatial Data Bootcamp: Census Join - completed" /></li>
+</ol>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="vector-analysis">Vector Analysis</h2>
+
+<h3 id="what-this-module-covers-2">What this module covers:</h3>
+
+<ul>
+  <li>Buffer polylines</li>
+  <li>Join census housing (home values) to census tracts (shapefile)</li>
+  <li>Intersecting vector layers</li>
+</ul>
+
+<h3 id="objective-3">Objective:</h3>
+
+<p>Quantify total home value at risk within landslide/mass-wasting and fautls.</p>
+
+<h3 id="data-collection-there-needs-to-be-instructionsquick-lesson-on-each-of-the-collection-sources">Data Collection: (there needs to be instructions/quick lesson on each of the collection sources)</h3>
+
+<ul>
+  <li><a href="http://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml" alt="Spatial Data Bootcamp: Download Census housing data - American FactFinder" target="_blank">Census housing data - American FactFinder</a></li>
+  <li><a href="https://www.census.gov/geo/maps-data/data/tiger.html" alt="Spatial Data Bootcamp: Download Census tract shapefile - TIGER data" target="_blank">Census tracts - TIGER Data</a></li>
+  <li><a href="http://earthquake.usgs.gov/hazards/qfaults" alt="Spatial Data Bootcamp: Download USGS quaternary faults" target="_blank">Quaternary faults - USGS </a></li>
+  <li><a href="http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx" alt="Spatial Data Bootcamp: Download seismogenic features" target="_blank">Washington seismogenic features - REQUIRES GDAL filegdb driver!</a></li>
+  <li>
+    <p><a href="http://nhd.usgs.gov/" alt="Spatial Data Bootcamp: Download USGS National Hydrography Dataset - Washington" target="_blank">Washington streams/rivers - USGS National Hydrography Dataset</a></p>
+  </li>
+  <li>faults_100k - [source]</li>
+  <li><a href="/bootcamp/assets/data/housing-data.zip">housing-data.zip</a></li>
+</ul>
+
+<h3 id="data-wrangling">Data Wrangling:</h3>
+
+<h4 id="wrangle-census-data">Wrangle Census Data:</h4>
+
+<p>Luckily, the Census data has already been wrangled. Census data can sometimes be tricky. </p>
+
+<h4 id="high-risk-rules">High-risk rules:</h4>
+
+<ul>
+  <li>within 100m of fault lines</li>
+  <li>within 50m of rivers/streams</li>
+  <li>within soft geologic areas </li>
+</ul>
+
+<ol>
+  <li>Open QGIS and configure project workspace.</li>
+  <li>Import data:
+    <ul>
+      <li>HINT: The project projection will default to the first layer that is added to the project (See lower right of image below: EPSG:2927).</li>
+      <li><em>Add Vector Layer: </em><img src="/bootcamp/assets/images/qgis/add-vector.png" alt="Spatial Data Bootcamp: Vector Analysis - add vector data" /><br /><strong>fault_100k.shp</strong><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-3.png" alt="Spatial Data Bootcamp: Vector Analysis - streams and faults" /></li>
+    </ul>
+  </li>
+  <li>Buffer fault lines to 100m:
+    <ul>
+      <li><em>Menu Bar &gt; Vector &gt; Geoprocessing Tools &gt; Buffer(s)</em></li>
+      <li>Configure inputs as follows:<br /><strong>Input vector layer: fault_100k<br />Buffer distance: 100<br />Output shapefile: fault_buffer_100m.shp<br />Add results to canvas: (Checked)<br />Click OK to perform analysis, Close to exit the tool</strong><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-4.png" alt="Spatial Data Bootcamp: Vector Analysis - buffer analysis" /></li>
+      <li><em>Zoom in to a buffer, close enough to see the width</em></li>
+      <li><em>Open the meaure tool</em> <img src="/bootcamp/assets/images/qgis/measure-tool.png" alt="Spatial Data Bootcamp: Vector Analysis - measure tool" /></li>
+      <li><em>Measure the width of the buffer.</em> Notice how the total width is only about 62 meters, or 100 feet. Current map units are determined by the CRS, in this case EPSG:2927 is in US feet and we need meters. Simply changing the CRS in Project Properties does not give us the correct results- this is still measured from EPSG:2927 US feet.<br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-measure-tool-2.png" alt="Spatial Data Bootcamp: Vector Analysis - measure buffer" /><br /><br /><strong>Important:</strong><br />There are two methods to perfoming a buffer analysis on our shapefile. The problem here is that our CRS is EPSG:2927 (in US feet) and the buffer distance is based on map units (still US feet). The two methods are: convert 100 meters to US feet and use this value in the buffer analysis while maintaining EPSG:2927 (in US feet); OR, reproject the layer thus creating a new file with a CRS in meters (correct map units), and then reprojecting back to EPSG:2927. We’ll go with the former.<br /><br /></li>
+    </ul>
+  </li>
+  <li>Now we need to perform the buffer analysis with the correct method. <em>Remove the incorrect buffer layer: fault_buffer_100m.shp</em></li>
+  <li><em>Add Vector Layer: </em><img src="/bootcamp/assets/images/qgis/add-vector.png" alt="Spatial Data Bootcamp: Vector Analysis - add vector" />
+    <ul>
+      <li><strong>NHD_MajorStreams.shp<br /></strong>
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-5.png" alt="Spatial Data Bootcamp: Vector Analysis - add vector data" /></li>
+    </ul>
+  </li>
+  <li>Open the buffer tool: 
+    <ul>
+      <li><em>Menu Bar &gt; Vector &gt; Geoprocessing Tools &gt; Buffer(s)</em></li>
+    </ul>
+  </li>
+  <li><em>Buffer fault_100k:</em>
+    <ul>
+      <li>Configure inputs as follow:<br /><strong>Input vector layer: fault_100k<br />Buffer distance: 328<br />Output shapefile: fault_buffer_100m.shp<br />Add result to canvas: (Checked)<br />Click OK to run (overwrite necessary), and CLOSE to exit tool</strong><br /><br /><strong>Reminder:</strong><br />Buffer distance = 100 meters * 3.28084 feet = 328.084 feet<br /> 1 meter = 3.28084 feet<br /><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-6.png" alt="Spatial Data Bootcamp: Vector Analysis - buffer vector" /></li>
+    </ul>
+  </li>
+  <li>Confirm 100 meter buffer on faults:
+    <ul>
+      <li>Open measure tool <img src="/bootcamp/assets/images/qgis/measure-tool.png" alt="Spatial Data Bootcamp: Vector Analysis - measure tool" /> and confirm 200 meter total width (100 meters * 2 = 200 meters)<br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-7.png" alt="Spatial Data Bootcamp: Vector Analysis - measure faults buffer" /></li>
+    </ul>
+  </li>
+  <li><em>Repeat buffer with NHD_MajorStreams.shp</em>
+    <ul>
+      <li>Configure inputs as follows:<br /><strong>Input vector layer: NHD_MajorStreams<br />Buffer distance: 164<br />Output shapefile: streams_buffer_50m.shp<br />Add result to canvas: (Checked)<br />Click OK to run, CLOSE to exit tool</strong><br /><br /><strong>Reminder:</strong><br />Buffer distance = 50 meters * 3.28084 feet = 164.052 feet<br /> 1 meter = 3.28084 feet<br /><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-8.png" alt="Spatial Data Bootcamp: Vector Analysis - buffer streams" /></li>
+    </ul>
+  </li>
+  <li>Confirm 50 meter buffer on streams.</li>
+  <li>Import Census housing data (wa-housing-data.csv):
+    <ul>
+      <li>Notice: housing-data.csv has already been wrangled.</li>
+      <li>Add Delimited Text Layer <img src="/bootcamp/assets/images/qgis/add-csv.png" alt="Spatial Data Bootcamp: Vector Analysis - add Census data" /> or <em>Menu Bar &gt; Layer &gt; Add Delimited Text Layer</em></li>
+      <li>Configure inputs as follows:<br /><strong>File Name: housing-data.csv<br />File Format: CSV<br />First record has field names: (Checked)<br />No geometry (attribute only table): (Selected)<br />OK to add</strong> 
+ <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-9.png" alt="Spatial Data Bootcamp: Vector Analysis - add Census data" /></li>
+    </ul>
+  </li>
+  <li>View Census housing-data.csv:
+    <ul>
+      <li><em>Right-click housing-data (in layer list) &gt; Open attribute table</em></li>
+    </ul>
+  </li>
+  <li>Import Washington Census tracts (tl_2014__53_tract.shp) <img src="/bootcamp/assets/images/qgis/add-vector.png" alt="Spatial Data Bootcamp: Vector Analysis - add Census tracts" /><br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-10.png" alt="Spatial Data Bootcamp: Vector Analysis - add Census tracts" /><br /><br /><strong>Important:</strong> Did you check the projection of the Census tracts shapefile? Be sure your shapefile CRS is EPSG:2927. <br /><br />‘on the fly’ projection is selected</li>
+  <li>Save Census tract (tl_2014_53_tract.shp) with ESPG:2927:
+    <ul>
+      <li><em>Right-click tl_2014_53_tract.shp (layer list) &gt; Save As</em></li>
+      <li>Configure as follows: <strong>ESRI Shapefile with EPSG:2927, Output filename: wa-tracts.shp, Add saved file to map: (Checked)</strong></li>
+    </ul>
+  </li>
+  <li><em>Remove current tl_2014_53_tract.shp</em><br />
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-11.png" alt="Spatial Data Bootcamp: Vector Analysis - workspace" /></li>
+  <li>Open wa-tracts attribute table and housing-data to find the key that will be used to join the tables. HINT: It’s GEOID and GEO.id2.<br /><br /><strong>notes:</strong> discuss field types, e.g. cannot compare a string to a number. – add image –<br /><br /></li>
+  <li>Join Census housing data (housing-data.csv) to Census tracts (wa-tracts.sho):
+    <ul>
+      <li>Open Processing Toolbox (<em>Menu Bar &gt; Processing &gt; Toolbox</em>), search for “join attributes table”, then double-click “Join attributes table”<br />
+   <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-12.png" alt="Spatial Data Bootcamp: Vector Analysis - join attribute table" /></li>
+      <li>Configure Join attributes table as follows:<br /><strong>Input layer: wa-tracts<br />Input layer 2: housing-data<br />Table field: GEOID<br />Table field 2: GEO.id2<br />Output layer: (Save to file..) tracts-housing-data.shp</strong><br /><br /><strong>IMPORTANT:</strong> The concept behind this join is tabular (non-locational-data) joined to spatial data, not spatial data to tabular data. So, you must have spatial data (wa-tracts.shp) as the primary input and tabular data (housing-data.csv) as the secondary input. Notice in the <strong>Joing attributes table</strong> inputs below.<br /><img src="/bootcamp/assets/images/vector-analysis/vector-analysis-13.png" alt="Spatial Data Bootcamp: Vector Analysis - join Census tracts and housing data" /><br /><br /> <strong>NOTICE:</strong> “Layers do not all use the same CRS. This can cause unexpencted results.” Remember, the housing-data.csv does not have any locational data associated with it. Click Yes, to continue.<br /><br /><img src="/bootcamp/assets/images/vector-analysis/vector-analysis-14.png" alt="Spatial Data Bootcamp: Vector Analysis - join error" /></li>
+    </ul>
+  </li>
+  <li>Confirm output: housing data joined to tracts. Output is named “Output layer”, rename to “tracts_housing_data.shp” (<em>right-click layer &gt; Rename</em>). Hover over the layer in the layer list to view the source path.
+ <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-15.png" alt="Spatial Data Bootcamp: Vector Analysis - tracts and housing data joined" /></li>
+  <li>Normalize housing data - tract house count X median tract house value = total tract home value: (you’ll need point data to have a more accurate analysis)
+    <ul>
+      <li><em>Right-click tracts_housing_data &gt; Open Attribute Table &gt; Toggle editing mode &gt; Open field calculator</em></li>
+      <li>If you had downloaded the original ACS .csv with annotations then you would be able to easily find what the column headers mean. Or, you could locate the ACS metadata. But we have provided the difinitions below:<br />HC01_VC118 = Total Housing Units (Owner-occupied)<br />HC01_VC127 = Estimated Median Housing Unit (Owner-occupied)<br />We would have calculated total housing * median housing (total) but the ACS does not provide these metrics.</li>
+      <li>Configure inputs as follows:<br /><img src="/bootcamp/assets/images/vector-analysis/vector-analysis-16.png" alt="Spatial Data Bootcamp: Vector Analysis - normalize data" /></li>
+      <li>View your ouputs. Notice there are some NULL values:<br /><img src="/bootcamp/assets/images/vector-analysis/vector-analysis-17.png" alt="Spatial Data Bootcamp: Vector Analysis - noramlize data" /></li>
+    </ul>
+  </li>
+  <li>intersect buffered-merged-joined data with reclassified-rasterized geology layer
+    <ul>
+      <li>intersect buffered faults and streams:<br />
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-18.png" alt="Spatial Data Bootcamp: Vector Analysis - intersect buffered streams and faults" />
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-19.png" alt="Spatial Data Bootcamp: Vector Analysis - intersect buffered streams and faults" /></li>
+    </ul>
+  </li>
+  <li>calculate stream_fault_intersection shape area:
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-20.png" alt="Spatial Data Bootcamp: Vector Analysis - calculate shape area" />
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-21.png" alt="Spatial Data Bootcamp: Vector Analysis - calculate shape area" /></li>
+  <li>calculate tracts_housing shape area:
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-22.png" alt="Spatial Data Bootcamp: Vector Analysis - calculate shape area" /></li>
+  <li>spatial join stream_fault_intersection + tracts_housing: (this one takes a while)
+  <img src="/bootcamp/assets/images/vector-analysis/vector-analysis-23.png" alt="Spatial Data Bootcamp: Vector Analysis - spatially join stream_fault_intersection to wa-tracts" /></li>
+  <li>data will be used in Raster Analysis</li>
+</ol>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="raster-analysis">Raster Analysis</h2>
+
+<h3 id="what-this-module-covers-3">What this module covers:</h3>
+
+<ul>
+  <li>Importing raster data</li>
+  <li>DEM Terrain analysis (slope, aspect)</li>
+  <li>Raster analysis using Raster Calculator</li>
+</ul>
+
+<h3 id="objective-4">Objective:</h3>
+
+<p>Complete locating high-risk landslide/mass-wasting areas in Washington. You must use the digital elevation model (DEM) that you created in <a href="/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model">Data Wrangling - DEM</a> to produce slope and aspect rasters. Lastly, you need perforam a raster summation for locating high-risk landslide areas.</p>
+
+<h3 id="data-2">Data:</h3>
+
+<ul>
+  <li>Washington DEM (wa_dem.tif) - <a href="/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model">SEE Data Wrangling</a> </li>
+  <li>Washington geology raster (wa_geology.tif) - <a href="/bootcamp/applications/qgis#data-wrangling---reclassify-and-rasterize-vector">SEE Data Wrangling</a></li>
+</ul>
+
+<h3 id="data-classifications">Data Classifications:</h3>
+
+<h4 id="high-risk-slope">High-risk slope:</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Category</th>
+      <th>    </th>
+      <th style="text-align: center">Slope</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td> </td>
+      <td style="text-align: center">&lt; 3°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td> </td>
+      <td style="text-align: center">3-5°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td> </td>
+      <td style="text-align: center">5-10°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td> </td>
+      <td style="text-align: center">10-15°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td> </td>
+      <td style="text-align: center">15-20°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td> </td>
+      <td style="text-align: center">20-30°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7</td>
+      <td> </td>
+      <td style="text-align: center">30-40°</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8</td>
+      <td> </td>
+      <td style="text-align: center">&gt; 40°</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="geology-strength">Geology strength:</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Category</th>
+      <th>  </th>
+      <th style="text-align: center">Strength</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td> </td>
+      <td style="text-align: center">Low (high-risk)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td> </td>
+      <td style="text-align: center">Medium</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td> </td>
+      <td style="text-align: center">High (low-risk)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="steps-3">Steps:</h3>
+
+<ol>
+  <li>Import raster data:
+    <ul>
+      <li><em>Open QGIS &gt; Add Raster Layer &gt; Data directory &gt; Add: wa_dem.tif and wa_geology.tif</em><br /></li>
+      <li>BEST PRACTICE: Check your projections before performing any anaylsis, otherwise you’re in for a lot of trouble. Also, check raster resolutions before analysis, you don’t want your results to be off or invalid.<br />
+  <img src="/bootcamp/assets/images/raster-analysis-1.jpg" alt="Spatial Data Bootcamp: Raster Analysis - import raster data" /></li>
+    </ul>
+  </li>
+  <li>Style wa_geology.tif to help better visualize data:
+    <ul>
+      <li><em>Right-click layer &gt; Properties &gt; Style</em></li>
+      <li>Render type: Singleband pseudocolor</li>
+      <li>Generate new color map: select color map</li>
+      <li>Mode: Equal interval = 3</li>
+      <li>Set Max = 3</li>
+      <li>Load min/max values: Min/max</li>
+      <li>Accuracy: Actual (slower)</li>
+      <li><em>Click Classify</em> to enable changes.
+  <img src="/bootcamp/assets/images/raster-analysis-2.jpg" alt="Spatial Data Bootcamp: Raster Analysis - style raster data" /></li>
+      <li>To change individual value colors, <em>double-click the color box</em> of the desired value:<br />
+  <img src="/bootcamp/assets/images/raster-analysis-3.jpg" alt="Spatial Data Bootcamp: Raster Analysis - style raster data" /></li>
+      <li>Click Apply and OK to save changes.</li>
+      <li>Notice how the layer label has changed from 1-2.998 to 1-3.</li>
+      <li>Also, notice some geology raster pixel values are missing (you can see wa_dem black values), this is due to a no-data value assigned to water. Water != geology.<br />
+  <img src="/bootcamp/assets/images/raster-analysis-4.jpg" alt="Spatial Data Bootcamp: Raster Analysis - style raster data" /></li>
+    </ul>
+  </li>
+  <li>Calculate slope:
+    <ul>
+      <li><em>Menu Bar &gt; Raster &gt; Analysis &gt; DEM (Terrain models)</em></li>
+      <li><strong>Configure as follows:<br /><br />Input file (DEM raster): wa_dem<br />Output file: slope.tif<br />Mode: Slope<br />Scale: 0.30<br /><br /></strong></li>
+      <li>explain scale = 0.30<br />
+  <img src="/bootcamp/assets/images/raster-analysis-5.jpg" alt="Spatial Data Bootcamp: Raster Analysis - DEM Terrain Analysis - Slope" /></li>
+      <li>Click OK, OK, CLOSE to exit DEM (Terrain models)<br />
+  <img src="/bootcamp/assets/images/raster-analysis-6.jpg" alt="Spatial Data Bootcamp: Raster Analysis - DEM Terrain Analysis - Slope" /></li>
+    </ul>
+  </li>
+  <li>Reclassify slope raster
+    <ul>
+      <li>Enable the Processing Toolbox: <em>Menu Bar &gt; Processing &gt; Toolbox &gt; Select Advanced interface</em><br />
+  <img src="/bootcamp/assets/images/raster-analysis-7.jpg" alt="Spatial Data Bootcamp: Raster Analysis - Reclassify slope raster" /></li>
+      <li>The <em>r.reclass</em> tool will be used to reclassify the slope raster into correct categories. Create a text file with the following data. Save it as slope-rule.txt.</li>
+    </ul>
+  </li>
+</ol>
+
+<h5 id="slope-ruletxt"><em>slope-rule.txt</em></h5>
+<pre><code>0 thru 2.99 = 1
+3 thru 4.99 = 2
+5 thru 9.99 = 3
+10 thru 14.99 = 4
+15 thru 19.99 = 5
+20 thru 29.99 = 6 
+30 thru 39.99 = 7
+40 thru 90 = 8
+</code></pre>
+<p><img src="/bootcamp/assets/images/raster-analysis-8.jpg" alt="Spatial Data Bootcamp: Raster Analysis - Reclassify slope raster" /></p>
+
+<ul>
+  <li>Open GRASS tool, r.reclass: <em>Processing Toolbox (with Advanced interface) &gt; GRASS Commands &gt; Raster &gt; r.reclass</em></li>
+  <li>Configure your inputs as follows:<strong><br /><br />Input Raster: slope<br />File containing reclass rules: slope-rules.txt<br />Output raster layer: slope-reclass.tif</strong> (NOTE: select <em>Save to file…</em> or QGIS will not create a permanent output)<br /><br />
+  <img src="/bootcamp/assets/images/raster-analysis-slope-reclass-inputs.png" alt="Spatial Data Bootcamp: Raster Analysis - reclassified slope output" /></li>
+</ul>
+
+<p>We will have to do some raster calculations to create the output data set. The classifications are taken from the California study<sup id="fnref:2:4"><a href="#fn:2" class="footnote">1</a></sup> and are as follows:</p>
+
+<p><img src="/bootcamp/assets/images/landslide-key.png" alt="landslide-key" /></p>
+
+<p>Since we need to cross reference these categories, we need to create a raster which represents each unique combination of the slope and rock strength classes. A method to create unique combinations is to promote the rock strength categories a decimal place. This would make the rock classes: 10,20, and 30.</p>
+
+<p>To create these new classes, we can load the source_files/geo_coded.tif, and secondary_files/slope_reclass.tif</p>
+
+<p>In the top menu, select <em>Raster</em> &gt; <em>Raster Calculator</em></p>
+
+<p>Our raster calculator expression will be: </p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span><span class="s2">&quot;geo_coded@1&quot;</span> * 10<span class="o">)</span> + <span class="s2">&quot;slope-reclass@1&quot;</span></code></pre></div>
+
+<p>Output layer: slope-geo-sect.tif</p>
+
+<p><img src="/bootcamp/assets/images/raster-calc.png" alt="raster-calc" /></p>
+
+<p>We can apply the landslide susceptibility classification using r.reclass and the following rule file:</p>
+
+<p><em>landslide-rule.txt</em></p>
+
+<pre><code>11 12 13 21 31 = 0
+14 = 3
+22 23 = 5
+15 = 6
+16 32 33 = 7
+17 18 24 = 8
+25 thru 28 34 = 9
+35 thru 38 = 10
+</code></pre>
+
+<h4 id="precipitation">Precipitation</h4>
+
+<p>Now that we have created the landslide susceptibility layer, we can make use the Average Annual Precipitation layer to check the susceptible areas against the areas receiving the most annual rain.</p>
+
+<p>Convert millimeters to inches</p>
+
+<p>Raster calculator: precip = precip * 0.0394</p>
+
+<p>Check THIS STEP AGAINST REFERENCES</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Category</th>
+      <th>    </th>
+      <th style="text-align: center">Precipitation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td> </td>
+      <td style="text-align: center">5-10 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td> </td>
+      <td style="text-align: center">10-15 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td> </td>
+      <td style="text-align: center">15-30 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td> </td>
+      <td style="text-align: center">30-45 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td> </td>
+      <td style="text-align: center">45-60 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td> </td>
+      <td style="text-align: center">60-75 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7</td>
+      <td> </td>
+      <td style="text-align: center">75-90 in</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8</td>
+      <td> </td>
+      <td style="text-align: center">&gt; 90 in</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="raster-statistics">Raster Statistics:</h3>
+
+<ul>
+  <li>histogram</li>
+  <li>zonal stats</li>
+</ul>
+
+<hr />
+
+<h3 id="visualization">Visualization</h3>
+
+<p>Now that the output datasets have been created, we can work on making our results presentable.</p>
+
+<hr />
+
+<p>Explain what was covered.</p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<p>References: </p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:2">
+      <p><a href="http://docs.qgis.org/2.6/en/docs/index.html">http://docs.qgis.org/2.6/en/docs/index.html</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a> <a href="#fnref:2:1" class="reversefootnote">&#8617;<sup>2</sup></a> <a href="#fnref:2:2" class="reversefootnote">&#8617;<sup>3</sup></a> <a href="#fnref:2:3" class="reversefootnote">&#8617;<sup>4</sup></a> <a href="#fnref:2:4" class="reversefootnote">&#8617;<sup>5</sup></a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="http://www.gdal.org/gdal_rasterize.html">http://www.gdal.org/gdal_rasterize.html</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a> <a href="#fnref:3:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+  </ol>
+</div>
+
+
+          <!--
+					<div class="meta">
+						<p class="date-publish">
+							Published: 
+							<date class="date-pub" title="2005-12-31T00:00:00-07:00" datetime="2005-12-31T00:00:00-07:00" pubdate>
+							<span class="month"><abbr>December</abbr></span>
+							<span class="day">31</span>
+							<span class="year">2005</span>
+							</date>
+						</p>
+						<ul class="list-category list-linear">
+							<li class="list-head">category: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/categories.html#more reading-ref">
+    		more reading <span>13</span>
+    	</a></li>
+    
+  
+
+
+						</ul>
+						<ul class="list-tag list-linear">
+							<li class="list-head">tags: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/tags.html#applications-ref">applications <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#qgis-ref">qgis <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#quantumgis-ref">quantumgis <span>1</span></a></li>
+    
+  
+
+
+
+						</ul>
+					</div>
+          meta -->
+
+
+				</div><!-- entry-content -->
+				<div class="misc-content">
+					<div class="social">
+						<ul class="list-linear">
+							<li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="" data-lang="en">Tweet</a></div></li>
+							<li><div class="twitter-follow"><a href="https://twitter.com/" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
+						</ul>
+					</div>
+					
+					
+				</div><!-- misc-content -->
+				
+			</div><!-- bd -->
+			<footer class="unit-foot">
+				<div class="unit-inner unit-foot-inner">
+					<nav class="pagination">
+						<ul>
+							
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp" title="View ">&laquo; </a></li>
+							
+							
+							
+						</ul>
+					</nav>
+					<p class="gotop">
+						<a href="#page">Back to Top</a>
+					</p>
+				</div>
+			</footer>
+
+		</div><!-- content -->
+	</div><!-- unit-inner -->
+</article>
+
+
+				</div>
+			</div><!-- unit-inner -->
+		</div><!-- unit-body -->
+	</div><!-- body -->
+	<footer class="the-footer">
+		<div class="unit-foot">
+			<div class="unit-inner unit-foot-inner">
+				<div class="misc vcard">
+					<h4>about</h4>
+					<ul>
+						<li class="contact"><address><span class="author fn n">Nathan Casler</span> - <span class="fn email">ncasler@email.arizona.edu</span></address></li>
+            <!--						<li class="github"><a href="http://github.com//" rel="me">github.com/</a></li>
+						<li class="twitter"><a href="http://twitter.com//" rel="me">twitter.com/</a></li>
+            <li class="rss"><a href="http://feeds.feedburner.com/">Subscribe to RSS Feed</a></li>-->
+					</ul>
+				</div><!-- misc -->
+				<p class="licence">
+        <!--					Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>-->
+					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+				</p>
+			</div><!-- unit-foot-inner -->
+		</div><!-- unit-foot -->
+	</footer>
+</div><!-- page -->
+</div><!-- page-container -->
+<script>
+	(function(d, s) {
+		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.src = url; js.id = id;
+		fjs.parentNode.insertBefore(js, fjs);
+		};
+	load('//platform.twitter.com/widgets.js', 'tweetjs');
+	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/more%20reading/qgis" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	}(document, 'script'));
+</script>
+<script>
+/*! A fix for the iOS orientationchange zoom bug.Script by @scottjehl, rebound by @wilto. MIT License.*/
+(function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
+</script>
+
+  
+</body>
+</html>
+
+

@@ -1,0 +1,1492 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>GRASS GIS</title>
+	<meta name="author" content="Nathan Casler">
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src='/bootcamp/assets/js/jquery.hoverIntent.js'></script>
+  <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
+	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="GRASS GIS" type="application/atom+xml">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=League+Gothic:400,700" rel='stylesheet' type='text/css'>	
+  <link href="http://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet' type='text/css'>	
+  <link href="http://fonts.googleapis.com/css?family=Slabo+13px" rel='stylesheet' type='text/css'>	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="page-container">
+
+
+<!-- post (.md) content -->
+<div id="page" class="hentry">
+	<header class="the-header">
+		<div class="unit-head">
+			<div class="unit-inner unit-head-inner">
+				<p class="logo"><a href="/bootcamp/">Spatial Data Bootcamp</a></p>
+				<nav class="nav-global">
+					<ul>
+            <li class="home"><a href="/bootcamp/index.html">Home</a></li>
+            <li class="bootcamp"><a href="/bootcamp/intro/what">Bootcamp Material</a></li>
+            <li class="about"><a href="/bootcamp/about.html">About Us</a></li>
+					</ul>
+				</nav>
+			</div><!-- unit-inner -->
+		</div><!-- unit-head -->
+	</header>
+	<div class="body" role="main">
+		<div class="unit-body">
+			<div class="unit-inner unit-body-inner">
+				<div class="entry-content">
+					
+            <div class="dropdown-nav">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Table of Contents<span class="caret"></span></a>
+                <ul style="" class="dropdown-menu" role="menu">
+                 
+                  <h4 id="setup-ref">Setup</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="know the basics-ref">Know the basics</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/projections">Projections</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/what">Scale and Resolution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/data-types">Common Data Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="get the data-ref">Get the data</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/sources">Data Sources</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/census">Census Data</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/terrain">Terrain Data</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="clean your data-ref">Clean your data</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/data-cleaning">Data Hygiene</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/formatting">Data Formatting</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="ask some questions-ref">Ask some questions</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/functions">Spatial Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/case-study">Landslide Mapping</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="show your results-ref">Show your results</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/map-types">Map Types</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/distribution">Distribution</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                 
+                  <h4 id="more reading-ref">More reading</h4>
+                  <!-- add class="divider" to li in page list-->
+                  <ul>
+                      
+                    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/qgis">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/more%20reading/grass-gis" class="active">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/panoply">Panoply</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/consumable-services">Web Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/netcdf">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/vector-analysis">Vector Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/leaflet">Leaflet</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/spatial-issues">Spatial Issues</a></li>
+      	
+      
+    
+  
+
+
+
+
+                  </ul>
+                
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div><!-- dropdown nav -->
+<article class="unit-article layout-post">
+	<div class="unit-inner unit-article-inner">
+		<div class="content">
+			<header id="content-header">
+        <div id="header-overlay">
+				<div class="unit-head">
+					<div class="unit-inner unit-head-inner">
+            <h1 class="h2 entry-title">GRASS GIS</h1> 
+            <!--            <h2 class="h2 entry-title"></h2> -->
+
+
+
+					</div><!-- unit-inner -->
+				</div><!-- unit-head -->
+      </div>
+			</header>
+
+    
+      <!--
+      <div class="col-md-2 sticky-left-nav">
+ 
+  <h4 id="setup-ref">Setup</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="know the basics-ref">Know the basics</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/projections">Projections</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/what">Scale and Resolution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/data-types">Common Data Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="get the data-ref">Get the data</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/sources">Data Sources</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/census">Census Data</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/terrain">Terrain Data</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="clean your data-ref">Clean your data</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/data-cleaning">Data Hygiene</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/formatting">Data Formatting</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="ask some questions-ref">Ask some questions</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/functions">Spatial Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/case-study">Landslide Mapping</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="show your results-ref">Show your results</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/map-types">Map Types</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/distribution">Distribution</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="more reading-ref">More reading</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/qgis">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/more%20reading/grass-gis" class="active">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/panoply">Panoply</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/consumable-services">Web Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/netcdf">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/vector-analysis">Vector Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/leaflet">Leaflet</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/spatial-issues">Spatial Issues</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+
+
+    </div>
+    -->
+			<div class="bd">
+
+        <!-- sticky left navigation -->
+<div id="sticky-anchor" class="sticky-left-nav">
+  <div id="sticky" class="sticky-left-nav-inner">
+    <h3>Contents</h3>
+    
+   
+  <h4 id="setup-ref">Setup</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/setup/qgis-install">Installing QGIS</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="know the basics-ref">Know the basics</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/intro">Vectors and Rasters</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/projections">Projections</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/what">Scale and Resolution</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/know%20the%20basics/data-types">Common Data Types</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="get the data-ref">Get the data</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/metadata">Metadata</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/sources">Data Sources</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/census">Census Data</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/get%20the%20data/terrain">Terrain Data</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="clean your data-ref">Clean your data</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/data-cleaning">Data Hygiene</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/clean%20your%20data/formatting">Data Formatting</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="ask some questions-ref">Ask some questions</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/functions">Spatial Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/ask%20some%20questions/case-study">Landslide Mapping</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="show your results-ref">Show your results</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/overview">Overview</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/cartography">Cartography</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/map-types">Map Types</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Mapping</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/show%20your%20results/distribution">Distribution</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+ 
+  <h4 id="more reading-ref">More reading</h4>
+  <ul>
+      
+    
+
+
+
+
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/qgis">QGIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/citations">Citations</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="/bootcamp/more%20reading/grass-gis" class="active">GRASS GIS</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/scripts">Scripts</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/panoply">Panoply</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/tools">Tools</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/case-study">Landslide Susceptibility</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/consumable-services">Web Services</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/netcdf">Averaging Rainfall</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/range-modeling">Range Modeling</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/vector-analysis">Vector Analysis</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/leaflet">Leaflet</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/bootcamp/more%20reading/spatial-issues">Spatial Issues</a></li>
+      	
+      
+    
+  
+
+
+
+
+  </ul>
+
+  </div>  
+  <div class="clear"></div>
+</div> <!--left-nav -->
+
+
+
+<div class="entry-content content">
+  
+<h1 id="geographic-resources-analysis-support-system-grass-gis">Geographic Resources Analysis Support System (GRASS GIS)</h1>
+<p><a title="Grasslogo_vector_big, via Wikimedia Commons" href="upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Grasslogo_vector_big.png/431px-Grasslogo_vector_big.png"><img width="431" alt="Grass GIS Logo" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Grasslogo_vector_big.png/431px-Grasslogo_vector_big.png" /></a></p>
+
+<p>GRASS GIS is an open-source Geographic Information System used for data management, image processing, graphics production, spatial modelling, and visualizations of various data types.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+
+<h2 id="history">History</h2>
+
+<p>A branch of the US Army Corp of Enineers called the U.S. Army Construction Engineering Research Laboratories(USA-CERL) began developing GRASS GIS as a tool to perform boolean operations on multiple rasters and was quickly adopted by a host of National Agencies. With over 30 years of development under its belt, GRASS is currently used by NASA, NOAA, USDA, DLR, CSIRO, the National Park Service, the U.S. Census Bureau and the USGS.</p>
+
+<h2 id="features">Features</h2>
+
+<p>GRASS differs from other GIS applications in that it works both as a stand-alone application and as an embedded library in QGIS. GRASS is also available through a Graphical User Interface, Command Line, or a host of language interfaces including Python, R, Java, PHP and C++.</p>
+
+<p>GRASS is also distinct in that all datasets are stored in text documents. The environment variables and datasets metadata are stored in separate files to allow the program to quickly scan through the metadata.</p>
+
+<p><a title="GRASS GIS data location structure" href="http://grass.osgeo.org/grass64/manuals/help_loc_struct.png"><img width="879" src="//grass.osgeo.org/grass64/manuals/help_loc_struct.png" /></a></p>
+
+<p>GRASS supports the following types of datasets:</p>
+
+<ul>
+  <li>Vector</li>
+  <li>Raster</li>
+  <li>LiDAR </li>
+  <li>Time series</li>
+  <li>Vector Networks</li>
+  <li>3D</li>
+  <li>Spatial SQL</li>
+</ul>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>GRASS Development Team, 2012. Geographic Resources Analysis Support System (GRASS) Software. Open Source Geospatial Foundation project. <a href="http://grass.osgeo.org">http://grass.osgeo.org</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+          <!--
+					<div class="meta">
+						<p class="date-publish">
+							Published: 
+							<date class="date-pub" title="2005-12-30T00:00:00-07:00" datetime="2005-12-30T00:00:00-07:00" pubdate>
+							<span class="month"><abbr>December</abbr></span>
+							<span class="day">30</span>
+							<span class="year">2005</span>
+							</date>
+						</p>
+						<ul class="list-category list-linear">
+							<li class="list-head">category: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/categories.html#more reading-ref">
+    		more reading <span>13</span>
+    	</a></li>
+    
+  
+
+
+						</ul>
+						<ul class="list-tag list-linear">
+							<li class="list-head">tags: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/tags.html#applications-ref">applications <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#grass-ref">grass <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#gis-ref">gis <span>1</span></a></li>
+    
+  
+
+
+
+						</ul>
+					</div>
+          meta -->
+
+
+				</div><!-- entry-content -->
+				<div class="misc-content">
+					<div class="social">
+						<ul class="list-linear">
+							<li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="" data-lang="en">Tweet</a></div></li>
+							<li><div class="twitter-follow"><a href="https://twitter.com/" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
+						</ul>
+					</div>
+					
+					
+				</div><!-- misc-content -->
+				
+			</div><!-- bd -->
+			<footer class="unit-foot">
+				<div class="unit-inner unit-foot-inner">
+					<nav class="pagination">
+						<ul>
+							
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/more%20reading/citations" title="View Citations">&laquo; Citations</a></li>
+							
+							
+							<li class="pipe"> | </li>
+							
+							
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/more%20reading/scripts" title="View Scripts">Scripts &raquo;</a></li>
+							
+						</ul>
+					</nav>
+					<p class="gotop">
+						<a href="#page">Back to Top</a>
+					</p>
+				</div>
+			</footer>
+
+		</div><!-- content -->
+	</div><!-- unit-inner -->
+</article>
+
+
+				</div>
+			</div><!-- unit-inner -->
+		</div><!-- unit-body -->
+	</div><!-- body -->
+	<footer class="the-footer">
+		<div class="unit-foot">
+			<div class="unit-inner unit-foot-inner">
+				<div class="misc vcard">
+					<h4>about</h4>
+					<ul>
+						<li class="contact"><address><span class="author fn n">Nathan Casler</span> - <span class="fn email">ncasler@email.arizona.edu</span></address></li>
+            <!--						<li class="github"><a href="http://github.com//" rel="me">github.com/</a></li>
+						<li class="twitter"><a href="http://twitter.com//" rel="me">twitter.com/</a></li>
+            <li class="rss"><a href="http://feeds.feedburner.com/">Subscribe to RSS Feed</a></li>-->
+					</ul>
+				</div><!-- misc -->
+				<p class="licence">
+        <!--					Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>-->
+					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+				</p>
+			</div><!-- unit-foot-inner -->
+		</div><!-- unit-foot -->
+	</footer>
+</div><!-- page -->
+</div><!-- page-container -->
+<script>
+	(function(d, s) {
+		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.src = url; js.id = id;
+		fjs.parentNode.insertBefore(js, fjs);
+		};
+	load('//platform.twitter.com/widgets.js', 'tweetjs');
+	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/more%20reading/grass-gis" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	}(document, 'script'));
+</script>
+<script>
+/*! A fix for the iOS orientationchange zoom bug.Script by @scottjehl, rebound by @wilto. MIT License.*/
+(function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
+</script>
+
+  
+</body>
+</html>
+
+

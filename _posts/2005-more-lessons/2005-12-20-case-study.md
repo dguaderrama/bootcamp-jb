@@ -1,7 +1,7 @@
 ---
 title: "Landslide Susceptibility"
 layout: post
-category : More Reading...
+category : More Reading
 tagline: ""
 tags : [case study, landslide]
 ---

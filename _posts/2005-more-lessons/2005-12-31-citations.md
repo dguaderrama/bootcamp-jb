@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Citations
-category: More Reading...
+category: More Reading
 ---
 
 # Resources
