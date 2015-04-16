@@ -5,8 +5,8 @@
         <description>Spatial Data Carpentry - </description>
         <link>http://104.237.129.71/bootcamp</link>
         <link>http://104.237.129.71/bootcamp</link>
-        <lastBuildDate>2015-04-15T17:53:34-07:00</lastBuildDate>
-        <pubDate>2015-04-15T17:53:34-07:00</pubDate>
+        <lastBuildDate>2015-04-15T23:33:33-07:00</lastBuildDate>
+        <pubDate>2015-04-15T23:33:33-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -25,7 +25,7 @@
   &lt;p&gt;QGIS is a user friendly Open Source Geographic Information System (GIS) licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www2.qgis.org/en/site/forusers/download.html&quot;&gt;Here’s a link to download QGIS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www2.qgis.org/en/site/forusers/download.html&quot;&gt;Here&amp;#8217;s a link to download QGIS&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -39,11 +39,11 @@
 
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;Menu Bar&lt;/strong&gt;
-The menu bar provides access to QGIS features. In Linux systems, hover over to view menu bar options (haven’t checked other systems). The QGIS version is displayed while not hovering over the menu bar (linux systems). Most common features or tools are accessable through the toolbar icons which will be the prefered method throughout this QGIS introduction.&lt;/li&gt;
+The menu bar provides access to QGIS features. In Linux systems, hover over to view menu bar options (haven&amp;#8217;t checked other systems). The QGIS version is displayed while not hovering over the menu bar (linux systems). Most common features or tools are accessable through the toolbar icons which will be the prefered method throughout this QGIS introduction.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Toolbar&lt;/strong&gt;
 The toolbar provides access to most standard QGIS functions. Go to &lt;em&gt;Menu Bar &amp;gt; View &amp;gt; Toolbars&lt;/em&gt; to activate or deactivate toolbars. Hover over tools to view the description and puropose.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Map Legend&lt;/strong&gt;
-The map legend is a list of all layers in the project. Each layer can be turned on or off with the layer’s checkbox.  It’s possible to group layers.&lt;/li&gt;
+The map legend is a list of all layers in the project. Each layer can be turned on or off with the layer&amp;#8217;s checkbox.  It&amp;#8217;s possible to group layers.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Map View&lt;/strong&gt;
 The map view displays the active layers in the map project. You can set the map view extent by right-clicking on a layer and selecting &lt;em&gt;Zoom to layer extent&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Status Bar&lt;/strong&gt;
@@ -70,7 +70,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/providers-config.jpg&quot; alt=&quot;Activate Providers&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Options and configuration &amp;gt; Providers &amp;gt; $PROVIDER &amp;gt; Activate (be sure it’s checked)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Options and configuration &amp;gt; Providers &amp;gt; $PROVIDER &amp;gt; Activate (be sure it&amp;#8217;s checked)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://docs.qgis.org/2.6/en/docs/user_manual/processing_algs/index.html?highlight=providers&quot;&gt;See the complete list of processing providers and algorithms here&lt;/a&gt;&lt;/p&gt;
 
@@ -94,7 +94,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;p&gt;However, this is not the same as changing the project projection. You may define the project projection from &lt;em&gt;Menu Bar &amp;gt; Project &amp;gt; Project Properties &amp;gt; CRS&lt;/em&gt;. Also keep in mind, the CRS of a new project will change to the CRS of the first layer added to the project.&lt;/p&gt;
 
-&lt;p&gt;‘On the fly’ CRS transformation is not enabled by the default QGIS installation.&lt;/p&gt;
+&lt;p&gt;&amp;#8216;On the fly&amp;#8217; CRS transformation is not enabled by the default QGIS installation.&lt;/p&gt;
 
 &lt;h2 id=&quot;supported-data-formats&quot;&gt;Supported Data Formats&lt;/h2&gt;
 
@@ -146,7 +146,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 
 &lt;h2 id=&quot;the-scenario&quot;&gt;The Scenario:&lt;/h2&gt;
 
-&lt;p&gt;You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map.&lt;/p&gt;
+&lt;p&gt;You&amp;#8217;ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -289,7 +289,7 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
   &lt;/li&gt;
   &lt;li&gt;Add and calculate new field:
     &lt;ul&gt;
-      &lt;li&gt;Match your Field Calculator window to the one below for creating a new field ‘strength’ with a range of values of 0-3. Be sure to match it exactly as it’s displayed: &lt;em&gt;double-quotes are evaluated as a column whereas single-quotes are evaluated as column values. Save your changes once finished&lt;/em&gt;.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Expression:&lt;br /&gt;case&lt;br /&gt;when “rock_type” = ‘soft’ then 1&lt;br /&gt;when “rock_type” = ‘medium’ then 2&lt;br /&gt;when “rock_type” = ‘hard’ then 3&lt;br /&gt;else 0&lt;br /&gt;done&lt;br /&gt;&lt;/strong&gt;
+      &lt;li&gt;Match your Field Calculator window to the one below for creating a new field &amp;#8216;strength&amp;#8217; with a range of values of 0-3. Be sure to match it exactly as it&amp;#8217;s displayed: &lt;em&gt;double-quotes are evaluated as a column whereas single-quotes are evaluated as column values. Save your changes once finished&lt;/em&gt;.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Expression:&lt;br /&gt;case&lt;br /&gt;when &amp;#8220;rock_type&amp;#8221; = &amp;#8216;soft&amp;#8217; then 1&lt;br /&gt;when &amp;#8220;rock_type&amp;#8221; = &amp;#8216;medium&amp;#8217; then 2&lt;br /&gt;when &amp;#8220;rock_type&amp;#8221; = &amp;#8216;hard&amp;#8217; then 3&lt;br /&gt;else 0&lt;br /&gt;done&lt;br /&gt;&lt;/strong&gt;
 &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-04.png&quot; alt=&quot;QGIS: Add and calculate new field&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -304,12 +304,12 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
   &lt;/li&gt;
   &lt;li&gt;Rasterize wa_geology.shp:
     &lt;ul&gt;
-      &lt;li&gt;GDAL’s rasterize is a prefered method. This can be accessed through &lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Conversion &amp;gt; Rasterize (Vector to raster)&lt;/em&gt;. Notice how the parameters have been diabled in the example below. There’s a specific reason for this. Complete the parameter inputs: &lt;em&gt;Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000&lt;/em&gt;. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.&lt;/li&gt;
+      &lt;li&gt;GDAL&amp;#8217;s rasterize is a prefered method. This can be accessed through &lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Conversion &amp;gt; Rasterize (Vector to raster)&lt;/em&gt;. Notice how the parameters have been diabled in the example below. There&amp;#8217;s a specific reason for this. Complete the parameter inputs: &lt;em&gt;Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000&lt;/em&gt;. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Click the edit icon (pencil) locate near the block of code&lt;/em&gt;. This enables you to add those non-QGIS parameters.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Add the line of code&lt;/em&gt; &lt;code&gt;-at -a_nodata 0&lt;/code&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;-at&lt;/em&gt;: Enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;-a_nodata $value&lt;/em&gt;: Assign a specified nodata value to output bands - this prevents pixels with no data from being written into the output raster.&lt;sup id=&quot;fnref:3:1&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.gdal.org/gdal_rasterize.html&quot;&gt;Here’s a link to the gdal_rasterize parameters&lt;/a&gt;.&lt;br /&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.gdal.org/gdal_rasterize.html&quot;&gt;Here&amp;#8217;s a link to the gdal_rasterize parameters&lt;/a&gt;.&lt;br /&gt;
    &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-11-2.png&quot; alt=&quot;QGIS: Rasterize - Vector to raster&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -318,16 +318,16 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
       &lt;li&gt;Open wa_geology.tif style properties. HINT: See step 4.&lt;/li&gt;
       &lt;li&gt;For &lt;em&gt;Render type&lt;/em&gt;, select &lt;em&gt;Singleband pseudocolor&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;On the right select: &lt;em&gt;Load min/max values: Min/max; Extend: Actual (slower); then Load&lt;/em&gt;. This loads actual values into the classification. QGIS Approximates values by defautl.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Change Mode to Equal Interval with 3 classes&lt;/em&gt;. Remember, we only have three rock strength classes: soft, medium, hard. Change your color map if you’d like. The color maps are not stored into the raster, so the raster will load with the defaul color map (black to white) each time its opened in a new project.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Change Mode to Equal Interval with 3 classes&lt;/em&gt;. Remember, we only have three rock strength classes: soft, medium, hard. Change your color map if you&amp;#8217;d like. The color maps are not stored into the raster, so the raster will load with the defaul color map (black to white) each time its opened in a new project.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Click Classify&lt;/em&gt;. Apply and OK.&lt;br /&gt;
    &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-13.png&quot; alt=&quot;QGIS: Style raster&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster.&lt;/p&gt;
+&lt;p&gt;You&amp;#8217;ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster.&lt;/p&gt;
 
-&lt;p&gt;Keep this reclassified and rasterized vector, it’ll be used in the next lesson.&lt;/p&gt;
+&lt;p&gt;Keep this reclassified and rasterized vector, it&amp;#8217;ll be used in the next lesson.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -380,15 +380,15 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
 &lt;!--1. Download Census American FactFinder housing data:
   * Open the &lt;a href=&quot;http://factfinder.census.gov/&quot; alt=&quot;Spatial Data Carpentry: Download Census housing data - American FactFinder&quot; target=&quot;_blank&quot;&gt;Census American FactFinder site&lt;/a&gt; and select &lt;em&gt;Guided Search &gt; Get Me Started&lt;/em&gt;.&lt;br&gt;
   ![Spatial Data Carpentry: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-1.png)
-  * Step 1: Choose from one of the following. Click *Next*:&lt;br&gt;I&#39;m looking for information from a specific *dataset*&lt;br&gt;Click *NEXT*&lt;br&gt;
+  * Step 1: Choose from one of the following. Click *Next*:&lt;br&gt;I'm looking for information from a specific *dataset*&lt;br&gt;Click *NEXT*&lt;br&gt;
   ![Spatial Data Carpentry: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-2.png)
-  * Step 2: Search the dataset you&#39;re interested in. Click *Next*.&lt;br&gt;Select a program: *American Community Survey*&lt;br&gt;Select a dataset: *2013 ACS 5-year estimates*&lt;br&gt;*ADD TO YOUR SELECTIONS*&lt;br&gt;Click *NEXT*&lt;br&gt;
+  * Step 2: Search the dataset you're interested in. Click *Next*.&lt;br&gt;Select a program: *American Community Survey*&lt;br&gt;Select a dataset: *2013 ACS 5-year estimates*&lt;br&gt;*ADD TO YOUR SELECTIONS*&lt;br&gt;Click *NEXT*&lt;br&gt;
   ![Spatial Data Carpentry: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-3.png)
-  * Step 3: Select the topic(s) you&#39;re interested in. Click *Next*.&lt;br&gt;Basic Count/Estimate: *Housing Units*&lt;br&gt;Financial Characteristic: *Value of Home*&lt;br&gt;Click *NEXT*&lt;br&gt;
+  * Step 3: Select the topic(s) you're interested in. Click *Next*.&lt;br&gt;Basic Count/Estimate: *Housing Units*&lt;br&gt;Financial Characteristic: *Value of Home*&lt;br&gt;Click *NEXT*&lt;br&gt;
   ![Spatial Data Carpentry: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-4.png)
   * Step 4: Add one or more geographic areas (states, cities, towns, etc.) to Your Selections. Click *Next*.&lt;br&gt;Select a geographic type: *.... ....Census Tract*&lt;br&gt;Select a state: *Washington*&lt;br&gt;Select a county: (leave blank)&lt;br&gt;Select one or more geographic areas: *All Census Tracts within Washington*&lt;br&gt;*ADD TO YOUR SELECTIONS*&lt;br&gt;Click *NEXT*&lt;br&gt;
   ![Spatial Data Carpentry: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-5.png)
-  * Step 5: There are no race or ethnic groups available based upon the contents of &#39;Your Selections&#39;.&lt;br&gt;Click *NEXT*&lt;br&gt;
+  * Step 5: There are no race or ethnic groups available based upon the contents of 'Your Selections'.&lt;br&gt;Click *NEXT*&lt;br&gt;
   ![Spatial Data Carpentry: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-6.png)
   * Step 6: &lt;em&gt;Skipped&lt;/em&gt;
   * Step 7: Select a table, file or document from these top search results:&lt;br&gt;Click first row in table: *SELECTED HOUSING CHARACTERISTICS* DP04 2013 ACS 5-year estimates&lt;br&gt;
@@ -398,26 +398,26 @@ The processing toolbox must be turned on by naviagting to &lt;em&gt;Menu Bar &am
   * Now you need to remove unneccessary data:&lt;br&gt;*Modify Table* ![Spatial Data Carpentry: Vector &amp; Census data](/bootcamp/assets/images/vector-census/vector-census-9.png)&lt;br&gt;
 --&gt;
 
-&lt;p&gt;The following method allows for less data wrangling (although it does involve two joins). We’re going to download Washington housing units and home value data individually and join them. If you go through the Guided Search then you’ll end up having to wrangling more than you want (remove lots of unneccessary data).&lt;/p&gt;
+&lt;p&gt;The following method allows for less data wrangling (although it does involve two joins). We&amp;#8217;re going to download Washington housing units and home value data individually and join them. If you go through the Guided Search then you&amp;#8217;ll end up having to wrangling more than you want (remove lots of unneccessary data).&lt;/p&gt;
 
 &lt;h5 id=&quot;download-census-american-factfinder-housing-data&quot;&gt;&lt;strong&gt;1. Download Census American FactFinder housing data:&lt;/strong&gt;&lt;/h5&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Open the &lt;a href=&quot;http://factfinder.census.gov/&quot; alt=&quot;Spatial Data Carpentry: Download Census housing data - American FactFinder&quot; target=&quot;_blank&quot;&gt;Census American FactFinder site&lt;/a&gt; and select &lt;em&gt;Advanced Search &amp;gt; SHOW ME ALL&lt;/em&gt;.&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-1.png&quot; alt=&quot;Spatial Data Carpentry: Download Census data&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;You are now viewing the &lt;em&gt;ADVANCED SEARCH&lt;/em&gt;. Search - Use options on the left (topics, geographics, …) to narrow your search results.&lt;br /&gt;
+  &lt;li&gt;You are now viewing the &lt;em&gt;ADVANCED SEARCH&lt;/em&gt;. Search - Use options on the left (topics, geographics, &amp;#8230;) to narrow your search results.&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-2.png&quot; alt=&quot;Spatial Data Carpentry: Download Census data&quot; /&gt;&lt;/li&gt;
   &lt;li&gt;Download &lt;em&gt;Washington Housing Units&lt;/em&gt;:&lt;br /&gt;
 Add &lt;em&gt;Housing Units&lt;/em&gt; to query:&lt;br /&gt;
     &lt;ol&gt;
       &lt;li&gt;Click &lt;em&gt;Topics&lt;/em&gt; on the left-hand menu&lt;br /&gt;&lt;/li&gt;
-      &lt;li&gt;Select Topics to add to ‘Your Selections’&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Select Topics to add to &amp;#8216;Your Selections&amp;#8217;&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;Housing &amp;gt; Basic Count/Estimate &amp;gt; Click &lt;em&gt;Housing Units&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;Click &lt;em&gt;CLOSE&lt;/em&gt; (top right)&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-3.png&quot; alt=&quot;Spatial Data Carpentry: Download Census data&quot; /&gt;&lt;br /&gt;
 Add &lt;em&gt;Washington Census Tract&lt;/em&gt; to query:&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;Click &lt;em&gt;Geographies&lt;/em&gt; on left-hand menu&lt;br /&gt;&lt;/li&gt;
-      &lt;li&gt;Select a geographic type: &lt;em&gt;…. ….Census Tract -140&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Select a geographic type: &lt;em&gt;&amp;#8230;. &amp;#8230;.Census Tract -140&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;Select a state: &lt;em&gt;Washington&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;Select one or more geographic areas: &lt;em&gt;All Census Tracts within Washington&lt;/em&gt;&lt;br /&gt;
 &lt;em&gt;ADD TO YOUR SELECTIONS&lt;/em&gt;&lt;br /&gt;
@@ -469,15 +469,15 @@ If you did not clear your selections from the previous steps then continue on, e
 
 &lt;h5 id=&quot;unpack-downloaded-files&quot;&gt;&lt;strong&gt;3. Unpack downloaded files:&lt;/strong&gt;&lt;/h5&gt;
 
-&lt;p&gt;If you haven’t already downloaded your data, see &lt;strong&gt;Download Census Housing Data&lt;/strong&gt; and &lt;strong&gt;Download TIGER Census Tracts&lt;/strong&gt; above.&lt;/p&gt;
+&lt;p&gt;If you haven&amp;#8217;t already downloaded your data, see &lt;strong&gt;Download Census Housing Data&lt;/strong&gt; and &lt;strong&gt;Download TIGER Census Tracts&lt;/strong&gt; above.&lt;/p&gt;
 
-&lt;p&gt;If you haven’t already moved your downloaded zip files from the above steps, move your zip files into your working directory.&lt;/p&gt;
+&lt;p&gt;If you haven&amp;#8217;t already moved your downloaded zip files from the above steps, move your zip files into your working directory.&lt;/p&gt;
 
 &lt;p&gt;Using an extraction application like 7-zip makes it easy to unzip these files.&lt;/p&gt;
 
 &lt;p&gt;Install 7-zip if necessary.&lt;/p&gt;
 
-&lt;p&gt;Right-click on zip file and ‘Extract Here’&lt;/p&gt;
+&lt;p&gt;Right-click on zip file and &amp;#8216;Extract Here&amp;#8217;&lt;/p&gt;
 
 &lt;p&gt;Do this for all zip files.&lt;/p&gt;
 
@@ -487,9 +487,9 @@ If you did not clear your selections from the previous steps then continue on, e
 
 &lt;p&gt;Rename folder&lt;/p&gt;
 
-&lt;p&gt;Notice the files. Theres a text file with metadata on the given metric (Housing Units or Home Values). There’s a README that explains what’s inside of the zip file. There’s a metadata CSV that explains what the column headings represent. And there’s the data we need in CSV format with annotations.&lt;/p&gt;
+&lt;p&gt;Notice the files. Theres a text file with metadata on the given metric (Housing Units or Home Values). There&amp;#8217;s a README that explains what&amp;#8217;s inside of the zip file. There&amp;#8217;s a metadata CSV that explains what the column headings represent. And there&amp;#8217;s the data we need in CSV format with annotations.&lt;/p&gt;
 
-&lt;p&gt;Now open the Census tracts TIGER data folder. The XMl file contain the metadata about the shapefile. Double-clicking the XML files should open in a web browser and you should be able to read the information. The shapefile data is stored in the .dbf, .prj, .shp, and .shx. You can view the projection by opening the .prj in a text editor. Don’t bother trying to open the other files in a text editor.&lt;/p&gt;
+&lt;p&gt;Now open the Census tracts TIGER data folder. The XMl file contain the metadata about the shapefile. Double-clicking the XML files should open in a web browser and you should be able to read the information. The shapefile data is stored in the .dbf, .prj, .shp, and .shx. You can view the projection by opening the .prj in a text editor. Don&amp;#8217;t bother trying to open the other files in a text editor.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-tiger/vector-unpack-files-2.png&quot; alt=&quot;Spatial Data Carpentry: View shapefiles and metadata&quot; /&gt;&lt;/p&gt;
 
@@ -501,16 +501,16 @@ If you did not clear your selections from the previous steps then continue on, e
   &lt;li&gt;Rename tl_2014_53_tract to census-tracts &lt;em&gt;Right-click layer &amp;gt; Rename&lt;/em&gt;.&lt;/li&gt;
   &lt;li&gt;Open the tract &lt;strong&gt;Attribute table&lt;/strong&gt; and leave it open: &lt;em&gt;Right-click tract layer &amp;gt; Attribute table&lt;/em&gt;&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-2.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Washington tract attributes&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;If you haven’t yet, download your Census data and return to this step. SEE &lt;em&gt;ENTER EXERCISE NUMBER AND LINK HERE&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;If you haven&amp;#8217;t yet, download your Census data and return to this step. SEE &lt;em&gt;ENTER EXERCISE NUMBER AND LINK HERE&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;Navigate to the Census Housing Units directory. You should have a soure_files directory with Census Housing Units, Census Home Values, and Census Tracts zip files and unzipped folders containing data.&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-3.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Washington Census data&quot; /&gt;&lt;/li&gt;
   &lt;li&gt;&lt;em&gt;Rename ACS_13_5YR_B25001_with_ann.csv to housing-units.csv&lt;/em&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-4.png&quot; alt=&quot;Spaital Data Bootcamp: Census Join - Rename housing data CSV&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Open housing-units.csv and inspect the data for columns to use for our joins. HINT: it’s GEOID (tract shapefile) and GEO.id2 (ACS CSVs). We can only join data (tabular join) with &lt;em&gt;exact same&lt;/em&gt; columns. The Census provides these columns for this purpose (I’m sure other purposes as well). See the tables below:&lt;br /&gt;
+  &lt;li&gt;Open housing-units.csv and inspect the data for columns to use for our joins. HINT: it&amp;#8217;s GEOID (tract shapefile) and GEO.id2 (ACS CSVs). We can only join data (tabular join) with &lt;em&gt;exact same&lt;/em&gt; columns. The Census provides these columns for this purpose (I&amp;#8217;m sure other purposes as well). See the tables below:&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-5.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Locate similar columns&quot; /&gt;&lt;/li&gt;
   &lt;li&gt;Remove the second row containing the annotations. Delete the columns: GEO.id, GEO.display-lable, and HD02_VD01. For the purposes of this exercise, we do not need the removed columns. Our objective is to join data and visualize (with minimal data wrangling). In LibreOffice, highlight the row/column, right-click and Delete Selected Columns. Excel should be the same/similar. Command-line users, AWK is an easy solution. It should look like the file below:&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-6.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Delete housing data annotation&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Rename header HD01_VD01 to TotalUnitsHome. Save your document, be sure it’s stored as a Text CSV &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-8.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Save as Text CSV&quot; /&gt;. Excel users may have to select Text CSV from a drop-down list (I’ll check back with this). Renaming the headers reduced confusion down the road. Also, notice how there are no spaces in the header name. Removing (or not having) spaces is in the top 10 list of best naming convention practices (on all computer systems.. everywhere in the digital world.. you should never have spaces in your file names or directories). Close the document.&lt;br /&gt;
+  &lt;li&gt;Rename header HD01_VD01 to TotalUnitsHome. Save your document, be sure it&amp;#8217;s stored as a Text CSV &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-8.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Save as Text CSV&quot; /&gt;. Excel users may have to select Text CSV from a drop-down list (I&amp;#8217;ll check back with this). Renaming the headers reduced confusion down the road. Also, notice how there are no spaces in the header name. Removing (or not having) spaces is in the top 10 list of best naming convention practices (on all computer systems.. everywhere in the digital world.. you should never have spaces in your file names or directories). Close the document.&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-7.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Rename HD01_VD01 to MeanValueHome&quot; /&gt;&lt;/li&gt;
   &lt;li&gt;Do the same for the Home Values CSV:
     &lt;ul&gt;
@@ -523,39 +523,39 @@ If you did not clear your selections from the previous steps then continue on, e
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-9.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Wrangle Home Values CSV&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;You’re not quite finished with wrangling your data yet. If you have a quick look at your home-values.csv (it should still be open, Simon didn’t say close!), you’ll notice there are some invalid fields - number fields that contain non-numeric values. Lines 501 and 502 read 1,000,000+ and should be changed to 1000000.&lt;br /&gt;
+  &lt;li&gt;You&amp;#8217;re not quite finished with wrangling your data yet. If you have a quick look at your home-values.csv (it should still be open, Simon didn&amp;#8217;t say close!), you&amp;#8217;ll notice there are some invalid fields - number fields that contain non-numeric values. Lines 501 and 502 read 1,000,000+ and should be changed to 1000000.&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-10.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Wrangle Home Values CSV&quot; /&gt;
-There are some median home value records with ‘-‘ and if you read your metadata you would know that:&lt;br /&gt;&lt;br /&gt;&lt;em&gt;An ‘-‘ entry in the estimate column indicates that either no sample observations or too few sample observations were available to compute an estimate, or ratio of medians cannot be calculated because of one or both of the median estimates falls in the lowest interval or upper interval of an open-ended distribution.&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;Let’s cleanse this now:&lt;br /&gt; LibreOffice and Excel users, &lt;strong&gt;Find and Replace ‘-‘ (without single quotes) with NULL&lt;/strong&gt;&lt;br /&gt;VIM (or similar) users: &lt;strong&gt;%s#-#NULL#g&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Also, after making these changes the data type of the incorrect records have not changed - they’re still string/text fields in a numeric universe (only in LibreOffice/Excel, however). We will instruct QGIS on how to read the column data types with a .CSVT. Be sure to save your home-values.csv in Text CSV format &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-8.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Save as Text CSV&quot; /&gt;.
+There are some median home value records with &amp;#8216;-&amp;#8216; and if you read your metadata you would know that:&lt;br /&gt;&lt;br /&gt;&lt;em&gt;An &amp;#8216;-&amp;#8216; entry in the estimate column indicates that either no sample observations or too few sample observations were available to compute an estimate, or ratio of medians cannot be calculated because of one or both of the median estimates falls in the lowest interval or upper interval of an open-ended distribution.&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;Let&amp;#8217;s cleanse this now:&lt;br /&gt; LibreOffice and Excel users, &lt;strong&gt;Find and Replace &amp;#8216;-&amp;#8216; (without single quotes) with NULL&lt;/strong&gt;&lt;br /&gt;VIM (or similar) users: &lt;strong&gt;%s#-#NULL#g&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;Also, after making these changes the data type of the incorrect records have not changed - they&amp;#8217;re still string/text fields in a numeric universe (only in LibreOffice/Excel, however). We will instruct QGIS on how to read the column data types with a .CSVT. Be sure to save your home-values.csv in Text CSV format &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-8.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Save as Text CSV&quot; /&gt;.
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-11.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Wrangle Home Values CSV&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Just wait right there, one does not simply join a string (tract’s GEOID) to a number (ACS’s GEO.ids). We now have to create our CSVTs (one for each home-values.csv and housing-units.csv). As a reminder, these indicate to QGIS the data types of each column of repsective CSVs. Our goal here is to join GEOID from tracts (shapefile) to GEO.id2 from home-values.csv and housing-units.csv. Go back into QGIS and open the census-tracts properties and navigate to &lt;strong&gt;Fields&lt;/strong&gt;. Locate GEOID in the table and notice its &lt;strong&gt;Type name&lt;/strong&gt; - &lt;strong&gt;String&lt;/strong&gt;. With less wrangling we can make GEO.id2 a string for joining purposes. Close the properties window. The following steps outline how to create the CSVTs.&lt;br /&gt;
+  &lt;li&gt;Just wait right there, one does not simply join a string (tract&amp;#8217;s GEOID) to a number (ACS&amp;#8217;s GEO.ids). We now have to create our CSVTs (one for each home-values.csv and housing-units.csv). As a reminder, these indicate to QGIS the data types of each column of repsective CSVs. Our goal here is to join GEOID from tracts (shapefile) to GEO.id2 from home-values.csv and housing-units.csv. Go back into QGIS and open the census-tracts properties and navigate to &lt;strong&gt;Fields&lt;/strong&gt;. Locate GEOID in the table and notice its &lt;strong&gt;Type name&lt;/strong&gt; - &lt;strong&gt;String&lt;/strong&gt;. With less wrangling we can make GEO.id2 a string for joining purposes. Close the properties window. The following steps outline how to create the CSVTs.&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-12.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Tract field data types&quot; /&gt;&lt;/li&gt;
   &lt;li&gt;Open a text editr (gedit, VIM, notepad, notepad++) and enter the following row:&lt;br /&gt;
-“String”,”Real(12.0)”&lt;br /&gt;
+&amp;#8220;String&amp;#8221;,&amp;#8221;Real(12.0)&amp;#8221;&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-13.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Creating a CSVT&quot; /&gt;
 What this means:&lt;br /&gt;
-There are two columns in this file separated by a common. The first column indicates string and the second is a real number with length of 12 and precision of 0. While preparing this exercise, QGIS didn’t like multiplying integers (Field Calculator results with NULL), so we’re using real number type. 0 precision removes unneccessary zeros after the decimal from real number types, also there are no fractions in the datasets.&lt;br /&gt;&lt;br /&gt;
+There are two columns in this file separated by a common. The first column indicates string and the second is a real number with length of 12 and precision of 0. While preparing this exercise, QGIS didn&amp;#8217;t like multiplying integers (Field Calculator results with NULL), so we&amp;#8217;re using real number type. 0 precision removes unneccessary zeros after the decimal from real number types, also there are no fractions in the datasets.&lt;br /&gt;&lt;br /&gt;
     &lt;ul&gt;
       &lt;li&gt;Save this file as &lt;em&gt;home-values.csvt&lt;/em&gt; within the &lt;em&gt;same&lt;/em&gt; directory as &lt;em&gt;home-values.csv&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Luckily, we wrangled both CSVs into the same format, so copy &lt;em&gt;home-values.csvt&lt;/em&gt; and paste it into the &lt;em&gt;same&lt;/em&gt; directory as &lt;em&gt;housing-units.csv&lt;/em&gt;. Rename this pasted file as &lt;em&gt;housing-units.csvt&lt;/em&gt;. Data types, lengths, and precisions will be the same for both files.&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-14.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Viewing housing-units.csvt&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Import CSVs into QGIS. Don’t move just yet, there a little quirk about importing CSVs with CSVTs into QGIS. You &lt;em&gt;cannot&lt;/em&gt; use the &lt;strong&gt;Add Delimited Text Layer&lt;/strong&gt; tool, this does not recognize the CSVT precision and length. The best way to import with CSVTs is the ol’ drag-n-drop method (this has only been tested on Ubuntu 14.04 as of yet). Drag-and-drop your housing-units.csv and home-values.csv into QGIS. Don’t touch the associated CSVTs, QGIS reads these during the import process, just &lt;em&gt;don’t&lt;/em&gt; move these files. It’s the same concept as shapefiles and the multitude of associates files per one shapefile.&lt;br /&gt;
+  &lt;li&gt;Import CSVs into QGIS. Don&amp;#8217;t move just yet, there a little quirk about importing CSVs with CSVTs into QGIS. You &lt;em&gt;cannot&lt;/em&gt; use the &lt;strong&gt;Add Delimited Text Layer&lt;/strong&gt; tool, this does not recognize the CSVT precision and length. The best way to import with CSVTs is the ol&amp;#8217; drag-n-drop method (this has only been tested on Ubuntu 14.04 as of yet). Drag-and-drop your housing-units.csv and home-values.csv into QGIS. Don&amp;#8217;t touch the associated CSVTs, QGIS reads these during the import process, just &lt;em&gt;don&amp;#8217;t&lt;/em&gt; move these files. It&amp;#8217;s the same concept as shapefiles and the multitude of associates files per one shapefile.&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-15.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Drag and drop CSVs&quot; /&gt;&lt;/li&gt;
   &lt;li&gt;Your workspace should look like the image below. Save your workspace now.&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-16.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - Workspace&quot; /&gt;&lt;/li&gt;
   &lt;li&gt;Now we are able to join our Census tabular data to the tracts shapefile. Join data by opening the &lt;strong&gt;Properties&lt;/strong&gt; of the census-tracts layer and navigating to the &lt;strong&gt;Joins&lt;/strong&gt; tab.&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-17.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - view tracts properties&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Start the first join by clicking the green plus sign &lt;img src=&quot;/bootcamp/assets/images/qgis/join-plus.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - green plus sign&quot; /&gt;. We’re joining home-values and housing-units to census-tracts with:&lt;br /&gt;&lt;strong&gt;Join field: GEO.id2&lt;br /&gt;Target field: GEOID&lt;br /&gt;Cache join layer in virtual memory: (checked)&lt;br /&gt;Apply and OK onced both joined&lt;/strong&gt;&lt;br /&gt;
+  &lt;li&gt;Start the first join by clicking the green plus sign &lt;img src=&quot;/bootcamp/assets/images/qgis/join-plus.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - green plus sign&quot; /&gt;. We&amp;#8217;re joining home-values and housing-units to census-tracts with:&lt;br /&gt;&lt;strong&gt;Join field: GEO.id2&lt;br /&gt;Target field: GEOID&lt;br /&gt;Cache join layer in virtual memory: (checked)&lt;br /&gt;Apply and OK onced both joined&lt;/strong&gt;&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-18.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - joining data&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Open census-tracts &lt;strong&gt;Attribute Table&lt;/strong&gt; and locate the MeanValueHome and TotalUnitsHome fields. Notice they’ve been renamed and cut-down. We can still decrypt these headings so we’ll continue on. Close the attributes table.&lt;br /&gt;
+  &lt;li&gt;Open census-tracts &lt;strong&gt;Attribute Table&lt;/strong&gt; and locate the MeanValueHome and TotalUnitsHome fields. Notice they&amp;#8217;ve been renamed and cut-down. We can still decrypt these headings so we&amp;#8217;ll continue on. Close the attributes table.&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-19.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - viewing joined data&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;You have joined the data but it’s currently being stored in the virtual memory, so we need to save census-tracts (with joined data) as a new shapefile: &lt;em&gt;Right-click shapefile &amp;gt; Save As&lt;/em&gt;&lt;br /&gt;
+  &lt;li&gt;You have joined the data but it&amp;#8217;s currently being stored in the virtual memory, so we need to save census-tracts (with joined data) as a new shapefile: &lt;em&gt;Right-click shapefile &amp;gt; Save As&lt;/em&gt;&lt;br /&gt;
 &lt;strong&gt;Format: ESRI Shapefile&lt;br /&gt;
 Save as: tracts-values-units (save in your project directory)&lt;br /&gt;
 Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-20.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - save shapefile&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Let’s now calculate total housing value per census tract (TotalUnitsHome X MedianValueHome).
+  &lt;li&gt;Let&amp;#8217;s now calculate total housing value per census tract (TotalUnitsHome X MedianValueHome).
     &lt;ul&gt;
       &lt;li&gt;&lt;strong&gt;Open tracts-value-units attributes table &amp;gt; Toggle editing mode&lt;/strong&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/toggle-editing-mode.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - toggle edits&quot; /&gt; &lt;strong&gt;&amp;gt; Field Calculator&lt;/strong&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/field-calculator.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - field calculator&quot; /&gt;.&lt;/li&gt;
       &lt;li&gt;Configure Field Calculator inputs as follows:&lt;br /&gt;
@@ -564,14 +564,14 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 &lt;strong&gt;Output field type: Decimal number (real)&lt;/strong&gt;&lt;br /&gt;
 &lt;strong&gt;Output field width: 20&lt;/strong&gt;&lt;br /&gt;
 &lt;strong&gt;Precision: 0&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;Expression: “home-value” * “housing-un”&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;strong&gt;Expression: &amp;#8220;home-value&amp;#8221; * &amp;#8220;housing-un&amp;#8221;&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-21.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - field calculator&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Locate &lt;strong&gt;TotalValue&lt;/strong&gt; and confirm the calculation. NOTE: you should still have NULL values given that home-values.csv contains NULL values. Be sure to &lt;em&gt;Save edits&lt;/em&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/save-edits.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - save edits&quot; /&gt; and disable editing mode (Toggle editing mode) &lt;img src=&quot;/bootcamp/assets/images/qgis/toggle-editing-mode.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - toggle editing mode&quot; /&gt;. The editing options should now be grayed-out and disabled.&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-22.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - TotalValue per tract&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;You’ve successfully joined two sets of Census tabular data to a shapefile.&lt;/li&gt;
-  &lt;li&gt;Style tracts-values-units by categorizing by TotalValue and select a color ramp. QGIS will inform you that you have a high number of classes, click OK to confirm the categorization. We’ll need to remove NULL values. Locate NULL within the category table (HINT: it contains no values and is blank - look towards the bottom), highlight and click ‘Delete’ (not Delete all!) - ‘Delete’ removes only selected rows. Click Apply then OK to confirm changes. Deactivate census-tracts layer by unchecking it activate box in the layers list. Save your workspace. &lt;br /&gt;
+  &lt;li&gt;You&amp;#8217;ve successfully joined two sets of Census tabular data to a shapefile.&lt;/li&gt;
+  &lt;li&gt;Style tracts-values-units by categorizing by TotalValue and select a color ramp. QGIS will inform you that you have a high number of classes, click OK to confirm the categorization. We&amp;#8217;ll need to remove NULL values. Locate NULL within the category table (HINT: it contains no values and is blank - look towards the bottom), highlight and click &amp;#8216;Delete&amp;#8217; (not Delete all!) - &amp;#8216;Delete&amp;#8217; removes only selected rows. Click Apply then OK to confirm changes. Deactivate census-tracts layer by unchecking it activate box in the layers list. Save your workspace. &lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/census-join/census-join-24.png&quot; alt=&quot;Spatial Data Carpentry: Census Join - completed&quot; /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -640,7 +640,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
       &lt;li&gt;&lt;em&gt;Zoom in to a buffer, close enough to see the width&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Open the meaure tool&lt;/em&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/measure-tool.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - measure tool&quot; /&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Measure the width of the buffer.&lt;/em&gt; Notice how the total width is only about 62 meters, or 100 feet. Current map units are determined by the CRS, in this case EPSG:2927 is in US feet and we need meters. Simply changing the CRS in Project Properties does not give us the correct results- this is still measured from EPSG:2927 US feet.&lt;br /&gt;
-   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-measure-tool-2.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - measure buffer&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Important:&lt;/strong&gt;&lt;br /&gt;There are two methods to perfoming a buffer analysis on our shapefile. The problem here is that our CRS is EPSG:2927 (in US feet) and the buffer distance is based on map units (still US feet). The two methods are: convert 100 meters to US feet and use this value in the buffer analysis while maintaining EPSG:2927 (in US feet); OR, reproject the layer thus creating a new file with a CRS in meters (correct map units), and then reprojecting back to EPSG:2927. We’ll go with the former.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-measure-tool-2.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - measure buffer&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Important:&lt;/strong&gt;&lt;br /&gt;There are two methods to perfoming a buffer analysis on our shapefile. The problem here is that our CRS is EPSG:2927 (in US feet) and the buffer distance is based on map units (still US feet). The two methods are: convert 100 meters to US feet and use this value in the buffer analysis while maintaining EPSG:2927 (in US feet); OR, reproject the layer thus creating a new file with a CRS in meters (correct map units), and then reprojecting back to EPSG:2927. We&amp;#8217;ll go with the former.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Now we need to perform the buffer analysis with the correct method. &lt;em&gt;Remove the incorrect buffer layer: fault_buffer_100m.shp&lt;/em&gt;&lt;/li&gt;
@@ -688,7 +688,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Import Washington Census tracts (tl_2014__53_tract.shp) &lt;img src=&quot;/bootcamp/assets/images/qgis/add-vector.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - add Census tracts&quot; /&gt;&lt;br /&gt;
-   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-10.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - add Census tracts&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Important:&lt;/strong&gt; Did you check the projection of the Census tracts shapefile? Be sure your shapefile CRS is EPSG:2927. &lt;br /&gt;&lt;br /&gt;‘on the fly’ projection is selected&lt;/li&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-10.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - add Census tracts&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Important:&lt;/strong&gt; Did you check the projection of the Census tracts shapefile? Be sure your shapefile CRS is EPSG:2927. &lt;br /&gt;&lt;br /&gt;&amp;#8216;on the fly&amp;#8217; projection is selected&lt;/li&gt;
   &lt;li&gt;Save Census tract (tl_2014_53_tract.shp) with ESPG:2927:
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Right-click tl_2014_53_tract.shp (layer list) &amp;gt; Save As&lt;/em&gt;&lt;/li&gt;
@@ -697,17 +697,17 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;em&gt;Remove current tl_2014_53_tract.shp&lt;/em&gt;&lt;br /&gt;
   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-11.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - workspace&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Open wa-tracts attribute table and housing-data to find the key that will be used to join the tables. HINT: It’s GEOID and GEO.id2.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;notes:&lt;/strong&gt; discuss field types, e.g. cannot compare a string to a number. – add image –&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Open wa-tracts attribute table and housing-data to find the key that will be used to join the tables. HINT: It&amp;#8217;s GEOID and GEO.id2.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;notes:&lt;/strong&gt; discuss field types, e.g. cannot compare a string to a number. &amp;#8211; add image &amp;#8211;&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;Join Census housing data (housing-data.csv) to Census tracts (wa-tracts.sho):
     &lt;ul&gt;
-      &lt;li&gt;Open Processing Toolbox (&lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Toolbox&lt;/em&gt;), search for “join attributes table”, then double-click “Join attributes table”&lt;br /&gt;
+      &lt;li&gt;Open Processing Toolbox (&lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Toolbox&lt;/em&gt;), search for &amp;#8220;join attributes table&amp;#8221;, then double-click &amp;#8220;Join attributes table&amp;#8221;&lt;br /&gt;
    &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-12.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - join attribute table&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;Configure Join attributes table as follows:&lt;br /&gt;&lt;strong&gt;Input layer: wa-tracts&lt;br /&gt;Input layer 2: housing-data&lt;br /&gt;Table field: GEOID&lt;br /&gt;Table field 2: GEO.id2&lt;br /&gt;Output layer: (Save to file..) tracts-housing-data.shp&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; The concept behind this join is tabular (non-locational-data) joined to spatial data, not spatial data to tabular data. So, you must have spatial data (wa-tracts.shp) as the primary input and tabular data (housing-data.csv) as the secondary input. Notice in the &lt;strong&gt;Joing attributes table&lt;/strong&gt; inputs below.&lt;br /&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-13.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - join Census tracts and housing data&quot; /&gt;&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;NOTICE:&lt;/strong&gt; “Layers do not all use the same CRS. This can cause unexpencted results.” Remember, the housing-data.csv does not have any locational data associated with it. Click Yes, to continue.&lt;br /&gt;&lt;br /&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-14.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - join error&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Configure Join attributes table as follows:&lt;br /&gt;&lt;strong&gt;Input layer: wa-tracts&lt;br /&gt;Input layer 2: housing-data&lt;br /&gt;Table field: GEOID&lt;br /&gt;Table field 2: GEO.id2&lt;br /&gt;Output layer: (Save to file..) tracts-housing-data.shp&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; The concept behind this join is tabular (non-locational-data) joined to spatial data, not spatial data to tabular data. So, you must have spatial data (wa-tracts.shp) as the primary input and tabular data (housing-data.csv) as the secondary input. Notice in the &lt;strong&gt;Joing attributes table&lt;/strong&gt; inputs below.&lt;br /&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-13.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - join Census tracts and housing data&quot; /&gt;&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;NOTICE:&lt;/strong&gt; &amp;#8220;Layers do not all use the same CRS. This can cause unexpencted results.&amp;#8221; Remember, the housing-data.csv does not have any locational data associated with it. Click Yes, to continue.&lt;br /&gt;&lt;br /&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-14.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - join error&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Confirm output: housing data joined to tracts. Output is named “Output layer”, rename to “tracts_housing_data.shp” (&lt;em&gt;right-click layer &amp;gt; Rename&lt;/em&gt;). Hover over the layer in the layer list to view the source path.
+  &lt;li&gt;Confirm output: housing data joined to tracts. Output is named &amp;#8220;Output layer&amp;#8221;, rename to &amp;#8220;tracts_housing_data.shp&amp;#8221; (&lt;em&gt;right-click layer &amp;gt; Rename&lt;/em&gt;). Hover over the layer in the layer list to view the source path.
  &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-15.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - tracts and housing data joined&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Normalize housing data - tract house count X median tract house value = total tract home value: (you’ll need point data to have a more accurate analysis)
+  &lt;li&gt;Normalize housing data - tract house count X median tract house value = total tract home value: (you&amp;#8217;ll need point data to have a more accurate analysis)
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Right-click tracts_housing_data &amp;gt; Open Attribute Table &amp;gt; Toggle editing mode &amp;gt; Open field calculator&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;If you had downloaded the original ACS .csv with annotations then you would be able to easily find what the column headers mean. Or, you could locate the ACS metadata. But we have provided the difinitions below:&lt;br /&gt;HC01_VC118 = Total Housing Units (Owner-occupied)&lt;br /&gt;HC01_VC127 = Estimated Median Housing Unit (Owner-occupied)&lt;br /&gt;We would have calculated total housing * median housing (total) but the ACS does not provide these metrics.&lt;/li&gt;
@@ -767,50 +767,50 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
+      &lt;th&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Slope&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3-5°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3-5&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5-10°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5-10&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10-15°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10-15&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15-20°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;15-20&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;20-30°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;20-30&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;30-40°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;30-40&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -821,24 +821,24 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;  &lt;/th&gt;
+      &lt;th&gt;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Strength&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Low (high-risk)&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Medium&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;High (low-risk)&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -850,7 +850,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
   &lt;li&gt;Import raster data:
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Open QGIS &amp;gt; Add Raster Layer &amp;gt; Data directory &amp;gt; Add: wa_dem.tif and wa_geology.tif&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
-      &lt;li&gt;BEST PRACTICE: Check your projections before performing any anaylsis, otherwise you’re in for a lot of trouble. Also, check raster resolutions before analysis, you don’t want your results to be off or invalid.&lt;br /&gt;
+      &lt;li&gt;BEST PRACTICE: Check your projections before performing any anaylsis, otherwise you&amp;#8217;re in for a lot of trouble. Also, check raster resolutions before analysis, you don&amp;#8217;t want your results to be off or invalid.&lt;br /&gt;
   &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-1.jpg&quot; alt=&quot;Spatial Data Carpentry: Raster Analysis - import raster data&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -906,7 +906,7 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Open GRASS tool, r.reclass: &lt;em&gt;Processing Toolbox (with Advanced interface) &amp;gt; GRASS Commands &amp;gt; Raster &amp;gt; r.reclass&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Configure your inputs as follows:&lt;strong&gt;&lt;br /&gt;&lt;br /&gt;Input Raster: slope&lt;br /&gt;File containing reclass rules: slope-rules.txt&lt;br /&gt;Output raster layer: slope-reclass.tif&lt;/strong&gt; (NOTE: select &lt;em&gt;Save to file…&lt;/em&gt; or QGIS will not create a permanent output)&lt;br /&gt;&lt;br /&gt;
+  &lt;li&gt;Configure your inputs as follows:&lt;strong&gt;&lt;br /&gt;&lt;br /&gt;Input Raster: slope&lt;br /&gt;File containing reclass rules: slope-rules.txt&lt;br /&gt;Output raster layer: slope-reclass.tif&lt;/strong&gt; (NOTE: select &lt;em&gt;Save to file&amp;#8230;&lt;/em&gt; or QGIS will not create a permanent output)&lt;br /&gt;&lt;br /&gt;
   &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-slope-reclass-inputs.png&quot; alt=&quot;Spatial Data Carpentry: Raster Analysis - reclassified slope output&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -956,54 +956,54 @@ Add saved file to map: (checked)&lt;/strong&gt;&lt;br /&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
+      &lt;th&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Precipitation&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;#160;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;5-10 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;10-15 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;15-30 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;30-45 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;45-60 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;60-75 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;75-90 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 90 in&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -1444,7 +1444,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h4 id=&quot;overview&quot;&gt;Overview&lt;/h4&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;“Panoply is a a cross-platform application that plots geo-gridded and other arrays from netCDF, HDF, GRIB, and other datasets&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.”&lt;/p&gt;
+  &lt;p&gt;&amp;#8220;Panoply is a a cross-platform application that plots geo-gridded and other arrays from netCDF, HDF, GRIB, and other datasets&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&amp;#8221;&lt;/p&gt;
 
 &lt;/blockquote&gt;
 
@@ -1562,34 +1562,34 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Input Layer&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
+      &lt;th&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Data Source&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;DEM&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;GTopo30&lt;sup id=&quot;fnref:3:1&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Geology&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Washington Dept. of Natural Resources&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Landslide Inventory&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Washington Dept. of Natural Resources&lt;sup id=&quot;fnref:5:1&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Washington Boundary&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Global Administrative Areas&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Daily Precipitation&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Earth System Research Laboratory(NOAA)&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -1611,7 +1611,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Set project projection to EPSG:2927&lt;br /&gt;&lt;br /&gt; 
-  Before starting any project in a GIS program, you should first set the project projection to make sure your data comes in with the same extent. &lt;br /&gt;If you don’t set the project’s projection, the program will use the projection of the first layer added or EPSG:4326.&lt;br /&gt;&lt;br /&gt;
+  Before starting any project in a GIS program, you should first set the project projection to make sure your data comes in with the same extent. &lt;br /&gt;If you don&amp;#8217;t set the project&amp;#8217;s projection, the program will use the projection of the first layer added or EPSG:4326.&lt;br /&gt;&lt;br /&gt;
   You can set the projection with the following steps:&lt;br /&gt;&lt;br /&gt;
   &lt;img src=&quot;/bootcamp/assets/images/qgis-project-properties.png&quot; alt=&quot;project-properties&quot; /&gt;&lt;br /&gt;
     &lt;ul&gt;
@@ -1635,7 +1635,7 @@ end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       &lt;li&gt;In the top toolbar, select &lt;em&gt;Select Single Feature&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;Click on the state of Washington to select it&lt;br /&gt;
   &lt;img src=&quot;/bootcamp/assets/images/washington-selected.png&quot; alt=&quot;washington-selected&quot; /&gt;&lt;br /&gt;&lt;/li&gt;
-      &lt;li&gt;Right click on the USA_adm1 layer and select &lt;em&gt;Save Selection As…&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Right click on the USA_adm1 layer and select &lt;em&gt;Save Selection As&amp;#8230;&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;Format: ESRI Shapefile&lt;/li&gt;
       &lt;li&gt;Save as: washington.shp&lt;/li&gt;
       &lt;li&gt;Encoding: UTF-8&lt;/li&gt;
@@ -1735,50 +1735,50 @@ Reclassifying inputs:&lt;/p&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
+      &lt;th&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Slope&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3-5°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3-5&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5-10°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5-10&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10-15°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10-15&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15-20°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;15-20&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;20-30°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;20-30&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;30-40°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;30-40&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1807,7 +1807,7 @@ Reclassifying inputs:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Input Raster: &lt;em&gt;slope-washington&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;File containing reclass rules: &lt;em&gt;slope-rules.txt&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Output raster layer: &lt;em&gt;slope-reclass.tif&lt;/em&gt; (NOTE: select &lt;em&gt;Save to file…&lt;/em&gt; or else QGIS will not create a permanent output)&lt;br /&gt;
+  &lt;li&gt;Output raster layer: &lt;em&gt;slope-reclass.tif&lt;/em&gt; (NOTE: select &lt;em&gt;Save to file&amp;#8230;&lt;/em&gt; or else QGIS will not create a permanent output)&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/slope-reclass.png&quot; alt=&quot;slope-reclass&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1859,54 +1859,54 @@ Reclassifying inputs:&lt;/p&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
+      &lt;th&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Precipitation&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;#160;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;5-10 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;10-15 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;15-30 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;30-45 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;45-60 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;60-75 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;75-90 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 90 in&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -1916,7 +1916,7 @@ Reclassifying inputs:&lt;/p&gt;
 
 &lt;p&gt;Now that the output datasets have been created, we can work on making our results presentable.&lt;/p&gt;
 
-&lt;p&gt;Go to Cartography &amp;amp; Visualization…&lt;/p&gt;
+&lt;p&gt;Go to Cartography &amp;amp; Visualization&amp;#8230;&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
@@ -2049,18 +2049,18 @@ Reclassifying inputs:&lt;/p&gt;
 
 &lt;h5 id=&quot;netcdf-kitchen-sink&quot;&gt;netCDF Kitchen Sink&lt;/h5&gt;
 
-&lt;p&gt;The nickname ‘kitchen sink’ is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option ‘-d’&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions.&lt;/p&gt;
+&lt;p&gt;The nickname &amp;#8216;kitchen sink&amp;#8217; is a catchal-all because ncks combines most features of ncdump and nccopy with extra features to extract, hyperslab,multi-slab, and translate into one versatile utility. ncks extracts hayperslabs from specified variables using the option &amp;#8216;-d&amp;#8217;&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. This hyperslab feature allows us to specify the subsets for the latitude and longitude dimensions.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ncks -O -d lon,234.0,244.0 -d lat,44.0,50.0 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc subset.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;In the above command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testing.&lt;/p&gt;
+&lt;p&gt;In the above command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The &amp;#8216;-O&amp;#8217; option specifies that the command will overwrite the output file if it already exists, which is helpful for script testing.&lt;/p&gt;
 
 &lt;h4 id=&quot;removing-bad-values&quot;&gt;Removing bad values&lt;/h4&gt;
-&lt;p&gt;If you look at the metadata for the subsetted file, you can see that the ‘precip’ variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25° x .25°(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library.&lt;/p&gt;
+&lt;p&gt;If you look at the metadata for the subsetted file, you can see that the &amp;#8216;precip&amp;#8217; variable is a float data type. Instead of using null values in their datasets, netCDF uses designated fill values based on the variable data type. The fill value for floats comes in as 9.9692e+36 or ~(15 * 2^119). This value is important since all bad values will be assigned this values. This includes raster cells above the ocean since the data set only covers land-based precipitation data. Since our dataset has a large resolution at .25&amp;deg; x .25&amp;deg;(approximately 27.83km x 27.83km), we need to resample our grid to match the other outputs at 1kmx1km. Interpolating between Null values can cause more values to become than necessary, so we will convert the null values to 0 prior to interpolating the data. Setting null values to zero has the benefit of keeping interpolated values as actual numbers rather than nulls. We will be using the netCDF Arithmetic Processor from the NCO utility library.&lt;/p&gt;
 
 &lt;h5 id=&quot;netcdf-arithmetic-processor&quot;&gt;netCDF Arithmetic Processor&lt;/h5&gt;
 
-&lt;p&gt;The netCDF Arithmetic Processor(ncap2) was written to perform arbitrary algebraic transformation of data and archive the results as easily as possible&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. Instructions for ncap2 can be contained in an MCP script file or delivered inline with the ‘-s’ flag. One of ncap2’s most powerful features is its ability to define new variables in terms of existing variables.&lt;/p&gt;
+&lt;p&gt;The netCDF Arithmetic Processor(ncap2) was written to perform arbitrary algebraic transformation of data and archive the results as easily as possible&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. Instructions for ncap2 can be contained in an MCP script file or delivered inline with the &amp;#8216;-s&amp;#8217; flag. One of ncap2&amp;#8217;s most powerful features is its ability to define new variables in terms of existing variables.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -2071,7 +2071,7 @@ The ncap2 command we will be using is:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ncap2 -O -s &lt;span class=&quot;s1&quot;&gt;&amp;#39;where(precip &amp;lt; 0.0 || precip &amp;gt; 10000) precip=0;&amp;#39;&lt;/span&gt; subset.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc narm.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;In the above command, we use the inline script flag ‘-s’ to specify that the cell value should be set to 0 if it is less than 0 or greater than 10,000. Once again, we include the overwrite flag ‘-O’ for scripting purposes.&lt;/p&gt;
+&lt;p&gt;In the above command, we use the inline script flag &amp;#8216;-s&amp;#8217; to specify that the cell value should be set to 0 if it is less than 0 or greater than 10,000. Once again, we include the overwrite flag &amp;#8216;-O&amp;#8217; for scripting purposes.&lt;/p&gt;
 
 &lt;h4 id=&quot;summing-yearly-precipitation&quot;&gt;Summing yearly precipitation&lt;/h4&gt;
 &lt;p&gt;Since our analysis is looking at patterns of precipitation over time, rather than the amount of rain accumulated during a particular day, we will have create an ensemble dataset with the sum of precipitation for a given year. We will be using the NetCDF Record Averager to sum our precipitation values over the time dimension.&lt;/p&gt;
@@ -2084,7 +2084,7 @@ The ncap2 command we will be using is:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ncra -O --op-typ&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ttl -d &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;,,,1 -v precip narm.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc annual.&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;In the above command, the ‘-v precip’ flag defines the variable ncra will operate on. The ‘–op-type=ttl’ flag indicates that we want ncra to calculate the sum of records while the ‘-d’ flag indicates that we are summing the values across the time dimension. Once again we include the overwrite flag ‘-O’ for scripting purposes.&lt;/p&gt;
+&lt;p&gt;In the above command, the &amp;#8216;-v precip&amp;#8217; flag defines the variable ncra will operate on. The &amp;#8216;&amp;#8211;op-type=ttl&amp;#8217; flag indicates that we want ncra to calculate the sum of records while the &amp;#8216;-d&amp;#8217; flag indicates that we are summing the values across the time dimension. Once again we include the overwrite flag &amp;#8216;-O&amp;#8217; for scripting purposes.&lt;/p&gt;
 
 &lt;h4 id=&quot;regridding-netcdf-files&quot;&gt;Regridding netCDF files&lt;/h4&gt;
 
@@ -2108,7 +2108,7 @@ The ncap2 command we will be using is:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;nces -O -n 8,2,1 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OUTPUTDIR&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/regrid.2007.nc avg_annual.nc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;The above command uses the loop flag ‘-n 8,2,1’ which uses the following syntax -n &lt;em&gt;file_number,digit_number,numeric_increment&lt;/em&gt; where &lt;em&gt;file_number&lt;/em&gt; is the number of files, &lt;em&gt;digit_number&lt;/em&gt; is the fixed number of numeric digits comprising the &lt;em&gt;numeric_suffix&lt;/em&gt; and &lt;em&gt;numeric_increment&lt;/em&gt; is the constant, integer-valued difference between the &lt;em&gt;numeric_suffix&lt;/em&gt; of any two files&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;The above command uses the loop flag &amp;#8216;-n 8,2,1&amp;#8217; which uses the following syntax -n &lt;em&gt;file_number,digit_number,numeric_increment&lt;/em&gt; where &lt;em&gt;file_number&lt;/em&gt; is the number of files, &lt;em&gt;digit_number&lt;/em&gt; is the fixed number of numeric digits comprising the &lt;em&gt;numeric_suffix&lt;/em&gt; and &lt;em&gt;numeric_increment&lt;/em&gt; is the constant, integer-valued difference between the &lt;em&gt;numeric_suffix&lt;/em&gt; of any two files&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;converting-to-geotiff&quot;&gt;Converting to GeoTiff&lt;/h4&gt;
 
@@ -2174,7 +2174,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
       &lt;p&gt;http://stderr.org/doc/nco/html/ncap2-netCDF-Arithmetic-Processor.html &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:5&quot;&gt;
-      &lt;p&gt;In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo5]: The NCAR Command Language (Version 6.In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The ‘-O’ option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo2.1) [Software]. (2014). Boulder, Colorado: UCAR/NCAR/CISL/VETS. http://dx.doi.org/10.5065/D6WD3XH5 &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The &amp;#8216;-O&amp;#8217; option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo5]: The NCAR Command Language (Version 6.In the following command, we set the longitude and latitude dimensions to reflect the extent of Washington state. The &amp;#8216;-O&amp;#8217; option specifies that the command will overwrite the output file if it already exists, which is helpful for script testingo2.1) [Software]. (2014). Boulder, Colorado: UCAR/NCAR/CISL/VETS. http://dx.doi.org/10.5065/D6WD3XH5 &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:6&quot;&gt;
       &lt;p&gt;http://nco.sourceforge.net/nco.html#Specifying-Input-Files &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
@@ -2200,7 +2200,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;To add this to QGIS you can go into the top menu:&lt;/p&gt;
 
-&lt;p&gt;Settings &amp;gt; Custom CRS…&lt;/p&gt;
+&lt;p&gt;Settings &amp;gt; Custom CRS&amp;#8230;&lt;/p&gt;
 
 &lt;p&gt;Click &lt;em&gt;Add new CRS&lt;/em&gt; to create a new custom projection&lt;/p&gt;
 
@@ -2220,9 +2220,9 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;To make set the project projection, in the top menu select Project &amp;gt; Project Properies&lt;/p&gt;
 
-&lt;p&gt;You will need to select &lt;em&gt;Enable ‘on the fly’ CRS transformation&lt;/em&gt; to set the projection.&lt;/p&gt;
+&lt;p&gt;You will need to select &lt;em&gt;Enable &amp;#8216;on the fly&amp;#8217; CRS transformation&lt;/em&gt; to set the projection.&lt;/p&gt;
 
-&lt;p&gt;You can either scroll through the choices in the second window, or filter them by the string “New World”&lt;/p&gt;
+&lt;p&gt;You can either scroll through the choices in the second window, or filter them by the string &amp;#8220;New World&amp;#8221;&lt;/p&gt;
 
 &lt;p&gt;Select the projection in the second window and Click &lt;em&gt;Apply&lt;/em&gt;&lt;/p&gt;
 
@@ -2250,7 +2250,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;&lt;a href=&quot;http://irods.org&quot;&gt;&lt;em&gt;iRods&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;To install the plugin, in the Top Menu go to Plugins &amp;gt; Manage and Install Plugins…&lt;/p&gt;
+&lt;p&gt;To install the plugin, in the Top Menu go to Plugins &amp;gt; Manage and Install Plugins&amp;#8230;&lt;/p&gt;
 
 &lt;p&gt;In the left sidebar click &lt;em&gt;Get more&lt;/em&gt;&lt;/p&gt;
 
@@ -2282,7 +2282,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;In the bottom right of the window click &lt;em&gt;Set Datastore&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;In the next prompt, enter “/iplant/home/shared/aegis/Spatial-bootcamp”&lt;/p&gt;
+&lt;p&gt;In the next prompt, enter &amp;#8220;/iplant/home/shared/aegis/Spatial-bootcamp&amp;#8221;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/setDatastore.png&quot; alt=&quot;set-datastore&quot; /&gt;&lt;/p&gt;
 
@@ -2290,7 +2290,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;You should see a new window with a series of directories.&lt;/p&gt;
 
-&lt;p&gt;For this exercise our files will be found under “Range-model”&lt;/p&gt;
+&lt;p&gt;For this exercise our files will be found under &amp;#8220;Range-model&amp;#8221;&lt;/p&gt;
 
 &lt;p&gt;We can use the Abies amabilis shapefile titled: Abies_amabilis.shp&lt;/p&gt;
 
@@ -2304,13 +2304,13 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;To check the species projection you can right-click the Abies_amabilis in the Table of Contents and select &lt;em&gt;Properties&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;The Layer properties window will display the layer’s Coordinate Reference System:&lt;/p&gt;
+&lt;p&gt;The Layer properties window will display the layer&amp;#8217;s Coordinate Reference System:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/abiesProjection.png&quot; alt=&quot;abies-projection&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;To change the projection, you can close out of the &lt;em&gt;Layer Properties&lt;/em&gt; window.&lt;/p&gt;
 
-&lt;p&gt;Right click the Abies_amabilis layer in the Table of Contents and select &lt;em&gt;Save as…&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Right click the Abies_amabilis layer in the Table of Contents and select &lt;em&gt;Save as&amp;#8230;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;You can leave the format as ESRI Shapefile&lt;/p&gt;
 
@@ -2356,7 +2356,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;If you check the layer properties on one of the rasters, you can see that they default to EPSG:4326, although we had previously stated they come in the New World LAEA.&lt;/p&gt;
 
-&lt;p&gt;This happens because Ascii Grid Format doesn’t store any projection information.&lt;/p&gt;
+&lt;p&gt;This happens because Ascii Grid Format doesn&amp;#8217;t store any projection information.&lt;/p&gt;
 
 &lt;p&gt;To allow any analysis, we will have to define the projection for the raster data sets.&lt;/p&gt;
 
@@ -2376,7 +2376,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;To create the SWD, we need to sample the environmental variable layers at the observation points. To do this, we will need to install the Point Sampling Plugin.&lt;/p&gt;
 
-&lt;p&gt;In the top menu, click Plugins &amp;gt; Manage and Install Plugins…&lt;/p&gt;
+&lt;p&gt;In the top menu, click Plugins &amp;gt; Manage and Install Plugins&amp;#8230;&lt;/p&gt;
 
 &lt;p&gt;Click &lt;em&gt;Get more&lt;/em&gt; in the left menu and Search for Point sampling&lt;/p&gt;
 
@@ -2416,7 +2416,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;p&gt;Set the output field name to &lt;em&gt;species&lt;/em&gt; with a field type of Text (string) and a length of 14&lt;/p&gt;
 
-&lt;p&gt;Set the expression to ‘Abies_amabils’ to set the value for each row to the species name.&lt;/p&gt;
+&lt;p&gt;Set the expression to &amp;#8216;Abies_amabils&amp;#8217; to set the value for each row to the species name.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/addColumn.png&quot; alt=&quot;add-column&quot; /&gt;&lt;/p&gt;
 
@@ -2458,7 +2458,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;&lt;a href=&quot;http://nhd.usgs.gov/&quot; alt=&quot;Spatial Data Carpentry: Download USGS National Hydrography Dataset - Washington&quot; target=&quot;_blank&quot;&gt;Washington streams/rivers - USGS National Hydrography Dataset&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Here, the data are pre-wrangled (located on nathan’s server, for now):&lt;/p&gt;
+&lt;p&gt;Here, the data are pre-wrangled (located on nathan&amp;#8217;s server, for now):&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;faults_100k - [source]&lt;/li&gt;
@@ -2496,7 +2496,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
       &lt;li&gt;&lt;em&gt;Zoom in to a buffer, close enough to see the width&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Open the meaure tool&lt;/em&gt; &lt;img src=&quot;/bootcamp/assets/images/qgis/measure-tool.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - measure tool&quot; /&gt;&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Measure the width of the buffer.&lt;/em&gt; Notice how the total width is only about 62 meters, or 100 feet. Current map units are determined by the CRS, in this case EPSG:2927 is in US feet and we need meters. Simply changing the CRS in Project Properties does not give us the correct results- this is still measured from EPSG:2927 US feet.&lt;br /&gt;
-   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-measure-tool-2.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - measure buffer&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Important:&lt;/strong&gt;&lt;br /&gt;There are two methods to perfoming a buffer analysis on our shapefile. The problem here is that our CRS is EPSG:2927 (in US feet) and the buffer distance is based on map units (still US feet). The two methods are: convert 100 meters to US feet and use this value in the buffer analysis while maintaining EPSG:2927 (in US feet); OR, reproject the layer thus creating a new file with a CRS in meters (correct map units), and then reprojecting back to EPSG:2927. We’ll go with the former.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-measure-tool-2.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - measure buffer&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Important:&lt;/strong&gt;&lt;br /&gt;There are two methods to perfoming a buffer analysis on our shapefile. The problem here is that our CRS is EPSG:2927 (in US feet) and the buffer distance is based on map units (still US feet). The two methods are: convert 100 meters to US feet and use this value in the buffer analysis while maintaining EPSG:2927 (in US feet); OR, reproject the layer thus creating a new file with a CRS in meters (correct map units), and then reprojecting back to EPSG:2927. We&amp;#8217;ll go with the former.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Now we need to perform the buffer analysis with the correct method. &lt;em&gt;Remove the incorrect buffer layer: fault_buffer_100m.shp&lt;/em&gt;&lt;/li&gt;
@@ -2544,7 +2544,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Import Washington Census tracts (tl_2014__53_tract.shp) &lt;img src=&quot;/bootcamp/assets/images/qgis/add-vector.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - add Census tracts&quot; /&gt;&lt;br /&gt;
-   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-10.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - add Census tracts&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Important:&lt;/strong&gt; Did you check the projection of the Census tracts shapefile? Be sure your shapefile CRS is EPSG:2927. &lt;br /&gt;&lt;br /&gt;‘on the fly’ projection is selected&lt;/li&gt;
+   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-10.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - add Census tracts&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Important:&lt;/strong&gt; Did you check the projection of the Census tracts shapefile? Be sure your shapefile CRS is EPSG:2927. &lt;br /&gt;&lt;br /&gt;&amp;#8216;on the fly&amp;#8217; projection is selected&lt;/li&gt;
   &lt;li&gt;Save Census tract (tl_2014_53_tract.shp) with ESPG:2927:
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Right-click tl_2014_53_tract.shp (layer list) &amp;gt; Save As&lt;/em&gt;&lt;/li&gt;
@@ -2553,17 +2553,17 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;/li&gt;
   &lt;li&gt;&lt;em&gt;Remove current tl_2014_53_tract.shp&lt;/em&gt;&lt;br /&gt;
   &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-11.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - workspace&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Open wa-tracts attribute table and housing-data to find the key that will be used to join the tables. HINT: It’s GEOID and GEO.id2.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;notes:&lt;/strong&gt; discuss field types, e.g. cannot compare a string to a number. – add image –&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Open wa-tracts attribute table and housing-data to find the key that will be used to join the tables. HINT: It&amp;#8217;s GEOID and GEO.id2.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;notes:&lt;/strong&gt; discuss field types, e.g. cannot compare a string to a number. &amp;#8211; add image &amp;#8211;&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;Join Census housing data (housing-data.csv) to Census tracts (wa-tracts.sho):
     &lt;ul&gt;
-      &lt;li&gt;Open Processing Toolbox (&lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Toolbox&lt;/em&gt;), search for “join attributes table”, then double-click “Join attributes table”&lt;br /&gt;
+      &lt;li&gt;Open Processing Toolbox (&lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Toolbox&lt;/em&gt;), search for &amp;#8220;join attributes table&amp;#8221;, then double-click &amp;#8220;Join attributes table&amp;#8221;&lt;br /&gt;
    &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-12.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - join attribute table&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;Configure Join attributes table as follows:&lt;br /&gt;&lt;strong&gt;Input layer: wa-tracts&lt;br /&gt;Input layer 2: housing-data&lt;br /&gt;Table field: GEOID&lt;br /&gt;Table field 2: GEO.id2&lt;br /&gt;Output layer: (Save to file..) tracts-housing-data.shp&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; The concept behind this join is tabular (non-locational-data) joined to spatial data, not spatial data to tabular data. So, you must have spatial data (wa-tracts.shp) as the primary input and tabular data (housing-data.csv) as the secondary input. Notice in the &lt;strong&gt;Joing attributes table&lt;/strong&gt; inputs below.&lt;br /&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-13.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - join Census tracts and housing data&quot; /&gt;&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;NOTICE:&lt;/strong&gt; “Layers do not all use the same CRS. This can cause unexpencted results.” Remember, the housing-data.csv does not have any locational data associated with it. Click Yes, to continue.&lt;br /&gt;&lt;br /&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-14.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - join error&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Configure Join attributes table as follows:&lt;br /&gt;&lt;strong&gt;Input layer: wa-tracts&lt;br /&gt;Input layer 2: housing-data&lt;br /&gt;Table field: GEOID&lt;br /&gt;Table field 2: GEO.id2&lt;br /&gt;Output layer: (Save to file..) tracts-housing-data.shp&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; The concept behind this join is tabular (non-locational-data) joined to spatial data, not spatial data to tabular data. So, you must have spatial data (wa-tracts.shp) as the primary input and tabular data (housing-data.csv) as the secondary input. Notice in the &lt;strong&gt;Joing attributes table&lt;/strong&gt; inputs below.&lt;br /&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-13.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - join Census tracts and housing data&quot; /&gt;&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;NOTICE:&lt;/strong&gt; &amp;#8220;Layers do not all use the same CRS. This can cause unexpencted results.&amp;#8221; Remember, the housing-data.csv does not have any locational data associated with it. Click Yes, to continue.&lt;br /&gt;&lt;br /&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-14.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - join error&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Confirm output: housing data joined to tracts. Output is named “Output layer”, rename to “tracts_housing_data.shp” (&lt;em&gt;right-click layer &amp;gt; Rename&lt;/em&gt;). Hover over the layer in the layer list to view the source path.
+  &lt;li&gt;Confirm output: housing data joined to tracts. Output is named &amp;#8220;Output layer&amp;#8221;, rename to &amp;#8220;tracts_housing_data.shp&amp;#8221; (&lt;em&gt;right-click layer &amp;gt; Rename&lt;/em&gt;). Hover over the layer in the layer list to view the source path.
  &lt;img src=&quot;/bootcamp/assets/images/vector-analysis/vector-analysis-15.png&quot; alt=&quot;Spatial Data Carpentry: Vector Analysis - tracts and housing data joined&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Normalize housing data - tract house count X median tract house value = total tract home value: (you’ll need point data to have a more accurate analysis)
+  &lt;li&gt;Normalize housing data - tract house count X median tract house value = total tract home value: (you&amp;#8217;ll need point data to have a more accurate analysis)
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Right-click tracts_housing_data &amp;gt; Open Attribute Table &amp;gt; Toggle editing mode &amp;gt; Open field calculator&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;If you had downloaded the original ACS .csv with annotations then you would be able to easily find what the column headers mean. Or, you could locate the ACS metadata. But we have provided the difinitions below:&lt;br /&gt;HC01_VC118 = Total Housing Units (Owner-occupied)&lt;br /&gt;HC01_VC127 = Estimated Median Housing Unit (Owner-occupied)&lt;br /&gt;We would have calculated total housing * median housing (total) but the ACS does not provide these metrics.&lt;/li&gt;
@@ -2633,7 +2633,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;h2&gt;Requirements:&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;An internet connection is critical. You&#39;ll be referencing and loading the remote Leaflet scripts.&lt;/li&gt;
+  &lt;li&gt;An internet connection is critical. You'll be referencing and loading the remote Leaflet scripts.&lt;/li&gt;
   &lt;li&gt;Some HTML, CSS, and JavaScript are a plus.&lt;/li&gt;
   &lt;li&gt;A text editor (Notepad++, notepad, Sublime Text Editor, etc..) for modifying our code.&lt;/li&gt;
 &lt;/ul&gt;
@@ -2651,7 +2651,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 &lt;h3&gt;1. Working Directory&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Create a new working diretory, this is where you will store your webpage documents and data. This is called the site root. We won&#39;t need additional directories for this exercise but if you&#39;ve opened up the leaflet-us-states-source.html you&#39;re able to see the site structure for these exercises. The Leaflet HTML document will depend on your folder structures- this will be explained later.&lt;/li&gt;
+  &lt;li&gt;Create a new working diretory, this is where you will store your webpage documents and data. This is called the site root. We won't need additional directories for this exercise but if you've opened up the leaflet-us-states-source.html you're able to see the site structure for these exercises. The Leaflet HTML document will depend on your folder structures- this will be explained later.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3&gt;2. Download US States TIGER shapefile&lt;/h3&gt;
@@ -2671,7 +2671,7 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
 
 &lt;img src=&quot;/bootcamp/assets/images/leaflet/geojson.png&quot; /&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://spatialreference.org/ref/sr-org/6864/&quot;&gt;EPSG:3857&lt;/a&gt; is the most common CRS for online maps and uses Spherical Mercator projections. This is used by almost all free and commercial tile providers. See &lt;a href=&quot;http://leafletjs.com/reference.html#icrs&quot;&gt;Leaflet ICRS for more info&lt;/a&gt;. We&#39;re safe with just using our &lt;a href=&quot;http://spatialreference.org/ref/epsg/4269/&quot;&gt;EPSG:4269&lt;/a&gt; for this exercise (it&#39;s what the Census provided).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://spatialreference.org/ref/sr-org/6864/&quot;&gt;EPSG:3857&lt;/a&gt; is the most common CRS for online maps and uses Spherical Mercator projections. This is used by almost all free and commercial tile providers. See &lt;a href=&quot;http://leafletjs.com/reference.html#icrs&quot;&gt;Leaflet ICRS for more info&lt;/a&gt;. We're safe with just using our &lt;a href=&quot;http://spatialreference.org/ref/epsg/4269/&quot;&gt;EPSG:4269&lt;/a&gt; for this exercise (it's what the Census provided).&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Load US States shapefile into QGIS (cb_2013_us_state_500k.shp)&lt;/li&gt;
@@ -2688,25 +2688,25 @@ writeRaster&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;newR&lt;span class=&quo
   &lt;li&gt;Rename us_states.geojson to us_states.js&lt;/li&gt;
   &lt;li&gt;Open us_states.js in a text editor (not Microsoft Word!) and create a JavaScript variable to call our US States data. The following JavaScript &lt;em&gt;must&lt;/em&gt; be entered correctly, one small error and you will not be loading a layer into Leaflet:&lt;br /&gt;
     &lt;ol&gt;
-      &lt;li&gt;Before creating the us_states variable, I&#39;ll explain in simple terms. You don&#39;t want to dump 25MB of GeoJSON code into your single-page web map document. We&#39;re going to reference an external source to call the GeoJSON code- the web browser loads all referenced files from the HEAD. So creating a variable in the us_states.js file will load properly when we open our leaflet.html file.
+      &lt;li&gt;Before creating the us_states variable, I'll explain in simple terms. You don't want to dump 25MB of GeoJSON code into your single-page web map document. We're going to reference an external source to call the GeoJSON code- the web browser loads all referenced files from the HEAD. So creating a variable in the us_states.js file will load properly when we open our leaflet.html file.
       &lt;li&gt;Create us_states variable:&lt;br /&gt;&lt;br /&gt;
       &lt;div&gt;
         
           &lt;code&gt;
             &lt;span&gt;var us_states = [&lt;/span&gt;&lt;br /&gt;
             &lt;span&gt;// your geojson is here&lt;/span&gt;&lt;br /&gt;
-            &lt;span&gt;// don&#39;t actually write anything with the &#39;//&#39; line-prefix&lt;/span&gt;&lt;br /&gt;
-            &lt;span&gt;// it&#39;s a comment&lt;/span&gt;&lt;br /&gt;
+            &lt;span&gt;// don't actually write anything with the '//' line-prefix&lt;/span&gt;&lt;br /&gt;
+            &lt;span&gt;// it's a comment&lt;/span&gt;&lt;br /&gt;
             &lt;span&gt;// unless you want to write comments, of course&lt;/span&gt;&lt;br /&gt;
             &lt;span&gt;];&lt;/span&gt;
           &lt;/code&gt;
         
       &lt;/div&gt;
-      &lt;p&gt;The GeoJSON code is within &quot;features&quot;. Be sure the top of your us_states.js looks just like the code below. We&#39;ve just added the code highlighted in green:&lt;/p&gt;
+      &lt;p&gt;The GeoJSON code is within &quot;features&quot;. Be sure the top of your us_states.js looks just like the code below. We've just added the code highlighted in green:&lt;/p&gt;
       &lt;img src=&quot;/bootcamp/assets/images/leaflet/var-us-states.png&quot; /&gt;&lt;br /&gt;
       &lt;img src=&quot;/bootcamp/assets/images/leaflet/var-us-states-2.png&quot; /&gt;
       &lt;/li&gt;
-      &lt;li&gt;So by this step, you should have a file named us_states.js with a us_states variable, and full of sptail data in GeoJSON format, that&#39;s stored in your working director.&lt;/li&gt;
+      &lt;li&gt;So by this step, you should have a file named us_states.js with a us_states variable, and full of sptail data in GeoJSON format, that's stored in your working director.&lt;/li&gt;
       &lt;/li&gt;
     &lt;/ol&gt;
     &lt;/li&gt;
@@ -2718,7 +2718,7 @@ HTML documents provde the content and resources to your web browser to indicate 
 
 &lt;ol&gt;
   &lt;li&gt;Open text editor (not Microsoft Word!)&lt;/li&gt;
-  &lt;li&gt;Copy and paste HTML skeleton. It&#39;s made up of the basic HTML tags. HTML elements are explained below:&lt;br /&gt;
+  &lt;li&gt;Copy and paste HTML skeleton. It's made up of the basic HTML tags. HTML elements are explained below:&lt;br /&gt;
 &lt;div&gt;
 &lt;code&gt;
 &lt;span&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
@@ -2738,7 +2738,7 @@ HTML documents provde the content and resources to your web browser to indicate 
 &lt;/code&gt;
 &lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;!DOCTYPE indicates to the browser of the document type. In this case, it&#39;s an HTML document.&lt;/li&gt;
+&lt;li&gt;!DOCTYPE indicates to the browser of the document type. In this case, it's an HTML document.&lt;/li&gt;
 &lt;li&gt;HTML contains all elements and represents the root.&lt;/li&gt;
 &lt;li&gt;HEAD provides metadata to the browser.&lt;/li&gt;
 &lt;li&gt;SCRIPT is used to import executable scripts from a remote server (typical situation) or you can define script statements within the document.&lt;/li&gt;
@@ -2751,11 +2751,11 @@ HTML documents provde the content and resources to your web browser to indicate 
 
 &lt;h3&gt;4. Create Leaflet map&lt;/h3&gt;
 
-This next section should be painless. We&#39;ll be copying and pasting the code, but each item will still be explained so you&#39;ll know what to do the next time you want to develop a Leaflet web map. We&#39;ll be copying and pasting in blocks of code, by element sections:
+This next section should be painless. We'll be copying and pasting the code, but each item will still be explained so you'll know what to do the next time you want to develop a Leaflet web map. We'll be copying and pasting in blocks of code, by element sections:
 
 
 &lt;ol&gt;
-  &lt;li&gt;Prepare the HEAD. Below, there are two external files being called to, leaflet.css and leaflet.js. These provide the functionality of the map and styling. There&#39;s a STYLE tag that allow us to define the divider height and width so the map may be visible. Copy and paste the following code between your HEAD tags:&lt;br /&gt;&lt;br /&gt;
+  &lt;li&gt;Prepare the HEAD. Below, there are two external files being called to, leaflet.css and leaflet.js. These provide the functionality of the map and styling. There's a STYLE tag that allow us to define the divider height and width so the map may be visible. Copy and paste the following code between your HEAD tags:&lt;br /&gt;&lt;br /&gt;
   &lt;div&gt;
     
       &lt;code&gt;
@@ -2768,7 +2768,7 @@ This next section should be painless. We&#39;ll be copying and pasting the code,
       &lt;/code&gt;
     
   &lt;/div&gt;
-  &lt;li&gt;Now for the hard part. The ID of the DIV below is equal to &#39;map&#39;, once we add our JavaScript you&#39;ll notice where &#39;map&#39; is defined. Basically, we&#39;re using the DIV as a place to put our map. Copy and paste the following code between the BODY tags:&lt;br /&gt;&lt;br /&gt;
+  &lt;li&gt;Now for the hard part. The ID of the DIV below is equal to 'map', once we add our JavaScript you'll notice where 'map' is defined. Basically, we're using the DIV as a place to put our map. Copy and paste the following code between the BODY tags:&lt;br /&gt;&lt;br /&gt;
   &lt;div&gt;
      
        &lt;code&gt;
@@ -2777,17 +2777,17 @@ This next section should be painless. We&#39;ll be copying and pasting the code,
      
    &lt;/div&gt;     
   &lt;/li&gt;
-  &lt;li&gt;Add JavaScript to make the map function properly. We define &#39;map&#39; with a center point and a zoom level. The variale grayScale is set to our basemap, which is added to the map with &#39;addTo.()&#39;. Copy and paste the following code below the map DIV, between the BODY tags:&lt;br /&gt;&lt;br /&gt;
+  &lt;li&gt;Add JavaScript to make the map function properly. We define 'map' with a center point and a zoom level. The variale grayScale is set to our basemap, which is added to the map with 'addTo.()'. Copy and paste the following code below the map DIV, between the BODY tags:&lt;br /&gt;&lt;br /&gt;
   &lt;div&gt;
     
       &lt;code&gt;
         &lt;span&gt;&amp;lt;script&amp;gt;&lt;/span&gt;&lt;br /&gt;
-        &lt;span&gt;var map = L.map(&#39;map&#39;).setView([47,-100], 3);&lt;/span&gt;&lt;br /&gt;
-        &lt;span&gt;var grayScale = L.tileLayer(&#39;https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png&#39;, {
-      attribution: &#39;Map data copywright &amp;lt;a href=&quot;http://openstreetmap.org&quot;&amp;gt;OpenStreetMap&amp;lt;/a&amp;gt; contributors, &#39; +
-        &#39;&amp;lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&amp;gt;CC-BY-SA&amp;lt;/a&amp;gt;, &#39; +
-        &#39;Imagery copywright &amp;lt;a href=&quot;http://mapbox.com&quot;&amp;gt;Mapbox&amp;lt;/a&#39;,
-      id: &#39;examples.map-20v6611k&#39;
+        &lt;span&gt;var map = L.map('map').setView([47,-100], 3);&lt;/span&gt;&lt;br /&gt;
+        &lt;span&gt;var grayScale = L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+      attribution: 'Map data copywright &amp;lt;a href=&quot;http://openstreetmap.org&quot;&amp;gt;OpenStreetMap&amp;lt;/a&amp;gt; contributors, ' +
+        '&amp;lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&amp;gt;CC-BY-SA&amp;lt;/a&amp;gt;, ' +
+        'Imagery copywright &amp;lt;a href=&quot;http://mapbox.com&quot;&amp;gt;Mapbox&amp;lt;/a',
+      id: 'examples.map-20v6611k'
     });
 &lt;/span&gt;&lt;br /&gt;
         &lt;span&gt;grayScale.addTo(map);&lt;/span&gt;&lt;br /&gt; 
@@ -2796,19 +2796,19 @@ This next section should be painless. We&#39;ll be copying and pasting the code,
     
   &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Save your leaflet.html document now. Before moving on, test it out by Right-click and open in a web browser. Your view should be the same as what&#39;s displayed below. If you&#39;ve made one small mistake then the script won&#39;t run and you won&#39;t have a map. &lt;a href=&quot;#bottom&quot;&gt;See this reference below&lt;/a&gt; if you run into any troubles.&lt;br /&gt;&lt;br /&gt;
+  &lt;li&gt;Save your leaflet.html document now. Before moving on, test it out by Right-click and open in a web browser. Your view should be the same as what's displayed below. If you've made one small mistake then the script won't run and you won't have a map. &lt;a href=&quot;#bottom&quot;&gt;See this reference below&lt;/a&gt; if you run into any troubles.&lt;br /&gt;&lt;br /&gt;
 
 &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
 
-var map = L.map(&#39;map&#39;).setView([47,-100],3);
+var map = L.map('map').setView([47,-100],3);
 
-var grayScale = L.tileLayer(&#39;https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png&#39;, {
-      attribution: &#39;Map data &amp;copy; &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt; contributors, &#39; +
-        &#39;&lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&gt;CC-BY-SA&lt;/a&gt;, &#39; +
-        &#39;Imagery &amp;copy; &lt;a href=&quot;http://mapbox.com&quot;&gt;Mapbox&lt;/a&gt;&#39;,
-      id: &#39;examples.map-20v6611k&#39;
+var grayScale = L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+      attribution: 'Map data &amp;copy; &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt; contributors, ' +
+        '&lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&gt;CC-BY-SA&lt;/a&gt;, ' +
+        'Imagery &amp;copy; &lt;a href=&quot;http://mapbox.com&quot;&gt;Mapbox&lt;/a&gt;',
+      id: 'examples.map-20v6611k'
     });
 
 grayScale.addTo(map);
@@ -2822,11 +2822,11 @@ grayScale.addTo(map);
 
 &lt;h3&gt;5. Add layer to Leafet map&lt;/h3&gt;
 
-&lt;p&gt;There are a few methods to serving spatial data. The method we&#39;re using is the most simple, least painful, and easiest method of them all. An ideal method is utelizing a Web Feature Service such as GeoServer but that&#39;s deep into the GIS programming world, and requires hours (maybe days) to configure before you can configure some more. But that&#39;s neither here nor there..&lt;/p&gt;
+&lt;p&gt;There are a few methods to serving spatial data. The method we're using is the most simple, least painful, and easiest method of them all. An ideal method is utelizing a Web Feature Service such as GeoServer but that's deep into the GIS programming world, and requires hours (maybe days) to configure before you can configure some more. But that's neither here nor there..&lt;/p&gt;
 
-&lt;p&gt;Now that we know we&#39;re not going to configure GeoServer, we can go ahaed and serve our data locally by simply calling our us_states.js script containing our GeoJSON data format that we converted from a shapefile. Serving data locally means that we cannot share our data through the internet. One does not simply serve spatial data on the web..&lt;/p&gt;
+&lt;p&gt;Now that we know we're not going to configure GeoServer, we can go ahaed and serve our data locally by simply calling our us_states.js script containing our GeoJSON data format that we converted from a shapefile. Serving data locally means that we cannot share our data through the internet. One does not simply serve spatial data on the web..&lt;/p&gt;
 
-&lt;p&gt;We&#39;re going to continue our trusty copy-and-paste method to add our US States layer.&lt;/p&gt;
+&lt;p&gt;We're going to continue our trusty copy-and-paste method to add our US States layer.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Call to the us_states.js script. The following code depends on the us_states.js file to be in the &lt;em&gt;same&lt;/em&gt; folder as your leaflet.html. Copy and paste within the HEAD tag:&lt;br /&gt;
@@ -2872,7 +2872,7 @@ grayScale.addTo(map);
 &lt;h4&gt;Guidance&lt;/h4&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Before exporting tracts-values-units.shp into .geojson, calculate a new field named &#39;Values&#39; that is equal to TotalValues. However, it needs to be calculated into a text field. Leaflet wasn&#39;t recognizing TotalValue as a numerical field (JavaScript didn&#39;t recognize the child node..).&lt;/li&gt;
+&lt;li&gt;Before exporting tracts-values-units.shp into .geojson, calculate a new field named 'Values' that is equal to TotalValues. However, it needs to be calculated into a text field. Leaflet wasn't recognizing TotalValue as a numerical field (JavaScript didn't recognize the child node..).&lt;/li&gt;
 &lt;li&gt;Export tracts-values-units.shp to .geojson, name this file wa_tracts.geojson. Then change file extension to .js (wa_tracts.js)&lt;/li&gt;
 &lt;li&gt;Open your wa_tracts and make the entire GeoJSON a variable of wa_tracts:&lt;br /&gt;
 &lt;div&gt;&lt;code&gt;
@@ -2904,13 +2904,13 @@ grayScale.addTo(map);
 &lt;li&gt;Be sure you reference the wa_tracts.js in the SCRIPT tag within HEAD:&lt;br /&gt;
 &lt;div&gt;&lt;code&gt;&lt;span&gt;&amp;lt;script src=&quot;wa_tracts.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Define your map with center and zoom level within SCRIPT within BODY:&lt;br /&gt;
-&lt;div&gt;&lt;code&gt;var map = L.map(&#39;map&#39;).setView([47.493,-120.563], 7);&lt;/code&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;div&gt;&lt;code&gt;var map = L.map('map').setView([47.493,-120.563], 7);&lt;/code&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Add a basemap within SCRIPT within BODY:&lt;br /&gt;
-&lt;div&gt;&lt;code&gt;&lt;span&gt;var grayScale = L.tileLayer(&#39;https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png&#39;, {
-attribution: &#39;Map data copywright &amp;lt;a href=&quot;http://openstreetmap.org&quot;&amp;gt;OpenStreetMap&amp;lt;/a&amp;gt; contributors, &#39; +
-&#39;&amp;lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&amp;gt;CC-BY-SA&amp;lt;/a&amp;gt;, &#39; +
-&#39;Imagery copywright &amp;lt;a href=&quot;http://mapbox.com&quot;&amp;gt;Mapbox&amp;lt;/a&#39;,
-d: &#39;examples.map-20v6611k&#39;
+&lt;div&gt;&lt;code&gt;&lt;span&gt;var grayScale = L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+attribution: 'Map data copywright &amp;lt;a href=&quot;http://openstreetmap.org&quot;&amp;gt;OpenStreetMap&amp;lt;/a&amp;gt; contributors, ' +
+'&amp;lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&amp;gt;CC-BY-SA&amp;lt;/a&amp;gt;, ' +
+'Imagery copywright &amp;lt;a href=&quot;http://mapbox.com&quot;&amp;gt;Mapbox&amp;lt;/a',
+d: 'examples.map-20v6611k'
 });
 &lt;/span&gt;&lt;br /&gt;
 &lt;span&gt;grayScale.addTo(map);&lt;/span&gt;&lt;br /&gt; 
@@ -2919,28 +2919,28 @@ d: &#39;examples.map-20v6611k&#39;
 &lt;div&gt;
 &lt;code&gt;
 &lt;span&gt;function getColor(d) {&lt;/span&gt;&lt;br /&gt;
-&lt;span&gt;return d &amp;gt; 3009765000  ? &#39;#BD0026&#39; :&lt;/span&gt;&lt;br /&gt;
-&lt;span&gt;       d &amp;gt; 849985200  ? &#39;#E31A1C&#39; :&lt;/span&gt;&lt;br /&gt;
-&lt;span&gt;       d &amp;gt; 612002600  ? &#39;#FC4E2A&#39; :&lt;/span&gt;&lt;br /&gt;
-&lt;span&gt;       d &amp;gt; 483352000   ? &#39;#FD8D3C&#39; :&lt;/span&gt;&lt;br /&gt;
-&lt;span&gt;       d &amp;gt; 378603000  ? &#39;#FEB24C&#39; :&lt;/span&gt;&lt;br /&gt;
-&lt;span&gt;       d &amp;gt; 259410650   ? &#39;#FED976&#39; :&lt;/span&gt;&lt;br /&gt;
-&lt;span&gt;                  &#39;#FFEDA0&#39;;&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;return d &amp;gt; 3009765000  ? '#BD0026' :&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;       d &amp;gt; 849985200  ? '#E31A1C' :&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;       d &amp;gt; 612002600  ? '#FC4E2A' :&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;       d &amp;gt; 483352000   ? '#FD8D3C' :&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;       d &amp;gt; 378603000  ? '#FEB24C' :&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;       d &amp;gt; 259410650   ? '#FED976' :&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;                  '#FFEDA0';&lt;/span&gt;&lt;br /&gt;
 &lt;span&gt;};&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
 &lt;span&gt;function style(feature) {&lt;/span&gt;&lt;br /&gt;
 &lt;span&gt;return {&lt;/span&gt;&lt;br /&gt;
 &lt;span&gt;    fillColor: getColor(feature.properties.TotalValue),&lt;/span&gt;&lt;br /&gt;
 &lt;span&gt;    weight: 2,&lt;/span&gt;&lt;br /&gt;
 &lt;span&gt;    opacity: 1,&lt;/span&gt;&lt;br /&gt;
-&lt;span&gt;    color: &#39;white&#39;,&lt;/span&gt;&lt;br /&gt;
-&lt;span&gt;    dashArray: &#39;3&#39;,&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    color: 'white',&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;    dashArray: '3',&lt;/span&gt;&lt;br /&gt;
 &lt;span&gt;    fillOpacity: 0.7&lt;/span&gt;&lt;br /&gt;
 &lt;span&gt;};&lt;/span&gt;&lt;br /&gt;
 &lt;span&gt;};&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
-&lt;span&gt;// HINT: notice &#39;layer.bindPopup(feature.properties.Value);&#39;&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;// HINT: notice 'layer.bindPopup(feature.properties.Value);'&lt;/span&gt;&lt;br /&gt;
 &lt;span&gt;// this is the same field that we calculated earlier from TotalValue into a text field.&lt;/span&gt;&lt;br /&gt;
-&lt;span&gt;// you can change the field that&#39;s displayed by changing the word &#39;Value&#39; &lt;/span&gt;&lt;br /&gt;
-&lt;span&gt;// to the column header that you&#39;d like to display&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;// you can change the field that's displayed by changing the word 'Value' &lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;// to the column header that you'd like to display&lt;/span&gt;&lt;br /&gt;
 &lt;span&gt;// e.g. replacing Value with GEOID will display each tract GEOID&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
 &lt;span&gt;L.geoJson(wa_tracts, {&lt;/span&gt;&lt;br /&gt;
 &lt;span&gt;    style: style,&lt;/span&gt;&lt;br /&gt;
@@ -2981,12 +2981,12 @@ Full document from US States Steps 4 and 5:
 &lt;span&gt;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
 &lt;span&gt;    &amp;lt;div id=&quot;map&quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
 &lt;span&gt;    &amp;lt;script&amp;gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
-&lt;span&gt;      var map = L.map(&#39;map&#39;).setView([47,-100], 3);&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
-&lt;span&gt;      var grayScale = L.tileLayer(&#39;https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png&#39;, {&lt;br /&gt;
-attribution: &#39;Map data copywright &amp;lt;a href=&quot;http://openstreetmap.org&quot;&amp;gt;OpenStreetMap&amp;lt;/a&amp;gt; contributors, &#39; +&lt;br /&gt;
-&#39;&amp;lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&amp;gt;CC-BY-SA&amp;lt;/a&amp;gt;, &#39; +&lt;br /&gt;
-&#39;Imagery copywright &amp;lt;a href=&quot;http://mapbox.com&quot;&amp;gt;Mapbox&amp;lt;/a&#39;,&lt;br /&gt;
-id: &#39;examples.map-20v6611k&#39;&lt;br /&gt;
+&lt;span&gt;      var map = L.map('map').setView([47,-100], 3);&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span&gt;      var grayScale = L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {&lt;br /&gt;
+attribution: 'Map data copywright &amp;lt;a href=&quot;http://openstreetmap.org&quot;&amp;gt;OpenStreetMap&amp;lt;/a&amp;gt; contributors, ' +&lt;br /&gt;
+'&amp;lt;a href=&quot;http://creativecommons.org/licenses/by-sa/2.0/&quot;&amp;gt;CC-BY-SA&amp;lt;/a&amp;gt;, ' +&lt;br /&gt;
+'Imagery copywright &amp;lt;a href=&quot;http://mapbox.com&quot;&amp;gt;Mapbox&amp;lt;/a',&lt;br /&gt;
+id: 'examples.map-20v6611k'&lt;br /&gt;
 });&lt;br /&gt;
 &lt;/span&gt;&lt;br /&gt;
 &lt;span&gt;      grayScale.addTo(map);&lt;/span&gt;&lt;br /&gt;
@@ -3021,7 +3021,7 @@ id: &#39;examples.map-20v6611k&#39;&lt;br /&gt;
 &lt;p&gt;This spatial dependence required the study of spatial effects and their influence on statistical studies.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Spatial econometrics deals with methodological concerns that follow from the explicit consideration of &lt;em&gt;spatial effects&lt;/em&gt;, such as spatial autocorrelation and spatial heterogeneity.[^3]&lt;/p&gt;
+  &lt;p&gt;Spatial econometrics deals with methodological concerns that follow from the explicit consideration of &lt;em&gt;spatial effects&lt;/em&gt;, such as spatial autocorrelation and spatial heterogeneity.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Spatial autocorrelation can be seen in clustering of values in a specific region, and the change of density in a larger extent.&lt;/p&gt;
@@ -3038,7 +3038,7 @@ id: &#39;examples.map-20v6611k&#39;&lt;br /&gt;
 
 &lt;p&gt;The R-Tree index was proposed by Antoine Guttman in 1984.&lt;/p&gt;
 
-&lt;p&gt;In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.[^2] The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features.&lt;/p&gt;
+&lt;p&gt;In order to handle spatial data efficiently, as required in computer aided design and geo-data applications, a database system needs an index mechanism that will help it retrieve data items quickly according to their spatial locations. An index based on objects’ spatial location is desirable, but classical one-dimensional database indexing structures are not appropriate to multi-dimensional spatial searching.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; The R-Tree works by creating a series of heirarchical bounding boxes around the group of spatial features.&lt;/p&gt;
 
 &lt;p&gt;&lt;a title=&quot;By Skinkie, w:en:Radim Baca (Own work) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AR-tree.svg&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;R-tree&quot; src=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/R-tree.svg/512px-R-tree.svg.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -3050,6 +3050,16 @@ id: &#39;examples.map-20v6611k&#39;&lt;br /&gt;
 
 &lt;hr /&gt;
 
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;Luc Anselin, Spatial Econometrics, 1999 &lt;a href=&quot;https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf&quot;&gt;https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Guttman, A. (1984). “R-Trees: A Dynamic Index Structure for Spatial Searching”. &lt;em&gt;Proceedings of the 1984 ACM SIGMOD international conference of Management of data - SIGMOD ‘84.&lt;/em&gt; p. 47 doi:10.1145/602259.602266. ISBN 0897911288. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
                 <link>http://104.237.129.71/bootcamp/more%20reading/spatial-issues</link>
                 <guid>http://104.237.129.71/bootcamp/more%20reading/spatial-issues</guid>
@@ -3072,9 +3082,9 @@ id: &#39;examples.map-20v6611k&#39;&lt;br /&gt;
         </item>
 
         <item>
-                <title>Fundamentals</title>
+                <title>Colors & Fonts</title>
                 <description>
-&lt;h2 id=&quot;cartography-fundamentals&quot;&gt;Cartography fundamentals&lt;/h2&gt;
+&lt;h2 id=&quot;color-theory&quot;&gt;Color Theory&lt;/h2&gt;
 
 &lt;p&gt;Map-making has historically  been both a science and an art. For visualizing scientific data on
 maps, we now have new technologies that make it easy to create beautiful data visualizations.&lt;/p&gt;
@@ -3090,7 +3100,7 @@ design is rooted in simplicity. The main focus should be the information.&lt;/p&
 
 &lt;h2 id=&quot;elements-of-effective-cartography&quot;&gt;Elements of effective cartography&lt;/h2&gt;
 
-&lt;p&gt;To help your audience understand what you’re trying to convey,
+&lt;p&gt;To help your audience understand what you&amp;#8217;re trying to convey,
 the following elements can be included with your map.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -3123,9 +3133,9 @@ light blue to dark blue, for example. This scheme is ideal for a choropleth map.
 
 &lt;p&gt;ColorBrewer also provides color schemes for sequential data with related
 hues that vary in lightness. These are harder to create on your own, since
-you don’t want to use hues that are very different from one another.&lt;/p&gt;
+you don&amp;#8217;t want to use hues that are very different from one another.&lt;/p&gt;
 
-&lt;p&gt;Don’t hesitate to try a simple greyscale scheme ranging from white to black.
+&lt;p&gt;Don&amp;#8217;t hesitate to try a simple greyscale scheme ranging from white to black.
 Simple is often better, after all.&lt;/p&gt;
 
 &lt;p&gt;Diverging Data
@@ -3137,7 +3147,7 @@ of your two colors.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/colortype/diverge.png&quot; alt=&quot;Diverging&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Qualitative Data
-For this type of data, you don’t want your hues to be related to each other,
+For this type of data, you don&amp;#8217;t want your hues to be related to each other,
 because each color is just a category, without representing any order
 or degree in your data.&lt;/p&gt;
 
@@ -3174,24 +3184,13 @@ Traditionally, maps with many labels use a pair of typefaces - one serif and one
 &lt;p&gt;Try exploring combinations on &lt;a href=&quot;http://www.typebrewer.org/&quot;&gt;TypeBrewer&lt;/a&gt;. Note: this site is not
 related to ColorBrewer.&lt;/p&gt;
 
-&lt;h2 id=&quot;mapbox-suite&quot;&gt;Mapbox Suite&lt;/h2&gt;
+&lt;h1 id=&quot;styling-data&quot;&gt;Styling Data&lt;/h1&gt;
 
-&lt;p&gt;MapBox created the open source tool &lt;a href=&quot;https://www.mapbox.com/tilemill/&quot;&gt;TileMill&lt;/a&gt;, and has since also released
-&lt;a href=&quot;https://www.mapbox.com/design/&quot;&gt;MapBox Studio&lt;/a&gt; which has some more design features for creating map styles.
-However, TileMill has what we need, so we focus on it for now.&lt;/p&gt;
-
-&lt;h1 id=&quot;tilemill&quot;&gt;TileMill&lt;/h1&gt;
-
-&lt;p&gt;What made TileMill popular was the ability to turn maps from many formats into tiles. The map is like one big picture, which is then split up into squares.
-This speeds up the process of displaying maps on the web.&lt;/p&gt;
-
-&lt;h1 id=&quot;cartocss&quot;&gt;CartoCSS&lt;/h1&gt;
-
-&lt;p&gt;So what is CSS? It stands for Cascading Style Sheets. The key part of that is ‘Style’.
+&lt;p&gt;So what is CSS? It stands for Cascading Style Sheets. The key part of that is &amp;#8216;Style&amp;#8217;.
 CSS is used to make websites look nice - the css file governs colors, sizes, and fonts.&lt;/p&gt;
 
 &lt;p&gt;CartoCSS has the same syntax as regular CSS. First you select the element that you will
-be applying styles to. For example, you could choose ‘Map’ for the entire map. Within
+be applying styles to. For example, you could choose &amp;#8216;Map&amp;#8217; for the entire map. Within
 curly brackets, you put all your properties.&lt;/p&gt;
 
 &lt;p&gt;One the left you put the name of the property you want to change (for example,
@@ -3206,52 +3205,7 @@ You should end your lines with a semicolon.&lt;/p&gt;
 
 &lt;p&gt;On the right of your new map project you can see a space with some css code already
 there. This is what goes in your style file when you save your project. To see
-the changes that you make here, remember to click ‘Save’ at the top right.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Map Features
-When we are working with vector data, we refer to features on the map, which could be
-things like cities, rivers, and countries. In general, these vector features will always
-be either points, lines, or polygons.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Layers in Tilemill
-Every time you add more data to your map, you can put it in its own layer.
-When we import data into Tilemill, it automatically becomes a new layer.
-We give every layer a class name, and some have IDs, too. IDs must be unique to each layer,
-but a class name can be used more than once.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;To choose a layer based on a class, we start with a period, then the class name.
-For example:
-    .cities
-      {
-        marker-fill: blue;
-      }
-To choose a layer based on an ID, we start with a pound symbol, then the ID name.
-For example:
-    #Barcelona
-      {
-        marker-fill: red;
-      }&lt;/p&gt;
-
-&lt;p&gt;If we were dealing with lines we would use the properties that start with line- ,
- while for points it is marker- .
-For more properties and examples reference the
-&lt;a href=&quot;https://www.mapbox.com/tilemill/docs/manual/carto/&quot;&gt;CartoCSS documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;qgis-cartography&quot;&gt;QGIS Cartography&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;basics of graphic design and exporting maps - print or web-based&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+the changes that you make here, remember to click &amp;#8216;Save&amp;#8217; at the top right.&lt;/p&gt;
 
 &lt;p&gt;References&lt;/p&gt;
 
@@ -3305,8 +3259,8 @@ For more properties and examples reference the
   &lt;li&gt;Style geo_coded with qml-style file:
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Right-click geo_coded &amp;gt; Properties &amp;gt; Style&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Load Style… (button at bottom) &amp;gt; Navigate to rock-strength.qml&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;QGIS does not load actual minimum and maximum values by default. This enables faster layer rendering. You’ll want to load actual min/max values to visualize the correct data. To load actual min/max values:&lt;br /&gt;&lt;em&gt;Load min/max values: Min/max&lt;br /&gt;Accuracy: Actual (slower)&lt;br /&gt;Click Load&lt;br /&gt;Click Apply to save changes&lt;/em&gt;&lt;br /&gt;
+      &lt;li&gt;&lt;em&gt;Load Style&amp;#8230; (button at bottom) &amp;gt; Navigate to rock-strength.qml&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;QGIS does not load actual minimum and maximum values by default. This enables faster layer rendering. You&amp;#8217;ll want to load actual min/max values to visualize the correct data. To load actual min/max values:&lt;br /&gt;&lt;em&gt;Load min/max values: Min/max&lt;br /&gt;Accuracy: Actual (slower)&lt;br /&gt;Click Load&lt;br /&gt;Click Apply to save changes&lt;/em&gt;&lt;br /&gt;
  &lt;img src=&quot;/bootcamp/assets/images/carto/carto-4.png&quot; alt=&quot;Spatial Data Carpentry: Cartography in QGIS&quot; /&gt;&lt;/li&gt;
       &lt;li&gt;Increase transparency:&lt;br /&gt;&lt;em&gt;From within layer Properties &amp;gt; Transparency &amp;gt; Global Transparency &amp;gt; 50%&lt;br /&gt;Click Apply, OK to save changes and close Properties&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;The product just created visualizes rock strength within Washington state with enhanced effects using hillshade and transparency.
@@ -3438,7 +3392,7 @@ For more properties and examples reference the
 
 &lt;h2 id=&quot;topographic&quot;&gt;Topographic&lt;/h2&gt;
 
-&lt;p&gt;Topographic maps emphasize physical features in an area. Contour lines help visualize elevations- lines connecting points of equal elevation above the mean sea level. The United States Geological Survey is best known for their US topographic quadrangle maps. &lt;a href=&quot;http://nationalmap.gov/ustopo/&quot;&gt;You can download them here for free&lt;/a&gt;. Below is an example of a historic 1x1 degree (60 arcminutes) quadrangle drawn by hand, you’ll have to click to enlarge it. Source &lt;a href=&quot;http://nationalmap.gov/ustopo/UST_slideshow2/Black%20Canyon%20City_AZ/AZ_Prescott_315580_1887_250000.html&quot;&gt;USGS&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Topographic maps emphasize physical features in an area. Contour lines help visualize elevations- lines connecting points of equal elevation above the mean sea level. The United States Geological Survey is best known for their US topographic quadrangle maps. &lt;a href=&quot;http://nationalmap.gov/ustopo/&quot;&gt;You can download them here for free&lt;/a&gt;. Below is an example of a historic 1x1 degree (60 arcminutes) quadrangle drawn by hand, you&amp;#8217;ll have to click to enlarge it. Source &lt;a href=&quot;http://nationalmap.gov/ustopo/UST_slideshow2/Black%20Canyon%20City_AZ/AZ_Prescott_315580_1887_250000.html&quot;&gt;USGS&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://nationalmap.gov/ustopo/UST_slideshow2/Black%20Canyon%20City_AZ/AZ_Prescott_315580_1887_250000.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/usgs-prescott-quadrangle.jpg&quot; alt=&quot;Spatial Data Carpentry: USGS Topo topographic quadrangle map&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -3446,7 +3400,7 @@ For more properties and examples reference the
 
 &lt;h2 id=&quot;navigation&quot;&gt;Navigation&lt;/h2&gt;
 
-&lt;p&gt;Navigational maps are used for navigating. The roads in Google Maps help you get from once place to the next. Sailors need to know shipping routes and ports. Or the hiking route you’ve just found from researching online. Below are some examples of navigational maps.&lt;/p&gt;
+&lt;p&gt;Navigational maps are used for navigating. The roads in Google Maps help you get from once place to the next. Sailors need to know shipping routes and ports. Or the hiking route you&amp;#8217;ve just found from researching online. Below are some examples of navigational maps.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -3465,9 +3419,9 @@ For more properties and examples reference the
                 <description>
 &lt;h2 id=&quot;understanding-web-mapping&quot;&gt;Understanding web mapping&lt;/h2&gt;
 
-&lt;p&gt;A map on the Internet shouldn’t be a static picture. There is potential for interaction, animation, and 3D! Even better, the Internet can allow us to share our maps and spatial data more effectively.&lt;/p&gt;
+&lt;p&gt;A map on the Internet shouldn&amp;#8217;t be a static picture. There is potential for interaction, animation, and 3D! Even better, the Internet can allow us to share our maps and spatial data more effectively.&lt;/p&gt;
 
-&lt;p&gt;We’ve gone through the steps of putting our data on a map. We have styled it and
+&lt;p&gt;We&amp;#8217;ve gone through the steps of putting our data on a map. We have styled it and
 created a legend. We split our map into tiles to make it easier and faster to
 display online.&lt;/p&gt;
 
@@ -3480,7 +3434,7 @@ library or tool that facilitates the use of the Javascript language.&lt;/p&gt;
 
 &lt;h3 id=&quot;leafletjs&quot;&gt;Leaflet.js&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://leafletjs.com/&quot;&gt;Leaflet.js&lt;/a&gt; is a light-weight open-source JavaScript library. This is the ‘easiest’ framework to use for developing web maps.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://leafletjs.com/&quot;&gt;Leaflet.js&lt;/a&gt; is a light-weight open-source JavaScript library. This is the &amp;#8216;easiest&amp;#8217; framework to use for developing web maps.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Leaflet is a modern open-source JavaScript library for mobile-friendly interactive maps. It is developed by Vladimir Agafonkin with a team of dedicated contributors. Weighing just about 33 KB of JS, it has all the features most developers ever need for online maps.&lt;/p&gt;
@@ -3528,7 +3482,7 @@ library or tool that facilitates the use of the Javascript language.&lt;/p&gt;
 
 &lt;h2 id=&quot;tile-map-service-tms&quot;&gt;Tile Map Service (TMS)&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://leaflet-extras.github.io/leaflet-providers/preview/&quot;&gt;Here’s a list of tile map service (TMS) providers&lt;/a&gt;. Nearly all TMS providers are free for &lt;em&gt;personal use&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://leaflet-extras.github.io/leaflet-providers/preview/&quot;&gt;Here&amp;#8217;s a list of tile map service (TMS) providers&lt;/a&gt;. Nearly all TMS providers are free for &lt;em&gt;personal use&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Mapbox Studio is ideal for creating custom basemaps.&lt;/p&gt;
 
@@ -3542,7 +3496,7 @@ library or tool that facilitates the use of the Javascript language.&lt;/p&gt;
 
 &lt;h2 id=&quot;leafletjs-basic-tutorials&quot;&gt;Leaflet.js basic tutorials&lt;/h2&gt;
 
-&lt;p&gt;Read below for basic Leaflet.js tutorials. Most of the code can be ‘easily’ figured out by reading the parameters already set. Basic knowledge of HTML and CSS are a plus, and basics of JavaScript will help you develop interactive maps.&lt;/p&gt;
+&lt;p&gt;Read below for basic Leaflet.js tutorials. Most of the code can be &amp;#8216;easily&amp;#8217; figured out by reading the parameters already set. Basic knowledge of HTML and CSS are a plus, and basics of JavaScript will help you develop interactive maps.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://leafletjs.com/reference.html&quot;&gt;View the Leaflet.js API here&lt;/a&gt;&lt;/p&gt;
 
@@ -3553,7 +3507,7 @@ library or tool that facilitates the use of the Javascript language.&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Open QGIS and install qgis2leaf plugin:
     &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Plugins &amp;gt; Manage and Install PLugins &amp;gt; Search ‘qgis2leaf’&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Plugins &amp;gt; Manage and Install PLugins &amp;gt; Search &amp;#8216;qgis2leaf&amp;#8217;&lt;/em&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Add vector layer.
@@ -3621,8 +3575,8 @@ library or tool that facilitates the use of the Javascript language.&lt;/p&gt;
   &lt;li&gt;Style geo_coded with qml-style file:
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Right-click geo_coded &amp;gt; Properties &amp;gt; Style&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Load Style… (button at bottom) &amp;gt; Navigate to rock-strength.qml&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;QGIS does not load actual minimum and maximum values by default. This enables faster layer rendering. You’ll want to load actual min/max values to visualize the correct data. To load actual min/max values:&lt;br /&gt;&lt;em&gt;Load min/max values: Min/max&lt;br /&gt;Accuracy: Actual (slower)&lt;br /&gt;Click Load&lt;br /&gt;Click Apply to save changes&lt;/em&gt;&lt;br /&gt;
+      &lt;li&gt;&lt;em&gt;Load Style&amp;#8230; (button at bottom) &amp;gt; Navigate to rock-strength.qml&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;QGIS does not load actual minimum and maximum values by default. This enables faster layer rendering. You&amp;#8217;ll want to load actual min/max values to visualize the correct data. To load actual min/max values:&lt;br /&gt;&lt;em&gt;Load min/max values: Min/max&lt;br /&gt;Accuracy: Actual (slower)&lt;br /&gt;Click Load&lt;br /&gt;Click Apply to save changes&lt;/em&gt;&lt;br /&gt;
  &lt;img src=&quot;/bootcamp/assets/images/carto/carto-4.png&quot; alt=&quot;Spatial Data Carpentry: Show your Results in QGIS&quot; /&gt;&lt;/li&gt;
       &lt;li&gt;Increase transparency:&lt;br /&gt;&lt;em&gt;From within layer Properties &amp;gt; Transparency &amp;gt; Global Transparency &amp;gt; 50%&lt;br /&gt;Click Apply, OK to save changes and close Properties&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;The product just created visualizes rock strength within Washington state with enhanced effects using hillshade and transparency.
@@ -3754,7 +3708,7 @@ library or tool that facilitates the use of the Javascript language.&lt;/p&gt;
 
 &lt;h2 id=&quot;relational-operations&quot;&gt;Relational Operations&lt;/h2&gt;
 
-&lt;p&gt;Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth’s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Relational operators are a set of methods used to test for the existence of a specified toplogical spatial relationship between two geometric objects as they would be represented on a map. The basic approach to comparing towo geometric objects is to project the objects onto the 2D horizonal coordinate reference system representing the Earth&amp;#8217;s surface, and then make pair-wise test of the intersections between the interiors, boundaries and exteriors of the twp projections and to classify the map relationship between the two geometric objects based on the entries in the resulting 3 by 3 intersection matrix.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;table border=&quot;0&quot; align=&quot;center&quot;&gt;
   &lt;tr&gt;
@@ -4057,50 +4011,50 @@ library or tool that facilitates the use of the Javascript language.&lt;/p&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
+      &lt;th&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Slope&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3-5°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3-5&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5-10°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5-10&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10-15°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10-15&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15-20°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;15-20&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;20-30°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;20-30&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;30-40°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;30-40&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40°&lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40&amp;deg;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -4135,7 +4089,7 @@ library or tool that facilitates the use of the Javascript language.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Input Raster: &lt;em&gt;slope-washington&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;File containing reclass rules: &lt;em&gt;slope-rules.txt&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Output raster layer: &lt;em&gt;slope-reclass.tif&lt;/em&gt; (NOTE: select &lt;em&gt;Save to file…&lt;/em&gt; or else QGIS will not create a permanent output)&lt;br /&gt;
+  &lt;li&gt;Output raster layer: &lt;em&gt;slope-reclass.tif&lt;/em&gt; (NOTE: select &lt;em&gt;Save to file&amp;#8230;&lt;/em&gt; or else QGIS will not create a permanent output)&lt;br /&gt;
 &lt;img src=&quot;/bootcamp/assets/images/slope-reclass.png&quot; alt=&quot;slope-reclass&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -4200,54 +4154,54 @@ library or tool that facilitates the use of the Javascript language.&lt;/p&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
+      &lt;th&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/th&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Precipitation&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&amp;#160;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;5-10 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;10-15 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;15-30 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;30-45 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;45-60 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;60-75 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;75-90 in&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&amp;#160;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 90 in&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -4257,7 +4211,7 @@ library or tool that facilitates the use of the Javascript language.&lt;/p&gt;
 
 &lt;p&gt;Now that the output datasets have been created, we can work on making our results presentable.&lt;/p&gt;
 
-&lt;p&gt;Go to Cartography &amp;amp; Visualization…&lt;/p&gt;
+&lt;p&gt;Go to Cartography &amp;amp; Visualization&amp;#8230;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -4671,7 +4625,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
 &lt;h4 id=&quot;global-administrative-areas-gadmhttpwwwgadmorg&quot;&gt;&lt;a href=&quot;http://www.gadm.org&quot;&gt;Global Administrative Areas (GADM)&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.gadm.org/img/gadm2_adm1_low.png&quot; alt=&quot;GADMN database of Global Administrative Areas&quot;&gt;&lt;img src=&quot;http://www.gadm.org/img/gadm2_adm1_high.png&quot; width=&quot;250px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;“GADM is a spatial database of the location of the world’s administrative areas (or administrative boundaries) for use in GIS and similar software. Administrative areas in this database are countries and lower level subdivisions such as provinces,departmens bibhag, bundeslander,etc… GADM describes where these administrative areas are and for each area it provides some attributes, such as the name and variant names&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.”&lt;/p&gt;
+&lt;p&gt;&amp;#8220;GADM is a spatial database of the location of the world&amp;#8217;s administrative areas (or administrative boundaries) for use in GIS and similar software. Administrative areas in this database are countries and lower level subdivisions such as provinces,departmens bibhag, bundeslander,etc&amp;#8230; GADM describes where these administrative areas are and for each area it provides some attributes, such as the name and variant names&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&amp;#8221;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -4730,7 +4684,7 @@ Some elements to look at when evaluating the quality of a data product are:&lt;/
   &lt;li&gt;
     &lt;dl&gt;
       &lt;dt&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger.html&quot;&gt;Topologically Integrated Geographic Encoding and Referencing (TIGER) Products&lt;/a&gt;&lt;/dt&gt;
-      &lt;dd&gt;TIGER products are spatial extracts from the Census Bureau’s MAF/TIGER database containing features such as roads, railroads, rivers, as well as legal and statistical geographic areas. The Census Bureau offers (these products) in several file types&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.”&lt;/dd&gt;
+      &lt;dd&gt;TIGER products are spatial extracts from the Census Bureau&amp;#8217;s MAF/TIGER database containing features such as roads, railroads, rivers, as well as legal and statistical geographic areas. The Census Bureau offers (these products) in several file types&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&amp;#8221;&lt;/dd&gt;
     &lt;/dl&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -4756,9 +4710,9 @@ Select *United States* from the Country dropdown and set *Shapefile* as the file
 
 ![gadmUs](/bootcamp//assets/images/gadm-us.png)
 
-Click &#39;OK&#39; to enter the download screen.
+Click 'OK' to enter the download screen.
 
-On the next screen, click the blue &#39;download&#39; link to start the download.
+On the next screen, click the blue 'download' link to start the download.
 
 ![gadmDownload](/bootcamp//assets/images/gadm-download.png)
 
@@ -4767,7 +4721,7 @@ Select a workspace to save the USA_adm.zip dataset
 ![gadmSave](/bootcamp//assets/images/gadm-save.png)
 
 Unpack the zip archive using your choice of file archival software.&lt;br&gt;
-(Note: if you don&#39;t have any software to unzip archives, [7-zip](http://www.7-zip.org) is an easy to use free application)
+(Note: if you don't have any software to unzip archives, [7-zip](http://www.7-zip.org) is an easy to use free application)
 
 Once the archive has been unpacked, you can see the datasets which should include a pdf, a few .csv files and some .shp,.shx,.dbf and .prj files.
 
@@ -4852,7 +4806,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
 &lt;p class=&quot;screen-shot&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-1.png&quot; alt=&quot;Spatial Data Carpentry: Download Census data&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;In the &lt;em&gt;ADVANCED SEARCH&lt;/em&gt; window. Search - Use options on the left (topics, geographics, …) to narrow your search results.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;In the &lt;em&gt;ADVANCED SEARCH&lt;/em&gt; window. Search - Use options on the left (topics, geographics, &amp;#8230;) to narrow your search results.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p class=&quot;screen-shot&quot;&gt;&lt;img src=&quot;/bootcamp/assets/images/vector-census/vector-census-2.png&quot; alt=&quot;Spatial Data Carpentry: Download Census data&quot; /&gt;&lt;/p&gt;
@@ -4863,7 +4817,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
   &lt;li&gt;Add &lt;em&gt;Housing Units&lt;/em&gt; to query:&lt;br /&gt;
     &lt;ol&gt;
       &lt;li&gt;Click &lt;em&gt;Topics&lt;/em&gt; on the left-hand menu&lt;br /&gt;&lt;/li&gt;
-      &lt;li&gt;Select Topics to add to ‘Your Selections’&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Select Topics to add to &amp;#8216;Your Selections&amp;#8217;&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;Housing &amp;gt; Basic Count/Estimate &amp;gt; Click &lt;em&gt;Housing Units&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;Click &lt;em&gt;CLOSE&lt;/em&gt; (top right)&lt;br /&gt;&lt;/li&gt;
     &lt;/ol&gt;
@@ -4876,7 +4830,7 @@ If you are using Mac or Linux you can extract the files in the terminal with the
   &lt;li&gt;Add &lt;em&gt;Washington Census Tract&lt;/em&gt; to query:&lt;br /&gt;
     &lt;ol&gt;
       &lt;li&gt;Click &lt;em&gt;Geographies&lt;/em&gt; on left-hand menu&lt;br /&gt;&lt;/li&gt;
-      &lt;li&gt;Select a geographic type: &lt;em&gt;…. ….Census Tract -140&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;Select a geographic type: &lt;em&gt;&amp;#8230;. &amp;#8230;.Census Tract -140&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;Select a state: &lt;em&gt;Washington&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;Select one or more geographic areas: &lt;em&gt;All Census Tracts within Washington&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;Click &lt;em&gt;ADD TO YOUR SELECTIONS&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
@@ -4953,15 +4907,15 @@ If you did not clear your selections from the previous steps then continue on, e
 
 &lt;h3&gt;Unpack downloaded files&lt;/h3&gt;
 
-&lt;p&gt;If you haven&#39;t already downloaded your data, see &lt;b&gt;Download Census Housing Data&lt;/b&gt; and &lt;b&gt;Download TIGER Census Tracts&lt;/b&gt; above.&lt;/p&gt;
+&lt;p&gt;If you haven't already downloaded your data, see &lt;b&gt;Download Census Housing Data&lt;/b&gt; and &lt;b&gt;Download TIGER Census Tracts&lt;/b&gt; above.&lt;/p&gt;
 
-&lt;p&gt;If you haven&#39;t already moved your downloaded zip files from the above steps, move your zip files into your working directory.&lt;/p&gt;
+&lt;p&gt;If you haven't already moved your downloaded zip files from the above steps, move your zip files into your working directory.&lt;/p&gt;
 
 &lt;p&gt;Using an extraction application like 7-zip makes it easy to unzip these files.&lt;/p&gt;
 
 &lt;p&gt;Install 7-zip if necessary.&lt;/p&gt;
 
-&lt;p&gt;Right-click on zip file and &#39;Extract Here&#39;&lt;/p&gt;
+&lt;p&gt;Right-click on zip file and 'Extract Here'&lt;/p&gt;
 
 &lt;p&gt;Do this for all zip files.&lt;/p&gt;
 
@@ -4971,9 +4925,9 @@ If you did not clear your selections from the previous steps then continue on, e
 
 &lt;p&gt;Rename folder &lt;/p&gt;
 
-&lt;p&gt;Notice the files. Theres a text file with metadata on the given metric (Housing Units or Home Values). There&#39;s a README that explains what&#39;s inside of the zip file. There&#39;s a metadata CSV that explains what the column headings represent. And there&#39;s the data we need in CSV format with annotations.&lt;/p&gt;
+&lt;p&gt;Notice the files. Theres a text file with metadata on the given metric (Housing Units or Home Values). There's a README that explains what's inside of the zip file. There's a metadata CSV that explains what the column headings represent. And there's the data we need in CSV format with annotations.&lt;/p&gt;
 
-&lt;p&gt;Now open the Census tracts TIGER data folder. The XMl file contain the metadata about the shapefile. Double-clicking the XML files should open in a web browser and you should be able to read the information. The shapefile data is stored in the .dbf, .prj, .shp, and .shx. You can view the projection by opening the .prj in a text editor. Don&#39;t bother trying to open the other files in a text editor.&lt;/p&gt;
+&lt;p&gt;Now open the Census tracts TIGER data folder. The XMl file contain the metadata about the shapefile. Double-clicking the XML files should open in a web browser and you should be able to read the information. The shapefile data is stored in the .dbf, .prj, .shp, and .shx. You can view the projection by opening the .prj in a text editor. Don't bother trying to open the other files in a text editor.&lt;/p&gt;
 
 &lt;img src=&quot;/bootcamp//assets/images/vector-tiger/vector-unpack-files-2.png&quot; class=&quot;screen-shot&quot; /&gt;
 
@@ -5018,9 +4972,9 @@ If you did not clear your selections from the previous steps then continue on, e
 
 &lt;p&gt;&lt;img alt=&quot;gadmUs&quot; src=&quot;/bootcamp//assets/images/gadm-us.png&quot; class=&quot;screen-shot&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Click ‘OK’ to enter the download screen.&lt;/p&gt;
+&lt;p&gt;Click &amp;#8216;OK&amp;#8217; to enter the download screen.&lt;/p&gt;
 
-&lt;p&gt;On the next screen, click the blue ‘download’ link to start the download.&lt;/p&gt;
+&lt;p&gt;On the next screen, click the blue &amp;#8216;download&amp;#8217; link to start the download.&lt;/p&gt;
 
 &lt;p&gt;&lt;img alt=&quot;gadmDownload&quot; src=&quot;/bootcamp//assets/images/gadm-download.png&quot; class=&quot;screen-shot&quot; /&gt;&lt;/p&gt;
 
@@ -5029,7 +4983,7 @@ If you did not clear your selections from the previous steps then continue on, e
 &lt;p&gt;&lt;img alt=&quot;gadmSave&quot; src=&quot;/bootcamp//assets/images/gadm-save.png&quot; class=&quot;screen-shot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Unpack the zip archive using your choice of file archival software.&lt;br /&gt;
-(Note: if you don’t have any software to unzip archives, &lt;a href=&quot;http://www.7-zip.org&quot;&gt;7-zip&lt;/a&gt; is an easy to use free application)&lt;/p&gt;
+(Note: if you don&amp;#8217;t have any software to unzip archives, &lt;a href=&quot;http://www.7-zip.org&quot;&gt;7-zip&lt;/a&gt; is an easy to use free application)&lt;/p&gt;
 
 &lt;p&gt;Once the archive has been unpacked, you can see the datasets which should include a pdf, a few .csv files and some .shp,.shx,.dbf and .prj files.&lt;/p&gt;
 
@@ -5098,6 +5052,11 @@ If you did not clear your selections from the previous steps then continue on, e
 &lt;p&gt;The simple features for SQL defined a simple feature as a feature with all geometric attributes described piecewise by straight line or planar interpolation between sets of points.&lt;/p&gt;
 
 &lt;hr /&gt;
+
+&lt;h1 id=&quot;rasters-and-vectors&quot;&gt;Rasters and Vectors&lt;/h1&gt;
+&lt;p&gt;There are two main families of spatial data which are each used for a specific function. Vector data, which represents discrete phenomena such as bus stations, and Raster data which represents continuous phenomena like temperature.&lt;/p&gt;
+
+&lt;hr /&gt;
 </description>
                 <link>http://104.237.129.71/bootcamp/know%20the%20basics/overview</link>
                 <guid>http://104.237.129.71/bootcamp/know%20the%20basics/overview</guid>
@@ -5105,7 +5064,7 @@ If you did not clear your selections from the previous steps then continue on, e
         </item>
 
         <item>
-                <title>Vectors and Rasters</title>
+                <title>Vector Data</title>
                 <description>
 &lt;h4 id=&quot;pre-requisites-installing-qgis-is-spatial-special&quot;&gt;&lt;strong&gt;Pre-requisites: Installing QGIS, Is Spatial Special?&lt;/strong&gt;&lt;/h4&gt;
 
@@ -5117,12 +5076,9 @@ If you did not clear your selections from the previous steps then continue on, e
 
 &lt;hr /&gt;
 
-&lt;h1 id=&quot;rasters-and-vectors&quot;&gt;Rasters and Vectors&lt;/h1&gt;
-&lt;p&gt;There are two main families of spatial data which are each used for a specific function. Vector data, which represents discrete phenomena such as bus stations, and Raster data which represents continuous phenomena like temperature.&lt;/p&gt;
-
-&lt;hr /&gt;
-
 &lt;h2 id=&quot;vectora-namevectora&quot;&gt;Vector&lt;a name=&quot;vector&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a title=&quot;By Darth Stabro at en.wikipedia [CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], from Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3AVectorBitmapExample.svg&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;VectorBitmapExample&quot; src=&quot;/bootcamp/assets/images/vector/VectorBitmapExample.svg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Vector data uses features (features are usually points, lines or polygons) to represent discrete phenomena in the real world. For example, a vector data file might include a river represented by a line which is assigned a value. For data which is associated with discrete entities like countries, landmarks, roads, etc. vector data is the way to go.
 &lt;br /&gt;
@@ -5151,14 +5107,31 @@ If you did not clear your selections from the previous steps then continue on, e
 
 &lt;hr /&gt;
 
+&lt;h3 id=&quot;data-formats&quot;&gt;Data formats&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Shapefile: Stores point, line, and polygon data. This file type is actually made up of a collection of files with the following endings: These are mandatory: .shp, .shx, .dbf There are many others which are optional, including the important .prj file that describes the projection information for that data.&lt;/li&gt;
+  &lt;li&gt;Geodatabase: Esri proprietary spatial database. Very easy to load data into, not so easy to extract.&lt;/li&gt;
+  &lt;li&gt;GeoJSON: Encodes points, lines, and polygons (and collections of those) along with information about them using JSON (JavaScript Object Notation). This format is popular for web maps.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+                <link>http://104.237.129.71/bootcamp/know%20the%20basics/vector</link>
+                <guid>http://104.237.129.71/bootcamp/know%20the%20basics/vector</guid>
+                <pubDate>2000-12-30T00:00:00-07:00</pubDate>
+        </item>
+
+        <item>
+                <title>Raster Data</title>
+                <description>
 &lt;h2 id=&quot;raster&quot;&gt;Raster&lt;/h2&gt;
 
-&lt;dl&gt;
-  &lt;dt&gt;Raster&lt;/dt&gt;
-  &lt;dd&gt;a scan pattern in which an area is scanned&lt;/dd&gt;
-&lt;/dl&gt;
+&lt;p&gt;&lt;a title=&quot;By Gringer (Own work) [CC0], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ARgb-raster-image.svg&quot;&gt;&lt;img width=&quot;256&quot; alt=&quot;Rgb-raster-image&quot; src=&quot;/bootcamp/assets/images/raster/Raster-image.svg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Raster refers tp raster graphics.&lt;/p&gt;
+&lt;dl&gt;
+  &lt;dt&gt;Raster image&lt;/dt&gt;
+  &lt;dd&gt;a dot matrix data structure representing a generally rectangular grid of pixels, or points of color, viewable via a monitor, paper of other display medium.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/dd&gt;
+&lt;/dl&gt;
 
 &lt;p&gt;Raster data is used to represent continuous phenemena in our world. Continuous phenomena have an assigned value at all positions on a surface. Raster data is commonly seen in satellite images. Satellite images are, simply put, pictures of the earth from space. Just like the pictures you can take with a hand-held digital camera, the information is in the pixels. Each pixel has a number value that can be translated into a color. Raster data si commonly output by sensors.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -5166,19 +5139,80 @@ If you did not clear your selections from the previous steps then continue on, e
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;common-data-formats&quot;&gt;Common Data Formats&lt;/h2&gt;
+
+&lt;p&gt;Here are some common data formats you may encounter:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GeoTIFF: A standard that allows embedding geographic information in a TIFF file.&lt;/li&gt;
+  &lt;li&gt;NetCDF: A multidimensional data format that allows for multiple variables covering 1 or more dimensions.&lt;/li&gt;
+  &lt;li&gt;Arcinfo/Ascii grid: Proprietary format by Esri&lt;/li&gt;
+  &lt;li&gt;JPEG: A compressed image format that can be assigned bounding coordinates.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;scale&quot;&gt;Scale&lt;/h3&gt;
+
 &lt;dl&gt;
-  &lt;dt&gt;Raster&lt;/dt&gt;
-  &lt;dd&gt;A continuous surface made up of regular cells which hold values. Rasters are similar to matrices.&lt;/dd&gt;
+  &lt;dt&gt;Scale&lt;/dt&gt;
+  &lt;dd&gt;Proportional difference between representation and actual object&lt;/dd&gt;
 &lt;/dl&gt;
 
+&lt;p&gt;Scale bars are commonly used on maps to visualize the map distance in real world units.&lt;/p&gt;
+
+&lt;p&gt;Scales can also be expressed in words(lexical form) or in a ratio (representative fraction).&lt;/p&gt;
+
+&lt;h4 id=&quot;lexical-form&quot;&gt;Lexical Form&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&amp;#8220;five meters per centimeter&amp;#8221;&lt;/li&gt;
+  &lt;li&gt;&amp;#8220;120 miles per inch&amp;#8221;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;representative-fraction&quot;&gt;Representative Fraction&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1:500,000&lt;/li&gt;
+  &lt;li&gt;1:25,000&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;resolution&quot;&gt;Resolution&lt;/h3&gt;
+
+&lt;h4 id=&quot;types&quot;&gt;Types:&lt;/h4&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Spatial Resolution&lt;/dt&gt;
+  &lt;dd&gt;Number of pixels per unit (pixels per inch)&lt;/dd&gt;
+  &lt;dt&gt;Temporal Resolution&lt;/dt&gt;
+  &lt;dd&gt;Number of frames per time interval (20 frames per second)&lt;/dd&gt;
+  &lt;dt&gt;Spectral Resolution&lt;/dt&gt;
+  &lt;dd&gt;Range of light wavelengths that can be captured by a given sensor (number of light bands)&lt;/dd&gt;
+  &lt;dt&gt;Radiometric Resolution&lt;/dt&gt;
+  &lt;dd&gt;Number of differences in brightness that can be detected (number of shades)&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;//:wiki.scratch.mit.edu/wiki/Raster_Graphics&quot;&gt;Raster Graphics - Scratch Wiki&lt;/a&gt;. wiki.scratch.mit.edu. Retrieved April 14 2015. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
-                <link>http://104.237.129.71/bootcamp/know%20the%20basics/intro</link>
-                <guid>http://104.237.129.71/bootcamp/know%20the%20basics/intro</guid>
+                <link>http://104.237.129.71/bootcamp/know%20the%20basics/raster</link>
+                <guid>http://104.237.129.71/bootcamp/know%20the%20basics/raster</guid>
                 <pubDate>2000-12-29T00:00:00-07:00</pubDate>
         </item>
 
         <item>
-                <title>Projections</title>
+                <title>Reference Systems</title>
                 <description>
 &lt;h4 id=&quot;pre-requisites-is-spatial-special-vectors-and-rasters&quot;&gt;&lt;strong&gt;Pre-requisites: Is Spatial Special, Vectors and Rasters&lt;/strong&gt;&lt;/h4&gt;
 
@@ -5188,17 +5222,22 @@ If you did not clear your selections from the previous steps then continue on, e
   &lt;li&gt;Recognize a few projection types&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;
+&lt;h3 id=&quot;coordinates&quot;&gt;Coordinates&lt;/h3&gt;
 
-&lt;h3 id=&quot;coordinate-reference-systems&quot;&gt;Coordinate Reference Systems&lt;/h3&gt;
+&lt;p&gt;Data becomes spatial when it is assigned a location or coordinates. These coordinates allow us to reliably locate, transform and manipulate the data based on its location. In mathematics, coordinates are commonly represented using X and Y values on a chart.&lt;/p&gt;
 
-&lt;p&gt;A &lt;em&gt;Coordinate Reference System&lt;/em&gt; is built on top of a &lt;em&gt;coordinate system&lt;/em&gt;. A &lt;em&gt;coordinate system&lt;/em&gt; is a set of mathematical rules for specifying how coordinates are to be assigned to each point, also known as a &lt;em&gt;projection&lt;/em&gt;. A &lt;em&gt;coordinate reference system&lt;/em&gt; is a coordinate system that is related to the real world by a datum, this can also be known as a &lt;em&gt;geographic coordinate system&lt;/em&gt; or &lt;em&gt;spatial reference system&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a title=&quot;By Cartesian-coordinate-system.svg: K. Bolino derivative work: F l a n k e r (Cartesian-coordinate-system.svg) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ACartesian_coordinate_system_(comma).svg&quot;&gt;&lt;img width=&quot;256&quot; alt=&quot;Cartesian coordinate system (comma)&quot; src=&quot;/bootcamp/assets/images/projections/Cartesian_CS.svg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;Spatial data uses X and Y coordinates as well, however the spatial coordinates are related to a place on the earth. The X and Y values in this case often refer to &lt;b&gt;Latitude&lt;/b&gt; and &lt;b&gt;Longitude&lt;/b&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;latitude-and-longitude&quot;&gt;Latitude and Longitude&lt;/h3&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;&lt;a title=&quot;By Latitude_(PSF).png: Pearson Scott Foresman, donated to the Wikimedia Foundation derivative work: Gregors (talk) 08:13, 27 March 2011 (UTC) (Latitude_(PSF).png) [Public domain], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ALatitude_lines.svg&quot;&gt;&lt;img width=&quot;512px&quot; alt=&quot;Latitude lines&quot; class=&quot;center&quot; src=&quot;/bootcamp/assets/images/vector/Latitude_lines.svg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;a title=&quot;By Longitude (PSF).png: Pearson Scott Forman derivative work: Gregors (Longitude (PSF).png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ALongitude_blue.svg&quot;&gt;&lt;img width=&quot;512px&quot; alt=&quot;Longitude lines&quot; src=&quot;/bootcamp/assets/images/vector/Longitude_lines.svg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;br&quot;&gt;&lt;br /&gt;&lt;/h2&gt;
 
 &lt;h3 id=&quot;projections-a-nameprojectionsa&quot;&gt;Projections &lt;a name=&quot;projections&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
 
@@ -5207,7 +5246,7 @@ If you did not clear your selections from the previous steps then continue on, e
 &lt;p&gt;Projections characterize spatial data by setting coordinate reference systems for each data set.&lt;/p&gt;
 
 &lt;p&gt;Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
- will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth&#39;s image onto a plane.&lt;/p&gt;
+ will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth's image onto a plane.&lt;/p&gt;
 
 &lt;h4 id=&quot;distortion&quot;&gt;Distortion&lt;/h4&gt;
 
@@ -5215,7 +5254,9 @@ If you did not clear your selections from the previous steps then continue on, e
 
 &lt;hr /&gt;
 
-&lt;h4 id=&quot;coordinate-reference-systems-1&quot;&gt;Coordinate Reference Systems&lt;/h4&gt;
+&lt;h4 id=&quot;coordinate-reference-systems&quot;&gt;Coordinate Reference Systems&lt;/h4&gt;
+
+&lt;p&gt;A &lt;em&gt;Coordinate Reference System&lt;/em&gt; is built on top of a &lt;em&gt;coordinate system&lt;/em&gt;. A &lt;em&gt;coordinate system&lt;/em&gt; is a set of mathematical rules for specifying how coordinates are to be assigned to each point, also known as a &lt;em&gt;projection&lt;/em&gt;. A &lt;em&gt;coordinate reference system&lt;/em&gt; is a coordinate system that is related to the real world by a datum, this can also be known as a &lt;em&gt;geographic coordinate system&lt;/em&gt; or &lt;em&gt;spatial reference system&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a title=&quot;By Geek3 (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons&quot; href=&quot;http://commons.wikimedia.org/wiki/File%3ASphere_wireframe.svg&quot;&gt;&lt;img src=&quot;/bootcamp//assets/images/coordinate-grid.png&quot; alt=&quot;coordinateGrid&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -5356,97 +5397,6 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
         </item>
 
         <item>
-                <title>Scale and Resolution</title>
-                <description>
-&lt;h4 id=&quot;prerequisite-installing-qgis&quot;&gt;&lt;strong&gt;Prerequisite: Installing QGIS&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Understand fundamental elements of spatial data&lt;/li&gt;
-  &lt;li&gt;Recognize the difference between Points, Lines, and Polygon data&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;scale&quot;&gt;Scale&lt;/h3&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;Scale&lt;/dt&gt;
-  &lt;dd&gt;Proportional difference between representation and actual object&lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;p&gt;Scale bars are commonly used on maps to visualize the map distance in real world units.&lt;/p&gt;
-
-&lt;p&gt;Scales can also be expressed in words(lexical form) or in a ratio (representative fraction).&lt;/p&gt;
-
-&lt;h4 id=&quot;lexical-form&quot;&gt;Lexical Form&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“five meters per centimeter”&lt;/li&gt;
-  &lt;li&gt;“120 miles per inch”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;representative-fraction&quot;&gt;Representative Fraction&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;1:500,000&lt;/li&gt;
-  &lt;li&gt;1:25,000&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;resolution&quot;&gt;Resolution&lt;/h3&gt;
-
-&lt;h4 id=&quot;types&quot;&gt;Types:&lt;/h4&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;Spatial Resolution&lt;/dt&gt;
-  &lt;dd&gt;Number of pixels per unit (pixels per inch)&lt;/dd&gt;
-  &lt;dt&gt;Temporal Resolution&lt;/dt&gt;
-  &lt;dd&gt;Number of frames per time interval (20 frames per second)&lt;/dd&gt;
-  &lt;dt&gt;Spectral Resolution&lt;/dt&gt;
-  &lt;dd&gt;Range of light wavelengths that can be captured by a given sensor (number of light bands)&lt;/dd&gt;
-  &lt;dt&gt;Radiometric Resolution&lt;/dt&gt;
-  &lt;dd&gt;Number of differences in brightness that can be detected (number of shades)&lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;hr /&gt;
-
-</description>
-                <link>http://104.237.129.71/bootcamp/know%20the%20basics/what</link>
-                <guid>http://104.237.129.71/bootcamp/know%20the%20basics/what</guid>
-                <pubDate>2000-11-01T00:00:00-07:00</pubDate>
-        </item>
-
-        <item>
-                <title>Common Data Types</title>
-                <description>
-&lt;h4 id=&quot;pre-requisites-installing-qgis-is-spatial-special&quot;&gt;&lt;strong&gt;Pre-requisites: Installing QGIS, Is Spatial Special?&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;h4 id=&quot;objectives&quot;&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;common-data-formats&quot;&gt;Common Data Formats&lt;/h2&gt;
-
-&lt;p&gt;Here are some common data formats you may encounter:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Shapefile: Stores point, line, and polygon data. This file type is actually made up of a collection of files with the following endings: These are mandatory: .shp, .shx, .dbf There are many others which are optional, including the important .prj file that describes the projection information for that data.&lt;/li&gt;
-  &lt;li&gt;Geodatabase: Esri proprietary spatial database. Very easy to load data into, not so easy to extract.&lt;/li&gt;
-  &lt;li&gt;GeoJSON: Encodes points, lines, and polygons (and collections of those) along with information about them using JSON (JavaScript Object Notation). This format is popular for web maps.&lt;/li&gt;
-  &lt;li&gt;GeoTIFF: A standard that allows embedding geographic information in a TIFF file.&lt;/li&gt;
-  &lt;li&gt;NetCDF: A multidimensional data format that allows for multiple variables covering 1 or more dimensions.&lt;/li&gt;
-  &lt;li&gt;Arcinfo/Ascii grid: Proprietary format by Esri&lt;/li&gt;
-  &lt;li&gt;Database: There are various databases that, with extensions, can hold geographic objects. Some notable examples are PostgreSQL with PostGIS, and SQLite with the SpatiaLite extension. It is important to look into the level of spatial support within a database before performing any analysis. For example, MySQL&#39;s spatial extension has geometry support, but the geometries are all defined by bounding boxes rather than the true geometry.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-</description>
-                <link>http://104.237.129.71/bootcamp/know%20the%20basics/data-types</link>
-                <guid>http://104.237.129.71/bootcamp/know%20the%20basics/data-types</guid>
-                <pubDate>2000-10-01T00:00:00-07:00</pubDate>
-        </item>
-
-        <item>
                 <title>Installing QGIS</title>
                 <description>
 &lt;h1 id=&quot;qgis&quot;&gt;QGIS&lt;/h1&gt;
@@ -5475,7 +5425,7 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
 
 &lt;p&gt;Follow the steps in the Wizard to complete the installation.&lt;/p&gt;
 
-&lt;p&gt;We won’t need the sample datasets for our exercises, so you can leave them unchecked during the install.&lt;/p&gt;
+&lt;p&gt;We won&amp;#8217;t need the sample datasets for our exercises, so you can leave them unchecked during the install.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/bootcamp//assets/images/qgis-windows-components.png&quot; alt=&quot;qgisWindowsComponents&quot; /&gt;&lt;/p&gt;
 

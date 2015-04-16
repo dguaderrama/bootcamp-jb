@@ -7,14 +7,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Projections</title>
+	<title>Reference Systems</title>
 	<meta name="author" content="">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src='/bootcamp/assets/js/jquery.hoverIntent.js'></script>
   <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
 	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/" rel="alternate" title="Projections" type="application/atom+xml">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Reference Systems" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
   <link href="http://fonts.googleapis.com/css?family=League+Gothic:400,700" rel='stylesheet' type='text/css'>	
   <link href="http://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet' type='text/css'>	
@@ -105,7 +105,7 @@
     
       
       	
-      	<li><a href="/bootcamp/know%20the%20basics/intro">Vectors and Rasters</a></li>
+      	<li><a href="/bootcamp/know%20the%20basics/vector">Vector Data</a></li>
       	
       
     
@@ -113,7 +113,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/know%20the%20basics/projections" class="active">Projections</a></li>
+      	<li><a href="/bootcamp/know%20the%20basics/raster">Raster Data</a></li>
       	
       
     
@@ -121,15 +121,7 @@
     
       
       	
-      	<li><a href="/bootcamp/know%20the%20basics/what">Scale and Resolution</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/know%20the%20basics/data-types">Common Data Types</a></li>
+      	<li class="active"><a href="/bootcamp/know%20the%20basics/projections" class="active">Reference Systems</a></li>
       	
       
     
@@ -297,7 +289,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Colors & Fonts</a></li>
       	
       
     
@@ -481,7 +473,7 @@
         <div id="header-overlay">
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-            <h1 class="h2 entry-title">Projections</h1> 
+            <h1 class="h2 entry-title">Reference Systems</h1> 
             <!--            <h2 class="h2 entry-title"></h2> -->
 
 
@@ -538,7 +530,7 @@
     
       
       	
-      	<li><a href="/bootcamp/know%20the%20basics/intro">Vectors and Rasters</a></li>
+      	<li><a href="/bootcamp/know%20the%20basics/vector">Vector Data</a></li>
       	
       
     
@@ -546,7 +538,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/know%20the%20basics/projections" class="active">Projections</a></li>
+      	<li><a href="/bootcamp/know%20the%20basics/raster">Raster Data</a></li>
       	
       
     
@@ -554,15 +546,7 @@
     
       
       	
-      	<li><a href="/bootcamp/know%20the%20basics/what">Scale and Resolution</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/know%20the%20basics/data-types">Common Data Types</a></li>
+      	<li class="active"><a href="/bootcamp/know%20the%20basics/projections" class="active">Reference Systems</a></li>
       	
       
     
@@ -726,7 +710,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Colors & Fonts</a></li>
       	
       
     
@@ -950,7 +934,7 @@
     
       
       	
-      	<li><a href="/bootcamp/know%20the%20basics/intro">Vectors and Rasters</a></li>
+      	<li><a href="/bootcamp/know%20the%20basics/vector">Vector Data</a></li>
       	
       
     
@@ -958,7 +942,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/know%20the%20basics/projections" class="active">Projections</a></li>
+      	<li><a href="/bootcamp/know%20the%20basics/raster">Raster Data</a></li>
       	
       
     
@@ -966,15 +950,7 @@
     
       
       	
-      	<li><a href="/bootcamp/know%20the%20basics/what">Scale and Resolution</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/know%20the%20basics/data-types">Common Data Types</a></li>
+      	<li class="active"><a href="/bootcamp/know%20the%20basics/projections" class="active">Reference Systems</a></li>
       	
       
     
@@ -1138,7 +1114,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Colors & Fonts</a></li>
       	
       
     
@@ -1324,17 +1300,22 @@
   <li>Recognize a few projection types</li>
 </ul>
 
-<hr />
+<h3 id="coordinates">Coordinates</h3>
 
-<h3 id="coordinate-reference-systems">Coordinate Reference Systems</h3>
+<p>Data becomes spatial when it is assigned a location or coordinates. These coordinates allow us to reliably locate, transform and manipulate the data based on its location. In mathematics, coordinates are commonly represented using X and Y values on a chart.</p>
 
-<p>A <em>Coordinate Reference System</em> is built on top of a <em>coordinate system</em>. A <em>coordinate system</em> is a set of mathematical rules for specifying how coordinates are to be assigned to each point, also known as a <em>projection</em>. A <em>coordinate reference system</em> is a coordinate system that is related to the real world by a datum, this can also be known as a <em>geographic coordinate system</em> or <em>spatial reference system</em>.</p>
+<p><a title="By Cartesian-coordinate-system.svg: K. Bolino derivative work: F l a n k e r (Cartesian-coordinate-system.svg) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ACartesian_coordinate_system_(comma).svg"><img width="256" alt="Cartesian coordinate system (comma)" src="/bootcamp/assets/images/projections/Cartesian_CS.svg" /></a></p>
 
-<hr />
+<p>Spatial data uses X and Y coordinates as well, however the spatial coordinates are related to a place on the earth. The X and Y values in this case often refer to <b>Latitude</b> and <b>Longitude</b>.</p>
 
 <h3 id="latitude-and-longitude">Latitude and Longitude</h3>
 
-<hr />
+<p><a title="By Latitude_(PSF).png: Pearson Scott Foresman, donated to the Wikimedia Foundation derivative work: Gregors (talk) 08:13, 27 March 2011 (UTC) (Latitude_(PSF).png) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALatitude_lines.svg"><img width="512px" alt="Latitude lines" class="center" src="/bootcamp/assets/images/vector/Latitude_lines.svg" /></a></p>
+
+<p><br />
+<a title="By Longitude (PSF).png: Pearson Scott Forman derivative work: Gregors (Longitude (PSF).png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALongitude_blue.svg"><img width="512px" alt="Longitude lines" src="/bootcamp/assets/images/vector/Longitude_lines.svg" /></a></p>
+
+<h2 id="br"><br /></h2>
 
 <h3 id="projections-a-nameprojectionsa">Projections <a name="projections"></a></h3>
 
@@ -1351,7 +1332,9 @@
 
 <hr />
 
-<h4 id="coordinate-reference-systems-1">Coordinate Reference Systems</h4>
+<h4 id="coordinate-reference-systems">Coordinate Reference Systems</h4>
+
+<p>A <em>Coordinate Reference System</em> is built on top of a <em>coordinate system</em>. A <em>coordinate system</em> is a set of mathematical rules for specifying how coordinates are to be assigned to each point, also known as a <em>projection</em>. A <em>coordinate reference system</em> is a coordinate system that is related to the real world by a datum, this can also be known as a <em>geographic coordinate system</em> or <em>spatial reference system</em>.</p>
 
 <p><a title="By Geek3 (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ASphere_wireframe.svg"><img src="/bootcamp//assets/images/coordinate-grid.png" alt="coordinateGrid" /></a></p>
 
@@ -1506,7 +1489,7 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
   
      
     	<li><a href="/categories.html#know the basics-ref">
-    		know the basics <span>5</span>
+    		know the basics <span>4</span>
     	</a></li>
     
   
@@ -1521,7 +1504,7 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
 
   
      
-    	<li><a href="/tags.html#intro-ref">intro <span>5</span></a></li>
+    	<li><a href="/tags.html#intro-ref">intro <span>3</span></a></li>
      
     	<li><a href="/tags.html#projection-ref">projection <span>1</span></a></li>
     
@@ -1552,13 +1535,13 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
 					<nav class="pagination">
 						<ul>
 							
-              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/know%20the%20basics/intro" title="View Vectors and Rasters">&laquo; Vectors and Rasters</a></li>
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/know%20the%20basics/raster" title="View Raster Data">&laquo; Raster Data</a></li>
 							
 							
 							<li class="pipe"> | </li>
 							
 							
-              <li class="next"><a class="internal" rel="next"  href="/bootcamp/know%20the%20basics/what" title="View Scale and Resolution">Scale and Resolution &raquo;</a></li>
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/setup/qgis-install" title="View Installing QGIS">Installing QGIS &raquo;</a></li>
 							
 						</ul>
 					</nav>

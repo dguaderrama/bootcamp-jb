@@ -38,8 +38,7 @@ http://104.237.129.71/bootcamp/get%20the%20data/sources
 http://104.237.129.71/bootcamp/get%20the%20data/census
 http://104.237.129.71/bootcamp/get%20the%20data/terrain
 http://104.237.129.71/bootcamp/know%20the%20basics/overview
-http://104.237.129.71/bootcamp/know%20the%20basics/intro
+http://104.237.129.71/bootcamp/know%20the%20basics/vector
+http://104.237.129.71/bootcamp/know%20the%20basics/raster
 http://104.237.129.71/bootcamp/know%20the%20basics/projections
-http://104.237.129.71/bootcamp/know%20the%20basics/what
-http://104.237.129.71/bootcamp/know%20the%20basics/data-types
 http://104.237.129.71/bootcamp/setup/qgis-install

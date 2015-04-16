@@ -1,5 +1,5 @@
 --- 
-title: "Projections"
+title: "Reference Systems"
 layout: post
 category: Know the Basics
 tags: [intro, projection]
@@ -14,18 +14,23 @@ tags: [intro, projection]
   - Recognize a few projection types
 
 
-----
+### Coordinates
 
-###  Coordinate Reference Systems
+Data becomes spatial when it is assigned a location or coordinates. These coordinates allow us to reliably locate, transform and manipulate the data based on its location. In mathematics, coordinates are commonly represented using X and Y values on a chart.
 
- A *Coordinate Reference System* is built on top of a *coordinate system*. A *coordinate system* is a set of mathematical rules for specifying how coordinates are to be assigned to each point, also known as a *projection*. A *coordinate reference system* is a coordinate system that is related to the real world by a datum, this can also be known as a *geographic coordinate system* or *spatial reference system*.
+<a title="By Cartesian-coordinate-system.svg: K. Bolino derivative work: F l a n k e r (Cartesian-coordinate-system.svg) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ACartesian_coordinate_system_(comma).svg"><img width="256" alt="Cartesian coordinate system (comma)" src="{{site.baseurl}}{{ASSET_PATH}}/images/projections/Cartesian_CS.svg"/></a>
 
+Spatial data uses X and Y coordinates as well, however the spatial coordinates are related to a place on the earth. The X and Y values in this case often refer to <b>Latitude</b> and <b>Longitude</b>.
 
-
-----
 
 ### Latitude and Longitude
 
+<a title="By Latitude_(PSF).png: Pearson Scott Foresman, donated to the Wikimedia Foundation derivative work: Gregors (talk) 08:13, 27 March 2011 (UTC) (Latitude_(PSF).png) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALatitude_lines.svg" ><img width="512px" alt="Latitude lines" class="center" src="{{site.baseurl}}{{ASSET_PATH}}/images/vector/Latitude_lines.svg"/></a>
+
+<br>
+<a title="By Longitude (PSF).png: Pearson Scott Forman derivative work: Gregors (Longitude (PSF).png) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALongitude_blue.svg"><img width="512px" alt="Longitude lines" src="{{site.baseurl}}{{ASSET_PATH}}/images/vector/Longitude_lines.svg"/></a>
+
+<br>
 ----
 
 ### Projections <a name="projections"></a>
@@ -44,6 +49,8 @@ Since projections attempt to represent the 3-dimensional globe on a 2-dimensiona
 ----
 
 #### Coordinate Reference Systems
+
+ A *Coordinate Reference System* is built on top of a *coordinate system*. A *coordinate system* is a set of mathematical rules for specifying how coordinates are to be assigned to each point, also known as a *projection*. A *coordinate reference system* is a coordinate system that is related to the real world by a datum, this can also be known as a *geographic coordinate system* or *spatial reference system*.
 
 <a title="By Geek3 (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ASphere_wireframe.svg">![coordinateGrid]({{site.baseurl}}/{{ASSET_PATH}}/images/coordinate-grid.png)</a>
 

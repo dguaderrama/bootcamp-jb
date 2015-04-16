@@ -43,3 +43,15 @@ Spatial Data requires at least 2 dimensions X and Y, which are traditionally hel
 
 ----
 
+
+
+
+
+
+
+
+
+
+[^1]: <a href="http://portal.opengeospatial.org/files/?artifact_id=829">OpenGIS Simple Features Implementation Specification for SQL</a>
+[^2]: Guttman, A. (1984). "R-Trees: A Dynamic Index Structure for Spatial Searching". *Proceedings of the 1984 ACM SIGMOD international conference of Management of data - SIGMOD '84.* p. 47 doi:10.1145/602259.602266. ISBN 0897911288.
+[^3]: Luc Anselin, Spatial Econometrics, 1999 <a href="https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf">https://csiss.ncgia.ucsb.edu/aboutus/presentations/files/baltchap.pdf</a>

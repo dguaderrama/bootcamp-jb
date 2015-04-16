@@ -1,4 +1,5 @@
 ---
+title: "Colors & Fonts"
 layout: post
 category : Show your Results
 tagline: "Designing maps"
@@ -7,7 +8,7 @@ tags : [cartography, map design, colorbewer]
 
 {% include JB/setup %}
 
-## Cartography fundamentals
+## Color Theory
 
 Map-making has historically  been both a science and an art. For visualizing scientific data on
 maps, we now have new technologies that make it easy to create beautiful data visualizations.
@@ -105,19 +106,7 @@ Sometimes you may have to take kerning (the spacing between letters) into consid
 Try exploring combinations on [TypeBrewer](http://www.typebrewer.org/). Note: this site is not
 related to ColorBrewer.
 
-## Mapbox Suite
-
-MapBox created the open source tool [TileMill](https://www.mapbox.com/tilemill/), and has since also released
-[MapBox Studio](https://www.mapbox.com/design/) which has some more design features for creating map styles.
-However, TileMill has what we need, so we focus on it for now.
-
-#TileMill
-
-What made TileMill popular was the ability to turn maps from many formats into tiles. The map is like one big picture, which is then split up into squares.
-This speeds up the process of displaying maps on the web.
-
-
-#CartoCSS
+# Styling Data
 
 So what is CSS? It stands for Cascading Style Sheets. The key part of that is 'Style'.
 CSS is used to make websites look nice - the css file governs colors, sizes, and fonts.
@@ -140,47 +129,6 @@ there. This is what goes in your style file when you save your project. To see
 the changes that you make here, remember to click 'Save' at the top right.
 
 
-
->Map Features
-When we are working with vector data, we refer to features on the map, which could be
-things like cities, rivers, and countries. In general, these vector features will always
-be either points, lines, or polygons.
-
->Layers in Tilemill
-Every time you add more data to your map, you can put it in its own layer.
-When we import data into Tilemill, it automatically becomes a new layer.
-We give every layer a class name, and some have IDs, too. IDs must be unique to each layer,
-but a class name can be used more than once.
-
-To choose a layer based on a class, we start with a period, then the class name.
-For example:
-    .cities
-      {
-        marker-fill: blue;
-      }
-To choose a layer based on an ID, we start with a pound symbol, then the ID name.
-For example:
-    #Barcelona
-      {
-        marker-fill: red;
-      }
-
-
-If we were dealing with lines we would use the properties that start with line- ,
- while for points it is marker- .
-For more properties and examples reference the
-[CartoCSS documentation](https://www.mapbox.com/tilemill/docs/manual/carto/)
-
-## QGIS Cartography
-
-> basics of graphic design and exporting maps - print or web-based
-
-
-<br>
-
-----
-
-<br>
 
 References
 
