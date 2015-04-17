@@ -35,7 +35,7 @@ Spatial data uses X and Y coordinates as well, however the spatial coordinates a
 
 ### Projections <a name="projections"></a>
 
-<a title="By Djexplo (Own work) [CC0], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALatitude_and_Longitude_of_the_Earth.svg">![earthCRS]({{site.baseurl}}/{{ASSET_PATH}}/images/earthCRS.png)</a>
+<a title="By Djexplo (Own work) [CC0], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALatitude_and_Longitude_of_the_Earth.svg">![earthCRS]({{site.baseurl}}{{ASSET_PATH}}/images/earthCRS.png)</a>
 
 Projections characterize spatial data by setting coordinate reference systems for each data set.
 
@@ -52,7 +52,7 @@ Since projections attempt to represent the 3-dimensional globe on a 2-dimensiona
 
  A *Coordinate Reference System* is built on top of a *coordinate system*. A *coordinate system* is a set of mathematical rules for specifying how coordinates are to be assigned to each point, also known as a *projection*. A *coordinate reference system* is a coordinate system that is related to the real world by a datum, this can also be known as a *geographic coordinate system* or *spatial reference system*.
 
-<a title="By Geek3 (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ASphere_wireframe.svg">![coordinateGrid]({{site.baseurl}}/{{ASSET_PATH}}/images/coordinate-grid.png)</a>
+<a title="By Geek3 (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ASphere_wireframe.svg">![coordinateGrid]({{site.baseurl}}{{ASSET_PATH}}/images/coordinate-grid.png)</a>
 
 Projections are another name for projected coordinate systems. These projected coordinate systems compose a family of Coordinate Reference Systems. 
 
@@ -62,7 +62,7 @@ Projected coordinate systems are based off of Geodetic Coordinate Systems. These
 
 #### Earth as a Geoid
 
-<a title="By NASA/JPL/University of Texas Center for Space Research. [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AEarth_gravity.png">![geoid]({{site.baseurl}}/{{ASSET_PATH}}/images/geoid.png)</a>
+<a title="By NASA/JPL/University of Texas Center for Space Research. [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AEarth_gravity.png">![geoid]({{site.baseurl}}{{ASSET_PATH}}/images/geoid.png)</a>
 
 Although we normally see the earth represented as a sphere, its shape is actually more irregular. The earth has an equatorial bulge and various other undulations due to tectonics, volcanics and the earth's rotation. 
 
@@ -72,7 +72,7 @@ The changes in the surface mass are the subject matter of Geodesy. Geodesists us
 
 ### Reference Ellipsoid
 
-<a title="By NASA/JPL (http://sealevel.jpl.nasa.gov/gallery/posters.html) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AJason-1_measurement_system.gif">![geoid-measure]({{site.baseurl}}/{{ASSET_PATH}}/images/geoid-measure.gif)</a>
+<a title="By NASA/JPL (http://sealevel.jpl.nasa.gov/gallery/posters.html) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AJason-1_measurement_system.gif">![geoid-measure]({{site.baseurl}}{{ASSET_PATH}}/images/geoid-measure.gif)</a>
 
 Reference ellipsoids have evolved over the years, moving from regional approximations to more precise global systems.
 
@@ -89,7 +89,7 @@ Most modern projections will use WGS 84 as the underlying reference ellipsoid, b
 Greenwich is the standard central meridian used in global projections. This point is given the value of 0&#176; Longitude and serves as the origin the Global Positioning System. This delineation also leaves decides the use of Greenwich Mean Time as the standard time.
 
 
-<a title="By Apletters (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AMeridian-at-Greenwich.jpg">![greenwichMeridian]({{site.baseurl}}/{{ASSET_PATH}}/images/greenwich-meridian.jpg)</a>
+<a title="By Apletters (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AMeridian-at-Greenwich.jpg">![greenwichMeridian]({{site.baseurl}}{{ASSET_PATH}}/images/greenwich-meridian.jpg)</a>
 
 
 The Greenwich meridian has a monument dedicated to it in several cities.
@@ -99,14 +99,14 @@ The Greenwich meridian has a monument dedicated to it in several cities.
 
 **Conformal**
 
-<a title="By USGS, Mysid [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALambert_conformal_conic.svg">![conformalConic]({{site.baseurl}}/{{ASSET_PATH}}/images/conformal_conic.svg.png)/a>
+<a title="By USGS, Mysid [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALambert_conformal_conic.svg">![conformalConic]({{site.baseurl}}{{ASSET_PATH}}/images/conformal_conic.svg.png)/a>
 
 Also known as *fidelity of shape*, these projections preserve shape. This means that scale distortion must be the same in all directions and each parallel must cross every meridian at right angles. These projections are important for navigational and large-scale mapping[^1]
 Examples include Mercator, and Lambert Conformal Conic.
 
 **Equal Area**
 
-<a title="By Kai Krause [CC0], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ATrue_size_of_Africa.jpg">![trueSizeOfAfrica]({{site.baseurl}}/{{ASSET_PATH}}/images/True_size_of_Africa.jpg)</a>
+<a title="By Kai Krause [CC0], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ATrue_size_of_Africa.jpg">![trueSizeOfAfrica]({{site.baseurl}}{{ASSET_PATH}}/images/True_size_of_Africa.jpg)</a>
 
 Preserves the area relationships between regions. This maintain the proper ratio of area between regions. An example of this is the Mollweide projection. These projections are useful for statistical comparisons.
 
@@ -121,7 +121,7 @@ Preserves the proportional distances between any two points from their spherical
 
 **Conic**
 
-<a title="By Koenb at Dutch Wikipedia (Original text: productie van de afbeelding uit het .shp-bestand: Koenb) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AWorld_borders_lambertcc000045.png">![worldBordersLambert]({{site.baseurl}}/{{ASSET_PATH}}/images/World_borders_lambert.png)</a>
+<a title="By Koenb at Dutch Wikipedia (Original text: productie van de afbeelding uit het .shp-bestand: Koenb) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AWorld_borders_lambertcc000045.png">![worldBordersLambert]({{site.baseurl}}{{ASSET_PATH}}/images/World_borders_lambert.png)</a>
 
 <br>
 
@@ -129,14 +129,14 @@ Conic projections are created by projecting part of a sphere onto a cone. Conic 
 
 **Azimuthal**
 
-<a title="By RokerHRO (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AAzimuthal_Equidistant_S90.jpg">![azimuthalEquidistant]({{site.baseurl}}/{{ASSET_PATH}}/images/Azimuthal_Equidistant.jpg)</a>
+<a title="By RokerHRO (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AAzimuthal_Equidistant_S90.jpg">![azimuthalEquidistant]({{site.baseurl}}{{ASSET_PATH}}/images/Azimuthal_Equidistant.jpg)</a>
 
 <br>
 Azimuthal projections are created by flattening a side of the sphere from a reference point. Azimuthal projections are useful for mapping polar data.
 
 **Cylindrical**
 
-<a title="By KoenB (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ACilinderprojectie-constructie.jpg">![cylindricalProjection]({{site.baseurl}}/{{ASSET_PATH}}/images/cylindrical_projection.jpg)</a>
+<a title="By KoenB (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ACilinderprojectie-constructie.jpg">![cylindricalProjection]({{site.baseurl}}{{ASSET_PATH}}/images/cylindrical_projection.jpg)</a>
 
 
 <br>
@@ -146,7 +146,7 @@ Cylindrical projections are created by projection a sphere onto a cylinder. Cyli
 
 **Polyhedral**
 
-<a title="By Koenb at nl.wikipedia (Original text : KoenB) [Public domain], from Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3APolyederprojectie-6-rendered.png">![polyhedralProjection]({{site.baseurl}}/{{ASSET_PATH}}/images/Polyhedral_projection.png)</a>
+<a title="By Koenb at nl.wikipedia (Original text : KoenB) [Public domain], from Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3APolyederprojectie-6-rendered.png">![polyhedralProjection]({{site.baseurl}}{{ASSET_PATH}}/images/Polyhedral_projection.png)</a>
 
 <a title="By Chris Rywalt (POVRay) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ADymaxion_2003_animation_small1.gif"><img width="256" alt="Dymaxion 2003 animation small1" src="//upload.wikimedia.org/wikipedia/commons/b/bb/Dymaxion_2003_animation_small1.gif"/></a>
 <br>

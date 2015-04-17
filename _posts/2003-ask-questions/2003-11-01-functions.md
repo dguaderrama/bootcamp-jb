@@ -235,9 +235,9 @@ The following exercises are a continuation of the previous exercises. Open your 
     + **No data value: 0**
     + **Clipping Mode: Mask layer > washington**
     + Load into canvas when finished<br>
-  <img alt="demWashington" src="{{site.baseurl}}/{{ASSET_PATH}}/images/dem-washington.png" class="screen-shot" />
+  <img alt="demWashington" src="{{site.baseurl}}{{ASSET_PATH}}/images/dem-washington.png" class="screen-shot" />
 9. Remove the dem-project.tif layer<br>
-  <img alt="dem-washington-display" src="{{site.baseurl}}/{{ASSET_PATH}}/images/dem-washington-display.png" class="screen-shot" /><br>
+  <img alt="dem-washington-display" src="{{site.baseurl}}{{ASSET_PATH}}/images/dem-washington-display.png" class="screen-shot" /><br>
 10. Create a slope surface <br>
   In the top menu, select **Raster > Analysis > DEM** <br>
   * Input file: dem-washington
@@ -245,7 +245,7 @@ The following exercises are a continuation of the previous exercises. Open your 
   * Mode: Slope
   * Scale: 0.30
   * Load into canvas when finished<br>
-  <img alt="create-slope" src="{{site.baseurl}}/{{ASSET_PATH}}/images/create-slope.png" class="screen-shot" /><br>
+  <img alt="create-slope" src="{{site.baseurl}}{{ASSET_PATH}}/images/create-slope.png" class="screen-shot" /><br>
 11. Create a hillshade layer<br>
   In the top menu, select **Raster > Analysis > DEM** <br>
   * Input file: dem-washington
@@ -256,7 +256,7 @@ The following exercises are a continuation of the previous exercises. Open your 
   * Azimuth of light: 315.0
   * Altitude of light: 45.0
   * Load into canvas when finished<br>
-  <img alt="hillshade-calc" src="{{site.baseurl}}/{{ASSET_PATH}}/images/hillshade-calc.png" class="screen-shot" /><br>
+  <img alt="hillshade-calc" src="{{site.baseurl}}{{ASSET_PATH}}/images/hillshade-calc.png" class="screen-shot" /><br>
 12. Save your project workspace.
 
 <br>

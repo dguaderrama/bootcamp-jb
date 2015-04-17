@@ -11,7 +11,7 @@ tags: [intro, QGIS]
 
 #### This section will walk you through the process of installing QGIS.
 
-![qgisHome]({{site.baseurl}}/{{ASSET_PATH}}/images/qgis-home.png)
+![qgisHome]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-home.png)
 
 In order to demonstrate the lessons, we will need to download and install QGIS
 
@@ -23,19 +23,19 @@ The website should detect your Operating System and show the installers availabl
 
 ### Windows
 
-![qgis-downloads]({{site.baseurl}}/{{ASSET_PATH}}/images/qgis-downloads.png)
+![qgis-downloads]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-downloads.png)
 
 If you are using windows, select the *QGIS Standalone Installer*, for the some of our plugins to function, you will need a 64-bit installation. If you are using a 32-bit windows system, you may need to skip a few of the exercises in the future.
 
 Once your download has finished, click on the download to start the installation wizard.
 
-![qgisWindowsInstall]({{site.baseurl}}/{{ASSET_PATH}}/images/qgis-windows-install.png)
+![qgisWindowsInstall]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-windows-install.png)
 
 Follow the steps in the Wizard to complete the installation.
 
 We won't need the sample datasets for our exercises, so you can leave them unchecked during the install.
 
-![qgisWindowsComponents]({{site.baseurl}}/{{ASSET_PATH}}/images/qgis-windows-components.png)
+![qgisWindowsComponents]({{site.baseurl}}{{ASSET_PATH}}/images/qgis-windows-components.png)
 
 
 
@@ -43,7 +43,7 @@ We won't need the sample datasets for our exercises, so you can leave them unche
 
 If you are using OS X, make sure to install the *GDAL Complete 1.11 framework package* before installing QGIS.
 
-![gdalPrereq]({{site.baseurl}}/{{ASSET_PATH}}/images/gdal-prereq.png)
+![gdalPrereq]({{site.baseurl}}{{ASSET_PATH}}/images/gdal-prereq.png)
 
 ### Linux
 

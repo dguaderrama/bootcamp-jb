@@ -36,23 +36,23 @@ These methods can be performed using a variety of tools depending on the specifi
 1. Set project projection to EPSG:2927<br><br> 
   Before starting any project in a GIS program, you should first set the project projection to make sure your data comes in with the same extent. <br>If you don't set the project's projection, the program will use the projection of the first layer added or EPSG:4326.<br><br>
   You can set the projection with the following steps:<br><br>
-  <img alt="projectProperties" src="{{site.baseurl}}/{{ASSET_PATH}}/images/qgis-project-properties.png" class="screen-shot" />
+  <img alt="projectProperties" src="{{site.baseurl}}{{ASSET_PATH}}/images/qgis-project-properties.png" class="screen-shot" />
   * In the top navbar go Project > Project Properties
   * Select CRS in the Left menu
   * Check *Enable On-the-fly CRS transformation*
   * Using the Filter, search <em>2927</em> and select *NAD83(HARN)/Washington South(ftUS) EPSG:2927* from the List of Projections.
   * Apply and OK to save changes.<br>
-  <img alt="projection" src="{{site.baseurl}}/{{ASSET_PATH}}/images/qgis-projection.png" class="screen-shot" />
+  <img alt="projection" src="{{site.baseurl}}{{ASSET_PATH}}/images/qgis-projection.png" class="screen-shot" />
 2. Add the US States shapefile<br><br>
   Since our project is directed at the state of Washington. We should extract the Washington state boundary for our study. The GADM[^7] project provides high-quality boundary data on country,state and county levels. We can use the US-state level dataset to get the Washington boundary. <br><br>
   * Select *Add Vector Layer* in the left toolbar
   * Browse to the USA_adm1.shp layer from the iPlant Data Store<br>
-  <img alt="USAStates" src="{{site.baseurl}}/{{ASSET_PATH}}/images/usa-states.png" class="screen-shot" />
+  <img alt="USAStates" src="{{site.baseurl}}{{ASSET_PATH}}/images/usa-states.png" class="screen-shot" />
 3. Create a layer for the state of Washington 
   * Within the Layers List, click on USA_adm1 to activate layer tools.
   * Select Single Feature tool:<br><em>Menu Bar > View > Select > Select Single Feature</em> OR<br>in the top toolbar, select *Select Single Feature*
   * Click on the state of Washington to select it<br>
-  <img alt="washington-selected" src="{{site.baseurl}}/{{ASSET_PATH}}/images/washington-selected.png" class="screen-shot" />
+  <img alt="washington-selected" src="{{site.baseurl}}{{ASSET_PATH}}/images/washington-selected.png" class="screen-shot" />
   * Right click on the USA_adm1 layer and select *Save Selection As...*
       - Format: ESRI Shapefile
       - Save as: washington.shp
@@ -60,7 +60,7 @@ These methods can be performed using a variety of tools depending on the specifi
       - CRS: 
           + Selected CRS
           + Browse > *NAD83(HARN)/Washington South (ftUS) EPSG:2927*<br>
-  <img alt="saveWashington" src="{{site.baseurl}}/{{ASSET_PATH}}/images/save-washington.png" class="screen-shot" />
+  <img alt="saveWashington" src="{{site.baseurl}}{{ASSET_PATH}}/images/save-washington.png" class="screen-shot" />
 4. Load the new washington layer<br>
   * Select *Add Vector Layer*
   * Browse to the new washington layer and click *Open*<br>
@@ -84,7 +84,7 @@ These methods can be performed using a variety of tools depending on the specifi
     + Resampling Method: *Near*
     + No data values: *0*
   * Be sure to click CLOSE and not OK when exiting tools. Clicking OK will rerun the tool.
-    <img alt="projectDEM" src="{{site.baseurl}}/{{ASSET_PATH}}/images/project-dem.png" class="screen-shot" />
+    <img alt="projectDEM" src="{{site.baseurl}}{{ASSET_PATH}}/images/project-dem.png" class="screen-shot" />
 7. **Important!** Save you current project workspace in your project directory. Saving will maintain the configuration of your project workspace. You will be using this project workspace for the following lessons.
 
 ### Continue to the next lesson...

@@ -24,7 +24,7 @@ Click *Add new CRS* to create a new custom projection
 
 {: .center }
 
-![add-Crs]({{site.baseurl}}/{{ASSET_PATH}}/images/addNewCrs.png)
+![add-Crs]({{site.baseurl}}{{ASSET_PATH}}/images/addNewCrs.png)
 
 In the box labeled *Name:* enter *New World LAEA*
 
@@ -36,7 +36,7 @@ Under parameters enter the following Proj4 string:
 
 The window should look like this:
 
-![custom-CRS]({{site.baseurl}}/{{ASSET_PATH}}/images/customCrs.png)
+![custom-CRS]({{site.baseurl}}{{ASSET_PATH}}/images/customCrs.png)
 
 
 Click OK to exit the window
@@ -81,15 +81,15 @@ In the left sidebar click *Get more*
 
 You can either scroll through the plugins or search for *iRods*
 
-![irods-Plugin]({{site.baseurl}}/{{ASSET_PATH}}/images/irodsPlugin.png)
+![irods-Plugin]({{site.baseurl}}{{ASSET_PATH}}/images/irodsPlugin.png)
 
 You can install the plugin by clicking *Install plugin* and you should receive this message
 
-![plugin-Installed]({{site.baseurl}}/{{ASSET_PATH}}/images/pluginInstalled.png)
+![plugin-Installed]({{site.baseurl}}{{ASSET_PATH}}/images/pluginInstalled.png)
 
 You can now click on *Installed* in the left sidebar to ensure that the iRods plugin is both installed and enabled.
 
-![plugin-enabled]({{site.baseurl}}/{{ASSET_PATH}}/images/pluginEnabled.png)
+![plugin-enabled]({{site.baseurl}}{{ASSET_PATH}}/images/pluginEnabled.png)
 
 If you have already set up your iPlant account and were given permissions to the Bootcamp dataset continue to the next steps. 
 
@@ -97,11 +97,11 @@ If not, make sure to [register for iPlant access](http://user.iplantcollaborativ
 
 Once, you have access to the data store you can open up the iRods plugin to view the available datasets.
 
-![irods-Logo]({{site.baseurl}}/{{ASSET_PATH}}/images/irodsLogo.png)
+![irods-Logo]({{site.baseurl}}{{ASSET_PATH}}/images/irodsLogo.png)
 
 Once you click on the iRods icon, a window should show up where you can enter in your iplant account credentials
 
-![irods-Login]({{site.baseurl}}/{{ASSET_PATH}}/images/irodsLogin.png)
+![irods-Login]({{site.baseurl}}{{ASSET_PATH}}/images/irodsLogin.png)
 
 This should open up a window with your local files, to get to the Bootcamp files, you will have to set the directory using *Set Datastore*
 
@@ -109,7 +109,7 @@ In the bottom right of the window click *Set Datastore*
 
 In the next prompt, enter "/iplant/home/shared/aegis/Spatial-bootcamp"
 
-![set-datastore]({{site.baseurl}}/{{ASSET_PATH}}/images/setDatastore.png)
+![set-datastore]({{site.baseurl}}{{ASSET_PATH}}/images/setDatastore.png)
 
 Click set to close the dialog.
 
@@ -119,11 +119,11 @@ For this exercise our files will be found under "Range-model"
 
 We can use the Abies amabilis shapefile titled: Abies_amabilis.shp
 
-![range-model-files]({{site.baseurl}}/{{ASSET_PATH}}/images/rangeModelFiles.png)
+![range-model-files]({{site.baseurl}}{{ASSET_PATH}}/images/rangeModelFiles.png)
 
 The layer name should come up in the left Table of Contents and the points should show up on the center panel.
 
-![abies-import]({{site.baseurl}}/{{ASSET_PATH}}/images/abiesImport.png)
+![abies-import]({{site.baseurl}}{{ASSET_PATH}}/images/abiesImport.png)
 
 Since the Species CSV comes in EPSG:4326, and the environmental variables come in a custom projection, we will need to repojrect the species layer.
 
@@ -131,7 +131,7 @@ To check the species projection you can right-click the Abies_amabilis in the Ta
 
 The Layer properties window will display the layer's Coordinate Reference System:
 
-![abies-projection]({{site.baseurl}}/{{ASSET_PATH}}/images/abiesProjection.png)
+![abies-projection]({{site.baseurl}}{{ASSET_PATH}}/images/abiesProjection.png)
 
 To change the projection, you can close out of the *Layer Properties* window.
 
@@ -145,7 +145,7 @@ Under CRS select *Project CRS*
 
 Finally check the *Add saved file to map* option
 
-![abies-project]({{site.baseurl}}/{{ASSET_PATH}}/images/abiesProject.png)
+![abies-project]({{site.baseurl}}{{ASSET_PATH}}/images/abiesProject.png)
 
 Right click the new layer and check the layer Properties to make sure the Coordinate Reference System is *New World LAEA*
 
@@ -166,17 +166,17 @@ The layers should be available under /iplant/home/shared/aegis/Spatial-bootcamp/
 
 To download the archive, check the file and click *Download* > *Simple Download* in the Menu bar.
 
-![iplant-env-download]({{site.baseurl}}/{{ASSET_PATH}}/images/iplantEnvDownload.png)
+![iplant-env-download]({{site.baseurl}}{{ASSET_PATH}}/images/iplantEnvDownload.png)
 
 Download the zip file to your workspace and unzip the directory. You should find a group of ascii rasters.
 
 You can load the ascii rasters into QGIS as Raster datasets.
 
-![qgis-add-raster]({{site.baseurl}}/{{ASSET_PATH}}/images/QgisAddRaster.png)
+![qgis-add-raster]({{site.baseurl}}{{ASSET_PATH}}/images/QgisAddRaster.png)
 
 Click the Add Raster button, navigate to the unzipped directory and select all of the ascii rasters.
 
-![load-env-rasters]({{site.baseurl}}/{{ASSET_PATH}}/images/loadEnvRasters.png)
+![load-env-rasters]({{site.baseurl}}{{ASSET_PATH}}/images/loadEnvRasters.png)
 
 Once all the rasters are loaded, you should see them in your Table of Contents, but not on the map. 
 
@@ -190,11 +190,11 @@ To do this, you can click on the layer name in the Table of Contents and Select 
 
 Select *New WOrld LAEA* from the list of projections and click *OK*
 
-![set-env-projection]({{site.baseurl}}/{{ASSET_PATH}}/images/setEnvProjection.png)
+![set-env-projection]({{site.baseurl}}{{ASSET_PATH}}/images/setEnvProjection.png)
 
 Check the layer properties to make sure the projection has been set.
 
-![env-projected]({{site.baseurl}}/{{ASSET_PATH}}/images/envProjected.png)
+![env-projected]({{site.baseurl}}{{ASSET_PATH}}/images/envProjected.png)
 
 Repeat the above steps for each of the ascii rasters until they all have the proper projection.
 
@@ -206,7 +206,7 @@ In the top menu, click Plugins > Manage and Install Plugins...
 
 Click *Get more* in the left menu and Search for Point sampling
 
-![point-sampling-plugin]({{site.baseurl}}/{{ASSET_PATH}}/images/pointSamplingPlugin.png)
+![point-sampling-plugin]({{site.baseurl}}{{ASSET_PATH}}/images/pointSamplingPlugin.png)
 
 Click *Install plugin* and check that it is enabled under the list of installed plugins.
 
@@ -220,11 +220,11 @@ Under *Output point vector layer:* Click Browse and select the location for the 
 
 Name the output Abies_swd.shp and make sure *Add created layer to the TOC* is checked
 
-![sample-env]({{site.baseurl}}/{{ASSET_PATH}}/images/sampleEnv.png)
+![sample-env]({{site.baseurl}}{{ASSET_PATH}}/images/sampleEnv.png)
 
 To make sure that the point sampling worked, we will check the new attribute table.
 
-![swd-attributes]({{site.baseurl}}/{{ASSET_PATH}}/images/swdAttributes.png)
+![swd-attributes]({{site.baseurl}}{{ASSET_PATH}}/images/swdAttributes.png)
 
 We are almost done with our SWD, the next step is to add a column with the species name.
 
@@ -232,11 +232,11 @@ While we are in the attribute table you can add a column using the field calcula
 
 First, we need to Start an editing session on our attribute table by clicking the Toggle Edits Button in the upper left corner of the table.
 
-![start-edit]({{site.baseurl}}/{{ASSET_PATH}}/images/startEdit.png)
+![start-edit]({{site.baseurl}}{{ASSET_PATH}}/images/startEdit.png)
 
 Next, open the Raster Calculator on the right side of the toolbar.
 
-![open-raster-calculator]({{site.baseurl}}/{{ASSET_PATH}}/images/openRasterCalculator.png)
+![open-raster-calculator]({{site.baseurl}}{{ASSET_PATH}}/images/openRasterCalculator.png)
 
 In the dialog that opens, make sure that *Create a new field is checked.
 
@@ -244,10 +244,10 @@ Set the output field name to *species* with a field type of Text (string) and a 
 
 Set the expression to 'Abies_amabils' to set the value for each row to the species name.
 
-![add-column]({{site.baseurl}}/{{ASSET_PATH}}/images/addColumn.png)
+![add-column]({{site.baseurl}}{{ASSET_PATH}}/images/addColumn.png)
 
 Once the column has been added, save your edits by hitting the Save Edits Button next to the Toggle Edits Button.
 
-![save-edit]({{site.baseurl}}/{{ASSET_PATH}}/images/saveEdit.png)
+![save-edit]({{site.baseurl}}{{ASSET_PATH}}/images/saveEdit.png)
 
 Now that we have our species name in the table, we need to create a csv for Maxent to read.
