@@ -297,15 +297,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Colors & Fonts</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/show%20your%20results/cartography">Cartography</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
       	
       
     
@@ -321,7 +313,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Mapping</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/cartography">Compose a map</a></li>
       	
       
     
@@ -329,7 +321,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Map Examples</a></li>
       	
       
     
@@ -734,15 +726,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Colors & Fonts</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/show%20your%20results/cartography">Cartography</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
       	
       
     
@@ -758,7 +742,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Mapping</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/cartography">Compose a map</a></li>
       	
       
     
@@ -766,7 +750,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Map Examples</a></li>
       	
       
     
@@ -1154,15 +1138,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Colors & Fonts</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/show%20your%20results/cartography">Cartography</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
       	
       
     
@@ -1178,7 +1154,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Mapping</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/cartography">Compose a map</a></li>
       	
       
     
@@ -1186,7 +1162,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Map Examples</a></li>
       	
       
     
@@ -1374,13 +1350,6 @@
   <li>Overlay GeoJSON file on Leaflet basemap</li>
 </ul>
 
-<h2>Requirements:</h2>
-<ul>
-  <li>An internet connection is critical. You'll be referencing and loading the remote Leaflet scripts.</li>
-  <li>Some HTML, CSS, and JavaScript are a plus.</li>
-  <li>A text editor (Notepad++, notepad, Sublime Text Editor, etc..) for modifying our code.</li>
-</ul>
-
 <h2>Resources:</h2>
 <ul>
   <li><a href="http://www.w3schools.com/">w3Schools.com - web development reference</a></li>
@@ -1391,20 +1360,16 @@
 
 <p><a name="1"></a></p>
 
-<h3>1. Working Directory</h3>
+<h3>1. Download data</h3>
 
 <ul>
-  <li>Create a new working diretory, this is where you will store your webpage documents and data. This is called the site root. We won't need additional directories for this exercise but if you've opened up the leaflet-us-states-source.html you're able to see the site structure for these exercises. The Leaflet HTML document will depend on your folder structures- this will be explained later.</li>
+  <li>Create a new working diretory, this is where you will store your webpage documents and data. This is called the site root. We won't need additional directories for this exercise but if you've opened up the leaflet-us-states-source.html you're able to see the site structure for these exercises. The Leaflet HTML document will depend on your folder structures.</li>
+  <li>Download US States shapefile from the iPlant datastore and unzip in your site root.</li>
 </ul>
 
-<h3>2. Download US States TIGER shapefile</h3>
 
-<ol>
-  <li>Navigate to the Census TIGER site and download the US States shapefile at 500k resolution level:<br /><a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_state.html">https://www.census.gov/geo/maps-data/data/cbf/cbf_state.html</a></li>
-  <li>Save or move this file into your working directory and unzip it.</li>
-</ol>
 
-<h3>3. Create GeoJSON file</h3>
+<h3>2. Create GeoJSON file</h3>
 
 <blockquote>
   <p>GeoJSON is a format for encoding a variety of geographic data structures - <a href="http://geojson.org/">geojson.org</a></p>
@@ -1431,7 +1396,7 @@
   <li>Rename us_states.geojson to us_states.js</li>
   <li>Open us_states.js in a text editor (not Microsoft Word!) and create a JavaScript variable to call our US States data. The following JavaScript <em>must</em> be entered correctly, one small error and you will not be loading a layer into Leaflet:<br />
     <ol>
-      <li>Before creating the us_states variable, I'll explain in simple terms. You don't want to dump 25MB of GeoJSON code into your single-page web map document. We're going to reference an external source to call the GeoJSON code- the web browser loads all referenced files from the HEAD. So creating a variable in the us_states.js file will load properly when we open our leaflet.html file.
+      <li>Before creating the us_states variable, I'll explain in simple terms. You don't want to store 25MB of GeoJSON code into your single-page web map document. We're going to reference an external source to call the GeoJSON code- the web browser loads all referenced files from the HEAD. So creating a variable in the us_states.js file will load properly when we open our leaflet.html file.
       <li>Create us_states variable:<br /><br />
       <div>
         
@@ -1455,7 +1420,7 @@
     </li>
 </ol>
 
-<h3>4. Create HTML document</h3>
+<h3>3. Create HTML document</h3>
 
 HTML documents provde the content and resources to your web browser to indicate what to render on your screen.
 
@@ -1495,7 +1460,6 @@ HTML documents provde the content and resources to your web browser to indicate 
 <h3>4. Create Leaflet map</h3>
 
 This next section should be painless. We'll be copying and pasting the code, but each item will still be explained so you'll know what to do the next time you want to develop a Leaflet web map. We'll be copying and pasting in blocks of code, by element sections:
-
 
 <ol>
   <li>Prepare the HEAD. Below, there are two external files being called to, leaflet.css and leaflet.js. These provide the functionality of the map and styling. There's a STYLE tag that allow us to define the divider height and width so the map may be visible. Copy and paste the following code between your HEAD tags:<br /><br />
@@ -1560,14 +1524,14 @@ grayScale.addTo(map);
 </script>
 </li>
 <ul>
-  <li><a href="#bottom">Go to the bottom of this document to view the full code. Click here.</a>
-
+  <li><a href="#bottom">Go to the bottom of this document to view the full code. Click here.</a></li>
+</ul>
 
 <h3>5. Add layer to Leafet map</h3>
 
-<p>There are a few methods to serving spatial data. The method we're using is the most simple, least painful, and easiest method of them all. An ideal method is utelizing a Web Feature Service such as GeoServer but that's deep into the GIS programming world, and requires hours (maybe days) to configure before you can configure some more. But that's neither here nor there..</p>
+<p>There are a few methods to serving spatial data.</p>
 
-<p>Now that we know we're not going to configure GeoServer, we can go ahaed and serve our data locally by simply calling our us_states.js script containing our GeoJSON data format that we converted from a shapefile. Serving data locally means that we cannot share our data through the internet. One does not simply serve spatial data on the web..</p>
+<p>We're going to reference our us_states.js script containing our GeoJSON data format that we converted from a shapefile.</p>
 
 <p>We're going to continue our trusty copy-and-paste method to add our US States layer.</p>
 
@@ -1705,9 +1669,8 @@ d: 'examples.map-20v6611k'
 
 <a name="bottom"></a>
 <h4>Resources</h4>
-
-Full document from US States Steps 4 and 5:
-
+<ul>
+<li>Full document from US States Steps 4 and 5:<br />
 <div>
 <code>
 <span>&lt;!DOCTYPE html&gt;</span><br />
@@ -1739,12 +1702,13 @@ id: 'examples.map-20v6611k'<br />
 <span>&lt;/html&gt;</span><br />
 </code>
 </div>
+</li>
+</ul>
 
 
 
 
-
-</li></ul></li></ol></body>
+</li></ol></body>
 
 
           <!--
@@ -1766,7 +1730,7 @@ id: 'examples.map-20v6611k'<br />
   
      
     	<li><a href="/categories.html#show your results-ref">
-    		show your results <span>7</span>
+    		show your results <span>6</span>
     	</a></li>
     
   
@@ -1781,7 +1745,7 @@ id: 'examples.map-20v6611k'<br />
 
   
      
-    	<li><a href="/tags.html#leaflet-ref">leaflet <span>3</span></a></li>
+    	<li><a href="/tags.html#leaflet-ref">leaflet <span>2</span></a></li>
      
     	<li><a href="/tags.html#web map-ref">web map <span>2</span></a></li>
     
@@ -1812,7 +1776,7 @@ id: 'examples.map-20v6611k'<br />
 					<nav class="pagination">
 						<ul>
 							
-              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/show%20your%20results/hazard" title="View Hazard Map">&laquo; Hazard Map</a></li>
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/show%20your%20results/web-mapping" title="View Web Map Examples">&laquo; Web Map Examples</a></li>
 							
 							
 							<li class="pipe"> | </li>

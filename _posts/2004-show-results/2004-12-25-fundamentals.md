@@ -1,5 +1,5 @@
 ---
-title: "Colors & Fonts"
+title: "Fundamentals"
 layout: post
 category : Show your Results
 tagline: "Designing maps"

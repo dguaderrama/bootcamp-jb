@@ -22,10 +22,9 @@ http://104.237.129.71/bootcamp/more%20reading/census
 http://104.237.129.71/bootcamp/more%20reading/terrain
 http://104.237.129.71/bootcamp/show%20your%20results/overview
 http://104.237.129.71/bootcamp/show%20your%20results/fundamentals
-http://104.237.129.71/bootcamp/show%20your%20results/cartography
 http://104.237.129.71/bootcamp/show%20your%20results/map-types
+http://104.237.129.71/bootcamp/show%20your%20results/cartography
 http://104.237.129.71/bootcamp/show%20your%20results/web-mapping
-http://104.237.129.71/bootcamp/show%20your%20results/hazard
 http://104.237.129.71/bootcamp/show%20your%20results/leaflet
 http://104.237.129.71/bootcamp/ask%20some%20questions/overview
 http://104.237.129.71/bootcamp/ask%20some%20questions/functions

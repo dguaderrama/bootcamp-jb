@@ -7,14 +7,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Web Mapping</title>
+	<title>Web Map Examples</title>
 	<meta name="author" content="">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src='/bootcamp/assets/js/jquery.hoverIntent.js'></script>
   <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
 	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/" rel="alternate" title="Web Mapping" type="application/atom+xml">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Web Map Examples" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
   <link href="http://fonts.googleapis.com/css?family=League+Gothic:400,700" rel='stylesheet' type='text/css'>	
   <link href="http://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet' type='text/css'>	
@@ -297,15 +297,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Colors & Fonts</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/show%20your%20results/cartography">Cartography</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
       	
       
     
@@ -321,7 +313,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/show%20your%20results/web-mapping" class="active">Web Mapping</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/cartography">Compose a map</a></li>
       	
       
     
@@ -329,7 +321,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	<li class="active"><a href="/bootcamp/show%20your%20results/web-mapping" class="active">Web Map Examples</a></li>
       	
       
     
@@ -489,7 +481,7 @@
         <div id="header-overlay">
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-            <h1 class="h2 entry-title">Web Mapping</h1> 
+            <h1 class="h2 entry-title">Web Map Examples</h1> 
             <!--            <h2 class="h2 entry-title">interactive web maps</h2> -->
 
 
@@ -734,15 +726,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Colors & Fonts</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/show%20your%20results/cartography">Cartography</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
       	
       
     
@@ -758,7 +742,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/show%20your%20results/web-mapping" class="active">Web Mapping</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/cartography">Compose a map</a></li>
       	
       
     
@@ -766,7 +750,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	<li class="active"><a href="/bootcamp/show%20your%20results/web-mapping" class="active">Web Map Examples</a></li>
       	
       
     
@@ -1154,15 +1138,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Colors & Fonts</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/bootcamp/show%20your%20results/cartography">Cartography</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
       	
       
     
@@ -1178,7 +1154,7 @@
     
       
       	
-      	<li class="active"><a href="/bootcamp/show%20your%20results/web-mapping" class="active">Web Mapping</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/cartography">Compose a map</a></li>
       	
       
     
@@ -1186,7 +1162,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	<li class="active"><a href="/bootcamp/show%20your%20results/web-mapping" class="active">Web Map Examples</a></li>
       	
       
     
@@ -1413,41 +1389,15 @@ library or tool that facilitates the use of the Javascript language.</p>
 
 <p>Satellite imagery is the most commonly know type of TMS. Mapbox Suite uses vector data to create basemaps. Frameworks such as Leaflet.js allow you to overlay spatial data on top of TMS/basemaps.</p>
 
-<hr />
-
-<p><br /></p>
-
-<h2 id="leafletjs-basic-tutorials">Leaflet.js basic tutorials</h2>
-
-<p>Read below for basic Leaflet.js tutorials. Most of the code can be ‘easily’ figured out by reading the parameters already set. Basic knowledge of HTML and CSS are a plus, and basics of JavaScript will help you develop interactive maps.</p>
-
-<p><a href="http://leafletjs.com/reference.html">View the Leaflet.js API here</a></p>
-
-<h3 id="qgis2leaf">qgis2leaf</h3>
-
-<p>A simple user-friendly method of creating a basic Leaflet with a layer through QGIS. <a href="https://github.com/geolicious/qgis2leaf">See the GitHub repository here</a>.</p>
-
-<ol>
-  <li>Open QGIS and install qgis2leaf plugin:
-    <ul>
-      <li><em>Menu Bar &gt; Plugins &gt; Manage and Install PLugins &gt; Search ‘qgis2leaf’</em></li>
-    </ul>
-  </li>
-  <li>Add vector layer.
-    <ul>
-      <li>NOTE: vector data is stored as points (with lines connecting lines, polylines, and polygons). The output of a 90MB shapefile to <a href="http://geojson.org/">GeoJSON</a> is nearly 300MB (this will vary, however). Understanding your data beforehand will help you in the long run. See <a href="/bootcamp/data wrangling/data-wrangling/">Data Wrangling</a></li>
-    </ul>
-  </li>
-</ol>
 
 
           <!--
 					<div class="meta">
 						<p class="date-publish">
 							Published: 
-							<date class="date-pub" title="2004-10-20T00:00:00-07:00" datetime="2004-10-20T00:00:00-07:00" pubdate>
-							<span class="month"><abbr>October</abbr></span>
-							<span class="day">20</span>
+							<date class="date-pub" title="2004-09-01T00:00:00-07:00" datetime="2004-09-01T00:00:00-07:00" pubdate>
+							<span class="month"><abbr>September</abbr></span>
+							<span class="day">01</span>
 							<span class="year">2004</span>
 							</date>
 						</p>
@@ -1460,7 +1410,7 @@ library or tool that facilitates the use of the Javascript language.</p>
   
      
     	<li><a href="/categories.html#show your results-ref">
-    		show your results <span>7</span>
+    		show your results <span>6</span>
     	</a></li>
     
   
@@ -1479,7 +1429,7 @@ library or tool that facilitates the use of the Javascript language.</p>
      
     	<li><a href="/tags.html#web map-ref">web map <span>2</span></a></li>
      
-    	<li><a href="/tags.html#leaflet-ref">leaflet <span>3</span></a></li>
+    	<li><a href="/tags.html#leaflet-ref">leaflet <span>2</span></a></li>
      
     	<li><a href="/tags.html#openlayers-ref">openlayers <span>1</span></a></li>
      
@@ -1512,13 +1462,13 @@ library or tool that facilitates the use of the Javascript language.</p>
 					<nav class="pagination">
 						<ul>
 							
-              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/show%20your%20results/map-types" title="View Map Types">&laquo; Map Types</a></li>
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/show%20your%20results/cartography" title="View Compose a map">&laquo; Compose a map</a></li>
 							
 							
 							<li class="pipe"> | </li>
 							
 							
-              <li class="next"><a class="internal" rel="next"  href="/bootcamp/show%20your%20results/hazard" title="View Hazard Map">Hazard Map &raquo;</a></li>
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/show%20your%20results/leaflet" title="View Leaflet Exercise">Leaflet Exercise &raquo;</a></li>
 							
 						</ul>
 					</nav>

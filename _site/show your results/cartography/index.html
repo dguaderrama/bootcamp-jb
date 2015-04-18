@@ -7,14 +7,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Cartography</title>
+	<title>Compose a map</title>
 	<meta name="author" content="">
 	
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src='/bootcamp/assets/js/jquery.hoverIntent.js'></script>
   <script src='/bootcamp/assets/js/bootcamp.js'></script>  	
 	<link href='/bootcamp/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/" rel="alternate" title="Cartography" type="application/atom+xml">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Compose a map" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
   <link href="http://fonts.googleapis.com/css?family=League+Gothic:400,700" rel='stylesheet' type='text/css'>	
   <link href="http://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet' type='text/css'>	
@@ -297,15 +297,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Colors & Fonts</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li class="active"><a href="/bootcamp/show%20your%20results/cartography" class="active">Cartography</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
       	
       
     
@@ -321,7 +313,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Mapping</a></li>
+      	<li class="active"><a href="/bootcamp/show%20your%20results/cartography" class="active">Compose a map</a></li>
       	
       
     
@@ -329,7 +321,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Map Examples</a></li>
       	
       
     
@@ -489,8 +481,8 @@
         <div id="header-overlay">
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-            <h1 class="h2 entry-title">Cartography</h1> 
-            <!--            <h2 class="h2 entry-title">Supporting tagline</h2> -->
+            <h1 class="h2 entry-title">Compose a map</h1> 
+            <!--            <h2 class="h2 entry-title">making print-based maps</h2> -->
 
 
 
@@ -734,15 +726,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Colors & Fonts</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li class="active"><a href="/bootcamp/show%20your%20results/cartography" class="active">Cartography</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
       	
       
     
@@ -758,7 +742,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Mapping</a></li>
+      	<li class="active"><a href="/bootcamp/show%20your%20results/cartography" class="active">Compose a map</a></li>
       	
       
     
@@ -766,7 +750,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Map Examples</a></li>
       	
       
     
@@ -1154,15 +1138,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Colors & Fonts</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li class="active"><a href="/bootcamp/show%20your%20results/cartography" class="active">Cartography</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/fundamentals">Fundamentals</a></li>
       	
       
     
@@ -1178,7 +1154,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Mapping</a></li>
+      	<li class="active"><a href="/bootcamp/show%20your%20results/cartography" class="active">Compose a map</a></li>
       	
       
     
@@ -1186,7 +1162,7 @@
     
       
       	
-      	<li><a href="/bootcamp/show%20your%20results/hazard">Hazard Map</a></li>
+      	<li><a href="/bootcamp/show%20your%20results/web-mapping">Web Map Examples</a></li>
       	
       
     
@@ -1340,42 +1316,40 @@
 
 <div class="entry-content content">
   
-<h3 id="exercises">Exercises</h3>
+<h1 id="exercise">Exercise</h1>
 
-<p>Making maps in QGIS</p>
-
-<p>Before starting this next section, add the following layers:</p>
+<h2 id="objectives">Objectives</h2>
 
 <ul>
-  <li>geo_coded.tif
- <!--* slope-geo-sect.tif-->
- <!--* landslide-suscept.tif--></li>
-  <li>dem-washington.tif</li>
+  <li>Create a print-based (static, non-interactive) map in QGIS.</li>
 </ul>
-
-<p><img src="/bootcamp/assets/images/carto/carto-1.png" alt="Spatial Data Carpentry: Cartography in QGIS" /></p>
 
 <hr />
 
-<h3 id="exercise-1">Exercise 1</h3>
+<h2 id="procedures">Procedures</h2>
 
 <p>Create map of Washington rock strength</p>
 
-<p>Needs: dem, geo_coded</p>
+<p>Layers needs:</p>
 
-<p>Layering - same concept as photo editing; layers stack, or go on top of each other. Increasing transparency will reduce layer opacity or make it see-through.</p>
+<ul>
+  <li>geo_coded.tif</li>
+  <li>dem-washington.tif</li>
+</ul>
+
+<p><img src="/bootcamp/assets/images/carto/carto-1.png" alt="Spatial Data Carpentry: Show your Results in QGIS" /></p>
 
 <h4 id="prepare-data-for-map">Prepare data for map</h4>
 
 <ol>
   <li>Uncheck all layers, less dem-washington and geo_coded
-<!--2. Create hillshade: * <em>Menu Bar > Raster > Analysis > DEM (Terrain models)</em> * Configure input as follows:<br> Notice the Z factor, this will exaggerate elevation and give the map an appearance of greater relief.<br>![Spatial Data Carpentry: Cartography in QGIS](/bootcamp/assets/images/carto/carto-2.png) --></li>
+<!--2. Create hillshade: * <em>Menu Bar > Raster > Analysis > DEM (Terrain models)</em> * Configure input as follows:<br> Notice the Z factor, this will exaggerate elevation and give the map an appearance of greater relief.<br>![Spatial Data Carpentry: Show your Results in QGIS](/bootcamp/assets/images/carto/carto-2.png) --></li>
   <li>Load hillshade-washington.tif</li>
   <li>Be sure geo_coded is moved up, or on top of dem-washington:
     <ul>
       <li><em>Click-hold-drag geo_coded</em> to the top of the layer list.</li>
       <li>Uncheck dem-washington layer.<br />
- <img src="/bootcamp/assets/images/carto/carto-3.png" alt="Spatial Data Carpentry: Cartography in QGIS" /></li>
+ <img src="/bootcamp/assets/images/carto/carto-3.png" alt="Spatial Data Carpentry: Show your Results in QGIS" /></li>
     </ul>
   </li>
   <li>Style geo_coded with qml-style file:
@@ -1383,10 +1357,10 @@
       <li><em>Right-click geo_coded &gt; Properties &gt; Style</em></li>
       <li><em>Load Style… (button at bottom) &gt; Navigate to rock-strength.qml</em></li>
       <li>QGIS does not load actual minimum and maximum values by default. This enables faster layer rendering. You’ll want to load actual min/max values to visualize the correct data. To load actual min/max values:<br /><em>Load min/max values: Min/max<br />Accuracy: Actual (slower)<br />Click Load<br />Click Apply to save changes</em><br />
- <img src="/bootcamp/assets/images/carto/carto-4.png" alt="Spatial Data Carpentry: Cartography in QGIS" /></li>
+ <img src="/bootcamp/assets/images/carto/carto-4.png" alt="Spatial Data Carpentry: Show your Results in QGIS" /></li>
       <li>Increase transparency:<br /><em>From within layer Properties &gt; Transparency &gt; Global Transparency &gt; 50%<br />Click Apply, OK to save changes and close Properties</em><br /></li>
       <li>The product just created visualizes rock strength within Washington state with enhanced effects using hillshade and transparency.
- <img src="/bootcamp/assets/images/carto/carto-5.png" alt="Spatial Data Carpentry: Cartography in QGIS" /></li>
+ <img src="/bootcamp/assets/images/carto/carto-5.png" alt="Spatial Data Carpentry: Show your Results in QGIS" /></li>
     </ul>
   </li>
 </ol>
@@ -1398,7 +1372,7 @@
     <ul>
       <li><em>Menu Bar &gt; Project &gt; New Print Composer</em></li>
       <li>Print Composer toolbar icon<br />
- <img src="/bootcamp/assets/images/carto/carto-6.png" alt="Spatial Data Carpentry: Cartography in QGIS" /></li>
+ <img src="/bootcamp/assets/images/carto/carto-6.png" alt="Spatial Data Carpentry: Show your Results in QGIS" /></li>
     </ul>
   </li>
   <li>Create title:
@@ -1411,9 +1385,9 @@
     <ul>
       <li><em>Menu Bar &gt; Layout &gt; Add Map</em> OR</li>
       <li><strong>Add new map</strong> toolbar icon:<br />
- <img src="/bootcamp/assets/images/carto/carto-7.png" alt="Spatial Data Carpentry: Cartography in QGIS" /></li>
+ <img src="/bootcamp/assets/images/carto/carto-7.png" alt="Spatial Data Carpentry: Show your Results in QGIS" /></li>
       <li><strong>Move Item Content</strong> tool will allow you to move the map without moving the bounding box<br />
- <img src="/bootcamp/assets/images/carto/carto-8.png" alt="Spatial Data Carpentry: Cartography in QGIS" /></li>
+ <img src="/bootcamp/assets/images/carto/carto-8.png" alt="Spatial Data Carpentry: Show your Results in QGIS" /></li>
       <li>Explore tools by hovering over the toolbar icon or go to <em>Menu Bar &gt; Layout</em> to see the names of each layout tool.</li>
     </ul>
   </li>
@@ -1421,9 +1395,9 @@
     <ul>
       <li><em>Menu Bar &gt; Layout &gt; Add Legend</em></li>
       <li>Notice how names and values are not appropriate for a final map. To open legend propertie, using the <strong>Select/Move Item</strong> tool: <em>Select the legend layer and notice the Item properties on the right</em><br />
- <img src="/bootcamp/assets/images/carto/carto-9.png" alt="Spatial Data Carpentry: Cartography in QGIS" /></li>
+ <img src="/bootcamp/assets/images/carto/carto-9.png" alt="Spatial Data Carpentry: Show your Results in QGIS" /></li>
       <li>Item properties: Here you are able to change the title, select which legend to produce based on the map layer, modify legend item, etc. See the images below for the list of options.<br />
- <img src="/bootcamp/assets/images/carto/carto-10.png" alt="Spatial Data Carpentry: Cartography in QGIS" /></li>
+ <img src="/bootcamp/assets/images/carto/carto-10.png" alt="Spatial Data Carpentry: Show your Results in QGIS" /></li>
     </ul>
   </li>
   <li>Add a title:
@@ -1451,25 +1425,20 @@
   <li>Export map:
     <ul>
       <li>As Image, PDF, or SVG.<br />
- <img src="/bootcamp/assets/images/carto/carto-final-map.jpg" style="border:1px solid black;" alt="Spatial Data Carpentry: Cartography in QGIS" /></li>
+ <img src="/bootcamp/assets/images/carto/carto-final-map.jpg" style="border:1px solid black;" alt="Spatial Data Carpentry: Show your Results in QGIS" /></li>
     </ul>
   </li>
 </ol>
 
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
 
 
           <!--
 					<div class="meta">
 						<p class="date-publish">
 							Published: 
-							<date class="date-pub" title="2004-12-20T00:00:00-07:00" datetime="2004-12-20T00:00:00-07:00" pubdate>
-							<span class="month"><abbr>December</abbr></span>
-							<span class="day">20</span>
+							<date class="date-pub" title="2004-10-01T00:00:00-07:00" datetime="2004-10-01T00:00:00-07:00" pubdate>
+							<span class="month"><abbr>October</abbr></span>
+							<span class="day">01</span>
 							<span class="year">2004</span>
 							</date>
 						</p>
@@ -1482,7 +1451,7 @@
   
      
     	<li><a href="/categories.html#show your results-ref">
-    		show your results <span>7</span>
+    		show your results <span>6</span>
     	</a></li>
     
   
@@ -1497,11 +1466,9 @@
 
   
      
-    	<li><a href="/tags.html#qgis-ref">qgis <span>5</span></a></li>
+    	<li><a href="/tags.html#cartography-ref">cartography <span>4</span></a></li>
      
-    	<li><a href="/tags.html#leaflet-ref">leaflet <span>3</span></a></li>
-     
-    	<li><a href="/tags.html#colorbewer-ref">colorbewer <span>2</span></a></li>
+    	<li><a href="/tags.html#exercise-ref">exercise <span>2</span></a></li>
     
   
 
@@ -1530,13 +1497,13 @@
 					<nav class="pagination">
 						<ul>
 							
-              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/show%20your%20results/fundamentals" title="View Colors & Fonts">&laquo; Colors & Fonts</a></li>
+              <li class="prev"><a class="internal" rel="prev"  href="/bootcamp/show%20your%20results/map-types" title="View Map Types">&laquo; Map Types</a></li>
 							
 							
 							<li class="pipe"> | </li>
 							
 							
-              <li class="next"><a class="internal" rel="next"  href="/bootcamp/show%20your%20results/map-types" title="View Map Types">Map Types &raquo;</a></li>
+              <li class="next"><a class="internal" rel="next"  href="/bootcamp/show%20your%20results/web-mapping" title="View Web Map Examples">Web Map Examples &raquo;</a></li>
 							
 						</ul>
 					</nav>
