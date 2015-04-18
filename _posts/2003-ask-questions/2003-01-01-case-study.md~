@@ -1,0 +1,277 @@
+---
+title: "Landslide Exercise"
+layout: post
+category : Ask some Questions
+tagline: ""
+tags : [case study, landslide]
+---
+
+{% include JB/setup %}
+
+# Landslide Susceptibility Model
+
+----
+
+#### Objectives:
+
+
+----
+
+### Overview
+
+This case study has been chosen to demonstrate the concepts being highlighted by the bootcamp. We have chosen a landslide susceptibility analysis due to the diversity of inputs and a general curiousity into the methodology. The study area has been chosen in response to the Oso Mudslide[^1] which took place in Washington State on March 22nd, 2014. The methodology for this analysis is based off of work done by the California Geological Survey in Conjunction with the USGS[^2].
+
+----
+
+### Datasets
+
+
+Using the iRODS plugin, download the following layers:
+
+  - USA_states.shp
+  - DEM.tif
+  - WA_geology.shp
+
+----
+
+### Data Wrangling
+
+<h4>Set project projection</h4>
+<p>Before starting any project in a GIS program, you should first set the project projection to make sure your data comes in with the same extent. If you don't set the project's projection, the program will use the projection of the first layer added or EPSG:4326.</p>
+ <p> You can set the projection with the following steps:</p>
+ <ul>
+  <li> In the top navbar go  <em>Project > Project Properties</em> <br>
+  The following window should open up.<br><br>
+  <img src='{{site.baseurl}}{{ASSET_PATH}}/images/qgis-project-properties.png' class="screen-shot" /><br></li>
+
+  <li> Select CRS in the Left menu</li>
+  <li> Check <em>Enable On-the-fly CRS transformation</em></li>
+  <li>Select <em>NAD83(HARN)/Washington South(ftUS) EPSG:2927</em> from the List of Projections<br><br>
+  <img src="{{site.baseurl}}{{ASSET_PATH}}/images/qgis-projection.png" class="screen-shot" /><br></li>
+</ul>
+<h4>Add the US States shapefile</h4>
+<p>Since our project is directed at the state of Washington, we should use the state boundary as our study area. The Global Administrative Areas[^7] project provides high-quality boundary data on country,state and county levels. We can use the US-state level dataset to get the Washington boundary. </p>
+<ul>
+  <li> Open the iRods Plugin and navigate to the <em>Exercise_3</em> directory</li>
+  <li>Load the USA_states.shp layer<br><br></li>
+  <img src="{{site.baseurl}}{{ASSET_PATH}}/images/usa-states.png" class="screen-shot" /><br>
+</ul>
+<h4>Create a layer for the state of Washington</h4> 
+  <p>SCreating a layer for the state of Washington will let us define the boundary for our study.</p>
+  <ol>
+    <li>In the top toolbar, select <b>Select Single Feature</b></li>
+    <li> Click on the state of Washington to select it<br><br>
+    <img src="{{site.baseurl}}{{ASSET_PATH}}/images/washington-selected.png" class="screen-shot" /><br></li>
+    <li> Right click on the USA_states layer and select <em>Save Selection As...</em></li>
+    <ul>
+      <li>Format: ESRI Shapefile</li>
+      <li> Save as: washington.shp</li>
+      <li> Encoding: UTF-8</li>
+      <li>CRS: Project CRS</li>
+    </ul>
+    <img src="{{site.baseurl}}{{ASSET_PATH}}/images/save-washington.png" class="screen-shot" /></li>
+  </ol>
+<h4>Load the new washington layer</h4>
+  <ol> 
+    <li>Select <b>Add Vector Layer</b></li>
+    <li> Browse to the new washington layer and click *Open*</li>
+  </ol>
+<b>Remove the USA_states layer from the project</b>
+  <p>Now that we have the Washington layer, we can get rid of the U.S. layer. </p>
+  <ol>
+    <li>Right click the layer in the table of contents</li>
+    <li> Select <b>Remove</b></li>
+  </ol>
+
+<h4> Add the DEM layer from the iPlant data store</h4>
+  <p>DEMs or <em>Digital Elevation Models</em> are very useful for establishing topological context in a map. DEMs generally come as a raster dataset that consists of elevation values. There are several different byproducts that can be created from DEMs.<br>
+  This DEM was taken from GTOPO30 satellite data.</p>
+  <ol>
+    <li> Open the iRods plugin and navigate to the directory <em>Exercise_3</em></li>
+    <li>Select DEM.tif</li>
+    <li> Click Load<br><br>
+    <img src="{{site.baseurl}}{{ASSET_PATH}}/images/dem-load.png" class="screen-shot" /></li>
+  </ol>
+<h4>Project the DEM </h4>
+<p>The DEM uses the WGS 84 coordinate system, which means it is measured in degrees. Since our project is in Washington State Plane which is measured in meters, we need to reproject the DEM to use it in our analysis.</p>
+  <ol>
+    <li>In the top menu, go to <b>Raster > Projections > Warp (Reproject)</b></li>
+    <li>Use the following options
+    <ul>
+      <li>Input File: <b>DEM</b></li>
+      <li> Output File: <b>dem_project.tif</b></li>
+      <li>Source SRS: <b>EPSG:4326</b></li>
+      <li>Resampling Method: <b>Near</b></li>
+      <li>No data values: <b>0</b></li>
+    </ul>
+    <img src="{{site.baseurl}}{{ASSET_PATH}}/images/project-dem.png" class="screen-shot" /><br></li>
+  </ol>
+<h4> Clip the dem to the state of Washington</h4>
+<p>Clipping the dem will remove any values outside of the study area, which will make the analysis more efficient.</p>
+  <ol>
+    <li>In the top menu, select <b>Raster > Extraction > Clipper</b></li>
+    <li> In the window, set the following options:
+      <ul>
+        <li> Input file: dem_project.tif</li>
+        <li> Output file: WA_dem.tif</li>
+        <li> No data value: 0</li>
+        <li> Clipping Mode: Mask layer > washington</li>
+        <li> Load into canvas when finished</li>
+      </ul>
+    <img src="{{site.baseurl}}{{ASSET_PATH}}/images/dem-washington.png" class="screen-shot" /></li>
+    <li> Remove the DEM layer</li>
+  </ol>
+  <p> The project area should now look like this:</p><br>
+
+    <img src="{{site.baseurl}}{{ASSET_PATH}}/images/dem-washington-display.png" class="screen-shot" /> </li>
+<h4> Create a slope surface </h4>
+
+  In the top menu, select **Raster > Analysis > DEM** <br>
+  * Input file: WA_dem
+  * Output file: WA_slope.tif
+  * Mode: Slope
+  * Scale: 0.30
+  * Load into canvas when finished<br>
+  ![create-slope]({{site.baseurl}}{{ASSET_PATH}}/images/create-slope.png)<br>
+11. Create a hillshade layer<br>
+  In the top menu, select **Raster > Analysis > DEM** <br>
+  * Input file: WA_dem
+  * Output file: WA_hillshade.tif
+  * Mode: Hillshade
+  * Z factor: 1.0
+  * Scale: 0.30
+  * Azimuth of light: 315.0
+  * Altitude of light: 45.0
+  * Load into canvas when finished<br>
+  ![hillshade-calc]({{site.baseurl}}{{ASSET_PATH}}/images/hillshade-calc.png)<br>
+
+ 1.  Import wa_geology.shp:
+   * <em>Open QGIS, Add Vector Layer, and navigate to wa_geology.shp.</em><br>
+![QGIS: Add geology vector layer into map view]({{site.baseurl}}{{ASSET_PATH}}/images/lesson-1/lesson-1-01.png)
+ 2.  Open field calculator in Attribute Table:
+   * <em>Right-click wa_geology in Layers List > Open Attribute Table > Toggle editing mode (top left)</em>
+   * While in edit mode, <em>Open field calculator (top right)</em><br>
+![QGIS: Open field calcultor]({{site.baseurl}}{{ASSET_PATH}}/images/lesson-1/lesson-1-03.png)
+ 3.  Add and calculate new field:
+   * Match your Field Calculator window to the one below for creating a new field 'strength' with a range of values of 0-3. Be sure to match it exactly as it's displayed: *double-quotes are evaluated as a column whereas single-quotes are evaluated as column values. Save your changes once finished*.<br><br>**Expression:<br>case<br>when "rock_type" = 'soft' then 1<br>when "rock_type" = 'medium' then 2<br>when "rock_type" = 'hard' then 3<br>else 0<br>done<br>**
+![QGIS: Add and calculate new field]({{site.baseurl}}{{ASSET_PATH}}/images/lesson-1/lesson-1-04.png)
+ 4. Style wa_geology.shp:
+   * <em>Right-click on wa_geology.shp in layer list > Properties > Style</em>
+   * Change style type from <em>Single Symbol</em> to <em>Categorized</em>.
+   * Categorize by <em>strength</em> and click <em>Classify</em> to add classes.
+   * Match your colors with the example below or get fancy with your own styling.<br>
+![QGIS: Style shapefile]({{site.baseurl}}{{ASSET_PATH}}/images/lesson-1/lesson-1-07.png)
+ 5. Rasterize wa_geology.shp:
+   * GDAL's rasterize is a prefered method. This can be accessed through <em>Menu Bar > Raster > Conversion > Rasterize (Vector to raster)</em>. Notice how the parameters have been diabled in the example below. There's a specific reason for this. Complete the parameter inputs: <em>Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000</em>. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.
+   * <em>Click the edit icon (pencil) locate near the block of code</em>. This enables you to add those non-QGIS parameters.
+   * <em>Add the line of code</em> ``-at -a_nodata 0`` just after ``gdal_rasterize`` 
+   * <em>-at</em>: Enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.[^3]
+   * <em>-a_nodata $value</em>: Assign a specified nodata value to output bands - this prevents pixels with no data from being written into the output raster.[^3]
+   * [Here's a link to the gdal_rasterize parameters](http://www.gdal.org/gdal_rasterize.html).<br>
+   ![QGIS: Rasterize - Vector to raster]({{site.baseurl}}{{ASSET_PATH}}/images/lesson-1/lesson-1-11-2.png)
+ 6. Style the new wa_geology.tif:
+   * Open wa_geology.tif style properties. HINT: See step 4.
+   * For <em>Render type</em>, select <em>Singleband pseudocolor</em>
+   * On the right select: <em>Load min/max values: Min/max; Extend: Actual (slower); then Load</em>. This loads actual values into the classification. QGIS Approximates values by defautl. 
+   * <em>Change Mode to Equal Interval with 3 classes</em>. Remember, we only have three rock strength classes: soft, medium, hard. Change your color map if you'd like. The color maps are not stored into the raster, so the raster will load with the defaul color map (black to white) each time its opened in a new project.
+   * <em>Click Classify</em>. Apply and OK.<br>
+   ![QGIS: Style raster]({{site.baseurl}}{{ASSET_PATH}}/images/lesson-1/lesson-1-13.png)
+
+
+
+
+----
+
+### Data Analysis
+
+Reclassifying inputs:
+
+####Slope
+
+| Category| &nbsp;&nbsp;&nbsp;&nbsp; | Slope |
+|:-:|-|:----------:|
+| 1 || < 3&deg;   |
+| 2 || 3-5&deg;   |
+| 3 || 5-10&deg;  |
+| 4 || 10-15&deg; |
+| 5 || 15-20&deg; |
+| 6 || 20-30&deg; |
+| 7 || 30-40&deg; |
+| 8 || > 40&deg;  |
+
+In order to reclass our slope layer into something useful, we will use the grass *r.reclass* tool
+
+The r.reclass tool reads text files which define the classification rules(rule files). For this example, our rule fill will have the following contents:
+
+#####*slope-rule.txt*
+~~~ 
+0 thru 2.99 = 1
+3 thru 4.99 = 2
+5 thru 9.99 = 3
+10 thru 14.99 = 4
+15 thru 19.99 = 5
+20 thru 29.99 = 6 
+30 thru 39.99 = 7
+40 thru 90 = 8
+~~~
+
+Once we have created the slope rule file. We can select the r.reclass tool from the Processing Toolbox.
+
+In the processing toolbox, select *GRASS commands* > *Raster* > *r.reclass*
+
+We will use the following settings for the reclassify tool:<br>
+
+  * Input Raster: _WA_slope_
+  * File containing reclass rules: _slope-rules.txt_
+  * Output raster layer: _slope-reclass.tif_ (NOTE: select *Save to file...* or else QGIS will not create a permanent output)<br>
+![slope-reclass]({{site.baseurl}}{{ASSET_PATH}}/images/slope-reclass.png)
+
+
+####Susceptibility
+
+We will have to do some raster calculations to create the output data set. The classifications are taken from the California study[^2] and are as follows:
+
+![landslide-key]({{site.baseurl}}{{ASSET_PATH}}/images/landslide-key.png)
+
+Since we need to cross reference these categories, we need to create a raster which represents each unique combination of the slope and rock strength classes. A method to create unique combinations is to promote the rock strength categories a decimal place. This would make the rock classes: 10,20, and 30.
+
+To create these new classes, we can load the source_files/WA_geology.tif, and secondary_files/slope_reclass.tif
+
+In the top menu, select *Raster* > *Raster Calculator*
+
+Our raster calculator expression will be: 
+
+{% highlight bash %}
+("geo_coded@1" * 10) + "slope-reclass@1"
+{% endhighlight %}
+
+Output layer: slope-geo-sect.tif
+
+![raster-calc]({{site.baseurl}}{{ASSET_PATH}}/images/raster-calc.png)
+
+
+We can apply the landslide susceptibility classification using r.reclass and the following rule file:
+
+*landslide-rule.txt*
+
+~~~
+11 12 13 21 31 = 0
+14 = 3
+22 23 = 5
+15 = 6
+16 32 33 = 7
+17 18 24 = 8
+25 thru 28 34 = 9
+35 thru 38 = 10
+~~~
+
+### Continue to SHOW YOUR RESULTS
+
+[^1]: http://www.usgs.gov/blogs/features/usgs_top_story/landslide-in-washington-state
+[^2]: http://www.conservation.ca.gov/cgs/information/publications/Documents/MS58.pdf
+[^3]: http://www.spatialreference.org/ref/epsg/2927
+[^4]: https://lta.cr.usgs.goc/GTOPO30
+[^5]: http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx
+[^6]: http://wdfw.wa.gov/conservation/gap/land_cover_data.html
+[^7]: http://www.esrl.noaa.gov/thredds/catalog/Datasets/cpc_us_precip/catalog.xml#Datasets/cpc_us_precip/RT
+[^8]: http://gadm.org/country

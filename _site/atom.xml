@@ -4,7 +4,7 @@
  <title>Spatial Data Carpentry</title>
  <link href="http://104.237.129.71/bootcamp/" rel="self"/>
  <link href="http://104.237.129.71/bootcamp"/>
- <updated>2015-04-16T18:54:41-07:00</updated>
+ <updated>2015-04-17T17:59:11-07:00</updated>
  <id>http://104.237.129.71/bootcamp</id>
  <author>
    <name></name>
@@ -3267,276 +3267,245 @@ id: &#39;examples.map-20v6611k&#39;&lt;br /&gt;
    <updated>2003-01-01T00:00:00-07:00</updated>
    <id>http://104.237.129.71/bootcamp/ask%20some%20questions/case-study</id>
    <content type="html">
-&lt;h4 id=&quot;prerequisites-intro-data-collection-data-wrangling&quot;&gt;Prerequisites: Intro, Data Collection, Data Wrangling&lt;/h4&gt;
-
-&lt;h3 id=&quot;objectives&quot;&gt;Objectives:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Be able to reclassify a raster. &lt;/li&gt;
-  &lt;li&gt;Understand basics of raster calculations.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;exercise&quot;&gt;Exercise&lt;/h3&gt;
-
-&lt;p&gt;This exercise will walk through reclassifying raster data.&lt;/p&gt;
+&lt;h1 id=&quot;landslide-susceptibility-model&quot;&gt;Landslide Susceptibility Model&lt;/h1&gt;
 
 &lt;hr /&gt;
 
-&lt;h1 id=&quot;lessons&quot;&gt;Lessons&lt;/h1&gt;
-
-&lt;p&gt;Lessons are intended for learning basic spatial functions with QGIS. Each lesson is a prerequisite for the subsequent lesson. For best results, start from beginning to end from collecting data throught visualizing the final product. However, data will be prepared and available if you wish to jump through lessons without completing the former.&lt;/p&gt;
-
-&lt;p&gt;DISCLAIMER: Data provided here have been reclassified/modified to fit the needs of the lessons and should not be used in any scientific analysis. Original data sources and researh articles are available if you feel the need to pursue your dreams of performing a landslide susceptibility analysis. &lt;a href=&quot;/bootcamp/references/citations&quot;&gt;Original data and research articles are located here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-scenario&quot;&gt;The Scenario:&lt;/h2&gt;
-
-&lt;p&gt;You’ve been assigned the task of locating high-risk landslide areas in the state of Washington, specifically the densely population northwest region. You must locate and prepare your data before performing your analysis. The Governor of Washington also wants to make this data publicaly through an online web map. &lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;objectives&quot;&gt;Objectives:&lt;/h4&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;
 
-&lt;h2 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h2&gt;
+&lt;p&gt;This case study has been chosen to demonstrate the concepts being highlighted by the bootcamp. We have chosen a landslide susceptibility analysis due to the diversity of inputs and a general curiousity into the methodology. The study area has been chosen in response to the Oso Mudslide[^1] which took place in Washington State on March 22nd, 2014. The methodology for this analysis is based off of work done by the California Geological Survey in Conjunction with the USGS[^2].&lt;/p&gt;
 
-&lt;h3 id=&quot;what-this-lesson-covers&quot;&gt;What this lesson covers:&lt;/h3&gt;
+&lt;hr /&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;downloading data&lt;/li&gt;
-  &lt;li&gt;downloading meta data&lt;/li&gt;
-  &lt;li&gt;file storage/project directory (keep your data directories clean)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;datasets&quot;&gt;Datasets&lt;/h3&gt;
 
-&lt;h3 id=&quot;objective&quot;&gt;Objective:&lt;/h3&gt;
-
-&lt;p&gt;Gather data necessary for locating high-risk landslide areas in the state of Washington. &lt;/p&gt;
-
-&lt;h3 id=&quot;data-sources&quot;&gt;Data sources:&lt;/h3&gt;
+&lt;p&gt;Using the iRODS plugin, download the following layers:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;GTOPO30&lt;/li&gt;
-  &lt;li&gt;Washington boundary&lt;/li&gt;
-  &lt;li&gt;Washington geology&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://factfinder.census.gov/&quot;&gt;American Fact Finder (real estate)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.census.gov/geo/maps-data/data/tiger-line.html&quot;&gt;TIGER/Line (shapefiles and geodatabases)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;USA_states.shp&lt;/li&gt;
+  &lt;li&gt;DEM.tif&lt;/li&gt;
+  &lt;li&gt;WA_geology.shp&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;steps&quot;&gt;Steps:&lt;/h3&gt;
+&lt;hr /&gt;
 
+&lt;h3 id=&quot;data-wrangling&quot;&gt;Data Wrangling&lt;/h3&gt;
+
+&lt;h4&gt;Set project projection&lt;/h4&gt;
+&lt;p&gt;Before starting any project in a GIS program, you should first set the project projection to make sure your data comes in with the same extent. If you don&#39;t set the project&#39;s projection, the program will use the projection of the first layer added or EPSG:4326.&lt;/p&gt;
+&lt;p&gt; You can set the projection with the following steps:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt; In the top navbar go  &lt;em&gt;Project &amp;gt; Project Properties&lt;/em&gt; &lt;br /&gt;
+  The following window should open up.&lt;br /&gt;&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/qgis-project-properties.png&quot; class=&quot;screen-shot&quot; /&gt;&lt;br /&gt;&lt;/li&gt;
+
+  &lt;li&gt; Select CRS in the Left menu&lt;/li&gt;
+  &lt;li&gt; Check &lt;em&gt;Enable On-the-fly CRS transformation&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Select &lt;em&gt;NAD83(HARN)/Washington South(ftUS) EPSG:2927&lt;/em&gt; from the List of Projections&lt;br /&gt;&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/qgis-projection.png&quot; class=&quot;screen-shot&quot; /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Add the US States shapefile&lt;/h4&gt;
+&lt;p&gt;Since our project is directed at the state of Washington, we should use the state boundary as our study area. The Global Administrative Areas[^7] project provides high-quality boundary data on country,state and county levels. We can use the US-state level dataset to get the Washington boundary. &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt; Open the iRods Plugin and navigate to the &lt;em&gt;Exercise_3&lt;/em&gt; directory&lt;/li&gt;
+  &lt;li&gt;Load the USA_states.shp layer&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/usa-states.png&quot; class=&quot;screen-shot&quot; /&gt;&lt;br /&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Create a layer for the state of Washington&lt;/h4&gt;
+&lt;p&gt;SCreating a layer for the state of Washington will let us define the boundary for our study.&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;prepare project directory
+    &lt;li&gt;In the top toolbar, select &lt;b&gt;Select Single Feature&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt; Click on the state of Washington to select it&lt;br /&gt;&lt;br /&gt;
+    &lt;img src=&quot;/bootcamp/assets/images/washington-selected.png&quot; class=&quot;screen-shot&quot; /&gt;&lt;br /&gt;&lt;/li&gt;
+    &lt;li&gt; Right click on the USA_states layer and select &lt;em&gt;Save Selection As...&lt;/em&gt;&lt;/li&gt;
     &lt;ul&gt;
-      &lt;li&gt;this is intended for a best practice&lt;/li&gt;
-      &lt;li&gt;create folder structure&lt;/li&gt;
+      &lt;li&gt;Format: ESRI Shapefile&lt;/li&gt;
+      &lt;li&gt; Save as: washington.shp&lt;/li&gt;
+      &lt;li&gt; Encoding: UTF-8&lt;/li&gt;
+      &lt;li&gt;CRS: Project CRS&lt;/li&gt;
     &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;how to download gtopo30
+    &lt;img src=&quot;/bootcamp/assets/images/save-washington.png&quot; class=&quot;screen-shot&quot; /&gt;
+  &lt;/ol&gt;
+&lt;h4&gt;Load the new washington layer&lt;/h4&gt;
+&lt;ol&gt; 
+    &lt;li&gt;Select &lt;b&gt;Add Vector Layer&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt; Browse to the new washington layer and click *Open*&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;p&gt;&lt;b&gt;Remove the USA_states layer from the project&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Now that we have the Washington layer, we can get rid of the U.S. layer. &lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt;Right click the layer in the table of contents&lt;/li&gt;
+    &lt;li&gt; Select &lt;b&gt;Remove&lt;/b&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+
+&lt;h4&gt; Add the DEM layer from the iPlant data store&lt;/h4&gt;
+&lt;p&gt;DEMs or &lt;em&gt;Digital Elevation Models&lt;/em&gt; are very useful for establishing topological context in a map. DEMs generally come as a raster dataset that consists of elevation values. There are several different byproducts that can be created from DEMs.&lt;br /&gt;
+  This DEM was taken from GTOPO30 satellite data.&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt; Open the iRods plugin and navigate to the directory &lt;em&gt;Exercise_3&lt;/em&gt;&lt;/li&gt;
+    &lt;li&gt;Select DEM.tif&lt;/li&gt;
+    &lt;li&gt; Click Load&lt;br /&gt;&lt;br /&gt;
+    &lt;img src=&quot;/bootcamp/assets/images/dem-load.png&quot; class=&quot;screen-shot&quot; /&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;h4&gt;Project the DEM &lt;/h4&gt;
+&lt;p&gt;The DEM uses the WGS 84 coordinate system, which means it is measured in degrees. Since our project is in Washington State Plane which is measured in meters, we need to reproject the DEM to use it in our analysis.&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt;In the top menu, go to &lt;b&gt;Raster &amp;gt; Projections &amp;gt; Warp (Reproject)&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Use the following options
     &lt;ul&gt;
-      &lt;li&gt;explain&lt;/li&gt;
+      &lt;li&gt;Input File: &lt;b&gt;DEM&lt;/b&gt;&lt;/li&gt;
+      &lt;li&gt; Output File: &lt;b&gt;dem_project.tif&lt;/b&gt;&lt;/li&gt;
+      &lt;li&gt;Source SRS: &lt;b&gt;EPSG:4326&lt;/b&gt;&lt;/li&gt;
+      &lt;li&gt;Resampling Method: &lt;b&gt;Near&lt;/b&gt;&lt;/li&gt;
+      &lt;li&gt;No data values: &lt;b&gt;0&lt;/b&gt;&lt;/li&gt;
     &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;how to download washington boundary
+    &lt;img src=&quot;/bootcamp/assets/images/project-dem.png&quot; class=&quot;screen-shot&quot; /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;h4&gt; Clip the dem to the state of Washington&lt;/h4&gt;
+&lt;p&gt;Clipping the dem will remove any values outside of the study area, which will make the analysis more efficient.&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt;In the top menu, select &lt;b&gt;Raster &amp;gt; Extraction &amp;gt; Clipper&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt; In the window, set the following options:
+      &lt;ul&gt;
+        &lt;li&gt; Input file: dem_project.tif&lt;/li&gt;
+        &lt;li&gt; Output file: WA_dem.tif&lt;/li&gt;
+        &lt;li&gt; No data value: 0&lt;/li&gt;
+        &lt;li&gt; Clipping Mode: Mask layer &amp;gt; washington&lt;/li&gt;
+        &lt;li&gt; Load into canvas when finished&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;img src=&quot;/bootcamp/assets/images/dem-washington.png&quot; class=&quot;screen-shot&quot; /&gt;&lt;/li&gt;
+    &lt;li&gt; Remove the DEM layer&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;p&gt; The project area should now look like this:&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/dem-washington-display.png&quot; class=&quot;screen-shot&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt; Create a slope surface &lt;/h4&gt;
+&lt;ol&gt;
+    &lt;li&gt;In the top menu, select &lt;b&gt;Raster &amp;gt; Analysis &amp;gt; DEM&lt;/b&gt;
     &lt;ul&gt;
-      &lt;li&gt;explain&lt;/li&gt;
+      &lt;li&gt;Input file: &lt;b&gt;WA_dem&lt;/b&gt;&lt;/li&gt;
+      &lt;li&gt;Output file: &lt;b&gt;WA_slope.tif&lt;/b&gt;&lt;/li&gt;
+      &lt;li&gt;Mode: &lt;b&gt;Slope&lt;/b&gt;&lt;/li&gt;
+      &lt;li&gt;Scale: &lt;b&gt;0.30&lt;/b&gt;&lt;/li&gt;
+      &lt;li&gt;Load into canvas when finished&lt;/li&gt;
     &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;how to download washington geology
-    &lt;ul&gt;
-      &lt;li&gt;explain&lt;/li&gt;
-    &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/create-slope.png&quot; alt=&quot;create-slope&quot; class=&quot;screen-shot&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h4&gt;Create a hillshade layer&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;In the top menu, select &lt;b&gt;Raster &amp;gt; Analysis &amp;gt; DEM&lt;/b&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Input file: &lt;b&gt;WA_dem&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Output file: &lt;b&gt;WA_hillshade.tif&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Mode: &lt;b&gt;Hillshade&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Z factor: &lt;b&gt;1.0&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Scale: &lt;b&gt;0.30&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Azimuth of light: &lt;b&gt;315.0&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Altitude of light: &lt;b&gt;45.0&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Load into canvas when finished&lt;/li&gt;
+  &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/hillshade-calc.png&quot; alt=&quot;hillshade-calc&quot; title=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;download data with meta data (DEM &amp;amp; washingon boundary data with meta data)&lt;/li&gt;
-  &lt;li&gt;prepare project directory&lt;/li&gt;
-  &lt;li&gt;data will be used in Data Prep&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;data-wrangling---prepare-digital-elevation-model&quot;&gt;Data Wrangling - Prepare Digital Elevation Model&lt;/h2&gt;
-
-&lt;h3 id=&quot;what-this-lesson-covers-1&quot;&gt;What this lesson covers:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;reprojecting data&lt;/li&gt;
-  &lt;li&gt;clipping data extents&lt;/li&gt;
-  &lt;li&gt;importing data (raster and vector)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;objective-1&quot;&gt;Objective:&lt;/h3&gt;
-
-&lt;p&gt;Download, examine, and prepare DEM for landslide susceptibility analysis.&lt;/p&gt;
-
-&lt;h3 id=&quot;data&quot;&gt;Data:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;gtopo30 DEM - northwest america&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;steps-1&quot;&gt;Steps:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;import DEM of northwest US&lt;/li&gt;
-  &lt;li&gt;import washington boundary shapefile&lt;/li&gt;
-  &lt;li&gt;clip DEM to washington boundary&lt;/li&gt;
-  &lt;li&gt;data will be used in Reclassify and Rasterize Vector&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;data-wrangling---reclassify-and-rasterize-vector&quot;&gt;Data Wrangling - Reclassify and Rasterize Vector&lt;/h2&gt;
-
-&lt;h3 id=&quot;what-this-module-covers&quot;&gt;What this module covers:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;editing vector data attributes&lt;/li&gt;
-  &lt;li&gt;(re)classifying vector data&lt;/li&gt;
-  &lt;li&gt;rasterizing vector data&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;objective-2&quot;&gt;Objective&lt;/h3&gt;
-
-&lt;p&gt;Prepare geology layer with geo_type (just an example) of soft, medium, hard, mass-wasting&lt;/p&gt;
-
-&lt;h3 id=&quot;data-1&quot;&gt;Data:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;washington state geology shapefile&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;steps-2&quot;&gt;Steps:&lt;/h3&gt;
-
+&lt;h4&gt;Load the Geology Layer&lt;/h4&gt;
 &lt;ol&gt;
-  &lt;li&gt;Import wa_geology.shp:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Open QGIS, Add Vector Layer, and navigate to wa_geology.shp.&lt;/em&gt;&lt;br /&gt;
-&lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-01.png&quot; alt=&quot;QGIS: Add geology vector layer into map view&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+    &lt;li&gt;Open the iRods plugin&lt;/li&gt;
+    &lt;li&gt;Load the WA_geology.shp file&lt;br /&gt;
+      &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-01.png&quot; alt=&quot;QGIS: Add geology vector layer into map view&quot; class=&quot;screen-shot&quot; /&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;h4&gt;Add Rock strength index&lt;/h4&gt;
+&lt;p&gt;We are going to create a numeric field to represent the strength of the geologic unit&lt;/p&gt;
+&lt;ol&gt;
   &lt;li&gt;Open field calculator in Attribute Table:
     &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Right-click wa_geology in Layers List &amp;gt; Open Attribute Table &amp;gt; Toggle editing mode (top left)&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;While in edit mode, &lt;em&gt;Open field calculator (top right)&lt;/em&gt;&lt;br /&gt;
-&lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-03.png&quot; alt=&quot;QGIS: Open field calcultor&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Add and calculate new field:
-    &lt;ul&gt;
-      &lt;li&gt;Match your Field Calculator window to the one below for creating a new field ‘strength’ with a range of values of 0-3. Be sure to match it exactly as it’s displayed: &lt;em&gt;double-quotes are evaluated as a column whereas single-quotes are evaluated as column values. Save your changes once finished&lt;/em&gt;.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Expression:&lt;br /&gt;case&lt;br /&gt;when “rock_type” = ‘soft’ then 1&lt;br /&gt;when “rock_type” = ‘medium’ then 2&lt;br /&gt;when “rock_type” = ‘hard’ then 3&lt;br /&gt;else 0&lt;br /&gt;done&lt;br /&gt;&lt;/strong&gt;
-&lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-04.png&quot; alt=&quot;QGIS: Add and calculate new field&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Style wa_geology.shp:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Right-click on wa_geology.shp in layer list &amp;gt; Properties &amp;gt; Style&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Change style type from &lt;em&gt;Single Symbol&lt;/em&gt; to &lt;em&gt;Categorized&lt;/em&gt;.&lt;/li&gt;
-      &lt;li&gt;Categorize by &lt;em&gt;strength&lt;/em&gt; and click &lt;em&gt;Classify&lt;/em&gt; to add classes.&lt;/li&gt;
-      &lt;li&gt;Match your colors with the example below or get fancy with your own styling.&lt;br /&gt;
-&lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-07.png&quot; alt=&quot;QGIS: Style shapefile&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Rasterize wa_geology.shp:
-    &lt;ul&gt;
-      &lt;li&gt;GDAL’s rasterize is a prefered method. This can be accessed through &lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Conversion &amp;gt; Rasterize (Vector to raster)&lt;/em&gt;. Notice how the parameters have been diabled in the example below. There’s a specific reason for this. Complete the parameter inputs: &lt;em&gt;Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000&lt;/em&gt;. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Click the edit icon (pencil) locate near the block of code&lt;/em&gt;. This enables you to add those non-QGIS parameters.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Add the line of code&lt;/em&gt; &lt;code&gt;-at -a_nodata 0&lt;/code&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt; &lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;-at&lt;/em&gt;: Enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;-a_nodata $value&lt;/em&gt;: Assign a specified nodata value to output bands - this prevents pixels with no data from being written into the output raster.&lt;sup id=&quot;fnref:3:1&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.gdal.org/gdal_rasterize.html&quot;&gt;Here’s a link to the gdal_rasterize parameters&lt;/a&gt;.&lt;br /&gt;
-   &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-11-2.png&quot; alt=&quot;QGIS: Rasterize - Vector to raster&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Style the new wa_geology.tif:
-    &lt;ul&gt;
-      &lt;li&gt;Open wa_geology.tif style properties. HINT: See step 4.&lt;/li&gt;
-      &lt;li&gt;For &lt;em&gt;Render type&lt;/em&gt;, select &lt;em&gt;Singleband pseudocolor&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;On the right select: &lt;em&gt;Load min/max values: Min/max; Extend: Actual (slower); then Load&lt;/em&gt;. This loads actual values into the classification. QGIS Approximates values by defautl. &lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Change Mode to Equal Interval with 3 classes&lt;/em&gt;. Remember, we only have three rock strength classes: soft, medium, hard. Change your color map if you’d like. The color maps are not stored into the raster, so the raster will load with the defaul color map (black to white) each time its opened in a new project.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Click Classify&lt;/em&gt;. Apply and OK.&lt;br /&gt;
-   &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-13.png&quot; alt=&quot;QGIS: Style raster&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+      &lt;li&gt;Right-click &lt;b&gt;WA_geology&lt;/b&gt; in &lt;em&gt;Layers List &amp;gt; Open Attribute Table &amp;gt; Toggle editing mode (top left)&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;While in edit mode,click &lt;b&gt;Open field calculator (top right)&lt;/b&gt;&lt;br /&gt;
+        &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-03.png&quot; alt=&quot;QGIS: Open field calcultor&quot; class=&quot;screen-shot&quot; /&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;&lt;/li&gt;
+  &lt;li&gt;Add and calculate new field&lt;br /&gt;
+    Match your Field Calculator window to the one below for creating a new field &lt;b&gt;strength&lt;/b&gt; with a range of values of 0-3. Be sure to match it exactly as it&#39;s displayed
+    &lt;br /&gt;Note: &lt;em&gt;double-quotes are evaluated as a column whereas single-quotes are evaluated as column values. Save your changes once finished&lt;/em&gt;.&lt;br /&gt;
+    Expression: &lt;br /&gt;
+    &lt;code&gt;
+      
+      &amp;nbsp;&amp;nbsp;case&lt;br /&gt;
+      &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;when &quot;rock_type&quot; = &#39;soft&#39; then 1&lt;br /&gt;
+      &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;when &quot;rock_type&quot; = &#39;medium&#39; then 2&lt;br /&gt;
+      &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;when &quot;rock_type&quot; = &#39;hard&#39; then 3&lt;br /&gt;
+      else 0&lt;br /&gt;
+      done
+     &lt;/code&gt;&lt;br /&gt;
+    &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-04.png&quot; alt=&quot;QGIS: Add and calculate new field&quot; title=&quot;&quot; /&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h4&gt;Visualize the geology by strength&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Right-click on WA_geology.shp in &lt;b&gt;Layer List &amp;gt; Properties &amp;gt; Style&lt;/b&gt;&lt;/li&gt;
+  &lt;li&gt;Change style type from &lt;em&gt;Single Symbol&lt;/em&gt; to &lt;em&gt;Categorized&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Categorize by &lt;em&gt;strength&lt;/em&gt; and click &lt;em&gt;Classify&lt;/em&gt; to add classes.&lt;/li&gt;
+  &lt;li&gt;Match your colors with the example below or get fancy with your own styling.&lt;br /&gt;
+    &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-07.png&quot; alt=&quot;QGIS: Style shapefile&quot; title=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;Rasterize the rock strength layer&lt;/h4&gt;
+&lt;p&gt;GDAL&#39;s rasterize is a prefered method. This can be accessed through &lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Conversion &amp;gt; Rasterize (Vector to raster)&lt;/em&gt;. Notice how the parameters have been diabled in the example below. There&#39;s a specific reason for this. Complete the parameter inputs: &lt;em&gt;Define your output file and location (in working directory); Attribute field = strength; Raster size in pixels = 1000 x 1000&lt;/em&gt;. Because GDAL is more powerful in the commandline, there are certain parameters that cannot be set within QGIS.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Click the edit icon (pencil) locate near the block of code. This enables you to add custom parameters.&lt;/li&gt;
+  &lt;li&gt;Add the line of code 
+    &lt;code&gt;-at -a_nodata 0&lt;/code&gt; just after &lt;code&gt;gdal_rasterize&lt;/code&gt;&lt;br /&gt;
+    The &lt;code&gt;-at&lt;/code&gt; flag enables the ALL_TOUCHED rasterization option so that all pixels touched by lines or polygons will be updated, not just those on the line render path, or whose center point is within the polygon. Defaults to disabled for normal rendering rules.[^3]&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;-a_nodata 0 &lt;/code&gt;: Assigns a specified nodata value to output band, which prevents pixels with no data from being written into the output raster.[^3]&lt;/li&gt;
+  &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-11-2.png&quot; class=&quot;screen-shot&quot; /&gt;
+&lt;/ol&gt;
+&lt;h4&gt;Style the new Rock Strength layer&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Open wa_geology.tif style properties. HINT: See step 4.&lt;/li&gt;
+  &lt;li&gt;For &lt;em&gt;Render type&lt;/em&gt;, select &lt;em&gt;Singleband pseudocolor&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;On the right select: 
+  &lt;ul&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Load min/max values: Min/max; &lt;/li&gt;
+      &lt;li&gt;Extend: Actual (slower); then Load.&lt;/li&gt;
+    &lt;/ul&gt;
+  This loads actual values into the classification. QGIS Approximates values by default. 
+  &lt;li&gt;&lt;em&gt;Change Mode to Equal Interval with 3 classes&lt;/em&gt;. Remember, we only have three rock strength classes: soft, medium, hard. Change your color map if you&#39;d like. The color maps are not stored into the raster, so the raster will load with the default color map (black to white) each time its opened in a new project.&lt;/li&gt;
+  &lt;li&gt;Click &lt;em&gt;Classify&lt;/em&gt;. Apply and OK.&lt;br /&gt;
+    &lt;img src=&quot;/bootcamp/assets/images/lesson-1/lesson-1-13.png&quot; alt=&quot;QGIS: Style raster&quot; title=&quot;&quot; /&gt;&lt;/li&gt;
 
-&lt;p&gt;You’ve just successfully imported a vector, added and calculated a new field, styled a vector layer, rasterized a vector with GDAL, and finished it off with styling a raster. &lt;/p&gt;
-
-&lt;p&gt;Keep this reclassified and rasterized vector, it’ll be used in the next lesson.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;### 1 - Create reclassification rules text file&lt;/p&gt;
 
-&lt;h4 id=&quot;slope&quot;&gt;Slope&lt;/h4&gt;
+&lt;h3&gt;Data Analysis&lt;/h3&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Slope&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3-5°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5-10°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10-15°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15-20°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;20-30°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;30-40°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40°&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;Reclassifying inputs:&lt;/p&gt;
+
+&lt;h4&gt;Slope&lt;/h4&gt;
+
+&lt;p&gt;| Category| &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; | Slope |
+|:-:|-|:----------:|
+| 1 || &amp;lt; 3&amp;deg;   |
+| 2 || 3-5&amp;deg;   |
+| 3 || 5-10&amp;deg;  |
+| 4 || 10-15&amp;deg; |
+| 5 || 15-20&amp;deg; |
+| 6 || 20-30&amp;deg; |
+| 7 || 30-40&amp;deg; |
+| 8 || &amp;gt; 40&amp;deg;  |&lt;/p&gt;
 
 &lt;p&gt;In order to reclass our slope layer into something useful, we will use the grass &lt;em&gt;r.reclass&lt;/em&gt; tool&lt;/p&gt;
 
 &lt;p&gt;The r.reclass tool reads text files which define the classification rules(rule files). For this example, our rule fill will have the following contents:&lt;/p&gt;
 
-&lt;h5 id=&quot;slope-ruletxt&quot;&gt;&lt;em&gt;slope-rule.txt&lt;/em&gt;&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;0 thru 2.99 = 1
+&lt;h5&gt;&lt;em&gt;slope-rule.txt&lt;/em&gt;&lt;/h5&gt;
+
+~~~ 
+0 thru 2.99 = 1
 3 thru 4.99 = 2
 5 thru 9.99 = 3
 10 thru 14.99 = 4
@@ -3544,373 +3513,70 @@ id: &#39;examples.map-20v6611k&#39;&lt;br /&gt;
 20 thru 29.99 = 6 
 30 thru 39.99 = 7
 40 thru 90 = 8
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;reclassify-raster&quot;&gt;2 - Reclassify raster&lt;/h3&gt;
+~~~
 
 &lt;p&gt;Once we have created the slope rule file. We can select the r.reclass tool from the Processing Toolbox.&lt;/p&gt;
-
-&lt;p&gt;Your Processing Toolbox may not be opened. &lt;em&gt;Open your Processing Toolbox: Menu Bar &amp;gt; Processing &amp;gt; Toolbox&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;In the processing toolbox, select &lt;em&gt;GRASS commands&lt;/em&gt; &amp;gt; &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;r.reclass&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;We will use the following settings for the reclassify tool:&lt;br /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Input Raster: &lt;em&gt;slope-washington&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;File containing reclass rules: &lt;em&gt;slope-rules.txt&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Output raster layer: &lt;em&gt;slope-reclass.tif&lt;/em&gt; (NOTE: select &lt;em&gt;Save to file…&lt;/em&gt; or else QGIS will not create a permanent output)&lt;br /&gt;
-&lt;img src=&quot;/bootcamp/assets/images/slope-reclass.png&quot; alt=&quot;slope-reclass&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Input Raster: &lt;em&gt;WA&lt;/em&gt;slope_&lt;/li&gt;
+&lt;li&gt;File containing reclass rules: &lt;em&gt;slope-rules.txt&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Output raster layer: &lt;em&gt;slope-reclass.tif&lt;/em&gt; (NOTE: select &lt;em&gt;Save to file...&lt;/em&gt; or else QGIS will not create a permanent output)&lt;br /&gt;
+&lt;img src=&quot;/bootcamp/assets/images/slope-reclass.png&quot; alt=&quot;slope-reclass&quot; title=&quot;&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;
+&lt;h4&gt;Susceptibility&lt;/h4&gt;
 
-&lt;h3 id=&quot;susceptibility&quot;&gt;3 - Susceptibility&lt;/h3&gt;
+&lt;p&gt;We will have to do some raster calculations to create the output data set. The classifications are taken from the California study[^2] and are as follows:&lt;/p&gt;
 
-&lt;p&gt;We will have to do some raster calculations to create the output data set. The classifications are taken from the California study&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and are as follows:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/landslide-key.png&quot; alt=&quot;landslide-key&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/landslide-key.png&quot; alt=&quot;landslide-key&quot; title=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Since we need to cross reference these categories, we need to create a raster which represents each unique combination of the slope and rock strength classes. A method to create unique combinations is to promote the rock strength categories a decimal place. This would make the rock classes: 10,20, and 30.&lt;/p&gt;
 
-&lt;p&gt;To create these new classes, we can &lt;strong&gt;load the following files&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;source_files/geo_coded.tif&lt;/li&gt;
-  &lt;li&gt;secondary_files/slope-reclass.tif&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;To create these new classes, we can load the source&lt;em&gt;files/WA&lt;/em&gt;geology.tif, and secondary&lt;em&gt;files/slope&lt;/em&gt;reclass.tif&lt;/p&gt;
 
 &lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Our raster calculator expression will be: &lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Output layer: slope-geo-sect.tif&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/raster-calc.png&quot; alt=&quot;raster-calc&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We can apply the landslide susceptibility classification using r.reclass and the following rule file:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Reclassify slope-geo-sect.tif with the following rule:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Save output as landslide-suscept.tif&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;landslide-rule.txt&lt;/em&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;11 12 13 21 31 = 0
-14 = 3
-22 23 = 5
-15 = 6
-16 32 33 = 7
-17 18 24 = 8
-25 thru 28 34 = 9
-35 thru 38 = 10
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;precipitation&quot;&gt;4 - Precipitation&lt;/h4&gt;
-
-&lt;p&gt;Now that we have created the landslide susceptibility layer, we can make use the Average Annual Precipitation layer to check the susceptible areas against the areas receiving the most annual rain.&lt;/p&gt;
-
-&lt;p&gt;Convert millimeters to inches&lt;/p&gt;
-
-&lt;p&gt;Raster calculator: precip = precip * 0.0394&lt;/p&gt;
-
-&lt;p&gt;Check THIS STEP AGAINST REFERENCES&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Precipitation&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5-10 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10-15 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15-30 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;30-45 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;45-60 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;60-75 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;75-90 in&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 90 in&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;visualization&quot;&gt;Visualization&lt;/h3&gt;
-
-&lt;p&gt;Now that the output datasets have been created, we can work on making our results presentable.&lt;/p&gt;
-
-&lt;p&gt;Go to Cartography &amp;amp; Visualization…&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;raster-analysis&quot;&gt;Raster Analysis&lt;/h2&gt;
-
-&lt;h3 id=&quot;what-this-module-covers-1&quot;&gt;What this module covers:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Importing raster data&lt;/li&gt;
-  &lt;li&gt;DEM Terrain analysis (slope, aspect)&lt;/li&gt;
-  &lt;li&gt;Raster analysis using Raster Calculator&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;objective-3&quot;&gt;Objective:&lt;/h3&gt;
-
-&lt;p&gt;Complete locating high-risk landslide/mass-wasting areas in Washington. You must use the digital elevation model (DEM) that you created in &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model&quot;&gt;Data Wrangling - DEM&lt;/a&gt; to produce slope and aspect rasters. Lastly, you need perforam a raster summation for locating high-risk landslide areas.&lt;/p&gt;
-
-&lt;h3 id=&quot;data-2&quot;&gt;Data:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Washington DEM (wa_dem.tif) - &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---prepare-digital-elevation-model&quot;&gt;SEE Data Wrangling&lt;/a&gt; &lt;/li&gt;
-  &lt;li&gt;Washington geology raster (wa_geology.tif) - &lt;a href=&quot;/bootcamp/applications/qgis#data-wrangling---reclassify-and-rasterize-vector&quot;&gt;SEE Data Wrangling&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;data-classifications&quot;&gt;Data Classifications:&lt;/h3&gt;
-
-&lt;h4 id=&quot;high-risk-slope&quot;&gt;High-risk slope:&lt;/h4&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;    &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Slope&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;lt; 3°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3-5°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5-10°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10-15°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15-20°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;20-30°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;30-40°&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&amp;gt; 40°&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h4 id=&quot;geology-strength&quot;&gt;Geology strength:&lt;/h4&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Category&lt;/th&gt;
-      &lt;th&gt;  &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Strength&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Low (high-risk)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Medium&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;High (low-risk)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;steps-3&quot;&gt;Steps:&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Import raster data:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Open QGIS &amp;gt; Add Raster Layer &amp;gt; Data directory &amp;gt; Add: wa_dem.tif and wa_geology.tif&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
-      &lt;li&gt;BEST PRACTICE: Check your projections before performing any anaylsis, otherwise you’re in for a lot of trouble. Also, check raster resolutions before analysis, you don’t want your results to be off or invalid.&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-1.jpg&quot; alt=&quot;Spatial Data Carpentry: Raster Analysis - import raster data&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Style wa_geology.tif to help better visualize data:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Right-click layer &amp;gt; Properties &amp;gt; Style&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Render type: Singleband pseudocolor&lt;/li&gt;
-      &lt;li&gt;Generate new color map: select color map&lt;/li&gt;
-      &lt;li&gt;Mode: Equal interval = 3&lt;/li&gt;
-      &lt;li&gt;Set Max = 3&lt;/li&gt;
-      &lt;li&gt;Load min/max values: Min/max&lt;/li&gt;
-      &lt;li&gt;Accuracy: Actual (slower)&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Click Classify&lt;/em&gt; to enable changes.
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-2.jpg&quot; alt=&quot;Spatial Data Carpentry: Raster Analysis - style raster data&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;To change individual value colors, &lt;em&gt;double-click the color box&lt;/em&gt; of the desired value:&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-3.jpg&quot; alt=&quot;Spatial Data Carpentry: Raster Analysis - style raster data&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;Click Apply and OK to save changes.&lt;/li&gt;
-      &lt;li&gt;Notice how the layer label has changed from 1-2.998 to 1-3.&lt;/li&gt;
-      &lt;li&gt;Also, notice some geology raster pixel values are missing (you can see wa_dem black values), this is due to a no-data value assigned to water. Water != geology.&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-4.jpg&quot; alt=&quot;Spatial Data Carpentry: Raster Analysis - style raster data&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Calculate slope:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Menu Bar &amp;gt; Raster &amp;gt; Analysis &amp;gt; DEM (Terrain models)&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Configure as follows:&lt;br /&gt;&lt;br /&gt;Input file (DEM raster): wa_dem&lt;br /&gt;Output file: slope.tif&lt;br /&gt;Mode: Slope&lt;br /&gt;Scale: 0.30&lt;br /&gt;&lt;br /&gt;&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;explain scale = 0.30&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-5.jpg&quot; alt=&quot;Spatial Data Carpentry: Raster Analysis - DEM Terrain Analysis - Slope&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;Click OK, OK, CLOSE to exit DEM (Terrain models)&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-6.jpg&quot; alt=&quot;Spatial Data Carpentry: Raster Analysis - DEM Terrain Analysis - Slope&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Reclassify slope raster
-    &lt;ul&gt;
-      &lt;li&gt;Enable the Processing Toolbox: &lt;em&gt;Menu Bar &amp;gt; Processing &amp;gt; Toolbox &amp;gt; Select Advanced interface&lt;/em&gt;&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-7.jpg&quot; alt=&quot;Spatial Data Carpentry: Raster Analysis - Reclassify slope raster&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;The &lt;em&gt;r.reclass&lt;/em&gt; tool will be used to reclassify the slope raster into correct categories. Create a text file with the following data. Save it as slope-rule.txt.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h5 id=&quot;slope-ruletxt-1&quot;&gt;&lt;em&gt;slope-rule.txt&lt;/em&gt;&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;0 thru 2.99 = 1
-3 thru 4.99 = 2
-5 thru 9.99 = 3
-10 thru 14.99 = 4
-15 thru 19.99 = 5
-20 thru 29.99 = 6 
-30 thru 39.99 = 7
-40 thru 90 = 8
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/raster-analysis-8.jpg&quot; alt=&quot;Spatial Data Carpentry: Raster Analysis - Reclassify slope raster&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Open GRASS tool, r.reclass: &lt;em&gt;Processing Toolbox (with Advanced interface) &amp;gt; GRASS Commands &amp;gt; Raster &amp;gt; r.reclass&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Configure your inputs as follows:&lt;strong&gt;&lt;br /&gt;&lt;br /&gt;Input Raster: slope&lt;br /&gt;File containing reclass rules: slope-rules.txt&lt;br /&gt;Output raster layer: slope-reclass.tif&lt;/strong&gt; (NOTE: select &lt;em&gt;Save to file…&lt;/em&gt; or QGIS will not create a permanent output)&lt;br /&gt;&lt;br /&gt;
-  &lt;img src=&quot;/bootcamp/assets/images/raster-analysis-slope-reclass-inputs.png&quot; alt=&quot;Spatial Data Carpentry: Raster Analysis - reclassified slope output&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We will have to do some raster calculations to create the output data set. The classifications are taken from the California study&lt;sup id=&quot;fnref:2:1&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and are as follows:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/landslide-key.png&quot; alt=&quot;landslide-key&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Since we need to cross reference these categories, we need to create a raster which represents each unique combination of the slope and rock strength classes. A method to create unique combinations is to promote the rock strength categories a decimal place. This would make the rock classes: 10,20, and 30.&lt;/p&gt;
-
-&lt;p&gt;To create these new classes, we can load the source_files/geo_coded.tif, and secondary_files/slope_reclass.tif&lt;/p&gt;
-
-&lt;p&gt;In the top menu, select &lt;em&gt;Raster&lt;/em&gt; &amp;gt; &lt;em&gt;Raster Calculator&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Our raster calculator expression will be: &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;geo_coded@1&amp;quot;&lt;/span&gt; * 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&amp;quot;slope-reclass@1&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
 &lt;p&gt;Output layer: slope-geo-sect.tif&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/raster-calc.png&quot; alt=&quot;raster-calc&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/bootcamp/assets/images/raster-calc.png&quot; alt=&quot;raster-calc&quot; title=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can apply the landslide susceptibility classification using r.reclass and the following rule file:&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;landslide-rule.txt&lt;/em&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;11 12 13 21 31 = 0
-14 = 3
-22 23 = 5
-15 = 6
-16 32 33 = 7
-17 18 24 = 8
-25 thru 28 34 = 9
-35 thru 38 = 10
-&lt;/code&gt;&lt;/pre&gt;
+~~~
+11 12 13 21 31 = 0&lt;br /&gt;
+14 = 3&lt;br /&gt;
+22 23 = 5&lt;br /&gt;
+15 = 6&lt;br /&gt;
+16 32 33 = 7&lt;br /&gt;
+17 18 24 = 8&lt;br /&gt;
+25 thru 28 34 = 9&lt;br /&gt;
+35 thru 38 = 10&lt;br /&gt;
+~~~
 
-&lt;p&gt;References: &lt;/p&gt;
+&lt;h3&gt;Continue to SHOW YOUR RESULTS&lt;/h3&gt;
 
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;http://www.spatialreference.org/ref/epsg/2927 &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:3:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;http://www.conservation.ca.gov/cgs/information/publications/Documents/MS58.pdf &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:2:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
+
+[^1]: http://www.usgs.gov/blogs/features/usgs_top_story/landslide-in-washington-state
+[^2]: http://www.conservation.ca.gov/cgs/information/publications/Documents/MS58.pdf
+[^3]: http://www.spatialreference.org/ref/epsg/2927
+[^4]: https://lta.cr.usgs.goc/GTOPO30
+[^5]: http://www.dnr.wa.gov/ResearchScience/Topics/GeosciencesData/Pages/gis_data.aspx
+[^6]: http://wdfw.wa.gov/conservation/gap/land_cover_data.html
+[^7]: http://www.esrl.noaa.gov/thredds/catalog/Datasets/cpc_us_precip/catalog.xml#Datasets/cpc_us_precip/RT
+[^8]: http://gadm.org/country
+&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;
 </content>
  </entry>
  
