@@ -937,3 +937,8 @@ pre {
     position: absolute;
   }
 }
+
+.rules-table td {
+  text-align: center;
+  
+}

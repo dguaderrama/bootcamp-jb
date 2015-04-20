@@ -1348,7 +1348,7 @@
 <p>Projections characterize spatial data by setting coordinate reference systems for each data set.</p>
 
 <p>Each projection is defined on top of a geographic coordinate system or spheroid based off of two ellipsoids, major and minor axes. These geographic coordinates systems deliver the coordinates in degrees and account for the fact that the earth is not a perfect sphere.
- will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth's image onto a plane.</p>
+ will convert the 3d spheroid of the earth into a 2-dimensional representation. Each projection type utilitizes a different technique to project the earth's image onto a plane. </p>
 
 <h4 id="distortion">Distortion</h4>
 
@@ -1362,7 +1362,7 @@
 
 <p><a title="By Geek3 (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ASphere_wireframe.svg"><img src="/bootcamp/assets/images/coordinate-grid.png" alt="coordinateGrid" /></a></p>
 
-<p>Projections are another name for projected coordinate systems. These projected coordinate systems compose a family of Coordinate Reference Systems.</p>
+<p>Projections are another name for projected coordinate systems. These projected coordinate systems compose a family of Coordinate Reference Systems. </p>
 
 <p>Projected coordinate systems are based off of Geodetic Coordinate Systems. These Geodetic coordinate systems are ellipsoidal models aimed at representing the aspherical nature of the earth.</p>
 
@@ -1372,7 +1372,7 @@
 
 <p><a title="By NASA/JPL/University of Texas Center for Space Research. [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AEarth_gravity.png"><img src="/bootcamp/assets/images/geoid.png" alt="geoid" /></a></p>
 
-<p>Although we normally see the earth represented as a sphere, its shape is actually more irregular. The earth has an equatorial bulge and various other undulations due to tectonics, volcanics and the earth’s rotation.</p>
+<p>Although we normally see the earth represented as a sphere, its shape is actually more irregular. The earth has an equatorial bulge and various other undulations due to tectonics, volcanics and the earth’s rotation. </p>
 
 <p>The changes in the surface mass are the subject matter of Geodesy. Geodesists use differences in the vertical direction of gravity along with crustal, tidal, and polar motion to determine exact measurements of the Geoid. Geometric computations can become unwieldy processes due to the complicated nature of the Geoid surface. In order approximate the geoid while making geometric calculation feasible, reference ellipsoids were calculated.</p>
 
@@ -1386,9 +1386,9 @@
 
 <p>Regional ellipsoids like the North American Datum of 1927 which minimized distortion for the contiguous United States at the expense of more distant regions.</p>
 
-<p>The modern reference ellipsoid, <strong>WGS 84</strong> was developed using satellite measurements and past Geodetic System parameters, and has been the reference ellipsoid used by the Global Positioning System.</p>
+<p>The modern reference ellipsoid, <strong>WGS 84</strong> was developed using satellite measurements and past Geodetic System parameters, and has been the reference ellipsoid used by the Global Positioning System. </p>
 
-<p>Most modern projections will use WGS 84 as the underlying reference ellipsoid, but it is important to check that your projection is defined correctly if you are dealing with old datasets.</p>
+<p>Most modern projections will use WGS 84 as the underlying reference ellipsoid, but it is important to check that your projection is defined correctly if you are dealing with old datasets. </p>
 
 <hr />
 
@@ -1444,7 +1444,7 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
 
 <p><br /></p>
 
-<p>Cylindrical projections are created by projection a sphere onto a cylinder. Cylindrical projections suffer the least distortion along the line that it intersects the sphere, which is often around the Equator. This makes cylindrical projections useful for mapping tropical data. Examples include Mercator and Universal Transverse Mercator.</p>
+<p>Cylindrical projections are created by projection a sphere onto a cylinder. Cylindrical projections suffer the least distortion along the line that it intersects the sphere, which is often around the Equator. This makes cylindrical projections useful for mapping tropical data. Examples include Mercator and Universal Transverse Mercator. </p>
 
 <p><strong>Polyhedral</strong></p>
 
@@ -1461,11 +1461,11 @@ Azimuthal projections are created by flattening a side of the sphere from a refe
 
 <h3 id="checking-the-projection">Checking the projection</h3>
 
-<p>It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis.</p>
+<p>It is important to check the projection of your data to make sure they share the same projection prior to performing any spatial analysis. </p>
 
 <p><a href="http://www.gdal.org" target="new"><img src="/bootcamp/assets/images/gdalinfo.png" alt="Using GDAL to check projection" /></a></p>
 
-<p><a href="http://spatialreference.org" target="new">SpatialReference.org</a> is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings.</p>
+<p><a href="http://spatialreference.org" target="new">SpatialReference.org</a> is an extremely useful resource that houses definitions for all official projections in a variety of formats. This is a great place to find proj4 strings. </p>
 
 <p><a href="http://spatialreference.org" target="new"><img src="/bootcamp/assets/images/spatialreference.png" alt="SpatialReference.org: EPSG:4326" /></a></p>
 

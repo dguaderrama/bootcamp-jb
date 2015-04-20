@@ -1353,7 +1353,7 @@
   <li>Clean the data. For the purposes of this exercise, we do not need the removed data. Our objective is to join data and visualize (with minimal data wrangling). In LibreOffice, highlight the row/column, right-click and Delete Selected Columns. Excel should be similar.<br /><br />
 For <strong>housing-units.csv</strong>:
     <ul>
-      <li>Remove the second row containing the annotations (subheader).</li>
+      <li>Remove the second row containing the annotations (subheader). </li>
       <li>Delete the columns: GEO.id, GEO.display-lable, and HD02_VD01.</li>
       <li>Your file should look like the image below:<br />
 <img src="/bootcamp/assets/images/census-join/census-join-6.png" alt="Spatial Data Carpentry: Census Join - Delete housing data annotation" /></li>
@@ -1417,7 +1417,7 @@ Add saved file to map: (checked)</strong><br />
 <img src="/bootcamp/assets/images/census-join/census-join-hmvalthnds.png" alt="Spatial Data Carpentry" /></li>
     </ul>
   </li>
-  <li>Let’s now calculate total housing value per census tract (median home value X total housing units).
+  <li>Let’s now calculate total housing value per census tract (median home value X total housing units). 
     <ul>
       <li>Configure Field Calculator inputs as follows:<br />
 <strong>Create a new field: (checked)</strong><br />
@@ -1431,7 +1431,7 @@ Add saved file to map: (checked)</strong><br />
   </li>
   <li>Locate <strong>TotalValue</strong> and confirm the calculation - total home value per Census tract in thoudsands of dollars.<br /><br /> NOTE: you should still have NULL values given that home-values.csv contains NULL values.<br /><br /> Be sure to <em>Save edits</em> <img src="/bootcamp/assets/images/qgis/save-edits.png" alt="Spatial Data Carpentry: Census Join - save edits" /> and disable editing mode (Toggle editing mode) <img src="/bootcamp/assets/images/qgis/toggle-editing-mode.png" alt="Spatial Data Carpentry: Census Join - toggle editing mode" />. The editing options should now be grayed-out and disabled.<br />
 <img src="/bootcamp/assets/images/census-join/census-join-22.png" alt="Spatial Data Carpentry: Census Join - TotalValue per tract" /></li>
-  <li>You’ve successfully joined two sets of Census tabular data to a shapefile.<br /><br /></li>
+  <li>You’ve successfully joined two sets of Census tabular data to a shapefile.<br /><br /> </li>
   <li>Symbolize tracts-values-units by categorizing by TotalValue and select a color ramp.<br /><br />Open style properties: <em>Right-click tract-values-units (layers list) &gt; Properties &gt; Style</em><br /><br />Style by: <em>Categorized</em><br /><br />Column: <em>TotalValue</em><br />Color ramp: <em>(select ramp)</em><br />Classify - “Classification would yield 1422 entries which might not be expected. Continue?” <em>Yes</em><br />
 QGIS will inform you that you have a high number of classes, click OK to confirm the categorization.<br /><br />
 We’ll need to remove NULL values. Locate NULL within the category table (HINT: it contains no values and is blank - look towards the bottom), highlight and click ‘Delete’ (not Delete all!) - ‘Delete’ removes only selected rows.<br /><br />
