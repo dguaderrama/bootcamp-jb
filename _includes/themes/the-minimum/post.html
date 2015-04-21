@@ -67,12 +67,8 @@
   <div class="clear"></div>
 </div> left-nav -->
 
-
-
-
-<div class="entry-content content">
-  <div class="row">
-  <div class="col-md-4">
+<div class="row main-content">
+<div class="nav-column">
  <h3>Contents</h3>
     {% include JB/setup %}
   {% for category in site.categories %} 
@@ -83,7 +79,9 @@
   </ul>
 {% endfor %}
 </div>
-<div class="col-md-8">
+
+
+<div class="entry-content content content-container">
   {{ content }}
 </div>
 </div>
