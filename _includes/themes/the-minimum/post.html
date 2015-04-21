@@ -50,6 +50,8 @@
 			<div class="bd">
 
         <!-- sticky left navigation -->
+<!--
+
 <div id="sticky-anchor" class="sticky-left-nav">
   <div id="sticky" class="sticky-left-nav-inner">
     <h3>Contents</h3>
@@ -63,13 +65,28 @@
 {% endfor %}
   </div>  
   <div class="clear"></div>
-</div> <!--left-nav -->
+</div> left-nav -->
+
 
 
 
 <div class="entry-content content">
+  <div class="row">
+  <div class="col-md-4">
+ <h3>Contents</h3>
+    {% include JB/setup %}
+  {% for category in site.categories %} 
+  <h4 id="{{ category[0] }}-ref">{{ category[0] | join: "/" | capitalize }}</h4>
+  <ul>
+    {% assign pages_list = category[1] %}  
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
+</div>
+<div class="col-md-8">
   {{ content }}
-
+</div>
+</div>
           <!--
 					<div class="meta">
 						<p class="date-publish">
